@@ -1,0 +1,56 @@
+$folders = @(
+  "frontend/public",
+  "frontend/src/api",
+  "frontend/src/components/common",
+  "frontend/src/components/booking",
+  "frontend/src/components/tracking",
+  "frontend/src/components/chat",
+  "frontend/src/features/auth",
+  "frontend/src/features/customer",
+  "frontend/src/features/provider",
+  "frontend/src/features/admin",
+  "frontend/src/features/catalog",
+  "frontend/src/features/booking",
+  "frontend/src/features/support",
+  "frontend/src/routes",
+  "frontend/src/store",
+  "frontend/src/hooks",
+  "frontend/src/types",
+  "frontend/src/utils",
+  "frontend/src/styles",
+  "backend/app/api/v1",
+  "backend/app/core",
+  "backend/app/models",
+  "backend/app/schemas",
+  "backend/app/repositories",
+  "backend/app/services/auth",
+  "backend/app/services/booking",
+  "backend/app/services/catalog",
+  "backend/app/services/tracking",
+  "backend/app/services/support",
+  "backend/app/workers",
+  "backend/app/tests",
+  "backend/alembic/versions",
+  "ml/recommendation",
+  "ml/reliability",
+  "ml/sentiment",
+  "ml/fraud",
+  "ml/demand",
+  "ml/pricing",
+  "ml/common",
+  "infra/docker",
+  "infra/jenkins",
+  "infra/cloudflare",
+  "infra/environments",
+  "docs/adr",
+  "docs/diagrams",
+  "scripts",
+  ".github/workflows"
+)
+
+New-Item -ItemType Directory -Force -Path $folders | Out-Null
+
+foreach ($f in $folders) {
+  New-Item -ItemType File -Force -Path (Join-Path $f ".gitkeep") | Out-Null
+}
+Write-Output "All folders and .gitkeep files created successfully."
