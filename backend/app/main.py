@@ -11,7 +11,7 @@ from app.api.v1.catalog import router as catalog_router
 from app.api.v1.providers import router as providers_router
 from app.api.v1.customers import router as customers_router
 from app.api.v1.admins import router as admins_router
-from app.api.v1.bookings import router as bookings_router
+from app.api.v1.bookings import router as bookings_router, customer_bookings_router
 from app.api.v1.support import router as support_router
 from app.api.v1.reports import router as reports_router
 from app.api.v1.security import router as security_router
@@ -21,12 +21,12 @@ from app.api.v1.services import router as services_router
 from app.api.v1.ws import router as ws_router
 
 app = FastAPI(
-    title="SmartServe Admin API",
+    title="SmartServe API",
     version="1.0.0",
-    description="SmartServe Admin Backend Microservice API — 100% Specification Complete"
+    description="SmartServe Full Platform API (Web & Mobile Clients)"
 )
 
-# Enable CORS for Frontend Admin Console
+# Enable CORS for Frontend Admin Console & Mobile Clients
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -35,7 +35,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount all 13 Admin API Subsystems under /api/v1/ prefix
+# Mount all API Subsystems under /api/v1/ prefix
 for r in [
     auth_router,
     dashboard_router,
@@ -44,6 +44,7 @@ for r in [
     customers_router,
     admins_router,
     bookings_router,
+    customer_bookings_router,
     support_router,
     reports_router,
     security_router,

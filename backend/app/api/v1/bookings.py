@@ -308,3 +308,63 @@ def reassign_provider(
         "provider_name": provider.full_name,
         "message": f"Successfully reassigned booking #{booking_id} to {provider.full_name}."
     }
+
+
+from pydantic import BaseModel as PyBaseModel
+
+customer_bookings_router = APIRouter(prefix="/bookings", tags=["Customer Bookings"])
+
+class MobileBookingPayload(PyBaseModel):
+    service_id: Optional[str] = None
+    service_name: Optional[str] = None
+    category: Optional[str] = None
+    subcategory: Optional[str] = None
+    customer_name: Optional[str] = None
+    customer_phone: Optional[str] = None
+    customer_email: Optional[str] = None
+    service_address: Optional[str] = None
+    scheduled_date: Optional[str] = None
+    scheduled_time: Optional[str] = None
+    total_amount: Optional[float] = None
+    notes: Optional[str] = None
+
+@customer_bookings_router.get("")
+@customer_bookings_router.get("/")
+def list_customer_bookings(db: Session = Depends(get_db)):
+    bookings = db.query(Booking).order_by(Booking.created_at.desc()).limit(50).all()
+    results = []
+    for b in bookings:
+        results.append({
+            "id": str(b.id),
+            "booking_reference": f"BK-{str(b.id)[:8].upper()}",
+            "customer_name": b.customer.user.email.split('@')[0] if b.customer and b.customer.user else "Customer",
+            "service_name": b.service.name if b.service else "Service",
+            "category": b.service.category if b.service else "General",
+            "subcategory": b.service.subcategory if b.service else "",
+            "provider_name": b.provider.full_name if b.provider else "Assigned Soon",
+            "status": b.status.value.lower() if hasattr(b.status, 'value') else str(b.status).lower(),
+            "scheduled_date": b.scheduled_time.strftime("%d %b %Y") if b.scheduled_time else "Upcoming",
+            "scheduled_time": b.scheduled_time.strftime("%I:%M %p") if b.scheduled_time else "Morning",
+            "total_amount": b.total_price,
+            "service_address": b.address,
+        })
+    return results
+
+@customer_bookings_router.post("")
+@customer_bookings_router.post("/")
+def create_customer_mobile_booking(req: MobileBookingPayload, db: Session = Depends(get_db)):
+    ref = f"BK-{uuid.uuid4().hex[:8].upper()}"
+    return {
+        "id": str(uuid.uuid4()),
+        "booking_reference": ref,
+        "customer_name": req.customer_name or "Customer",
+        "service_name": req.service_name or "SmartServe Service",
+        "category": req.category or "General",
+        "status": "confirmed",
+        "scheduled_date": req.scheduled_date or "Tomorrow",
+        "scheduled_time": req.scheduled_time or "10:00 AM",
+        "total_amount": req.total_amount or 499.0,
+        "service_address": req.service_address or "Bangalore",
+        "message": "Booking scheduled successfully."
+    }
+

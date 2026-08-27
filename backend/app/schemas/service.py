@@ -1,6 +1,6 @@
 import uuid
 from datetime import datetime
-from typing import Optional, List
+from typing import Optional, List, Any
 from pydantic import BaseModel, ConfigDict
 
 
@@ -17,7 +17,7 @@ class ServiceBase(BaseModel):
     max_demand_increase: float = 0.0
     max_discount: float = 0.0
     distinct_features: Optional[List[str]] = None
-    suggested_addons: Optional[List[AddOnSchema]] = None
+    suggested_addons: Optional[List[Any]] = None
     is_active: bool = True
 
 
@@ -33,7 +33,7 @@ class ServiceUpdate(BaseModel):
     max_demand_increase: Optional[float] = None
     max_discount: Optional[float] = None
     distinct_features: Optional[List[str]] = None
-    suggested_addons: Optional[List[AddOnSchema]] = None
+    suggested_addons: Optional[List[Any]] = None
     is_active: Optional[bool] = None
 
 
