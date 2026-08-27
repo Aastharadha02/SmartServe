@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useSearchParams, useNavigate, Link } from 'react-router-dom';
 import { 
   ChevronRight, 
   Search, 
@@ -7,26 +7,45 @@ import {
   List, 
   Loader2, 
   RefreshCw, 
-  AlertCircle,
-  FolderTree,
-  CheckCircle2,
-  XCircle,
-  Sparkles,
-  Edit3,
-  ChevronLeft,
-  ArrowLeft,
-  FileSpreadsheet
+  AlertCircle, 
+  FolderTree, 
+  CheckCircle2, 
+  XCircle, 
+  Sparkles, 
+  Edit3, 
+  ChevronLeft, 
+  ArrowLeft, 
+  FileSpreadsheet 
 } from 'lucide-react';
 import { getCatalogServices, updateCatalogService, bulkUpdateServiceStatus, exportCatalogExcel } from '../../../api/catalog';
 import type { ServiceItem } from '../../../api/catalog';
 import { getServiceIcon } from '../../../utils/catalogIcons';
-import { formatRupee } from '../../../utils/formatters';
+import { formatRupee, formatSurgePercent, formatDiscountPercent } from '../../../utils/formatters';
+import { getServiceImage, formatCategoryDisplayName, DEFAULT_SERVICE_IMAGE } from '../../../utils/serviceImages';
+
+function safeDecode(val?: string | null): string {
+  if (!val) return '';
+  try {
+    return decodeURIComponent(val);
+  } catch {
+    return val;
+  }
+}
 
 export const ServiceListView: React.FC = () => {
-  const { categoryName, subcategoryName } = useParams<{ categoryName: string; subcategoryName: string }>();
+  const params = useParams();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const decodedCategory = decodeURIComponent(categoryName || '');
-  const decodedSubcategory = decodeURIComponent(subcategoryName || '');
+
+  // Extract category and subcategory safely from path parameters, splat, or query parameters
+  const rawCat = params.categoryName || searchParams.get('category') || '';
+  let rawSub = params.subcategoryName || params['*'] || searchParams.get('subcategory') || '';
+  if (params.subcategoryName && params['*']) {
+    rawSub = `${params.subcategoryName}/${params['*']}`;
+  }
+
+  const decodedCategory = safeDecode(rawCat).trim();
+  const decodedSubcategory = safeDecode(rawSub).trim();
 
   const [services, setServices] = useState<ServiceItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -65,7 +84,7 @@ export const ServiceListView: React.FC = () => {
   const handleExportFilteredExcel = async () => {
     setExportLoading(true);
     try {
-      await exportCatalogExcel(decodedCategory, decodedSubcategory, searchTerm);
+      await exportCatalogExcel(decodedCategory || undefined, decodedSubcategory || undefined, searchTerm);
     } catch (err) {
       alert('Failed to export filtered catalog.');
     } finally {
@@ -77,11 +96,44 @@ export const ServiceListView: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await getCatalogServices(decodedCategory);
-      // Filter down to matching subcategory
-      const subServices = data.filter((s) => s.subcategory === decodedSubcategory);
-      setServices(subServices);
+      // 1. First fetch with category & subcategory from backend
+      let data: ServiceItem[] = [];
+      try {
+        data = await getCatalogServices(
+          decodedCategory || undefined,
+          decodedSubcategory || undefined,
+          0,
+          1000
+        );
+      } catch (catErr) {
+        data = await getCatalogServices(undefined, undefined, 0, 1000);
+      }
+
+      // 2. Filter with case-insensitive and whitespace/slash normalization
+      const normSub = decodedSubcategory.toLowerCase().replace(/[\s\-_/]+/g, ' ').trim();
+      const normCat = decodedCategory.toLowerCase().replace(/[\s\-_/]+/g, ' ').trim();
+
+      let matching = data.filter((s) => {
+        const sSub = (s.subcategory || '').toLowerCase().replace(/[\s\-_/]+/g, ' ').trim();
+        const sCat = (s.category || '').toLowerCase().replace(/[\s\-_/]+/g, ' ').trim();
+
+        const subMatches = !normSub || sSub === normSub || sSub.includes(normSub) || normSub.includes(sSub);
+        const catMatches = !normCat || sCat === normCat || sCat.includes(normCat) || normCat.includes(sCat);
+        return subMatches && catMatches;
+      });
+
+      // 3. Fallback: if category filter was overly restrictive, search across full catalog for this subcategory
+      if (matching.length === 0 && normSub) {
+        const allData = await getCatalogServices(undefined, undefined, 0, 1000);
+        matching = allData.filter((s) => {
+          const sSub = (s.subcategory || '').toLowerCase().replace(/[\s\-_/]+/g, ' ').trim();
+          return sSub === normSub || sSub.includes(normSub) || normSub.includes(sSub);
+        });
+      }
+
+      setServices(matching);
     } catch (err: any) {
+      console.error('Failed to load subcategory services:', err);
       setError(err.response?.data?.detail || 'Failed to load subcategory services.');
     } finally {
       setLoading(false);
@@ -89,9 +141,7 @@ export const ServiceListView: React.FC = () => {
   };
 
   useEffect(() => {
-    if (decodedCategory && decodedSubcategory) {
-      fetchSubcategoryServices();
-    }
+    fetchSubcategoryServices();
   }, [decodedCategory, decodedSubcategory]);
 
   const filteredServices = useMemo(() => {
@@ -138,22 +188,28 @@ export const ServiceListView: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
-        <p className="text-sm font-medium text-slate-600">Loading services for {decodedSubcategory}...</p>
+      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4 font-sans">
+        <Loader2 className="w-9 h-9 animate-spin text-[#2563EB]" />
+        <p className="text-base font-semibold text-slate-700">
+          Loading services for {decodedSubcategory || 'Catalog'}...
+        </p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="max-w-2xl mx-auto my-12 p-6 bg-white border border-red-200 rounded-2xl shadow-sm text-center space-y-4">
-        <AlertCircle className="w-8 h-8 text-red-500 mx-auto" />
-        <h3 className="text-lg font-bold text-slate-900">Failed to Load Services</h3>
-        <p className="text-xs text-slate-600 max-w-md mx-auto">{error}</p>
+      <div className="max-w-2xl mx-auto my-12 p-8 bg-white border border-red-200 rounded-3xl shadow-sm text-center space-y-4 font-sans">
+        <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-500 mx-auto flex items-center justify-center">
+          <AlertCircle className="w-6 h-6" />
+        </div>
+        <div className="space-y-1">
+          <h3 className="text-xl font-bold text-slate-900">Failed to Load Services</h3>
+          <p className="text-sm text-slate-600 max-w-md mx-auto">{error}</p>
+        </div>
         <button
           onClick={fetchSubcategoryServices}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-[#5CA8FF] text-white rounded-xl text-xs font-semibold"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2563EB] hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow-xs transition-colors"
         >
           <RefreshCw className="w-3.5 h-3.5" />
           <span>Retry Connection</span>
@@ -165,47 +221,64 @@ export const ServiceListView: React.FC = () => {
   return (
     <div className="space-y-6 max-w-7xl mx-auto font-sans text-slate-800">
       {/* Clickable Breadcrumbs Navigation */}
-      <nav className="flex items-center gap-2 text-xs text-slate-500 font-medium overflow-x-auto">
-        <Link to="/admin/catalog" className="hover:text-[#5CA8FF] flex items-center gap-1 transition-colors">
+      <nav className="flex items-center gap-2 text-xs text-slate-500 font-semibold overflow-x-auto">
+        <Link to="/admin/catalog" className="hover:text-[#2563EB] flex items-center gap-1 transition-colors">
           <FolderTree className="w-3.5 h-3.5" />
           <span>Catalog</span>
         </Link>
-        <ChevronRight className="w-3.5 h-3.5 text-slate-300 flex-shrink-0" />
-        <Link to={`/admin/catalog/category/${encodeURIComponent(decodedCategory)}`} className="hover:text-[#5CA8FF] transition-colors flex-shrink-0">
-          {decodedCategory}
-        </Link>
-        <ChevronRight className="w-3.5 h-3.5 text-slate-300 flex-shrink-0" />
-        <span className="text-slate-900 font-bold flex-shrink-0">{decodedSubcategory}</span>
+        {decodedCategory && (
+          <>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-300 flex-shrink-0" />
+            <Link to={`/admin/catalog/category/${encodeURIComponent(decodedCategory)}`} className="hover:text-[#2563EB] transition-colors flex-shrink-0">
+              {formatCategoryDisplayName(decodedCategory)}
+            </Link>
+          </>
+        )}
+        {decodedSubcategory && (
+          <>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-300 flex-shrink-0" />
+            <span className="text-slate-900 font-bold flex-shrink-0">{decodedSubcategory}</span>
+          </>
+        )}
       </nav>
 
       {/* Header Banner */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-slate-200/90 shadow-2xs">
         <div className="flex items-start gap-4">
           <button
-            onClick={() => navigate(`/admin/catalog/category/${encodeURIComponent(decodedCategory)}`)}
-            className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors mt-0.5"
+            onClick={() => {
+              if (decodedCategory) {
+                navigate(`/admin/catalog/category/${encodeURIComponent(decodedCategory)}`);
+              } else {
+                navigate('/admin/catalog');
+              }
+            }}
+            className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors mt-0.5"
             title="Back to Subcategories"
           >
             <ArrowLeft className="w-4 h-4" />
           </button>
           <div>
-            <h1 className="text-xl font-bold text-slate-900 tracking-tight">{decodedSubcategory} Services</h1>
-            <p className="text-xs text-slate-500 font-medium mt-0.5">
-              Category: <span className="font-semibold text-slate-700">{decodedCategory}</span> • {totalItems} Services Total
+            <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+              {decodedSubcategory ? `${decodedSubcategory} Services` : 'All Catalog Services'}
+            </h1>
+            <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
+              {decodedCategory ? `Category: ${formatCategoryDisplayName(decodedCategory)} • ` : ''}
+              <strong className="text-slate-800 font-bold">{totalItems}</strong> Services Available
             </p>
           </div>
         </div>
 
         {/* Pagination Info Badge */}
         {totalItems > 0 && (
-          <div className="text-xs font-semibold text-slate-600 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200/80">
+          <div className="text-xs font-bold text-slate-700 bg-slate-50 px-4 py-2 rounded-xl border border-slate-200/80 shadow-2xs">
             Showing {startIndex + 1}–{endIndex} of {totalItems} Services
           </div>
         )}
       </div>
 
       {/* Search & Filter Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200/90 shadow-2xs">
         <div className="relative flex-1 w-full max-w-md">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
@@ -213,7 +286,7 @@ export const ServiceListView: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search service name..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30 focus:border-[#2563EB]"
           />
         </div>
 
@@ -221,7 +294,7 @@ export const ServiceListView: React.FC = () => {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30"
           >
             <option value="">All Statuses</option>
             <option value="active">Active Only</option>
@@ -231,7 +304,7 @@ export const ServiceListView: React.FC = () => {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30"
           >
             <option value="name_asc">Sort: Name (A–Z)</option>
             <option value="name_desc">Sort: Name (Z–A)</option>
@@ -242,7 +315,7 @@ export const ServiceListView: React.FC = () => {
           <select
             value={pageSize}
             onChange={(e) => setPageSize(Number(e.target.value))}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30"
           >
             <option value={12}>12 / page</option>
             <option value={24}>24 / page</option>
@@ -252,7 +325,7 @@ export const ServiceListView: React.FC = () => {
           <button
             onClick={handleExportFilteredExcel}
             disabled={exportLoading}
-            className="flex items-center gap-1.5 px-3 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-xs rounded-xl border border-emerald-200 transition-colors disabled:opacity-50"
+            className="flex items-center gap-1.5 px-3.5 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs rounded-xl border border-emerald-200 transition-colors disabled:opacity-50"
             title="Export filtered catalog to Excel"
           >
             {exportLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <FileSpreadsheet className="w-3.5 h-3.5" />}
@@ -263,14 +336,14 @@ export const ServiceListView: React.FC = () => {
           <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#5CA8FF] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#2563EB] shadow-2xs' : 'text-slate-500 hover:text-slate-800'}`}
               title="Grid View"
             >
               <LayoutGrid className="w-4 h-4" />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#5CA8FF] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#2563EB] shadow-2xs' : 'text-slate-500 hover:text-slate-800'}`}
               title="List View"
             >
               <List className="w-4 h-4" />
@@ -281,24 +354,228 @@ export const ServiceListView: React.FC = () => {
 
       {/* Services Grid or List Render */}
       {paginatedServices.length === 0 ? (
-        <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
-          <FolderTree className="w-8 h-8 text-slate-400 mx-auto" />
-          <h3 className="text-base font-bold text-slate-800">No services found.</h3>
-          <p className="text-sm text-slate-500 font-medium">Try changing your search or filters.</p>
+        <div className="py-16 p-6 text-center bg-white rounded-3xl border border-slate-200 shadow-2xs space-y-3">
+          <FolderTree className="w-10 h-10 text-slate-400 mx-auto" />
+          <h3 className="text-lg font-bold text-slate-800">No services found in this subcategory.</h3>
+          <p className="text-xs sm:text-sm text-slate-500 font-medium">
+            There are currently no active catalog services recorded under {decodedSubcategory || 'this filter'}.
+          </p>
+          <button
+            onClick={() => {
+              setSearchTerm('');
+              setStatusFilter('');
+              fetchSubcategoryServices();
+            }}
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-50 text-[#2563EB] hover:bg-blue-100 rounded-xl text-xs font-bold transition-colors"
+          >
+            <RefreshCw className="w-3.5 h-3.5" />
+            <span>Reset Search & Filters</span>
+          </button>
         </div>
       ) : viewMode === 'grid' ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {paginatedServices.map((svc) => {
-            const ServiceIcon = getServiceIcon(svc.name, svc.category);
+            const serviceImg = getServiceImage(svc.category, svc.subcategory, svc.name);
             return (
               <div
                 key={svc.id}
                 onClick={() => navigate(`/admin/catalog/service/${svc.id}`)}
-                className="group bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer flex flex-col justify-between"
+                className="group bg-white rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-blue-300 transition-all cursor-pointer flex flex-col justify-between overflow-hidden"
               >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+                {/* Real Service Image Cover */}
+                <div className="relative w-full h-40 bg-slate-100 overflow-hidden">
+                  <img
+                    src={serviceImg}
+                    alt={svc.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = DEFAULT_SERVICE_IMAGE;
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
+
+                  {/* Top Bar on Image: Checkbox & Status */}
+                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                    <input
+                      type="checkbox"
+                      checked={selectedServiceIds.includes(svc.id)}
+                      onChange={(e) => {
+                        e.stopPropagation();
+                        if (e.target.checked) {
+                          setSelectedServiceIds((prev) => [...prev, svc.id]);
+                        } else {
+                          setSelectedServiceIds((prev) => prev.filter((id) => id !== svc.id));
+                        }
+                      }}
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-4 h-4 rounded text-[#2563EB] focus:ring-[#2563EB] cursor-pointer bg-white/90 shadow-xs"
+                    />
+
+                    <button
+                      onClick={(e) => handleToggleStatus(svc, e)}
+                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold shadow-xs transition-colors backdrop-blur-xs ${
+                        svc.is_active
+                          ? 'bg-emerald-500/90 text-white'
+                          : 'bg-slate-700/90 text-slate-200'
+                      }`}
+                    >
+                      {svc.is_active ? <CheckCircle2 className="w-3 h-3" /> : <XCircle className="w-3 h-3" />}
+                      <span>{svc.is_active ? 'Active' : 'Disabled'}</span>
+                    </button>
+                  </div>
+
+                  {/* Subcategory / Classification Pill on Image */}
+                  <div className="absolute bottom-2.5 left-3">
+                    <span className="inline-block px-2.5 py-0.5 rounded-lg bg-black/50 backdrop-blur-xs text-white text-[11px] font-bold">
+                      {svc.subcategory}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Card Content */}
+                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
+                  <div>
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#2563EB] transition-colors line-clamp-1">
+                      {svc.name}
+                    </h3>
+                    <p className="text-xs text-slate-500 font-medium mt-0.5 truncate">
+                      {formatCategoryDisplayName(svc.category)}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-slate-100 space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-slate-400 font-semibold uppercase">Base Price</span>
+                      <span className="text-lg font-extrabold text-slate-900 font-mono">
+                        {formatRupee(svc.base_price)}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between text-[11px] font-mono text-slate-600 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                      <span className="text-amber-700 font-semibold">{formatSurgePercent(svc.max_demand_increase)}</span>
+                      <span className="text-emerald-700 font-semibold">{formatDiscountPercent(svc.max_discount)}</span>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-1">
+                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-lg">
+                        <Sparkles className="w-3 h-3" />
+                        AI Verified
+                      </span>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigate(`/admin/catalog/service/${svc.id}`);
+                        }}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 hover:bg-[#2563EB] text-[#2563EB] hover:text-white font-bold text-xs rounded-xl transition-all shadow-2xs"
+                      >
+                        <Edit3 className="w-3.5 h-3.5" />
+                        <span>Manage</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        /* List View */
+        <div className="space-y-4">
+          {/* Desktop & Tablet Table View */}
+          <div className="hidden md:block bg-white rounded-2xl border border-slate-200/90 shadow-2xs overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 font-bold uppercase tracking-wider">
+                    <th className="py-3.5 px-4">Service</th>
+                    <th className="py-3.5 px-4">Base Price (INR)</th>
+                    <th className="py-3.5 px-4">Max Surge</th>
+                    <th className="py-3.5 px-4">Max Discount</th>
+                    <th className="py-3.5 px-4">Status</th>
+                    <th className="py-3.5 px-4 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {paginatedServices.map((svc) => {
+                    const ServiceIcon = getServiceIcon(svc.name, svc.category);
+                    return (
+                      <tr
+                        key={svc.id}
+                        onClick={() => navigate(`/admin/catalog/service/${svc.id}`)}
+                        className="hover:bg-slate-50 transition-colors cursor-pointer"
+                      >
+                        <td className="py-3 px-4">
+                          <div className="flex items-center gap-3">
+                            <input
+                              type="checkbox"
+                              checked={selectedServiceIds.includes(svc.id)}
+                              onChange={(e) => {
+                                e.stopPropagation();
+                                if (e.target.checked) {
+                                  setSelectedServiceIds((prev) => [...prev, svc.id]);
+                                } else {
+                                  setSelectedServiceIds((prev) => prev.filter((id) => id !== svc.id));
+                                }
+                              }}
+                              onClick={(e) => e.stopPropagation()}
+                              className="w-4 h-4 rounded text-[#2563EB] focus:ring-[#2563EB] cursor-pointer"
+                            />
+                            <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#2563EB] flex items-center justify-center flex-shrink-0">
+                              <ServiceIcon className="w-4 h-4" />
+                            </div>
+                            <div>
+                              <p className="font-bold text-slate-900">{svc.name}</p>
+                              <p className="text-[11px] text-slate-500 font-medium">{formatCategoryDisplayName(svc.category)} • {svc.subcategory}</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="py-3 px-4 font-mono font-bold text-slate-900 text-sm">
+                          {formatRupee(svc.base_price)}
+                        </td>
+                        <td className="py-3 px-4 font-mono text-amber-700 font-semibold">
+                          {formatSurgePercent(svc.max_demand_increase)}
+                        </td>
+                        <td className="py-3 px-4 font-mono text-emerald-700 font-semibold">
+                          {formatDiscountPercent(svc.max_discount)}
+                        </td>
+                        <td className="py-3 px-4">
+                          <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold ${svc.is_active ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-500'}`}>
+                            {svc.is_active ? 'Active' : 'Disabled'}
+                          </span>
+                        </td>
+                        <td className="py-3 px-4 text-right">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              navigate(`/admin/catalog/service/${svc.id}`);
+                            }}
+                            className="px-3 py-1 bg-slate-100 hover:bg-[#2563EB] hover:text-white text-slate-700 font-bold rounded-lg transition-colors text-xs"
+                          >
+                            Manage Service
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Mobile Card-Based List View */}
+          <div className="md:hidden space-y-3">
+            {paginatedServices.map((svc) => {
+              const ServiceIcon = getServiceIcon(svc.name, svc.category);
+              return (
+                <div
+                  key={svc.id}
+                  onClick={() => navigate(`/admin/catalog/service/${svc.id}`)}
+                  className="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs space-y-3"
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-center gap-2.5 min-w-0">
                       <input
                         type="checkbox"
                         checked={selectedServiceIds.includes(svc.id)}
@@ -311,180 +588,78 @@ export const ServiceListView: React.FC = () => {
                           }
                         }}
                         onClick={(e) => e.stopPropagation()}
-                        className="w-4 h-4 rounded text-[#5CA8FF] focus:ring-[#5CA8FF] cursor-pointer"
+                        className="w-4 h-4 rounded text-[#2563EB] focus:ring-[#2563EB] cursor-pointer flex-shrink-0"
                       />
-                      <div className="w-10 h-10 rounded-xl bg-blue-50 group-hover:bg-[#5CA8FF] text-[#5CA8FF] group-hover:text-white flex items-center justify-center transition-colors">
-                        <ServiceIcon className="w-5 h-5" />
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#2563EB] flex items-center justify-center flex-shrink-0">
+                        <ServiceIcon className="w-4 h-4" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="font-bold text-slate-900 text-sm truncate">{svc.name}</h4>
+                        <p className="text-[11px] text-slate-500 truncate">{formatCategoryDisplayName(svc.category)} • {svc.subcategory}</p>
                       </div>
                     </div>
-                    <button
-                      onClick={(e) => handleToggleStatus(svc, e)}
-                      className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-semibold transition-colors ${
-                        svc.is_active
-                          ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                          : 'bg-slate-100 text-slate-500 border border-slate-200'
-                      }`}
-                    >
-                      {svc.is_active ? <CheckCircle2 className="w-3 h-3 text-emerald-500" /> : <XCircle className="w-3 h-3 text-slate-400" />}
-                      <span>{svc.is_active ? 'Active' : 'Disabled'}</span>
-                    </button>
-                  </div>
-
-                  <div>
-                    <h3 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-[#5CA8FF] transition-colors line-clamp-2">
-                      {svc.name}
-                    </h3>
-                    <p className="text-xs text-slate-500 font-semibold mt-1">
-                      {svc.category} • {svc.subcategory}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-5 pt-3 border-t border-slate-100 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-medium text-slate-400 uppercase">Base Price</span>
-                    <span className="text-base font-bold text-slate-900 font-mono">
-                      {formatRupee(svc.base_price)}
+                    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold flex-shrink-0 ${svc.is_active ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-500'}`}>
+                      {svc.is_active ? 'Active' : 'Disabled'}
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 bg-slate-50 p-2 rounded-lg border border-slate-100">
-                    <span className="text-amber-700">+{(svc.max_demand_increase * 100).toFixed(0)}% Surge</span>
-                    <span className="text-emerald-700">-{(svc.max_discount * 100).toFixed(0)}% Discount</span>
+                  <div className="flex items-center justify-between text-xs pt-1 border-t border-slate-100">
+                    <div>
+                      <span className="text-[10px] text-slate-400 uppercase font-semibold">Price: </span>
+                      <span className="font-mono font-bold text-slate-900">{formatRupee(svc.base_price)}</span>
+                    </div>
+                    <div className="text-[10px] font-mono text-slate-500 flex gap-2">
+                      <span className="text-amber-700 font-semibold">{formatSurgePercent(svc.max_demand_increase)}</span>
+                      <span className="text-emerald-700 font-semibold">{formatDiscountPercent(svc.max_discount)}</span>
+                    </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-1">
-                    <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-[#5CA8FF] bg-blue-50 px-2 py-0.5 rounded">
-                      <Sparkles className="w-3 h-3" />
-                      AI Ready
-                    </span>
+                  <div className="flex items-center justify-end pt-1">
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
                         navigate(`/admin/catalog/service/${svc.id}`);
                       }}
-                      className="inline-flex items-center gap-1 text-xs font-semibold text-slate-700 hover:text-[#5CA8FF]"
+                      className="w-full py-2 bg-slate-50 hover:bg-[#2563EB] hover:text-white text-slate-700 font-bold rounded-xl transition-colors text-xs text-center border border-slate-200"
                     >
-                      <Edit3 className="w-3.5 h-3.5" />
-                      <span>Manage</span>
+                      Manage Service
                     </button>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        /* List View */
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs border-collapse">
-              <thead>
-                <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider">
-                  <th className="py-3.5 px-4">Service</th>
-                  <th className="py-3.5 px-4">Base Price (INR)</th>
-                  <th className="py-3.5 px-4">Max Surge</th>
-                  <th className="py-3.5 px-4">Max Discount</th>
-                  <th className="py-3.5 px-4">Status</th>
-                  <th className="py-3.5 px-4 text-right">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
-                {paginatedServices.map((svc) => {
-                  const ServiceIcon = getServiceIcon(svc.name, svc.category);
-                  return (
-                    <tr
-                      key={svc.id}
-                      onClick={() => navigate(`/admin/catalog/service/${svc.id}`)}
-                      className="hover:bg-slate-50 transition-colors cursor-pointer"
-                    >
-                      <td className="py-3 px-4">
-                        <div className="flex items-center gap-3">
-                          <input
-                            type="checkbox"
-                            checked={selectedServiceIds.includes(svc.id)}
-                            onChange={(e) => {
-                              e.stopPropagation();
-                              if (e.target.checked) {
-                                setSelectedServiceIds((prev) => [...prev, svc.id]);
-                              } else {
-                                setSelectedServiceIds((prev) => prev.filter((id) => id !== svc.id));
-                              }
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="w-4 h-4 rounded text-[#5CA8FF] focus:ring-[#5CA8FF] cursor-pointer"
-                          />
-                          <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#5CA8FF] flex items-center justify-center flex-shrink-0">
-                            <ServiceIcon className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <p className="font-bold text-slate-900">{svc.name}</p>
-                            <p className="text-[11px] text-slate-500">{svc.category} • {svc.subcategory}</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="py-3 px-4 font-mono font-bold text-slate-900 text-sm">
-                        {formatRupee(svc.base_price)}
-                      </td>
-                      <td className="py-3 px-4 font-mono text-amber-700">
-                        +{(svc.max_demand_increase * 100).toFixed(0)}%
-                      </td>
-                      <td className="py-3 px-4 font-mono text-emerald-700">
-                        -{(svc.max_discount * 100).toFixed(0)}%
-                      </td>
-                      <td className="py-3 px-4">
-                        <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-semibold ${svc.is_active ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-500'}`}>
-                          {svc.is_active ? 'Active' : 'Disabled'}
-                        </span>
-                      </td>
-                      <td className="py-3 px-4 text-right">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            navigate(`/admin/catalog/service/${svc.id}`);
-                          }}
-                          className="px-3 py-1 bg-slate-100 hover:bg-[#5CA8FF] hover:text-white text-slate-700 font-semibold rounded-lg transition-colors text-xs"
-                        >
-                          Manage Service
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+              );
+            })}
           </div>
         </div>
       )}
 
       {/* Floating Bulk Action Bar */}
       {selectedServiceIds.length > 0 && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-slate-900 text-white px-6 py-3.5 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-4 animate-in slide-in-from-bottom">
-          <span className="text-xs font-bold text-slate-300">
-            <strong className="text-white text-sm">{selectedServiceIds.length}</strong> Services Selected
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-slate-900 text-white px-4 sm:px-6 py-3 rounded-2xl shadow-2xl border border-slate-700 flex flex-wrap items-center justify-center gap-2 sm:gap-4 max-w-[calc(100vw-24px)] animate-in slide-in-from-bottom">
+          <span className="text-xs font-bold text-slate-300 whitespace-nowrap">
+            <strong className="text-white text-sm">{selectedServiceIds.length}</strong> Selected
           </span>
 
-          <div className="h-4 w-px bg-slate-700" />
+          <div className="hidden sm:block h-4 w-px bg-slate-700" />
 
           <button
             onClick={() => setBulkConfirmAction(true)}
-            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow-xs transition-colors"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow-xs transition-colors"
           >
-            Activate Selected
+            Activate
           </button>
 
           <button
             onClick={() => setBulkConfirmAction(false)}
-            className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl text-xs shadow-xs transition-colors"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl text-xs shadow-xs transition-colors"
           >
-            Deactivate Selected
+            Deactivate
           </button>
 
           <button
             onClick={() => setSelectedServiceIds([])}
-            className="text-xs text-slate-400 hover:text-white underline ml-2"
+            className="text-xs text-slate-400 hover:text-white underline ml-1"
           >
-            Deselect All
+            Deselect
           </button>
         </div>
       )}
@@ -558,3 +733,5 @@ export const ServiceListView: React.FC = () => {
     </div>
   );
 };
+
+export default ServiceListView;

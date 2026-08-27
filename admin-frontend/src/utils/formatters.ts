@@ -14,3 +14,18 @@ export const formatRupee = (val: number | null | undefined): string => {
   if (val === null || val === undefined || isNaN(val)) return '₹0';
   return `₹${Math.round(Number(val)).toLocaleString('en-IN')}`;
 };
+
+export const formatSurgePercent = (val: number | null | undefined): string => {
+  if (val === null || val === undefined || isNaN(val)) return '+0% Surge';
+  const num = Number(val);
+  const pct = num > 1 ? num : num * 100;
+  return `+${Math.round(pct)}% Surge`;
+};
+
+export const formatDiscountPercent = (val: number | null | undefined): string => {
+  if (val === null || val === undefined || isNaN(val)) return '-0% Discount';
+  const num = Number(val);
+  const pct = num > 1 ? num : num * 100;
+  return `-${Math.round(pct)}% Discount`;
+};
+

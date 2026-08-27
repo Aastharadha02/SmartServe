@@ -84,11 +84,11 @@ export const AppRoutes: React.FC = () => {
           }
         />
         <Route
-          path="/admin/catalog/category/:categoryName"
+          path="/admin/catalog/services"
           element={
             <ProtectedRoute>
               <AdminLayout>
-                <SubcategoryListView />
+                <ServiceListView />
               </AdminLayout>
             </ProtectedRoute>
           }
@@ -99,6 +99,36 @@ export const AppRoutes: React.FC = () => {
             <ProtectedRoute>
               <AdminLayout>
                 <ServiceListView />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/catalog/category/:categoryName/subcategory/*"
+          element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <ServiceListView />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/catalog/category/:categoryName"
+          element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <SubcategoryListView />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/catalog/category/*"
+          element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <SubcategoryListView />
               </AdminLayout>
             </ProtectedRoute>
           }

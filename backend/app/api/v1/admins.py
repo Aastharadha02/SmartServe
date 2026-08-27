@@ -126,7 +126,40 @@ def get_permissions_matrix(
     admin: User = Depends(require_admin)
 ):
     """Return standard RBAC system permission matrix."""
-    return SYSTEM_PERMISSION_MATRIX
+@router.get("/me", response_model=AdminDetailResponse)
+def get_current_admin_profile(
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin)
+):
+    """Retrieve currently authenticated admin's own profile and role details."""
+    role_entry = db.query(AdminRole).filter(AdminRole.user_id == admin.id).first()
+    r_name = role_entry.role_name if role_entry else ("super_admin" if admin.role == "super_admin" else "operations_admin")
+    perms = role_entry.permissions if role_entry else ["dashboard:view", "catalog:manage", "providers:manage", "customers:manage", "security:manage"]
+
+    recent_logs = db.query(AuditLog).filter(
+        (AuditLog.actor_id == admin.id) | 
+        (AuditLog.actor_email == admin.email)
+    ).order_by(AuditLog.created_at.desc()).limit(10).all()
+
+    act_list = [
+        {
+            "id": str(log.id),
+            "action": log.action,
+            "created_at": log.created_at.isoformat() if log.created_at else ""
+        } for log in recent_logs
+    ]
+
+    return AdminDetailResponse(
+        id=str(admin.id),
+        email=admin.email,
+        role=admin.role,
+        role_name=r_name,
+        permissions=perms,
+        is_active=admin.is_active,
+        is_2fa_enabled=admin.is_2fa_enabled,
+        created_at=admin.created_at.isoformat() if admin.created_at else "",
+        recent_activity=act_list
+    )
 
 @router.get("/{admin_id}", response_model=AdminDetailResponse)
 def get_admin_detail(

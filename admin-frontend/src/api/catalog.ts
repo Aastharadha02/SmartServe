@@ -90,11 +90,13 @@ export const formatRupee = (val: number): string => {
 
 export const getCatalogServices = async (
   category?: string,
+  subcategory?: string,
   skip: number = 0,
   limit: number = 1000
 ): Promise<ServiceItem[]> => {
   const params: Record<string, any> = { skip, limit };
   if (category) params.category = category;
+  if (subcategory) params.subcategory = subcategory;
 
   const response = await apiClient.get<ServiceItem[]>('/admin/catalog/services', { params });
   return response.data;

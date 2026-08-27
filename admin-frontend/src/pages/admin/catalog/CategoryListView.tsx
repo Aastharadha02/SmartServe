@@ -29,6 +29,7 @@ import { getCategoryIcon } from '../../../utils/catalogIcons';
 import { getAuthenticatedAdmin } from '../../../api/admins';
 import type { SessionAdminInfo } from '../../../api/admins';
 import { hasPermission } from '../../../utils/rbac';
+import { getServiceImage, formatCategoryDisplayName, DEFAULT_SERVICE_IMAGE } from '../../../utils/serviceImages';
 
 export const CategoryListView: React.FC = () => {
   const navigate = useNavigate();
@@ -87,6 +88,12 @@ export const CategoryListView: React.FC = () => {
     getAuthenticatedAdmin().then((s) => setAdminSession(s)).catch(() => {});
   }, []);
 
+  // Helper to extract natural category ordering from database prefix
+  const getCategoryOrder = (catName: string): number => {
+    const match = catName.match(/^(\d+)\./);
+    return match ? parseInt(match[1], 10) : 999;
+  };
+
   // Aggregate Category Cards from backend services
   const categorySummaries = useMemo(() => {
     const map = new Map<string, { subcategories: Set<string>; total: number; active: number }>();
@@ -103,26 +110,33 @@ export const CategoryListView: React.FC = () => {
 
     const result: Array<{
       name: string;
+      displayName: string;
       subcategoriesCount: number;
       serviceCount: number;
       activeCount: number;
+      order: number;
     }> = [];
 
     map.forEach((val, name) => {
       result.push({
         name,
+        displayName: formatCategoryDisplayName(name),
         subcategoriesCount: val.subcategories.size,
         serviceCount: val.total,
         activeCount: val.active,
+        order: getCategoryOrder(name),
       });
     });
 
-    return result.sort((a, b) => a.name.localeCompare(b.name));
+    // Preserve natural category order (1, 2, ..., 14)
+    return result.sort((a, b) => a.order - b.order || a.displayName.localeCompare(b.displayName));
   }, [services]);
 
   const filteredCategories = useMemo(() => {
     return categorySummaries.filter((cat) => {
-      const matchesSearch = cat.name.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesSearch = 
+        cat.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        cat.displayName.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesStatus = !statusFilter || 
         (statusFilter === 'active' && cat.activeCount > 0) ||
         (statusFilter === 'inactive' && cat.activeCount < cat.serviceCount);
@@ -389,47 +403,60 @@ export const CategoryListView: React.FC = () => {
 
       {/* Category Grid or List Render */}
       {filteredCategories.length === 0 ? (
-        <div className="py-16 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
-          <FolderTree className="w-8 h-8 text-slate-400 mx-auto" />
-          <h3 className="text-sm font-bold text-slate-800">No Categories Found</h3>
-          <p className="text-xs text-slate-500">No catalog categories match your search filters.</p>
+        <div className="py-16 text-center bg-white rounded-3xl border border-slate-200 shadow-sm space-y-3">
+          <FolderTree className="w-10 h-10 text-slate-400 mx-auto" />
+          <h3 className="text-base font-bold text-slate-800">No Categories Found</h3>
+          <p className="text-xs text-slate-500 font-medium">No catalog categories match your search filters.</p>
         </div>
       ) : viewMode === 'grid' ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredCategories.map((cat) => {
-            const IconComponent = getCategoryIcon(cat.name);
+            const catImage = getServiceImage(cat.name);
             return (
               <div
                 key={cat.name}
                 onClick={() => navigate(`/admin/catalog/category/${encodeURIComponent(cat.name)}`)}
-                className="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer flex flex-col justify-between"
+                className="group bg-white rounded-3xl border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-blue-300 transition-all cursor-pointer flex flex-col justify-between overflow-hidden"
               >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-2xl bg-blue-50 group-hover:bg-[#5CA8FF] text-[#5CA8FF] group-hover:text-white flex items-center justify-center transition-colors">
-                      <IconComponent className="w-6 h-6" />
-                    </div>
-                    <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-[#5CA8FF] group-hover:translate-x-1 transition-all" />
-                  </div>
+                {/* Category Photography Cover */}
+                <div className="relative w-full h-44 bg-slate-100 overflow-hidden">
+                  <img
+                    src={catImage}
+                    alt={cat.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = DEFAULT_SERVICE_IMAGE;
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/20 to-transparent"></div>
 
-                  <div>
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#5CA8FF] transition-colors">
-                      {cat.name}
-                    </h3>
-                    <p className="text-sm text-slate-500 font-semibold mt-1">
-                      {cat.subcategoriesCount} Subcategories • {cat.serviceCount} Total Services
-                    </p>
+                  <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
+                    <div>
+                      <h3 className="text-lg font-bold text-white tracking-tight drop-shadow-sm">
+                        {cat.displayName}
+                      </h3>
+                      <p className="text-xs text-slate-200 font-medium">
+                        {cat.subcategoriesCount} Subcategories • {cat.serviceCount} Services
+                      </p>
+                    </div>
+
+                    <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs text-white flex items-center justify-center group-hover:bg-[#2563EB] transition-colors">
+                      <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-100">
+                <div className="p-4 sm:p-5 flex items-center justify-between text-xs">
+                  <span className="inline-flex items-center gap-1.5 text-emerald-700 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                     <span>{cat.activeCount} Active</span>
                   </span>
 
-                  <span className="text-[11px] font-medium text-slate-400 group-hover:text-[#5CA8FF]">
-                    Explore Subcategories →
+                  <span className="font-bold text-[#2563EB] group-hover:underline flex items-center gap-1">
+                    <span>Explore</span>
+                    <ChevronRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </div>
@@ -448,11 +475,11 @@ export const CategoryListView: React.FC = () => {
                   className="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#5CA8FF] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#2563EB] flex items-center justify-center">
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-slate-900">{cat.name}</h3>
+                      <h3 className="text-sm font-bold text-slate-900">{cat.displayName}</h3>
                       <p className="text-xs text-slate-500">
                         {cat.subcategoriesCount} Subcategories • {cat.serviceCount} Services
                       </p>

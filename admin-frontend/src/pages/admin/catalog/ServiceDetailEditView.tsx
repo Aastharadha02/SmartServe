@@ -37,6 +37,7 @@ import { getServiceIcon } from '../../../utils/catalogIcons';
 import { getAuthenticatedAdmin } from '../../../api/admins';
 import type { SessionAdminInfo } from '../../../api/admins';
 import { hasPermission } from '../../../utils/rbac';
+import { getServiceImage } from '../../../utils/serviceImages';
 
 export const ServiceDetailEditView: React.FC = () => {
   const { serviceId } = useParams<{ serviceId: string }>();
@@ -493,10 +494,10 @@ export const ServiceDetailEditView: React.FC = () => {
       )}
 
       {/* Clickable Breadcrumbs Navigation */}
-      <nav className="flex items-center gap-2 text-sm text-slate-500 font-semibold overflow-x-auto">
-        <Link to="/admin/catalog" className="hover:text-[#5CA8FF] flex items-center gap-1.5 transition-colors">
-          <FolderTree className="w-4 h-4" />
-          <span>All Categories</span>
+      <nav className="flex items-center gap-2 text-xs text-slate-500 font-medium overflow-x-auto whitespace-nowrap">
+        <Link to="/admin/catalog" className="hover:text-[#5CA8FF] flex items-center gap-1 transition-colors flex-shrink-0">
+          <FolderTree className="w-3.5 h-3.5" />
+          <span>Catalog</span>
         </Link>
         <ChevronRight className="w-4 h-4 text-slate-300 flex-shrink-0" />
         <Link to={`/admin/catalog/category/${encodeURIComponent(category)}`} className="hover:text-[#5CA8FF] transition-colors flex-shrink-0">
@@ -511,50 +512,54 @@ export const ServiceDetailEditView: React.FC = () => {
       </nav>
 
       {/* Page Title & Header Banner */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-        <div className="flex items-center gap-5">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6 bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm">
+        <div className="flex items-start sm:items-center gap-3 sm:gap-5 min-w-0">
           <button
             onClick={() => navigate(`/admin/catalog/category/${encodeURIComponent(category)}/subcategory/${encodeURIComponent(subcategory)}`)}
-            className="p-3 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
+            className="p-2.5 sm:p-3 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors flex-shrink-0"
             title="Back to Subcategory Services"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
-          <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#5CA8FF] flex items-center justify-center">
-            <ServiceIcon className="w-7 h-7" />
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 flex-shrink-0 shadow-2xs">
+            <img
+              src={getServiceImage(category, name)}
+              alt={name}
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div>
-            <div className="flex items-center gap-3">
-              <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">{name}</h1>
-              <span className="text-xl font-bold text-slate-900 font-mono bg-slate-100 px-3 py-1 rounded-xl border border-slate-200">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight truncate">{name}</h1>
+              <span className="text-base sm:text-xl font-extrabold text-slate-900 font-mono bg-blue-50 text-[#2563EB] px-3 py-1 rounded-xl border border-blue-100">
                 {formatRupee(basePrice)}
               </span>
               {isActive ? (
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs md:text-sm font-bold shadow-xs">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-0.5 sm:py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs sm:text-sm font-bold shadow-xs">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   Active
                 </span>
               ) : (
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 text-xs md:text-sm font-bold shadow-xs">
-                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-0.5 sm:py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 text-xs sm:text-sm font-bold shadow-xs">
+                  <span className="w-2 h-2 rounded-full bg-rose-500"></span>
                   Inactive
                 </span>
               )}
             </div>
-            <p className="text-sm text-slate-500 font-semibold mt-1">
+            <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-1 truncate">
               Category: <span className="text-slate-800 font-bold">{category}</span> • Subcategory: <span className="text-slate-800 font-bold">{subcategory}</span>
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full lg:w-auto">
           <button
             type="button"
             onClick={() => setPreviewModalOpen(true)}
-            className="flex items-center gap-2 px-5 py-3 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold text-sm rounded-2xl shadow-xs transition-colors"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold text-xs sm:text-sm rounded-2xl shadow-xs transition-colors"
           >
             <Eye className="w-4 h-4 text-[#5CA8FF]" />
-            <span>Preview Service</span>
+            <span>Preview</span>
           </button>
 
           {canManageCatalog ? (
@@ -562,18 +567,18 @@ export const ServiceDetailEditView: React.FC = () => {
               <button
                 onClick={handleRegenerateClick}
                 disabled={aiLoading}
-                className="flex items-center gap-2 px-5 py-3 bg-blue-50 hover:bg-blue-100 text-[#5CA8FF] border border-blue-200 font-bold text-sm rounded-2xl transition-colors disabled:opacity-50"
+                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-blue-50 hover:bg-blue-100 text-[#5CA8FF] border border-blue-200 font-bold text-xs sm:text-sm rounded-2xl transition-colors disabled:opacity-50"
               >
                 {aiLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <RotateCcw className="w-4 h-4" />}
-                <span>Regenerate AI Content</span>
+                <span>AI Content</span>
               </button>
 
               <button
                 onClick={handleSaveChanges}
                 disabled={saveLoading}
-                className="flex items-center gap-2 px-6 py-3 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold text-sm rounded-2xl shadow-sm transition-colors disabled:opacity-50"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm transition-colors disabled:opacity-50"
               >
-                {saveLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-5 h-5" />}
+                {saveLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4 sm:w-5 sm:h-5" />}
                 <span>Save Changes</span>
               </button>
             </>
@@ -581,9 +586,9 @@ export const ServiceDetailEditView: React.FC = () => {
             <button
               disabled
               title="Modifying catalog services requires Operations Admin ('catalog:manage') or Super Admin role."
-              className="flex items-center gap-2 px-6 py-3 bg-slate-200 text-slate-500 font-bold text-sm rounded-2xl cursor-not-allowed opacity-70 border border-slate-300"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-slate-200 text-slate-500 font-bold text-xs sm:text-sm rounded-2xl cursor-not-allowed opacity-70 border border-slate-300"
             >
-              <Save className="w-5 h-5 text-slate-400" />
+              <Save className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400" />
               <span>Save Changes (View Only)</span>
             </button>
           )}
@@ -614,13 +619,13 @@ export const ServiceDetailEditView: React.FC = () => {
         )}
         
         {/* Section 1: Basic Information */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-          <div className="border-b border-slate-100 pb-4">
-            <h2 className="text-xl font-bold text-slate-900">1. Basic Information</h2>
-            <p className="text-sm text-slate-500 font-semibold">Service identification and catalog status</p>
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-5">
+          <div className="border-b border-slate-100 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900">1. Basic Information</h2>
+            <p className="text-xs sm:text-sm text-slate-500 font-semibold">Service identification and catalog status</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 text-sm">
             <div>
               <label className="block font-bold text-slate-700 mb-1.5">Service Name</label>
               <input
@@ -740,13 +745,13 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 3: Pricing & Limits (Indian Rupee ₹) */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-          <div className="border-b border-slate-100 pb-4">
-            <h2 className="text-xl font-bold text-slate-900">3. Rate Controls (Indian Rupee ₹)</h2>
-            <p className="text-sm text-slate-500 font-semibold">Base rate in ₹, duration, and dynamic pricing limits</p>
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-5">
+          <div className="border-b border-slate-100 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900">3. Rate Controls (Indian Rupee ₹)</h2>
+            <p className="text-xs sm:text-sm text-slate-500 font-semibold">Base rate in ₹, duration, and dynamic pricing limits</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-5 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 text-sm">
             <div>
               <label className="block font-bold text-slate-700 mb-1.5">Base Price in ₹</label>
               <div className="relative">
@@ -807,13 +812,13 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 4: INCLUDED vs EXCLUDED */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="border-b border-slate-100 pb-4">
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900">4. Service Scope Boundaries (Included vs Excluded)</h2>
-            <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">Service-specific scope inclusions and scope exclusions</p>
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5 sm:space-y-6">
+          <div className="border-b border-slate-100 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900">4. Service Scope Boundaries (Included vs Excluded)</h2>
+            <p className="text-xs sm:text-sm md:text-base text-slate-500 font-semibold mt-1">Service-specific scope inclusions and scope exclusions</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 text-base">
             {/* Left Panel: Included */}
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -1148,13 +1153,13 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 6: Tools & Materials / Products */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="border-b border-slate-100 pb-4">
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900">6. Service Tools & Materials / Consumables</h2>
-            <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">Equipment, specialized tools, and consumables required for this service</p>
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5 sm:space-y-6">
+          <div className="border-b border-slate-100 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900">6. Service Tools & Materials / Consumables</h2>
+            <p className="text-xs sm:text-sm md:text-base text-slate-500 font-semibold mt-1">Equipment, specialized tools, and consumables required for this service</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 text-base">
             {/* Left Panel: Tools */}
             <div className="space-y-4">
               <div className="flex items-center justify-between">

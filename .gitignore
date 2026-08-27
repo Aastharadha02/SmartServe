@@ -1,15 +1,58 @@
+# Dependencies
 node_modules/
-.venv/
+.pnp
+.pnp.js
+
+# Python virtual environments & bytecode
 venv/
+.venv/
+env/
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variable files (NEVER COMMIT REAL SECRETS)
 .env
+.env.*
 .env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+
+# Credentials, Keys & Secrets (NEVER COMMIT)
+*credentials*
+*CREDENTIALS*
+*credential*
+*CREDENTIAL*
+ADMIN_CREDENTIALS.md
+admin_credentials.md
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+
+# Build & output artifacts
 dist/
 build/
+*.egg-info/
+
+# IDE & Editor files
 .vscode/
 .idea/
-*.log
+*.swp
+*.swo
+
+# OS & Temp files
 .DS_Store
 Thumbs.db
+*.log
 architecture-preview.html
+splash_screen/
+scratch/
+.agents/
+.system_generated/

@@ -19,13 +19,14 @@ router = APIRouter(prefix="/admin/catalog", tags=["Admin Catalog Management"])
 @router.get("/services", response_model=List[ServiceResponse])
 def list_catalog_services(
     category: Optional[str] = None,
+    subcategory: Optional[str] = None,
     skip: int = 0,
-    limit: int = 100,
+    limit: int = 1000,
     db: Session = Depends(get_db),
     admin: User = Depends(require_admin)
 ):
     """Retrieve full catalog services hierarchy."""
-    services = service_repository.get_services(db, skip=skip, limit=limit, category=category)
+    services = service_repository.get_services(db, skip=skip, limit=limit, category=category, subcategory=subcategory)
     return [
         ServiceResponse(
             id=str(s.id),
