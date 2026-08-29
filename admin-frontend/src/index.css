@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@layer base {
+/* -- Base Reset -- */
   /* ── Prevent all accidental horizontal overflow ── */
   html {
     overflow-x: hidden;
@@ -51,8 +51,6 @@
       font-size: 0.875rem; /* 14px on desktop */
     }
   }
-}
-
 :root {
   --primary-blue: #5CA8FF;
   --primary-blue-dark: #3b82f6;
@@ -138,3 +136,4 @@
 .sidebar-drawer.closed {
   transform: translateX(-100%);
 }
+
