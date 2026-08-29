@@ -63,9 +63,11 @@ export const getServiceDemandReport = async (): Promise<ServiceDemandReportItem[
   return response.data;
 };
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://smartserve-backend-tr3p.onrender.com/api/v1';
+
 export const downloadExcelReport = async (): Promise<void> => {
   const token = localStorage.getItem('smartserve_token');
-  const response = await fetch('http://127.0.0.1:8000/api/v1/admin/reports/export/excel', {
+  const response = await fetch(`${API_BASE_URL}/admin/reports/export/excel`, {
     headers: { Authorization: `Bearer ${token}` }
   });
   const blob = await response.blob();
@@ -80,7 +82,7 @@ export const downloadExcelReport = async (): Promise<void> => {
 
 export const downloadPdfReport = async (): Promise<void> => {
   const token = localStorage.getItem('smartserve_token');
-  const response = await fetch('http://127.0.0.1:8000/api/v1/admin/reports/export/pdf', {
+  const response = await fetch(`${API_BASE_URL}/admin/reports/export/pdf`, {
     headers: { Authorization: `Bearer ${token}` }
   });
   const blob = await response.blob();
@@ -92,3 +94,4 @@ export const downloadPdfReport = async (): Promise<void> => {
   a.click();
   a.remove();
 };
+

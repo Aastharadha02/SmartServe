@@ -68,7 +68,7 @@ export const Login: React.FC = () => {
           setErrorMessage(err.response.data?.detail || 'Authentication failed. Please check your credentials.');
         }
       } else if (err.request) {
-        setErrorMessage('Unable to connect to SmartServe API. Please verify the backend server is running on http://127.0.0.1:8000.');
+        setErrorMessage('Unable to connect to SmartServe API. Please verify network connectivity and backend server availability.');
       } else {
         setErrorMessage('An unexpected error occurred. Please try again.');
       }

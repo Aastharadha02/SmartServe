@@ -49,7 +49,7 @@ export const Dashboard: React.FC = () => {
       if (err.response) {
         setError(err.response.data?.detail || `API Error (${err.response.status}): Failed to load dashboard stats.`);
       } else if (err.request) {
-        setError('Network error: Unable to connect to SmartServe API. Ensure FastAPI server is running on port 8000.');
+        setError('Network error: Unable to connect to SmartServe API backend.');
       } else {
         setError('An unexpected error occurred while loading dashboard metrics.');
       }

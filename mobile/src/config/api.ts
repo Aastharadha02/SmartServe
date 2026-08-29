@@ -12,13 +12,8 @@ export const getApiBaseUrl = (): string => {
     return process.env.EXPO_PUBLIC_API_URL;
   }
 
-  // 2. Default platform development mappings
-  if (Platform.OS === 'android') {
-    // 10.0.2.2 is standard Android emulator loopback to host PC
-    return 'http://10.0.2.2:8000/api/v1';
-  }
-
-  return 'http://127.0.0.1:8000/api/v1';
+  // 2. Default to production Render API URL
+  return 'https://smartserve-backend-tr3p.onrender.com/api/v1';
 };
 
 export const API_BASE_URL = getApiBaseUrl();

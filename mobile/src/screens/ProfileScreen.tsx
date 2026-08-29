@@ -36,7 +36,7 @@ export const ProfileScreen = () => {
             </Text>
           </View>
           <Text style={styles.userName}>{user?.email?.split('@')[0] || 'SmartServe User'}</Text>
-          <Text style={styles.userEmail}>{user?.email || 'user@smartserve.com'}</Text>
+          <Text style={styles.userEmail}>{user?.email || ''}</Text>
           <View style={styles.rolePill}>
             <Text style={styles.roleText}>{user?.role_name || user?.role || 'Customer'}</Text>
           </View>

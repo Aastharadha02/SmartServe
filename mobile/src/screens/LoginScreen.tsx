@@ -97,7 +97,7 @@ export const LoginScreen = () => {
               <Text style={styles.inputLabel}>Email Address</Text>
               <TextInput
                 style={styles.textInput}
-                placeholder="name@smartserve.com"
+                placeholder="name@example.com"
                 placeholderTextColor="#94A3B8"
                 autoCapitalize="none"
                 keyboardType="email-address"

@@ -28,7 +28,7 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
 
   const [customerName, setCustomerName] = useState(user?.email?.split('@')[0] || '');
   const [customerPhone, setCustomerPhone] = useState('+91 98765 43210');
-  const [customerEmail, setCustomerEmail] = useState(user?.email || 'customer@smartserve.com');
+  const [customerEmail, setCustomerEmail] = useState(user?.email || '');
   const [serviceAddress, setServiceAddress] = useState('Flat 402, Sunshine Residency, Bangalore');
   const [scheduledDate, setScheduledDate] = useState('Tomorrow');
   const [selectedSlot, setSelectedSlot] = useState(TIME_SLOTS[0]);
