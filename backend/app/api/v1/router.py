@@ -9,8 +9,9 @@ from app.api.v1.bookings import router as bookings_router, customer_bookings_rou
 from app.api.v1.support import router as support_router
 from app.api.v1.reports import router as reports_router
 from app.api.v1.security import router as security_router
-
+from app.api.v1.admins import router as admins_router
 from app.api.v1.services import router as services_router
+
 
 api_v1_router = APIRouter(prefix="/api/v1")
 

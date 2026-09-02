@@ -1,56 +1,130 @@
 import uuid
-from typing import Optional, TYPE_CHECKING
-from datetime import datetime, timezone
-from sqlalchemy import String, ForeignKey, DateTime, Boolean
-from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from datetime import datetime, date, time
+from decimal import Decimal
+from sqlalchemy import (
+    Column,
+    String,
+    Text,
+    Integer,
+    Numeric,
+    Boolean,
+    Date,
+    Time,
+    DateTime,
+    ForeignKey,
+    TypeDecorator,
+    CHAR,
+)
+from sqlalchemy.orm import relationship
+from sqlalchemy.dialects.postgresql import UUID as PG_UUID
+from app.core.database import Base
 
-from app.models.base import Base
 
-if TYPE_CHECKING:
-    from app.models.user import User
+class GUID(TypeDecorator):
+    """
+    Platform-independent GUID type.
+    Uses PostgreSQL's native UUID type, otherwise uses CHAR(36), storing as stringified hex.
+    """
+    impl = CHAR
+    cache_ok = True
+
+    def load_dialect_impl(self, dialect):
+        if dialect.name == "postgresql":
+            return dialect.type_descriptor(PG_UUID(as_uuid=True))
+        else:
+            return dialect.type_descriptor(CHAR(36))
+
+    def process_bind_param(self, value, dialect):
+        if value is None:
+            return value
+        elif dialect.name == "postgresql":
+            return value if isinstance(value, uuid.UUID) else uuid.UUID(str(value))
+        else:
+            if isinstance(value, uuid.UUID):
+                return str(value)
+            else:
+                return str(uuid.UUID(str(value)))
+
+    def process_result_value(self, value, dialect):
+        if value is None:
+            return value
+        if isinstance(value, uuid.UUID):
+            return value
+        return uuid.UUID(str(value))
+
 
 class Provider(Base):
     __tablename__ = "providers"
 
-    user_id: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
-    )
-    full_name: Mapped[str] = mapped_column(String(255), nullable=False)
-    category: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
-    photo_url: Mapped[Optional[str]] = mapped_column(String(1024), nullable=True)
-    skills: Mapped[Optional[str]] = mapped_column(String(512), nullable=True)
-    service_area: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
-    experience_years: Mapped[int] = mapped_column(default=5, nullable=False)
-    base_price: Mapped[float] = mapped_column(default=499.0, nullable=False)
-    is_verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
-    reliability_score: Mapped[float] = mapped_column(default=98.0, nullable=False)
-    acceptance_rate: Mapped[float] = mapped_column(default=95.0, nullable=False)
-    on_time_rate: Mapped[float] = mapped_column(default=99.0, nullable=False)
-    cancellation_rate: Mapped[float] = mapped_column(default=2.0, nullable=False)
-    no_show_rate: Mapped[float] = mapped_column(default=0.0, nullable=False)
-    response_time_score: Mapped[float] = mapped_column(default=95.0, nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)
-    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)
+    # Primary key links 1-to-1 with USERS.user_id when auth is merged
+    user_id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    full_name = Column(String(255), nullable=False)
+    photo_url = Column(String(1024), nullable=True)
+    category = Column(String(100), nullable=True)
+    skills = Column(Text, nullable=True)
+    experience_years = Column(Integer, default=0, nullable=False)
+    base_price = Column(Numeric(10, 2), default=Decimal("0.00"), nullable=False)
+    service_area = Column(String(255), nullable=True)
+    is_verified = Column(Boolean, default=False, nullable=False)
 
-    user: Mapped[Optional["User"]] = relationship("User", back_populates="provider")
+    # Reliability and Performance Metrics (0.00 - 100.00)
+    reliability_score = Column(Numeric(5, 2), default=Decimal("100.00"), nullable=False)
+    acceptance_rate = Column(Numeric(5, 2), default=Decimal("100.00"), nullable=False)
+    cancellation_rate = Column(Numeric(5, 2), default=Decimal("0.00"), nullable=False)
+    no_show_rate = Column(Numeric(5, 2), default=Decimal("0.00"), nullable=False)
+    on_time_rate = Column(Numeric(5, 2), default=Decimal("100.00"), nullable=False)
+    response_time_score = Column(Numeric(5, 2), default=Decimal("100.00"), nullable=False)
+
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+
+    # Relationships
+    certificates = relationship("Certificate", back_populates="provider", cascade="all, delete-orphan")
+    availability_slots = relationship("Availability", back_populates="provider", cascade="all, delete-orphan")
+    services = relationship("ProviderService", back_populates="provider", cascade="all, delete-orphan")
+
 
 class Certificate(Base):
     __tablename__ = "certificates"
 
-    id: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=True), primary_key=True, default=uuid.uuid4
-    )
-    provider_id: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=True), ForeignKey("providers.user_id", ondelete="CASCADE"), nullable=False
-    )
-    document_url: Mapped[str] = mapped_column(String(1024), nullable=False)
-    certificate_type: Mapped[str] = mapped_column(String(100), nullable=False)
-    document_number: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
-    expiry_date: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True), nullable=True)
-    extracted_name: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
-    is_duplicate: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
-    verification_status: Mapped[str] = mapped_column(String(50), nullable=False, default="Pending")
-    verified_by: Mapped[Optional[uuid.UUID]] = mapped_column(UUID(as_uuid=True), nullable=True)
-    uploaded_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=lambda: datetime.now(timezone.utc))
-    verified_at: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True), nullable=True)
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    provider_id = Column(GUID(), ForeignKey("providers.user_id", ondelete="CASCADE"), nullable=False)
+    document_url = Column(String(1024), nullable=False)
+    certificate_type = Column(String(100), nullable=False)
+    verification_status = Column(String(50), default="PENDING", nullable=False)  # PENDING, VERIFIED, REJECTED
+    verified_by = Column(GUID(), nullable=True)  # Admin UUID
+    uploaded_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    verified_at = Column(DateTime, nullable=True)
+
+    provider = relationship("Provider", back_populates="certificates")
+
+
+class Availability(Base):
+    __tablename__ = "availability"
+
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    provider_id = Column(GUID(), ForeignKey("providers.user_id", ondelete="CASCADE"), nullable=False)
+    slot_date = Column(Date, nullable=False)
+    start_time = Column(Time, nullable=False)
+    end_time = Column(Time, nullable=False)
+    status = Column(String(50), default="FREE", nullable=False)  # FREE, RESERVED, BOOKED, UNAVAILABLE
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+
+    provider = relationship("Provider", back_populates="availability_slots")
+
+
+class ProviderService(Base):
+    __tablename__ = "provider_services"
+
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    provider_id = Column(GUID(), ForeignKey("providers.user_id", ondelete="CASCADE"), nullable=False)
+    
+    # TODO: add FK to services after catalog merge
+    service_id = Column(GUID(), nullable=False)
+    
+    price = Column(Numeric(10, 2), nullable=False)
+    duration_minutes = Column(Integer, default=60, nullable=False)
+    active = Column(Boolean, default=True, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+
+    provider = relationship("Provider", back_populates="services")
