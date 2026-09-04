@@ -90,7 +90,7 @@ export const BookingListView: React.FC = () => {
     }).catch(() => {});
 
     // Real-Time Emergency Alerts WebSocket Connection
-    const rawApiUrl = import.meta.env.VITE_API_BASE_URL || 'https://smartserve-backend-tr3p.onrender.com/api/v1';
+    const rawApiUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
     const isHttps = rawApiUrl.startsWith('https:') || window.location.protocol === 'https:';
     const wsProtocol = isHttps ? 'wss:' : 'ws:';
     const hostDomain = rawApiUrl.replace(/^https?:\/\//, '').replace(/\/api\/v1\/?$/, '');

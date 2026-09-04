@@ -14,7 +14,8 @@ import {
   X,
   Check,
   FileSpreadsheet,
-  Upload
+  Upload,
+  LogIn
 } from 'lucide-react';
 import { 
   getCatalogServices, 
@@ -250,18 +251,39 @@ export const CategoryListView: React.FC = () => {
   }
 
   if (error) {
+    const isAuthError =
+      error.toLowerCase().includes('admin role') ||
+      error.toLowerCase().includes('forbidden') ||
+      error.toLowerCase().includes('unauthorized');
+
     return (
       <div className="max-w-2xl mx-auto my-12 p-6 bg-white border border-red-200 rounded-2xl shadow-sm text-center space-y-4">
         <AlertCircle className="w-8 h-8 text-red-500 mx-auto" />
         <h3 className="text-lg font-bold text-slate-900">Failed to Load Catalog Categories</h3>
         <p className="text-xs text-slate-600 max-w-md mx-auto">{error}</p>
-        <button
-          onClick={fetchCatalogData}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-[#5CA8FF] text-white rounded-xl text-xs font-semibold"
-        >
-          <RefreshCw className="w-3.5 h-3.5" />
-          <span>Retry Connection</span>
-        </button>
+        <div className="flex items-center justify-center gap-3 pt-2">
+          {isAuthError ? (
+            <button
+              onClick={() => {
+                localStorage.removeItem('smartserve_token');
+                localStorage.removeItem('smartserve_user');
+                window.location.href = '/login';
+              }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white rounded-xl text-xs font-semibold shadow-sm transition-colors"
+            >
+              <LogIn className="w-3.5 h-3.5" />
+              <span>Log In as Admin</span>
+            </button>
+          ) : (
+            <button
+              onClick={fetchCatalogData}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white rounded-xl text-xs font-semibold shadow-sm transition-colors"
+            >
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Retry Connection</span>
+            </button>
+          )}
+        </div>
       </div>
     );
   }

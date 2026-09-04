@@ -11,6 +11,17 @@ class ServiceCreateRequest(BaseModel):
     distinct_features: Optional[List[str]] = []
     suggested_addons: Optional[List[Dict[str, Any]]] = []
     is_active: bool = True
+    description: Optional[str] = None
+    included: Optional[List[str]] = None
+    excluded: Optional[List[str]] = None
+    process_steps: Optional[List[Dict[str, Any]]] = None
+    aftercare: Optional[List[str]] = None
+    tools_materials: Optional[List[str]] = None
+    customer_setup: Optional[List[str]] = None
+    expected_results: Optional[List[str]] = None
+    important_notes: Optional[List[str]] = None
+    warranty: Optional[str] = None
+    faqs: Optional[List[Dict[str, Any]]] = None
 
 class ServiceUpdateRequest(BaseModel):
     category: Optional[str] = None
@@ -22,6 +33,21 @@ class ServiceUpdateRequest(BaseModel):
     distinct_features: Optional[List[str]] = None
     suggested_addons: Optional[List[Dict[str, Any]]] = None
     is_active: Optional[bool] = None
+    description: Optional[str] = None
+    included: Optional[List[str]] = None
+    excluded: Optional[List[str]] = None
+    process_steps: Optional[List[Dict[str, Any]]] = None
+    aftercare: Optional[List[str]] = None
+    tools_materials: Optional[List[str]] = None
+    customer_setup: Optional[List[str]] = None
+    expected_results: Optional[List[str]] = None
+    important_notes: Optional[List[str]] = None
+    warranty: Optional[str] = None
+    faqs: Optional[List[Dict[str, Any]]] = None
+    tips: Optional[List[str]] = None
+    dos: Optional[List[str]] = None
+    donts: Optional[List[str]] = None
+    duration_minutes: Optional[int] = None
 
 class ServiceResponse(BaseModel):
     id: str
@@ -35,6 +61,13 @@ class ServiceResponse(BaseModel):
     suggested_addons: Optional[List[Dict[str, Any]]] = []
     is_active: bool
     created_at: str
+    description: Optional[str] = None
+    included: Optional[List[str]] = None
+    excluded: Optional[List[str]] = None
+    process_steps: Optional[List[Dict[str, Any]]] = None
+    aftercare: Optional[List[str]] = None
+    warranty: Optional[str] = None
+    faqs: Optional[List[Dict[str, Any]]] = None
 
 class CatalogTreeResponse(BaseModel):
     categories: List[Dict[str, Any]]

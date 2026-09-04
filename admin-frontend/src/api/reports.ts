@@ -63,7 +63,7 @@ export const getServiceDemandReport = async (): Promise<ServiceDemandReportItem[
   return response.data;
 };
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://smartserve-backend-tr3p.onrender.com/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
 
 export const downloadExcelReport = async (): Promise<void> => {
   const token = localStorage.getItem('smartserve_token');

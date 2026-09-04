@@ -117,17 +117,18 @@ export const ServiceListView: React.FC = () => {
         const sSub = (s.subcategory || '').toLowerCase().replace(/[\s\-_/]+/g, ' ').trim();
         const sCat = (s.category || '').toLowerCase().replace(/[\s\-_/]+/g, ' ').trim();
 
-        const subMatches = !normSub || sSub === normSub || sSub.includes(normSub) || normSub.includes(sSub);
+        // Exact match on normalized subcategory string to avoid collisions (e.g. Women's Salon matching Men's Salon)
+        const subMatches = !normSub || sSub === normSub;
         const catMatches = !normCat || sCat === normCat || sCat.includes(normCat) || normCat.includes(sCat);
         return subMatches && catMatches;
       });
 
-      // 3. Fallback: if category filter was overly restrictive, search across full catalog for this subcategory
+      // 3. Fallback: if category filter was overly restrictive, search across full catalog for this exact subcategory
       if (matching.length === 0 && normSub) {
         const allData = await getCatalogServices(undefined, undefined, 0, 1000);
         matching = allData.filter((s) => {
           const sSub = (s.subcategory || '').toLowerCase().replace(/[\s\-_/]+/g, ' ').trim();
-          return sSub === normSub || sSub.includes(normSub) || normSub.includes(sSub);
+          return sSub === normSub;
         });
       }
 

@@ -89,6 +89,10 @@ export const ServiceDetailEditView: React.FC = () => {
   const [newHighlightInput, setNewHighlightInput] = useState<string>('');
   const [serviceFeatures, setServiceFeatures] = useState<Array<{ title: string; description: string }>>([]);
   const [faqs, setFaqs] = useState<Array<{ question: string; answer: string }>>([]);
+  const [tips, setTips] = useState<string[]>([]);
+  const [dos, setDos] = useState<string[]>([]);
+  const [donts, setDonts] = useState<string[]>([]);
+  const [addonsList, setAddonsList] = useState<Array<{ addon_id: string; name: string; price: number; description?: string }>>([]);
   const [serviceMedia, setServiceMedia] = useState<Array<{ id: string; url: string; caption: string; media_type: string; is_cover: boolean }>>([]);
   const [deactivateModalOpen, setDeactivateModalOpen] = useState<boolean>(false);
   const [unavailabilityReason, setUnavailabilityReason] = useState<string>('');
@@ -124,213 +128,163 @@ export const ServiceDetailEditView: React.FC = () => {
       setMaxDiscount(match.max_discount);
       setIsActive(match.is_active);
 
-      // Initialize with existing data or trigger AI metadata if empty
-      const isPedicure = match.name.toLowerCase().includes('pedicure');
-      const isHaircut = match.name.toLowerCase().includes('haircut') || match.name.toLowerCase().includes('hair');
-      const isPlumbing = match.category.toLowerCase().includes('plumb') || match.name.toLowerCase().includes('leak');
-      const isElectrical = match.category.toLowerCase().includes('electric') || match.name.toLowerCase().includes('switch');
+      // Check if match has persisted metadata in suggested_addons
+      const addons = Array.isArray(match.suggested_addons) ? match.suggested_addons : [];
+      const hasPersistedData = addons.length > 0 && addons.some((a: any) => a && (a.type || a.price));
 
-      if (isPedicure) {
-        setDescription('Relaxing foot care treatment including soaking, nail trimming, cuticle care, exfoliation, and foot massage.');
-        setHighlights(['Hygienic disposable tools', 'Deep foot exfoliation', 'Relaxing foot massage']);
-        setIncluded(['Foot soaking in warm solution', 'Nail trimming and shaping', 'Cuticle care', 'Foot exfoliation', 'Dead skin/callus care', 'Foot massage', 'Nail buffing']);
-        setExcluded(['Nail extensions (Acrylic/Gel)', 'Nail art', 'Medical treatment of foot conditions']);
-        setProcessSteps([
-          { step_number: 1, title: 'Foot Inspection', description: 'Check skin and nail condition before treatment.', duration_minutes: 5, is_key_step: false },
-          { step_number: 2, title: 'Foot Soaking', description: 'Soak feet in warm soothing bath solution.', duration_minutes: 10, is_key_step: true },
-          { step_number: 3, title: 'Nail Trimming & Shaping', description: 'Trim toenails to desired length and shape edges.', duration_minutes: 10, is_key_step: false },
-          { step_number: 4, title: 'Cuticle Care & Exfoliation', description: 'Gently push cuticles and scrub dead skin.', duration_minutes: 10, is_key_step: true },
-          { step_number: 5, title: 'Foot Massage & Buffing', description: 'Apply moisturizing cream with relaxing foot massage and buff nails.', duration_minutes: 10, is_key_step: true }
-        ]);
-        setToolsMaterials(['Nail clipper', 'Nail file', 'Cuticle pusher', 'Foot soak basin', 'Foot scrub', 'Pumice stone', 'Nail buffer', 'Foot cream', 'Clean towels']);
-        setCustomerSetup([]);
-        setAftercare(['Keep feet clean and moisturized daily', 'Avoid tight footwear immediately after polish application']);
-        setExpectedResults(['Cleaner and neatly shaped nails', 'Softer skin texture', 'Reduced surface-level dead skin']);
-        setWarranty(null); // NULL WARRANTY FOR PEDICURE!
-        setFaqs([
-          { question: 'Is nail polish included?', answer: 'Standard nail buffing/polish is included. Gel or nail art requires add-on selection.' },
-          { question: 'How long does a pedicure take?', answer: 'Standard duration is approximately 45 minutes.' }
-        ]);
-      } else if (isHaircut) {
-        setDescription('Professional hair consultation, precision haircutting, and finishing styling.');
-        setHighlights(['Personalized hair consultation', 'Precision haircutting', 'Post-cut styling']);
-        setIncluded(['Hair consultation & style assessment', 'Precision haircutting', 'Basic post-cut blow dry & styling', 'Sanitized tools & disposable cape']);
-        setExcluded(['Hair wash / shampooing (available as add-on)', 'Hair coloring / chemical treatments', 'Hair spa treatments']);
-        setProcessSteps([
-          { step_number: 1, title: 'Style Consultation', description: 'Discuss desired hair length and style preference.', duration_minutes: 5, is_key_step: true },
-          { step_number: 2, title: 'Hair Sectioning', description: 'Section hair evenly for precision cutting.', duration_minutes: 5, is_key_step: false },
-          { step_number: 3, title: 'Haircut Execution', description: 'Perform haircut according to agreed style.', duration_minutes: 20, is_key_step: true },
-          { step_number: 4, title: 'Styling & Final Review', description: 'Blow dry, style, and review finished cut with customer.', duration_minutes: 10, is_key_step: true }
-        ]);
-        setToolsMaterials(['Styling shears', 'Thinning scissors', 'Cutting combs', 'Sectioning clips', 'Water spray bottle', 'Disposable cape']);
-        setCustomerSetup(['Please ensure hair is pre-washed and free of heavy styling products']);
-        setAftercare(['Use recommended shampoo and styling products to maintain shape']);
-        setExpectedResults(['Neat, well-defined haircut matching customer preference']);
-        setWarranty(null);
-        setFaqs([
-          { question: 'Is hair wash included?', answer: 'Basic haircutting is included; hair wash can be added as a separate service option.' }
-        ]);
-      } else if (isElectrical) {
-        setDescription('Safe electrical switchbox installation, wiring check, and load testing by certified electrician.');
-        setHighlights(['Power isolation safety check', 'Certified electrical technician', 'Terminal voltage testing']);
-        setIncluded(['Site inspection and power isolation', 'Existing wiring safety assessment', 'Switchbox mounting & terminal wiring', 'Voltage & continuity testing']);
-        setExcluded(['Supply of new switchboard hardware (unless purchased separately)', 'Heavy main distribution panel rewiring']);
-        setProcessSteps([
-          { step_number: 1, title: 'Site Inspection & Power Isolation', description: 'Inspect installation area and isolate main circuit breaker for safety.', duration_minutes: 10, is_key_step: true },
-          { step_number: 2, title: 'Wiring Assessment & Prep', description: 'Check existing wire gauges and prepare terminal connections.', duration_minutes: 10, is_key_step: false },
-          { step_number: 3, title: 'Switchbox Installation', description: 'Securely mount switchbox and connect electrical terminals.', duration_minutes: 20, is_key_step: true },
-          { step_number: 4, title: 'Voltage & Continuity Testing', description: 'Restore power and verify voltage output across all switches.', duration_minutes: 10, is_key_step: true }
-        ]);
-        setToolsMaterials(['Insulated screwdriver set', 'Digital multimeter', 'Wire strippers', 'Electrical insulation tape', 'Voltage detector pen']);
-        setCustomerSetup(['Ensure access to main MCB power isolation box']);
-        setAftercare(['Avoid overloading switchbox beyond recommended amperage capacity']);
-        setExpectedResults(['Safe, properly wired and operational electrical switchbox']);
-        setWarranty(null);
-        setFaqs([
-          { question: 'Does the price include spare switches?', answer: 'The service fee covers installation labor; replacement switches are charged separately.' }
-        ]);
-      } else if (isPlumbing) {
-        setDescription('Leak detection, pipe joint sealing, and plumbing fitting repair by experienced plumber.');
-        setHighlights(['Leak isolation testing', 'High-grade thread sealing', 'Pressure check post repair']);
-        setIncluded(['Plumbing leak inspection & root cause diagnosis', 'Replacing damaged washers / thread seals', 'Tightening pipe joints and fittings', 'Post-repair water flow & leak test']);
-        setExcluded(['Concealed pipe excavation / wall breaking', 'Cost of new major replacement pipes or faucets']);
-        setProcessSteps([
-          { step_number: 1, title: 'Leak Diagnosis', description: 'Inspect plumbing fixture to identify exact leak source.', duration_minutes: 10, is_key_step: true },
-          { step_number: 2, title: 'Water Supply Isolation', description: 'Turn off local stopcock valve to halt water flow.', duration_minutes: 5, is_key_step: false },
-          { step_number: 3, title: 'Joint Sealing & Repair', description: 'Replace worn washers and apply Teflon thread sealant tape.', duration_minutes: 25, is_key_step: true },
-          { step_number: 4, title: 'Pressure & Leak Testing', description: 'Re-open water valve and verify zero leakage under full pressure.', duration_minutes: 10, is_key_step: true }
-        ]);
-        setToolsMaterials(['Adjustable pipe wrench', 'Plier set', 'Teflon thread tape', 'Replacement rubber washers', 'Silicone sealant']);
-        setCustomerSetup(['Locate and ensure access to main water valve / stopcock']);
-        setAftercare(['Monitor repaired joint for 24 hours to ensure complete seal']);
-        setExpectedResults(['Completely sealed plumbing joint with zero water leakage']);
-        setWarranty(null);
-        setFaqs([
-          { question: 'What if additional pipe fittings are needed?', answer: 'Technician will inform you of material costs before installing extra parts.' }
-        ]);
-      } else if (match.name.toLowerCase().includes('cook') || match.category.toLowerCase().includes('food') || match.category.toLowerCase().includes('chef')) {
-        setDescription(`Fresh custom ${match.name} preparation at home by experienced cook following dietary preferences.`);
-        setHighlights(['Fresh custom meal prep', 'Dietary allergy compliance', 'Kitchen surface cleanup']);
-        setIncluded(['Ingredient preparation & chopping', 'Custom dish cooking according to taste preferences', 'Post-cooking stove & counter cleanup']);
-        setExcluded(['Groceries & raw ingredient supply (customer provided)', 'Deep dishwashing / sink unclogging']);
-        setProcessSteps([
-          { step_number: 1, title: 'Menu & Recipe Review', description: 'Review dishes, spice levels, and dietary preferences.', duration_minutes: 5, is_key_step: true },
-          { step_number: 2, title: 'Ingredient Preparation', description: 'Wash, trim, and chop vegetables and raw ingredients.', duration_minutes: 15, is_key_step: false },
-          { step_number: 3, title: 'Meal Cooking', description: 'Cook dishes using customer utensils and stovetop.', duration_minutes: 35, is_key_step: true },
-          { step_number: 4, title: 'Plating & Kitchen Cleanup', description: 'Serve cooked dishes and clean cooking counter.', duration_minutes: 10, is_key_step: true }
-        ]);
-        setToolsMaterials(['Chef knife', 'Chopping board', 'Spatula', 'Serving bowls', 'Kitchen aprons']);
-        setCustomerSetup(['Provide fresh groceries, oil, spices, and clean cookware']);
-        setAftercare(['Refrigerate leftover food within 2 hours of meal completion']);
-        setExpectedResults(['Freshly prepared meals cooked to specified taste and hygiene standards']);
-        setWarranty(null);
-        setFaqs([
-          { question: 'Do I need to supply ingredients?', answer: 'Yes, customer provides raw ingredients, oil, and spices.' },
-          { question: 'Can I specify spice levels?', answer: 'Yes, inform the chef about spice preferences before cooking begins.' }
-        ]);
-      } else if (match.name.toLowerCase().includes('panel') || match.category.toLowerCase().includes('carpent') || match.category.toLowerCase().includes('paint')) {
-        setDescription(`Precision ${match.name} surface mounting, edge alignment, and joint finishing.`);
-        setHighlights(['Wall surface alignment check', 'Secured panel mounting', 'Clean edge joint finishing']);
-        setIncluded(['Wall surface measurement & alignment check', 'Panel cutting & surface mounting', 'Corner joint sealing & edge trim fitting']);
-        setExcluded(['Major masonry or structural wall reconstruction', 'Electrical outlet rewiring behind panels']);
-        setProcessSteps([
-          { step_number: 1, title: 'Surface Alignment Check', description: 'Measure wall area and verify surface level accuracy.', duration_minutes: 10, is_key_step: true },
-          { step_number: 2, title: 'Panel Sizing & Cutting', description: 'Cut wall panels to exact wall dimensions.', duration_minutes: 15, is_key_step: false },
-          { step_number: 3, title: 'Panel Mounting & Fixing', description: 'Apply adhesive/fixings to mount panels securely.', duration_minutes: 30, is_key_step: true },
-          { step_number: 4, title: 'Edge Sealing & Inspection', description: 'Seal panel edges and inspect installation finish.', duration_minutes: 15, is_key_step: true }
-        ]);
-        setToolsMaterials(['Laser level gauge', 'Panel cutter', 'High-tack adhesive', 'Silicone sealant', 'Measuring tape']);
-        setCustomerSetup(['Ensure work area is clear of furniture and obstruction']);
-        setAftercare(['Allow panel adhesive to cure undisturbed for 24 hours']);
-        setExpectedResults(['Properly mounted wall panels with clean finished edge joints']);
-        setWarranty('30-Day Installation Guarantee: Covers panel fitting and adhesive bond stability.');
-        setFaqs([
-          { question: 'Does the price include panel materials?', answer: 'Service covers installation labor; panel materials are supplied by customer or billed separately.' },
-          { question: 'How long does installation take?', answer: 'Standard installation takes approximately 60 to 90 minutes depending on wall area.' }
-        ]);
-      } else {
-        setDescription(`Dedicated ${match.name} execution tailored to ${match.category} specifications.`);
-        setHighlights([`${match.name} execution`, 'Quality verification', 'Clean completion']);
-        setIncluded([`Complete ${match.name} service execution`, 'Initial requirements check', 'Post-service cleanup']);
-        setExcluded(['Unrelated home repairs or structural modifications']);
-        setProcessSteps([
-          { step_number: 1, title: 'Initial Assessment', description: `Check requirements for ${match.name}.`, duration_minutes: 10, is_key_step: true },
-          { step_number: 2, title: 'Service Execution', description: `Perform ${match.name} according to service standards.`, duration_minutes: 35, is_key_step: true },
-          { step_number: 3, title: 'Final Inspection', description: 'Review completed work with customer.', duration_minutes: 10, is_key_step: false }
-        ]);
-        setToolsMaterials([]);
-        setCustomerSetup(['Provide clear access to the service area']);
-        setAftercare(['Follow recommended care guidelines for best results']);
-        setExpectedResults([`Completed ${match.name} matching customer specifications`]);
-        setWarranty(null);
-        setFaqs([
-          { question: `How long does ${match.name} take?`, answer: 'Standard duration is approximately 45-60 minutes.' }
-        ]);
-      }
-
-      // Populate sections from persisted suggested_addons if available
-      if (Array.isArray(match.suggested_addons) && match.suggested_addons.length > 0) {
-        const faqsObj = match.suggested_addons.find((a: any) => a.type === 'faqs');
-        if (faqsObj && Array.isArray(faqsObj.items)) {
-          setFaqs(faqsObj.items);
+      if (hasPersistedData) {
+        // 1. Description
+        const descObj = addons.find((a: any) => a.type === 'description' || a.type === 'service_description');
+        if (descObj && (descObj.text || descObj.description || descObj.content)) {
+          setDescription(descObj.text || descObj.description || descObj.content);
+        } else if (match.description) {
+          setDescription(match.description);
         }
-        const procObj = match.suggested_addons.find((a: any) => a.type === 'process_steps');
+
+        // 2. Duration
+        const durObj = addons.find((a: any) => a.type === 'duration' || a.type === 'estimated_duration');
+        if (durObj && (durObj.minutes || durObj.duration)) {
+          setEstimatedDuration(parseInt(durObj.minutes || durObj.duration) || 45);
+        }
+
+        // 3. Process Steps
+        const procObj = addons.find((a: any) => a.type === 'process_steps');
         if (procObj && Array.isArray(procObj.steps)) {
           setProcessSteps(procObj.steps);
+          if (!durObj) {
+            const sumMins = procObj.steps.reduce((acc: number, st: any) => acc + (st.duration_minutes || 0), 0);
+            if (sumMins > 0) setEstimatedDuration(sumMins);
+          }
         }
-        const excObj = match.suggested_addons.find((a: any) => a.type === 'excluded_scope');
+
+        // 4. Inclusions (distinct_features)
+        if (Array.isArray(match.distinct_features) && match.distinct_features.length > 0) {
+          setIncluded(match.distinct_features);
+        }
+
+        // 5. Exclusions
+        const excObj = addons.find((a: any) => a.type === 'excluded_scope');
         if (excObj && Array.isArray(excObj.items)) {
           setExcluded(excObj.items);
         }
-        const tmObj = match.suggested_addons.find((a: any) => a.type === 'tools_materials');
+
+        // 6. Tools & Materials
+        const tmObj = addons.find((a: any) => a.type === 'tools_materials');
         if (tmObj && Array.isArray(tmObj.tools)) {
           setToolsMaterials(tmObj.tools);
         }
-        const csObj = match.suggested_addons.find((a: any) => a.type === 'customer_setup');
+
+        // 7. Customer Setup
+        const csObj = addons.find((a: any) => a.type === 'customer_setup');
         if (csObj && Array.isArray(csObj.requirements)) {
           setCustomerSetup(csObj.requirements);
         }
-        const acObj = match.suggested_addons.find((a: any) => a.type === 'aftercare_precautions');
+
+        // 8. Aftercare & Precautions
+        const acObj = addons.find((a: any) => a.type === 'aftercare_precautions');
         if (acObj && Array.isArray(acObj.aftercare)) {
           setAftercare(acObj.aftercare);
         }
-        const erObj = match.suggested_addons.find((a: any) => a.type === 'expected_results');
+
+        // 9. Expected Results
+        const erObj = addons.find((a: any) => a.type === 'expected_results');
         if (erObj && Array.isArray(erObj.items)) {
           setExpectedResults(erObj.items);
         }
-        const inObj = match.suggested_addons.find((a: any) => a.type === 'important_notes');
+
+        // 10. Important Notes
+        const inObj = addons.find((a: any) => a.type === 'important_notes');
         if (inObj && Array.isArray(inObj.items)) {
           setImportantNotes(inObj.items);
         }
-        const wObj = match.suggested_addons.find((a: any) => a.type === 'warranty');
+
+        // 11. Tips
+        const tipsObj = addons.find((a: any) => a.type === 'tips');
+        if (tipsObj && Array.isArray(tipsObj.items)) {
+          setTips(tipsObj.items);
+        }
+
+        // 12. Dos & Don'ts
+        const ddObj = addons.find((a: any) => a.type === 'dos_donts');
+        if (ddObj) {
+          if (Array.isArray(ddObj.dos)) setDos(ddObj.dos);
+          if (Array.isArray(ddObj.donts)) setDonts(ddObj.donts);
+        }
+
+        // 13. FAQs
+        const faqsObj = addons.find((a: any) => a.type === 'faqs');
+        if (faqsObj && Array.isArray(faqsObj.items)) {
+          setFaqs(faqsObj.items);
+        }
+
+        // 14. Warranty
+        const wObj = addons.find((a: any) => a.type === 'warranty');
         if (wObj) {
           setWarranty(wObj.has_warranty ? (wObj.details || 'Warranty coverage details') : null);
         }
-        const seoObj = match.suggested_addons.find((a: any) => a.type === 'seo_metadata');
+
+        // 15. SEO & Highlights
+        const seoObj = addons.find((a: any) => a.type === 'seo_metadata');
         if (seoObj) {
           if (seoObj.seo_title) setSeoTitle(seoObj.seo_title);
           if (seoObj.seo_description) setSeoDescription(seoObj.seo_description);
           if (Array.isArray(seoObj.keywords)) setKeywords(seoObj.keywords);
           if (Array.isArray(seoObj.highlights)) setHighlights(seoObj.highlights);
         }
-        const sfObj = match.suggested_addons.find((a: any) => a.type === 'service_features');
+
+        // 16. Service Features & Media
+        const sfObj = addons.find((a: any) => a.type === 'service_features');
         if (sfObj && Array.isArray(sfObj.items)) {
           setServiceFeatures(sfObj.items);
         }
-        const smObj = match.suggested_addons.find((a: any) => a.type === 'service_media');
+        const smObj = addons.find((a: any) => a.type === 'service_media');
         if (smObj && Array.isArray(smObj.items)) {
           setServiceMedia(smObj.items);
         }
 
-        try {
-          setAuditLoading(true);
-          const logs = await getServiceAuditLogs(match.id);
-          setAuditLogs(logs);
-        } catch (logErr) {
-          console.error('Audit log fetch error:', logErr);
-        } finally {
-          setAuditLoading(false);
+        // 17. Addon Items
+        const realAddons = addons.filter((a: any) => !a.type && ('price' in a || 'addon_id' in a));
+        if (realAddons.length > 0) {
+          setAddonsList(realAddons.map((ra: any, idx: number) => ({
+            addon_id: ra.addon_id || `add-${idx}`,
+            name: ra.name || 'Add-on',
+            price: parseFloat(ra.price) || 0,
+            description: ra.description || ''
+          })));
         }
+      } else {
+        // Fallback for unconfigured new services
+        setDescription(match.description || `Professional ${match.name} service execution under ${match.category}.`);
+        setHighlights([`${match.name} delivery`, 'Professional standards', 'Quality verified']);
+        setIncluded(Array.isArray(match.distinct_features) && match.distinct_features.length > 0 ? match.distinct_features : [`Professional ${match.name} execution`]);
+        setExcluded(['Unrelated additional tasks or major structural repairs']);
+        setProcessSteps([
+          { step_number: 1, title: 'Initial Assessment', description: `Assess requirements for ${match.name}.`, duration_minutes: 10, is_key_step: true },
+          { step_number: 2, title: 'Service Execution', description: `Execute ${match.name} per standards.`, duration_minutes: 35, is_key_step: true },
+          { step_number: 3, title: 'Final Review', description: 'Review completed service with customer.', duration_minutes: 10, is_key_step: false }
+        ]);
+        setToolsMaterials([]);
+        setCustomerSetup(['Ensure clear access to work area']);
+        setAftercare(['Follow care guidelines for best results']);
+        setExpectedResults([`Complete ${match.name} meeting standards`]);
+        setWarranty(null);
+        setFaqs([
+          { question: `What is included in ${match.name}?`, answer: `Standard ${match.name} delivery per service specifications.` }
+        ]);
+        setTips(['Disclose any specific preferences before start']);
+        setDos(['Provide clear requirements']);
+        setDonts(['Do not interfere during active execution']);
+        setEstimatedDuration(45);
+      }
+
+      try {
+        setAuditLoading(true);
+        const logs = await getServiceAuditLogs(match.id);
+        setAuditLogs(logs);
+      } catch (logErr) {
+        console.error('Audit log fetch error:', logErr);
+      } finally {
+        setAuditLoading(false);
       }
     } catch (err: any) {
       setError(err.response?.data?.detail || 'Failed to load service details.');
@@ -358,19 +312,27 @@ export const ServiceDetailEditView: React.FC = () => {
     setSaveLoading(true);
 
     const structuredAddons: any[] = [
+      { type: 'description', text: description },
+      { type: 'duration', minutes: estimatedDuration },
       { type: 'service_media', items: serviceMedia },
       { type: 'service_features', items: serviceFeatures },
       { type: 'seo_metadata', seo_title: seoTitle, seo_description: seoDescription, keywords: keywords, highlights: highlights },
       { type: 'excluded_scope', items: excluded },
       { type: 'process_steps', steps: processSteps },
-      { type: 'tools_materials', tools: toolsMaterials, materials: customerSetup },
+      { type: 'tools_materials', tools: toolsMaterials, materials: [] },
       { type: 'customer_setup', requirements: customerSetup },
       { type: 'aftercare_precautions', aftercare: aftercare },
+      { type: 'tips', items: tips },
+      { type: 'dos_donts', dos: dos, donts: donts },
       { type: 'expected_results', items: expectedResults },
       { type: 'important_notes', items: importantNotes },
       { type: 'warranty', has_warranty: !!(warranty && warranty.trim()), details: warranty },
       { type: 'faqs', items: faqs }
     ];
+
+    for (const addon of addonsList) {
+      structuredAddons.push(addon);
+    }
 
     try {
       const updated = await updateCatalogService(service.id, {
@@ -381,7 +343,22 @@ export const ServiceDetailEditView: React.FC = () => {
         max_demand_increase: maxSurge,
         max_discount: maxDiscount,
         is_active: isActive,
+        description,
         distinct_features: included,
+        included,
+        excluded,
+        process_steps: processSteps,
+        tools_materials: toolsMaterials,
+        customer_setup: customerSetup,
+        aftercare,
+        tips,
+        dos,
+        donts,
+        faqs,
+        expected_results: expectedResults,
+        important_notes: importantNotes,
+        warranty,
+        duration_minutes: estimatedDuration,
         suggested_addons: structuredAddons,
       });
 
@@ -1898,13 +1875,337 @@ export const ServiceDetailEditView: React.FC = () => {
           </div>
         </div>
 
-        {/* Section 13: SEO & Service Metadata */}
+        {/* Section 13: Professional Tips */}
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-5">
+          <div className="flex items-center justify-between border-b border-slate-100 pb-3 sm:pb-4">
+            <div>
+              <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-indigo-600" />
+                <span>13. Professional Tips ({tips.length})</span>
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-1">Service-specific expert advice and practical care tips</p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setTips([...tips, 'Professional service tip for optimal results.'])}
+              disabled={!canManageCatalog}
+              className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded-xl text-xs sm:text-sm font-bold transition-colors disabled:opacity-50"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Add Tip</span>
+            </button>
+          </div>
+
+          <div className="space-y-3">
+            {tips.length === 0 ? (
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+                <span className="text-slate-500 font-semibold flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-indigo-500" />
+                  No tips configured for this service.
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setTips(['Schedule regular maintenance sessions for best results.', 'Maintain skin hydration before and after treatment.'])}
+                  disabled={!canManageCatalog}
+                  className="px-3 py-1 bg-white border border-slate-300 hover:border-indigo-500 text-indigo-700 rounded-xl text-xs font-bold transition-colors"
+                >
+                  + Add Default Tips
+                </button>
+              </div>
+            ) : (
+              tips.map((tip, idx) => (
+                <div key={idx} className="flex items-center gap-3 p-3 bg-indigo-50/40 rounded-2xl border border-indigo-100 shadow-2xs">
+                  <span className="w-7 h-7 rounded-xl bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center flex-shrink-0">
+                    #{idx + 1}
+                  </span>
+                  <input
+                    type="text"
+                    value={tip}
+                    onChange={(e) => {
+                      const copy = [...tips];
+                      copy[idx] = e.target.value;
+                      setTips(copy);
+                    }}
+                    disabled={!canManageCatalog}
+                    placeholder="Enter professional tip..."
+                    className="w-full bg-white border border-indigo-200 rounded-xl px-3.5 py-2 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 disabled:opacity-75"
+                  />
+                  <div className="flex items-center gap-1 flex-shrink-0">
+                    <button
+                      type="button"
+                      disabled={idx === 0 || !canManageCatalog}
+                      onClick={() => {
+                        const copy = [...tips];
+                        const temp = copy[idx - 1];
+                        copy[idx - 1] = copy[idx];
+                        copy[idx] = temp;
+                        setTips(copy);
+                      }}
+                      className="p-1 text-slate-400 hover:text-slate-700 disabled:opacity-30"
+                      title="Move Up"
+                    >
+                      <ArrowUp className="w-4 h-4" />
+                    </button>
+                    <button
+                      type="button"
+                      disabled={idx === tips.length - 1 || !canManageCatalog}
+                      onClick={() => {
+                        const copy = [...tips];
+                        const temp = copy[idx + 1];
+                        copy[idx + 1] = copy[idx];
+                        copy[idx] = temp;
+                        setTips(copy);
+                      }}
+                      className="p-1 text-slate-400 hover:text-slate-700 disabled:opacity-30"
+                      title="Move Down"
+                    >
+                      <ArrowDown className="w-4 h-4" />
+                    </button>
+                    <button
+                      type="button"
+                      disabled={!canManageCatalog}
+                      onClick={() => setTips(tips.filter((_, i) => i !== idx))}
+                      className="p-1 text-rose-400 hover:text-rose-600 disabled:opacity-30"
+                      title="Delete Tip"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+
+        {/* Section 14: Dos & Don'ts */}
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5">
+          <div className="border-b border-slate-100 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+              <ListCheck className="w-5 h-5 text-emerald-600" />
+              <span>14. Recommended Dos & Don'ts ({dos.length} Dos, {donts.length} Don'ts)</span>
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-1">Pre- and post-service action items for best results and safety</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* DOS COLUMN */}
+            <div className="space-y-3 p-4 sm:p-5 bg-emerald-50/30 rounded-2xl border border-emerald-200">
+              <div className="flex items-center justify-between pb-2 border-b border-emerald-100">
+                <span className="text-sm font-bold text-emerald-900 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  Recommended Dos ({dos.length})
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setDos([...dos, 'Recommended action before or after service.'])}
+                  disabled={!canManageCatalog}
+                  className="px-2.5 py-1 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 rounded-lg text-xs font-bold transition-colors disabled:opacity-50"
+                >
+                  + Add Do
+                </button>
+              </div>
+
+              <div className="space-y-2">
+                {dos.length === 0 ? (
+                  <p className="text-xs text-emerald-700 italic">No Dos specified.</p>
+                ) : (
+                  dos.map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                      <input
+                        type="text"
+                        value={item}
+                        onChange={(e) => {
+                          const copy = [...dos];
+                          copy[idx] = e.target.value;
+                          setDos(copy);
+                        }}
+                        disabled={!canManageCatalog}
+                        placeholder="Enter recommended action..."
+                        className="w-full bg-white border border-emerald-200 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 disabled:opacity-75"
+                      />
+                      <button
+                        type="button"
+                        disabled={!canManageCatalog}
+                        onClick={() => setDos(dos.filter((_, i) => i !== idx))}
+                        className="p-1 text-slate-400 hover:text-rose-600 disabled:opacity-30"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+
+            {/* DON'TS COLUMN */}
+            <div className="space-y-3 p-4 sm:p-5 bg-rose-50/30 rounded-2xl border border-rose-200">
+              <div className="flex items-center justify-between pb-2 border-b border-rose-100">
+                <span className="text-sm font-bold text-rose-900 flex items-center gap-1.5">
+                  <XCircle className="w-4 h-4 text-rose-600" />
+                  Important Don'ts ({donts.length})
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setDonts([...donts, 'Action to avoid before or after service.'])}
+                  disabled={!canManageCatalog}
+                  className="px-2.5 py-1 bg-rose-100 hover:bg-rose-200 text-rose-800 rounded-lg text-xs font-bold transition-colors disabled:opacity-50"
+                >
+                  + Add Don't
+                </button>
+              </div>
+
+              <div className="space-y-2">
+                {donts.length === 0 ? (
+                  <p className="text-xs text-rose-700 italic">No Don'ts specified.</p>
+                ) : (
+                  donts.map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <X className="w-4 h-4 text-rose-600 flex-shrink-0" />
+                      <input
+                        type="text"
+                        value={item}
+                        onChange={(e) => {
+                          const copy = [...donts];
+                          copy[idx] = e.target.value;
+                          setDonts(copy);
+                        }}
+                        disabled={!canManageCatalog}
+                        placeholder="Enter action to avoid..."
+                        className="w-full bg-white border border-rose-200 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-rose-500/30 disabled:opacity-75"
+                      />
+                      <button
+                        type="button"
+                        disabled={!canManageCatalog}
+                        onClick={() => setDonts(donts.filter((_, i) => i !== idx))}
+                        className="p-1 text-slate-400 hover:text-rose-600 disabled:opacity-30"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 15: Suggested Add-ons */}
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-5">
+          <div className="flex items-center justify-between border-b border-slate-100 pb-3 sm:pb-4">
+            <div>
+              <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+                <Package className="w-5 h-5 text-blue-600" />
+                <span>15. Suggested Add-on Services ({addonsList.length})</span>
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-1">Complementary service upgrades customers can add to their cart</p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setAddonsList([...addonsList, { addon_id: `addon-${Date.now()}`, name: '', price: 0, description: '' }])}
+              disabled={!canManageCatalog}
+              className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 rounded-xl text-xs sm:text-sm font-bold transition-colors disabled:opacity-50"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Add Add-on</span>
+            </button>
+          </div>
+
+          <div className="space-y-3">
+            {addonsList.length === 0 ? (
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-sm">
+                <span className="text-slate-500 font-semibold flex items-center gap-2">
+                  <Package className="w-4 h-4 text-slate-400" />
+                  No add-ons configured for this service in the database.
+                </span>
+              </div>
+            ) : (
+              addonsList.map((addon, idx) => (
+                <div key={idx} className="p-4 bg-blue-50/30 rounded-2xl border border-blue-100 space-y-3 shadow-2xs">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-blue-900 flex items-center gap-1.5">
+                        <Package className="w-3.5 h-3.5 text-blue-600" />
+                        Add-on #{idx + 1}
+                      </span>
+                      {addon.addon_id && (
+                        <span className="text-[11px] font-mono text-slate-500 bg-white px-2 py-0.5 rounded-md border border-slate-200">
+                          ID: {addon.addon_id}
+                        </span>
+                      )}
+                    </div>
+                    <button
+                      type="button"
+                      disabled={!canManageCatalog}
+                      onClick={() => setAddonsList(addonsList.filter((_, i) => i !== idx))}
+                      className="p-1 text-slate-400 hover:text-rose-600 disabled:opacity-30"
+                      title="Delete Add-on"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="sm:col-span-2">
+                      <label className="block text-xs font-bold text-slate-600 mb-1">Add-on Name</label>
+                      <input
+                        type="text"
+                        value={addon.name}
+                        onChange={(e) => {
+                          const copy = [...addonsList];
+                          copy[idx].name = e.target.value;
+                          setAddonsList(copy);
+                        }}
+                        disabled={!canManageCatalog}
+                        className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-600 mb-1">Price in ₹</label>
+                      <input
+                        type="number"
+                        value={addon.price}
+                        onChange={(e) => {
+                          const copy = [...addonsList];
+                          copy[idx].price = parseFloat(e.target.value) || 0;
+                          setAddonsList(copy);
+                        }}
+                        disabled={!canManageCatalog}
+                        className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-sm font-mono font-bold text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-600 mb-1">Description</label>
+                    <input
+                      type="text"
+                      value={addon.description || ''}
+                      onChange={(e) => {
+                        const copy = [...addonsList];
+                        copy[idx].description = e.target.value;
+                        setAddonsList(copy);
+                      }}
+                      disabled={!canManageCatalog}
+                      placeholder="Brief description of add-on benefit..."
+                      className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
+                    />
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+
+        {/* Section 16: SEO & Service Metadata */}
         <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
           <div className="flex items-center justify-between border-b border-slate-100 pb-4">
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
                 <Sparkles className="w-6 h-6 text-[#5CA8FF]" />
-                <span>13. SEO & Service Metadata</span>
+                <span>16. SEO & Service Metadata</span>
               </h2>
               <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">Search engine title, meta description, keywords, and service highlights</p>
             </div>
@@ -2902,6 +3203,85 @@ export const ServiceDetailEditView: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+              )}
+
+              {/* Dos & Don'ts (Rendered only if data exists!) */}
+              {(dos.length > 0 || donts.length > 0) && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {dos.length > 0 && (
+                    <div className="p-5 bg-emerald-50/40 rounded-2xl border border-emerald-100 space-y-2">
+                      <h4 className="text-sm font-bold text-emerald-900 flex items-center gap-1.5">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                        Recommended Dos
+                      </h4>
+                      <ul className="space-y-1.5 text-xs sm:text-sm font-medium text-slate-700">
+                        {dos.map((d, i) => (
+                          <li key={i} className="flex items-start gap-1.5">
+                            <span className="text-emerald-600 font-bold">✓</span>
+                            <span>{d}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {donts.length > 0 && (
+                    <div className="p-5 bg-rose-50/40 rounded-2xl border border-rose-100 space-y-2">
+                      <h4 className="text-sm font-bold text-rose-900 flex items-center gap-1.5">
+                        <XCircle className="w-4 h-4 text-rose-600" />
+                        Things to Avoid (Don'ts)
+                      </h4>
+                      <ul className="space-y-1.5 text-xs sm:text-sm font-medium text-slate-700">
+                        {donts.map((d, i) => (
+                          <li key={i} className="flex items-start gap-1.5">
+                            <span className="text-rose-600 font-bold">✕</span>
+                            <span>{d}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Professional Tips (Rendered only if data exists!) */}
+              {tips.length > 0 && (
+                <div className="p-6 bg-indigo-50/30 rounded-2xl border border-indigo-100 space-y-3">
+                  <h3 className="text-lg font-bold text-indigo-950 flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-indigo-600" />
+                    Professional Expert Tips
+                  </h3>
+                  <ul className="space-y-2 text-sm font-semibold text-slate-800">
+                    {tips.map((t, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-indigo-600 font-bold">💡</span>
+                        <span>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Suggested Add-ons (Rendered only if data exists!) */}
+              {addonsList.length > 0 && (
+                <div className="p-6 bg-blue-50/30 rounded-2xl border border-blue-100 space-y-3">
+                  <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <Package className="w-5 h-5 text-blue-600" />
+                    Available Service Add-ons
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {addonsList.map((addon, i) => (
+                      <div key={i} className="p-3 bg-white rounded-xl border border-blue-100 shadow-2xs space-y-1">
+                        <div className="flex items-center justify-between">
+                          <span className="font-bold text-slate-900 text-sm">{addon.name}</span>
+                          <span className="font-mono font-bold text-blue-600 text-xs">+{formatRupee(addon.price)}</span>
+                        </div>
+                        {addon.description && (
+                          <p className="text-xs text-slate-600 font-medium">{addon.description}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 

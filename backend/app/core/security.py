@@ -2,13 +2,11 @@ import hashlib
 import uuid
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any
+import warnings
+import jwt
 from app.core.config import settings
 
-# Attempt using PyJWT or fallback token helper
-try:
-    import jwt
-except ImportError:
-    jwt = None
+warnings.filterwarnings("ignore", category=getattr(jwt, "InsecureKeyLengthWarning", Warning))
 
 
 def hash_password(password: str) -> str:
@@ -23,40 +21,26 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
 
 
 def create_access_token(data: Dict[str, Any], expires_delta: Optional[timedelta] = None) -> str:
-    """Create JWT access token."""
+    """Create real standard JWT access token."""
     to_encode = data.copy()
     expire = datetime.utcnow() + (expires_delta or timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES))
     to_encode.update({"exp": expire})
     
-    if jwt:
-        return jwt.encode(to_encode, settings.JWT_SECRET, algorithm=settings.JWT_ALGORITHM)
-    
-    # Fallback hex token format if PyJWT is not installed
-    user_id = data.get("sub", str(uuid.uuid4()))
-    role = data.get("role", "customer")
-    return f"mock.jwt.{role}.{user_id}.{int(expire.timestamp())}"
+    secret_key = getattr(settings, "JWT_SECRET_KEY", settings.JWT_SECRET)
+    return jwt.encode(to_encode, secret_key, algorithm=settings.JWT_ALGORITHM)
 
 
 def decode_access_token(token: str) -> Optional[Dict[str, Any]]:
     """Decode and verify JWT token payload."""
     if not token:
         return None
-    
-    # Handle mock / fallback token strings
-    if token.startswith("mock.jwt."):
-        parts = token.split(".")
-        if len(parts) >= 4:
-            return {
-                "sub": parts[3],
-                "role": parts[2],
-            }
-        return {"sub": "cust-mock-uuid-1001", "role": "customer"}
 
-    if jwt:
-        try:
-            payload = jwt.decode(token, settings.JWT_SECRET, algorithms=[settings.JWT_ALGORITHM])
-            return payload
-        except Exception:
-            return None
+    try:
+        secret_key = getattr(settings, "JWT_SECRET_KEY", settings.JWT_SECRET)
+        payload = jwt.decode(token, secret_key, algorithms=[settings.JWT_ALGORITHM])
+        return payload
+    except Exception:
+        return None
 
-    return None
+
+verify_access_token = decode_access_token

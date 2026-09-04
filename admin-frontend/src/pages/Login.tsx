@@ -56,8 +56,12 @@ export const Login: React.FC = () => {
         })
       );
 
-      // Redirect to Admin Dashboard
-      navigate('/admin/dashboard');
+      // Redirect based on user role
+      if (data.role === 'customer') {
+        navigate('/customer');
+      } else {
+        navigate('/admin/dashboard');
+      }
     } catch (err: any) {
       if (err.response) {
         if (err.response.status === 401) {

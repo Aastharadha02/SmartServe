@@ -1,13 +1,17 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://smartserve-backend-tr3p.onrender.com/api/v1';
+const baseURL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api/v1';
+
+
 
 export const apiClient = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 10000,
 });
+
 
 // Interceptor to automatically attach JWT token
 apiClient.interceptors.request.use(
@@ -21,17 +25,25 @@ apiClient.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Interceptor to handle 401 Unauthorized responses
+// Interceptor to handle 401 Unauthorized & 403 Forbidden responses
 apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response && error.response.status === 401) {
-      localStorage.removeItem('smartserve_token');
-      localStorage.removeItem('smartserve_user');
-      if (window.location.pathname !== '/login') {
-        window.location.href = '/login';
+    if (error.response) {
+      const status = error.response.status;
+      const detail = String(error.response.data?.detail || '').toLowerCase();
+      if (
+        status === 401 ||
+        (status === 403 && (detail.includes('admin role') || detail.includes('forbidden') || detail.includes('unauthorized')))
+      ) {
+        localStorage.removeItem('smartserve_token');
+        localStorage.removeItem('smartserve_user');
+        if (window.location.pathname !== '/login' && window.location.pathname !== '/admin/login') {
+          window.location.href = '/login';
+        }
       }
     }
     return Promise.reject(error);
   }
 );
+

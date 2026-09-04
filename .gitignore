@@ -40,6 +40,8 @@ admin_credentials.md
 dist/
 build/
 *.egg-info/
+.vite/
+*.tsbuildinfo
 
 # IDE & Editor files
 .vscode/

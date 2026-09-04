@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Login } from '../pages/Login';
+import { CustomerPortalView } from '../pages/customer/CustomerPortalView';
 import { Dashboard } from '../pages/admin/Dashboard';
 import { AdminLayout } from '../components/layout/AdminLayout';
 
@@ -48,7 +49,22 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const token = localStorage.getItem('smartserve_token');
-  if (!token) {
+  const userStr = localStorage.getItem('smartserve_user');
+  let user: any = null;
+  try {
+    user = userStr ? JSON.parse(userStr) : null;
+  } catch (e) {
+    user = null;
+  }
+
+  const isAdminRole = user?.role && (
+    user.role === 'admin' ||
+    String(user.role).toLowerCase().includes('admin')
+  );
+
+  if (!token || !isAdminRole) {
+    localStorage.removeItem('smartserve_token');
+    localStorage.removeItem('smartserve_user');
     return <Navigate to="/login" replace />;
   }
   return <>{children}</>;
@@ -59,6 +75,8 @@ export const AppRoutes: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/customer" element={<CustomerPortalView />} />
 
         {/* Dashboard */}
         <Route
@@ -302,8 +320,8 @@ export const AppRoutes: React.FC = () => {
           }
         />
 
-        <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
-        <Route path="*" element={<Navigate to="/admin/dashboard" replace />} />
+        <Route path="/" element={<CustomerPortalView />} />
+        <Route path="*" element={<Navigate to="/customer" replace />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,4 @@
 from enum import Enum as PyEnum
-from app.models.customer import Booking
 
 class BookingStatus(str, PyEnum):
     REQUESTED = "Requested"
@@ -18,6 +17,13 @@ class PaymentStatus(str, PyEnum):
     FAILED = "Failed"
     REFUNDED = "Refunded"
 
-__all__ = ["Booking", "BookingStatus", "PaymentStatus"]
+def __getattr__(name):
+    if name == "Booking":
+        from app.models.customer import Booking
+        return Booking
+    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+
+__all__ = ["BookingStatus", "PaymentStatus", "Booking"]
+
 
 

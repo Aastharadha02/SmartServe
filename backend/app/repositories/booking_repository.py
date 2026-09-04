@@ -94,7 +94,8 @@ def update_booking_status(
 def count_bookings_by_status(db: Session) -> Dict[str, int]:
     results = db.query(Booking.status, func.count(Booking.id)).group_by(Booking.status).all()
     counts = {s.value.lower(): 0 for s in BookingStatus}
-    for status_enum, count in results:
-        if status_enum:
-            counts[status_enum.value.lower()] = count
+    for status_val, count in results:
+        if status_val:
+            s_key = str(status_val).lower()
+            counts[s_key] = counts.get(s_key, 0) + count
     return counts

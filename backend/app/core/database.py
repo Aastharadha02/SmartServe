@@ -9,22 +9,27 @@ if database_url.startswith("postgresql") and "+psycopg2" not in database_url and
 
 def get_engine():
     try:
-        # Test connecting to Postgres
-        engine_test = create_engine(
-            database_url,
-            pool_pre_ping=True,
-            connect_args={"connect_timeout": 2},
-        )
-        with engine_test.connect():
-            pass
-        return engine_test
+        if "postgresql" in database_url:
+            engine_test = create_engine(
+                database_url,
+                pool_pre_ping=True,
+                pool_recycle=300,
+                connect_args={"connect_timeout": 15},
+            )
+            with engine_test.connect():
+                pass
+            return engine_test
+        elif "sqlite" in database_url:
+            return create_engine(database_url, connect_args={"check_same_thread": False})
+        else:
+            return create_engine(database_url)
     except Exception as e:
-        # Fallback to local SQLite development database if PostgreSQL is not reachable
         sqlite_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "smartserve_dev.db"))
         return create_engine(
             f"sqlite:///{sqlite_path}",
             connect_args={"check_same_thread": False},
         )
+
 
 engine = get_engine()
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

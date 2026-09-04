@@ -4,17 +4,17 @@ from datetime import datetime
 from decimal import Decimal
 from typing import Optional, List
 from fastapi import APIRouter, Depends, HTTPException, status, Query, UploadFile, File
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 from app.core.dependencies import get_db, get_current_customer
 from app.core.security import hash_password, verify_password, create_access_token
+from app.models.user import User, UserSession
 from app.models.customer import (
-    User,
     Customer,
     Booking,
     SupportTicket,
     TicketMessage,
     BookingFeedback,
-    UserSession,
 )
 from app.schemas.customer_schemas import (
     CustomerRegisterPayload,
@@ -26,6 +26,7 @@ from app.schemas.customer_schemas import (
     ChangePasswordPayload,
     CustomerProfileUpdate,
     CategoryItem,
+    SubcategorySummary,
     ServiceItem,
     AddonItem,
     ServiceProcessStep,
@@ -43,69 +44,7 @@ from app.schemas.customer_schemas import (
 
 router = APIRouter(prefix="/customer", tags=["Customer API"])
 
-# Mock catalog fallback database items for fast development
-MOCK_CATEGORIES: List[CategoryItem] = [
-    CategoryItem(id="cat-1", name="AC & Appliance Repair", slug="ac-repair", image="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80", service_count=12),
-    CategoryItem(id="cat-2", name="Deep Cleaning", slug="cleaning", image="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80", service_count=18),
-    CategoryItem(id="cat-3", name="Plumbing Services", slug="plumbing", image="https://images.unsplash.com/photo-1505798577917-a65157d3320a?auto=format&fit=crop&w=600&q=80", service_count=15),
-    CategoryItem(id="cat-4", name="Electrician & Wiring", slug="electrician", image="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=600&q=80", service_count=14),
-    CategoryItem(id="cat-5", name="Painting & Waterproofing", slug="painting", image="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80", service_count=8),
-]
 
-MOCK_SERVICES: List[ServiceItem] = [
-    ServiceItem(
-        id="srv-ac-101",
-        name="Split AC Foam Jet Deep Service",
-        category="AC & Appliance Repair",
-        category_slug="ac-repair",
-        subcategory="AC Servicing",
-        subcategory_slug="ac-servicing",
-        description="Thorough 360-degree foam jet cleaning for indoor and outdoor AC units.",
-        features=["Foam Jet Technology", "Free gas pressure check", "30-Day post-service warranty"],
-        base_price=699.0,
-        duration_minutes=60,
-        rating=4.8,
-        review_count=420,
-        is_emergency=True,
-        image_url="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
-        suggested_addons=[
-            AddonItem(addon_id="add-1", name="Anti-bacterial spray coating", price=199.0, description="Long lasting freshness"),
-            AddonItem(addon_id="add-2", name="Outdoor unit deep pressure wash", price=299.0, description="Removes deep mud"),
-        ],
-        process_steps=[
-            ServiceProcessStep(step_number=1, title="Pre-service inspection", description="Checks cooling performance", duration_minutes=10),
-            ServiceProcessStep(step_number=2, title="Foam jet wash", description="Pressure foam wash", duration_minutes=35),
-        ],
-        faqs=[
-            ServiceFAQ(question="Does this service include gas refill?", answer="Gas pressure check is included."),
-        ],
-    ),
-    ServiceItem(
-        id="srv-clean-201",
-        name="Full Home Deep Cleaning (2 BHK)",
-        category="Deep Cleaning",
-        category_slug="cleaning",
-        subcategory="Full Home",
-        subcategory_slug="full-home",
-        description="Complete deep cleaning of living rooms, bedrooms, kitchen, bathrooms.",
-        features=["Machine scrubbing of floors", "Kitchen degreasing", "Sanitation"],
-        base_price=3499.0,
-        duration_minutes=240,
-        rating=4.9,
-        review_count=310,
-        is_emergency=False,
-        image_url="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
-        suggested_addons=[
-            AddonItem(addon_id="add-3", name="Sofa shampooing (5 seater)", price=799.0, description="Deep extraction"),
-        ],
-        process_steps=[
-            ServiceProcessStep(step_number=1, title="Dusting & Vacuuming", description="Dusting ceiling fans", duration_minutes=60),
-        ],
-        faqs=[
-            ServiceFAQ(question="Do I need to supply materials?", answer="No, our team carries all equipment."),
-        ],
-    ),
-]
 
 
 # 1. POST /customer/auth/register
@@ -115,10 +54,11 @@ def register_customer(payload: CustomerRegisterPayload, db: Session = Depends(ge
     if existing:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Email address is already registered")
 
+    pwd_hash = hash_password(payload.password)
     new_user = User(
         id=uuid.uuid4(),
         email=payload.email,
-        hashed_password=hash_password(payload.password),
+        hashed_password=pwd_hash,
         role="customer",
         is_active=True,
     )
@@ -127,7 +67,9 @@ def register_customer(payload: CustomerRegisterPayload, db: Session = Depends(ge
         user_id=new_user.id,
         full_name=payload.full_name,
         email=payload.email,
+        password_hash=pwd_hash,
         phone=payload.phone or "+91 9876543210",
+        preferences=payload.preferences,
         is_verified=True,
         is_active=True,
     )
@@ -191,6 +133,7 @@ def get_auth_me(current_customer: Customer = Depends(get_current_customer)):
         lifetime_spent=float(current_customer.lifetime_spent),
         total_bookings=current_customer.total_bookings,
         created_at=current_customer.created_at,
+        preferences=current_customer.preferences if isinstance(current_customer.preferences, list) else [],
     )
 
 
@@ -275,42 +218,323 @@ def update_profile(
 
 # 10. GET /customer/dashboard
 @router.get("/dashboard")
-def get_dashboard(current_customer: Customer = Depends(get_current_customer)):
+def get_dashboard(current_customer: Customer = Depends(get_current_customer), db: Session = Depends(get_db)):
+    from app.models.service import Service
+    db_services = db.query(Service).filter(Service.is_active == True).all()
+    cat_map = {}
+    srv_list = []
+    for s in db_services:
+        if s.category not in cat_map:
+            slug = s.category.lower().replace(" & ", "-").replace(" ", "-")
+            cat_map[s.category] = CategoryItem(
+                id=f"cat-{slug}",
+                name=s.category,
+                slug=slug,
+                image=None,
+                service_count=1
+            )
+        else:
+            cat_map[s.category].service_count += 1
+        
+        if len(srv_list) < 6:
+            srv_list.append(ServiceItem(
+                id=str(s.id),
+                name=s.name,
+                category=s.category,
+                category_slug=s.category.lower().replace(" & ", "-").replace(" ", "-"),
+                subcategory=s.subcategory,
+                subcategory_slug=s.subcategory.lower().replace(" & ", "-").replace(" ", "-"),
+                description=f"Professional {s.name} service managed under {s.category}.",
+                features=s.distinct_features if isinstance(s.distinct_features, list) else [],
+                base_price=float(s.base_price),
+                duration_minutes=60,
+                rating=4.8,
+                review_count=120,
+                is_emergency=False,
+                image_url=None,
+                suggested_addons=[],
+                process_steps=[],
+                faqs=[]
+            ))
+
     return {
         "greeting_name": current_customer.full_name,
-        "categories": MOCK_CATEGORIES,
-        "featured_services": MOCK_SERVICES,
+        "categories": list(cat_map.values())[:8],
+        "featured_services": srv_list,
         "recent_bookings": [],
     }
 
+
+import re
+
+def get_category_order(name: str) -> int:
+    m = re.match(r"^(\d+)\.", name)
+    return int(m.group(1)) if m else 999
+
+def format_category_display_name(raw: str) -> str:
+    cleaned = re.sub(r"^\d+\.\s*", "", raw)
+    return cleaned.strip()
 
 # 11. GET /customer/catalog/categories
 @router.get("/catalog/categories", response_model=List[CategoryItem])
 def get_catalog_categories(db: Session = Depends(get_db)):
     from app.models.service import Service
     db_services = db.query(Service).filter(Service.is_active == True).all()
-    if db_services:
-        cat_map = {}
-        for s in db_services:
-            if s.category not in cat_map:
-                slug = s.category.lower().replace(" & ", "-").replace(" ", "-")
-                cat_map[s.category] = CategoryItem(
-                    id=f"cat-{slug}",
-                    name=s.category,
-                    slug=slug,
-                    image="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
-                    service_count=1
-                )
+    
+    cat_map: Dict[str, Dict[str, Any]] = {}
+    for s in db_services:
+        cat = s.category or "General"
+        sub = s.subcategory or "General"
+        if cat not in cat_map:
+            slug = cat.lower().replace(" & ", "-").replace(" ", "-")
+            cat_map[cat] = {
+                "id": f"cat-{slug}",
+                "name": cat,
+                "slug": slug,
+                "display_name": format_category_display_name(cat),
+                "order": get_category_order(cat),
+                "subcategories": {},
+                "service_count": 0,
+                "active_count": 0
+            }
+        
+        cat_map[cat]["service_count"] += 1
+        cat_map[cat]["active_count"] += 1
+        
+        sub_dict = cat_map[cat]["subcategories"]
+        if sub not in sub_dict:
+            sub_dict[sub] = {"name": sub, "service_count": 0, "active_count": 0}
+        sub_dict[sub]["service_count"] += 1
+        sub_dict[sub]["active_count"] += 1
+
+    result = []
+    for cat_data in cat_map.values():
+        sub_list = [
+            SubcategorySummary(
+                name=sub_info["name"],
+                service_count=sub_info["service_count"],
+                active_count=sub_info["active_count"]
+            )
+            for sub_info in sorted(cat_data["subcategories"].values(), key=lambda x: x["name"])
+        ]
+        result.append(CategoryItem(
+            id=cat_data["id"],
+            name=cat_data["name"],
+            slug=cat_data["slug"],
+            display_name=cat_data["display_name"],
+            order=cat_data["order"],
+            subcategories_count=len(sub_list),
+            service_count=cat_data["service_count"],
+            active_count=cat_data["active_count"],
+            subcategories=sub_list
+        ))
+
+    result.sort(key=lambda c: (c.order, c.display_name or c.name))
+    return result
+
+
+def normalize_to_strings(raw_list) -> List[str]:
+    if not isinstance(raw_list, list):
+        return []
+    res = []
+    for elem in raw_list:
+        if isinstance(elem, str):
+            res.append(elem)
+        elif isinstance(elem, dict):
+            title = elem.get("title") or elem.get("name") or elem.get("label") or elem.get("step")
+            desc = elem.get("description") or elem.get("desc") or elem.get("detail") or elem.get("details") or elem.get("text")
+            if title and desc:
+                res.append(f"{title}: {desc}")
+            elif desc:
+                res.append(str(desc))
+            elif title:
+                res.append(str(title))
             else:
-                cat_map[s.category].service_count += 1
-        return list(cat_map.values())
-    return MOCK_CATEGORIES
+                vals = [str(v) for v in elem.values() if v]
+                res.append(": ".join(vals) if vals else str(elem))
+        elif elem is not None:
+            res.append(str(elem))
+    return res
+
+
+def parse_service_details(s) -> ServiceItem:
+    cat_slug = s.category.lower().replace(" & ", "-").replace(" ", "-") if s.category else ""
+    sub_slug = s.subcategory.lower().replace(" & ", "-").replace(" ", "-") if s.subcategory else ""
+
+    included_features = normalize_to_strings(s.distinct_features)
+    
+    addons: List[AddonItem] = []
+    process_steps: List[ServiceProcessStep] = []
+    faqs: List[ServiceFAQ] = []
+    excluded: List[Any] = []
+    tools_materials: List[Any] = []
+    customer_setup: List[Any] = []
+    aftercare: List[Any] = []
+    expected_results: List[Any] = []
+    important_notes: List[Any] = []
+    highlights: List[Any] = []
+    tips: List[Any] = []
+    dos: List[Any] = []
+    donts: List[Any] = []
+    warranty_detail: Optional[str] = None
+    description_text: Optional[str] = None
+    seo_title: Optional[str] = None
+    seo_description: Optional[str] = None
+    keywords: List[str] = []
+    explicit_duration: Optional[int] = None
+    calc_duration: int = 0
+
+    if s.suggested_addons and isinstance(s.suggested_addons, list):
+        for idx, item in enumerate(s.suggested_addons):
+            if not isinstance(item, dict):
+                continue
+            
+            i_type = item.get("type")
+            
+            if i_type in ["description", "service_description"]:
+                description_text = item.get("text") or item.get("description") or item.get("content")
+            elif i_type == "seo_metadata":
+                if not description_text and item.get("seo_description"):
+                    description_text = item.get("seo_description")
+                seo_title = item.get("seo_title")
+                seo_description = item.get("seo_description")
+                if isinstance(item.get("keywords"), list):
+                    keywords = [str(k) for k in item.get("keywords")]
+                if isinstance(item.get("highlights"), list):
+                    highlights = item.get("highlights")
+            elif i_type == "highlights":
+                hl = item.get("highlights") or item.get("items") or []
+                if isinstance(hl, list):
+                    highlights = hl
+            elif i_type in ["duration", "estimated_duration"]:
+                mins = item.get("minutes") or item.get("duration") or item.get("duration_minutes")
+                if mins:
+                    try:
+                        explicit_duration = int(mins)
+                    except (ValueError, TypeError):
+                        pass
+            elif i_type in ["excluded", "excluded_scope"]:
+                ex = item.get("excluded") or item.get("items") or []
+                if isinstance(ex, list):
+                    excluded = ex
+            elif i_type == "process_steps":
+                steps_data = item.get("steps") or item.get("items") or []
+                if isinstance(steps_data, list):
+                    for st in steps_data:
+                        if isinstance(st, dict):
+                            dur = int(st.get("duration_minutes", 15)) if st.get("duration_minutes") else 15
+                            calc_duration += dur
+                            process_steps.append(ServiceProcessStep(
+                                step_number=int(st.get("step_number", len(process_steps) + 1)),
+                                title=str(st.get("title", f"Step {len(process_steps) + 1}")),
+                                description=str(st.get("description", "")),
+                                duration_minutes=dur
+                            ))
+            elif i_type in ["tools_materials", "products_and_tools"]:
+                pt = item.get("products_and_tools") or item.get("items") or []
+                if isinstance(pt, list) and pt:
+                    tools_materials.extend(pt)
+                else:
+                    tools = item.get("tools") or []
+                    mats = item.get("materials") or []
+                    if isinstance(tools, list):
+                        tools_materials.extend(tools)
+                    if isinstance(mats, list):
+                        tools_materials.extend(mats)
+            elif i_type in ["customer_setup", "preparation"]:
+                reqs = item.get("setup") or item.get("requirements") or item.get("items") or []
+                if isinstance(reqs, list):
+                    customer_setup = reqs
+            elif i_type == "aftercare_precautions":
+                ac = item.get("aftercare") or item.get("items") or []
+                if isinstance(ac, list):
+                    aftercare = ac
+            elif i_type == "expected_results":
+                exp = item.get("items") or item.get("results") or []
+                if isinstance(exp, list):
+                    expected_results = exp
+            elif i_type == "important_notes":
+                notes = item.get("items") or item.get("notes") or []
+                if isinstance(notes, list):
+                    important_notes = notes
+            elif i_type == "tips":
+                tp = item.get("items") or item.get("tips") or []
+                if isinstance(tp, list):
+                    tips = tp
+            elif i_type in ["dos_donts", "dos_and_donts"]:
+                if isinstance(item.get("dos"), list):
+                    dos = item.get("dos")
+                if isinstance(item.get("donts"), list):
+                    donts = item.get("donts")
+            elif i_type == "warranty":
+                has_w = item.get("has_warranty", True)
+                if has_w:
+                    warranty_detail = item.get("details") or item.get("warranty")
+            elif i_type == "faqs":
+                faq_items = item.get("items") or item.get("faqs") or []
+                if isinstance(faq_items, list):
+                    for f in faq_items:
+                        if isinstance(f, dict) and f.get("question"):
+                            faqs.append(ServiceFAQ(
+                                question=str(f.get("question")),
+                                answer=str(f.get("answer", ""))
+                            ))
+            elif "price" in item and ("name" in item or "addon_id" in item):
+                addons.append(AddonItem(
+                    addon_id=str(item.get("addon_id", f"add-{idx}")),
+                    name=str(item.get("name", "Add-on")),
+                    price=float(item.get("price", 0.0)),
+                    description=item.get("description")
+                ))
+            elif not description_text and item.get("description") and not i_type:
+                description_text = item.get("description")
+
+    duration_minutes = calc_duration if calc_duration > 0 else (explicit_duration or 45)
+
+    return ServiceItem(
+        id=str(s.id),
+        name=s.name,
+        category=s.category,
+        category_slug=cat_slug,
+        subcategory=s.subcategory,
+        subcategory_slug=sub_slug,
+        description=description_text,
+        features=included_features,
+        included=included_features,
+        excluded=normalize_to_strings(excluded),
+        highlights=normalize_to_strings(highlights),
+        base_price=float(s.base_price),
+        max_demand_increase=float(s.max_demand_increase or 0.0),
+        max_discount=float(s.max_discount or 0.0),
+        duration_minutes=duration_minutes,
+        rating=4.8,
+        review_count=120,
+        is_emergency=False,
+        is_active=s.is_active,
+        image_url=None,
+        suggested_addons=addons,
+        process_steps=process_steps,
+        tools_materials=normalize_to_strings(tools_materials),
+        customer_setup=normalize_to_strings(customer_setup),
+        aftercare=normalize_to_strings(aftercare),
+        expected_results=normalize_to_strings(expected_results),
+        important_notes=normalize_to_strings(important_notes),
+        warranty=warranty_detail,
+        faqs=faqs,
+        tips=normalize_to_strings(tips),
+        dos=normalize_to_strings(dos),
+        donts=normalize_to_strings(donts),
+        seo_title=seo_title,
+        seo_description=seo_description,
+        keywords=keywords
+    )
 
 
 # 12. GET /customer/catalog/services
 @router.get("/catalog/services", response_model=List[ServiceItem])
 def get_catalog_services(
     category: Optional[str] = None,
+    subcategory: Optional[str] = None,
     emergency_only: Optional[bool] = False,
     q: Optional[str] = None,
     db: Session = Depends(get_db),
@@ -319,118 +543,37 @@ def get_catalog_services(
     query = db.query(Service).filter(Service.is_active == True)
     if category:
         query = query.filter((Service.category.ilike(f"%{category}%")) | (Service.subcategory.ilike(f"%{category}%")))
+    if subcategory:
+        clean_sub = subcategory.strip().lower()
+        if clean_sub in ["men's salon", "mens salon"]:
+            query = query.filter(func.lower(Service.subcategory) == "men's salon")
+        elif clean_sub in ["women's salon", "womens salon"]:
+            query = query.filter(func.lower(Service.subcategory) == "women's salon")
+        elif clean_sub == "ac":
+            query = query.filter(func.lower(Service.subcategory) == "ac")
+        else:
+            query = query.filter(Service.subcategory.ilike(f"%{subcategory}%"))
     if q:
         query = query.filter((Service.name.ilike(f"%{q}%")) | (Service.category.ilike(f"%{q}%")) | (Service.subcategory.ilike(f"%{q}%")))
 
     db_services = query.all()
-    if db_services:
-        res = []
-        for s in db_services:
-            cat_slug = s.category.lower().replace(" & ", "-").replace(" ", "-")
-            sub_slug = s.subcategory.lower().replace(" & ", "-").replace(" ", "-")
-            addons = []
-            if s.suggested_addons and isinstance(s.suggested_addons, list):
-                for idx, a in enumerate(s.suggested_addons):
-                    if isinstance(a, dict):
-                        addons.append(AddonItem(
-                            addon_id=str(a.get("addon_id", f"add-{idx}")),
-                            name=str(a.get("name", "Addon Service")),
-                            price=float(a.get("price", 199.0)),
-                            description=str(a.get("description", ""))
-                        ))
-            features = s.distinct_features if isinstance(s.distinct_features, list) else []
-
-            res.append(ServiceItem(
-                id=str(s.id),
-                name=s.name,
-                category=s.category,
-                category_slug=cat_slug,
-                subcategory=s.subcategory,
-                subcategory_slug=sub_slug,
-                description=f"Professional {s.name} service managed under {s.category}.",
-                features=features,
-                base_price=float(s.base_price),
-                duration_minutes=60,
-                rating=4.8,
-                review_count=120,
-                is_emergency=False,
-                image_url="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
-                suggested_addons=addons,
-                process_steps=[
-                    ServiceProcessStep(step_number=1, title="Inspection", description="Pre-service diagnostic check", duration_minutes=15),
-                    ServiceProcessStep(step_number=2, title="Execution", description="High quality service delivery", duration_minutes=45)
-                ],
-                faqs=[
-                    ServiceFAQ(question="Is warranty included?", answer="Yes, 30-day SmartServe service warranty included.")
-                ]
-            ))
-        return res
-
-    items = list(MOCK_SERVICES)
-    if category:
-        items = [s for s in items if s.category_slug == category or category.lower() in s.category.lower()]
-    if emergency_only:
-        items = [s for s in items if s.is_emergency]
-    if q:
-        q_lower = q.lower()
-        items = [s for s in items if q_lower in s.name.lower() or q_lower in s.category.lower() or q_lower in s.description.lower()]
-    return items
+    return [parse_service_details(s) for s in db_services]
 
 
 # 13. GET /customer/catalog/services/{id}
 @router.get("/catalog/services/{service_id}", response_model=ServiceItem)
 def get_catalog_service_by_id(service_id: str, db: Session = Depends(get_db)):
     from app.models.service import Service
-    if len(service_id) == 36:
-        try:
-            s_uuid = uuid.UUID(service_id)
-            s = db.query(Service).filter(Service.id == s_uuid, Service.is_active == True).first()
-            if s:
-                cat_slug = s.category.lower().replace(" & ", "-").replace(" ", "-")
-                sub_slug = s.subcategory.lower().replace(" & ", "-").replace(" ", "-")
-                addons = []
-                if s.suggested_addons and isinstance(s.suggested_addons, list):
-                    for idx, a in enumerate(s.suggested_addons):
-                        if isinstance(a, dict):
-                            addons.append(AddonItem(
-                                addon_id=str(a.get("addon_id", f"add-{idx}")),
-                                name=str(a.get("name", "Addon Service")),
-                                price=float(a.get("price", 199.0)),
-                                description=str(a.get("description", ""))
-                            ))
-                features = s.distinct_features if isinstance(s.distinct_features, list) else []
+    try:
+        s_uuid = uuid.UUID(service_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid service ID format")
 
-                return ServiceItem(
-                    id=str(s.id),
-                    name=s.name,
-                    category=s.category,
-                    category_slug=cat_slug,
-                    subcategory=s.subcategory,
-                    subcategory_slug=sub_slug,
-                    description=f"Professional {s.name} service managed under {s.category}.",
-                    features=features,
-                    base_price=float(s.base_price),
-                    duration_minutes=60,
-                    rating=4.8,
-                    review_count=120,
-                    is_emergency=False,
-                    image_url="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
-                    suggested_addons=addons,
-                    process_steps=[
-                        ServiceProcessStep(step_number=1, title="Inspection", description="Pre-service diagnostic check", duration_minutes=15),
-                        ServiceProcessStep(step_number=2, title="Execution", description="High quality service delivery", duration_minutes=45)
-                    ],
-                    faqs=[
-                        ServiceFAQ(question="Is warranty included?", answer="Yes, 30-day SmartServe service warranty included.")
-                    ]
-                )
-        except Exception:
-            pass
+    s = db.query(Service).filter(Service.id == s_uuid).first()
+    if not s or not s.is_active:
+        raise HTTPException(status_code=404, detail="Service not found or currently unavailable in catalog")
 
-    found = next((s for s in MOCK_SERVICES if s.id == service_id), None)
-    if found:
-        return found
-    return MOCK_SERVICES[0]
+    return parse_service_details(s)
 
 
 
@@ -455,12 +598,12 @@ def get_customer_bookings(
             id=str(b.id),
             booking_reference=b.booking_reference,
             customer_id=str(b.customer_id),
-            service_id=b.service_id,
+            service_id=str(b.service_id),
             service_name=b.service_name,
             category=b.category,
-            status=b.status,
+            status=str(b.status.value if hasattr(b.status, "value") else b.status),
             scheduled_date=b.scheduled_date,
-            scheduled_time=b.scheduled_time,
+            scheduled_time=b.scheduled_time.strftime("%H:%M:%S") if hasattr(b.scheduled_time, "strftime") else str(b.scheduled_time),
             address_line1=b.address_line1,
             landmark=b.landmark,
             city=b.city,
@@ -482,21 +625,45 @@ def create_customer_booking(
     current_customer: Customer = Depends(get_current_customer),
     db: Session = Depends(get_db),
 ):
-    service = next((s for s in MOCK_SERVICES if s.id == payload.service_id), MOCK_SERVICES[0])
-    addons_sum = sum(a.price for a in service.suggested_addons if a.addon_id in payload.addon_ids)
-    total_price = service.base_price + addons_sum
+    from app.models.service import Service
+    db_service = None
+    try:
+        s_uuid = uuid.UUID(payload.service_id)
+        db_service = db.query(Service).filter(Service.id == s_uuid).first()
+    except Exception:
+        db_service = None
+
+    if not db_service:
+        raise HTTPException(status_code=404, detail="Selected service is not found in catalog")
+
+    if not db_service.is_active:
+        raise HTTPException(status_code=400, detail="Cannot book an inactive or unpublished service")
+
+    srv_id = db_service.id
+    srv_name = db_service.name
+    srv_category = db_service.category
+    base_price = float(db_service.base_price)
+
+    addons_sum = 0.0
+    total_price = base_price + addons_sum
     ref_code = f"BK-{uuid.uuid4().hex[:6].upper()}"
+
+    try:
+        combined_str = f"{payload.scheduled_date}T{payload.scheduled_time}".strip()
+        parsed_sched_time = datetime.fromisoformat(combined_str)
+    except Exception:
+        parsed_sched_time = datetime.utcnow()
 
     new_booking = Booking(
         id=uuid.uuid4(),
         booking_reference=ref_code,
         customer_id=current_customer.id,
-        service_id=service.id,
-        service_name=service.name,
-        category=service.category,
-        status="CONFIRMED",
+        service_id=srv_id,
+        service_name=srv_name,
+        category=srv_category,
+        status="Requested",
         scheduled_date=payload.scheduled_date,
-        scheduled_time=payload.scheduled_time,
+        scheduled_time=parsed_sched_time,
         address_line1=payload.address_line1,
         landmark=payload.landmark,
         city=payload.city,
@@ -506,24 +673,30 @@ def create_customer_booking(
         notes=payload.notes,
         created_at=datetime.utcnow(),
     )
-    current_customer.total_bookings += 1
-    current_customer.lifetime_spent += Decimal(str(total_price))
+    current_customer.total_bookings = (current_customer.total_bookings or 0) + 1
+    current_customer.lifetime_spent = (current_customer.lifetime_spent or Decimal("0.00")) + Decimal(str(total_price))
 
     db.add(new_booking)
     db.add(current_customer)
     db.commit()
     db.refresh(new_booking)
 
+    sched_time_str = (
+        new_booking.scheduled_time.strftime("%H:%M:%S")
+        if hasattr(new_booking.scheduled_time, "strftime")
+        else str(new_booking.scheduled_time)
+    )
+
     return BookingDetail(
         id=str(new_booking.id),
         booking_reference=new_booking.booking_reference,
         customer_id=str(new_booking.customer_id),
-        service_id=new_booking.service_id,
+        service_id=str(new_booking.service_id),
         service_name=new_booking.service_name,
         category=new_booking.category,
-        status=new_booking.status,
+        status=str(new_booking.status),
         scheduled_date=new_booking.scheduled_date,
-        scheduled_time=new_booking.scheduled_time,
+        scheduled_time=sched_time_str,
         address_line1=new_booking.address_line1,
         landmark=new_booking.landmark,
         city=new_booking.city,
@@ -571,12 +744,12 @@ def get_booking_by_id(
         id=str(record.id),
         booking_reference=record.booking_reference,
         customer_id=str(record.customer_id),
-        service_id=record.service_id,
+        service_id=str(record.service_id),
         service_name=record.service_name,
         category=record.category,
-        status=record.status,
+        status=str(record.status.value if hasattr(record.status, "value") else record.status),
         scheduled_date=record.scheduled_date,
-        scheduled_time=record.scheduled_time,
+        scheduled_time=record.scheduled_time.strftime("%H:%M:%S") if hasattr(record.scheduled_time, "strftime") else str(record.scheduled_time),
         address_line1=record.address_line1,
         landmark=record.landmark,
         city=record.city,
@@ -693,7 +866,7 @@ def get_customer_support_tickets(
                     id=str(m.id),
                     ticket_id=str(m.ticket_id),
                     sender_role=m.sender_role,
-                    sender_name=m.sender_name,
+                    sender_name=m.sender_name or ("Support Agent" if m.sender_role != "customer" else "Customer"),
                     message_text=m.message_text,
                     attachment_url=m.attachment_url,
                     created_at=m.created_at,
@@ -719,14 +892,17 @@ def create_support_ticket(
         id=ticket_id,
         customer_id=current_customer.id,
         subject=payload.subject,
+        description=payload.description,
         category=payload.category,
         priority=priority,
         status="OPEN",
         created_at=datetime.utcnow(),
+        updated_at=datetime.utcnow(),
     )
     first_message = TicketMessage(
         id=uuid.uuid4(),
         ticket_id=ticket_id,
+        sender_id=current_customer.user_id,
         sender_role="customer",
         sender_name=current_customer.full_name,
         message_text=payload.description,
@@ -740,7 +916,9 @@ def create_support_ticket(
     return SupportTicketDetail(
         id=str(new_ticket.id),
         customer_id=str(new_ticket.customer_id),
+        booking_id=str(new_ticket.booking_id) if new_ticket.booking_id else None,
         subject=new_ticket.subject,
+        description=new_ticket.description,
         category=new_ticket.category,
         priority=new_ticket.priority,
         status=new_ticket.status,
@@ -752,6 +930,7 @@ def create_support_ticket(
                 sender_role=first_message.sender_role,
                 sender_name=first_message.sender_name,
                 message_text=first_message.message_text,
+                attachment_url=first_message.attachment_url,
                 created_at=first_message.created_at,
             )
         ],
@@ -765,32 +944,21 @@ def get_support_ticket_by_id(
     current_customer: Customer = Depends(get_current_customer),
     db: Session = Depends(get_db),
 ):
-    t = db.query(SupportTicket).filter(SupportTicket.id == ticket_id, SupportTicket.customer_id == current_customer.id).first()
+    try:
+        t_uuid = uuid.UUID(ticket_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid ticket ID format")
+
+    t = db.query(SupportTicket).filter(SupportTicket.id == t_uuid, SupportTicket.customer_id == current_customer.id).first()
     if not t:
-        return SupportTicketDetail(
-            id=ticket_id,
-            customer_id=str(current_customer.id),
-            subject="Technician delay inquiry",
-            category="Booking issue",
-            priority="High",
-            status="OPEN",
-            created_at=datetime.utcnow(),
-            messages=[
-                MessageItem(
-                    id="msg-1",
-                    ticket_id=ticket_id,
-                    sender_role="customer",
-                    sender_name=current_customer.full_name,
-                    message_text="Technician is running behind schedule.",
-                    created_at=datetime.utcnow(),
-                )
-            ],
-        )
+        raise HTTPException(status_code=404, detail="Support ticket not found")
 
     return SupportTicketDetail(
         id=str(t.id),
         customer_id=str(t.customer_id),
+        booking_id=str(t.booking_id) if t.booking_id else None,
         subject=t.subject,
+        description=t.description,
         category=t.category,
         priority=t.priority,
         status=t.status,
@@ -800,12 +968,12 @@ def get_support_ticket_by_id(
                 id=str(m.id),
                 ticket_id=str(m.ticket_id),
                 sender_role=m.sender_role,
-                sender_name=m.sender_name,
+                sender_name=m.sender_name or ("SmartServe Support Operations" if m.sender_role.lower() in ["admin", "agent"] else "Customer"),
                 message_text=m.message_text,
                 attachment_url=m.attachment_url,
                 created_at=m.created_at,
             )
-            for m in t.messages
+            for m in (t.messages or [])
         ],
     )
 
@@ -818,24 +986,38 @@ def add_ticket_message(
     current_customer: Customer = Depends(get_current_customer),
     db: Session = Depends(get_db),
 ):
+    try:
+        t_uuid = uuid.UUID(ticket_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid ticket ID format")
+
+    ticket = db.query(SupportTicket).filter(
+        SupportTicket.id == t_uuid,
+        SupportTicket.customer_id == current_customer.id
+    ).first()
+    if not ticket:
+        raise HTTPException(status_code=404, detail="Support ticket not found")
+
     new_msg = TicketMessage(
         id=uuid.uuid4(),
-        ticket_id=uuid.UUID(ticket_id) if len(ticket_id) == 36 else uuid.uuid4(),
+        ticket_id=t_uuid,
+        sender_id=current_customer.user_id,
         sender_role="customer",
         sender_name=current_customer.full_name,
         message_text=payload.message_text,
         attachment_url=payload.attachment_url,
         created_at=datetime.utcnow(),
     )
-    try:
-        db.add(new_msg)
-        db.commit()
-    except Exception:
-        db.rollback()
+    db.add(new_msg)
+    ticket.updated_at = datetime.utcnow()
+    if ticket.status and ticket.status.lower() in ["resolved", "closed"]:
+        ticket.status = "Open"
+    db.commit()
+    db.refresh(new_msg)
 
     return MessageItem(
         id=str(new_msg.id),
-        ticket_id=ticket_id,
+        ticket_id=str(ticket.id),
         sender_role=new_msg.sender_role,
         sender_name=new_msg.sender_name,
         message_text=new_msg.message_text,
@@ -888,8 +1070,10 @@ def revoke_all_sessions():
 
 # 27. GET /customer/recommendations
 @router.get("/recommendations", response_model=List[ServiceItem])
-def get_recommendations():
-    return MOCK_SERVICES
+def get_recommendations(db: Session = Depends(get_db)):
+    from app.models.service import Service
+    db_services = db.query(Service).filter(Service.is_active == True).limit(4).all()
+    return [parse_service_details(s) for s in db_services]
 
 
 # 28. POST /customer/uploads/image

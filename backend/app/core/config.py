@@ -11,8 +11,9 @@ class Settings(BaseSettings):
         "DATABASE_URL",
         "postgresql+psycopg2://postgres:postgres@localhost:5432/smartserve",
     )
-    JWT_SECRET: str = os.getenv("JWT_SECRET", "change-me-smartserve-secret-key-32chars")
-    JWT_ALGORITHM: str = "HS256"
+    JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", os.getenv("JWT_SECRET", "change-me-smartserve-secret-key-32chars"))
+    JWT_SECRET: str = os.getenv("JWT_SECRET_KEY", os.getenv("JWT_SECRET", "change-me-smartserve-secret-key-32chars"))
+    JWT_ALGORITHM: str = os.getenv("JWT_ALGORITHM", "HS256")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 1 day
     CORS_ORIGINS: List[str] = [
         "http://localhost:5173",

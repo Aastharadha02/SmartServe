@@ -20,7 +20,15 @@ def get_services(
     if category:
         query = query.filter(Service.category.ilike(f"%{category}%"))
     if subcategory:
-        query = query.filter(Service.subcategory.ilike(f"%{subcategory}%"))
+        clean_sub = subcategory.strip().lower()
+        if clean_sub in ["men's salon", "mens salon"]:
+            query = query.filter(func.lower(Service.subcategory) == "men's salon")
+        elif clean_sub in ["women's salon", "womens salon"]:
+            query = query.filter(func.lower(Service.subcategory) == "women's salon")
+        elif clean_sub == "ac":
+            query = query.filter(func.lower(Service.subcategory) == "ac")
+        else:
+            query = query.filter(Service.subcategory.ilike(f"%{subcategory}%"))
     if search:
         query = query.filter(
             Service.name.ilike(f"%{search}%")
@@ -41,7 +49,15 @@ def count_services(
     if category:
         query = query.filter(Service.category.ilike(f"%{category}%"))
     if subcategory:
-        query = query.filter(Service.subcategory.ilike(f"%{subcategory}%"))
+        clean_sub = subcategory.strip().lower()
+        if clean_sub in ["men's salon", "mens salon"]:
+            query = query.filter(func.lower(Service.subcategory) == "men's salon")
+        elif clean_sub in ["women's salon", "womens salon"]:
+            query = query.filter(func.lower(Service.subcategory) == "women's salon")
+        elif clean_sub == "ac":
+            query = query.filter(func.lower(Service.subcategory) == "ac")
+        else:
+            query = query.filter(Service.subcategory.ilike(f"%{subcategory}%"))
     if search:
         query = query.filter(
             Service.name.ilike(f"%{search}%")

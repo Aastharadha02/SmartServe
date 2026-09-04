@@ -29,3 +29,7 @@ export const formatDiscountPercent = (val: number | null | undefined): string =>
   return `-${Math.round(pct)}% Discount`;
 };
 
+export const formatCategoryDisplayName = (category: string | null | undefined): string => {
+  if (!category) return 'General';
+  return category.replace(/^\d+\.\s*/, '').trim();
+};

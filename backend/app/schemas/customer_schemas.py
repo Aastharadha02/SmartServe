@@ -10,6 +10,7 @@ class CustomerRegisterPayload(BaseModel):
     email: EmailStr
     password: str = Field(..., min_length=8)
     phone: Optional[str] = None
+    preferences: Optional[List[str]] = None
 
 
 class CustomerLoginPayload(BaseModel):
@@ -39,6 +40,7 @@ class CustomerSessionResponse(BaseModel):
     lifetime_spent: float = 0.0
     total_bookings: int = 0
     created_at: Optional[datetime] = None
+    preferences: Optional[List[str]] = None
 
 
 class ForgotPasswordPayload(BaseModel):
@@ -82,13 +84,24 @@ class ServiceFAQ(BaseModel):
     answer: str
 
 
+class SubcategorySummary(BaseModel):
+    name: str
+    service_count: int = 0
+    active_count: int = 0
+
+
 class CategoryItem(BaseModel):
     id: str
     name: str
     slug: str
+    display_name: Optional[str] = None
     icon: Optional[str] = None
-    image: str
+    image: Optional[str] = None
+    order: int = 999
+    subcategories_count: int = 0
     service_count: int = 0
+    active_count: int = 0
+    subcategories: List[SubcategorySummary] = []
 
 
 class ServiceItem(BaseModel):
@@ -98,17 +111,35 @@ class ServiceItem(BaseModel):
     category_slug: str
     subcategory: str
     subcategory_slug: str
-    description: str
+    description: Optional[str] = None
     features: List[str] = []
+    included: List[str] = []
+    excluded: List[str] = []
+    highlights: List[str] = []
     base_price: float
-    duration_minutes: int
+    max_demand_increase: float = 0.0
+    max_discount: float = 0.0
+    duration_minutes: int = 45
     rating: float = 4.8
-    review_count: int = 0
+    review_count: int = 120
     is_emergency: bool = False
-    image_url: str
+    is_active: bool = True
+    image_url: Optional[str] = None
     suggested_addons: List[AddonItem] = []
     process_steps: List[ServiceProcessStep] = []
+    tools_materials: List[str] = []
+    customer_setup: List[str] = []
+    aftercare: List[str] = []
+    expected_results: List[str] = []
+    important_notes: List[str] = []
+    warranty: Optional[str] = None
     faqs: List[ServiceFAQ] = []
+    tips: List[str] = []
+    dos: List[str] = []
+    donts: List[str] = []
+    seo_title: Optional[str] = None
+    seo_description: Optional[str] = None
+    keywords: List[str] = []
 
 
 # Booking Schemas
@@ -186,6 +217,7 @@ class SupportTicketDetail(BaseModel):
     customer_id: str
     booking_id: Optional[str] = None
     subject: str
+    description: Optional[str] = None
     category: str
     priority: str
     status: str

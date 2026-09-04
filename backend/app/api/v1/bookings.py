@@ -31,6 +31,12 @@ VALID_TRANSITIONS = {
     BookingStatus.EXPIRED: []
 }
 
+def get_allowed_next(status_val):
+    for k in VALID_TRANSITIONS:
+        if k.value.lower() == str(status_val).lower():
+            return [st.value for st in VALID_TRANSITIONS[k]]
+    return []
+
 @router.get("/", response_model=List[BookingDetailResponse])
 def list_admin_bookings(
     status_filter: Optional[str] = None,
@@ -62,7 +68,7 @@ def list_admin_bookings(
             c_phone = b.customer.phone if (b.customer and b.customer.phone) else "+91 98765 43210"
             p_name = b.provider.full_name if b.provider else None
             s_name = b.service.name if b.service else "Home Service"
-            allowed_next = [st.value for st in VALID_TRANSITIONS.get(b.status, [])]
+            allowed_next = get_allowed_next(b.status)
 
             res.append(
                 BookingDetailResponse(
@@ -74,8 +80,8 @@ def list_admin_bookings(
                     provider_name=p_name,
                     service_id=str(b.service_id),
                     service_name=s_name,
-                    status=b.status.value,
-                    payment_status=b.payment_status.value,
+                    status=b.status.value if hasattr(b.status, 'value') else str(b.status),
+                    payment_status=b.payment_status.value if hasattr(b.payment_status, 'value') else str(b.payment_status),
                     scheduled_time=b.scheduled_time.isoformat() if b.scheduled_time else "",
                     address=b.address,
                     total_price=b.total_price,
@@ -110,7 +116,7 @@ def get_admin_booking_detail(
     p_name = b.provider.full_name if b.provider else None
     s_name = b.service.name if b.service else "Home Service"
 
-    allowed_next = [st.value for st in VALID_TRANSITIONS.get(b.status, [])]
+    allowed_next = get_allowed_next(b.status)
 
     return BookingDetailResponse(
         id=str(b.id),
@@ -121,8 +127,8 @@ def get_admin_booking_detail(
         provider_name=p_name,
         service_id=str(b.service_id),
         service_name=s_name,
-        status=b.status.value,
-        payment_status=b.payment_status.value,
+        status=b.status.value if hasattr(b.status, 'value') else str(b.status),
+        payment_status=b.payment_status.value if hasattr(b.payment_status, 'value') else str(b.payment_status),
         scheduled_time=b.scheduled_time.isoformat() if b.scheduled_time else "",
         address=b.address,
         total_price=b.total_price,
@@ -208,25 +214,32 @@ def transition_booking_status(
     if not booking:
         raise HTTPException(status_code=404, detail="Booking not found")
 
-    try:
-        target_enum = BookingStatus(req.next_status)
-    except ValueError:
+    target_enum = next((s for s in BookingStatus if s.value.lower() == req.next_status.strip().lower()), None)
+    if not target_enum:
         raise HTTPException(status_code=400, detail=f"Invalid booking status '{req.next_status}'")
 
     current_status = booking.status
-    allowed_next = VALID_TRANSITIONS.get(current_status, [])
+    if isinstance(current_status, str):
+        try:
+            current_enum = BookingStatus(current_status)
+        except ValueError:
+            current_enum = BookingStatus.REQUESTED
+    else:
+        current_enum = current_status
+
+    allowed_next = VALID_TRANSITIONS.get(current_enum, [])
 
     if target_enum not in allowed_next:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail=f"Illegal state transition from {current_status.value} to {target_enum.value}"
+            detail=f"Illegal state transition from {current_enum.value} to {target_enum.value}"
         )
 
     updated = booking_repository.update_booking_status(db, booking, target_enum, reason=req.reason)
 
     audit_repository.create_audit_log(
         db, actor_id=admin.id, actor_email=admin.email, actor_role=admin.role,
-        action=f"Updated Booking #{booking.id} Status from {current_status.value} to {target_enum.value}",
+        action=f"Updated Booking #{booking.id} Status from {current_enum.value} to {target_enum.value}",
         target_resource=str(booking.id),
         metadata_json={"reason": req.reason or "Admin Override"}
     )
@@ -235,7 +248,8 @@ def transition_booking_status(
     c_phone = updated.customer.phone if (updated.customer and updated.customer.phone) else "+91 98765 43210"
     p_name = updated.provider.full_name if updated.provider else None
     s_name = updated.service.name if updated.service else "Home Service"
-    fresh_allowed_next = [st.value for st in VALID_TRANSITIONS.get(updated.status, [])]
+    fresh_status_enum = BookingStatus(updated.status) if isinstance(updated.status, str) else updated.status
+    fresh_allowed_next = [st.value for st in VALID_TRANSITIONS.get(fresh_status_enum, [])]
 
     return BookingDetailResponse(
         id=str(updated.id),
@@ -246,8 +260,8 @@ def transition_booking_status(
         provider_name=p_name,
         service_id=str(updated.service_id),
         service_name=s_name,
-        status=updated.status.value,
-        payment_status=updated.payment_status.value,
+        status=updated.status.value if hasattr(updated.status, 'value') else str(updated.status),
+        payment_status=updated.payment_status.value if hasattr(updated.payment_status, 'value') else str(updated.payment_status),
         scheduled_time=updated.scheduled_time.isoformat() if updated.scheduled_time else "",
         address=updated.address,
         total_price=updated.total_price,

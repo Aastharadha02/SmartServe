@@ -5,6 +5,7 @@ export interface ServiceItem {
   category: string;
   subcategory: string;
   name: string;
+  description?: string;
   base_price: number;
   max_demand_increase: number;
   max_discount: number;
@@ -18,6 +19,7 @@ export interface ServiceCreatePayload {
   category: string;
   subcategory: string;
   name: string;
+  description?: string;
   base_price: number;
   max_demand_increase?: number;
   max_discount?: number;
@@ -30,12 +32,27 @@ export interface ServiceUpdatePayload {
   category?: string;
   subcategory?: string;
   name?: string;
+  description?: string;
   base_price?: number;
   max_demand_increase?: number;
   max_discount?: number;
   distinct_features?: string[];
   suggested_addons?: any[];
   is_active?: boolean;
+  included?: string[];
+  excluded?: string[];
+  process_steps?: any[];
+  aftercare?: string[];
+  tools_materials?: string[];
+  customer_setup?: string[];
+  expected_results?: string[];
+  important_notes?: string[];
+  warranty?: string | null;
+  faqs?: any[];
+  tips?: string[];
+  dos?: string[];
+  donts?: string[];
+  duration_minutes?: number;
 }
 
 export interface ProcessStepItem {
