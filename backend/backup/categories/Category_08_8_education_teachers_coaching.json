@@ -1,0 +1,3134 @@
+{
+  "category_number": 8,
+  "category_name": "8. Education, Teachers & Coaching",
+  "service_count": 30,
+  "subcategories": [
+    "Academic Tutoring",
+    "Competitive Exam Coaching",
+    "Dance Classes",
+    "Language & Communication",
+    "Music Classes"
+  ],
+  "services": [
+    {
+      "service_id": "22edd7f9-7d44-5119-aacc-7979474a88f5",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 1-5 Foundation All-Subject Home Tutor",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Patient tutor helping primary school students with English, Math, Science, and daily homework.",
+      "highlights": [
+        "Professional Class 1-5 Foundation All-Subject Home Tutor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 1-5 Foundation All-Subject Home Tutor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Class 1-5 Foundation All-Subject Home Tutor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 1-5 Foundation All-Subject Home Tutor | SmartServe",
+      "seo_description": "Patient tutor helping primary school students with English, Math, Science, and daily homework.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.087244+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "479f80e0-44a1-531c-9ad2-ade93e865775",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 11-12 Accountancy & Commerce Tutor",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Balance sheet ledger, partnership accounts, and business studies mentorship.",
+      "highlights": [
+        "Professional Class 11-12 Accountancy & Commerce Tutor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 11-12 Accountancy & Commerce Tutor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Class 11-12 Accountancy & Commerce Tutor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 11-12 Accountancy & Commerce Tutor | SmartServe",
+      "seo_description": "Balance sheet ledger, partnership accounts, and business studies mentorship.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.057378+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "453266d6-b237-5e06-8df4-33eda2c614ee",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 11-12 Biology & Botany Specialist",
+      "base_price_inr": 5499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Diagrammatic and theoretical biology guidance tailored for board exams and medical entry.",
+      "highlights": [
+        "Professional Class 11-12 Biology & Botany Specialist procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 11-12 Biology & Botany Specialist procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Class 11-12 Biology & Botany Specialist take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 11-12 Biology & Botany Specialist | SmartServe",
+      "seo_description": "Diagrammatic and theoretical biology guidance tailored for board exams and medical entry.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.055059+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "3c7771ad-a2b2-51ce-8846-bbe481a7c7c1",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 11-12 Chemistry Problem Solver",
+      "base_price_inr": 5999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Organic, Inorganic, and Physical Chemistry expert tutor simplifying reaction mechanisms.",
+      "highlights": [
+        "Professional Class 11-12 Chemistry Problem Solver procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 11-12 Chemistry Problem Solver procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Class 11-12 Chemistry Problem Solver take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 11-12 Chemistry Problem Solver | SmartServe",
+      "seo_description": "Organic, Inorganic, and Physical Chemistry expert tutor simplifying reaction mechanisms.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.052666+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "4bf49dce-f45c-55e3-a14e-1f185bda38ac",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 11-12 Economics & Statistics Tutor",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Micro & Macro Economics graph analysis, numerical calculations, and exam preparation.",
+      "highlights": [
+        "Professional Class 11-12 Economics & Statistics Tutor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 11-12 Economics & Statistics Tutor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Class 11-12 Economics & Statistics Tutor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 11-12 Economics & Statistics Tutor | SmartServe",
+      "seo_description": "Micro & Macro Economics graph analysis, numerical calculations, and exam preparation.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:26.057957+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "41f10521-548d-5a2d-a4a9-840503b42220",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 11-12 Higher Mathematics Tutor",
+      "base_price_inr": 5999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Calculus, Vectors, and 3D Geometry intensive problem-solving coaching for Class 12 students.",
+      "highlights": [
+        "Professional Class 11-12 Higher Mathematics Tutor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 11-12 Higher Mathematics Tutor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Class 11-12 Higher Mathematics Tutor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 11-12 Higher Mathematics Tutor | SmartServe",
+      "seo_description": "Calculus, Vectors, and 3D Geometry intensive problem-solving coaching for Class 12 students.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.049835+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "3a2c9ca8-d9fb-5031-b211-e6031179640d",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 11-12 Physics Master Coach",
+      "base_price_inr": 5999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Specialized senior physics tutor solving numericals, derivations, and board/entrance exam prep.",
+      "highlights": [
+        "Professional Class 11-12 Physics Master Coach procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 11-12 Physics Master Coach procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Class 11-12 Physics Master Coach take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 11-12 Physics Master Coach | SmartServe",
+      "seo_description": "Specialized senior physics tutor solving numericals, derivations, and board/entrance exam prep.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.079289+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "245d6207-15de-5adc-9b1b-7c387c372955",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 6-8 Math & Science Home Specialist",
+      "base_price_inr": 3999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Concept-building tutor strengthening NCERT fundamentals in Mathematics and Integrated Science.",
+      "highlights": [
+        "Professional Class 6-8 Math & Science Home Specialist procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 6-8 Math & Science Home Specialist procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Class 6-8 Math & Science Home Specialist take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 6-8 Math & Science Home Specialist | SmartServe",
+      "seo_description": "Concept-building tutor strengthening NCERT fundamentals in Mathematics and Integrated Science.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.094264+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "293ae0d9-5f80-5635-93cb-459e7ffcb6c1",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Class 9-10 CBSE/ICSE Board Exam Tutor",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Focused board preparation tutor practicing sample question papers, formula memorization, and revision.",
+      "highlights": [
+        "Professional Class 9-10 CBSE/ICSE Board Exam Tutor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Class 9-10 CBSE/ICSE Board Exam Tutor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Class 9-10 CBSE/ICSE Board Exam Tutor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Class 9-10 CBSE/ICSE Board Exam Tutor | SmartServe",
+      "seo_description": "Focused board preparation tutor practicing sample question papers, formula memorization, and revision.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.028305+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "68a89425-9371-557a-9350-1ab2b72dc715",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Academic Tutoring",
+      "service_name": "Computer Science & Python Coding Tutor",
+      "base_price_inr": 4499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Practical programming tutor teaching Python logic, SQL databases, and school projects.",
+      "highlights": [
+        "Professional Computer Science & Python Coding Tutor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Computer Science & Python Coding Tutor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Computer Science & Python Coding Tutor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Computer Science & Python Coding Tutor | SmartServe",
+      "seo_description": "Practical programming tutor teaching Python logic, SQL databases, and school projects.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.064979+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "b4401132-f924-51fd-9ae0-7c765ac1c0d8",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Competitive Exam Coaching",
+      "service_name": "Bank PO & SSC CGL Reasoning Trainer",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Puzzle solving shortcuts, speed calculation methods, and online test series practice.",
+      "highlights": [
+        "Professional Bank PO & SSC CGL Reasoning Trainer procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Bank PO & SSC CGL Reasoning Trainer procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Bank PO & SSC CGL Reasoning Trainer take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Bank PO & SSC CGL Reasoning Trainer | SmartServe",
+      "seo_description": "Puzzle solving shortcuts, speed calculation methods, and online test series practice.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.067888+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "946f1a7c-5278-5372-9aee-571229c7d7a7",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Competitive Exam Coaching",
+      "service_name": "CAT & IPMAT Quantitative Aptitude Coach",
+      "base_price_inr": 6999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Data Interpretation, Logical Reasoning, and Quant shortcut tricks for MBA entrance exams.",
+      "highlights": [
+        "Professional CAT & IPMAT Quantitative Aptitude Coach procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete CAT & IPMAT Quantitative Aptitude Coach procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does CAT & IPMAT Quantitative Aptitude Coach take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "CAT & IPMAT Quantitative Aptitude Coach | SmartServe",
+      "seo_description": "Data Interpretation, Logical Reasoning, and Quant shortcut tricks for MBA entrance exams.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.031218+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "b3caa66a-909e-5c9b-8e28-066ea5298ca7",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Competitive Exam Coaching",
+      "service_name": "GMAT & GRE Analytical Writing Coach",
+      "base_price_inr": 7999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Global entrance verbal reasoning, sentence correction, and math section coaching.",
+      "highlights": [
+        "Professional GMAT & GRE Analytical Writing Coach procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete GMAT & GRE Analytical Writing Coach procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does GMAT & GRE Analytical Writing Coach take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "GMAT & GRE Analytical Writing Coach | SmartServe",
+      "seo_description": "Global entrance verbal reasoning, sentence correction, and math section coaching.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.077035+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "6cdfea65-f777-5015-ab14-9629e747eb08",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Competitive Exam Coaching",
+      "service_name": "IIT-JEE Main & Advanced Mathematics Mentor",
+      "base_price_inr": 7999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Ex-IITian tutor solving past 15-year JEE questions, speed tricks, and mock test evaluation.",
+      "highlights": [
+        "Professional IIT-JEE Main & Advanced Mathematics Mentor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete IIT-JEE Main & Advanced Mathematics Mentor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does IIT-JEE Main & Advanced Mathematics Mentor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "IIT-JEE Main & Advanced Mathematics Mentor | SmartServe",
+      "seo_description": "Ex-IITian tutor solving past 15-year JEE questions, speed tricks, and mock test evaluation.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.046691+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "7c32be20-c182-520a-81aa-023010c92589",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Competitive Exam Coaching",
+      "service_name": "NEET Medical Physics & Chemistry Coach",
+      "base_price_inr": 7499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "NCERT line-by-line breakdown and speed problem solving for 720-mark NEET target.",
+      "highlights": [
+        "Professional NEET Medical Physics & Chemistry Coach procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete NEET Medical Physics & Chemistry Coach procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does NEET Medical Physics & Chemistry Coach take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "NEET Medical Physics & Chemistry Coach | SmartServe",
+      "seo_description": "NCERT line-by-line breakdown and speed problem solving for 720-mark NEET target.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.062385+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "a05334fd-3b60-510c-ae8c-8d53275a302e",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Competitive Exam Coaching",
+      "service_name": "UPSC Civil Services General Studies Mentor",
+      "base_price_inr": 8999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Mains answer writing practice, Indian Polity, History, and Current Affairs guidance.",
+      "highlights": [
+        "Professional UPSC Civil Services General Studies Mentor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete UPSC Civil Services General Studies Mentor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does UPSC Civil Services General Studies Mentor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "UPSC Civil Services General Studies Mentor | SmartServe",
+      "seo_description": "Mains answer writing practice, Indian Polity, History, and Current Affairs guidance.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.098887+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "d9cc76c1-de06-5737-8945-30bb558d5a13",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Dance Classes",
+      "service_name": "Bollywood & Hip-Hop Commercial Dance Instructor",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Fun energetic dance choreography to trending Bollywood tracks for parties & health.",
+      "highlights": [
+        "Professional Bollywood & Hip-Hop Commercial Dance Instructor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Bollywood & Hip-Hop Commercial Dance Instructor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Bollywood & Hip-Hop Commercial Dance Instructor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Bollywood & Hip-Hop Commercial Dance Instructor | SmartServe",
+      "seo_description": "Fun energetic dance choreography to trending Bollywood tracks for parties & health.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.023255+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "e35ee0c0-dce3-52f3-9e81-29c86c1ffd37",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Dance Classes",
+      "service_name": "Contemporary & Jazz Expressive Dance Coach",
+      "base_price_inr": 2799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Fluid bodily movements, floor work transitions, and emotional expression dance routine.",
+      "highlights": [
+        "Professional Contemporary & Jazz Expressive Dance Coach procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Contemporary & Jazz Expressive Dance Coach procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Contemporary & Jazz Expressive Dance Coach take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Contemporary & Jazz Expressive Dance Coach | SmartServe",
+      "seo_description": "Fluid bodily movements, floor work transitions, and emotional expression dance routine.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.072557+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "de519db1-8c08-5b9e-877e-fa214ff39a55",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Dance Classes",
+      "service_name": "Kathak & Classical Classical Dance Teacher",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Traditional Jaipur/Lucknow gharana Kathak footwork (Tatkar), spins (Chakkar), and Mudras.",
+      "highlights": [
+        "Professional Kathak & Classical Classical Dance Teacher procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Kathak & Classical Classical Dance Teacher procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Kathak & Classical Classical Dance Teacher take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Kathak & Classical Classical Dance Teacher | SmartServe",
+      "seo_description": "Traditional Jaipur/Lucknow gharana Kathak footwork (Tatkar), spins (Chakkar), and Mudras.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.074889+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "df4be4ea-2f76-566a-8ad7-db35cbbfafb0",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Dance Classes",
+      "service_name": "Wedding Sangeet Family Group Choreographer",
+      "base_price_inr": 6999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Custom bride-groom, sangeet group, and family dance performance choreography package.",
+      "highlights": [
+        "Professional Wedding Sangeet Family Group Choreographer procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Wedding Sangeet Family Group Choreographer procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Wedding Sangeet Family Group Choreographer take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Wedding Sangeet Family Group Choreographer | SmartServe",
+      "seo_description": "Custom bride-groom, sangeet group, and family dance performance choreography package.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.085005+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "f1093f34-1774-5635-ad64-bb37eb928fb5",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Language & Communication",
+      "service_name": "French Language Learning Coach (A1-B2 Level)",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Grammar rules, conversation practice, DELF exam preparation by certified French tutor.",
+      "highlights": [
+        "Professional French Language Learning Coach (A1-B2 Level) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete French Language Learning Coach (A1-B2 Level) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does French Language Learning Coach (A1-B2 Level) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "French Language Learning Coach (A1-B2 Level) | SmartServe",
+      "seo_description": "Grammar rules, conversation practice, DELF exam preparation by certified French tutor.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:26.120455+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "f1106c8b-997a-5d06-a1b6-b30fd8b10523",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Language & Communication",
+      "service_name": "German Language Learning Specialist (A1-B2)",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Goethe Zertifikat exam guidance, noun genders, and conversational German for students.",
+      "highlights": [
+        "Professional German Language Learning Specialist (A1-B2) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete German Language Learning Specialist (A1-B2) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does German Language Learning Specialist (A1-B2) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "German Language Learning Specialist (A1-B2) | SmartServe",
+      "seo_description": "Goethe Zertifikat exam guidance, noun genders, and conversational German for students.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.089751+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "e4f0a121-e2bb-5118-a516-7a3c16944184",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Language & Communication",
+      "service_name": "IELTS & TOEFL Band 8+ Exam Preparation",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Listening, Reading, Writing essay evaluation, and 1-on-1 Mock Speaking tests.",
+      "highlights": [
+        "Professional IELTS & TOEFL Band 8+ Exam Preparation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete IELTS & TOEFL Band 8+ Exam Preparation procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does IELTS & TOEFL Band 8+ Exam Preparation take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "IELTS & TOEFL Band 8+ Exam Preparation | SmartServe",
+      "seo_description": "Listening, Reading, Writing essay evaluation, and 1-on-1 Mock Speaking tests.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.096490+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "fd8b9cf7-cd66-5e92-9e64-185217363d64",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Language & Communication",
+      "service_name": "Spanish Language Conversational Tutor",
+      "base_price_inr": 3199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Fun interactive Spanish vocabulary, verb conjugations, and culture immersion.",
+      "highlights": [
+        "Professional Spanish Language Conversational Tutor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Spanish Language Conversational Tutor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Spanish Language Conversational Tutor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Spanish Language Conversational Tutor | SmartServe",
+      "seo_description": "Fun interactive Spanish vocabulary, verb conjugations, and culture immersion.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.082206+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "e3a74561-e859-5f36-ab07-545c6823fbd1",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Language & Communication",
+      "service_name": "Spoken English & Professional Business Communication",
+      "base_price_inr": 1999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Building fluency, vocabulary expansion, accent softening, and corporate email writing.",
+      "highlights": [
+        "Professional Spoken English & Professional Business Communication procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Spoken English & Professional Business Communication procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Spoken English & Professional Business Communication take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Spoken English & Professional Business Communication | SmartServe",
+      "seo_description": "Building fluency, vocabulary expansion, accent softening, and corporate email writing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.039114+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "bf24b529-26a3-56e7-ba4f-85893181cd5d",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Music Classes",
+      "service_name": "Acoustic & Electric Guitar Lessons (Beginner)",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Step-by-step chord transitions, fingerpicking, strumming patterns, and song playing.",
+      "highlights": [
+        "Professional Acoustic & Electric Guitar Lessons (Beginner) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Acoustic & Electric Guitar Lessons (Beginner) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Acoustic & Electric Guitar Lessons (Beginner) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Acoustic & Electric Guitar Lessons (Beginner) | SmartServe",
+      "seo_description": "Step-by-step chord transitions, fingerpicking, strumming patterns, and song playing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.035452+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "d62dfd9c-d29f-576c-9470-2bbae0544e3a",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Music Classes",
+      "service_name": "Drums & Percussion Rhythm Instructor",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Acoustic drum kit beat coordination, rudiments, tempo sticking, and rock/funk grooves.",
+      "highlights": [
+        "Professional Drums & Percussion Rhythm Instructor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Drums & Percussion Rhythm Instructor procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Drums & Percussion Rhythm Instructor take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Drums & Percussion Rhythm Instructor | SmartServe",
+      "seo_description": "Acoustic drum kit beat coordination, rudiments, tempo sticking, and rock/funk grooves.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.044343+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "c9b53453-8a57-5ae6-843c-15688915434b",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Music Classes",
+      "service_name": "Hindustani Classical Vocal Music Guru",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Raga vocal training, swara practice, tanpura harmonization, and khayal singing.",
+      "highlights": [
+        "Professional Hindustani Classical Vocal Music Guru procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Hindustani Classical Vocal Music Guru procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Hindustani Classical Vocal Music Guru take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Hindustani Classical Vocal Music Guru | SmartServe",
+      "seo_description": "Raga vocal training, swara practice, tanpura harmonization, and khayal singing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.041425+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "c48b2fba-232c-52f6-8502-e4569b397a26",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Music Classes",
+      "service_name": "Piano & Electronic Keyboard Teacher",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Western classical sheet music reading, sight reading, and synthesizer melody playing.",
+      "highlights": [
+        "Professional Piano & Electronic Keyboard Teacher procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Piano & Electronic Keyboard Teacher procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Piano & Electronic Keyboard Teacher take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Piano & Electronic Keyboard Teacher | SmartServe",
+      "seo_description": "Western classical sheet music reading, sight reading, and synthesizer melody playing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.070369+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "d11d4e8e-10ab-52fa-8b31-c974ba7f8906",
+      "category_number": 8,
+      "category_name": "8. Education, Teachers & Coaching",
+      "subcategory_name": "Music Classes",
+      "service_name": "Western Pop & Playback Singing Coach",
+      "base_price_inr": 2799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Pitch correction, breath support control, microphone technique, and vocal range expansion.",
+      "highlights": [
+        "Professional Western Pop & Playback Singing Coach procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Western Pop & Playback Singing Coach procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals",
+          "step_number": 1
+        },
+        {
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan",
+          "step_number": 2
+        },
+        {
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons",
+          "step_number": 3
+        },
+        {
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts",
+          "step_number": 4
+        },
+        {
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare_precautions": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": [
+        "Measurable improvement in understanding, grades, and confidence."
+      ],
+      "important_notes": [
+        "Minimum 4-session commitment recommended for meaningful progress."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Western Pop & Playback Singing Coach take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Western Pop & Playback Singing Coach | SmartServe",
+      "seo_description": "Pitch correction, breath support control, microphone technique, and vocal range expansion.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:22:47.092066+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    }
+  ]
+}

@@ -1,0 +1,2983 @@
+{
+  "metadata": {
+    "category": "6. Smart Home & Security",
+    "draft_generated_at": "2026-09-05T15:39:21.934730+00:00",
+    "total_services": 30,
+    "subcategories_count": 5,
+    "subcategories": {
+      "School Tutoring (K-12)": 30
+    }
+  },
+  "services": [
+    {
+      "id": "7c32be20-c182-520a-81aa-023010c92589",
+      "name": "Competitive Exam Coaching Service Variation 1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Competitive Exam Coaching",
+      "price": 650,
+      "active": true,
+      "description": "Professional competitive exam coaching coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Competitive Exam Coaching instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "68a89425-9371-557a-9350-1ab2b72dc715",
+      "name": "Competitive Exam Coaching Service Variation 2",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Competitive Exam Coaching",
+      "price": 800,
+      "active": true,
+      "description": "Professional competitive exam coaching coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Competitive Exam Coaching instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "b4401132-f924-51fd-9ae0-7c765ac1c0d8",
+      "name": "Competitive Exam Coaching Service Variation 3",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Competitive Exam Coaching",
+      "price": 950,
+      "active": true,
+      "description": "Professional competitive exam coaching coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Competitive Exam Coaching instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "c48b2fba-232c-52f6-8502-e4569b397a26",
+      "name": "Competitive Exam Coaching Service Variation 4",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Competitive Exam Coaching",
+      "price": 1100,
+      "active": true,
+      "description": "Professional competitive exam coaching coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Competitive Exam Coaching instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "e35ee0c0-dce3-52f3-9e81-29c86c1ffd37",
+      "name": "Competitive Exam Coaching Service Variation 5",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Competitive Exam Coaching",
+      "price": 1250,
+      "active": true,
+      "description": "Professional competitive exam coaching coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Competitive Exam Coaching instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "de519db1-8c08-5b9e-877e-fa214ff39a55",
+      "name": "Competitive Exam Coaching Service Variation 6",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Competitive Exam Coaching",
+      "price": 1400,
+      "active": true,
+      "description": "Professional competitive exam coaching coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Competitive Exam Coaching instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "4bf49dce-f45c-55e3-a14e-1f185bda38ac",
+      "name": "Competitive Exam Coaching Service Variation 7",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Competitive Exam Coaching",
+      "price": 1550,
+      "active": true,
+      "description": "Professional competitive exam coaching coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Competitive Exam Coaching instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "f1106c8b-997a-5d06-a1b6-b30fd8b10523",
+      "name": "Language & Communication Service Variation 1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language & Communication",
+      "price": 650,
+      "active": true,
+      "description": "Professional language & communication coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Language & Communication instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "d11d4e8e-10ab-52fa-8b31-c974ba7f8906",
+      "name": "Language & Communication Service Variation 2",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language & Communication",
+      "price": 800,
+      "active": true,
+      "description": "Professional language & communication coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Language & Communication instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "245d6207-15de-5adc-9b1b-7c387c372955",
+      "name": "Language & Communication Service Variation 3",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language & Communication",
+      "price": 950,
+      "active": true,
+      "description": "Professional language & communication coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Language & Communication instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "e4f0a121-e2bb-5118-a516-7a3c16944184",
+      "name": "Language & Communication Service Variation 4",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language & Communication",
+      "price": 1100,
+      "active": true,
+      "description": "Professional language & communication coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Language & Communication instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "a05334fd-3b60-510c-ae8c-8d53275a302e",
+      "name": "Language & Communication Service Variation 5",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language & Communication",
+      "price": 1250,
+      "active": true,
+      "description": "Professional language & communication coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Language & Communication instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "6cdfea65-f777-5015-ab14-9629e747eb08",
+      "name": "Music & Arts Lessons Service Variation 1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts Lessons",
+      "price": 650,
+      "active": true,
+      "description": "Professional music & arts lessons coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Music & Arts Lessons instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "41f10521-548d-5a2d-a4a9-840503b42220",
+      "name": "Music & Arts Lessons Service Variation 2",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts Lessons",
+      "price": 800,
+      "active": true,
+      "description": "Professional music & arts lessons coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Music & Arts Lessons instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "3c7771ad-a2b2-51ce-8846-bbe481a7c7c1",
+      "name": "Music & Arts Lessons Service Variation 3",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts Lessons",
+      "price": 950,
+      "active": true,
+      "description": "Professional music & arts lessons coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Music & Arts Lessons instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "453266d6-b237-5e06-8df4-33eda2c614ee",
+      "name": "Music & Arts Lessons Service Variation 4",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts Lessons",
+      "price": 1100,
+      "active": true,
+      "description": "Professional music & arts lessons coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Music & Arts Lessons instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "479f80e0-44a1-531c-9ad2-ade93e865775",
+      "name": "Music & Arts Lessons Service Variation 5",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts Lessons",
+      "price": 1250,
+      "active": true,
+      "description": "Professional music & arts lessons coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Music & Arts Lessons instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "d9cc76c1-de06-5737-8945-30bb558d5a13",
+      "name": "School Tutoring (K-12) Service Variation 1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "School Tutoring (K-12)",
+      "price": 650,
+      "active": true,
+      "description": "Professional school tutoring (k-12) coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert School Tutoring (K-12) instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "293ae0d9-5f80-5635-93cb-459e7ffcb6c1",
+      "name": "School Tutoring (K-12) Service Variation 2",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "School Tutoring (K-12)",
+      "price": 800,
+      "active": true,
+      "description": "Professional school tutoring (k-12) coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert School Tutoring (K-12) instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "946f1a7c-5278-5372-9aee-571229c7d7a7",
+      "name": "School Tutoring (K-12) Service Variation 3",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "School Tutoring (K-12)",
+      "price": 950,
+      "active": true,
+      "description": "Professional school tutoring (k-12) coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert School Tutoring (K-12) instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "bf24b529-26a3-56e7-ba4f-85893181cd5d",
+      "name": "School Tutoring (K-12) Service Variation 4",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "School Tutoring (K-12)",
+      "price": 1100,
+      "active": true,
+      "description": "Professional school tutoring (k-12) coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert School Tutoring (K-12) instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "e3a74561-e859-5f36-ab07-545c6823fbd1",
+      "name": "School Tutoring (K-12) Service Variation 5",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "School Tutoring (K-12)",
+      "price": 1250,
+      "active": true,
+      "description": "Professional school tutoring (k-12) coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert School Tutoring (K-12) instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "c9b53453-8a57-5ae6-843c-15688915434b",
+      "name": "School Tutoring (K-12) Service Variation 6",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "School Tutoring (K-12)",
+      "price": 1400,
+      "active": true,
+      "description": "Professional school tutoring (k-12) coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert School Tutoring (K-12) instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "d62dfd9c-d29f-576c-9470-2bbae0544e3a",
+      "name": "School Tutoring (K-12) Service Variation 7",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "School Tutoring (K-12)",
+      "price": 1550,
+      "active": true,
+      "description": "Professional school tutoring (k-12) coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert School Tutoring (K-12) instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "b3caa66a-909e-5c9b-8e28-066ea5298ca7",
+      "name": "Skills & Hobby Classes Service Variation 1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Skills & Hobby Classes",
+      "price": 650,
+      "active": true,
+      "description": "Professional skills & hobby classes coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Skills & Hobby Classes instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "3a2c9ca8-d9fb-5031-b211-e6031179640d",
+      "name": "Skills & Hobby Classes Service Variation 2",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Skills & Hobby Classes",
+      "price": 800,
+      "active": true,
+      "description": "Professional skills & hobby classes coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Skills & Hobby Classes instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "fd8b9cf7-cd66-5e92-9e64-185217363d64",
+      "name": "Skills & Hobby Classes Service Variation 3",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Skills & Hobby Classes",
+      "price": 950,
+      "active": true,
+      "description": "Professional skills & hobby classes coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Skills & Hobby Classes instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "df4be4ea-2f76-566a-8ad7-db35cbbfafb0",
+      "name": "Skills & Hobby Classes Service Variation 4",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Skills & Hobby Classes",
+      "price": 1100,
+      "active": true,
+      "description": "Professional skills & hobby classes coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Skills & Hobby Classes instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "22edd7f9-7d44-5119-aacc-7979474a88f5",
+      "name": "Skills & Hobby Classes Service Variation 5",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Skills & Hobby Classes",
+      "price": 1250,
+      "active": true,
+      "description": "Professional skills & hobby classes coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Skills & Hobby Classes instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "f1093f34-1774-5635-ad64-bb37eb928fb5",
+      "name": "Skills & Hobby Classes Service Variation 6",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Skills & Hobby Classes",
+      "price": 1400,
+      "active": true,
+      "description": "Professional skills & hobby classes coaching tailored to individual learning needs.",
+      "highlights": [
+        "Expert Skills & Hobby Classes instructor",
+        "Customised lesson plans",
+        "Flexible scheduling (online & in-home)",
+        "Regular progress reports"
+      ],
+      "included": [
+        "Personalised lesson plan preparation",
+        "One-on-one or small group sessions",
+        "Study material and notes",
+        "Progress tracking and feedback reports"
+      ],
+      "excluded": [
+        "Cost of textbooks or printed materials",
+        "Examination registration fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Initial Assessment",
+          "description": "Evaluating the student's current level and learning goals"
+        },
+        {
+          "step_number": 2,
+          "title": "Lesson Planning",
+          "description": "Customising a structured study plan"
+        },
+        {
+          "step_number": 3,
+          "title": "Teaching Sessions",
+          "description": "Conducting focused, interactive lessons"
+        },
+        {
+          "step_number": 4,
+          "title": "Practice & Assignments",
+          "description": "Providing exercises to reinforce concepts"
+        },
+        {
+          "step_number": 5,
+          "title": "Review & Feedback",
+          "description": "Reviewing progress and adjusting the plan as needed"
+        }
+      ],
+      "tools_materials": [
+        "Whiteboard or digital board",
+        "Reference textbooks",
+        "Practice worksheets",
+        "Online resources"
+      ],
+      "customer_setup": [
+        "Ensure a quiet study environment",
+        "Have necessary stationery and books ready",
+        "Share syllabus or exam board details upfront"
+      ],
+      "aftercare": [
+        "Complete assigned homework before the next session",
+        "Review notes within 24 hours of each session"
+      ],
+      "expected_results": "Measurable improvement in understanding, grades, and confidence.",
+      "important_notes": "Minimum 4-session commitment recommended for meaningful progress.",
+      "warranty": "Free rescheduling if tutor cancels; satisfaction guarantee on first session.",
+      "faqs": [
+        {
+          "question": "Can I choose the tutor?",
+          "answer": "Yes, you can browse tutor profiles and select based on expertise and availability."
+        },
+        {
+          "question": "Are online sessions available?",
+          "answer": "Yes, all tutoring services are available both online and in-home."
+        },
+        {
+          "question": "What if I want to switch tutors?",
+          "answer": "You can request a replacement tutor at no extra cost within the first session."
+        },
+        {
+          "question": "Do you cater to competitive exam preparation?",
+          "answer": "Yes, we have specialised tutors for JEE, NEET, UPSC, CAT, and other exams."
+        }
+      ],
+      "dos": [
+        "Attend every session punctually."
+      ],
+      "donts": [
+        "Do not skip assigned practice work between sessions."
+      ],
+      "tips": [
+        "Revise notes within 24 hours to retain 80% more."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    }
+  ]
+}

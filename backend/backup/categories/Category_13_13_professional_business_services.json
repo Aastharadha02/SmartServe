@@ -1,0 +1,3139 @@
+{
+  "category_number": 13,
+  "category_name": "13. Professional & Business Services",
+  "service_count": 30,
+  "subcategories": [
+    "Accounting & Tax Filing",
+    "Administrative",
+    "Business Consulting",
+    "Career Services",
+    "Finance",
+    "Legal",
+    "Legal Documentation",
+    "Marketing & Branding",
+    "Staffing & HR Services",
+    "Virtual Assistant"
+  ],
+  "services": [
+    {
+      "service_id": "787578c0-5d5a-5d2d-b2da-6642691a6ac6",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Accounting & Tax Filing",
+      "service_name": "Annual Corporate Balance Sheet Audit Filing",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Statutory balance sheet compilation, P&L audit report, and ROC compliance filing.",
+      "highlights": [
+        "Professional Annual Corporate Balance Sheet Audit Filing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Annual Corporate Balance Sheet Audit Filing procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Annual Corporate Balance Sheet Audit Filing take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Annual Corporate Balance Sheet Audit Filing | SmartServe",
+      "seo_description": "Statutory balance sheet compilation, P&L audit report, and ROC compliance filing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.973874+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d3f326d6-8dc2-577e-bdef-e60143df9966",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Accounting & Tax Filing",
+      "service_name": "Personal Capital Gains Tax Computation (Shares/Property)",
+      "base_price_inr": 1799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Long-term and short-term capital gain calculations, indexation benefit, and tax exemptions.",
+      "highlights": [
+        "Professional Personal Capital Gains Tax Computation (Shares/Property) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Personal Capital Gains Tax Computation (Shares/Property) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Personal Capital Gains Tax Computation (Shares/Property) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Personal Capital Gains Tax Computation (Shares/Property) | SmartServe",
+      "seo_description": "Long-term and short-term capital gain calculations, indexation benefit, and tax exemptions.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.982178+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ad4f532c-aea7-5ce6-bddd-dd125105681c",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Accounting & Tax Filing",
+      "service_name": "TDS Quarterly Return Filing (Form 24Q / 26Q)",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Computing vendor and employee TDS deductions, generating challans, and filing NSDL returns.",
+      "highlights": [
+        "Professional TDS Quarterly Return Filing (Form 24Q / 26Q) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete TDS Quarterly Return Filing (Form 24Q / 26Q) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does TDS Quarterly Return Filing (Form 24Q / 26Q) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "TDS Quarterly Return Filing (Form 24Q / 26Q) | SmartServe",
+      "seo_description": "Computing vendor and employee TDS deductions, generating challans, and filing NSDL returns.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.976845+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "23128b73-d2c7-5b86-b93e-348146159bf3",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Administrative",
+      "service_name": "Rental Agreement & Property E-Stamping",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Legal draft creation, e-stamp paper purchase, and doorstep delivery of rental contract.",
+      "highlights": [
+        "Professional Rental Agreement & Property E-Stamping procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Rental Agreement & Property E-Stamping procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Rental Agreement & Property E-Stamping take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Rental Agreement & Property E-Stamping | SmartServe",
+      "seo_description": "Legal draft creation, e-stamp paper purchase, and doorstep delivery of rental contract.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.988665+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "d127f9d4-f583-5a22-a8a4-8e1760ff3989",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Business Consulting",
+      "service_name": "Franchise Business Model & Standard Operating Procedures",
+      "base_price_inr": 6999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Drafting operational manuals, franchise royalty agreements, and quality control checklists.",
+      "highlights": [
+        "Professional Franchise Business Model & Standard Operating Procedures procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Franchise Business Model & Standard Operating Procedures procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 240 minutes.",
+          "question": "How long does Franchise Business Model & Standard Operating Procedures take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Franchise Business Model & Standard Operating Procedures | SmartServe",
+      "seo_description": "Drafting operational manuals, franchise royalty agreements, and quality control checklists.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.993905+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "76ca2a3d-a2c3-58bc-8e15-647ecbc18831",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Business Consulting",
+      "service_name": "Market Entry & Competitor Benchmarking Strategy",
+      "base_price_inr": 4499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Detailed industry landscape report highlighting pricing models, customer pain points, and gaps.",
+      "highlights": [
+        "Professional Market Entry & Competitor Benchmarking Strategy procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Market Entry & Competitor Benchmarking Strategy procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 150 minutes.",
+          "question": "How long does Market Entry & Competitor Benchmarking Strategy take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Market Entry & Competitor Benchmarking Strategy | SmartServe",
+      "seo_description": "Detailed industry landscape report highlighting pricing models, customer pain points, and gaps.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.984181+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "6f614ed0-0baa-546b-9043-4232647dedd3",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Business Consulting",
+      "service_name": "Startup Pitch Deck & Financial Modeling Review",
+      "base_price_inr": 3999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Reviewing 10-slide investor deck, 3-year revenue projections, and unit economics metrics.",
+      "highlights": [
+        "Professional Startup Pitch Deck & Financial Modeling Review procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Startup Pitch Deck & Financial Modeling Review procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Startup Pitch Deck & Financial Modeling Review take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Startup Pitch Deck & Financial Modeling Review | SmartServe",
+      "seo_description": "Reviewing 10-slide investor deck, 3-year revenue projections, and unit economics metrics.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.990910+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "23cc4d79-35aa-5559-b8f2-5fa3c1e267f3",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Career Services",
+      "service_name": "Executive Resume & LinkedIn Profile Rewrite",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "ATS-friendly modern resume design highlighting key achievements and keywords for job seekers.",
+      "highlights": [
+        "Professional Executive Resume & LinkedIn Profile Rewrite procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Executive Resume & LinkedIn Profile Rewrite procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Executive Resume & LinkedIn Profile Rewrite take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Executive Resume & LinkedIn Profile Rewrite | SmartServe",
+      "seo_description": "ATS-friendly modern resume design highlighting key achievements and keywords for job seekers.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.001299+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "2cd29d58-974c-5481-bb7a-20c2fd20c3ad",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Finance",
+      "service_name": "Bookkeeping & Tally Accounting Support",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Monthly sales ledger entry, bank reconciliation, and profit/loss statement generation.",
+      "highlights": [
+        "Professional Bookkeeping & Tally Accounting Support procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Bookkeeping & Tally Accounting Support procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does Bookkeeping & Tally Accounting Support take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Bookkeeping & Tally Accounting Support | SmartServe",
+      "seo_description": "Monthly sales ledger entry, bank reconciliation, and profit/loss statement generation.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.967987+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "10cfb48f-7861-5bd8-b9e2-af03fc2233da",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Finance",
+      "service_name": "GST Registration & Monthly Compliance Filing",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "New GSTIN application, document verification, and filing GSTR-1 / GSTR-3B returns.",
+      "highlights": [
+        "Professional GST Registration & Monthly Compliance Filing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete GST Registration & Monthly Compliance Filing procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does GST Registration & Monthly Compliance Filing take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "GST Registration & Monthly Compliance Filing | SmartServe",
+      "seo_description": "New GSTIN application, document verification, and filing GSTR-1 / GSTR-3B returns.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.020635+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "0cfc0d33-6962-5101-897a-b6e467f1a839",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Finance",
+      "service_name": "Income Tax Return (ITR) Filing for Salaried",
+      "base_price_inr": 799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "CA-verified Form-16 computation, tax-saving deduction claims under 80C/80D, and e-filing.",
+      "highlights": [
+        "Professional Income Tax Return (ITR) Filing for Salaried procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Income Tax Return (ITR) Filing for Salaried procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Income Tax Return (ITR) Filing for Salaried take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Income Tax Return (ITR) Filing for Salaried | SmartServe",
+      "seo_description": "CA-verified Form-16 computation, tax-saving deduction claims under 80C/80D, and e-filing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.986215+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "2b7f005f-3cf0-5b92-be1f-91e92107b03b",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Legal",
+      "service_name": "FSSAI Food License Registration for Cloud Kitchens",
+      "base_price_inr": 1199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Basic or State FSSAI license documentation and online submission for restaurants & home bakers.",
+      "highlights": [
+        "Professional FSSAI Food License Registration for Cloud Kitchens procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete FSSAI Food License Registration for Cloud Kitchens procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does FSSAI Food License Registration for Cloud Kitchens take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "FSSAI Food License Registration for Cloud Kitchens | SmartServe",
+      "seo_description": "Basic or State FSSAI license documentation and online submission for restaurants & home bakers.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.971446+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "12e4d8b4-323b-5f07-894b-bcd929375dac",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Legal",
+      "service_name": "Private Limited Company Registration Package",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "DSC, DIN, Name approval, MOA/AOA drafting, and MCA incorporation certificate setup.",
+      "highlights": [
+        "Professional Private Limited Company Registration Package procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Private Limited Company Registration Package procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does Private Limited Company Registration Package take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Private Limited Company Registration Package | SmartServe",
+      "seo_description": "DSC, DIN, Name approval, MOA/AOA drafting, and MCA incorporation certificate setup.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.996268+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "1c8638eb-082d-5308-9752-656c4a57feb2",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Legal",
+      "service_name": "Trademark Brand Name & Logo Filing",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Comprehensive trademark availability search and online government TM application submission.",
+      "highlights": [
+        "Professional Trademark Brand Name & Logo Filing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Trademark Brand Name & Logo Filing procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Trademark Brand Name & Logo Filing take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Trademark Brand Name & Logo Filing | SmartServe",
+      "seo_description": "Comprehensive trademark availability search and online government TM application submission.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.979393+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "9a1c47e9-1b86-587c-8ffc-0f5b6d2f0b2f",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Legal Documentation",
+      "service_name": "Employment Offer Letter & HR Policy Handbook Drafting",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Drafting offer contracts, non-compete clauses, leave policies, and code of conduct.",
+      "highlights": [
+        "Professional Employment Offer Letter & HR Policy Handbook Drafting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Employment Offer Letter & HR Policy Handbook Drafting procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Employment Offer Letter & HR Policy Handbook Drafting take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Employment Offer Letter & HR Policy Handbook Drafting | SmartServe",
+      "seo_description": "Drafting offer contracts, non-compete clauses, leave policies, and code of conduct.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.998577+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "54da5a3b-5e07-578c-93eb-f101c7e6f75a",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Legal Documentation",
+      "service_name": "Non-Disclosure Agreement (NDA) & Vendor Contract Drafting",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Customized legally binding confidentiality and vendor service-level agreements.",
+      "highlights": [
+        "Professional Non-Disclosure Agreement (NDA) & Vendor Contract Drafting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Non-Disclosure Agreement (NDA) & Vendor Contract Drafting procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Non-Disclosure Agreement (NDA) & Vendor Contract Drafting take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Non-Disclosure Agreement (NDA) & Vendor Contract Drafting | SmartServe",
+      "seo_description": "Customized legally binding confidentiality and vendor service-level agreements.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.005522+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "df9cfe85-1d0a-5f3e-a166-ee049aae2d6f",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Legal Documentation",
+      "service_name": "Power of Attorney (POA) & Affidavit Legal Preparation",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "General or special power of attorney drafting with notary stamp coordination.",
+      "highlights": [
+        "Professional Power of Attorney (POA) & Affidavit Legal Preparation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Power of Attorney (POA) & Affidavit Legal Preparation procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Power of Attorney (POA) & Affidavit Legal Preparation take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Power of Attorney (POA) & Affidavit Legal Preparation | SmartServe",
+      "seo_description": "General or special power of attorney drafting with notary stamp coordination.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.003406+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "6fc3fc66-517c-5e02-bfe4-bc46992ce52f",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Marketing & Branding",
+      "service_name": "Complete Brand Identity Design (Logo, Palette, Fonts)",
+      "base_price_inr": 3999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "3 unique vector logo concepts, color guideline document, and business card layout.",
+      "highlights": [
+        "Professional Complete Brand Identity Design (Logo, Palette, Fonts) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Complete Brand Identity Design (Logo, Palette, Fonts) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 150 minutes.",
+          "question": "How long does Complete Brand Identity Design (Logo, Palette, Fonts) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Complete Brand Identity Design (Logo, Palette, Fonts) | SmartServe",
+      "seo_description": "3 unique vector logo concepts, color guideline document, and business card layout.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.008120+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "2f1f5635-323c-5512-bdc9-6f910785f38d",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Marketing & Branding",
+      "service_name": "Google Ads (PPC) Campaign Setup & Keyword Audit",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Negative keyword filtering, search ad copy creation, and conversion tracking tag setup.",
+      "highlights": [
+        "Professional Google Ads (PPC) Campaign Setup & Keyword Audit procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Google Ads (PPC) Campaign Setup & Keyword Audit procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Google Ads (PPC) Campaign Setup & Keyword Audit take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Google Ads (PPC) Campaign Setup & Keyword Audit | SmartServe",
+      "seo_description": "Negative keyword filtering, search ad copy creation, and conversion tracking tag setup.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.013500+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "b5926d2c-89c0-5b8f-802c-6e6c6a6408f5",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Marketing & Branding",
+      "service_name": "Influencer Marketing Outreach & Campaign Management",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Shortlisting niche micro-influencers, negotiating barter/paid rates, and campaign tracking.",
+      "highlights": [
+        "Professional Influencer Marketing Outreach & Campaign Management procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Influencer Marketing Outreach & Campaign Management procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Influencer Marketing Outreach & Campaign Management take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Influencer Marketing Outreach & Campaign Management | SmartServe",
+      "seo_description": "Shortlisting niche micro-influencers, negotiating barter/paid rates, and campaign tracking.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.018003+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "4b02dc00-0e2a-5cac-9625-dd74a89b9f92",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Marketing & Branding",
+      "service_name": "Instagram & Facebook Meta Ads Lead Generation Setup",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Targeting high-intent demographics, lookalike audiences, and creative carousel ads.",
+      "highlights": [
+        "Professional Instagram & Facebook Meta Ads Lead Generation Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Instagram & Facebook Meta Ads Lead Generation Setup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Instagram & Facebook Meta Ads Lead Generation Setup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Instagram & Facebook Meta Ads Lead Generation Setup | SmartServe",
+      "seo_description": "Targeting high-intent demographics, lookalike audiences, and creative carousel ads.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.010360+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "87d437f2-8c00-5a42-baae-ab2bc2de39c2",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Marketing & Branding",
+      "service_name": "SEO On-Page Optimization & Schema Markup",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Meta titles, H1 tags, alt tags, and JSON-LD local business schema deployment.",
+      "highlights": [
+        "Professional SEO On-Page Optimization & Schema Markup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete SEO On-Page Optimization & Schema Markup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does SEO On-Page Optimization & Schema Markup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "SEO On-Page Optimization & Schema Markup | SmartServe",
+      "seo_description": "Meta titles, H1 tags, alt tags, and JSON-LD local business schema deployment.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.015700+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "b61d0d45-f019-5134-9763-b69b75b59bd6",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Staffing & HR Services",
+      "service_name": "Employee Background Verification (Criminal & Education)",
+      "base_price_inr": 1199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Address physical verification, court record checks, and university degree verification.",
+      "highlights": [
+        "Professional Employee Background Verification (Criminal & Education) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Employee Background Verification (Criminal & Education) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Employee Background Verification (Criminal & Education) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Employee Background Verification (Criminal & Education) | SmartServe",
+      "seo_description": "Address physical verification, court record checks, and university degree verification.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.027640+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "f2de5783-e16d-5c82-8474-430e0e7015cc",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Staffing & HR Services",
+      "service_name": "Exit Interview & Full & Final Settlement Processing",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Managing notice period handovers, leave encashment calculations, and clearance approvals.",
+      "highlights": [
+        "Professional Exit Interview & Full & Final Settlement Processing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Exit Interview & Full & Final Settlement Processing procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Exit Interview & Full & Final Settlement Processing take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Exit Interview & Full & Final Settlement Processing | SmartServe",
+      "seo_description": "Managing notice period handovers, leave encashment calculations, and clearance approvals.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.022693+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "7eb034ef-66d5-5be7-9fb2-4cabe9ff84fe",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Staffing & HR Services",
+      "service_name": "Mid-Level Executive Candidate Sourcing & Screening",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Filtering CVs, conducting preliminary technical interviews, and shortlisting top candidates.",
+      "highlights": [
+        "Professional Mid-Level Executive Candidate Sourcing & Screening procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Mid-Level Executive Candidate Sourcing & Screening procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Mid-Level Executive Candidate Sourcing & Screening take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Mid-Level Executive Candidate Sourcing & Screening | SmartServe",
+      "seo_description": "Filtering CVs, conducting preliminary technical interviews, and shortlisting top candidates.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.024996+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ef6118e1-648b-5c1a-babf-6f4a12842388",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Staffing & HR Services",
+      "service_name": "POSH Act Workplace Harassment Compliance Training",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Internal committee formation guidelines and interactive employee sensitivity workshop.",
+      "highlights": [
+        "Professional POSH Act Workplace Harassment Compliance Training procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete POSH Act Workplace Harassment Compliance Training procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does POSH Act Workplace Harassment Compliance Training take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "POSH Act Workplace Harassment Compliance Training | SmartServe",
+      "seo_description": "Internal committee formation guidelines and interactive employee sensitivity workshop.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.029750+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ab3bf40b-aff5-52aa-9831-424bf0c61fbf",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Staffing & HR Services",
+      "service_name": "Payroll Processing & Salary Slip Generation",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Monthly salary calculation, PF/ESI deductions, and automated digital payslip delivery.",
+      "highlights": [
+        "Professional Payroll Processing & Salary Slip Generation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Payroll Processing & Salary Slip Generation procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Payroll Processing & Salary Slip Generation take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Payroll Processing & Salary Slip Generation | SmartServe",
+      "seo_description": "Monthly salary calculation, PF/ESI deductions, and automated digital payslip delivery.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.032144+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "a769d4ee-7b87-569a-9bf1-27212e4a71d9",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Virtual Assistant",
+      "service_name": "Customer Support Chat & Email Rep (Daily Shift)",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Answering customer queries, resolving tickets on Zendesk/Freshdesk with SLA.",
+      "highlights": [
+        "Professional Customer Support Chat & Email Rep (Daily Shift) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Customer Support Chat & Email Rep (Daily Shift) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 240 minutes.",
+          "question": "How long does Customer Support Chat & Email Rep (Daily Shift) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Customer Support Chat & Email Rep (Daily Shift) | SmartServe",
+      "seo_description": "Answering customer queries, resolving tickets on Zendesk/Freshdesk with SLA.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.036479+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "fc349e90-de34-59fc-a437-c73f56d5008e",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Virtual Assistant",
+      "service_name": "Data Entry & Web Research Virtual Specialist",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Accurate spreadsheet data entry, web scraping, and database updating.",
+      "highlights": [
+        "Professional Data Entry & Web Research Virtual Specialist procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Data Entry & Web Research Virtual Specialist procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Data Entry & Web Research Virtual Specialist take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Data Entry & Web Research Virtual Specialist | SmartServe",
+      "seo_description": "Accurate spreadsheet data entry, web scraping, and database updating.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.034320+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "55df0147-6581-51ab-9069-a3bb77c0fc1e",
+      "category_number": 13,
+      "category_name": "13. Professional & Business Services",
+      "subcategory_name": "Virtual Assistant",
+      "service_name": "Executive Calendar & Travel Booking Assistant",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Coordinating Zoom calls, managing flight/hotel bookings, and itinerary preparation.",
+      "highlights": [
+        "Professional Executive Calendar & Travel Booking Assistant procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Executive Calendar & Travel Booking Assistant procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Analysis",
+          "description": "Understanding the business challenge or compliance requirement",
+          "step_number": 1
+        },
+        {
+          "title": "Scope Definition",
+          "description": "Defining deliverables, timelines, and pricing",
+          "step_number": 2
+        },
+        {
+          "title": "Service Delivery",
+          "description": "Executing the agreed professional service",
+          "step_number": 3
+        },
+        {
+          "title": "Review & Revision",
+          "description": "Incorporating client feedback and finalising output",
+          "step_number": 4
+        },
+        {
+          "title": "Handover & Documentation",
+          "description": "Delivering all outputs and supporting documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional software (Tally, MS Office, etc.)",
+        "Legal databases",
+        "Secure document portal",
+        "CRM tools"
+      ],
+      "customer_setup_requirements": [
+        "Provide all relevant business documents upfront",
+        "Assign a point of contact for queries",
+        "Ensure digital access for required portals"
+      ],
+      "aftercare_precautions": [
+        "File all received documents securely",
+        "Schedule follow-up compliance reviews annually"
+      ],
+      "expected_results": [
+        "Compliant, efficient, and growth-ready business operations."
+      ],
+      "important_notes": [
+        "All services are subject to applicable government regulations and timelines."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Executive Calendar & Travel Booking Assistant take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Keep your tax filings up to date to avoid penalties."
+      ],
+      "dos": [
+        "Share complete and accurate information for faster processing."
+      ],
+      "donts": [
+        "Do not delay statutory filings — late fees can be substantial."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Executive Calendar & Travel Booking Assistant | SmartServe",
+      "seo_description": "Coordinating Zoom calls, managing flight/hotel bookings, and itinerary preparation.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.039133+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    }
+  ]
+}

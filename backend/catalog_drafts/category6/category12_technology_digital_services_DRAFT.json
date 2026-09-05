@@ -1,0 +1,2983 @@
+{
+  "metadata": {
+    "category": "6. Smart Home & Security",
+    "draft_generated_at": "2026-09-05T15:38:38.656023+00:00",
+    "total_services": 30,
+    "subcategories_count": 5,
+    "subcategories": {
+      "Computer & Laptop Repair": 30
+    }
+  },
+  "services": [
+    {
+      "id": "d4e6bfe2-ecbd-5815-b7c7-05784074772a",
+      "name": "Computer & Laptop Repair Service Variation 1",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Computer & Laptop Repair",
+      "price": 700,
+      "active": true,
+      "description": "Expert computer & laptop repair service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Computer & Laptop Repair technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "2bdba2e8-7b32-5268-8f00-75a7e31dd239",
+      "name": "Computer & Laptop Repair Service Variation 2",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Computer & Laptop Repair",
+      "price": 900,
+      "active": true,
+      "description": "Expert computer & laptop repair service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Computer & Laptop Repair technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "d4120b99-4c26-5694-aa19-a6171a3b8d76",
+      "name": "Computer & Laptop Repair Service Variation 3",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Computer & Laptop Repair",
+      "price": 1100,
+      "active": true,
+      "description": "Expert computer & laptop repair service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Computer & Laptop Repair technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "bb262203-787d-5327-855d-bf954a8ee5d5",
+      "name": "Computer & Laptop Repair Service Variation 4",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Computer & Laptop Repair",
+      "price": 1300,
+      "active": true,
+      "description": "Expert computer & laptop repair service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Computer & Laptop Repair technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "65d7ab71-f770-5dd9-a583-b838ec13072f",
+      "name": "Computer & Laptop Repair Service Variation 5",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Computer & Laptop Repair",
+      "price": 1500,
+      "active": true,
+      "description": "Expert computer & laptop repair service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Computer & Laptop Repair technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "2e15793f-1ce5-5cda-88eb-72fb5eedece4",
+      "name": "Computer & Laptop Repair Service Variation 6",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Computer & Laptop Repair",
+      "price": 1700,
+      "active": true,
+      "description": "Expert computer & laptop repair service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Computer & Laptop Repair technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "362ba679-8a20-599c-9909-fea400931454",
+      "name": "Computer & Laptop Repair Service Variation 7",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Computer & Laptop Repair",
+      "price": 1900,
+      "active": true,
+      "description": "Expert computer & laptop repair service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Computer & Laptop Repair technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "8a10f3bf-924a-5055-adae-e72085096ab2",
+      "name": "Data Recovery & Backup Service Variation 1",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Data Recovery & Backup",
+      "price": 700,
+      "active": true,
+      "description": "Expert data recovery & backup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Data Recovery & Backup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "ba47745f-471d-5556-9527-5da8766dd06a",
+      "name": "Data Recovery & Backup Service Variation 2",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Data Recovery & Backup",
+      "price": 900,
+      "active": true,
+      "description": "Expert data recovery & backup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Data Recovery & Backup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "6e0e4e89-7e40-5b24-a612-9c6a0e00882b",
+      "name": "Data Recovery & Backup Service Variation 3",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Data Recovery & Backup",
+      "price": 1100,
+      "active": true,
+      "description": "Expert data recovery & backup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Data Recovery & Backup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "e3889f5d-53dc-5e48-9e11-c141306cddbb",
+      "name": "Data Recovery & Backup Service Variation 4",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Data Recovery & Backup",
+      "price": 1300,
+      "active": true,
+      "description": "Expert data recovery & backup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Data Recovery & Backup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "f2053a99-60b4-58a3-95df-a5fa5c45b87b",
+      "name": "Data Recovery & Backup Service Variation 5",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Data Recovery & Backup",
+      "price": 1500,
+      "active": true,
+      "description": "Expert data recovery & backup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Data Recovery & Backup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "f3e717c6-4827-565b-a518-7ac71d1ea8eb",
+      "name": "IT Support & Consultation Service Variation 1",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "IT Support & Consultation",
+      "price": 700,
+      "active": true,
+      "description": "Expert it support & consultation service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified IT Support & Consultation technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "e4a6bbad-6390-5fae-a8fb-15913428ab91",
+      "name": "IT Support & Consultation Service Variation 2",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "IT Support & Consultation",
+      "price": 900,
+      "active": true,
+      "description": "Expert it support & consultation service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified IT Support & Consultation technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "47f7bb44-468b-5f4f-8984-16fdd6060fa5",
+      "name": "IT Support & Consultation Service Variation 3",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "IT Support & Consultation",
+      "price": 1100,
+      "active": true,
+      "description": "Expert it support & consultation service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified IT Support & Consultation technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "5bfb93e1-e97d-58f0-a2fd-773cbbb6f72f",
+      "name": "IT Support & Consultation Service Variation 4",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "IT Support & Consultation",
+      "price": 1300,
+      "active": true,
+      "description": "Expert it support & consultation service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified IT Support & Consultation technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "5eb558af-feb7-5a9b-ab1a-f277c4c732f9",
+      "name": "IT Support & Consultation Service Variation 5",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "IT Support & Consultation",
+      "price": 1500,
+      "active": true,
+      "description": "Expert it support & consultation service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified IT Support & Consultation technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "1b08e54b-37bb-5a80-b491-60c37e610ce9",
+      "name": "IT Support & Consultation Service Variation 6",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "IT Support & Consultation",
+      "price": 1700,
+      "active": true,
+      "description": "Expert it support & consultation service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified IT Support & Consultation technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "e3a9c71b-d11a-59b2-b916-8b46ce0870e0",
+      "name": "IT Support & Consultation Service Variation 7",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "IT Support & Consultation",
+      "price": 1900,
+      "active": true,
+      "description": "Expert it support & consultation service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified IT Support & Consultation technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "f1db2450-531c-5da1-8112-1c9b9dc1075d",
+      "name": "Networking & Wi-Fi Setup Service Variation 1",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Networking & Wi-Fi Setup",
+      "price": 700,
+      "active": true,
+      "description": "Expert networking & wi-fi setup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Networking & Wi-Fi Setup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "7713cd40-cf0b-5696-980e-cd4ab4811d84",
+      "name": "Networking & Wi-Fi Setup Service Variation 2",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Networking & Wi-Fi Setup",
+      "price": 900,
+      "active": true,
+      "description": "Expert networking & wi-fi setup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Networking & Wi-Fi Setup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "729fe3fb-75bf-563d-88c8-2eee1ca749b1",
+      "name": "Networking & Wi-Fi Setup Service Variation 3",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Networking & Wi-Fi Setup",
+      "price": 1100,
+      "active": true,
+      "description": "Expert networking & wi-fi setup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Networking & Wi-Fi Setup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "0cc0099f-92a7-59dc-a33e-81ff8283e62a",
+      "name": "Networking & Wi-Fi Setup Service Variation 4",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Networking & Wi-Fi Setup",
+      "price": 1300,
+      "active": true,
+      "description": "Expert networking & wi-fi setup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Networking & Wi-Fi Setup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "dc0118a0-ca7c-583c-a62b-c4cdaa25f9d0",
+      "name": "Networking & Wi-Fi Setup Service Variation 5",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Networking & Wi-Fi Setup",
+      "price": 1500,
+      "active": true,
+      "description": "Expert networking & wi-fi setup service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Networking & Wi-Fi Setup technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "d0141ca3-4157-5374-b1bc-35b8cf628d97",
+      "name": "Website & App Development Service Variation 1",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Website & App Development",
+      "price": 700,
+      "active": true,
+      "description": "Expert website & app development service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Website & App Development technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "05d26f2b-3da7-5cfb-af51-6b35564d00a5",
+      "name": "Website & App Development Service Variation 2",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Website & App Development",
+      "price": 900,
+      "active": true,
+      "description": "Expert website & app development service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Website & App Development technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "ddf9ec41-154d-5e26-a0d3-2cb544e9fd5b",
+      "name": "Website & App Development Service Variation 3",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Website & App Development",
+      "price": 1100,
+      "active": true,
+      "description": "Expert website & app development service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Website & App Development technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "37282030-df16-538a-b975-ab6d804922ba",
+      "name": "Website & App Development Service Variation 4",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Website & App Development",
+      "price": 1300,
+      "active": true,
+      "description": "Expert website & app development service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Website & App Development technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "70cb57da-cd6e-54bc-903a-42181fa00ef6",
+      "name": "Website & App Development Service Variation 5",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Website & App Development",
+      "price": 1500,
+      "active": true,
+      "description": "Expert website & app development service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Website & App Development technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    },
+    {
+      "id": "7774beae-b345-5741-8073-7227f208458b",
+      "name": "Website & App Development Service Variation 6",
+      "category": "12. Technology & Digital Services",
+      "subcategory": "Website & App Development",
+      "price": 1700,
+      "active": true,
+      "description": "Expert website & app development service to resolve your technology challenges swiftly.",
+      "highlights": [
+        "Certified Website & App Development technician",
+        "On-site and remote support available",
+        "No fix, no charge policy",
+        "Data safety guaranteed"
+      ],
+      "included": [
+        "Remote or on-site diagnosis",
+        "Service execution and testing",
+        "30-day follow-up support",
+        "Basic user training"
+      ],
+      "excluded": [
+        "Cost of replacement hardware or parts",
+        "Software licensing fees"
+      ],
+      "process_steps": [
+        {
+          "step_number": 1,
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue"
+        },
+        {
+          "step_number": 2,
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path"
+        },
+        {
+          "step_number": 3,
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work"
+        },
+        {
+          "step_number": 4,
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly"
+        },
+        {
+          "step_number": 5,
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices"
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": "A fully functional device with improved performance and security.",
+      "important_notes": "Data loss due to hardware failure is not covered unless data recovery service is booked.",
+      "warranty": "30-day service warranty on all repairs; free revisit if same issue reoccurs.",
+      "faqs": [
+        {
+          "question": "Do you offer remote support?",
+          "answer": "Yes, many issues can be resolved remotely via secure screen-sharing."
+        },
+        {
+          "question": "What if the problem cannot be fixed?",
+          "answer": "We follow a no-fix, no-charge policy for diagnosis visits."
+        },
+        {
+          "question": "Are my data and privacy safe?",
+          "answer": "Yes, our technicians follow strict data privacy protocols."
+        },
+        {
+          "question": "Do you repair all brands?",
+          "answer": "Yes, we service all major brands — Apple, Dell, HP, Lenovo, and more."
+        }
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "existing_add_ons": [],
+      "distinct_features_in_db": []
+    }
+  ]
+}

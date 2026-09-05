@@ -1,0 +1,3136 @@
+{
+  "category_number": 10,
+  "category_name": "10. Events, Photography & Entertainment",
+  "service_count": 30,
+  "subcategories": [
+    "Catering & Food Services",
+    "DJ & Sound Systems",
+    "Decoration & Floral",
+    "Entertainment",
+    "Event Planning & Management",
+    "Photography",
+    "Photography & Videography"
+  ],
+  "services": [
+    {
+      "service_id": "aabf0559-0ecf-53af-84c6-156ad3d2e73f",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Catering & Food Services",
+      "service_name": "Gourmet Live Barbecue & Grilling Counter",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Live charcoal barbecue setup serving hot paneer tikkas, seekh kebabs, and grilled seasonal vegetables.",
+      "highlights": [
+        "Professional Gourmet Live Barbecue & Grilling Counter procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Gourmet Live Barbecue & Grilling Counter procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Gourmet Live Barbecue & Grilling Counter take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Gourmet Live Barbecue & Grilling Counter | SmartServe",
+      "seo_description": "Live charcoal barbecue setup serving hot paneer tikkas, seekh kebabs, and grilled seasonal vegetables.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.355895+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e7d5615b-cebf-5e60-863b-119399595857",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Catering & Food Services",
+      "service_name": "Italian Wood-Fired Pizza & Pasta Station",
+      "base_price_inr": 5499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "On-site live oven pizza baking and gourmet pasta tossing tailored to individual guest orders.",
+      "highlights": [
+        "Professional Italian Wood-Fired Pizza & Pasta Station procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Italian Wood-Fired Pizza & Pasta Station procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 210 minutes.",
+          "question": "How long does Italian Wood-Fired Pizza & Pasta Station take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Italian Wood-Fired Pizza & Pasta Station | SmartServe",
+      "seo_description": "On-site live oven pizza baking and gourmet pasta tossing tailored to individual guest orders.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.348700+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "fb0e963d-405b-5c26-b079-385ef6e9211c",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Catering & Food Services",
+      "service_name": "Kids Birthday Party Snack Box Catering",
+      "base_price_inr": 1999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Individually packed hygienic snack boxes with mini burger, fries, fruit juice, and chocolate brownie.",
+      "highlights": [
+        "Professional Kids Birthday Party Snack Box Catering procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Kids Birthday Party Snack Box Catering procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Kids Birthday Party Snack Box Catering take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Kids Birthday Party Snack Box Catering | SmartServe",
+      "seo_description": "Individually packed hygienic snack boxes with mini burger, fries, fruit juice, and chocolate brownie.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.360268+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "87ebf653-23ab-5909-8c35-e7c718752275",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Catering & Food Services",
+      "service_name": "Live Chaat & Street Food Counter",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Live preparation of pani puri, sev puri, tikki, and dahi bhalla by trained cooks with hygienic mineral water.",
+      "highlights": [
+        "Professional Live Chaat & Street Food Counter procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Live Chaat & Street Food Counter procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Live Chaat & Street Food Counter take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Live Chaat & Street Food Counter | SmartServe",
+      "seo_description": "Live preparation of pani puri, sev puri, tikki, and dahi bhalla by trained cooks with hygienic mineral water.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.344334+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "f8c1ba49-8d4a-5014-bbf0-48fa13b31c0b",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Catering & Food Services",
+      "service_name": "Traditional Indian Buffet Catering (Per Head)",
+      "base_price_inr": 450.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Full multi-course meal buffet setup with chafing dish warmers, cutlery, and professional service staff.",
+      "highlights": [
+        "Professional Traditional Indian Buffet Catering (Per Head) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Traditional Indian Buffet Catering (Per Head) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Traditional Indian Buffet Catering (Per Head) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Traditional Indian Buffet Catering (Per Head) | SmartServe",
+      "seo_description": "Full multi-course meal buffet setup with chafing dish warmers, cutlery, and professional service staff.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.351942+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "9cb013bf-baf4-5f0a-a472-00e584c5de93",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "DJ & Sound Systems",
+      "service_name": "Acoustic Stage PA System & Mixer Setup",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Yamaha 12-channel audio mixer, monitor speakers, and vocal dynamic mics for live singer performances.",
+      "highlights": [
+        "Professional Acoustic Stage PA System & Mixer Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Acoustic Stage PA System & Mixer Setup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Acoustic Stage PA System & Mixer Setup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Acoustic Stage PA System & Mixer Setup | SmartServe",
+      "seo_description": "Yamaha 12-channel audio mixer, monitor speakers, and vocal dynamic mics for live singer performances.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.381054+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "8d92a317-68fe-5e81-9681-41894fb5aa1a",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "DJ & Sound Systems",
+      "service_name": "Club Style DJ with Dual Bass Subwoofers",
+      "base_price_inr": 8999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Pro DJ console, 2 top speakers, 2 high-bass subwoofers, and wireless mics for high-energy dance parties.",
+      "highlights": [
+        "Professional Club Style DJ with Dual Bass Subwoofers procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Club Style DJ with Dual Bass Subwoofers procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 240 minutes.",
+          "question": "How long does Club Style DJ with Dual Bass Subwoofers take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Club Style DJ with Dual Bass Subwoofers | SmartServe",
+      "seo_description": "Pro DJ console, 2 top speakers, 2 high-bass subwoofers, and wireless mics for high-energy dance parties.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.372032+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "dbbd7eeb-3df6-5751-a7dd-8f0511d5fc2e",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "DJ & Sound Systems",
+      "service_name": "Intelligent Moving-Head DMX Stage Lights",
+      "base_price_inr": 3999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "4 synchronized RGB moving beam lights with smoke haze machine creating dynamic stage effects.",
+      "highlights": [
+        "Professional Intelligent Moving-Head DMX Stage Lights procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Intelligent Moving-Head DMX Stage Lights procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Intelligent Moving-Head DMX Stage Lights take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Intelligent Moving-Head DMX Stage Lights | SmartServe",
+      "seo_description": "4 synchronized RGB moving beam lights with smoke haze machine creating dynamic stage effects.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.375972+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "dc548bf3-18ba-51b3-a23e-291c0c001a0a",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "DJ & Sound Systems",
+      "service_name": "Karaoke Night Sound & Screen Rental",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Large karaoke lyrics display screen, 2 cordless mics, and access to thousands of Bollywood/English songs.",
+      "highlights": [
+        "Professional Karaoke Night Sound & Screen Rental procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Karaoke Night Sound & Screen Rental procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Karaoke Night Sound & Screen Rental take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Karaoke Night Sound & Screen Rental | SmartServe",
+      "seo_description": "Large karaoke lyrics display screen, 2 cordless mics, and access to thousands of Bollywood/English songs.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.368196+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e198f891-39ff-53a7-9d62-1ea56ea2dafd",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "DJ & Sound Systems",
+      "service_name": "Silent Disco Multi-Channel Headphone Setup",
+      "base_price_inr": 6999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Wireless 3-channel glowing LED headphones for noise-free rooftop and terrace celebrations.",
+      "highlights": [
+        "Professional Silent Disco Multi-Channel Headphone Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Silent Disco Multi-Channel Headphone Setup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Silent Disco Multi-Channel Headphone Setup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Silent Disco Multi-Channel Headphone Setup | SmartServe",
+      "seo_description": "Wireless 3-channel glowing LED headphones for noise-free rooftop and terrace celebrations.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.364455+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d852eaea-de27-5284-a511-f5a5a86b4ca4",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Decoration & Floral",
+      "service_name": "Boho Canopy Tent & Fairy Light Romantic Setup",
+      "base_price_inr": 3999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Chic teepee tent with warm fairy string lights, plush cushions, and ambient floor lanterns.",
+      "highlights": [
+        "Professional Boho Canopy Tent & Fairy Light Romantic Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Boho Canopy Tent & Fairy Light Romantic Setup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Boho Canopy Tent & Fairy Light Romantic Setup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Boho Canopy Tent & Fairy Light Romantic Setup | SmartServe",
+      "seo_description": "Chic teepee tent with warm fairy string lights, plush cushions, and ambient floor lanterns.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.402254+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e690bd75-b19c-51dc-9200-9ee955378a79",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Decoration & Floral",
+      "service_name": "Corporate Stage Backdrop & LED Signage Setup",
+      "base_price_inr": 6499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Professional branded flex printing, sturdy wooden frame mount, and focus stage spotlights for seminars.",
+      "highlights": [
+        "Professional Corporate Stage Backdrop & LED Signage Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Corporate Stage Backdrop & LED Signage Setup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Corporate Stage Backdrop & LED Signage Setup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Corporate Stage Backdrop & LED Signage Setup | SmartServe",
+      "seo_description": "Professional branded flex printing, sturdy wooden frame mount, and focus stage spotlights for seminars.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.387573+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ace5466c-3475-5310-ac77-765bdd666d00",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Decoration & Floral",
+      "service_name": "Pastel Balloon Arch & Backdrop Styling",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Custom pastel balloon garland arch with customized acrylic name sign and LED number lights for birthdays.",
+      "highlights": [
+        "Professional Pastel Balloon Arch & Backdrop Styling procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Pastel Balloon Arch & Backdrop Styling procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Pastel Balloon Arch & Backdrop Styling take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Pastel Balloon Arch & Backdrop Styling | SmartServe",
+      "seo_description": "Custom pastel balloon garland arch with customized acrylic name sign and LED number lights for birthdays.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.384341+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "b57352d4-ba7c-5506-9521-2294c1e46200",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Decoration & Floral",
+      "service_name": "Traditional Fresh Flower Marigold Stage Decor",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Festive marigold, jasmine, and rose floral strings for pooja, haldi, or griha pravesh ceremony.",
+      "highlights": [
+        "Professional Traditional Fresh Flower Marigold Stage Decor procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Traditional Fresh Flower Marigold Stage Decor procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Traditional Fresh Flower Marigold Stage Decor take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Traditional Fresh Flower Marigold Stage Decor | SmartServe",
+      "seo_description": "Festive marigold, jasmine, and rose floral strings for pooja, haldi, or griha pravesh ceremony.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.391386+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "582bb45c-e5fb-5d84-83ac-3581e60766f3",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Entertainment",
+      "service_name": "Live Close-Up Table Illusionist Magician",
+      "base_price_inr": 3999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Mind-bending sleight of hand, card tricks, and interactive mentalism moving among guest tables.",
+      "highlights": [
+        "Professional Live Close-Up Table Illusionist Magician procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Live Close-Up Table Illusionist Magician procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Live Close-Up Table Illusionist Magician take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Live Close-Up Table Illusionist Magician | SmartServe",
+      "seo_description": "Mind-bending sleight of hand, card tricks, and interactive mentalism moving among guest tables.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.405470+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "5f3b5322-61de-5bc4-b106-4e4cc729b30d",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Entertainment",
+      "service_name": "Tattoo Artist & Face Painting for Events",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Safe skin-friendly organic airbrush temporary tattoos and glitter face painting for kids and guests.",
+      "highlights": [
+        "Professional Tattoo Artist & Face Painting for Events procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Tattoo Artist & Face Painting for Events procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Tattoo Artist & Face Painting for Events take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Tattoo Artist & Face Painting for Events | SmartServe",
+      "seo_description": "Safe skin-friendly organic airbrush temporary tattoos and glitter face painting for kids and guests.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.447361+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "df202201-6da5-548a-810d-888b497344c3",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Event Planning & Management",
+      "service_name": "Corporate Conference & Seminar Manager",
+      "base_price_inr": 8999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Managing delegate registration badges, AV mic testing, presentation clickers, and tea break logistics.",
+      "highlights": [
+        "Professional Corporate Conference & Seminar Manager procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Corporate Conference & Seminar Manager procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 360 minutes.",
+          "question": "How long does Corporate Conference & Seminar Manager take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Corporate Conference & Seminar Manager | SmartServe",
+      "seo_description": "Managing delegate registration badges, AV mic testing, presentation clickers, and tea break logistics.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.417108+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "c697f583-d431-5886-aeeb-3d6d3f61300d",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Event Planning & Management",
+      "service_name": "End-to-End Birthday Party Coordinator",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Dedicated event coordinator managing cake arrival, games, anchor, and venue schedule without stress.",
+      "highlights": [
+        "Professional End-to-End Birthday Party Coordinator procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete End-to-End Birthday Party Coordinator procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 300 minutes.",
+          "question": "How long does End-to-End Birthday Party Coordinator take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "End-to-End Birthday Party Coordinator | SmartServe",
+      "seo_description": "Dedicated event coordinator managing cake arrival, games, anchor, and venue schedule without stress.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.414023+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "cbb9fb78-4d59-5462-913c-eded1c14fc49",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Event Planning & Management",
+      "service_name": "Pre-Wedding Sangeet & Reception Planner",
+      "base_price_inr": 14999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Complete vendor coordination, stage rehearsal schedules, guest escorting, and timeline management.",
+      "highlights": [
+        "Professional Pre-Wedding Sangeet & Reception Planner procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Pre-Wedding Sangeet & Reception Planner procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 480 minutes.",
+          "question": "How long does Pre-Wedding Sangeet & Reception Planner take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Pre-Wedding Sangeet & Reception Planner | SmartServe",
+      "seo_description": "Complete vendor coordination, stage rehearsal schedules, guest escorting, and timeline management.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.409977+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "415d2547-0a7c-5a96-9436-4af2de4755f1",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography",
+      "service_name": "Architecture & Real Estate Photographer",
+      "base_price_inr": 5499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Wide-angle interior and exterior photography for luxury villas, hotels, and interior designer portfolios.",
+      "highlights": [
+        "Professional Architecture & Real Estate Photographer procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Architecture & Real Estate Photographer procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 180 minutes.",
+          "question": "How long does Architecture & Real Estate Photographer take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Architecture & Real Estate Photographer | SmartServe",
+      "seo_description": "Wide-angle interior and exterior photography for luxury villas, hotels, and interior designer portfolios.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.450433+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "05040020-c8df-5322-8253-f125bbb5ee78",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography",
+      "service_name": "Candid Birthday Party Photographer (3 Hours)",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Professional photographer capturing candid moments, cake cutting, and group family photos with edited soft copies.",
+      "highlights": [
+        "Professional Candid Birthday Party Photographer (3 Hours) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Candid Birthday Party Photographer (3 Hours) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 180 minutes.",
+          "question": "How long does Candid Birthday Party Photographer (3 Hours) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Candid Birthday Party Photographer (3 Hours) | SmartServe",
+      "seo_description": "Professional photographer capturing candid moments, cake cutting, and group family photos with edited soft copies.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.395809+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "2b345a26-745b-5c3f-8a99-4337352b6cd2",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography",
+      "service_name": "Corporate Event & Conference Photographer",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "High-resolution corporate event coverage for stage speakers, networking, and award ceremonies.",
+      "highlights": [
+        "Professional Corporate Event & Conference Photographer procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Corporate Event & Conference Photographer procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 240 minutes.",
+          "question": "How long does Corporate Event & Conference Photographer take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Corporate Event & Conference Photographer | SmartServe",
+      "seo_description": "High-resolution corporate event coverage for stage speakers, networking, and award ceremonies.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.399302+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "357e54a0-64df-5bc6-b28e-1b90edd4a951",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography",
+      "service_name": "E-Commerce Product Catalog Photographer",
+      "base_price_inr": 6999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "White studio background lighting photoshoot for Amazon/Flipkart apparel, jewelry, or food products.",
+      "highlights": [
+        "Professional E-Commerce Product Catalog Photographer procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete E-Commerce Product Catalog Photographer procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 240 minutes.",
+          "question": "How long does E-Commerce Product Catalog Photographer take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "E-Commerce Product Catalog Photographer | SmartServe",
+      "seo_description": "White studio background lighting photoshoot for Amazon/Flipkart apparel, jewelry, or food products.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.420727+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "469077ac-5ba3-5f03-8687-e4ba5c0d1f06",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography",
+      "service_name": "Family Generation Portrait Session",
+      "base_price_inr": 3999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Heartwarming home family group photography capturing grandparents, parents, and grandchildren.",
+      "highlights": [
+        "Professional Family Generation Portrait Session procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Family Generation Portrait Session procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Family Generation Portrait Session take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Family Generation Portrait Session | SmartServe",
+      "seo_description": "Heartwarming home family group photography capturing grandparents, parents, and grandchildren.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.423670+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "38023d5f-40ae-595a-8290-8fcd34801698",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography",
+      "service_name": "Fashion Model Portfolio Shoot",
+      "base_price_inr": 8999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Stylized high-fashion lighting photoshoot with outfit changes and professional retouching.",
+      "highlights": [
+        "Professional Fashion Model Portfolio Shoot procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Fashion Model Portfolio Shoot procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 240 minutes.",
+          "question": "How long does Fashion Model Portfolio Shoot take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Fashion Model Portfolio Shoot | SmartServe",
+      "seo_description": "Stylized high-fashion lighting photoshoot with outfit changes and professional retouching.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.442917+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "26acc88f-a7f7-594b-9d9a-017479434901",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography",
+      "service_name": "Maternity & Newborn Baby Photoshoot",
+      "base_price_inr": 5999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Studio-prop set up at home for safe, cozy newborn portraits and mother-to-be bump photos.",
+      "highlights": [
+        "Professional Maternity & Newborn Baby Photoshoot procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Maternity & Newborn Baby Photoshoot procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does Maternity & Newborn Baby Photoshoot take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Maternity & Newborn Baby Photoshoot | SmartServe",
+      "seo_description": "Studio-prop set up at home for safe, cozy newborn portraits and mother-to-be bump photos.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.337368+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "1b6b6828-30d9-5acd-a391-ca86221a2d50",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography",
+      "service_name": "Pre-Wedding Couple Shoot Package",
+      "base_price_inr": 9999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Outdoor scenic location photoshoot with drone aerial shots, cinematic video teaser, and retouched album images.",
+      "highlights": [
+        "Professional Pre-Wedding Couple Shoot Package procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Pre-Wedding Couple Shoot Package procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 300 minutes.",
+          "question": "How long does Pre-Wedding Couple Shoot Package take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Pre-Wedding Couple Shoot Package | SmartServe",
+      "seo_description": "Outdoor scenic location photoshoot with drone aerial shots, cinematic video teaser, and retouched album images.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.439458+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "7130a8ad-6e19-53a6-ac85-8f264051dc78",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography & Videography",
+      "service_name": "4K Cinematic Drone Aerial Video Shoot",
+      "base_price_inr": 4499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "FAA/DGCA certified drone pilot capturing majestic top-down cinematic venue perspectives.",
+      "highlights": [
+        "Professional 4K Cinematic Drone Aerial Video Shoot procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 4K Cinematic Drone Aerial Video Shoot procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does 4K Cinematic Drone Aerial Video Shoot take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "4K Cinematic Drone Aerial Video Shoot | SmartServe",
+      "seo_description": "FAA/DGCA certified drone pilot capturing majestic top-down cinematic venue perspectives.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.435488+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "bb48e569-a6da-51f5-b3dc-d87f1695b9ca",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography & Videography",
+      "service_name": "Instant Photo Booth with Quirky Props & Prints",
+      "base_price_inr": 5999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "On-the-spot magnetic photo strip printing with funny sunglasses, hats, and customized branded frame.",
+      "highlights": [
+        "Professional Instant Photo Booth with Quirky Props & Prints procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Instant Photo Booth with Quirky Props & Prints procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Instant Photo Booth with Quirky Props & Prints take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Instant Photo Booth with Quirky Props & Prints | SmartServe",
+      "seo_description": "On-the-spot magnetic photo strip printing with funny sunglasses, hats, and customized branded frame.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.431932+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "fa960fc9-d8f1-5998-8e4b-c1102937d532",
+      "category_number": 10,
+      "category_name": "10. Events, Photography & Entertainment",
+      "subcategory_name": "Photography & Videography",
+      "service_name": "Short-Form Social Media Reels Creator",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Vertical format shooting and same-day edited Instagram Reels highlighting event moments.",
+      "highlights": [
+        "Professional Short-Form Social Media Reels Creator procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Short-Form Social Media Reels Creator procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Requirement Briefing",
+          "description": "Understanding event theme, scale, and budget",
+          "step_number": 1
+        },
+        {
+          "title": "Concept & Proposal",
+          "description": "Presenting a tailored event concept and plan",
+          "step_number": 2
+        },
+        {
+          "title": "Vendor Coordination",
+          "description": "Arranging all required vendors and logistics",
+          "step_number": 3
+        },
+        {
+          "title": "Event Execution",
+          "description": "On-ground management and execution on the event day",
+          "step_number": 4
+        },
+        {
+          "title": "Post-Event Wrap-Up",
+          "description": "Clearing up and delivering any media or documentation",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Event planning software",
+        "Professional equipment",
+        "Logistics checklist",
+        "Vendor contact directory"
+      ],
+      "customer_setup_requirements": [
+        "Provide venue details in advance",
+        "Share guest list and requirements",
+        "Confirm timeline and schedule"
+      ],
+      "aftercare_precautions": [
+        "Share feedback to improve future events",
+        "Review delivered photos/videos within 7 days"
+      ],
+      "expected_results": [
+        "A seamlessly executed event with lasting memories."
+      ],
+      "important_notes": [
+        "Minimum advance booking of 7 days required for all events."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 150 minutes.",
+          "question": "How long does Short-Form Social Media Reels Creator take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Book early during wedding or festival season for best availability."
+      ],
+      "dos": [
+        "Share detailed event requirements upfront to avoid last-minute changes."
+      ],
+      "donts": [
+        "Do not make last-minute changes to guest count or venue without notice."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Short-Form Social Media Reels Creator | SmartServe",
+      "seo_description": "Vertical format shooting and same-day edited Instagram Reels highlighting event moments.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.426960+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    }
+  ]
+}

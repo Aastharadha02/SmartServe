@@ -1,0 +1,2618 @@
+{
+  "category_number": 11,
+  "category_name": "11. Pet Services",
+  "service_count": 25,
+  "subcategories": [
+    "Dog Grooming",
+    "Dog Training",
+    "Pet Accessories & Nutrition",
+    "Pet Care",
+    "Pet Grooming",
+    "Pet Sitting & Boarding",
+    "Pet Training",
+    "Veterinary",
+    "Veterinary & Health Checkup"
+  ],
+  "services": [
+    {
+      "service_id": "5c61d5df-f335-5c43-b47f-d671b134142c",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Dog Grooming",
+      "service_name": "Deshedding & Undercoat Fur Thinning Bath",
+      "base_price_inr": 1399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Specialized high-velocity blow dry and fur rake grooming removing loose dead undercoat hairs.",
+      "highlights": [
+        "Professional Deshedding & Undercoat Fur Thinning Bath procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Deshedding & Undercoat Fur Thinning Bath procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Deshedding & Undercoat Fur Thinning Bath take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Deshedding & Undercoat Fur Thinning Bath | SmartServe",
+      "seo_description": "Specialized high-velocity blow dry and fur rake grooming removing loose dead undercoat hairs.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.588309+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "a407e5eb-c8eb-5981-9caa-78da15b6ae97",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Dog Grooming",
+      "service_name": "Pawdicure & Organic Paw Balm Massage",
+      "base_price_inr": 399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Gentle nail clipping, paw pad hair trimming, and soothing organic beeswax balm massage.",
+      "highlights": [
+        "Professional Pawdicure & Organic Paw Balm Massage procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Pawdicure & Organic Paw Balm Massage procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 25 minutes.",
+          "question": "How long does Pawdicure & Organic Paw Balm Massage take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Pawdicure & Organic Paw Balm Massage | SmartServe",
+      "seo_description": "Gentle nail clipping, paw pad hair trimming, and soothing organic beeswax balm massage.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.583614+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "aabd7a83-ae18-582b-914d-91e31cdfc9bf",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Dog Training",
+      "service_name": "Advanced Trick & Agility Training (5 Sessions)",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Teaching high-five, roll over, weave poles, and fetch frisbee for mental stimulation.",
+      "highlights": [
+        "Professional Advanced Trick & Agility Training (5 Sessions) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Advanced Trick & Agility Training (5 Sessions) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Advanced Trick & Agility Training (5 Sessions) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Advanced Trick & Agility Training (5 Sessions) | SmartServe",
+      "seo_description": "Teaching high-five, roll over, weave poles, and fetch frisbee for mental stimulation.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.593242+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "b9adf640-88d1-5fe3-966a-d530e6c0c105",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Dog Training",
+      "service_name": "Guard & Watchdog Boundary Awareness Coaching",
+      "base_price_inr": 5499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Teaching property perimeter alert barking on door knocks and stopping immediately on command.",
+      "highlights": [
+        "Professional Guard & Watchdog Boundary Awareness Coaching procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Guard & Watchdog Boundary Awareness Coaching procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Guard & Watchdog Boundary Awareness Coaching take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Guard & Watchdog Boundary Awareness Coaching | SmartServe",
+      "seo_description": "Teaching property perimeter alert barking on door knocks and stopping immediately on command.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.600577+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "8d5b166d-d416-574b-813e-2ded0a26c4e3",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Dog Training",
+      "service_name": "Leash Reactivity & Outdoor Pulling Reset",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Correction training for dogs that lunge, bark at other dogs, or pull excessively during walks.",
+      "highlights": [
+        "Professional Leash Reactivity & Outdoor Pulling Reset procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Leash Reactivity & Outdoor Pulling Reset procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Leash Reactivity & Outdoor Pulling Reset take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Leash Reactivity & Outdoor Pulling Reset | SmartServe",
+      "seo_description": "Correction training for dogs that lunge, bark at other dogs, or pull excessively during walks.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.595837+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "65a78a43-3868-54d2-a616-642dbf2bdea2",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Dog Training",
+      "service_name": "Puppy Potty & Crate Training Intensive",
+      "base_price_inr": 3999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Home consultation establishing a structured routine for indoor toilet habits and crate comfort.",
+      "highlights": [
+        "Professional Puppy Potty & Crate Training Intensive procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Puppy Potty & Crate Training Intensive procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Puppy Potty & Crate Training Intensive take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Puppy Potty & Crate Training Intensive | SmartServe",
+      "seo_description": "Home consultation establishing a structured routine for indoor toilet habits and crate comfort.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.598304+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "6a9b539a-9be2-5e2c-8f91-e43cc588141c",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Accessories & Nutrition",
+      "service_name": "Custom Raw & Cooked Diet Meal Charting",
+      "base_price_inr": 1199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Certified canine nutritionist planning breed-specific protein, calcium, and vitamin meal charts.",
+      "highlights": [
+        "Professional Custom Raw & Cooked Diet Meal Charting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Custom Raw & Cooked Diet Meal Charting procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Custom Raw & Cooked Diet Meal Charting take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Custom Raw & Cooked Diet Meal Charting | SmartServe",
+      "seo_description": "Certified canine nutritionist planning breed-specific protein, calcium, and vitamin meal charts.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.605122+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "90e91453-4a3d-5cea-be1e-9aa3eae3b5b2",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Accessories & Nutrition",
+      "service_name": "Orthopedic Pet Bed & Harness Fitment Consultation",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Measuring dog dimensions to prescribe anti-pull harnesses and joint-support orthopedic beds.",
+      "highlights": [
+        "Professional Orthopedic Pet Bed & Harness Fitment Consultation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Orthopedic Pet Bed & Harness Fitment Consultation procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 30 minutes.",
+          "question": "How long does Orthopedic Pet Bed & Harness Fitment Consultation take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Orthopedic Pet Bed & Harness Fitment Consultation | SmartServe",
+      "seo_description": "Measuring dog dimensions to prescribe anti-pull harnesses and joint-support orthopedic beds.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.613105+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d7dd1acb-f1ab-5012-bc08-727af3409adf",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Accessories & Nutrition",
+      "service_name": "Pet Food Delivery & Fresh Meat Subscription Setup",
+      "base_price_inr": 299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Arranging doorstep scheduled deliveries of fresh chicken broth, vegetables, and premium kibble.",
+      "highlights": [
+        "Professional Pet Food Delivery & Fresh Meat Subscription Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Pet Food Delivery & Fresh Meat Subscription Setup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 20 minutes.",
+          "question": "How long does Pet Food Delivery & Fresh Meat Subscription Setup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Pet Food Delivery & Fresh Meat Subscription Setup | SmartServe",
+      "seo_description": "Arranging doorstep scheduled deliveries of fresh chicken broth, vegetables, and premium kibble.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.607326+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "23944650-654e-5f8a-bc57-57dc6985c98f",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Care",
+      "service_name": "Dog Walking & Exercise Visit (30 Mins)",
+      "base_price_inr": 299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Background-verified pet lover taking your dog for brisk outdoor walk, potty break, and hydration.",
+      "highlights": [
+        "Professional Dog Walking & Exercise Visit (30 Mins) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Dog Walking & Exercise Visit (30 Mins) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Dog Walking & Exercise Visit (30 Mins) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Dog Walking & Exercise Visit (30 Mins) | SmartServe",
+      "seo_description": "Background-verified pet lover taking your dog for brisk outdoor walk, potty break, and hydration.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.609731+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "3cb848a2-cbd6-5efb-9cb8-9ca7fbd33ac9",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Care",
+      "service_name": "In-Home Pet Sitting & Feeding (Per Visit)",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Caring pet sitter visiting home to feed food, clean litter box, give medication, and play with pets.",
+      "highlights": [
+        "Professional In-Home Pet Sitting & Feeding (Per Visit) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete In-Home Pet Sitting & Feeding (Per Visit) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does In-Home Pet Sitting & Feeding (Per Visit) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "In-Home Pet Sitting & Feeding (Per Visit) | SmartServe",
+      "seo_description": "Caring pet sitter visiting home to feed food, clean litter box, give medication, and play with pets.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.590778+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "09d1eee1-5656-5d4b-af72-69fc9e8bea2b",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Grooming",
+      "service_name": "Cat Bath, Fur De-Shedding & Nail Trim",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Gentle low-stress waterless or warm water cat bath, coat brushing, and claw trimming.",
+      "highlights": [
+        "Professional Cat Bath, Fur De-Shedding & Nail Trim procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Cat Bath, Fur De-Shedding & Nail Trim procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Cat Bath, Fur De-Shedding & Nail Trim take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Cat Bath, Fur De-Shedding & Nail Trim | SmartServe",
+      "seo_description": "Gentle low-stress waterless or warm water cat bath, coat brushing, and claw trimming.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.580890+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "047f1a2c-5560-5290-ad70-932d31819b3d",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Grooming",
+      "service_name": "Full Dog Grooming & Haircut Spa Package",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Warm bath, breed-specific style haircut, nail clipping, ear cleaning, and anti-tick shampoo bath.",
+      "highlights": [
+        "Professional Full Dog Grooming & Haircut Spa Package procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Full Dog Grooming & Haircut Spa Package procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 75 minutes.",
+          "question": "How long does Full Dog Grooming & Haircut Spa Package take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Full Dog Grooming & Haircut Spa Package | SmartServe",
+      "seo_description": "Warm bath, breed-specific style haircut, nail clipping, ear cleaning, and anti-tick shampoo bath.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.586108+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "4dbbb340-3245-5037-8b45-c60227dab7d3",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Grooming",
+      "service_name": "Medicated Anti-Tick & Flea Bath Treatment",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Medicated dip shampoo eliminating ticks, fleas, and mites followed by thorough blow-dry.",
+      "highlights": [
+        "Professional Medicated Anti-Tick & Flea Bath Treatment procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Medicated Anti-Tick & Flea Bath Treatment procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Medicated Anti-Tick & Flea Bath Treatment take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Medicated Anti-Tick & Flea Bath Treatment | SmartServe",
+      "seo_description": "Medicated dip shampoo eliminating ticks, fleas, and mites followed by thorough blow-dry.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.602618+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "4f744793-3e3c-532a-bc2e-40330d326e13",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Grooming",
+      "service_name": "Pet Ear Cleaning & Hygiene Sanitize Pack",
+      "base_price_inr": 399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Clearing ear wax, paw pad trimming, sanitary area trim, and mouth freshener spray.",
+      "highlights": [
+        "Professional Pet Ear Cleaning & Hygiene Sanitize Pack procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Pet Ear Cleaning & Hygiene Sanitize Pack procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 25 minutes.",
+          "question": "How long does Pet Ear Cleaning & Hygiene Sanitize Pack take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Pet Ear Cleaning & Hygiene Sanitize Pack | SmartServe",
+      "seo_description": "Clearing ear wax, paw pad trimming, sanitary area trim, and mouth freshener spray.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.577149+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "97919a8d-c4a8-5850-91e5-fd8a99a04845",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Sitting & Boarding",
+      "service_name": "Cage-Free Homestay Pet Boarding (Per Night)",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Warm loving home environment with couch access, 3 daily walks, and live video check-in updates.",
+      "highlights": [
+        "Professional Cage-Free Homestay Pet Boarding (Per Night) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Cage-Free Homestay Pet Boarding (Per Night) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 1440 minutes.",
+          "question": "How long does Cage-Free Homestay Pet Boarding (Per Night) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Cage-Free Homestay Pet Boarding (Per Night) | SmartServe",
+      "seo_description": "Warm loving home environment with couch access, 3 daily walks, and live video check-in updates.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.618260+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "f519aa47-1674-5bb3-8598-72dd04debe25",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Sitting & Boarding",
+      "service_name": "Cat Sitting & Litter Tray Maintenance Visit",
+      "base_price_inr": 399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "In-home daily visit to scoop litter, refresh clean water fountain, and serve wet food.",
+      "highlights": [
+        "Professional Cat Sitting & Litter Tray Maintenance Visit procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Cat Sitting & Litter Tray Maintenance Visit procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 40 minutes.",
+          "question": "How long does Cat Sitting & Litter Tray Maintenance Visit take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Cat Sitting & Litter Tray Maintenance Visit | SmartServe",
+      "seo_description": "In-home daily visit to scoop litter, refresh clean water fountain, and serve wet food.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.625226+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "b196fd99-9ce8-53e9-83ca-da23d07b6320",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Sitting & Boarding",
+      "service_name": "Daycare Pet Playgroup & Socialization",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Supervised daytime group play in air-conditioned indoor pet play area with balls and agility tunnels.",
+      "highlights": [
+        "Professional Daycare Pet Playgroup & Socialization procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Daycare Pet Playgroup & Socialization procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 360 minutes.",
+          "question": "How long does Daycare Pet Playgroup & Socialization take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Daycare Pet Playgroup & Socialization | SmartServe",
+      "seo_description": "Supervised daytime group play in air-conditioned indoor pet play area with balls and agility tunnels.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.615500+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "49fa8ea4-458a-52ff-9280-25c9d4d3aa0f",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Pet Training",
+      "service_name": "Obedience & Puppy Basic Behavioral Training",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "10-session trainer teaching Sit, Stay, Heel, Leash walking, and stopping unwanted biting/chewing.",
+      "highlights": [
+        "Professional Obedience & Puppy Basic Behavioral Training procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Obedience & Puppy Basic Behavioral Training procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Obedience & Puppy Basic Behavioral Training take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Obedience & Puppy Basic Behavioral Training | SmartServe",
+      "seo_description": "10-session trainer teaching Sit, Stay, Heel, Leash walking, and stopping unwanted biting/chewing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.620360+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "0fe13cb7-d511-5bae-aa14-7ea32861f650",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Veterinary",
+      "service_name": "At-Home Veterinary Health Checkup & Vaccination",
+      "base_price_inr": 799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Licensed vet visiting home for routine health exam, Deworming, and Annual 7-in-1 / Rabies vaccine.",
+      "highlights": [
+        "Professional At-Home Veterinary Health Checkup & Vaccination procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete At-Home Veterinary Health Checkup & Vaccination procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does At-Home Veterinary Health Checkup & Vaccination take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "At-Home Veterinary Health Checkup & Vaccination | SmartServe",
+      "seo_description": "Licensed vet visiting home for routine health exam, Deworming, and Annual 7-in-1 / Rabies vaccine.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.623038+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "9b26c969-6e22-51e2-9334-634b17229d5d",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Veterinary & Health Checkup",
+      "service_name": "Annual Anti-Rabies & DHPPiL Booster Vaccine",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "In-home administration of core annual vaccinations with official stamped medical booklet update.",
+      "highlights": [
+        "Professional Annual Anti-Rabies & DHPPiL Booster Vaccine procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Annual Anti-Rabies & DHPPiL Booster Vaccine procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 30 minutes.",
+          "question": "How long does Annual Anti-Rabies & DHPPiL Booster Vaccine take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Annual Anti-Rabies & DHPPiL Booster Vaccine | SmartServe",
+      "seo_description": "In-home administration of core annual vaccinations with official stamped medical booklet update.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.634991+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e9ba5e71-3b0d-53e9-bda9-ace253bc0172",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Veterinary & Health Checkup",
+      "service_name": "Blood Sample Collection for CBC & Kidney Profile",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Gentle doorstep blood draw sent to diagnostic lab with PDF report delivered within 24 hours.",
+      "highlights": [
+        "Professional Blood Sample Collection for CBC & Kidney Profile procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Blood Sample Collection for CBC & Kidney Profile procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 25 minutes.",
+          "question": "How long does Blood Sample Collection for CBC & Kidney Profile take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Blood Sample Collection for CBC & Kidney Profile | SmartServe",
+      "seo_description": "Gentle doorstep blood draw sent to diagnostic lab with PDF report delivered within 24 hours.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.637083+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e4c46c13-deb4-5980-8f9d-6a7beb40e017",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Veterinary & Health Checkup",
+      "service_name": "Oral Dental Scaling & Tartar Scraping",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Painless ultrasonic dental cleaning removing yellow tartar buildup and stinky breath.",
+      "highlights": [
+        "Professional Oral Dental Scaling & Tartar Scraping procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Oral Dental Scaling & Tartar Scraping procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Oral Dental Scaling & Tartar Scraping take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Oral Dental Scaling & Tartar Scraping | SmartServe",
+      "seo_description": "Painless ultrasonic dental cleaning removing yellow tartar buildup and stinky breath.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.632877+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "f3d2721a-1c3a-5d38-8d5a-43b87fe3941f",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Veterinary & Health Checkup",
+      "service_name": "Post-Surgery Wound Dressing & Suture Removal",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Antiseptic cleaning of surgical stitches, fresh sterile bandage replacement, and recovery check.",
+      "highlights": [
+        "Professional Post-Surgery Wound Dressing & Suture Removal procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Post-Surgery Wound Dressing & Suture Removal procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 30 minutes.",
+          "question": "How long does Post-Surgery Wound Dressing & Suture Removal take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Post-Surgery Wound Dressing & Suture Removal | SmartServe",
+      "seo_description": "Antiseptic cleaning of surgical stitches, fresh sterile bandage replacement, and recovery check.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.628033+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "fcb9f5bb-5148-54f9-a41c-b54a97ac1a6c",
+      "category_number": 11,
+      "category_name": "11. Pet Services",
+      "subcategory_name": "Veterinary & Health Checkup",
+      "service_name": "Senior Pet Arthritis Joint Evaluation & Pain Relief",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Assessment of hip dysplasia, prescribing glucosamine supplements, and gentle mobility physical therapy.",
+      "highlights": [
+        "Professional Senior Pet Arthritis Joint Evaluation & Pain Relief procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Senior Pet Arthritis Joint Evaluation & Pain Relief procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pet Assessment",
+          "description": "Evaluating the pet's breed, temperament, and specific needs",
+          "step_number": 1
+        },
+        {
+          "title": "Service Preparation",
+          "description": "Preparing equipment and a safe environment",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Delivering the requested pet care service",
+          "step_number": 3
+        },
+        {
+          "title": "Post-Service Check",
+          "description": "Ensuring the pet is comfortable and healthy post-service",
+          "step_number": 4
+        },
+        {
+          "title": "Owner Handover & Tips",
+          "description": "Briefing the owner on aftercare and next steps",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Professional grooming kit",
+        "Pet-safe cleaning products",
+        "First-aid kit",
+        "Leash and harness"
+      ],
+      "customer_setup_requirements": [
+        "Ensure pet has been fed at least 2 hours before grooming",
+        "Provide vaccination records if applicable",
+        "Keep a calm environment during the visit"
+      ],
+      "aftercare_precautions": [
+        "Monitor pet behaviour for 24 hours post-service",
+        "Follow any dietary or medication advice given"
+      ],
+      "expected_results": [
+        "A clean, healthy, and happy pet with improved coat and behaviour."
+      ],
+      "important_notes": [
+        "Aggressive pets may require additional handling precautions — please disclose temperament."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 40 minutes.",
+          "question": "How long does Senior Pet Arthritis Joint Evaluation & Pain Relief take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
+      ],
+      "dos": [
+        "Share your pet's medical history with the professional before each visit."
+      ],
+      "donts": [
+        "Do not bathe your dog immediately before a grooming appointment."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Senior Pet Arthritis Joint Evaluation & Pain Relief | SmartServe",
+      "seo_description": "Assessment of hip dysplasia, prescribing glucosamine supplements, and gentle mobility physical therapy.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.630523+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    }
+  ]
+}

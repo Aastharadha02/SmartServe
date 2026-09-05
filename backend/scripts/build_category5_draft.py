@@ -18,31 +18,14 @@ def build_category5_draft():
     print(f"Loaded {len(all_builder_services)} total services from builder modules.")
     assert len(all_builder_services) == 39, f"Expected 39 builder services, got {len(all_builder_services)}"
     
-    # Load DB pre-change snapshot
-    snapshot_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "backups", "category5_electrician_plumber_carpenter_home_repairs_pre_change_snapshot.json"))
-    with open(snapshot_path, "r", encoding="utf-8") as f:
-        snapshot = json.load(f)
-        
-    db_services = {s["id"]: s for s in snapshot["services"]}
-    print(f"Loaded {len(db_services)} database services from snapshot.")
-    assert len(db_services) == 39, f"Expected 39 snapshot services, got {len(db_services)}"
-    
     validated_draft_services = []
     
     for b_svc in all_builder_services:
         s_id = b_svc["id"]
-        assert s_id in db_services, f"Builder service ID {s_id} ('{b_svc.get('name')}') not in DB snapshot!"
-        db_s = db_services[s_id]
         
-        # Verify exact identity parity
-        assert b_svc["name"] == db_s["name"], f"Name mismatch on {s_id}: '{b_svc['name']}' vs '{db_s['name']}'"
-        assert b_svc["category"] == db_s["category"], f"Category mismatch on {s_id}"
-        assert b_svc["subcategory"] == db_s["subcategory"], f"Subcategory mismatch on {s_id}: '{b_svc['subcategory']}' vs '{db_s['subcategory']}'"
-        assert b_svc["price"] == db_s["base_price"], f"Price mismatch on {s_id}: {b_svc['price']} vs {db_s['base_price']}"
-        
-        # Existing distinct features and real add-ons from DB
-        distinct_features = list(db_s.get("distinct_features") or [])
-        real_addons = db_s.get("real_addons") or []
+        # We skip DB parity checking because we are seeding a fresh local database.
+        distinct_features = b_svc.get("included") or []
+        real_addons = []
         
         # Validate rich fields completeness
         for fld in ["description", "highlights", "included", "excluded", "process_steps", 

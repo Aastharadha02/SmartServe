@@ -1,0 +1,3104 @@
+{
+  "category_number": 6,
+  "category_name": "6. Smart Home & Security",
+  "service_count": 30,
+  "subcategories": [
+    "Access & Automation",
+    "Home Security",
+    "Sensor & Monitoring",
+    "Smart Home Devices",
+    "Smart Locks"
+  ],
+  "services": [
+    {
+      "service_id": "92cd5608-ff4f-5707-bf92-a1c30a111b06",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Access & Automation",
+      "service_name": "Automatic RFID Boom Barrier Gate Installation",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing motorized gate barrier arm for apartment complexes with vehicle windshield RFID tags.",
+      "highlights": [
+        "Professional Automatic RFID Boom Barrier Gate Installation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Automatic RFID Boom Barrier Gate Installation procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 150 minutes.",
+          "question": "How long does Automatic RFID Boom Barrier Gate Installation take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Automatic RFID Boom Barrier Gate Installation | SmartServe",
+      "seo_description": "Installing motorized gate barrier arm for apartment complexes with vehicle windshield RFID tags.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.820376+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "9568064a-7915-5aa9-ae1a-f94af8e1fc12",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Access & Automation",
+      "service_name": "Biometric Access Control Keypad for Offices",
+      "base_price_inr": 1899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Setting up wall-mounted fingerprint & punch card attendance access system for commercial doors.",
+      "highlights": [
+        "Professional Biometric Access Control Keypad for Offices procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Biometric Access Control Keypad for Offices procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Biometric Access Control Keypad for Offices take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Biometric Access Control Keypad for Offices | SmartServe",
+      "seo_description": "Setting up wall-mounted fingerprint & punch card attendance access system for commercial doors.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.753126+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "a69d6500-8c3d-5141-9372-0a7948e42b6e",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Access & Automation",
+      "service_name": "High-Decibel Smart Security Siren Integration",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Wiring 110dB indoor/outdoor flashing strobe siren triggered by door intrusion or panic buttons.",
+      "highlights": [
+        "Professional High-Decibel Smart Security Siren Integration procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete High-Decibel Smart Security Siren Integration procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does High-Decibel Smart Security Siren Integration take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "High-Decibel Smart Security Siren Integration | SmartServe",
+      "seo_description": "Wiring 110dB indoor/outdoor flashing strobe siren triggered by door intrusion or panic buttons.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.748529+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "a67d4f70-245d-5813-9d48-9fd288e1dbce",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Access & Automation",
+      "service_name": "Multi-Flat Apartment Intercom System Setup",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Wiring central security guard console to individual flat intercom handsets across multiple floors.",
+      "highlights": [
+        "Professional Multi-Flat Apartment Intercom System Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Multi-Flat Apartment Intercom System Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does Multi-Flat Apartment Intercom System Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Multi-Flat Apartment Intercom System Setup | SmartServe",
+      "seo_description": "Wiring central security guard console to individual flat intercom handsets across multiple floors.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.759898+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "ade4e808-0a25-57d1-aedf-ce4675b91799",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Access & Automation",
+      "service_name": "Photoelectric Beam Perimeter Security Barrier",
+      "base_price_inr": 1699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing dual infrared beam sensors across compound boundary walls detecting fence intruders.",
+      "highlights": [
+        "Professional Photoelectric Beam Perimeter Security Barrier procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Photoelectric Beam Perimeter Security Barrier procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Photoelectric Beam Perimeter Security Barrier take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Photoelectric Beam Perimeter Security Barrier | SmartServe",
+      "seo_description": "Installing dual infrared beam sensors across compound boundary walls detecting fence intruders.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.741411+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "95f80990-65e5-50cf-94bd-69c75aaa4e69",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Access & Automation",
+      "service_name": "Smart Motorized Garage Door Controller Fitting",
+      "base_price_inr": 2199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Connecting remote wireless opener and safety photo-eye sensors for roll-up garage shutter doors.",
+      "highlights": [
+        "Professional Smart Motorized Garage Door Controller Fitting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart Motorized Garage Door Controller Fitting procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Smart Motorized Garage Door Controller Fitting take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart Motorized Garage Door Controller Fitting | SmartServe",
+      "seo_description": "Connecting remote wireless opener and safety photo-eye sensors for roll-up garage shutter doors.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.809709+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "8b8c479d-6a45-5786-b4ab-25221ac13a69",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Home Security",
+      "service_name": "4-Channel DVR / NVR Storage & Remote Viewing Sync",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing Hard Disk Drive into DVR/NVR, crimping BNC/RJ45 cables, and configuring live phone viewing.",
+      "highlights": [
+        "Professional 4-Channel DVR / NVR Storage & Remote Viewing Sync procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 4-Channel DVR / NVR Storage & Remote Viewing Sync procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does 4-Channel DVR / NVR Storage & Remote Viewing Sync take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "4-Channel DVR / NVR Storage & Remote Viewing Sync | SmartServe",
+      "seo_description": "Installing Hard Disk Drive into DVR/NVR, crimping BNC/RJ45 cables, and configuring live phone viewing.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.775779+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "8e6d6f16-3511-5e08-bc92-35f12025e142",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Home Security",
+      "service_name": "Concealed Wall Wire Conduit Camera Installation",
+      "base_price_inr": 1199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Chipping wall channel to lay hidden CCTV power lines for a clean aesthetic finish without visible wires.",
+      "highlights": [
+        "Professional Concealed Wall Wire Conduit Camera Installation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Concealed Wall Wire Conduit Camera Installation procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Concealed Wall Wire Conduit Camera Installation take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Concealed Wall Wire Conduit Camera Installation | SmartServe",
+      "seo_description": "Chipping wall channel to lay hidden CCTV power lines for a clean aesthetic finish without visible wires.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.845213+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "78f4f8dd-d22b-5c0f-b200-48bfe3f7d7d3",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Home Security",
+      "service_name": "Dual-Way Video Door Phone Monitor Fitting",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing outdoor camera unit at gate and indoor 7-inch color display monitor for visitor screening.",
+      "highlights": [
+        "Professional Dual-Way Video Door Phone Monitor Fitting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Dual-Way Video Door Phone Monitor Fitting procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 75 minutes.",
+          "question": "How long does Dual-Way Video Door Phone Monitor Fitting take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Dual-Way Video Door Phone Monitor Fitting | SmartServe",
+      "seo_description": "Installing outdoor camera unit at gate and indoor 7-inch color display monitor for visitor screening.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.787881+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "6fea0268-604f-519a-ad5c-abdfd1a729fd",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Home Security",
+      "service_name": "Indoor 360° Wi-Fi Security Camera Installation",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Ceiling mounting dome camera with pan-tilt-zoom features, motion tracking, and SD card configuration.",
+      "highlights": [
+        "Professional Indoor 360° Wi-Fi Security Camera Installation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Indoor 360° Wi-Fi Security Camera Installation procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Indoor 360° Wi-Fi Security Camera Installation take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Indoor 360° Wi-Fi Security Camera Installation | SmartServe",
+      "seo_description": "Ceiling mounting dome camera with pan-tilt-zoom features, motion tracking, and SD card configuration.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.772526+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "66075a60-6209-592c-8f05-88c118937c5d",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Home Security",
+      "service_name": "Outdoor Weatherproof HD Security Camera Fitting",
+      "base_price_inr": 799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Wall mounting IP67 waterproof bullet camera, routing power cable, and adjusting night-vision angle.",
+      "highlights": [
+        "Professional Outdoor Weatherproof HD Security Camera Fitting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Outdoor Weatherproof HD Security Camera Fitting procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Outdoor Weatherproof HD Security Camera Fitting take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Outdoor Weatherproof HD Security Camera Fitting | SmartServe",
+      "seo_description": "Wall mounting IP67 waterproof bullet camera, routing power cable, and adjusting night-vision angle.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.762855+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "7570d619-e759-5651-afe6-f797e3dacc05",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Home Security",
+      "service_name": "Wireless Motion Sensor Burglar Alarm Setup",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Placing PIR motion detectors, pairing wireless siren hub, and setting up automated smartphone alert calls.",
+      "highlights": [
+        "Professional Wireless Motion Sensor Burglar Alarm Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Wireless Motion Sensor Burglar Alarm Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Wireless Motion Sensor Burglar Alarm Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Wireless Motion Sensor Burglar Alarm Setup | SmartServe",
+      "seo_description": "Placing PIR motion detectors, pairing wireless siren hub, and setting up automated smartphone alert calls.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.824135+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "e2f0890f-da86-515c-bac5-bd65bc73b5d9",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Sensor & Monitoring",
+      "service_name": "Air Quality & Dust Sensor Smart Integration",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Setting up indoor PM2.5 / VOC monitor linked to auto-turn on smart air purifiers.",
+      "highlights": [
+        "Professional Air Quality & Dust Sensor Smart Integration procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Air Quality & Dust Sensor Smart Integration procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Air Quality & Dust Sensor Smart Integration take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Air Quality & Dust Sensor Smart Integration | SmartServe",
+      "seo_description": "Setting up indoor PM2.5 / VOC monitor linked to auto-turn on smart air purifiers.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.782841+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "ca6d27c1-08c7-5464-9667-5a710ee21ca3",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Sensor & Monitoring",
+      "service_name": "Magnetic Door & Window Open/Close Sensor Setup",
+      "base_price_inr": 399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Sticking wireless reed magnetic contacts on main doors and balconies for entrance logs.",
+      "highlights": [
+        "Professional Magnetic Door & Window Open/Close Sensor Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Magnetic Door & Window Open/Close Sensor Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 25 minutes.",
+          "question": "How long does Magnetic Door & Window Open/Close Sensor Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Magnetic Door & Window Open/Close Sensor Setup | SmartServe",
+      "seo_description": "Sticking wireless reed magnetic contacts on main doors and balconies for entrance logs.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.779273+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "b24100aa-9570-547f-98cd-5d68c66dbddb",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Sensor & Monitoring",
+      "service_name": "Smart LPG / Natural Gas Leak Detector Fitting",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Fixing catalytic gas sensor near kitchen cylinder with auto shut-off solenoid valve trigger.",
+      "highlights": [
+        "Professional Smart LPG / Natural Gas Leak Detector Fitting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart LPG / Natural Gas Leak Detector Fitting procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Smart LPG / Natural Gas Leak Detector Fitting take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart LPG / Natural Gas Leak Detector Fitting | SmartServe",
+      "seo_description": "Fixing catalytic gas sensor near kitchen cylinder with auto shut-off solenoid valve trigger.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.842148+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "b542de45-1772-55c6-831a-1857e2534465",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Sensor & Monitoring",
+      "service_name": "Smart Water Flood & Pipe Leak Sensor Setup",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Placing probe sensors near washing machines and water purifiers to alert before home flooding occurs.",
+      "highlights": [
+        "Professional Smart Water Flood & Pipe Leak Sensor Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart Water Flood & Pipe Leak Sensor Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Smart Water Flood & Pipe Leak Sensor Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart Water Flood & Pipe Leak Sensor Setup | SmartServe",
+      "seo_description": "Placing probe sensors near washing machines and water purifiers to alert before home flooding occurs.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.730975+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "d2f0b4d6-9668-51e3-b38a-fee45502db49",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Sensor & Monitoring",
+      "service_name": "Smart Wi-Fi Digital Thermostat Installation",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Replacing manual AC control with smart touchscreen thermostat maintaining scheduled room temps.",
+      "highlights": [
+        "Professional Smart Wi-Fi Digital Thermostat Installation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart Wi-Fi Digital Thermostat Installation procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Smart Wi-Fi Digital Thermostat Installation take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart Wi-Fi Digital Thermostat Installation | SmartServe",
+      "seo_description": "Replacing manual AC control with smart touchscreen thermostat maintaining scheduled room temps.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.756948+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "f7b119f9-13b1-59f1-98e7-62a8a8d9273f",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Sensor & Monitoring",
+      "service_name": "Solar PIR Motion Security Floodlight Setup",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Mounting outdoor solar-powered LED floodlight that illuminates automatically when human motion is detected.",
+      "highlights": [
+        "Professional Solar PIR Motion Security Floodlight Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Solar PIR Motion Security Floodlight Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 40 minutes.",
+          "question": "How long does Solar PIR Motion Security Floodlight Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Solar PIR Motion Security Floodlight Setup | SmartServe",
+      "seo_description": "Mounting outdoor solar-powered LED floodlight that illuminates automatically when human motion is detected.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.834067+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "65b4eb53-7577-519d-b48a-2bd16e49e717",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Home Devices",
+      "service_name": "Centralized Smart Gateway & Zigbee Router Setup",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Setting up local Zigbee 3.0 gateway hub ensuring seamless offline mesh connectivity for all smart sensors.",
+      "highlights": [
+        "Professional Centralized Smart Gateway & Zigbee Router Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Centralized Smart Gateway & Zigbee Router Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Centralized Smart Gateway & Zigbee Router Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Centralized Smart Gateway & Zigbee Router Setup | SmartServe",
+      "seo_description": "Setting up local Zigbee 3.0 gateway hub ensuring seamless offline mesh connectivity for all smart sensors.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.816270+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "4ff11f6d-96bf-5327-a8e4-dd961adcd046",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Home Devices",
+      "service_name": "Heavy-Duty Smart Plug (16A) AC/Geyser Sync",
+      "base_price_inr": 349.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing 16 Amp high-power smart plugs for heavy appliances with power consumption monitoring.",
+      "highlights": [
+        "Professional Heavy-Duty Smart Plug (16A) AC/Geyser Sync procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Heavy-Duty Smart Plug (16A) AC/Geyser Sync procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 25 minutes.",
+          "question": "How long does Heavy-Duty Smart Plug (16A) AC/Geyser Sync take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Heavy-Duty Smart Plug (16A) AC/Geyser Sync | SmartServe",
+      "seo_description": "Installing 16 Amp high-power smart plugs for heavy appliances with power consumption monitoring.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.768448+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "4e3e71a2-a412-5605-af49-fc63375f93b6",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Home Devices",
+      "service_name": "Motorized Smart Curtain Rod & Motor Setup",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Fixing electric curtain track on ceiling, mounting heavy-duty motor, and programming timer schedules.",
+      "highlights": [
+        "Professional Motorized Smart Curtain Rod & Motor Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Motorized Smart Curtain Rod & Motor Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Motorized Smart Curtain Rod & Motor Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Motorized Smart Curtain Rod & Motor Setup | SmartServe",
+      "seo_description": "Fixing electric curtain track on ceiling, mounting heavy-duty motor, and programming timer schedules.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.765493+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "498d667b-30bc-57fa-b3d2-7d7b1d46408f",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Home Devices",
+      "service_name": "Smart Dimmer & RGB Ambient Lighting Controller",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Wiring smart strip light controllers, false ceiling LED dimmers, and pairing with mobile app scenes.",
+      "highlights": [
+        "Professional Smart Dimmer & RGB Ambient Lighting Controller procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart Dimmer & RGB Ambient Lighting Controller procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Smart Dimmer & RGB Ambient Lighting Controller take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart Dimmer & RGB Ambient Lighting Controller | SmartServe",
+      "seo_description": "Wiring smart strip light controllers, false ceiling LED dimmers, and pairing with mobile app scenes.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.830339+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "44bdaeee-a1bd-57b2-a909-3d3e7f7a977e",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Home Devices",
+      "service_name": "Smart Wi-Fi Switchboard Retrofit Fitting",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing modular smart switch relays behind existing wall switchboards for app control of lights & fans.",
+      "highlights": [
+        "Professional Smart Wi-Fi Switchboard Retrofit Fitting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart Wi-Fi Switchboard Retrofit Fitting procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Smart Wi-Fi Switchboard Retrofit Fitting take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart Wi-Fi Switchboard Retrofit Fitting | SmartServe",
+      "seo_description": "Installing modular smart switch relays behind existing wall switchboards for app control of lights & fans.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.800784+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "5bde4e4d-cdb9-55ec-9ab8-37292638bffa",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Home Devices",
+      "service_name": "Voice Assistant Hub Integration (Alexa / Google)",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Configuring Amazon Echo / Google Nest hub, grouping rooms, and creating custom voice routines.",
+      "highlights": [
+        "Professional Voice Assistant Hub Integration (Alexa / Google) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Voice Assistant Hub Integration (Alexa / Google) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Voice Assistant Hub Integration (Alexa / Google) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Voice Assistant Hub Integration (Alexa / Google) | SmartServe",
+      "seo_description": "Configuring Amazon Echo / Google Nest hub, grouping rooms, and creating custom voice routines.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.745310+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "0e851c0a-84d4-5afb-ae7d-0e0c2437e626",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Locks",
+      "service_name": "Biometric Fingerprint Smart Door Lock Fitting",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Professional installation of main wooden door biometric fingerprint, RFID card, and passcode mortise lock.",
+      "highlights": [
+        "Professional Biometric Fingerprint Smart Door Lock Fitting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Biometric Fingerprint Smart Door Lock Fitting procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Biometric Fingerprint Smart Door Lock Fitting take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Biometric Fingerprint Smart Door Lock Fitting | SmartServe",
+      "seo_description": "Professional installation of main wooden door biometric fingerprint, RFID card, and passcode mortise lock.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.737713+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "37cfa6a0-7a1d-52f2-9505-8c13fb818728",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Locks",
+      "service_name": "Bluetooth Smart Latch & Mortise Setup",
+      "base_price_inr": 1099.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Fitting compact Bluetooth smart rim latch suitable for bedroom doors with phone auto-unlock feature.",
+      "highlights": [
+        "Professional Bluetooth Smart Latch & Mortise Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Bluetooth Smart Latch & Mortise Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Bluetooth Smart Latch & Mortise Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Bluetooth Smart Latch & Mortise Setup | SmartServe",
+      "seo_description": "Fitting compact Bluetooth smart rim latch suitable for bedroom doors with phone auto-unlock feature.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.839062+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "228282a0-e1db-5968-9075-7aadeeffd9d9",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Locks",
+      "service_name": "Keyless Touchscreen Digital Lock Fitting",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Chiseling door frame and fitting keyless PIN code digital lock with emergency mechanical key backup.",
+      "highlights": [
+        "Professional Keyless Touchscreen Digital Lock Fitting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Keyless Touchscreen Digital Lock Fitting procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Keyless Touchscreen Digital Lock Fitting take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Keyless Touchscreen Digital Lock Fitting | SmartServe",
+      "seo_description": "Chiseling door frame and fitting keyless PIN code digital lock with emergency mechanical key backup.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.796562+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "37a1f344-ab86-5ebf-869c-9e26f805cb1d",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Locks",
+      "service_name": "RFID Card Keyless Access Lock Installation",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing tap-to-enter RFID card lock for glass office doors or residential apartment entry doors.",
+      "highlights": [
+        "Professional RFID Card Keyless Access Lock Installation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete RFID Card Keyless Access Lock Installation procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does RFID Card Keyless Access Lock Installation take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "RFID Card Keyless Access Lock Installation | SmartServe",
+      "seo_description": "Installing tap-to-enter RFID card lock for glass office doors or residential apartment entry doors.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.827218+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "37ab940a-b8b6-59f4-a683-d15ae462f3af",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Locks",
+      "service_name": "Smart Lock Battery Replacement & Diagnostics",
+      "base_price_inr": 399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Troubleshooting unresponsive digital locks, replacing AA/lithium batteries, and recalibrating sensors.",
+      "highlights": [
+        "Professional Smart Lock Battery Replacement & Diagnostics procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart Lock Battery Replacement & Diagnostics procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Smart Lock Battery Replacement & Diagnostics take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart Lock Battery Replacement & Diagnostics | SmartServe",
+      "seo_description": "Troubleshooting unresponsive digital locks, replacing AA/lithium batteries, and recalibrating sensors.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.813203+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "11e176e7-7858-5027-a21b-254ee0a13f5b",
+      "category_number": 6,
+      "category_name": "6. Smart Home & Security",
+      "subcategory_name": "Smart Locks",
+      "service_name": "Smart Video Doorbell & Lock Sync Setup",
+      "base_price_inr": 1199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Mounting HD video doorbell, connecting to home Wi-Fi, and linking with electronic door lock app.",
+      "highlights": [
+        "Professional Smart Video Doorbell & Lock Sync Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart Video Doorbell & Lock Sync Setup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Inspection",
+          "description": "Site inspection for optimal placement",
+          "step_number": 1
+        },
+        {
+          "title": "Installation",
+          "description": "Mounting and wiring of the device",
+          "step_number": 2
+        },
+        {
+          "title": "Configuration",
+          "description": "Connecting the device to the smart network",
+          "step_number": 3
+        },
+        {
+          "title": "Testing",
+          "description": "Functional testing and system verification",
+          "step_number": 4
+        },
+        {
+          "title": "Handover",
+          "description": "Demonstrating usage and safety guidelines to the customer",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Drill machine",
+        "Screwdrivers",
+        "Wire strippers",
+        "Mounting hardware"
+      ],
+      "customer_setup_requirements": [
+        "Ensure Wi-Fi availability",
+        "Provide access to installation points"
+      ],
+      "aftercare_precautions": [
+        "Do not touch exposed wiring before setup is complete",
+        "Keep devices clean from dust"
+      ],
+      "expected_results": [
+        "Fully functional smart home system."
+      ],
+      "important_notes": [
+        "Wi-Fi connectivity issues are not covered under installation warranty."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Smart Video Doorbell & Lock Sync Setup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Change default passwords immediately after setup."
+      ],
+      "dos": [
+        "Connect devices to a secure network."
+      ],
+      "donts": [
+        "Do not expose indoor cameras to outdoor environments."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart Video Doorbell & Lock Sync Setup | SmartServe",
+      "seo_description": "Mounting HD video doorbell, connecting to home Wi-Fi, and linking with electronic door lock app.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:33:06.792484+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    }
+  ]
+}

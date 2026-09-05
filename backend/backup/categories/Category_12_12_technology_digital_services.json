@@ -1,0 +1,3136 @@
+{
+  "category_number": 12,
+  "category_name": "12. Technology & Digital Services",
+  "service_count": 30,
+  "subcategories": [
+    "Computer & Device Support",
+    "Computer & Laptop Repair",
+    "Data Recovery & Backup",
+    "IT Support & Consultation",
+    "Network & Smart Devices",
+    "Networking & Wi-Fi Setup",
+    "Website & App Development"
+  ],
+  "services": [
+    {
+      "service_id": "2e15793f-1ce5-5cda-88eb-72fb5eedece4",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Device Support",
+      "service_name": "Custom Gaming / Workstation PC Assembly",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Assembling CPU components, cable management, thermal paste application, and stress testing.",
+      "highlights": [
+        "Professional Custom Gaming / Workstation PC Assembly procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Custom Gaming / Workstation PC Assembly procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does Custom Gaming / Workstation PC Assembly take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Custom Gaming / Workstation PC Assembly | SmartServe",
+      "seo_description": "Assembling CPU components, cable management, thermal paste application, and stress testing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.779343+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "2bdba2e8-7b32-5268-8f00-75a7e31dd239",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Device Support",
+      "service_name": "Data Recovery from Crashed Hard Drive / SSD",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Deep sector scan recovering lost family photos, business documents, and corrupted partitions.",
+      "highlights": [
+        "Professional Data Recovery from Crashed Hard Drive / SSD procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Data Recovery from Crashed Hard Drive / SSD procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does Data Recovery from Crashed Hard Drive / SSD take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Data Recovery from Crashed Hard Drive / SSD | SmartServe",
+      "seo_description": "Deep sector scan recovering lost family photos, business documents, and corrupted partitions.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.768904+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "0cc0099f-92a7-59dc-a33e-81ff8283e62a",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Device Support",
+      "service_name": "Laptop Hardware Repair & Screen Replacement",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Diagnostic inspection, broken LED screen change, keyboard replacement, or hinge repair.",
+      "highlights": [
+        "Professional Laptop Hardware Repair & Screen Replacement procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Laptop Hardware Repair & Screen Replacement procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Laptop Hardware Repair & Screen Replacement take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Laptop Hardware Repair & Screen Replacement | SmartServe",
+      "seo_description": "Diagnostic inspection, broken LED screen change, keyboard replacement, or hinge repair.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.821938+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "47f7bb44-468b-5f4f-8984-16fdd6060fa5",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Device Support",
+      "service_name": "Printer Installation & Wireless Network Sharing",
+      "base_price_inr": 399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing wireless ink-tank printer drivers and enabling mobile printing across family devices.",
+      "highlights": [
+        "Professional Printer Installation & Wireless Network Sharing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Printer Installation & Wireless Network Sharing procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Printer Installation & Wireless Network Sharing take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Printer Installation & Wireless Network Sharing | SmartServe",
+      "seo_description": "Installing wireless ink-tank printer drivers and enabling mobile printing across family devices.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.801443+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "362ba679-8a20-599c-9909-fea400931454",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Device Support",
+      "service_name": "Virus & Malware Removal Deep Clean",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Removing browser hijackers, ransomware threats, and installing genuine antivirus software.",
+      "highlights": [
+        "Professional Virus & Malware Removal Deep Clean procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Virus & Malware Removal Deep Clean procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Virus & Malware Removal Deep Clean take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Virus & Malware Removal Deep Clean | SmartServe",
+      "seo_description": "Removing browser hijackers, ransomware threats, and installing genuine antivirus software.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.781718+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "05d26f2b-3da7-5cfb-af51-6b35564d00a5",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Device Support",
+      "service_name": "Windows / Mac OS Format & Reinstallation",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Clean OS installation, official driver updates, software setup, and data backup transfer.",
+      "highlights": [
+        "Professional Windows / Mac OS Format & Reinstallation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Windows / Mac OS Format & Reinstallation procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Windows / Mac OS Format & Reinstallation take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Windows / Mac OS Format & Reinstallation | SmartServe",
+      "seo_description": "Clean OS installation, official driver updates, software setup, and data backup transfer.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.829279+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "d4120b99-4c26-5694-aa19-a6171a3b8d76",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Laptop Repair",
+      "service_name": "Broken Laptop Hinge & Casing Fabrication",
+      "base_price_inr": 1199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Industrial epoxy rebonding or replacing cracked plastic top casing and tight hinges.",
+      "highlights": [
+        "Professional Broken Laptop Hinge & Casing Fabrication procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Broken Laptop Hinge & Casing Fabrication procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Broken Laptop Hinge & Casing Fabrication take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Broken Laptop Hinge & Casing Fabrication | SmartServe",
+      "seo_description": "Industrial epoxy rebonding or replacing cracked plastic top casing and tight hinges.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.771227+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d4e6bfe2-ecbd-5815-b7c7-05784074772a",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Laptop Repair",
+      "service_name": "Motherboard Micro-Soldering & Chipset Repair",
+      "base_price_inr": 1799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "BGA chip rework, short circuit mosfet replacement, and power IC diagnostics.",
+      "highlights": [
+        "Professional Motherboard Micro-Soldering & Chipset Repair procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Motherboard Micro-Soldering & Chipset Repair procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Motherboard Micro-Soldering & Chipset Repair take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Motherboard Micro-Soldering & Chipset Repair | SmartServe",
+      "seo_description": "BGA chip rework, short circuit mosfet replacement, and power IC diagnostics.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.764821+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "bb262203-787d-5327-855d-bf954a8ee5d5",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Laptop Repair",
+      "service_name": "SSD Upgrade & Cloning (Without Data Loss)",
+      "base_price_inr": 799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Replacing slow mechanical hard drives with high-speed NVMe/SATA SSD with full OS cloning.",
+      "highlights": [
+        "Professional SSD Upgrade & Cloning (Without Data Loss) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete SSD Upgrade & Cloning (Without Data Loss) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does SSD Upgrade & Cloning (Without Data Loss) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "SSD Upgrade & Cloning (Without Data Loss) | SmartServe",
+      "seo_description": "Replacing slow mechanical hard drives with high-speed NVMe/SATA SSD with full OS cloning.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.773667+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "65d7ab71-f770-5dd9-a583-b838ec13072f",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Computer & Laptop Repair",
+      "service_name": "Thermal Paste Replacement & Cooling Fan Clean",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Arctic MX-4 thermal compound application stopping laptop overheating and thermal throttling.",
+      "highlights": [
+        "Professional Thermal Paste Replacement & Cooling Fan Clean procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Thermal Paste Replacement & Cooling Fan Clean procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Thermal Paste Replacement & Cooling Fan Clean take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Thermal Paste Replacement & Cooling Fan Clean | SmartServe",
+      "seo_description": "Arctic MX-4 thermal compound application stopping laptop overheating and thermal throttling.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.776327+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "6e0e4e89-7e40-5b24-a612-9c6a0e00882b",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Data Recovery & Backup",
+      "service_name": "Accidentally Formatted Pen Drive / SD Card Recovery",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Deep file carve scanning restoring deleted family photos, videos, and zip archives.",
+      "highlights": [
+        "Professional Accidentally Formatted Pen Drive / SD Card Recovery procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Accidentally Formatted Pen Drive / SD Card Recovery procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Accidentally Formatted Pen Drive / SD Card Recovery take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Accidentally Formatted Pen Drive / SD Card Recovery | SmartServe",
+      "seo_description": "Deep file carve scanning restoring deleted family photos, videos, and zip archives.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.789171+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ba47745f-471d-5556-9527-5da8766dd06a",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Data Recovery & Backup",
+      "service_name": "Automated Cloud Backup Setup (Google Drive/OneDrive)",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Configuring scheduled real-time synchronization of desktop folders to secure cloud.",
+      "highlights": [
+        "Professional Automated Cloud Backup Setup (Google Drive/OneDrive) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Automated Cloud Backup Setup (Google Drive/OneDrive) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 40 minutes.",
+          "question": "How long does Automated Cloud Backup Setup (Google Drive/OneDrive) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Automated Cloud Backup Setup (Google Drive/OneDrive) | SmartServe",
+      "seo_description": "Configuring scheduled real-time synchronization of desktop folders to secure cloud.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.786285+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "8a10f3bf-924a-5055-adae-e72085096ab2",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Data Recovery & Backup",
+      "service_name": "Corrupted External Hard Drive File Retrieval",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Fixing RAW filesystem errors and retrieving lost partition documents.",
+      "highlights": [
+        "Professional Corrupted External Hard Drive File Retrieval procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Corrupted External Hard Drive File Retrieval procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Corrupted External Hard Drive File Retrieval take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Corrupted External Hard Drive File Retrieval | SmartServe",
+      "seo_description": "Fixing RAW filesystem errors and retrieving lost partition documents.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.783822+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e3889f5d-53dc-5e48-9e11-c141306cddbb",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Data Recovery & Backup",
+      "service_name": "Ransomware Encrypted File Analysis & Recovery",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Decryption tool analysis, shadow copy extraction, and system clean sanitization.",
+      "highlights": [
+        "Professional Ransomware Encrypted File Analysis & Recovery procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Ransomware Encrypted File Analysis & Recovery procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Ransomware Encrypted File Analysis & Recovery take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Ransomware Encrypted File Analysis & Recovery | SmartServe",
+      "seo_description": "Decryption tool analysis, shadow copy extraction, and system clean sanitization.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.791345+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "f2053a99-60b4-58a3-95df-a5fa5c45b87b",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Data Recovery & Backup",
+      "service_name": "Smartphone Dead Screen Data Extraction",
+      "base_price_inr": 1199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Connecting OTG debugging interface to extract WhatsApp chats, contacts, and photos from broken phone.",
+      "highlights": [
+        "Professional Smartphone Dead Screen Data Extraction procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smartphone Dead Screen Data Extraction procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Smartphone Dead Screen Data Extraction take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smartphone Dead Screen Data Extraction | SmartServe",
+      "seo_description": "Connecting OTG debugging interface to extract WhatsApp chats, contacts, and photos from broken phone.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.793851+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "5eb558af-feb7-5a9b-ab1a-f277c4c732f9",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "IT Support & Consultation",
+      "service_name": "Corporate Email & Google Workspace Domain Migration",
+      "base_price_inr": 1999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Configuring MX, SPF, DKIM DNS records and migrating mailbox data seamlessly.",
+      "highlights": [
+        "Professional Corporate Email & Google Workspace Domain Migration procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Corporate Email & Google Workspace Domain Migration procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Corporate Email & Google Workspace Domain Migration take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Corporate Email & Google Workspace Domain Migration | SmartServe",
+      "seo_description": "Configuring MX, SPF, DKIM DNS records and migrating mailbox data seamlessly.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.805790+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "5bfb93e1-e97d-58f0-a2fd-773cbbb6f72f",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "IT Support & Consultation",
+      "service_name": "Home Office Dual-Monitor & Docking Station Setup",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "DisplayPort/HDMI daisy chaining, USB-C thunderbolt hub setup, and ergonomic cable routing.",
+      "highlights": [
+        "Professional Home Office Dual-Monitor & Docking Station Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Home Office Dual-Monitor & Docking Station Setup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Home Office Dual-Monitor & Docking Station Setup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Home Office Dual-Monitor & Docking Station Setup | SmartServe",
+      "seo_description": "DisplayPort/HDMI daisy chaining, USB-C thunderbolt hub setup, and ergonomic cable routing.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.803632+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "f3e717c6-4827-565b-a518-7ac71d1ea8eb",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "IT Support & Consultation",
+      "service_name": "Point of Sale (POS) Billing Software Configuration",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Installing thermal receipt printers, barcode scanners, and inventory billing software.",
+      "highlights": [
+        "Professional Point of Sale (POS) Billing Software Configuration procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Point of Sale (POS) Billing Software Configuration procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Point of Sale (POS) Billing Software Configuration take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Point of Sale (POS) Billing Software Configuration | SmartServe",
+      "seo_description": "Installing thermal receipt printers, barcode scanners, and inventory billing software.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.796756+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e3a9c71b-d11a-59b2-b916-8b46ce0870e0",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "IT Support & Consultation",
+      "service_name": "Small Office Network Attached Storage (NAS) Setup",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Synology/QNAP raid storage configuration with multi-user permissions and remote access.",
+      "highlights": [
+        "Professional Small Office Network Attached Storage (NAS) Setup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Small Office Network Attached Storage (NAS) Setup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Small Office Network Attached Storage (NAS) Setup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Small Office Network Attached Storage (NAS) Setup | SmartServe",
+      "seo_description": "Synology/QNAP raid storage configuration with multi-user permissions and remote access.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.811425+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e4a6bbad-6390-5fae-a8fb-15913428ab91",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "IT Support & Consultation",
+      "service_name": "Software License Audit & Cybersecurity Scan",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Scanning network vulnerabilities, updating firewall rules, and verifying license compliance.",
+      "highlights": [
+        "Professional Software License Audit & Cybersecurity Scan procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Software License Audit & Cybersecurity Scan procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Software License Audit & Cybersecurity Scan take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Software License Audit & Cybersecurity Scan | SmartServe",
+      "seo_description": "Scanning network vulnerabilities, updating firewall rules, and verifying license compliance.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.799021+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "37282030-df16-538a-b975-ab6d804922ba",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Network & Smart Devices",
+      "service_name": "Smart TV & Soundbar Home Theater Integration",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "HDMI eARC audio wiring, Bluetooth speaker pairing, and streaming app subscription login.",
+      "highlights": [
+        "Professional Smart TV & Soundbar Home Theater Integration procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Smart TV & Soundbar Home Theater Integration procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Smart TV & Soundbar Home Theater Integration take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Smart TV & Soundbar Home Theater Integration | SmartServe",
+      "seo_description": "HDMI eARC audio wiring, Bluetooth speaker pairing, and streaming app subscription login.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.834175+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "1b08e54b-37bb-5a80-b491-60c37e610ce9",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Network & Smart Devices",
+      "service_name": "Wi-Fi Router Setup & Mesh Network Expansion",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Configuring dual-band Wi-Fi router, dead-zone troubleshooting, and password security setup.",
+      "highlights": [
+        "Professional Wi-Fi Router Setup & Mesh Network Expansion procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Wi-Fi Router Setup & Mesh Network Expansion procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Wi-Fi Router Setup & Mesh Network Expansion take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Wi-Fi Router Setup & Mesh Network Expansion | SmartServe",
+      "seo_description": "Configuring dual-band Wi-Fi router, dead-zone troubleshooting, and password security setup.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.808491+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "7713cd40-cf0b-5696-980e-cd4ab4811d84",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Networking & Wi-Fi Setup",
+      "service_name": "Ethernet Cable Crimping & Concealed Wall Punching",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Cat6 gigabit cable termination with RJ45 connectors and wall faceplate keystones.",
+      "highlights": [
+        "Professional Ethernet Cable Crimping & Concealed Wall Punching procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Ethernet Cable Crimping & Concealed Wall Punching procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Ethernet Cable Crimping & Concealed Wall Punching take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Ethernet Cable Crimping & Concealed Wall Punching | SmartServe",
+      "seo_description": "Cat6 gigabit cable termination with RJ45 connectors and wall faceplate keystones.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.817303+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "dc0118a0-ca7c-583c-a62b-c4cdaa25f9d0",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Networking & Wi-Fi Setup",
+      "service_name": "Fiber Broadband ONT Modem Configuration",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Configuring PPPoE credentials, static IP assignment, and 5GHz band channel optimization.",
+      "highlights": [
+        "Professional Fiber Broadband ONT Modem Configuration procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Fiber Broadband ONT Modem Configuration procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 30 minutes.",
+          "question": "How long does Fiber Broadband ONT Modem Configuration take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Fiber Broadband ONT Modem Configuration | SmartServe",
+      "seo_description": "Configuring PPPoE credentials, static IP assignment, and 5GHz band channel optimization.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.824112+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "729fe3fb-75bf-563d-88c8-2eee1ca749b1",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Networking & Wi-Fi Setup",
+      "service_name": "Multi-Story Tri-Band Mesh Wi-Fi Installation",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Eliminating dead zones in large homes using seamless roaming Deco/Orbi mesh nodes.",
+      "highlights": [
+        "Professional Multi-Story Tri-Band Mesh Wi-Fi Installation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Multi-Story Tri-Band Mesh Wi-Fi Installation procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Multi-Story Tri-Band Mesh Wi-Fi Installation take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Multi-Story Tri-Band Mesh Wi-Fi Installation | SmartServe",
+      "seo_description": "Eliminating dead zones in large homes using seamless roaming Deco/Orbi mesh nodes.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.819609+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "f1db2450-531c-5da1-8112-1c9b9dc1075d",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Networking & Wi-Fi Setup",
+      "service_name": "Secure Guest Wi-Fi & Bandwidth Limiting Portal",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Creating isolated guest Wi-Fi networks with captive portals and bandwidth caps.",
+      "highlights": [
+        "Professional Secure Guest Wi-Fi & Bandwidth Limiting Portal procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Secure Guest Wi-Fi & Bandwidth Limiting Portal procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Secure Guest Wi-Fi & Bandwidth Limiting Portal take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Secure Guest Wi-Fi & Bandwidth Limiting Portal | SmartServe",
+      "seo_description": "Creating isolated guest Wi-Fi networks with captive portals and bandwidth caps.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.813883+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d0141ca3-4157-5374-b1bc-35b8cf628d97",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Website & App Development",
+      "service_name": "Custom Landing Page Design for Google Ads",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "High-converting modern UI page with WhatsApp CTA button and fast 1-second load speed.",
+      "highlights": [
+        "Professional Custom Landing Page Design for Google Ads procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Custom Landing Page Design for Google Ads procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Custom Landing Page Design for Google Ads take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Custom Landing Page Design for Google Ads | SmartServe",
+      "seo_description": "High-converting modern UI page with WhatsApp CTA button and fast 1-second load speed.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.826376+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "7774beae-b345-5741-8073-7227f208458b",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Website & App Development",
+      "service_name": "Shopify E-Commerce Store Launch Consultation",
+      "base_price_inr": 5999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Product catalog upload, payment gateway integration (Razorpay/Stripe), and shipping rates.",
+      "highlights": [
+        "Professional Shopify E-Commerce Store Launch Consultation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Shopify E-Commerce Store Launch Consultation procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 240 minutes.",
+          "question": "How long does Shopify E-Commerce Store Launch Consultation take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Shopify E-Commerce Store Launch Consultation | SmartServe",
+      "seo_description": "Product catalog upload, payment gateway integration (Razorpay/Stripe), and shipping rates.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.838700+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ddf9ec41-154d-5e26-a0d3-2cb544e9fd5b",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Website & App Development",
+      "service_name": "Website Speed Optimization & Core Web Vitals Fix",
+      "base_price_inr": 1999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Minifying CSS/JS, converting WebP images, and achieving 90+ score on Google PageSpeed.",
+      "highlights": [
+        "Professional Website Speed Optimization & Core Web Vitals Fix procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Website Speed Optimization & Core Web Vitals Fix procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Website Speed Optimization & Core Web Vitals Fix take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Website Speed Optimization & Core Web Vitals Fix | SmartServe",
+      "seo_description": "Minifying CSS/JS, converting WebP images, and achieving 90+ score on Google PageSpeed.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.831552+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "70cb57da-cd6e-54bc-903a-42181fa00ef6",
+      "category_number": 12,
+      "category_name": "12. Technology & Digital Services",
+      "subcategory_name": "Website & App Development",
+      "service_name": "WordPress Business Website Setup & Customization",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Responsive 5-page mobile-friendly website with contact form, SSL certificate, and SEO plugin.",
+      "highlights": [
+        "Professional WordPress Business Website Setup & Customization procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete WordPress Business Website Setup & Customization procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Diagnosis",
+          "description": "Identifying the root cause of the technical issue",
+          "step_number": 1
+        },
+        {
+          "title": "Solution Planning",
+          "description": "Outlining the fix or upgrade path",
+          "step_number": 2
+        },
+        {
+          "title": "Service Execution",
+          "description": "Carrying out repairs, setup, or development work",
+          "step_number": 3
+        },
+        {
+          "title": "Testing & Verification",
+          "description": "Confirming the solution works correctly",
+          "step_number": 4
+        },
+        {
+          "title": "User Handover",
+          "description": "Demonstrating the fix and advising on best practices",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Diagnostic software",
+        "Screwdriver kit",
+        "Anti-static tools",
+        "Network analyser"
+      ],
+      "customer_setup_requirements": [
+        "Back up important data before the visit",
+        "Ensure stable power supply",
+        "Provide access to router/modem if networking issue"
+      ],
+      "aftercare_precautions": [
+        "Keep OS and software updated regularly",
+        "Use a UPS to prevent power surge damage"
+      ],
+      "expected_results": [
+        "A fully functional device with improved performance and security."
+      ],
+      "important_notes": [
+        "Data loss due to hardware failure is not covered unless data recovery service is booked."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 240 minutes.",
+          "question": "How long does WordPress Business Website Setup & Customization take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Always back up your data weekly to avoid permanent loss."
+      ],
+      "dos": [
+        "Describe error messages or symptoms clearly to speed up diagnosis."
+      ],
+      "donts": [
+        "Do not attempt DIY fixes before the technician arrives — it may void the warranty."
+      ],
+      "suggested_addons": [],
+      "seo_title": "WordPress Business Website Setup & Customization | SmartServe",
+      "seo_description": "Responsive 5-page mobile-friendly website with contact form, SSL certificate, and SEO plugin.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:33.836509+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    }
+  ]
+}

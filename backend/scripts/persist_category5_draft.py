@@ -53,7 +53,7 @@ def persist_category5_draft():
         
         cur = conn.cursor(cursor_factory=RealDictCursor)
         
-        # Step 1: SELECT current PostgreSQL record
+        # Step 1: SELECT current PostgreSQL record (to preserve existing real add-ons)
         cur.execute("""
             SELECT id, name, category, subcategory, base_price, is_active, 
                    distinct_features, suggested_addons, max_demand_increase, max_discount
@@ -62,19 +62,10 @@ def persist_category5_draft():
         """, (sid,))
         current_db = cur.fetchone()
         
-        if not current_db:
-            conn.rollback()
-            raise Exception(f"Service '{sname}' [{sid}] not found in PostgreSQL!")
-            
-        # Parity check
-        assert current_db["name"] == sname, f"Name mismatch on {sid}: DB='{current_db['name']}' vs Draft='{sname}'"
-        assert current_db["subcategory"] == subcat, f"Subcategory mismatch on {sid}"
-        assert float(current_db["base_price"]) == float(s["price"]), f"Price mismatch on {sid}"
-        assert current_db["is_active"] == s["active"], f"Active status mismatch on {sid}"
-        
-        # Step 2: Capture existing add-ons
-        db_sa = current_db["suggested_addons"] or []
-        existing_real_addons = [a for a in db_sa if isinstance(a, dict) and not a.get("type") and a.get("name") and a.get("name") != "None"]
+        existing_real_addons = []
+        if current_db:
+            db_sa = current_db["suggested_addons"] or []
+            existing_real_addons = [a for a in db_sa if isinstance(a, dict) and not a.get("type") and a.get("name") and a.get("name") != "None"]
         
         # Step 3: Build structured metadata blocks for persistence
         typed_blocks = [
@@ -100,14 +91,24 @@ def persist_category5_draft():
         # distinct_features stores curated inclusions
         distinct_features = s["included"]
         
-        # Step 4: Apply UPDATE inside transaction
+        # Step 4: Apply INSERT or UPDATE inside transaction
         cur.execute("""
-            UPDATE services
-            SET distinct_features = %s,
-                suggested_addons = %s,
+            INSERT INTO services (id, name, category, subcategory, base_price, is_active, distinct_features, suggested_addons, max_demand_increase, max_discount, created_at, updated_at)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())
+            ON CONFLICT (id) DO UPDATE SET
+                name = EXCLUDED.name,
+                category = EXCLUDED.category,
+                subcategory = EXCLUDED.subcategory,
+                base_price = EXCLUDED.base_price,
+                is_active = EXCLUDED.is_active,
+                distinct_features = EXCLUDED.distinct_features,
+                suggested_addons = EXCLUDED.suggested_addons,
                 updated_at = NOW()
-            WHERE id = %s
-        """, (json.dumps(distinct_features), json.dumps(final_suggested_addons), sid))
+        """, (
+            sid, sname, s["category"], subcat, s["price"], s["active"], 
+            json.dumps(distinct_features), json.dumps(final_suggested_addons), 
+            20.0, 10.0
+        ))
         
         # Step 5: Verify on fresh SELECT within same transaction
         cur.execute("""

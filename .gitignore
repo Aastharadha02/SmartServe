@@ -60,13 +60,17 @@ scratch/
 .system_generated/
 
 # Database dumps, local backups & baselines (DO NOT COMMIT)
-backend/backups/
-backend/catalog_drafts/
-backend/catalog_verification/
-backend/catalog_baseline_*.json
-backend/backup_*.json
+# We now track these to prevent data loss
+# backend/backups/
+# backend/catalog_drafts/
+# backend/catalog_verification/
+# backend/catalog_baseline_*.json
+# backend/backup_*.json
 *.sql
+!backend/backups/*.sql
 *.xlsx
+!backend/backups/*.xlsx
+!backend/backup/**
 *.zip
 *.db
 *.sqlite
@@ -76,6 +80,9 @@ backend/backup_*.json
 # Screenshots & visual test captures
 *.png
 *.webp
+VIDEOS/
+*.mp4
+docker_inspect.json
 
 # Ad-hoc test, scraper, and local verification scripts
 capture_*.js

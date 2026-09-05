@@ -1,0 +1,237 @@
+{
+  "backup_type": "category3_post_restore_verified",
+  "timestamp": "2026-09-05T13:58:51.587272+00:00",
+  "total_restored": 23,
+  "services": [
+    {
+      "id": "cdbd23e6-79f1-45e3-815e-d434db64445b",
+      "name": "Home Interior Assistance",
+      "subcategory": "Home Improvement",
+      "price": 3479.0,
+      "active": true,
+      "distinct_features_count": 6,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "2e9b5c53-0d64-4ba1-9b12-d523949e2482",
+      "name": "Minor Renovation",
+      "subcategory": "Home Improvement",
+      "price": 2059.0,
+      "active": true,
+      "distinct_features_count": 6,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "a4a7035d-aae9-46a9-8bee-136d3e38101d",
+      "name": "Wall Panel Installation",
+      "subcategory": "Home Improvement",
+      "price": 2399.0,
+      "active": true,
+      "distinct_features_count": 6,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "c6dd33dd-3847-49c0-ac08-8250f113015f",
+      "name": "Wallpaper Installation",
+      "subcategory": "Home Improvement",
+      "price": 2709.0,
+      "active": true,
+      "distinct_features_count": 7,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "a737ceca-8a81-4f4f-880a-0a73242239f4",
+      "name": "1 BHK Painting",
+      "subcategory": "Home Painting",
+      "price": 16249.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "71c0c65e-263e-42bf-8fd1-c1da9031975b",
+      "name": "2 BHK Painting",
+      "subcategory": "Home Painting",
+      "price": 5159.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "26d2121b-eae7-49f5-b2e2-535b170cea5a",
+      "name": "3 BHK Painting",
+      "subcategory": "Home Painting",
+      "price": 12939.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "3604ea54-6170-4f40-86cc-3de4e6c5d84e",
+      "name": "4 BHK+ Painting",
+      "subcategory": "Home Painting",
+      "price": 21509.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "656fdd6b-9d26-4f17-bfe8-886c33d588f4",
+      "name": "Exterior Full Home Painting",
+      "subcategory": "Home Painting",
+      "price": 13249.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "9a86bdbb-830a-42de-9a77-6933fdb6a4f6",
+      "name": "Furnished Full Home Painting",
+      "subcategory": "Home Painting",
+      "price": 12029.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "20286e18-2436-443a-8215-0d65b1567160",
+      "name": "Room Combinations",
+      "subcategory": "Home Painting",
+      "price": 3399.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "b1a4a36e-a516-4682-832e-2e7f7d8cba1f",
+      "name": "Room Painting",
+      "subcategory": "Home Painting",
+      "price": 2449.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "cb2af0c1-c185-44c1-8e21-ee6f185fbe13",
+      "name": "Unfurnished Full Home Painting",
+      "subcategory": "Home Painting",
+      "price": 5989.0,
+      "active": true,
+      "distinct_features_count": 7,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "1d8ea162-8e72-4920-8eae-7dee95f031be",
+      "name": "Ceiling Painting",
+      "subcategory": "Specialized Painting",
+      "price": 3579.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "dc2848cb-fd07-434b-8569-58b8a3deda8e",
+      "name": "Metal Painting",
+      "subcategory": "Specialized Painting",
+      "price": 1559.0,
+      "active": true,
+      "distinct_features_count": 7,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "608d5de2-0e84-410c-baa2-3b382d1f9c7c",
+      "name": "Texture Painting",
+      "subcategory": "Specialized Painting",
+      "price": 2309.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "beae6816-da85-4e6e-a66d-184ad2be03b1",
+      "name": "Wall Painting",
+      "subcategory": "Specialized Painting",
+      "price": 2539.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "5e42fcf8-7454-4da3-8587-5b9e77197799",
+      "name": "Wood Painting / Polishing",
+      "subcategory": "Specialized Painting",
+      "price": 3739.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "9b61bcd6-f23c-42de-970b-909d17481d59",
+      "name": "Bathroom Waterproofing",
+      "subcategory": "Waterproofing & Grouting",
+      "price": 1839.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "8ad896e9-77bb-4478-8daf-13ab2c62bba1",
+      "name": "Leakage Treatment",
+      "subcategory": "Waterproofing & Grouting",
+      "price": 3339.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "7f783def-48ea-41dd-8897-b543b23bb353",
+      "name": "Terrace Waterproofing",
+      "subcategory": "Waterproofing & Grouting",
+      "price": 1099.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "b819bd35-4ec8-4bde-b51d-49ef5cc66ba9",
+      "name": "Tile Grouting",
+      "subcategory": "Waterproofing & Grouting",
+      "price": 2029.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    },
+    {
+      "id": "78a149af-2c4c-4f28-abca-7ae6126a647a",
+      "name": "Wall Waterproofing",
+      "subcategory": "Waterproofing & Grouting",
+      "price": 2999.0,
+      "active": true,
+      "distinct_features_count": 8,
+      "suggested_addons_count": 17,
+      "real_addons_count": 0
+    }
+  ]
+}

@@ -25,6 +25,8 @@ export const CustomerBookingDetail: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [cancelling, setCancelling] = useState<boolean>(false);
+  const [showCancelModal, setShowCancelModal] = useState<boolean>(false);
+  const [selectedReason, setSelectedReason] = useState<string>('Change of plans / schedule conflict');
 
   const fetchDetail = async () => {
     if (!bookingId) return;
@@ -44,14 +46,14 @@ export const CustomerBookingDetail: React.FC = () => {
     fetchDetail();
   }, [bookingId]);
 
-  const handleCancelBooking = async () => {
+  const handleConfirmCancel = async () => {
     if (!bookingId) return;
-    if (!window.confirm('Are you sure you want to cancel this service booking?')) return;
 
     setCancelling(true);
     try {
-      await cancelBooking(bookingId, 'Cancelled by Customer');
+      await cancelBooking(bookingId, selectedReason);
       showToast('Booking cancelled successfully.', 'info');
+      setShowCancelModal(false);
       fetchDetail();
     } catch (err: any) {
       showToast(err.response?.data?.detail || 'Failed to cancel booking.', 'error');
@@ -198,7 +200,7 @@ export const CustomerBookingDetail: React.FC = () => {
 
             {canCancel && (
               <button
-                onClick={handleCancelBooking}
+                onClick={() => setShowCancelModal(true)}
                 disabled={cancelling}
                 className="px-5 py-2.5 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl transition-colors flex items-center gap-1.5 disabled:opacity-50"
               >
@@ -211,6 +213,66 @@ export const CustomerBookingDetail: React.FC = () => {
         </div>
 
       </div>
+
+      {/* Interactive In-App Cancellation Modal */}
+      {showCancelModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-slate-100 space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-600 flex-shrink-0">
+                <AlertCircle className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="text-lg font-extrabold text-slate-900">Cancel Service Booking?</h3>
+                <p className="text-xs text-slate-500">
+                  Ref: <span className="font-mono font-bold text-slate-700">{booking.booking_reference}</span> • {booking.service_name}
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <label className="text-xs font-bold text-slate-700 block">
+                Please select a reason for cancellation:
+              </label>
+              <select
+                value={selectedReason}
+                onChange={(e) => setSelectedReason(e.target.value)}
+                className="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-rose-500/20 focus:border-rose-500"
+              >
+                <option value="Change of plans / schedule conflict">Change of plans / schedule conflict</option>
+                <option value="Booked by mistake">Booked by mistake</option>
+                <option value="Found an alternative provider">Found an alternative provider</option>
+                <option value="Price or timeline concern">Price or timeline concern</option>
+                <option value="Other reasons">Other reasons</option>
+              </select>
+              <p className="text-[11px] text-slate-400">
+                Cancellation is free with zero penalties for requested bookings.
+              </p>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowCancelModal(false)}
+                disabled={cancelling}
+                className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl transition-colors"
+              >
+                Keep Booking
+              </button>
+
+              <button
+                type="button"
+                onClick={handleConfirmCancel}
+                disabled={cancelling}
+                className="px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1.5 shadow-sm disabled:opacity-50"
+              >
+                {cancelling ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <XCircle className="w-4 h-4" />}
+                <span>Yes, Cancel Booking</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

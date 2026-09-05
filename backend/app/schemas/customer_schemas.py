@@ -176,7 +176,8 @@ class CreateBookingPayload(BaseModel):
 
 
 class CancelBookingPayload(BaseModel):
-    reason: str
+    reason: Optional[str] = "Cancelled by Customer"
+    cancellation_reason: Optional[str] = None
 
 
 class BookingFeedbackPayload(BaseModel):

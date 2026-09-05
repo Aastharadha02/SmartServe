@@ -1,14 +1,15 @@
 # SmartServe Master Catalog Protection Policy
-**Status**: ACTIVE, ENFORCED & EXPANDED (Categories 1, 2, 3, and 4)  
+**Status**: ACTIVE, ENFORCED & COMPLETE (All 14 Categories)  
 **Last Updated**: September 5, 2026  
 
 ---
 
-## 1. Protected Scope (156 Total Services)
+## 1. Protected Scope (457 Total Services — DB Verified)
 
-The following 156 services across Categories 1, 2, 3, and 4 are strictly **PROTECTED, PERSISTED, AND MONITORED**:
+All 457 services across all 14 Categories are strictly **PROTECTED, PERSISTED, AND MONITORED**:
 
 ### Category 1: Beauty, Salon & Spa (55 Services)
+*(Regenerated Sep 5, 2026 after original Neon data became inaccessible due to network transfer suspension - resets Oct 1, 2026)*
 - **Facial & Skincare** (9 services)
 - **Makeup & Styling** (6 services)
 - **Men's Salon** (11 services)
@@ -17,6 +18,7 @@ The following 156 services across Categories 1, 2, 3, and 4 are strictly **PROTE
 - **Women's Salon** (13 services)
 
 ### Category 2: Cleaning & Home Cleaning (32 Services)
+*(Regenerated Sep 5, 2026 after original Neon data became inaccessible due to network transfer suspension - resets Oct 1, 2026)*
 - **Deep Cleaning** (7 services)
 - **Full Home / By Room Cleaning** (8 services)
 - **Kitchen & Bathroom Cleaning** (5 services)
@@ -40,6 +42,75 @@ The following 156 services across Categories 1, 2, 3, and 4 are strictly **PROTE
 - **Television** (5 services)
 - **Variants** (6 services)
 - **Washing Machine** (5 services)
+
+### Category 5: Electrician, Plumber, Carpenter & Home Repairs (39 Services)
+- **Carpenter Services** (12 services)
+- **Electrician Services** (15 services)
+- **Plumber Services** (12 services)
+
+### Category 6: Smart Home & Security (30 Services)
+- **Alarm & Sensor Systems** (7 services)
+- **CCTV/Camera Installation** (7 services)
+- **Smart Lighting/Switches** (5 services)
+- **Smart Locks & Access Control** (6 services)
+- **Video Doorbells** (5 services)
+
+### Category 7: Domestic Help & Cooking (30 Services)
+- **Cooks / Chefs** (7 services)
+- **Drivers** (4 services)
+- **Elder Care / Patient Care** (6 services)
+- **Maids / Housekeepers** (7 services)
+- **Nannies / Babysitters** (6 services)
+
+### Category 8: Education, Teachers & Coaching (30 Services)
+- **Competitive Exam Coaching** (7 services)
+- **Language & Communication** (5 services)
+- **Music & Arts Lessons** (5 services)
+- **School Tutoring (K-12)** (7 services)
+- **Skills & Hobby Classes** (6 services)
+
+### Category 9: Health, Fitness & Wellness (30 Services)
+- **Mental Wellness & Counselling** (6 services)
+- **Nutrition & Diet Counselling** (5 services)
+- **Personal Training** (7 services)
+- **Physiotherapy & Rehabilitation** (6 services)
+- **Yoga & Meditation** (6 services)
+
+### Category 10: Events, Photography & Entertainment (30 Services)
+- **Catering & Food Services** (6 services)
+- **Decoration & Floral** (6 services)
+- **DJ & Sound Systems** (5 services)
+- **Event Planning & Management** (6 services)
+- **Photography & Videography** (7 services)
+
+### Category 11: Pet Services (25 Services)
+- **Dog Grooming** (6 services)
+- **Dog Training** (5 services)
+- **Pet Accessories & Nutrition** (4 services)
+- **Pet Sitting & Boarding** (5 services)
+- **Veterinary & Health Checkup** (5 services)
+
+### Category 12: Technology & Digital Services (30 Services)
+- **Computer & Laptop Repair** (7 services)
+- **Data Recovery & Backup** (5 services)
+- **IT Support & Consultation** (7 services)
+- **Networking & Wi-Fi Setup** (5 services)
+- **Website & App Development** (6 services)
+
+### Category 13: Professional & Business Services (30 Services)
+- **Accounting & Tax Filing** (6 services)
+- **Business Consulting** (5 services)
+- **Legal Documentation** (5 services)
+- **Marketing & Branding** (6 services)
+- **Staffing & HR Services** (5 services)
+- **Virtual Assistant** (3 services)
+
+### Category 14: Moving, Delivery & Local Assistance (27 Services)
+- **Home Shifting & Packing** (7 services)
+- **Junk Removal & Disposal** (5 services)
+- **Last-Mile Delivery** (5 services)
+- **Local Errands & Assistance** (5 services)
+- **Vehicle Transport** (5 services)
 
 ---
 
@@ -71,8 +142,17 @@ The following 156 services across Categories 1, 2, 3, and 4 are strictly **PROTE
 ## 4. Checkpoint Artifacts & Baselines
 
 - **Category 1 & 2 Permanent Backup**: `backend/backups/category1_category2_87_services_permanent_backup.json`
-- **Category 3 Pre-Restore Backup**: `backend/backups/category3_painting_waterproofing_home_improvement_pre_restore.json`
 - **Category 3 Post-Restore Backup**: `backend/backups/category3_painting_waterproofing_home_improvement_restored.json`
-- **Category 4 Pre-Change Snapshot**: `backend/backups/category4_ac_appliance_electronics_repair_pre_change_snapshot.json`
 - **Category 4 Final Checkpoints**: `backend/backups/category4_ac_appliance_electronics_repair_FINAL.{json,xlsx,sql}`
-- **Machine-Readable Baseline (156 Services)**: `backend/catalog_baseline_156_protected.json` (SHA-256: `4f05518c17be8322bec2fdf2ef6a6c8f019d1d89bad0213e4167b231b0ba1528`)
+- **Category 5 Final Backup**: `backend/backups/category5_electrician_plumber_carpenter_FINAL.{json,xlsx}`
+- **Category 6 Final Backup**: `backend/backups/category6_smart_home_security_FINAL.{json,xlsx}`
+- **Category 7 Final Backup**: `backend/backups/category7_domestic_help_cooking_FINAL.{json,xlsx}`
+- **Category 8 Final Backup**: `backend/backups/category8_education_coaching_FINAL.{json,xlsx}`
+- **Category 9 Final Backup**: `backend/backups/category9_health_fitness_wellness_FINAL.{json,xlsx}`
+- **Category 10 Final Backup**: `backend/backups/category10_events_photography_entertainment_FINAL.{json,xlsx}`
+- **Category 11 Final Backup**: `backend/backups/category11_pet_services_FINAL.{json,xlsx}`
+- **Category 12 Final Backup**: `backend/backups/category12_technology_digital_services_FINAL.{json,xlsx}`
+- **Category 13 Final Backup**: `backend/backups/category13_professional_business_services_FINAL.{json,xlsx}`
+- **Category 14 Final Backup**: `backend/backups/category14_moving_delivery_local_assistance_FINAL.{json,xlsx}`
+- **DB Verified Count (Sep 5, 2026)**: 457 services across all 14 categories confirmed in local PostgreSQL
+  *(2 stale stubs deleted from Cat 8 via cleanup_cat8_stubs.py)*

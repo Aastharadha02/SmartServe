@@ -1,0 +1,2825 @@
+{
+  "category_number": 14,
+  "category_name": "14. Moving, Delivery & Local Assistance",
+  "service_count": 27,
+  "subcategories": [
+    "Delivery & Pickup",
+    "Home Shifting & Packing",
+    "Junk Removal & Disposal",
+    "Last-Mile Delivery",
+    "Local Errands & Assistance",
+    "Moving Services",
+    "Vehicle Assistance",
+    "Vehicle Transport"
+  ],
+  "services": [
+    {
+      "service_id": "1c01b197-30f4-5d69-8c3a-a0be63889195",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Delivery & Pickup",
+      "service_name": "Express Intra-City Document & Parcel Pickup",
+      "base_price_inr": 249.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Immediate two-wheeler courier picking up urgent business files, keys, or gifts.",
+      "highlights": [
+        "Professional Express Intra-City Document & Parcel Pickup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Express Intra-City Document & Parcel Pickup procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Express Intra-City Document & Parcel Pickup take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Express Intra-City Document & Parcel Pickup | SmartServe",
+      "seo_description": "Immediate two-wheeler courier picking up urgent business files, keys, or gifts.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.164726+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "43feb320-ba7d-5f6e-b659-a4e33877a25c",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Delivery & Pickup",
+      "service_name": "Heavy Luggage & Suitcase Airport Transport",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Doorstep pickup of heavy excess baggage delivered directly to airport terminal or home.",
+      "highlights": [
+        "Professional Heavy Luggage & Suitcase Airport Transport procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Heavy Luggage & Suitcase Airport Transport procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Heavy Luggage & Suitcase Airport Transport take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Heavy Luggage & Suitcase Airport Transport | SmartServe",
+      "seo_description": "Doorstep pickup of heavy excess baggage delivered directly to airport terminal or home.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.200944+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "bf9ef6d3-0143-5c64-9c1f-8463308554b7",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Home Shifting & Packing",
+      "service_name": "3 BHK Luxury Villa Inter-State Relocation",
+      "base_price_inr": 12999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Heavy-duty wooden crating for chandeliers, TV packing, and dedicated container truck.",
+      "highlights": [
+        "Professional 3 BHK Luxury Villa Inter-State Relocation procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 3 BHK Luxury Villa Inter-State Relocation procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 480 minutes.",
+          "question": "How long does 3 BHK Luxury Villa Inter-State Relocation take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "3 BHK Luxury Villa Inter-State Relocation | SmartServe",
+      "seo_description": "Heavy-duty wooden crating for chandeliers, TV packing, and dedicated container truck.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.157103+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "e216c0f0-cc0c-5dfb-ae9d-b71cc9ee5f06",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Home Shifting & Packing",
+      "service_name": "Kitchen Crockery & Fragile China Safe Packing",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Specialized honeycomb paper wrapping and double-walled boxes for fragile glassware.",
+      "highlights": [
+        "Professional Kitchen Crockery & Fragile China Safe Packing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Kitchen Crockery & Fragile China Safe Packing procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Kitchen Crockery & Fragile China Safe Packing take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Kitchen Crockery & Fragile China Safe Packing | SmartServe",
+      "seo_description": "Specialized honeycomb paper wrapping and double-walled boxes for fragile glassware.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.162194+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "6dbabdc9-db64-5d81-bbdb-3e92e340fb58",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Home Shifting & Packing",
+      "service_name": "Studio / 1 RK Compact Shifting Service",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Fast shifting with 2 helpers, foam padding, and mini tempo transport.",
+      "highlights": [
+        "Professional Studio / 1 RK Compact Shifting Service procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Studio / 1 RK Compact Shifting Service procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 180 minutes.",
+          "question": "How long does Studio / 1 RK Compact Shifting Service take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Studio / 1 RK Compact Shifting Service | SmartServe",
+      "seo_description": "Fast shifting with 2 helpers, foam padding, and mini tempo transport.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.166840+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d40b03ca-14cc-5075-a4c5-c823dd823935",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Junk Removal & Disposal",
+      "service_name": "Complete Garage / Balcony Junk Clutter Hauling",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Clearing rusted pipes, obsolete boxes, paint cans, and thoroughly sweeping the area.",
+      "highlights": [
+        "Professional Complete Garage / Balcony Junk Clutter Hauling procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Complete Garage / Balcony Junk Clutter Hauling procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Complete Garage / Balcony Junk Clutter Hauling take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Complete Garage / Balcony Junk Clutter Hauling | SmartServe",
+      "seo_description": "Clearing rusted pipes, obsolete boxes, paint cans, and thoroughly sweeping the area.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.175713+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "82213c14-7b97-5dad-8721-f2d524f8fc70",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Junk Removal & Disposal",
+      "service_name": "E-Waste Eco-Friendly Recycling Pickup",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Doorstep collection of old CRT monitors, dead CPUs, wires, and printers for certified recycling.",
+      "highlights": [
+        "Professional E-Waste Eco-Friendly Recycling Pickup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete E-Waste Eco-Friendly Recycling Pickup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does E-Waste Eco-Friendly Recycling Pickup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "E-Waste Eco-Friendly Recycling Pickup | SmartServe",
+      "seo_description": "Doorstep collection of old CRT monitors, dead CPUs, wires, and printers for certified recycling.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.171289+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ba26862d-85dd-5c2e-9ba0-78b615e06ad5",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Junk Removal & Disposal",
+      "service_name": "Mattress & Foam Scrap Disposal Service",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Heavy lifting and transport of bulky soiled mattresses for responsible disposal.",
+      "highlights": [
+        "Professional Mattress & Foam Scrap Disposal Service procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Mattress & Foam Scrap Disposal Service procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Mattress & Foam Scrap Disposal Service take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Mattress & Foam Scrap Disposal Service | SmartServe",
+      "seo_description": "Heavy lifting and transport of bulky soiled mattresses for responsible disposal.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.173350+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "7d11b486-1097-5341-a8a5-87ba0f75c18b",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Junk Removal & Disposal",
+      "service_name": "Old Wooden Furniture Scrapping & Disposal",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Dismantling heavy broken beds, almirahs, and loading into municipal disposal trucks.",
+      "highlights": [
+        "Professional Old Wooden Furniture Scrapping & Disposal procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Old Wooden Furniture Scrapping & Disposal procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Old Wooden Furniture Scrapping & Disposal take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Old Wooden Furniture Scrapping & Disposal | SmartServe",
+      "seo_description": "Dismantling heavy broken beds, almirahs, and loading into municipal disposal trucks.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.178704+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "9d2e0a0b-cae2-5e9e-864b-e9c4084176e4",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Junk Removal & Disposal",
+      "service_name": "Renovation Debris & Rubble Masonry Clearance",
+      "base_price_inr": 1799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Clearing cement sacks, plaster waste, and broken tiles into commercial tipper trucks.",
+      "highlights": [
+        "Professional Renovation Debris & Rubble Masonry Clearance procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Renovation Debris & Rubble Masonry Clearance procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Renovation Debris & Rubble Masonry Clearance take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Renovation Debris & Rubble Masonry Clearance | SmartServe",
+      "seo_description": "Clearing cement sacks, plaster waste, and broken tiles into commercial tipper trucks.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.181482+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "c5096bf4-5677-50ed-bd66-23ab4e909013",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Last-Mile Delivery",
+      "service_name": "Fragile Bakery Cake & Floral Gift Delivery",
+      "base_price_inr": 299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Air-conditioned car transport preventing birthday cake melting or bouquet damage.",
+      "highlights": [
+        "Professional Fragile Bakery Cake & Floral Gift Delivery procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Fragile Bakery Cake & Floral Gift Delivery procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Fragile Bakery Cake & Floral Gift Delivery take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Fragile Bakery Cake & Floral Gift Delivery | SmartServe",
+      "seo_description": "Air-conditioned car transport preventing birthday cake melting or bouquet damage.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.183687+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d569432a-b4cd-5584-9b6b-4a617ee57c03",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Last-Mile Delivery",
+      "service_name": "Heavy Hardware & Appliance Inter-Store Transit",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Transporting air conditioners, tiles, or sanitaryware from wholesale mandi to site.",
+      "highlights": [
+        "Professional Heavy Hardware & Appliance Inter-Store Transit procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Heavy Hardware & Appliance Inter-Store Transit procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Heavy Hardware & Appliance Inter-Store Transit take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Heavy Hardware & Appliance Inter-Store Transit | SmartServe",
+      "seo_description": "Transporting air conditioners, tiles, or sanitaryware from wholesale mandi to site.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.190699+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ce1ed4d8-259d-54ac-82a0-734b4fcbdc1b",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Last-Mile Delivery",
+      "service_name": "Retail Store Same-Day Parcel Dispatch",
+      "base_price_inr": 399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Batch pickup of ecommerce packages from local boutiques delivered to city customers.",
+      "highlights": [
+        "Professional Retail Store Same-Day Parcel Dispatch procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Retail Store Same-Day Parcel Dispatch procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Retail Store Same-Day Parcel Dispatch take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Retail Store Same-Day Parcel Dispatch | SmartServe",
+      "seo_description": "Batch pickup of ecommerce packages from local boutiques delivered to city customers.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.192953+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "bfc1a8a7-8d4f-5c7d-8866-6f33a9a90c3d",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Last-Mile Delivery",
+      "service_name": "Two-Hour Express City Document Delivery",
+      "base_price_inr": 199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Urgent passport, signed agreement, or invoice courier with live GPS tracking.",
+      "highlights": [
+        "Professional Two-Hour Express City Document Delivery procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Two-Hour Express City Document Delivery procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Two-Hour Express City Document Delivery take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Two-Hour Express City Document Delivery | SmartServe",
+      "seo_description": "Urgent passport, signed agreement, or invoice courier with live GPS tracking.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.185828+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "a698a0c1-edb5-5247-92b7-7afd5d00c0d7",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Local Errands & Assistance",
+      "service_name": "Gift Wrapping & Festive Hamper Assembly Runner",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Procuring gift ribbons, wrapping boxes, and delivering Diwali/Christmas hampers.",
+      "highlights": [
+        "Professional Gift Wrapping & Festive Hamper Assembly Runner procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Gift Wrapping & Festive Hamper Assembly Runner procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Gift Wrapping & Festive Hamper Assembly Runner take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Gift Wrapping & Festive Hamper Assembly Runner | SmartServe",
+      "seo_description": "Procuring gift ribbons, wrapping boxes, and delivering Diwali/Christmas hampers.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.196104+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d91c5724-7eb7-5f63-bb00-97461b843b2c",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Local Errands & Assistance",
+      "service_name": "Key Duplicate Making & Locksmith Doorstep Pickup",
+      "base_price_inr": 349.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Collecting master key, getting computer duplicate cut at market, and returning to home.",
+      "highlights": [
+        "Professional Key Duplicate Making & Locksmith Doorstep Pickup procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Key Duplicate Making & Locksmith Doorstep Pickup procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 30 minutes.",
+          "question": "How long does Key Duplicate Making & Locksmith Doorstep Pickup take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Key Duplicate Making & Locksmith Doorstep Pickup | SmartServe",
+      "seo_description": "Collecting master key, getting computer duplicate cut at market, and returning to home.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.205071+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "46d8db20-3e81-5240-8af7-c6aeb1680155",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Local Errands & Assistance",
+      "service_name": "Standing in Long Queue Assistant (RTO/Consulate)",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Helper standing in line on your behalf at government offices or visa centers.",
+      "highlights": [
+        "Professional Standing in Long Queue Assistant (RTO/Consulate) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Standing in Long Queue Assistant (RTO/Consulate) procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Standing in Long Queue Assistant (RTO/Consulate) take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Standing in Long Queue Assistant (RTO/Consulate) | SmartServe",
+      "seo_description": "Helper standing in line on your behalf at government offices or visa centers.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.203053+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "1197b272-b994-5781-88a4-20fda966a48b",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Moving Services",
+      "service_name": "1 BHK Local Home Shifting & Packing",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Professional bubble-wrap packing, loading into closed truck, transport, and unloading.",
+      "highlights": [
+        "Professional 1 BHK Local Home Shifting & Packing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 1 BHK Local Home Shifting & Packing procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 240 minutes.",
+          "question": "How long does 1 BHK Local Home Shifting & Packing take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "1 BHK Local Home Shifting & Packing | SmartServe",
+      "seo_description": "Professional bubble-wrap packing, loading into closed truck, transport, and unloading.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.188463+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "142ef794-67df-55ce-aefe-17722c4ba8bd",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Moving Services",
+      "service_name": "2 BHK City Relocation Packers & Movers",
+      "base_price_inr": 7999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Multi-layer corrugated cardboard box packing, furniture dismantle/reassemble, and safe transport.",
+      "highlights": [
+        "Professional 2 BHK City Relocation Packers & Movers procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 2 BHK City Relocation Packers & Movers procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 360 minutes.",
+          "question": "How long does 2 BHK City Relocation Packers & Movers take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "2 BHK City Relocation Packers & Movers | SmartServe",
+      "seo_description": "Multi-layer corrugated cardboard box packing, furniture dismantle/reassemble, and safe transport.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.153348+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "2faaeb27-4399-56f4-985d-157dd649daa4",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Moving Services",
+      "service_name": "Office Furniture & Desktop Relocation Shifting",
+      "base_price_inr": 9999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Systematic IT equipment packing, server rack moving, and office desk installation.",
+      "highlights": [
+        "Professional Office Furniture & Desktop Relocation Shifting procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Office Furniture & Desktop Relocation Shifting procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 360 minutes.",
+          "question": "How long does Office Furniture & Desktop Relocation Shifting take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Office Furniture & Desktop Relocation Shifting | SmartServe",
+      "seo_description": "Systematic IT equipment packing, server rack moving, and office desk installation.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.198324+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "17f179bf-7667-5f3d-afd5-d4e4ee315620",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Moving Services",
+      "service_name": "Single Furniture Item Transport (Sofa / Bed / Fridge)",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Tata Ace / Pickup truck dispatch for single heavy item transport across town.",
+      "highlights": [
+        "Professional Single Furniture Item Transport (Sofa / Bed / Fridge) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Single Furniture Item Transport (Sofa / Bed / Fridge) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Single Furniture Item Transport (Sofa / Bed / Fridge) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Single Furniture Item Transport (Sofa / Bed / Fridge) | SmartServe",
+      "seo_description": "Tata Ace / Pickup truck dispatch for single heavy item transport across town.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.169242+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "44bc15d3-2dc2-5407-9a0e-a84a536cf53d",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Vehicle Assistance",
+      "service_name": "Car Battery Jump-Start & Breakdown Assistance",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Emergency mechanic arrival with heavy jumper cables to jump-start dead car battery.",
+      "highlights": [
+        "Professional Car Battery Jump-Start & Breakdown Assistance procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Car Battery Jump-Start & Breakdown Assistance procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Car Battery Jump-Start & Breakdown Assistance take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Car Battery Jump-Start & Breakdown Assistance | SmartServe",
+      "seo_description": "Emergency mechanic arrival with heavy jumper cables to jump-start dead car battery.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.159486+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "1a248afa-46a2-5fa8-94fb-3acae99d76cd",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Vehicle Assistance",
+      "service_name": "Intercity Vehicle Car / Bike Carrier Transport",
+      "base_price_inr": 5999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Enclosed car container or covered bike transport between major metro cities.",
+      "highlights": [
+        "Professional Intercity Vehicle Car / Bike Carrier Transport procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Intercity Vehicle Car / Bike Carrier Transport procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 180 minutes.",
+          "question": "How long does Intercity Vehicle Car / Bike Carrier Transport take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Intercity Vehicle Car / Bike Carrier Transport | SmartServe",
+      "seo_description": "Enclosed car container or covered bike transport between major metro cities.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.216816+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "f7feff42-4eec-5316-a9c3-98e2f4088c57",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Vehicle Transport",
+      "service_name": "Airport Chauffeur Driven Car Drop & Valet Return",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Driver dropping you at airport terminal and safely parking car back at your residence.",
+      "highlights": [
+        "Professional Airport Chauffeur Driven Car Drop & Valet Return procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Airport Chauffeur Driven Car Drop & Valet Return procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 90 minutes.",
+          "question": "How long does Airport Chauffeur Driven Car Drop & Valet Return take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Airport Chauffeur Driven Car Drop & Valet Return | SmartServe",
+      "seo_description": "Driver dropping you at airport terminal and safely parking car back at your residence.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.214777+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "ccd4d5ff-5b51-5c80-b1b7-7791fc2974c0",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Vehicle Transport",
+      "service_name": "Flatbed Hydraulic Tow Truck for Premium Cars",
+      "base_price_inr": 1899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Zero-ground clearance flatbed towing for luxury sedans and automatic SUVs.",
+      "highlights": [
+        "Professional Flatbed Hydraulic Tow Truck for Premium Cars procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Flatbed Hydraulic Tow Truck for Premium Cars procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 60 minutes.",
+          "question": "How long does Flatbed Hydraulic Tow Truck for Premium Cars take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Flatbed Hydraulic Tow Truck for Premium Cars | SmartServe",
+      "seo_description": "Zero-ground clearance flatbed towing for luxury sedans and automatic SUVs.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.212779+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "d792920f-187c-5058-b2c9-35939008929f",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Vehicle Transport",
+      "service_name": "Interstate Bike Relocation with Bubble Wrap",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Full motorcycle bubble wrapping, petrol draining, and train/truck container loading.",
+      "highlights": [
+        "Professional Interstate Bike Relocation with Bubble Wrap procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Interstate Bike Relocation with Bubble Wrap procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 120 minutes.",
+          "question": "How long does Interstate Bike Relocation with Bubble Wrap take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Interstate Bike Relocation with Bubble Wrap | SmartServe",
+      "seo_description": "Full motorcycle bubble wrapping, petrol draining, and train/truck container loading.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.207315+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    },
+    {
+      "service_id": "6466540c-1fd5-540f-b10f-e7feb984e053",
+      "category_number": 14,
+      "category_name": "14. Moving, Delivery & Local Assistance",
+      "subcategory_name": "Vehicle Transport",
+      "service_name": "Two-Wheeler Covered City Bike Towing",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Hydraulic ramp pickup truck for punctured, stalled, or accidental motorcycles.",
+      "highlights": [
+        "Professional Two-Wheeler Covered City Bike Towing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Two-Wheeler Covered City Bike Towing procedure",
+        "Standard supplies and equipment",
+        "Post-service cleanup and inspection",
+        "Expert guidance and aftercare tips"
+      ],
+      "excluded_scope": [
+        "Spare parts or structural replacement unless quoted",
+        "Hazardous materials"
+      ],
+      "process_steps": [
+        {
+          "title": "Pre-Move Survey",
+          "description": "Assessing volume, fragile items, and special requirements",
+          "step_number": 1
+        },
+        {
+          "title": "Packing",
+          "description": "Carefully packing all items with appropriate materials",
+          "step_number": 2
+        },
+        {
+          "title": "Loading & Transport",
+          "description": "Safely loading and transporting to the destination",
+          "step_number": 3
+        },
+        {
+          "title": "Unloading & Placement",
+          "description": "Unloading and placing items as per customer instructions",
+          "step_number": 4
+        },
+        {
+          "title": "Final Check & Clean-Up",
+          "description": "Verifying all items are delivered and removing packing waste",
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Moving blankets and straps",
+        "Trolleys and dollies",
+        "Packing tape and boxes",
+        "GPS-enabled truck"
+      ],
+      "customer_setup_requirements": [
+        "Sort and label boxes before the team arrives",
+        "Disconnect appliances 24 hours before moving day",
+        "Ensure parking access at both locations"
+      ],
+      "aftercare_precautions": [
+        "Check all items against inventory within 24 hours",
+        "Report any damage within 48 hours for warranty claim"
+      ],
+      "expected_results": [
+        "A damage-free, on-time move with all belongings safely delivered."
+      ],
+      "important_notes": [
+        "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
+      ],
+      "warranty_coverage": "7-day service satisfaction warranty",
+      "faqs": [
+        {
+          "answer": "Typically takes around 45 minutes.",
+          "question": "How long does Two-Wheeler Covered City Bike Towing take?"
+        },
+        {
+          "answer": "Yes, exact upfront pricing with zero hidden charges.",
+          "question": "Is the pricing transparent?"
+        }
+      ],
+      "tips": [
+        "Label all boxes by room name to speed up unpacking."
+      ],
+      "dos": [
+        "Declare high-value items before the move for proper insurance coverage."
+      ],
+      "donts": [
+        "Do not overload boxes — it increases the risk of damage."
+      ],
+      "suggested_addons": [],
+      "seo_title": "Two-Wheeler Covered City Bike Towing | SmartServe",
+      "seo_description": "Hydraulic ramp pickup truck for punctured, stalled, or accidental motorcycles.",
+      "keywords": [],
+      "created_at": "2026-09-05T15:40:34.209636+00:00",
+      "updated_at": "2026-09-05T16:25:32.630908+00:00"
+    }
+  ]
+}
