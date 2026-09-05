@@ -1,4544 +1,1082 @@
-{
-  "metadata": {
-    "category": "6. Smart Home & Security",
-    "backup_type": "CATEGORY_FINAL",
-    "timestamp": "2026-09-05T15:40:41.939117+00:00",
-    "total_services": 30,
-    "subcategories": {
-      "Personal Training": 7
-    },
-    "status": "PROTECTED_AND_PERSISTED"
+[
+  {
+    "id": "2ba5e27c-d7ff-5126-ab96-d424a12c30d2",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Fitness",
+    "name": "Core Strength & Calisthenics Trainer",
+    "price": 3999.0,
+    "description": "Bodyweight gymnastics, pushup variations, pull-ups, and abdominal core sculpting.",
+    "highlights": [
+      "Professional Core Strength & Calisthenics Trainer procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Core Strength & Calisthenics Trainer procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Core Strength & Calisthenics Trainer take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
   },
-  "services": [
-    {
-      "id": "204889e8-705a-5bb2-ade8-da7ce42762ec",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Mental Wellness & Counselling",
-      "name": "Mental Wellness & Counselling Service Variation 1",
-      "base_price": 950.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional mental wellness & counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Mental Wellness & Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.065718+00:00",
-      "updated_at": "2026-09-05T15:40:33.065718+00:00"
-    },
-    {
-      "id": "f6667c15-c1ab-551f-a939-407f293cb264",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Mental Wellness & Counselling",
-      "name": "Mental Wellness & Counselling Service Variation 2",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional mental wellness & counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Mental Wellness & Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.070272+00:00",
-      "updated_at": "2026-09-05T15:40:33.070272+00:00"
-    },
-    {
-      "id": "8779e21f-7909-588c-8d1f-c83a1d0ce9f6",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Mental Wellness & Counselling",
-      "name": "Mental Wellness & Counselling Service Variation 3",
-      "base_price": 1250.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional mental wellness & counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Mental Wellness & Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.073087+00:00",
-      "updated_at": "2026-09-05T15:40:33.073087+00:00"
-    },
-    {
-      "id": "e802b517-8b47-5d0b-b47a-6768c187a156",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Mental Wellness & Counselling",
-      "name": "Mental Wellness & Counselling Service Variation 4",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional mental wellness & counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Mental Wellness & Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.077518+00:00",
-      "updated_at": "2026-09-05T15:40:33.077518+00:00"
-    },
-    {
-      "id": "5b7013df-172b-5a09-ab5e-6363466c7fb6",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Mental Wellness & Counselling",
-      "name": "Mental Wellness & Counselling Service Variation 5",
-      "base_price": 1550.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional mental wellness & counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Mental Wellness & Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.081038+00:00",
-      "updated_at": "2026-09-05T15:40:33.081038+00:00"
-    },
-    {
-      "id": "2ba5e27c-d7ff-5126-ab96-d424a12c30d2",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Mental Wellness & Counselling",
-      "name": "Mental Wellness & Counselling Service Variation 6",
-      "base_price": 1700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional mental wellness & counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Mental Wellness & Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.084154+00:00",
-      "updated_at": "2026-09-05T15:40:33.084154+00:00"
-    },
-    {
-      "id": "086fef9d-c302-517a-b45d-28dd67d5cb5a",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Nutrition & Diet Counselling",
-      "name": "Nutrition & Diet Counselling Service Variation 1",
-      "base_price": 950.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional nutrition & diet counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Nutrition & Diet Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.087794+00:00",
-      "updated_at": "2026-09-05T15:40:33.087794+00:00"
-    },
-    {
-      "id": "3f36e9ac-b96d-5a4e-9e23-317f0f199f9a",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Nutrition & Diet Counselling",
-      "name": "Nutrition & Diet Counselling Service Variation 2",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional nutrition & diet counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Nutrition & Diet Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.091108+00:00",
-      "updated_at": "2026-09-05T15:40:33.091108+00:00"
-    },
-    {
-      "id": "6c5c273c-3ccd-5f47-9cda-f39ae93a9945",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Nutrition & Diet Counselling",
-      "name": "Nutrition & Diet Counselling Service Variation 3",
-      "base_price": 1250.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional nutrition & diet counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Nutrition & Diet Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.095262+00:00",
-      "updated_at": "2026-09-05T15:40:33.095262+00:00"
-    },
-    {
-      "id": "399364d1-7439-53fc-b3a6-36c0c73de25d",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Nutrition & Diet Counselling",
-      "name": "Nutrition & Diet Counselling Service Variation 4",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional nutrition & diet counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Nutrition & Diet Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.099287+00:00",
-      "updated_at": "2026-09-05T15:40:33.099287+00:00"
-    },
-    {
-      "id": "2566f951-af68-5072-a8cb-65932557d02c",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Nutrition & Diet Counselling",
-      "name": "Nutrition & Diet Counselling Service Variation 5",
-      "base_price": 1550.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional nutrition & diet counselling service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Nutrition & Diet Counselling specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.102532+00:00",
-      "updated_at": "2026-09-05T15:40:33.102532+00:00"
-    },
-    {
-      "id": "325a2da2-5d9e-5689-ae7e-1a64c5934358",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Personal Training",
-      "name": "Personal Training Service Variation 1",
-      "base_price": 950.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional personal training service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Personal Training specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.106599+00:00",
-      "updated_at": "2026-09-05T15:40:33.106599+00:00"
-    },
-    {
-      "id": "b2e904fb-9bf8-577e-b11f-c1497a08ff68",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Personal Training",
-      "name": "Personal Training Service Variation 2",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional personal training service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Personal Training specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.111003+00:00",
-      "updated_at": "2026-09-05T15:40:33.111003+00:00"
-    },
-    {
-      "id": "37423b94-8ad3-5ffe-9bbc-6ffc64053bef",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Personal Training",
-      "name": "Personal Training Service Variation 3",
-      "base_price": 1250.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional personal training service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Personal Training specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.115656+00:00",
-      "updated_at": "2026-09-05T15:40:33.115656+00:00"
-    },
-    {
-      "id": "a19e0396-6423-5eb5-86cc-79610f36e0a8",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Personal Training",
-      "name": "Personal Training Service Variation 4",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional personal training service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Personal Training specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.120052+00:00",
-      "updated_at": "2026-09-05T15:40:33.120052+00:00"
-    },
-    {
-      "id": "f5b2a772-3ace-5c85-a8ad-55437e913f65",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Personal Training",
-      "name": "Personal Training Service Variation 5",
-      "base_price": 1550.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional personal training service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Personal Training specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.123614+00:00",
-      "updated_at": "2026-09-05T15:40:33.123614+00:00"
-    },
-    {
-      "id": "014dbb7c-f2a5-5154-91f1-c72511dfd9bc",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Personal Training",
-      "name": "Personal Training Service Variation 6",
-      "base_price": 1700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional personal training service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Personal Training specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.128033+00:00",
-      "updated_at": "2026-09-05T15:40:33.128033+00:00"
-    },
-    {
-      "id": "e7631e11-38b8-5458-bacb-5a6fffcd9bb6",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Personal Training",
-      "name": "Personal Training Service Variation 7",
-      "base_price": 1850.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional personal training service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Personal Training specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.132224+00:00",
-      "updated_at": "2026-09-05T15:40:33.132224+00:00"
-    },
-    {
-      "id": "0c2ad276-9094-527f-abf9-fe87d066b22f",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Physiotherapy & Rehabilitation",
-      "name": "Physiotherapy & Rehabilitation Service Variation 1",
-      "base_price": 950.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional physiotherapy & rehabilitation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Physiotherapy & Rehabilitation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.135336+00:00",
-      "updated_at": "2026-09-05T15:40:33.135336+00:00"
-    },
-    {
-      "id": "9256c5e4-81d3-5733-8bf3-ffe2fb8d546c",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Physiotherapy & Rehabilitation",
-      "name": "Physiotherapy & Rehabilitation Service Variation 2",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional physiotherapy & rehabilitation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Physiotherapy & Rehabilitation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.138825+00:00",
-      "updated_at": "2026-09-05T15:40:33.138825+00:00"
-    },
-    {
-      "id": "d24162b7-7c26-515c-81d2-a2dd1b6d6b9c",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Physiotherapy & Rehabilitation",
-      "name": "Physiotherapy & Rehabilitation Service Variation 3",
-      "base_price": 1250.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional physiotherapy & rehabilitation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Physiotherapy & Rehabilitation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.142929+00:00",
-      "updated_at": "2026-09-05T15:40:33.142929+00:00"
-    },
-    {
-      "id": "e12e5534-f1b9-5152-a626-1c2ce39fc8ce",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Physiotherapy & Rehabilitation",
-      "name": "Physiotherapy & Rehabilitation Service Variation 4",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional physiotherapy & rehabilitation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Physiotherapy & Rehabilitation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.147966+00:00",
-      "updated_at": "2026-09-05T15:40:33.147966+00:00"
-    },
-    {
-      "id": "a1ebe5ec-fd28-597b-a1ba-7d1dfbc3ab88",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Physiotherapy & Rehabilitation",
-      "name": "Physiotherapy & Rehabilitation Service Variation 5",
-      "base_price": 1550.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional physiotherapy & rehabilitation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Physiotherapy & Rehabilitation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.151770+00:00",
-      "updated_at": "2026-09-05T15:40:33.151770+00:00"
-    },
-    {
-      "id": "73444069-ba40-5669-bdc3-9772343dcc3f",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Physiotherapy & Rehabilitation",
-      "name": "Physiotherapy & Rehabilitation Service Variation 6",
-      "base_price": 1700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional physiotherapy & rehabilitation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Physiotherapy & Rehabilitation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.155407+00:00",
-      "updated_at": "2026-09-05T15:40:33.155407+00:00"
-    },
-    {
-      "id": "ddc2f5a0-2e6f-5cd5-bba3-2b2359f6d683",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Yoga & Meditation",
-      "name": "Yoga & Meditation Service Variation 1",
-      "base_price": 950.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional yoga & meditation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Yoga & Meditation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.159032+00:00",
-      "updated_at": "2026-09-05T15:40:33.159032+00:00"
-    },
-    {
-      "id": "402ea739-d08c-56b4-9c11-96ec3b865db2",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Yoga & Meditation",
-      "name": "Yoga & Meditation Service Variation 2",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional yoga & meditation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Yoga & Meditation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.165071+00:00",
-      "updated_at": "2026-09-05T15:40:33.165071+00:00"
-    },
-    {
-      "id": "fa27681f-33b2-59a3-b0b2-5a25e2e81830",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Yoga & Meditation",
-      "name": "Yoga & Meditation Service Variation 3",
-      "base_price": 1250.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional yoga & meditation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Yoga & Meditation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.168139+00:00",
-      "updated_at": "2026-09-05T15:40:33.168139+00:00"
-    },
-    {
-      "id": "6e776f8b-dd09-5612-88ba-c333ebaa6027",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Yoga & Meditation",
-      "name": "Yoga & Meditation Service Variation 4",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional yoga & meditation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Yoga & Meditation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.171725+00:00",
-      "updated_at": "2026-09-05T15:40:33.171725+00:00"
-    },
-    {
-      "id": "4f1ccaa5-994d-5bcb-95ce-9923b894b0ce",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Yoga & Meditation",
-      "name": "Yoga & Meditation Service Variation 5",
-      "base_price": 1550.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional yoga & meditation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Yoga & Meditation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.175857+00:00",
-      "updated_at": "2026-09-05T15:40:33.175857+00:00"
-    },
-    {
-      "id": "953ecc43-5088-51ab-8b86-d4758c55357f",
-      "category": "9. Health, Fitness & Wellness",
-      "subcategory": "Yoga & Meditation",
-      "name": "Yoga & Meditation Service Variation 6",
-      "base_price": 1700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial health assessment",
-        "Customised session plan",
-        "Post-session feedback",
-        "Digital progress report"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional yoga & meditation service designed for holistic well-being.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Certified Yoga & Meditation specialist",
-            "Personalised programme",
-            "Home or studio visits available",
-            "Progress tracking included"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Gym membership or equipment costs",
-            "Prescription medications"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Initial Consultation",
-              "description": "Assessing health goals, medical history, and current fitness level",
-              "step_number": 1
-            },
-            {
-              "title": "Plan Design",
-              "description": "Creating a customised programme tailored to specific needs",
-              "step_number": 2
-            },
-            {
-              "title": "Session Execution",
-              "description": "Conducting guided sessions with professional supervision",
-              "step_number": 3
-            },
-            {
-              "title": "Progress Monitoring",
-              "description": "Tracking improvements and adjusting the programme",
-              "step_number": 4
-            },
-            {
-              "title": "Follow-Up & Review",
-              "description": "Reviewing outcomes and setting next phase goals",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Follow post-session cool-down routines",
-            "Adhere to recommended diet and rest"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Assessment forms",
-            "Exercise equipment (as required)",
-            "Nutritional guides",
-            "Digital tracking tools"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Wear comfortable clothing",
-            "Ensure adequate space for sessions",
-            "Keep hydrated"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "Improved fitness levels, reduced pain, and enhanced mental well-being."
-        },
-        {
-          "type": "important_notes",
-          "items": "Please disclose any medical conditions before sessions begin."
-        },
-        {
-          "type": "warranty",
-          "details": "Free rescheduling for trainer cancellations; first-session satisfaction guarantee.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "No prior experience is needed; programmes are tailored to all fitness levels.",
-              "question": "Do I need prior experience?"
-            },
-            {
-              "answer": "Yes, we offer in-home, studio, and online sessions.",
-              "question": "Can sessions happen at my home?"
-            },
-            {
-              "answer": "Most clients notice improvements within 4-6 weeks with consistent sessions.",
-              "question": "How soon will I see results?"
-            },
-            {
-              "answer": "Yes, all our health professionals hold valid certifications from recognised bodies.",
-              "question": "Are the professionals certified?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Stay consistent — even 3 sessions per week makes a significant difference."
-          ]
-        },
-        {
-          "dos": [
-            "Communicate openly about pain or discomfort during sessions."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not skip prescribed rest days."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.181311+00:00",
-      "updated_at": "2026-09-05T15:40:33.181311+00:00"
-    }
-  ]
-}
+  {
+    "id": "37423b94-8ad3-5ffe-9bbc-6ffc64053bef",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Fitness",
+    "name": "Corporate Desk-Worker Fitness Coach",
+    "price": 2999.0,
+    "description": "Posture reset, hip flexor stretch, and quick 30-minute stress-buster workouts.",
+    "highlights": [
+      "Professional Corporate Desk-Worker Fitness Coach procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Corporate Desk-Worker Fitness Coach procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 45 minutes.",
+        "question": "How long does Corporate Desk-Worker Fitness Coach take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "086fef9d-c302-517a-b45d-28dd67d5cb5a",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Fitness",
+    "name": "Elderly Mobility & Senior Fitness Trainer",
+    "price": 3499.0,
+    "description": "Gentle low-impact exercises improving balance, leg strength, and joint mobility for senior citizens.",
+    "highlights": [
+      "Professional Elderly Mobility & Senior Fitness Trainer procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Elderly Mobility & Senior Fitness Trainer procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 45 minutes.",
+        "question": "How long does Elderly Mobility & Senior Fitness Trainer take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "204889e8-705a-5bb2-ade8-da7ce42762ec",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Fitness",
+    "name": "HIIT & Functional Bodyweight Conditioning",
+    "price": 3999.0,
+    "description": "High-intensity interval training boosting stamina, metabolism, and athletic agility.",
+    "highlights": [
+      "Professional HIIT & Functional Bodyweight Conditioning procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete HIIT & Functional Bodyweight Conditioning procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 45 minutes.",
+        "question": "How long does HIIT & Functional Bodyweight Conditioning take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "014dbb7c-f2a5-5154-91f1-c72511dfd9bc",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Fitness",
+    "name": "Personal Home Gym Fitness Trainer (1-on-1)",
+    "price": 4999.0,
+    "description": "Certified fitness coach bringing resistance bands & dumbbells for weight loss and muscle toning at home.",
+    "highlights": [
+      "Professional Personal Home Gym Fitness Trainer (1-on-1) procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Personal Home Gym Fitness Trainer (1-on-1) procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Personal Home Gym Fitness Trainer (1-on-1) take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "325a2da2-5d9e-5689-ae7e-1a64c5934358",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Fitness",
+    "name": "Post-Pregnancy Weight Loss Coach",
+    "price": 4999.0,
+    "description": "Safe diastasis recti recovery, pelvic floor activation, and gradual fat loss exercise.",
+    "highlights": [
+      "Professional Post-Pregnancy Weight Loss Coach procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Post-Pregnancy Weight Loss Coach procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 45 minutes.",
+        "question": "How long does Post-Pregnancy Weight Loss Coach take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "2566f951-af68-5072-a8cb-65932557d02c",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Fitness",
+    "name": "Weight Gain & Muscle Building Coach",
+    "price": 4499.0,
+    "description": "Hypertrophy workout routines, progressive overload tracking, and protein diet guidance.",
+    "highlights": [
+      "Professional Weight Gain & Muscle Building Coach procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Weight Gain & Muscle Building Coach procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Weight Gain & Muscle Building Coach take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "0c2ad276-9094-527f-abf9-fe87d066b22f",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Fitness",
+    "name": "Zumba & Cardio Dance Workout Trainer",
+    "price": 3499.0,
+    "description": "High-energy calorie-burning aerobic dance workout session set to upbeat music at home.",
+    "highlights": [
+      "Professional Zumba & Cardio Dance Workout Trainer procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Zumba & Cardio Dance Workout Trainer procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Zumba & Cardio Dance Workout Trainer take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "e802b517-8b47-5d0b-b47a-6768c187a156",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Mental Wellness & Counselling",
+    "name": "Mental Wellness & Counselling Premium Care Option 19",
+    "price": 3899.0,
+    "description": "Specialized high-end Mental Wellness & Counselling service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Mental Wellness & Counselling Premium Care Option 19 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Mental Wellness & Counselling Premium Care Option 19 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Mental Wellness & Counselling Premium Care Option 19 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "f6667c15-c1ab-551f-a939-407f293cb264",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Mental Wellness & Counselling",
+    "name": "Mental Wellness & Counselling Premium Care Option 21",
+    "price": 4099.0,
+    "description": "Specialized high-end Mental Wellness & Counselling service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Mental Wellness & Counselling Premium Care Option 21 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Mental Wellness & Counselling Premium Care Option 21 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Mental Wellness & Counselling Premium Care Option 21 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "5b7013df-172b-5a09-ab5e-6363466c7fb6",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Mental Wellness & Counselling",
+    "name": "Mental Wellness & Counselling Premium Care Option 5",
+    "price": 2499.0,
+    "description": "Specialized high-end Mental Wellness & Counselling service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Mental Wellness & Counselling Premium Care Option 5 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Mental Wellness & Counselling Premium Care Option 5 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Mental Wellness & Counselling Premium Care Option 5 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "8779e21f-7909-588c-8d1f-c83a1d0ce9f6",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Mental Wellness & Counselling",
+    "name": "Mental Wellness & Counselling Premium Care Option 9",
+    "price": 2899.0,
+    "description": "Specialized high-end Mental Wellness & Counselling service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Mental Wellness & Counselling Premium Care Option 9 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Mental Wellness & Counselling Premium Care Option 9 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Mental Wellness & Counselling Premium Care Option 9 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "6c5c273c-3ccd-5f47-9cda-f39ae93a9945",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Nutrition & Diet Counselling",
+    "name": "Nutrition & Diet Counselling Premium Care Option 6",
+    "price": 2599.0,
+    "description": "Specialized high-end Nutrition & Diet Counselling service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Nutrition & Diet Counselling Premium Care Option 6 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Nutrition & Diet Counselling Premium Care Option 6 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Nutrition & Diet Counselling Premium Care Option 6 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "a19e0396-6423-5eb5-86cc-79610f36e0a8",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Personal Training",
+    "name": "Personal Training Premium Care Option 12",
+    "price": 3199.0,
+    "description": "Specialized high-end Personal Training service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Personal Training Premium Care Option 12 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Personal Training Premium Care Option 12 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Personal Training Premium Care Option 12 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "b2e904fb-9bf8-577e-b11f-c1497a08ff68",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Personal Training",
+    "name": "Personal Training Premium Care Option 14",
+    "price": 3399.0,
+    "description": "Specialized high-end Personal Training service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Personal Training Premium Care Option 14 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Personal Training Premium Care Option 14 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Personal Training Premium Care Option 14 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "e7631e11-38b8-5458-bacb-5a6fffcd9bb6",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Personal Training",
+    "name": "Personal Training Premium Care Option 18",
+    "price": 3799.0,
+    "description": "Specialized high-end Personal Training service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Personal Training Premium Care Option 18 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Personal Training Premium Care Option 18 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Personal Training Premium Care Option 18 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "f5b2a772-3ace-5c85-a8ad-55437e913f65",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Personal Training",
+    "name": "Personal Training Premium Care Option 20",
+    "price": 3999.0,
+    "description": "Specialized high-end Personal Training service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Personal Training Premium Care Option 20 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Personal Training Premium Care Option 20 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Personal Training Premium Care Option 20 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "9256c5e4-81d3-5733-8bf3-ffe2fb8d546c",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Physiotherapy & Rehabilitation",
+    "name": "Physiotherapy & Rehabilitation Premium Care Option 10",
+    "price": 2999.0,
+    "description": "Specialized high-end Physiotherapy & Rehabilitation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Physiotherapy & Rehabilitation Premium Care Option 10 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Physiotherapy & Rehabilitation Premium Care Option 10 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Physiotherapy & Rehabilitation Premium Care Option 10 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "a1ebe5ec-fd28-597b-a1ba-7d1dfbc3ab88",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Physiotherapy & Rehabilitation",
+    "name": "Physiotherapy & Rehabilitation Premium Care Option 13",
+    "price": 3299.0,
+    "description": "Specialized high-end Physiotherapy & Rehabilitation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Physiotherapy & Rehabilitation Premium Care Option 13 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Physiotherapy & Rehabilitation Premium Care Option 13 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Physiotherapy & Rehabilitation Premium Care Option 13 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "d24162b7-7c26-515c-81d2-a2dd1b6d6b9c",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Physiotherapy & Rehabilitation",
+    "name": "Physiotherapy & Rehabilitation Premium Care Option 15",
+    "price": 3499.0,
+    "description": "Specialized high-end Physiotherapy & Rehabilitation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Physiotherapy & Rehabilitation Premium Care Option 15 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Physiotherapy & Rehabilitation Premium Care Option 15 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Physiotherapy & Rehabilitation Premium Care Option 15 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "e12e5534-f1b9-5152-a626-1c2ce39fc8ce",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Physiotherapy & Rehabilitation",
+    "name": "Physiotherapy & Rehabilitation Premium Care Option 17",
+    "price": 3699.0,
+    "description": "Specialized high-end Physiotherapy & Rehabilitation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Physiotherapy & Rehabilitation Premium Care Option 17 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Physiotherapy & Rehabilitation Premium Care Option 17 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Physiotherapy & Rehabilitation Premium Care Option 17 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "73444069-ba40-5669-bdc3-9772343dcc3f",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Physiotherapy & Rehabilitation",
+    "name": "Physiotherapy & Rehabilitation Premium Care Option 8",
+    "price": 2799.0,
+    "description": "Specialized high-end Physiotherapy & Rehabilitation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Physiotherapy & Rehabilitation Premium Care Option 8 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Physiotherapy & Rehabilitation Premium Care Option 8 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Physiotherapy & Rehabilitation Premium Care Option 8 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "3f36e9ac-b96d-5a4e-9e23-317f0f199f9a",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Professional Wellness",
+    "name": "Professional Wellness Premium Care Option 2",
+    "price": 2199.0,
+    "description": "Specialized high-end Professional Wellness service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Professional Wellness Premium Care Option 2 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Professional Wellness Premium Care Option 2 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Professional Wellness Premium Care Option 2 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "399364d1-7439-53fc-b3a6-36c0c73de25d",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Sports Coaching",
+    "name": "Sports Coaching Premium Care Option 1",
+    "price": 2099.0,
+    "description": "Specialized high-end Sports Coaching service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Sports Coaching Premium Care Option 1 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Sports Coaching Premium Care Option 1 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Sports Coaching Premium Care Option 1 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "953ecc43-5088-51ab-8b86-d4758c55357f",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Yoga & Meditation",
+    "name": "Yoga & Meditation Premium Care Option 11",
+    "price": 3099.0,
+    "description": "Specialized high-end Yoga & Meditation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Yoga & Meditation Premium Care Option 11 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Yoga & Meditation Premium Care Option 11 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Yoga & Meditation Premium Care Option 11 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "ddc2f5a0-2e6f-5cd5-bba3-2b2359f6d683",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Yoga & Meditation",
+    "name": "Yoga & Meditation Premium Care Option 16",
+    "price": 3599.0,
+    "description": "Specialized high-end Yoga & Meditation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Yoga & Meditation Premium Care Option 16 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Yoga & Meditation Premium Care Option 16 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Yoga & Meditation Premium Care Option 16 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "fa27681f-33b2-59a3-b0b2-5a25e2e81830",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Yoga & Meditation",
+    "name": "Yoga & Meditation Premium Care Option 22",
+    "price": 4199.0,
+    "description": "Specialized high-end Yoga & Meditation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Yoga & Meditation Premium Care Option 22 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Yoga & Meditation Premium Care Option 22 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Yoga & Meditation Premium Care Option 22 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "402ea739-d08c-56b4-9c11-96ec3b865db2",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Yoga & Meditation",
+    "name": "Yoga & Meditation Premium Care Option 3",
+    "price": 2299.0,
+    "description": "Specialized high-end Yoga & Meditation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Yoga & Meditation Premium Care Option 3 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Yoga & Meditation Premium Care Option 3 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Yoga & Meditation Premium Care Option 3 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "4f1ccaa5-994d-5bcb-95ce-9923b894b0ce",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Yoga & Meditation",
+    "name": "Yoga & Meditation Premium Care Option 4",
+    "price": 2399.0,
+    "description": "Specialized high-end Yoga & Meditation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Yoga & Meditation Premium Care Option 4 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Yoga & Meditation Premium Care Option 4 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Yoga & Meditation Premium Care Option 4 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "6e776f8b-dd09-5612-88ba-c333ebaa6027",
+    "category": "9. Health, Fitness & Wellness",
+    "subcategory": "Yoga & Meditation",
+    "name": "Yoga & Meditation Premium Care Option 7",
+    "price": 2699.0,
+    "description": "Specialized high-end Yoga & Meditation service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Yoga & Meditation Premium Care Option 7 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Yoga & Meditation Premium Care Option 7 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Yoga & Meditation Premium Care Option 7 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  }
+]

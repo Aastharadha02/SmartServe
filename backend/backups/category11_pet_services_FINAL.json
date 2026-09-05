@@ -1,3789 +1,902 @@
-{
-  "metadata": {
-    "category": "6. Smart Home & Security",
-    "backup_type": "CATEGORY_FINAL",
-    "timestamp": "2026-09-05T15:40:42.627061+00:00",
-    "total_services": 25,
-    "subcategories": {
-      "Dog Grooming": 6
-    },
-    "status": "PROTECTED_AND_PERSISTED"
+[
+  {
+    "id": "5c61d5df-f335-5c43-b47f-d671b134142c",
+    "category": "11. Pet Services",
+    "subcategory": "Dog Grooming",
+    "name": "Dog Grooming Premium Care Option 1",
+    "price": 2099.0,
+    "description": "Specialized high-end Dog Grooming service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Dog Grooming Premium Care Option 1 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Dog Grooming Premium Care Option 1 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Dog Grooming Premium Care Option 1 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
   },
-  "services": [
-    {
-      "id": "4f744793-3e3c-532a-bc2e-40330d326e13",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Grooming",
-      "name": "Dog Grooming Service Variation 1",
-      "base_price": 700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog grooming service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Grooming specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.577149+00:00",
-      "updated_at": "2026-09-05T15:40:33.577149+00:00"
-    },
-    {
-      "id": "09d1eee1-5656-5d4b-af72-69fc9e8bea2b",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Grooming",
-      "name": "Dog Grooming Service Variation 2",
-      "base_price": 900.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog grooming service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Grooming specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.580890+00:00",
-      "updated_at": "2026-09-05T15:40:33.580890+00:00"
-    },
-    {
-      "id": "a407e5eb-c8eb-5981-9caa-78da15b6ae97",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Grooming",
-      "name": "Dog Grooming Service Variation 3",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog grooming service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Grooming specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.583614+00:00",
-      "updated_at": "2026-09-05T15:40:33.583614+00:00"
-    },
-    {
-      "id": "047f1a2c-5560-5290-ad70-932d31819b3d",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Grooming",
-      "name": "Dog Grooming Service Variation 4",
-      "base_price": 1300.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog grooming service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Grooming specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.586108+00:00",
-      "updated_at": "2026-09-05T15:40:33.586108+00:00"
-    },
-    {
-      "id": "5c61d5df-f335-5c43-b47f-d671b134142c",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Grooming",
-      "name": "Dog Grooming Service Variation 5",
-      "base_price": 1500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog grooming service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Grooming specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.588309+00:00",
-      "updated_at": "2026-09-05T15:40:33.588309+00:00"
-    },
-    {
-      "id": "3cb848a2-cbd6-5efb-9cb8-9ca7fbd33ac9",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Grooming",
-      "name": "Dog Grooming Service Variation 6",
-      "base_price": 1700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog grooming service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Grooming specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.590778+00:00",
-      "updated_at": "2026-09-05T15:40:33.590778+00:00"
-    },
-    {
-      "id": "aabd7a83-ae18-582b-914d-91e31cdfc9bf",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Training",
-      "name": "Dog Training Service Variation 1",
-      "base_price": 700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog training service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Training specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.593242+00:00",
-      "updated_at": "2026-09-05T15:40:33.593242+00:00"
-    },
-    {
-      "id": "8d5b166d-d416-574b-813e-2ded0a26c4e3",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Training",
-      "name": "Dog Training Service Variation 2",
-      "base_price": 900.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog training service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Training specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.595837+00:00",
-      "updated_at": "2026-09-05T15:40:33.595837+00:00"
-    },
-    {
-      "id": "65a78a43-3868-54d2-a616-642dbf2bdea2",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Training",
-      "name": "Dog Training Service Variation 3",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog training service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Training specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.598304+00:00",
-      "updated_at": "2026-09-05T15:40:33.598304+00:00"
-    },
-    {
-      "id": "b9adf640-88d1-5fe3-966a-d530e6c0c105",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Training",
-      "name": "Dog Training Service Variation 4",
-      "base_price": 1300.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog training service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Training specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.600577+00:00",
-      "updated_at": "2026-09-05T15:40:33.600577+00:00"
-    },
-    {
-      "id": "4dbbb340-3245-5037-8b45-c60227dab7d3",
-      "category": "11. Pet Services",
-      "subcategory": "Dog Training",
-      "name": "Dog Training Service Variation 5",
-      "base_price": 1500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dog training service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Dog Training specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.602618+00:00",
-      "updated_at": "2026-09-05T15:40:33.602618+00:00"
-    },
-    {
-      "id": "6a9b539a-9be2-5e2c-8f91-e43cc588141c",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Accessories & Nutrition",
-      "name": "Pet Accessories & Nutrition Service Variation 1",
-      "base_price": 700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet accessories & nutrition service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Accessories & Nutrition specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.605122+00:00",
-      "updated_at": "2026-09-05T15:40:33.605122+00:00"
-    },
-    {
-      "id": "d7dd1acb-f1ab-5012-bc08-727af3409adf",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Accessories & Nutrition",
-      "name": "Pet Accessories & Nutrition Service Variation 2",
-      "base_price": 900.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet accessories & nutrition service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Accessories & Nutrition specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.607326+00:00",
-      "updated_at": "2026-09-05T15:40:33.607326+00:00"
-    },
-    {
-      "id": "23944650-654e-5f8a-bc57-57dc6985c98f",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Accessories & Nutrition",
-      "name": "Pet Accessories & Nutrition Service Variation 3",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet accessories & nutrition service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Accessories & Nutrition specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.609731+00:00",
-      "updated_at": "2026-09-05T15:40:33.609731+00:00"
-    },
-    {
-      "id": "90e91453-4a3d-5cea-be1e-9aa3eae3b5b2",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Accessories & Nutrition",
-      "name": "Pet Accessories & Nutrition Service Variation 4",
-      "base_price": 1300.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet accessories & nutrition service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Accessories & Nutrition specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.613105+00:00",
-      "updated_at": "2026-09-05T15:40:33.613105+00:00"
-    },
-    {
-      "id": "b196fd99-9ce8-53e9-83ca-da23d07b6320",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Sitting & Boarding",
-      "name": "Pet Sitting & Boarding Service Variation 1",
-      "base_price": 700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet sitting & boarding service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Sitting & Boarding specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.615500+00:00",
-      "updated_at": "2026-09-05T15:40:33.615500+00:00"
-    },
-    {
-      "id": "97919a8d-c4a8-5850-91e5-fd8a99a04845",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Sitting & Boarding",
-      "name": "Pet Sitting & Boarding Service Variation 2",
-      "base_price": 900.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet sitting & boarding service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Sitting & Boarding specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.618260+00:00",
-      "updated_at": "2026-09-05T15:40:33.618260+00:00"
-    },
-    {
-      "id": "49fa8ea4-458a-52ff-9280-25c9d4d3aa0f",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Sitting & Boarding",
-      "name": "Pet Sitting & Boarding Service Variation 3",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet sitting & boarding service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Sitting & Boarding specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.620360+00:00",
-      "updated_at": "2026-09-05T15:40:33.620360+00:00"
-    },
-    {
-      "id": "0fe13cb7-d511-5bae-aa14-7ea32861f650",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Sitting & Boarding",
-      "name": "Pet Sitting & Boarding Service Variation 4",
-      "base_price": 1300.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet sitting & boarding service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Sitting & Boarding specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.623038+00:00",
-      "updated_at": "2026-09-05T15:40:33.623038+00:00"
-    },
-    {
-      "id": "f519aa47-1674-5bb3-8598-72dd04debe25",
-      "category": "11. Pet Services",
-      "subcategory": "Pet Sitting & Boarding",
-      "name": "Pet Sitting & Boarding Service Variation 5",
-      "base_price": 1500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional pet sitting & boarding service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Pet Sitting & Boarding specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.625226+00:00",
-      "updated_at": "2026-09-05T15:40:33.625226+00:00"
-    },
-    {
-      "id": "f3d2721a-1c3a-5d38-8d5a-43b87fe3941f",
-      "category": "11. Pet Services",
-      "subcategory": "Veterinary & Health Checkup",
-      "name": "Veterinary & Health Checkup Service Variation 1",
-      "base_price": 700.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional veterinary & health checkup service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Veterinary & Health Checkup specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.628033+00:00",
-      "updated_at": "2026-09-05T15:40:33.628033+00:00"
-    },
-    {
-      "id": "fcb9f5bb-5148-54f9-a41c-b54a97ac1a6c",
-      "category": "11. Pet Services",
-      "subcategory": "Veterinary & Health Checkup",
-      "name": "Veterinary & Health Checkup Service Variation 2",
-      "base_price": 900.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional veterinary & health checkup service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Veterinary & Health Checkup specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.630523+00:00",
-      "updated_at": "2026-09-05T15:40:33.630523+00:00"
-    },
-    {
-      "id": "e4c46c13-deb4-5980-8f9d-6a7beb40e017",
-      "category": "11. Pet Services",
-      "subcategory": "Veterinary & Health Checkup",
-      "name": "Veterinary & Health Checkup Service Variation 3",
-      "base_price": 1100.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional veterinary & health checkup service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Veterinary & Health Checkup specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.632877+00:00",
-      "updated_at": "2026-09-05T15:40:33.632877+00:00"
-    },
-    {
-      "id": "9b26c969-6e22-51e2-9334-634b17229d5d",
-      "category": "11. Pet Services",
-      "subcategory": "Veterinary & Health Checkup",
-      "name": "Veterinary & Health Checkup Service Variation 4",
-      "base_price": 1300.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional veterinary & health checkup service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Veterinary & Health Checkup specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.634991+00:00",
-      "updated_at": "2026-09-05T15:40:33.634991+00:00"
-    },
-    {
-      "id": "e9ba5e71-3b0d-53e9-bda9-ace253bc0172",
-      "category": "11. Pet Services",
-      "subcategory": "Veterinary & Health Checkup",
-      "name": "Veterinary & Health Checkup Service Variation 5",
-      "base_price": 1500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial pet assessment",
-        "Service execution by certified pet professional",
-        "Post-service health check",
-        "Owner care tips"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional veterinary & health checkup service for the health and happiness of your pet.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Veterinary & Health Checkup specialists",
-            "Safe and stress-free environment",
-            "Breed-specific care",
-            "Owner briefing post-service"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of specialty grooming products",
-            "Veterinary medication costs"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pet Assessment",
-              "description": "Evaluating the pet's breed, temperament, and specific needs",
-              "step_number": 1
-            },
-            {
-              "title": "Service Preparation",
-              "description": "Preparing equipment and a safe environment",
-              "step_number": 2
-            },
-            {
-              "title": "Service Execution",
-              "description": "Delivering the requested pet care service",
-              "step_number": 3
-            },
-            {
-              "title": "Post-Service Check",
-              "description": "Ensuring the pet is comfortable and healthy post-service",
-              "step_number": 4
-            },
-            {
-              "title": "Owner Handover & Tips",
-              "description": "Briefing the owner on aftercare and next steps",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Monitor pet behaviour for 24 hours post-service",
-            "Follow any dietary or medication advice given"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Professional grooming kit",
-            "Pet-safe cleaning products",
-            "First-aid kit",
-            "Leash and harness"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Ensure pet has been fed at least 2 hours before grooming",
-            "Provide vaccination records if applicable",
-            "Keep a calm environment during the visit"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A clean, healthy, and happy pet with improved coat and behaviour."
-        },
-        {
-          "type": "important_notes",
-          "items": "Aggressive pets may require additional handling precautions — please disclose temperament."
-        },
-        {
-          "type": "warranty",
-          "details": "Free re-service if quality standards are not met on first visit.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, our professionals are trained to handle all dog and cat breeds.",
-              "question": "Do you handle all breeds?"
-            },
-            {
-              "answer": "Absolutely — we only use vet-approved, non-toxic products.",
-              "question": "Are the products pet-safe?"
-            },
-            {
-              "answer": "Yes, our groomers are trained in gentle handling for anxious animals.",
-              "question": "Can you handle anxious pets?"
-            },
-            {
-              "answer": "Yes, we offer in-home mobile grooming services.",
-              "question": "Do you offer mobile pet grooming?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Regular grooming every 4-6 weeks keeps your pet's coat healthy."
-          ]
-        },
-        {
-          "dos": [
-            "Share your pet's medical history with the professional before each visit."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not bathe your dog immediately before a grooming appointment."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.637083+00:00",
-      "updated_at": "2026-09-05T15:40:33.637083+00:00"
-    }
-  ]
-}
+  {
+    "id": "a407e5eb-c8eb-5981-9caa-78da15b6ae97",
+    "category": "11. Pet Services",
+    "subcategory": "Dog Grooming",
+    "name": "Dog Grooming Premium Care Option 8",
+    "price": 2799.0,
+    "description": "Specialized high-end Dog Grooming service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Dog Grooming Premium Care Option 8 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Dog Grooming Premium Care Option 8 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Dog Grooming Premium Care Option 8 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "b9adf640-88d1-5fe3-966a-d530e6c0c105",
+    "category": "11. Pet Services",
+    "subcategory": "Dog Training",
+    "name": "Dog Training Premium Care Option 11",
+    "price": 3099.0,
+    "description": "Specialized high-end Dog Training service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Dog Training Premium Care Option 11 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Dog Training Premium Care Option 11 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Dog Training Premium Care Option 11 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "65a78a43-3868-54d2-a616-642dbf2bdea2",
+    "category": "11. Pet Services",
+    "subcategory": "Dog Training",
+    "name": "Dog Training Premium Care Option 2",
+    "price": 2199.0,
+    "description": "Specialized high-end Dog Training service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Dog Training Premium Care Option 2 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Dog Training Premium Care Option 2 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Dog Training Premium Care Option 2 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "8d5b166d-d416-574b-813e-2ded0a26c4e3",
+    "category": "11. Pet Services",
+    "subcategory": "Dog Training",
+    "name": "Dog Training Premium Care Option 4",
+    "price": 2399.0,
+    "description": "Specialized high-end Dog Training service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Dog Training Premium Care Option 4 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Dog Training Premium Care Option 4 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Dog Training Premium Care Option 4 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "aabd7a83-ae18-582b-914d-91e31cdfc9bf",
+    "category": "11. Pet Services",
+    "subcategory": "Dog Training",
+    "name": "Dog Training Premium Care Option 9",
+    "price": 2899.0,
+    "description": "Specialized high-end Dog Training service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Dog Training Premium Care Option 9 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Dog Training Premium Care Option 9 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Dog Training Premium Care Option 9 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "d7dd1acb-f1ab-5012-bc08-727af3409adf",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Accessories & Nutrition",
+    "name": "Pet Accessories & Nutrition Premium Care Option 12",
+    "price": 3199.0,
+    "description": "Specialized high-end Pet Accessories & Nutrition service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Pet Accessories & Nutrition Premium Care Option 12 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Pet Accessories & Nutrition Premium Care Option 12 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Pet Accessories & Nutrition Premium Care Option 12 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "6a9b539a-9be2-5e2c-8f91-e43cc588141c",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Accessories & Nutrition",
+    "name": "Pet Accessories & Nutrition Premium Care Option 3",
+    "price": 2299.0,
+    "description": "Specialized high-end Pet Accessories & Nutrition service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Pet Accessories & Nutrition Premium Care Option 3 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Pet Accessories & Nutrition Premium Care Option 3 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Pet Accessories & Nutrition Premium Care Option 3 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "90e91453-4a3d-5cea-be1e-9aa3eae3b5b2",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Accessories & Nutrition",
+    "name": "Pet Accessories & Nutrition Premium Care Option 5",
+    "price": 2499.0,
+    "description": "Specialized high-end Pet Accessories & Nutrition service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Pet Accessories & Nutrition Premium Care Option 5 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Pet Accessories & Nutrition Premium Care Option 5 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Pet Accessories & Nutrition Premium Care Option 5 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "23944650-654e-5f8a-bc57-57dc6985c98f",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Care",
+    "name": "Dog Walking & Exercise Visit (30 Mins)",
+    "price": 299.0,
+    "description": "Background-verified pet lover taking your dog for brisk outdoor walk, potty break, and hydration.",
+    "highlights": [
+      "Professional Dog Walking & Exercise Visit (30 Mins) procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Dog Walking & Exercise Visit (30 Mins) procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 30 minutes.",
+        "question": "How long does Dog Walking & Exercise Visit (30 Mins) take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "3cb848a2-cbd6-5efb-9cb8-9ca7fbd33ac9",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Care",
+    "name": "In-Home Pet Sitting & Feeding (Per Visit)",
+    "price": 499.0,
+    "description": "Caring pet sitter visiting home to feed food, clean litter box, give medication, and play with pets.",
+    "highlights": [
+      "Professional In-Home Pet Sitting & Feeding (Per Visit) procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete In-Home Pet Sitting & Feeding (Per Visit) procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 45 minutes.",
+        "question": "How long does In-Home Pet Sitting & Feeding (Per Visit) take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "09d1eee1-5656-5d4b-af72-69fc9e8bea2b",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Grooming",
+    "name": "Cat Bath, Fur De-Shedding & Nail Trim",
+    "price": 1299.0,
+    "description": "Gentle low-stress waterless or warm water cat bath, coat brushing, and claw trimming.",
+    "highlights": [
+      "Professional Cat Bath, Fur De-Shedding & Nail Trim procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Cat Bath, Fur De-Shedding & Nail Trim procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Cat Bath, Fur De-Shedding & Nail Trim take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "047f1a2c-5560-5290-ad70-932d31819b3d",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Grooming",
+    "name": "Full Dog Grooming & Haircut Spa Package",
+    "price": 1499.0,
+    "description": "Warm bath, breed-specific style haircut, nail clipping, ear cleaning, and anti-tick shampoo bath.",
+    "highlights": [
+      "Professional Full Dog Grooming & Haircut Spa Package procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Full Dog Grooming & Haircut Spa Package procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 75 minutes.",
+        "question": "How long does Full Dog Grooming & Haircut Spa Package take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "4dbbb340-3245-5037-8b45-c60227dab7d3",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Grooming",
+    "name": "Medicated Anti-Tick & Flea Bath Treatment",
+    "price": 899.0,
+    "description": "Medicated dip shampoo eliminating ticks, fleas, and mites followed by thorough blow-dry.",
+    "highlights": [
+      "Professional Medicated Anti-Tick & Flea Bath Treatment procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Medicated Anti-Tick & Flea Bath Treatment procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 45 minutes.",
+        "question": "How long does Medicated Anti-Tick & Flea Bath Treatment take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "4f744793-3e3c-532a-bc2e-40330d326e13",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Grooming",
+    "name": "Pet Ear Cleaning & Hygiene Sanitize Pack",
+    "price": 399.0,
+    "description": "Clearing ear wax, paw pad trimming, sanitary area trim, and mouth freshener spray.",
+    "highlights": [
+      "Professional Pet Ear Cleaning & Hygiene Sanitize Pack procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Pet Ear Cleaning & Hygiene Sanitize Pack procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 25 minutes.",
+        "question": "How long does Pet Ear Cleaning & Hygiene Sanitize Pack take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "b196fd99-9ce8-53e9-83ca-da23d07b6320",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Sitting & Boarding",
+    "name": "Pet Sitting & Boarding Premium Care Option 10",
+    "price": 2999.0,
+    "description": "Specialized high-end Pet Sitting & Boarding service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Pet Sitting & Boarding Premium Care Option 10 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Pet Sitting & Boarding Premium Care Option 10 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Pet Sitting & Boarding Premium Care Option 10 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "f519aa47-1674-5bb3-8598-72dd04debe25",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Sitting & Boarding",
+    "name": "Pet Sitting & Boarding Premium Care Option 16",
+    "price": 3599.0,
+    "description": "Specialized high-end Pet Sitting & Boarding service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Pet Sitting & Boarding Premium Care Option 16 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Pet Sitting & Boarding Premium Care Option 16 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Pet Sitting & Boarding Premium Care Option 16 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "97919a8d-c4a8-5850-91e5-fd8a99a04845",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Sitting & Boarding",
+    "name": "Pet Sitting & Boarding Premium Care Option 6",
+    "price": 2599.0,
+    "description": "Specialized high-end Pet Sitting & Boarding service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Pet Sitting & Boarding Premium Care Option 6 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Pet Sitting & Boarding Premium Care Option 6 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Pet Sitting & Boarding Premium Care Option 6 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "49fa8ea4-458a-52ff-9280-25c9d4d3aa0f",
+    "category": "11. Pet Services",
+    "subcategory": "Pet Training",
+    "name": "Obedience & Puppy Basic Behavioral Training",
+    "price": 4999.0,
+    "description": "10-session trainer teaching Sit, Stay, Heel, Leash walking, and stopping unwanted biting/chewing.",
+    "highlights": [
+      "Professional Obedience & Puppy Basic Behavioral Training procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Obedience & Puppy Basic Behavioral Training procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Obedience & Puppy Basic Behavioral Training take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "0fe13cb7-d511-5bae-aa14-7ea32861f650",
+    "category": "11. Pet Services",
+    "subcategory": "Veterinary",
+    "name": "At-Home Veterinary Health Checkup & Vaccination",
+    "price": 799.0,
+    "description": "Licensed vet visiting home for routine health exam, Deworming, and Annual 7-in-1 / Rabies vaccine.",
+    "highlights": [
+      "Professional At-Home Veterinary Health Checkup & Vaccination procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete At-Home Veterinary Health Checkup & Vaccination procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 30 minutes.",
+        "question": "How long does At-Home Veterinary Health Checkup & Vaccination take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "e4c46c13-deb4-5980-8f9d-6a7beb40e017",
+    "category": "11. Pet Services",
+    "subcategory": "Veterinary & Health Checkup",
+    "name": "Veterinary & Health Checkup Premium Care Option 13",
+    "price": 3299.0,
+    "description": "Specialized high-end Veterinary & Health Checkup service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Veterinary & Health Checkup Premium Care Option 13 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Veterinary & Health Checkup Premium Care Option 13 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Veterinary & Health Checkup Premium Care Option 13 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "e9ba5e71-3b0d-53e9-bda9-ace253bc0172",
+    "category": "11. Pet Services",
+    "subcategory": "Veterinary & Health Checkup",
+    "name": "Veterinary & Health Checkup Premium Care Option 14",
+    "price": 3399.0,
+    "description": "Specialized high-end Veterinary & Health Checkup service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Veterinary & Health Checkup Premium Care Option 14 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Veterinary & Health Checkup Premium Care Option 14 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Veterinary & Health Checkup Premium Care Option 14 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "f3d2721a-1c3a-5d38-8d5a-43b87fe3941f",
+    "category": "11. Pet Services",
+    "subcategory": "Veterinary & Health Checkup",
+    "name": "Veterinary & Health Checkup Premium Care Option 15",
+    "price": 3499.0,
+    "description": "Specialized high-end Veterinary & Health Checkup service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Veterinary & Health Checkup Premium Care Option 15 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Veterinary & Health Checkup Premium Care Option 15 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Veterinary & Health Checkup Premium Care Option 15 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "fcb9f5bb-5148-54f9-a41c-b54a97ac1a6c",
+    "category": "11. Pet Services",
+    "subcategory": "Veterinary & Health Checkup",
+    "name": "Veterinary & Health Checkup Premium Care Option 17",
+    "price": 3699.0,
+    "description": "Specialized high-end Veterinary & Health Checkup service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Veterinary & Health Checkup Premium Care Option 17 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Veterinary & Health Checkup Premium Care Option 17 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Veterinary & Health Checkup Premium Care Option 17 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "9b26c969-6e22-51e2-9334-634b17229d5d",
+    "category": "11. Pet Services",
+    "subcategory": "Veterinary & Health Checkup",
+    "name": "Veterinary & Health Checkup Premium Care Option 7",
+    "price": 2699.0,
+    "description": "Specialized high-end Veterinary & Health Checkup service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Veterinary & Health Checkup Premium Care Option 7 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Veterinary & Health Checkup Premium Care Option 7 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Veterinary & Health Checkup Premium Care Option 7 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  }
+]

@@ -1,4091 +1,974 @@
-{
-  "metadata": {
-    "category": "6. Smart Home & Security",
-    "backup_type": "CATEGORY_FINAL",
-    "timestamp": "2026-09-05T15:40:43.653432+00:00",
-    "total_services": 27,
-    "subcategories": {
-      "Home Shifting & Packing": 7
-    },
-    "status": "PROTECTED_AND_PERSISTED"
+[
+  {
+    "id": "1c01b197-30f4-5d69-8c3a-a0be63889195",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Delivery & Pickup",
+    "name": "Express Intra-City Document & Parcel Pickup",
+    "price": 249.0,
+    "description": "Immediate two-wheeler courier picking up urgent business files, keys, or gifts.",
+    "highlights": [
+      "Professional Express Intra-City Document & Parcel Pickup procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Express Intra-City Document & Parcel Pickup procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 45 minutes.",
+        "question": "How long does Express Intra-City Document & Parcel Pickup take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
   },
-  "services": [
-    {
-      "id": "142ef794-67df-55ce-aefe-17722c4ba8bd",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Home Shifting & Packing",
-      "name": "Home Shifting & Packing Service Variation 1",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable home shifting & packing services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Home Shifting & Packing professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.153348+00:00",
-      "updated_at": "2026-09-05T15:40:34.153348+00:00"
-    },
-    {
-      "id": "bf9ef6d3-0143-5c64-9c1f-8463308554b7",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Home Shifting & Packing",
-      "name": "Home Shifting & Packing Service Variation 2",
-      "base_price": 1800.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable home shifting & packing services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Home Shifting & Packing professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.157103+00:00",
-      "updated_at": "2026-09-05T15:40:34.157103+00:00"
-    },
-    {
-      "id": "44bc15d3-2dc2-5407-9a0e-a84a536cf53d",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Home Shifting & Packing",
-      "name": "Home Shifting & Packing Service Variation 3",
-      "base_price": 2200.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable home shifting & packing services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Home Shifting & Packing professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.159486+00:00",
-      "updated_at": "2026-09-05T15:40:34.159486+00:00"
-    },
-    {
-      "id": "e216c0f0-cc0c-5dfb-ae9d-b71cc9ee5f06",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Home Shifting & Packing",
-      "name": "Home Shifting & Packing Service Variation 4",
-      "base_price": 2600.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable home shifting & packing services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Home Shifting & Packing professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.162194+00:00",
-      "updated_at": "2026-09-05T15:40:34.162194+00:00"
-    },
-    {
-      "id": "1c01b197-30f4-5d69-8c3a-a0be63889195",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Home Shifting & Packing",
-      "name": "Home Shifting & Packing Service Variation 5",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable home shifting & packing services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Home Shifting & Packing professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.164726+00:00",
-      "updated_at": "2026-09-05T15:40:34.164726+00:00"
-    },
-    {
-      "id": "6dbabdc9-db64-5d81-bbdb-3e92e340fb58",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Home Shifting & Packing",
-      "name": "Home Shifting & Packing Service Variation 6",
-      "base_price": 3400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable home shifting & packing services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Home Shifting & Packing professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.166840+00:00",
-      "updated_at": "2026-09-05T15:40:34.166840+00:00"
-    },
-    {
-      "id": "17f179bf-7667-5f3d-afd5-d4e4ee315620",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Home Shifting & Packing",
-      "name": "Home Shifting & Packing Service Variation 7",
-      "base_price": 3800.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable home shifting & packing services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Home Shifting & Packing professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.169242+00:00",
-      "updated_at": "2026-09-05T15:40:34.169242+00:00"
-    },
-    {
-      "id": "82213c14-7b97-5dad-8721-f2d524f8fc70",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Junk Removal & Disposal",
-      "name": "Junk Removal & Disposal Service Variation 1",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable junk removal & disposal services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Junk Removal & Disposal professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.171289+00:00",
-      "updated_at": "2026-09-05T15:40:34.171289+00:00"
-    },
-    {
-      "id": "ba26862d-85dd-5c2e-9ba0-78b615e06ad5",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Junk Removal & Disposal",
-      "name": "Junk Removal & Disposal Service Variation 2",
-      "base_price": 1800.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable junk removal & disposal services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Junk Removal & Disposal professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.173350+00:00",
-      "updated_at": "2026-09-05T15:40:34.173350+00:00"
-    },
-    {
-      "id": "d40b03ca-14cc-5075-a4c5-c823dd823935",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Junk Removal & Disposal",
-      "name": "Junk Removal & Disposal Service Variation 3",
-      "base_price": 2200.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable junk removal & disposal services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Junk Removal & Disposal professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.175713+00:00",
-      "updated_at": "2026-09-05T15:40:34.175713+00:00"
-    },
-    {
-      "id": "7d11b486-1097-5341-a8a5-87ba0f75c18b",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Junk Removal & Disposal",
-      "name": "Junk Removal & Disposal Service Variation 4",
-      "base_price": 2600.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable junk removal & disposal services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Junk Removal & Disposal professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.178704+00:00",
-      "updated_at": "2026-09-05T15:40:34.178704+00:00"
-    },
-    {
-      "id": "9d2e0a0b-cae2-5e9e-864b-e9c4084176e4",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Junk Removal & Disposal",
-      "name": "Junk Removal & Disposal Service Variation 5",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable junk removal & disposal services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Junk Removal & Disposal professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.181482+00:00",
-      "updated_at": "2026-09-05T15:40:34.181482+00:00"
-    },
-    {
-      "id": "c5096bf4-5677-50ed-bd66-23ab4e909013",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Last-Mile Delivery",
-      "name": "Last-Mile Delivery Service Variation 1",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable last-mile delivery services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Last-Mile Delivery professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.183687+00:00",
-      "updated_at": "2026-09-05T15:40:34.183687+00:00"
-    },
-    {
-      "id": "bfc1a8a7-8d4f-5c7d-8866-6f33a9a90c3d",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Last-Mile Delivery",
-      "name": "Last-Mile Delivery Service Variation 2",
-      "base_price": 1800.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable last-mile delivery services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Last-Mile Delivery professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.185828+00:00",
-      "updated_at": "2026-09-05T15:40:34.185828+00:00"
-    },
-    {
-      "id": "1197b272-b994-5781-88a4-20fda966a48b",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Last-Mile Delivery",
-      "name": "Last-Mile Delivery Service Variation 3",
-      "base_price": 2200.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable last-mile delivery services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Last-Mile Delivery professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.188463+00:00",
-      "updated_at": "2026-09-05T15:40:34.188463+00:00"
-    },
-    {
-      "id": "d569432a-b4cd-5584-9b6b-4a617ee57c03",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Last-Mile Delivery",
-      "name": "Last-Mile Delivery Service Variation 4",
-      "base_price": 2600.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable last-mile delivery services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Last-Mile Delivery professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.190699+00:00",
-      "updated_at": "2026-09-05T15:40:34.190699+00:00"
-    },
-    {
-      "id": "ce1ed4d8-259d-54ac-82a0-734b4fcbdc1b",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Last-Mile Delivery",
-      "name": "Last-Mile Delivery Service Variation 5",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable last-mile delivery services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Last-Mile Delivery professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.192953+00:00",
-      "updated_at": "2026-09-05T15:40:34.192953+00:00"
-    },
-    {
-      "id": "a698a0c1-edb5-5247-92b7-7afd5d00c0d7",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Local Errands & Assistance",
-      "name": "Local Errands & Assistance Service Variation 1",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable local errands & assistance services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Local Errands & Assistance professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.196104+00:00",
-      "updated_at": "2026-09-05T15:40:34.196104+00:00"
-    },
-    {
-      "id": "2faaeb27-4399-56f4-985d-157dd649daa4",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Local Errands & Assistance",
-      "name": "Local Errands & Assistance Service Variation 2",
-      "base_price": 1800.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable local errands & assistance services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Local Errands & Assistance professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.198324+00:00",
-      "updated_at": "2026-09-05T15:40:34.198324+00:00"
-    },
-    {
-      "id": "43feb320-ba7d-5f6e-b659-a4e33877a25c",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Local Errands & Assistance",
-      "name": "Local Errands & Assistance Service Variation 3",
-      "base_price": 2200.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable local errands & assistance services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Local Errands & Assistance professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.200944+00:00",
-      "updated_at": "2026-09-05T15:40:34.200944+00:00"
-    },
-    {
-      "id": "46d8db20-3e81-5240-8af7-c6aeb1680155",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Local Errands & Assistance",
-      "name": "Local Errands & Assistance Service Variation 4",
-      "base_price": 2600.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable local errands & assistance services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Local Errands & Assistance professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.203053+00:00",
-      "updated_at": "2026-09-05T15:40:34.203053+00:00"
-    },
-    {
-      "id": "d91c5724-7eb7-5f63-bb00-97461b843b2c",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Local Errands & Assistance",
-      "name": "Local Errands & Assistance Service Variation 5",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable local errands & assistance services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Local Errands & Assistance professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.205071+00:00",
-      "updated_at": "2026-09-05T15:40:34.205071+00:00"
-    },
-    {
-      "id": "d792920f-187c-5058-b2c9-35939008929f",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Vehicle Transport",
-      "name": "Vehicle Transport Service Variation 1",
-      "base_price": 1400.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable vehicle transport services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Vehicle Transport professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.207315+00:00",
-      "updated_at": "2026-09-05T15:40:34.207315+00:00"
-    },
-    {
-      "id": "6466540c-1fd5-540f-b10f-e7feb984e053",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Vehicle Transport",
-      "name": "Vehicle Transport Service Variation 2",
-      "base_price": 1800.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable vehicle transport services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Vehicle Transport professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.209636+00:00",
-      "updated_at": "2026-09-05T15:40:34.209636+00:00"
-    },
-    {
-      "id": "ccd4d5ff-5b51-5c80-b1b7-7791fc2974c0",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Vehicle Transport",
-      "name": "Vehicle Transport Service Variation 3",
-      "base_price": 2200.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable vehicle transport services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Vehicle Transport professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.212779+00:00",
-      "updated_at": "2026-09-05T15:40:34.212779+00:00"
-    },
-    {
-      "id": "f7feff42-4eec-5316-a9c3-98e2f4088c57",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Vehicle Transport",
-      "name": "Vehicle Transport Service Variation 4",
-      "base_price": 2600.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable vehicle transport services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Vehicle Transport professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.214777+00:00",
-      "updated_at": "2026-09-05T15:40:34.214777+00:00"
-    },
-    {
-      "id": "1a248afa-46a2-5fa8-94fb-3acae99d76cd",
-      "category": "14. Moving, Delivery & Local Assistance",
-      "subcategory": "Vehicle Transport",
-      "name": "Vehicle Transport Service Variation 5",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Pre-move survey and planning",
-        "Packing materials (basic)",
-        "Loading, transport, and unloading",
-        "Post-delivery clean-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Reliable vehicle transport services for a smooth and stress-free move.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Trained Vehicle Transport professionals",
-            "GPS-tracked vehicles",
-            "Fully insured service",
-            "Damage-free guarantee"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Cost of premium packing materials (bubble wrap, crates)",
-            "Storage charges beyond 24 hours"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Pre-Move Survey",
-              "description": "Assessing volume, fragile items, and special requirements",
-              "step_number": 1
-            },
-            {
-              "title": "Packing",
-              "description": "Carefully packing all items with appropriate materials",
-              "step_number": 2
-            },
-            {
-              "title": "Loading & Transport",
-              "description": "Safely loading and transporting to the destination",
-              "step_number": 3
-            },
-            {
-              "title": "Unloading & Placement",
-              "description": "Unloading and placing items as per customer instructions",
-              "step_number": 4
-            },
-            {
-              "title": "Final Check & Clean-Up",
-              "description": "Verifying all items are delivered and removing packing waste",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Check all items against inventory within 24 hours",
-            "Report any damage within 48 hours for warranty claim"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Moving blankets and straps",
-            "Trolleys and dollies",
-            "Packing tape and boxes",
-            "GPS-enabled truck"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Sort and label boxes before the team arrives",
-            "Disconnect appliances 24 hours before moving day",
-            "Ensure parking access at both locations"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A damage-free, on-time move with all belongings safely delivered."
-        },
-        {
-          "type": "important_notes",
-          "items": "Insurance coverage applies to standard household goods only; valuables should be declared upfront."
-        },
-        {
-          "type": "warranty",
-          "details": "Free damage resolution within 48 hours of delivery if items are found damaged.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "Yes, basic packing materials are included; premium options are available at extra cost.",
-              "question": "Do you provide packing materials?"
-            },
-            {
-              "answer": "Yes, all items are covered under transit insurance up to a declared value.",
-              "question": "Are my belongings insured during transit?"
-            },
-            {
-              "answer": "Yes, our teams are equipped to move all types of furniture and appliances.",
-              "question": "Can you move heavy or oversized furniture?"
-            },
-            {
-              "answer": "You will receive a live GPS tracking link once the vehicle departs.",
-              "question": "How do I track my shipment?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Label all boxes by room name to speed up unpacking."
-          ]
-        },
-        {
-          "dos": [
-            "Declare high-value items before the move for proper insurance coverage."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not overload boxes — it increases the risk of damage."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:34.216816+00:00",
-      "updated_at": "2026-09-05T15:40:34.216816+00:00"
-    }
-  ]
-}
+  {
+    "id": "43feb320-ba7d-5f6e-b659-a4e33877a25c",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Delivery & Pickup",
+    "name": "Heavy Luggage & Suitcase Airport Transport",
+    "price": 699.0,
+    "description": "Doorstep pickup of heavy excess baggage delivered directly to airport terminal or home.",
+    "highlights": [
+      "Professional Heavy Luggage & Suitcase Airport Transport procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Heavy Luggage & Suitcase Airport Transport procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Heavy Luggage & Suitcase Airport Transport take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "e216c0f0-cc0c-5dfb-ae9d-b71cc9ee5f06",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Home Shifting & Packing",
+    "name": "Home Shifting & Packing Premium Care Option 18",
+    "price": 3799.0,
+    "description": "Specialized high-end Home Shifting & Packing service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Home Shifting & Packing Premium Care Option 18 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Home Shifting & Packing Premium Care Option 18 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Home Shifting & Packing Premium Care Option 18 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "6dbabdc9-db64-5d81-bbdb-3e92e340fb58",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Home Shifting & Packing",
+    "name": "Home Shifting & Packing Premium Care Option 3",
+    "price": 2299.0,
+    "description": "Specialized high-end Home Shifting & Packing service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Home Shifting & Packing Premium Care Option 3 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Home Shifting & Packing Premium Care Option 3 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Home Shifting & Packing Premium Care Option 3 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "bf9ef6d3-0143-5c64-9c1f-8463308554b7",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Home Shifting & Packing",
+    "name": "Home Shifting & Packing Premium Care Option 9",
+    "price": 2899.0,
+    "description": "Specialized high-end Home Shifting & Packing service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Home Shifting & Packing Premium Care Option 9 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Home Shifting & Packing Premium Care Option 9 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Home Shifting & Packing Premium Care Option 9 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "d40b03ca-14cc-5075-a4c5-c823dd823935",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Junk Removal & Disposal",
+    "name": "Junk Removal & Disposal Premium Care Option 14",
+    "price": 3399.0,
+    "description": "Specialized high-end Junk Removal & Disposal service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Junk Removal & Disposal Premium Care Option 14 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Junk Removal & Disposal Premium Care Option 14 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Junk Removal & Disposal Premium Care Option 14 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "7d11b486-1097-5341-a8a5-87ba0f75c18b",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Junk Removal & Disposal",
+    "name": "Junk Removal & Disposal Premium Care Option 4",
+    "price": 2399.0,
+    "description": "Specialized high-end Junk Removal & Disposal service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Junk Removal & Disposal Premium Care Option 4 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Junk Removal & Disposal Premium Care Option 4 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Junk Removal & Disposal Premium Care Option 4 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "82213c14-7b97-5dad-8721-f2d524f8fc70",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Junk Removal & Disposal",
+    "name": "Junk Removal & Disposal Premium Care Option 5",
+    "price": 2499.0,
+    "description": "Specialized high-end Junk Removal & Disposal service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Junk Removal & Disposal Premium Care Option 5 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Junk Removal & Disposal Premium Care Option 5 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Junk Removal & Disposal Premium Care Option 5 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "9d2e0a0b-cae2-5e9e-864b-e9c4084176e4",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Junk Removal & Disposal",
+    "name": "Junk Removal & Disposal Premium Care Option 6",
+    "price": 2599.0,
+    "description": "Specialized high-end Junk Removal & Disposal service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Junk Removal & Disposal Premium Care Option 6 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Junk Removal & Disposal Premium Care Option 6 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Junk Removal & Disposal Premium Care Option 6 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "ba26862d-85dd-5c2e-9ba0-78b615e06ad5",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Junk Removal & Disposal",
+    "name": "Junk Removal & Disposal Premium Care Option 8",
+    "price": 2799.0,
+    "description": "Specialized high-end Junk Removal & Disposal service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Junk Removal & Disposal Premium Care Option 8 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Junk Removal & Disposal Premium Care Option 8 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Junk Removal & Disposal Premium Care Option 8 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "bfc1a8a7-8d4f-5c7d-8866-6f33a9a90c3d",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Last-Mile Delivery",
+    "name": "Last-Mile Delivery Premium Care Option 10",
+    "price": 2999.0,
+    "description": "Specialized high-end Last-Mile Delivery service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Last-Mile Delivery Premium Care Option 10 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Last-Mile Delivery Premium Care Option 10 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Last-Mile Delivery Premium Care Option 10 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "c5096bf4-5677-50ed-bd66-23ab4e909013",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Last-Mile Delivery",
+    "name": "Last-Mile Delivery Premium Care Option 11",
+    "price": 3099.0,
+    "description": "Specialized high-end Last-Mile Delivery service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Last-Mile Delivery Premium Care Option 11 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Last-Mile Delivery Premium Care Option 11 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Last-Mile Delivery Premium Care Option 11 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "ce1ed4d8-259d-54ac-82a0-734b4fcbdc1b",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Last-Mile Delivery",
+    "name": "Last-Mile Delivery Premium Care Option 13",
+    "price": 3299.0,
+    "description": "Specialized high-end Last-Mile Delivery service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Last-Mile Delivery Premium Care Option 13 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Last-Mile Delivery Premium Care Option 13 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Last-Mile Delivery Premium Care Option 13 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "d569432a-b4cd-5584-9b6b-4a617ee57c03",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Last-Mile Delivery",
+    "name": "Last-Mile Delivery Premium Care Option 15",
+    "price": 3499.0,
+    "description": "Specialized high-end Last-Mile Delivery service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Last-Mile Delivery Premium Care Option 15 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Last-Mile Delivery Premium Care Option 15 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Last-Mile Delivery Premium Care Option 15 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "46d8db20-3e81-5240-8af7-c6aeb1680155",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Local Errands & Assistance",
+    "name": "Local Errands & Assistance Premium Care Option 1",
+    "price": 2099.0,
+    "description": "Specialized high-end Local Errands & Assistance service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Local Errands & Assistance Premium Care Option 1 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Local Errands & Assistance Premium Care Option 1 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Local Errands & Assistance Premium Care Option 1 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "d91c5724-7eb7-5f63-bb00-97461b843b2c",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Local Errands & Assistance",
+    "name": "Local Errands & Assistance Premium Care Option 17",
+    "price": 3699.0,
+    "description": "Specialized high-end Local Errands & Assistance service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Local Errands & Assistance Premium Care Option 17 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Local Errands & Assistance Premium Care Option 17 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Local Errands & Assistance Premium Care Option 17 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "a698a0c1-edb5-5247-92b7-7afd5d00c0d7",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Local Errands & Assistance",
+    "name": "Local Errands & Assistance Premium Care Option 7",
+    "price": 2699.0,
+    "description": "Specialized high-end Local Errands & Assistance service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Local Errands & Assistance Premium Care Option 7 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Local Errands & Assistance Premium Care Option 7 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Local Errands & Assistance Premium Care Option 7 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "1197b272-b994-5781-88a4-20fda966a48b",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Moving Services",
+    "name": "1 BHK Local Home Shifting & Packing",
+    "price": 4999.0,
+    "description": "Professional bubble-wrap packing, loading into closed truck, transport, and unloading.",
+    "highlights": [
+      "Professional 1 BHK Local Home Shifting & Packing procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete 1 BHK Local Home Shifting & Packing procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 240 minutes.",
+        "question": "How long does 1 BHK Local Home Shifting & Packing take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "142ef794-67df-55ce-aefe-17722c4ba8bd",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Moving Services",
+    "name": "2 BHK City Relocation Packers & Movers",
+    "price": 7999.0,
+    "description": "Multi-layer corrugated cardboard box packing, furniture dismantle/reassemble, and safe transport.",
+    "highlights": [
+      "Professional 2 BHK City Relocation Packers & Movers procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete 2 BHK City Relocation Packers & Movers procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 360 minutes.",
+        "question": "How long does 2 BHK City Relocation Packers & Movers take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "2faaeb27-4399-56f4-985d-157dd649daa4",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Moving Services",
+    "name": "Office Furniture & Desktop Relocation Shifting",
+    "price": 9999.0,
+    "description": "Systematic IT equipment packing, server rack moving, and office desk installation.",
+    "highlights": [
+      "Professional Office Furniture & Desktop Relocation Shifting procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Office Furniture & Desktop Relocation Shifting procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 360 minutes.",
+        "question": "How long does Office Furniture & Desktop Relocation Shifting take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "17f179bf-7667-5f3d-afd5-d4e4ee315620",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Moving Services",
+    "name": "Single Furniture Item Transport (Sofa / Bed / Fridge)",
+    "price": 1299.0,
+    "description": "Tata Ace / Pickup truck dispatch for single heavy item transport across town.",
+    "highlights": [
+      "Professional Single Furniture Item Transport (Sofa / Bed / Fridge) procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Single Furniture Item Transport (Sofa / Bed / Fridge) procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 90 minutes.",
+        "question": "How long does Single Furniture Item Transport (Sofa / Bed / Fridge) take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "44bc15d3-2dc2-5407-9a0e-a84a536cf53d",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Vehicle Assistance",
+    "name": "Car Battery Jump-Start & Breakdown Assistance",
+    "price": 499.0,
+    "description": "Emergency mechanic arrival with heavy jumper cables to jump-start dead car battery.",
+    "highlights": [
+      "Professional Car Battery Jump-Start & Breakdown Assistance procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Car Battery Jump-Start & Breakdown Assistance procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 30 minutes.",
+        "question": "How long does Car Battery Jump-Start & Breakdown Assistance take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "1a248afa-46a2-5fa8-94fb-3acae99d76cd",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Vehicle Assistance",
+    "name": "Intercity Vehicle Car / Bike Carrier Transport",
+    "price": 5999.0,
+    "description": "Enclosed car container or covered bike transport between major metro cities.",
+    "highlights": [
+      "Professional Intercity Vehicle Car / Bike Carrier Transport procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Intercity Vehicle Car / Bike Carrier Transport procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 180 minutes.",
+        "question": "How long does Intercity Vehicle Car / Bike Carrier Transport take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "ccd4d5ff-5b51-5c80-b1b7-7791fc2974c0",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Vehicle Transport",
+    "name": "Vehicle Transport Premium Care Option 12",
+    "price": 3199.0,
+    "description": "Specialized high-end Vehicle Transport service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Vehicle Transport Premium Care Option 12 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Vehicle Transport Premium Care Option 12 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Vehicle Transport Premium Care Option 12 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "d792920f-187c-5058-b2c9-35939008929f",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Vehicle Transport",
+    "name": "Vehicle Transport Premium Care Option 16",
+    "price": 3599.0,
+    "description": "Specialized high-end Vehicle Transport service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Vehicle Transport Premium Care Option 16 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Vehicle Transport Premium Care Option 16 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Vehicle Transport Premium Care Option 16 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "f7feff42-4eec-5316-a9c3-98e2f4088c57",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Vehicle Transport",
+    "name": "Vehicle Transport Premium Care Option 19",
+    "price": 3899.0,
+    "description": "Specialized high-end Vehicle Transport service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Vehicle Transport Premium Care Option 19 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Vehicle Transport Premium Care Option 19 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Vehicle Transport Premium Care Option 19 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "6466540c-1fd5-540f-b10f-e7feb984e053",
+    "category": "14. Moving, Delivery & Local Assistance",
+    "subcategory": "Vehicle Transport",
+    "name": "Vehicle Transport Premium Care Option 2",
+    "price": 2199.0,
+    "description": "Specialized high-end Vehicle Transport service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Vehicle Transport Premium Care Option 2 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Vehicle Transport Premium Care Option 2 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Vehicle Transport Premium Care Option 2 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  }
+]

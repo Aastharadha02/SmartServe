@@ -1,4544 +1,1082 @@
-{
-  "metadata": {
-    "category": "6. Smart Home & Security",
-    "backup_type": "CATEGORY_FINAL",
-    "timestamp": "2026-09-05T15:40:42.309855+00:00",
-    "total_services": 30,
-    "subcategories": {
-      "Event Planning & Management": 6
-    },
-    "status": "PROTECTED_AND_PERSISTED"
+[
+  {
+    "id": "e7d5615b-cebf-5e60-863b-119399595857",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Catering & Food Services",
+    "name": "Catering & Food Services Premium Care Option 19",
+    "price": 3899.0,
+    "description": "Specialized high-end Catering & Food Services service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Catering & Food Services Premium Care Option 19 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Catering & Food Services Premium Care Option 19 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Catering & Food Services Premium Care Option 19 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
   },
-  "services": [
-    {
-      "id": "26acc88f-a7f7-594b-9d9a-017479434901",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Catering & Food Services",
-      "name": "Catering & Food Services Service Variation 1",
-      "base_price": 2500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional catering & food services services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Catering & Food Services professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.337368+00:00",
-      "updated_at": "2026-09-05T15:40:33.337368+00:00"
-    },
-    {
-      "id": "87ebf653-23ab-5909-8c35-e7c718752275",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Catering & Food Services",
-      "name": "Catering & Food Services Service Variation 2",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional catering & food services services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Catering & Food Services professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.344334+00:00",
-      "updated_at": "2026-09-05T15:40:33.344334+00:00"
-    },
-    {
-      "id": "e7d5615b-cebf-5e60-863b-119399595857",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Catering & Food Services",
-      "name": "Catering & Food Services Service Variation 3",
-      "base_price": 3500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional catering & food services services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Catering & Food Services professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.348700+00:00",
-      "updated_at": "2026-09-05T15:40:33.348700+00:00"
-    },
-    {
-      "id": "f8c1ba49-8d4a-5014-bbf0-48fa13b31c0b",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Catering & Food Services",
-      "name": "Catering & Food Services Service Variation 4",
-      "base_price": 4000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional catering & food services services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Catering & Food Services professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.351942+00:00",
-      "updated_at": "2026-09-05T15:40:33.351942+00:00"
-    },
-    {
-      "id": "aabf0559-0ecf-53af-84c6-156ad3d2e73f",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Catering & Food Services",
-      "name": "Catering & Food Services Service Variation 5",
-      "base_price": 4500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional catering & food services services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Catering & Food Services professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.355895+00:00",
-      "updated_at": "2026-09-05T15:40:33.355895+00:00"
-    },
-    {
-      "id": "fb0e963d-405b-5c26-b079-385ef6e9211c",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Catering & Food Services",
-      "name": "Catering & Food Services Service Variation 6",
-      "base_price": 5000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional catering & food services services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Catering & Food Services professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.360268+00:00",
-      "updated_at": "2026-09-05T15:40:33.360268+00:00"
-    },
-    {
-      "id": "ace5466c-3475-5310-ac77-765bdd666d00",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Decoration & Floral",
-      "name": "Decoration & Floral Service Variation 1",
-      "base_price": 2500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional decoration & floral services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Decoration & Floral professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.384341+00:00",
-      "updated_at": "2026-09-05T15:40:33.384341+00:00"
-    },
-    {
-      "id": "e690bd75-b19c-51dc-9200-9ee955378a79",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Decoration & Floral",
-      "name": "Decoration & Floral Service Variation 2",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional decoration & floral services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Decoration & Floral professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.387573+00:00",
-      "updated_at": "2026-09-05T15:40:33.387573+00:00"
-    },
-    {
-      "id": "b57352d4-ba7c-5506-9521-2294c1e46200",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Decoration & Floral",
-      "name": "Decoration & Floral Service Variation 3",
-      "base_price": 3500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional decoration & floral services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Decoration & Floral professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.391386+00:00",
-      "updated_at": "2026-09-05T15:40:33.391386+00:00"
-    },
-    {
-      "id": "05040020-c8df-5322-8253-f125bbb5ee78",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Decoration & Floral",
-      "name": "Decoration & Floral Service Variation 4",
-      "base_price": 4000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional decoration & floral services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Decoration & Floral professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.395809+00:00",
-      "updated_at": "2026-09-05T15:40:33.395809+00:00"
-    },
-    {
-      "id": "2b345a26-745b-5c3f-8a99-4337352b6cd2",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Decoration & Floral",
-      "name": "Decoration & Floral Service Variation 5",
-      "base_price": 4500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional decoration & floral services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Decoration & Floral professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.399302+00:00",
-      "updated_at": "2026-09-05T15:40:33.399302+00:00"
-    },
-    {
-      "id": "d852eaea-de27-5284-a511-f5a5a86b4ca4",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Decoration & Floral",
-      "name": "Decoration & Floral Service Variation 6",
-      "base_price": 5000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional decoration & floral services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Decoration & Floral professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.402254+00:00",
-      "updated_at": "2026-09-05T15:40:33.402254+00:00"
-    },
-    {
-      "id": "e198f891-39ff-53a7-9d62-1ea56ea2dafd",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "DJ & Sound Systems",
-      "name": "DJ & Sound Systems Service Variation 1",
-      "base_price": 2500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dj & sound systems services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced DJ & Sound Systems professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.364455+00:00",
-      "updated_at": "2026-09-05T15:40:33.364455+00:00"
-    },
-    {
-      "id": "dc548bf3-18ba-51b3-a23e-291c0c001a0a",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "DJ & Sound Systems",
-      "name": "DJ & Sound Systems Service Variation 2",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dj & sound systems services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced DJ & Sound Systems professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.368196+00:00",
-      "updated_at": "2026-09-05T15:40:33.368196+00:00"
-    },
-    {
-      "id": "8d92a317-68fe-5e81-9681-41894fb5aa1a",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "DJ & Sound Systems",
-      "name": "DJ & Sound Systems Service Variation 3",
-      "base_price": 3500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dj & sound systems services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced DJ & Sound Systems professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.372032+00:00",
-      "updated_at": "2026-09-05T15:40:33.372032+00:00"
-    },
-    {
-      "id": "dbbd7eeb-3df6-5751-a7dd-8f0511d5fc2e",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "DJ & Sound Systems",
-      "name": "DJ & Sound Systems Service Variation 4",
-      "base_price": 4000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dj & sound systems services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced DJ & Sound Systems professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.375972+00:00",
-      "updated_at": "2026-09-05T15:40:33.375972+00:00"
-    },
-    {
-      "id": "9cb013bf-baf4-5f0a-a472-00e584c5de93",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "DJ & Sound Systems",
-      "name": "DJ & Sound Systems Service Variation 5",
-      "base_price": 4500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional dj & sound systems services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced DJ & Sound Systems professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.381054+00:00",
-      "updated_at": "2026-09-05T15:40:33.381054+00:00"
-    },
-    {
-      "id": "582bb45c-e5fb-5d84-83ac-3581e60766f3",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Event Planning & Management",
-      "name": "Event Planning & Management Service Variation 1",
-      "base_price": 2500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional event planning & management services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Event Planning & Management professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.405470+00:00",
-      "updated_at": "2026-09-05T15:40:33.405470+00:00"
-    },
-    {
-      "id": "cbb9fb78-4d59-5462-913c-eded1c14fc49",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Event Planning & Management",
-      "name": "Event Planning & Management Service Variation 2",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional event planning & management services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Event Planning & Management professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.409977+00:00",
-      "updated_at": "2026-09-05T15:40:33.409977+00:00"
-    },
-    {
-      "id": "c697f583-d431-5886-aeeb-3d6d3f61300d",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Event Planning & Management",
-      "name": "Event Planning & Management Service Variation 3",
-      "base_price": 3500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional event planning & management services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Event Planning & Management professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.414023+00:00",
-      "updated_at": "2026-09-05T15:40:33.414023+00:00"
-    },
-    {
-      "id": "df202201-6da5-548a-810d-888b497344c3",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Event Planning & Management",
-      "name": "Event Planning & Management Service Variation 4",
-      "base_price": 4000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional event planning & management services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Event Planning & Management professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.417108+00:00",
-      "updated_at": "2026-09-05T15:40:33.417108+00:00"
-    },
-    {
-      "id": "357e54a0-64df-5bc6-b28e-1b90edd4a951",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Event Planning & Management",
-      "name": "Event Planning & Management Service Variation 5",
-      "base_price": 4500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional event planning & management services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Event Planning & Management professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.420727+00:00",
-      "updated_at": "2026-09-05T15:40:33.420727+00:00"
-    },
-    {
-      "id": "469077ac-5ba3-5f03-8687-e4ba5c0d1f06",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Event Planning & Management",
-      "name": "Event Planning & Management Service Variation 6",
-      "base_price": 5000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional event planning & management services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Event Planning & Management professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.423670+00:00",
-      "updated_at": "2026-09-05T15:40:33.423670+00:00"
-    },
-    {
-      "id": "fa960fc9-d8f1-5998-8e4b-c1102937d532",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Photography & Videography",
-      "name": "Photography & Videography Service Variation 1",
-      "base_price": 2500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional photography & videography services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Photography & Videography professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.426960+00:00",
-      "updated_at": "2026-09-05T15:40:33.426960+00:00"
-    },
-    {
-      "id": "bb48e569-a6da-51f5-b3dc-d87f1695b9ca",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Photography & Videography",
-      "name": "Photography & Videography Service Variation 2",
-      "base_price": 3000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional photography & videography services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Photography & Videography professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.431932+00:00",
-      "updated_at": "2026-09-05T15:40:33.431932+00:00"
-    },
-    {
-      "id": "7130a8ad-6e19-53a6-ac85-8f264051dc78",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Photography & Videography",
-      "name": "Photography & Videography Service Variation 3",
-      "base_price": 3500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional photography & videography services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Photography & Videography professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.435488+00:00",
-      "updated_at": "2026-09-05T15:40:33.435488+00:00"
-    },
-    {
-      "id": "1b6b6828-30d9-5acd-a391-ca86221a2d50",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Photography & Videography",
-      "name": "Photography & Videography Service Variation 4",
-      "base_price": 4000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional photography & videography services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Photography & Videography professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.439458+00:00",
-      "updated_at": "2026-09-05T15:40:33.439458+00:00"
-    },
-    {
-      "id": "38023d5f-40ae-595a-8290-8fcd34801698",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Photography & Videography",
-      "name": "Photography & Videography Service Variation 5",
-      "base_price": 4500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional photography & videography services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Photography & Videography professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.442917+00:00",
-      "updated_at": "2026-09-05T15:40:33.442917+00:00"
-    },
-    {
-      "id": "5f3b5322-61de-5bc4-b106-4e4cc729b30d",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Photography & Videography",
-      "name": "Photography & Videography Service Variation 6",
-      "base_price": 5000.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional photography & videography services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Photography & Videography professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.447361+00:00",
-      "updated_at": "2026-09-05T15:40:33.447361+00:00"
-    },
-    {
-      "id": "415d2547-0a7c-5a96-9436-4af2de4755f1",
-      "category": "10. Events, Photography & Entertainment",
-      "subcategory": "Photography & Videography",
-      "name": "Photography & Videography Service Variation 7",
-      "base_price": 5500.0,
-      "max_demand_increase": 20.0,
-      "max_discount": 10.0,
-      "is_active": true,
-      "distinct_features": [
-        "Initial consultation and concept planning",
-        "Day-of coordination and support",
-        "Post-event cleanup / media delivery",
-        "Customer satisfaction follow-up"
-      ],
-      "suggested_addons": [
-        {
-          "text": "Professional photography & videography services for unforgettable events.",
-          "type": "description"
-        },
-        {
-          "type": "highlights",
-          "items": [
-            "Experienced Photography & Videography professionals",
-            "End-to-end event support",
-            "Customised packages",
-            "Post-event deliverables"
-          ]
-        },
-        {
-          "type": "excluded_scope",
-          "items": [
-            "Third-party vendor costs (unless in package)",
-            "Venue booking charges"
-          ]
-        },
-        {
-          "type": "process_steps",
-          "steps": [
-            {
-              "title": "Requirement Briefing",
-              "description": "Understanding event theme, scale, and budget",
-              "step_number": 1
-            },
-            {
-              "title": "Concept & Proposal",
-              "description": "Presenting a tailored event concept and plan",
-              "step_number": 2
-            },
-            {
-              "title": "Vendor Coordination",
-              "description": "Arranging all required vendors and logistics",
-              "step_number": 3
-            },
-            {
-              "title": "Event Execution",
-              "description": "On-ground management and execution on the event day",
-              "step_number": 4
-            },
-            {
-              "title": "Post-Event Wrap-Up",
-              "description": "Clearing up and delivering any media or documentation",
-              "step_number": 5
-            }
-          ]
-        },
-        {
-          "type": "aftercare_precautions",
-          "aftercare": [
-            "Share feedback to improve future events",
-            "Review delivered photos/videos within 7 days"
-          ]
-        },
-        {
-          "type": "tools_materials",
-          "tools": [
-            "Event planning software",
-            "Professional equipment",
-            "Logistics checklist",
-            "Vendor contact directory"
-          ],
-          "materials": []
-        },
-        {
-          "type": "customer_setup",
-          "requirements": [
-            "Provide venue details in advance",
-            "Share guest list and requirements",
-            "Confirm timeline and schedule"
-          ]
-        },
-        {
-          "type": "expected_results",
-          "items": "A seamlessly executed event with lasting memories."
-        },
-        {
-          "type": "important_notes",
-          "items": "Minimum advance booking of 7 days required for all events."
-        },
-        {
-          "type": "warranty",
-          "details": "Reshoot or redo offered if service quality does not meet agreed standards.",
-          "has_warranty": true
-        },
-        {
-          "type": "faqs",
-          "items": [
-            {
-              "answer": "At least 7 days in advance for standard events; 30 days for large gatherings.",
-              "question": "How far in advance should I book?"
-            },
-            {
-              "answer": "Yes, we handle both indoor and outdoor events with appropriate equipment.",
-              "question": "Do you handle outdoor events?"
-            },
-            {
-              "answer": "Absolutely — all our packages are fully customisable to your needs.",
-              "question": "Can I customise the package?"
-            },
-            {
-              "answer": "We have contingency plans and backup equipment for outdoor events.",
-              "question": "What if it rains on the event day?"
-            }
-          ]
-        },
-        {
-          "type": "tips",
-          "items": [
-            "Book early during wedding or festival season for best availability."
-          ]
-        },
-        {
-          "dos": [
-            "Share detailed event requirements upfront to avoid last-minute changes."
-          ],
-          "type": "dos_donts",
-          "donts": [
-            "Do not make last-minute changes to guest count or venue without notice."
-          ]
-        },
-        {
-          "type": "duration",
-          "minutes": 60
-        }
-      ],
-      "real_addons_count": 0,
-      "real_addons": [],
-      "typed_blocks_count": 14,
-      "created_at": "2026-09-05T15:40:33.450433+00:00",
-      "updated_at": "2026-09-05T15:40:33.450433+00:00"
-    }
-  ]
-}
+  {
+    "id": "f8c1ba49-8d4a-5014-bbf0-48fa13b31c0b",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Catering & Food Services",
+    "name": "Catering & Food Services Premium Care Option 20",
+    "price": 3999.0,
+    "description": "Specialized high-end Catering & Food Services service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Catering & Food Services Premium Care Option 20 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Catering & Food Services Premium Care Option 20 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Catering & Food Services Premium Care Option 20 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "fb0e963d-405b-5c26-b079-385ef6e9211c",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Catering & Food Services",
+    "name": "Catering & Food Services Premium Care Option 22",
+    "price": 4199.0,
+    "description": "Specialized high-end Catering & Food Services service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Catering & Food Services Premium Care Option 22 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Catering & Food Services Premium Care Option 22 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Catering & Food Services Premium Care Option 22 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "87ebf653-23ab-5909-8c35-e7c718752275",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Catering & Food Services",
+    "name": "Catering & Food Services Premium Care Option 4",
+    "price": 2399.0,
+    "description": "Specialized high-end Catering & Food Services service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Catering & Food Services Premium Care Option 4 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Catering & Food Services Premium Care Option 4 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Catering & Food Services Premium Care Option 4 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "aabf0559-0ecf-53af-84c6-156ad3d2e73f",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Catering & Food Services",
+    "name": "Catering & Food Services Premium Care Option 7",
+    "price": 2699.0,
+    "description": "Specialized high-end Catering & Food Services service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Catering & Food Services Premium Care Option 7 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Catering & Food Services Premium Care Option 7 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Catering & Food Services Premium Care Option 7 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "d852eaea-de27-5284-a511-f5a5a86b4ca4",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Decoration & Floral",
+    "name": "Decoration & Floral Premium Care Option 13",
+    "price": 3299.0,
+    "description": "Specialized high-end Decoration & Floral service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Decoration & Floral Premium Care Option 13 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Decoration & Floral Premium Care Option 13 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Decoration & Floral Premium Care Option 13 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "e690bd75-b19c-51dc-9200-9ee955378a79",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Decoration & Floral",
+    "name": "Decoration & Floral Premium Care Option 18",
+    "price": 3799.0,
+    "description": "Specialized high-end Decoration & Floral service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Decoration & Floral Premium Care Option 18 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Decoration & Floral Premium Care Option 18 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Decoration & Floral Premium Care Option 18 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "ace5466c-3475-5310-ac77-765bdd666d00",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Decoration & Floral",
+    "name": "Decoration & Floral Premium Care Option 8",
+    "price": 2799.0,
+    "description": "Specialized high-end Decoration & Floral service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Decoration & Floral Premium Care Option 8 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Decoration & Floral Premium Care Option 8 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Decoration & Floral Premium Care Option 8 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "b57352d4-ba7c-5506-9521-2294c1e46200",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Decoration & Floral",
+    "name": "Decoration & Floral Premium Care Option 9",
+    "price": 2899.0,
+    "description": "Specialized high-end Decoration & Floral service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Decoration & Floral Premium Care Option 9 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Decoration & Floral Premium Care Option 9 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Decoration & Floral Premium Care Option 9 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "dbbd7eeb-3df6-5751-a7dd-8f0511d5fc2e",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "DJ & Sound Systems",
+    "name": "DJ & Sound Systems Premium Care Option 14",
+    "price": 3399.0,
+    "description": "Specialized high-end DJ & Sound Systems service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional DJ & Sound Systems Premium Care Option 14 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete DJ & Sound Systems Premium Care Option 14 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does DJ & Sound Systems Premium Care Option 14 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "dc548bf3-18ba-51b3-a23e-291c0c001a0a",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "DJ & Sound Systems",
+    "name": "DJ & Sound Systems Premium Care Option 15",
+    "price": 3499.0,
+    "description": "Specialized high-end DJ & Sound Systems service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional DJ & Sound Systems Premium Care Option 15 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete DJ & Sound Systems Premium Care Option 15 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does DJ & Sound Systems Premium Care Option 15 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "e198f891-39ff-53a7-9d62-1ea56ea2dafd",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "DJ & Sound Systems",
+    "name": "DJ & Sound Systems Premium Care Option 17",
+    "price": 3699.0,
+    "description": "Specialized high-end DJ & Sound Systems service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional DJ & Sound Systems Premium Care Option 17 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete DJ & Sound Systems Premium Care Option 17 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does DJ & Sound Systems Premium Care Option 17 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "8d92a317-68fe-5e81-9681-41894fb5aa1a",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "DJ & Sound Systems",
+    "name": "DJ & Sound Systems Premium Care Option 5",
+    "price": 2499.0,
+    "description": "Specialized high-end DJ & Sound Systems service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional DJ & Sound Systems Premium Care Option 5 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete DJ & Sound Systems Premium Care Option 5 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does DJ & Sound Systems Premium Care Option 5 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "9cb013bf-baf4-5f0a-a472-00e584c5de93",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "DJ & Sound Systems",
+    "name": "DJ & Sound Systems Premium Care Option 6",
+    "price": 2599.0,
+    "description": "Specialized high-end DJ & Sound Systems service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional DJ & Sound Systems Premium Care Option 6 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete DJ & Sound Systems Premium Care Option 6 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does DJ & Sound Systems Premium Care Option 6 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "582bb45c-e5fb-5d84-83ac-3581e60766f3",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Entertainment",
+    "name": "Entertainment Premium Care Option 1",
+    "price": 2099.0,
+    "description": "Specialized high-end Entertainment service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Entertainment Premium Care Option 1 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Entertainment Premium Care Option 1 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Entertainment Premium Care Option 1 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "5f3b5322-61de-5bc4-b106-4e4cc729b30d",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Entertainment",
+    "name": "Entertainment Premium Care Option 2",
+    "price": 2199.0,
+    "description": "Specialized high-end Entertainment service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Entertainment Premium Care Option 2 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Entertainment Premium Care Option 2 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Entertainment Premium Care Option 2 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "c697f583-d431-5886-aeeb-3d6d3f61300d",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Event Planning & Management",
+    "name": "Event Planning & Management Premium Care Option 11",
+    "price": 3099.0,
+    "description": "Specialized high-end Event Planning & Management service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Event Planning & Management Premium Care Option 11 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Event Planning & Management Premium Care Option 11 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Event Planning & Management Premium Care Option 11 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "cbb9fb78-4d59-5462-913c-eded1c14fc49",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Event Planning & Management",
+    "name": "Event Planning & Management Premium Care Option 12",
+    "price": 3199.0,
+    "description": "Specialized high-end Event Planning & Management service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Event Planning & Management Premium Care Option 12 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Event Planning & Management Premium Care Option 12 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Event Planning & Management Premium Care Option 12 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "df202201-6da5-548a-810d-888b497344c3",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Event Planning & Management",
+    "name": "Event Planning & Management Premium Care Option 16",
+    "price": 3599.0,
+    "description": "Specialized high-end Event Planning & Management service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Event Planning & Management Premium Care Option 16 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Event Planning & Management Premium Care Option 16 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Event Planning & Management Premium Care Option 16 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "415d2547-0a7c-5a96-9436-4af2de4755f1",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography",
+    "name": "Architecture & Real Estate Photographer",
+    "price": 5499.0,
+    "description": "Wide-angle interior and exterior photography for luxury villas, hotels, and interior designer portfolios.",
+    "highlights": [
+      "Professional Architecture & Real Estate Photographer procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Architecture & Real Estate Photographer procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 180 minutes.",
+        "question": "How long does Architecture & Real Estate Photographer take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "05040020-c8df-5322-8253-f125bbb5ee78",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography",
+    "name": "Candid Birthday Party Photographer (3 Hours)",
+    "price": 3499.0,
+    "description": "Professional photographer capturing candid moments, cake cutting, and group family photos with edited soft copies.",
+    "highlights": [
+      "Professional Candid Birthday Party Photographer (3 Hours) procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Candid Birthday Party Photographer (3 Hours) procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 180 minutes.",
+        "question": "How long does Candid Birthday Party Photographer (3 Hours) take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "2b345a26-745b-5c3f-8a99-4337352b6cd2",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography",
+    "name": "Corporate Event & Conference Photographer",
+    "price": 4999.0,
+    "description": "High-resolution corporate event coverage for stage speakers, networking, and award ceremonies.",
+    "highlights": [
+      "Professional Corporate Event & Conference Photographer procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Corporate Event & Conference Photographer procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 240 minutes.",
+        "question": "How long does Corporate Event & Conference Photographer take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "357e54a0-64df-5bc6-b28e-1b90edd4a951",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography",
+    "name": "E-Commerce Product Catalog Photographer",
+    "price": 6999.0,
+    "description": "White studio background lighting photoshoot for Amazon/Flipkart apparel, jewelry, or food products.",
+    "highlights": [
+      "Professional E-Commerce Product Catalog Photographer procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete E-Commerce Product Catalog Photographer procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 240 minutes.",
+        "question": "How long does E-Commerce Product Catalog Photographer take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "469077ac-5ba3-5f03-8687-e4ba5c0d1f06",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography",
+    "name": "Family Generation Portrait Session",
+    "price": 3999.0,
+    "description": "Heartwarming home family group photography capturing grandparents, parents, and grandchildren.",
+    "highlights": [
+      "Professional Family Generation Portrait Session procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Family Generation Portrait Session procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 90 minutes.",
+        "question": "How long does Family Generation Portrait Session take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "38023d5f-40ae-595a-8290-8fcd34801698",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography",
+    "name": "Fashion Model Portfolio Shoot",
+    "price": 8999.0,
+    "description": "Stylized high-fashion lighting photoshoot with outfit changes and professional retouching.",
+    "highlights": [
+      "Professional Fashion Model Portfolio Shoot procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Fashion Model Portfolio Shoot procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 240 minutes.",
+        "question": "How long does Fashion Model Portfolio Shoot take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "26acc88f-a7f7-594b-9d9a-017479434901",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography",
+    "name": "Maternity & Newborn Baby Photoshoot",
+    "price": 5999.0,
+    "description": "Studio-prop set up at home for safe, cozy newborn portraits and mother-to-be bump photos.",
+    "highlights": [
+      "Professional Maternity & Newborn Baby Photoshoot procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Maternity & Newborn Baby Photoshoot procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 120 minutes.",
+        "question": "How long does Maternity & Newborn Baby Photoshoot take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "1b6b6828-30d9-5acd-a391-ca86221a2d50",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography",
+    "name": "Pre-Wedding Couple Shoot Package",
+    "price": 9999.0,
+    "description": "Outdoor scenic location photoshoot with drone aerial shots, cinematic video teaser, and retouched album images.",
+    "highlights": [
+      "Professional Pre-Wedding Couple Shoot Package procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Pre-Wedding Couple Shoot Package procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 300 minutes.",
+        "question": "How long does Pre-Wedding Couple Shoot Package take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "bb48e569-a6da-51f5-b3dc-d87f1695b9ca",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography & Videography",
+    "name": "Photography & Videography Premium Care Option 10",
+    "price": 2999.0,
+    "description": "Specialized high-end Photography & Videography service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Photography & Videography Premium Care Option 10 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Photography & Videography Premium Care Option 10 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Photography & Videography Premium Care Option 10 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "fa960fc9-d8f1-5998-8e4b-c1102937d532",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography & Videography",
+    "name": "Photography & Videography Premium Care Option 21",
+    "price": 4099.0,
+    "description": "Specialized high-end Photography & Videography service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Photography & Videography Premium Care Option 21 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Photography & Videography Premium Care Option 21 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Photography & Videography Premium Care Option 21 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  },
+  {
+    "id": "7130a8ad-6e19-53a6-ac85-8f264051dc78",
+    "category": "10. Events, Photography & Entertainment",
+    "subcategory": "Photography & Videography",
+    "name": "Photography & Videography Premium Care Option 3",
+    "price": 2299.0,
+    "description": "Specialized high-end Photography & Videography service tailored to specific client needs with extended guarantee.",
+    "highlights": [
+      "Professional Photography & Videography Premium Care Option 3 procedure",
+      "Certified & background-verified specialists",
+      "High-grade safety & sanitized tools",
+      "100% satisfaction guarantee",
+      "Transparent pricing with zero hidden charges"
+    ],
+    "included": [
+      "Complete Photography & Videography Premium Care Option 3 procedure",
+      "Standard tools and supplies included",
+      "Post-service inspection and cleanup",
+      "Expert consultation and advice"
+    ],
+    "excluded": [
+      "Structural heavy modifications",
+      "Spare hardware unless explicitly requested"
+    ],
+    "faqs": [
+      {
+        "answer": "The session typically takes around 60 minutes.",
+        "question": "How long does Photography & Videography Premium Care Option 3 take?"
+      },
+      {
+        "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+        "question": "Are the tools and products safe?"
+      }
+    ],
+    "warranty": "7-day service warranty on workmanship"
+  }
+]
