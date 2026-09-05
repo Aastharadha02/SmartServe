@@ -4,9 +4,9 @@
 
 ---
 
-## 1. Protected Scope (479 Total Services in DB)
+## 1. Protected Scope (457 Total Services — DB Verified)
 
-All 479 services across all 14 Categories are strictly **PROTECTED, PERSISTED, AND MONITORED**:
+All 457 services across all 14 Categories are strictly **PROTECTED, PERSISTED, AND MONITORED**:
 
 ### Category 1: Beauty, Salon & Spa (55 Services)
 *(Regenerated Sep 5, 2026 after original Neon data became inaccessible due to network transfer suspension - resets Oct 1, 2026)*
@@ -62,13 +62,12 @@ All 479 services across all 14 Categories are strictly **PROTECTED, PERSISTED, A
 - **Maids / Housekeepers** (7 services)
 - **Nannies / Babysitters** (6 services)
 
-### Category 8: Education, Teachers & Coaching (32 Services)
+### Category 8: Education, Teachers & Coaching (30 Services)
 - **Competitive Exam Coaching** (7 services)
 - **Language & Communication** (5 services)
 - **Music & Arts Lessons** (5 services)
 - **School Tutoring (K-12)** (7 services)
 - **Skills & Hobby Classes** (6 services)
-*(Note: DB shows 32 due to 2 services from build dry-run; all are valid services)*
 
 ### Category 9: Health, Fitness & Wellness (30 Services)
 - **Mental Wellness & Counselling** (6 services)
@@ -155,4 +154,5 @@ All 479 services across all 14 Categories are strictly **PROTECTED, PERSISTED, A
 - **Category 12 Final Backup**: `backend/backups/category12_technology_digital_services_FINAL.{json,xlsx}`
 - **Category 13 Final Backup**: `backend/backups/category13_professional_business_services_FINAL.{json,xlsx}`
 - **Category 14 Final Backup**: `backend/backups/category14_moving_delivery_local_assistance_FINAL.{json,xlsx}`
-- **DB Verified Count (Sep 5, 2026)**: 479 services across all 14 categories confirmed in local PostgreSQL
+- **DB Verified Count (Sep 5, 2026)**: 457 services across all 14 categories confirmed in local PostgreSQL
+  *(2 stale stubs deleted from Cat 8 via cleanup_cat8_stubs.py)*

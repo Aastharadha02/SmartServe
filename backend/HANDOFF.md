@@ -1,7 +1,7 @@
 # Catalog Build Handoff
 Last updated: 2026-09-05T21:15:00+05:30
 Current branch: feat/customer-and-admin-integration
-Total services persisted: 479 (verified in local PostgreSQL)
+Total services persisted: 457 (verified in local PostgreSQL — 2 Cat 8 stubs cleaned)
 
 ## Category status
 1. Beauty, Salon & Spa: DONE (regenerated 2026-09-05)
