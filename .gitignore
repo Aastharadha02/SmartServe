@@ -67,6 +67,7 @@ backend/catalog_baseline_*.json
 backend/backup_*.json
 *.sql
 *.xlsx
+*.zip
 *.db
 *.sqlite
 *.sqlite3
