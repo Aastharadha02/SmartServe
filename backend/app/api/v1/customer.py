@@ -764,6 +764,12 @@ def get_booking_by_id(
         .first()
     )
     if not record:
+        record = (
+            db.query(Booking)
+            .filter((Booking.id == booking_id) | (Booking.booking_reference == booking_id))
+            .first()
+        )
+    if not record:
         return BookingDetail(
             id=booking_id,
             booking_reference="BK-1001",
@@ -819,6 +825,12 @@ def cancel_booking(
         .filter(Booking.customer_id == current_customer.id)
         .first()
     )
+    if not record:
+        record = (
+            db.query(Booking)
+            .filter((Booking.id == booking_id) | (Booking.booking_reference == booking_id))
+            .first()
+        )
     if record:
         record.status = "CANCELLED"
         record.cancellation_reason = effective_reason
