@@ -1,0 +1,3758 @@
+{
+  "category_number": 2,
+  "category_name": "2. Cleaning & Pest Control",
+  "service_count": 32,
+  "subcategories": [
+    "Deep Cleaning",
+    "Full Home / By Room Cleaning",
+    "Kitchen & Bathroom Cleaning",
+    "Pest Control",
+    "Sofa & Furniture Cleaning"
+  ],
+  "services": [
+    {
+      "service_id": "287c90f2-c1b7-4487-9d4f-0d01d682e781",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Deep Cleaning",
+      "service_name": "Balcony Washing & Window Track Cleaning",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Pressure washing balcony floor, wiping glass railings, and vacuuming dirt from sliding window tracks.",
+      "highlights": [
+        "Professional Balcony Washing & Window Track Cleaning procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Balcony Washing & Window Track Cleaning procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Deep Cleaning Service Variation 1 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Deep Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Deep Cleaning Service Variation 1 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Balcony Washing & Window Track Cleaning take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Balcony Washing & Window Track Cleaning | SmartServe",
+      "seo_description": "Pressure washing balcony floor, wiping glass railings, and vacuuming dirt from sliding window tracks.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.569736+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "264904c6-aad9-4106-ac12-d8a108b29bba",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Deep Cleaning",
+      "service_name": "Bathroom Tile Scrubbing & Descaling Wash",
+      "base_price_inr": 799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Acid-free hard water stain removal from floor/wall tiles, glass shower partitions, taps, and toilet bowls.",
+      "highlights": [
+        "Professional Bathroom Tile Scrubbing & Descaling Wash procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Bathroom Tile Scrubbing & Descaling Wash procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Kitchen & Bathroom Cleaning Service Variation 2 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Kitchen & Bathroom Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Kitchen & Bathroom Cleaning Service Variation 2 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Bathroom Tile Scrubbing & Descaling Wash take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Bathroom Tile Scrubbing & Descaling Wash | SmartServe",
+      "seo_description": "Acid-free hard water stain removal from floor/wall tiles, glass shower partitions, taps, and toilet bowls.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.618525+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "42e0784e-4fef-497f-a2cc-415631f57b6c",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Deep Cleaning",
+      "service_name": "Floor Machine Scrubbing & Buffing",
+      "base_price_inr": 1199.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Single-disc rotary floor scrubbing machine treatment for marble, granite, or vitrified tile shine.",
+      "highlights": [
+        "Professional Floor Machine Scrubbing & Buffing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Floor Machine Scrubbing & Buffing procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Deep Cleaning Service Variation 7 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Deep Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Deep Cleaning Service Variation 7 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Floor Machine Scrubbing & Buffing take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Floor Machine Scrubbing & Buffing | SmartServe",
+      "seo_description": "Single-disc rotary floor scrubbing machine treatment for marble, granite, or vitrified tile shine.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.591249+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "0425f57a-ce8d-457f-b1d2-c387ce4daa56",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Deep Cleaning",
+      "service_name": "Full Apartment Deep Cleaning (1/2 BHK)",
+      "base_price_inr": 2999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Thorough top-to-bottom scrub of entire home including ceiling fans, window sills, doors, floors, and sanitization.",
+      "highlights": [
+        "Professional Full Apartment Deep Cleaning (1/2 BHK) procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Full Apartment Deep Cleaning (1/2 BHK) procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Sofa & Furniture Cleaning Service Variation 2 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Sofa & Furniture Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Sofa & Furniture Cleaning Service Variation 2 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 180 minutes.",
+          "question": "How long does Full Apartment Deep Cleaning (1/2 BHK) take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Full Apartment Deep Cleaning (1/2 BHK) | SmartServe",
+      "seo_description": "Thorough top-to-bottom scrub of entire home including ceiling fans, window sills, doors, floors, and sanitization.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.649516+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "0594444a-63a4-4543-aa9a-db671cb4b269",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Deep Cleaning",
+      "service_name": "Kitchen Oil Degreasing & Cabinet Deep Clean",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Heavy-duty chemical degreasing of grease-laden kitchen tiles, cabinet interiors/exteriors, and exhaust fans.",
+      "highlights": [
+        "Professional Kitchen Oil Degreasing & Cabinet Deep Clean procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Kitchen Oil Degreasing & Cabinet Deep Clean procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Pest Control Service Variation 2 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Pest Control tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Pest Control Service Variation 2 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does Kitchen Oil Degreasing & Cabinet Deep Clean take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Kitchen Oil Degreasing & Cabinet Deep Clean | SmartServe",
+      "seo_description": "Heavy-duty chemical degreasing of grease-laden kitchen tiles, cabinet interiors/exteriors, and exhaust fans.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.632451+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "2926232b-ec38-4f63-96e5-fc359856ceae",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Deep Cleaning",
+      "service_name": "Move-In / Move-Out Sanitize Deep Clean",
+      "base_price_inr": 3499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Comprehensive disinfection and deep cleaning for vacant houses prior to moving in or handing over to landlord.",
+      "highlights": [
+        "Professional Move-In / Move-Out Sanitize Deep Clean procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Move-In / Move-Out Sanitize Deep Clean procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Sofa & Furniture Cleaning Service Variation 3 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Sofa & Furniture Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Sofa & Furniture Cleaning Service Variation 3 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 240 minutes.",
+          "question": "How long does Move-In / Move-Out Sanitize Deep Clean take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Move-In / Move-Out Sanitize Deep Clean | SmartServe",
+      "seo_description": "Comprehensive disinfection and deep cleaning for vacant houses prior to moving in or handing over to landlord.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.653614+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "3f3e2d4d-153a-4367-921a-7d6005dd532d",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Deep Cleaning",
+      "service_name": "Terrace & Roof High-Pressure Wash",
+      "base_price_inr": 1599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Industrial jet washer cleaning of rooftop tiles, rainwater drains, and moss buildup removal.",
+      "highlights": [
+        "Professional Terrace & Roof High-Pressure Wash procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Terrace & Roof High-Pressure Wash procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Pest Control Service Variation 3 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Pest Control tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Pest Control Service Variation 3 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Terrace & Roof High-Pressure Wash take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Terrace & Roof High-Pressure Wash | SmartServe",
+      "seo_description": "Industrial jet washer cleaning of rooftop tiles, rainwater drains, and moss buildup removal.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.635650+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "58b3d78f-5bbd-4d31-b1e4-c59555344a73",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Full Home / By Room Cleaning",
+      "service_name": "1 BHK Express Deep Cleaning",
+      "base_price_inr": 1999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Complete cleaning of 1 hall, 1 bedroom, 1 kitchen, and 1 bathroom with eco-friendly cleaning agents.",
+      "highlights": [
+        "Professional 1 BHK Express Deep Cleaning procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 1 BHK Express Deep Cleaning procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Deep Cleaning Service Variation 6 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Deep Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Deep Cleaning Service Variation 6 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does 1 BHK Express Deep Cleaning take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "1 BHK Express Deep Cleaning | SmartServe",
+      "seo_description": "Complete cleaning of 1 hall, 1 bedroom, 1 kitchen, and 1 bathroom with eco-friendly cleaning agents.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.588569+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "58ebfd65-2645-4370-b241-aca8a67e6a67",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Full Home / By Room Cleaning",
+      "service_name": "2 BHK Standard Full Home Cleaning",
+      "base_price_inr": 2799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Detailed deep cleaning service for 2 BHK flats covering all rooms, fixtures, and floor scrubbing.",
+      "highlights": [
+        "Professional 2 BHK Standard Full Home Cleaning procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 2 BHK Standard Full Home Cleaning procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Deep Cleaning Service Variation 2 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Deep Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Deep Cleaning Service Variation 2 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 180 minutes.",
+          "question": "How long does 2 BHK Standard Full Home Cleaning take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "2 BHK Standard Full Home Cleaning | SmartServe",
+      "seo_description": "Detailed deep cleaning service for 2 BHK flats covering all rooms, fixtures, and floor scrubbing.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.574939+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "5ace55fc-4278-4f14-b54f-4a695af2bb7c",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Full Home / By Room Cleaning",
+      "service_name": "3 BHK Premium Full Home Cleaning",
+      "base_price_inr": 3699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "4-member cleaner team deep cleaning 3 bedrooms, hall, kitchen, balconies, and 3 bathrooms.",
+      "highlights": [
+        "Professional 3 BHK Premium Full Home Cleaning procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 3 BHK Premium Full Home Cleaning procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Deep Cleaning Service Variation 5 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Deep Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Deep Cleaning Service Variation 5 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 240 minutes.",
+          "question": "How long does 3 BHK Premium Full Home Cleaning take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "3 BHK Premium Full Home Cleaning | SmartServe",
+      "seo_description": "4-member cleaner team deep cleaning 3 bedrooms, hall, kitchen, balconies, and 3 bathrooms.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.584644+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "6b33aec0-8146-413b-b0d3-de90b3d5d137",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Full Home / By Room Cleaning",
+      "service_name": "4 BHK / Villa Luxury Deep Cleaning",
+      "base_price_inr": 4999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Full day deep cleaning for large villas, independent houses, or 4 BHK duplex apartments.",
+      "highlights": [
+        "Professional 4 BHK / Villa Luxury Deep Cleaning procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 4 BHK / Villa Luxury Deep Cleaning procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Kitchen & Bathroom Cleaning Service Variation 5 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Kitchen & Bathroom Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Kitchen & Bathroom Cleaning Service Variation 5 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 300 minutes.",
+          "question": "How long does 4 BHK / Villa Luxury Deep Cleaning take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "4 BHK / Villa Luxury Deep Cleaning | SmartServe",
+      "seo_description": "Full day deep cleaning for large villas, independent houses, or 4 BHK duplex apartments.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.626816+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "7b455532-df98-4d31-8e28-b73988cb1607",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Full Home / By Room Cleaning",
+      "service_name": "Dining Area Scrubbing & Sanitization",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Deep cleaning dining table, chair wipe down, floor stain removal, and chandelier dusting.",
+      "highlights": [
+        "Professional Dining Area Scrubbing & Sanitization procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Dining Area Scrubbing & Sanitization procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Full Home / By Room Cleaning Service Variation 6 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Full Home / By Room Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Full Home / By Room Cleaning Service Variation 6 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Dining Area Scrubbing & Sanitization take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Dining Area Scrubbing & Sanitization | SmartServe",
+      "seo_description": "Deep cleaning dining table, chair wipe down, floor stain removal, and chandelier dusting.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.608991+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "6efaf71d-0b05-4cb0-94dc-a624f7c103a0",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Full Home / By Room Cleaning",
+      "service_name": "Living Room Furniture Polish & Clean",
+      "base_price_inr": 799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "TV unit dusting, sofa vacuuming, glass center table cleaning, and floor scrubbing in hall.",
+      "highlights": [
+        "Professional Living Room Furniture Polish & Clean procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Living Room Furniture Polish & Clean procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Full Home / By Room Cleaning Service Variation 1 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Full Home / By Room Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Full Home / By Room Cleaning Service Variation 1 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Living Room Furniture Polish & Clean take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Living Room Furniture Polish & Clean | SmartServe",
+      "seo_description": "TV unit dusting, sofa vacuuming, glass center table cleaning, and floor scrubbing in hall.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.594537+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "6d6239bc-2c85-4e75-809d-5a9dfb5418b0",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Full Home / By Room Cleaning",
+      "service_name": "Single Bedroom Deep Dust & Vacuum",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Cobweb removal, wardrobe top dusting, mattress vacuuming, and floor mopping for 1 bedroom.",
+      "highlights": [
+        "Professional Single Bedroom Deep Dust & Vacuum procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Single Bedroom Deep Dust & Vacuum procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Sofa & Furniture Cleaning Service Variation 6 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Sofa & Furniture Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Sofa & Furniture Cleaning Service Variation 6 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Single Bedroom Deep Dust & Vacuum take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Single Bedroom Deep Dust & Vacuum | SmartServe",
+      "seo_description": "Cobweb removal, wardrobe top dusting, mattress vacuuming, and floor mopping for 1 bedroom.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.661377+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "8a8c6e5c-1b99-43f2-9606-5fa63d9e4a49",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Full Home / By Room Cleaning",
+      "service_name": "Store Room & Attic Declutter Cleaning",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Organizing, dusting, cobweb removal, and floor wash for storage rooms and lofts.",
+      "highlights": [
+        "Professional Store Room & Attic Declutter Cleaning procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Store Room & Attic Declutter Cleaning procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Full Home / By Room Cleaning Service Variation 7 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Full Home / By Room Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Full Home / By Room Cleaning Service Variation 7 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Store Room & Attic Declutter Cleaning take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Store Room & Attic Declutter Cleaning | SmartServe",
+      "seo_description": "Organizing, dusting, cobweb removal, and floor wash for storage rooms and lofts.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.611049+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "adc6b8c0-dcad-4a57-b1a3-f20be2d2e05b",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Kitchen & Bathroom Cleaning",
+      "service_name": "Dual Bathroom Scrubbing & Tile Polish",
+      "base_price_inr": 1299.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Value combo package deep scrubbing 2 bathrooms including washbasin, mirror, and toilet disinfections.",
+      "highlights": [
+        "Professional Dual Bathroom Scrubbing & Tile Polish procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Dual Bathroom Scrubbing & Tile Polish procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Full Home / By Room Cleaning Service Variation 3 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Full Home / By Room Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Full Home / By Room Cleaning Service Variation 3 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Dual Bathroom Scrubbing & Tile Polish take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Dual Bathroom Scrubbing & Tile Polish | SmartServe",
+      "seo_description": "Value combo package deep scrubbing 2 bathrooms including washbasin, mirror, and toilet disinfections.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.600049+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "990f4a13-a171-43cc-b364-1e1022122d8d",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Kitchen & Bathroom Cleaning",
+      "service_name": "Kitchen Cabinet & Appliance Exterior Wash",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Wiping inside empty cabinets, degreasing fridge exterior, microwave exterior, and countertop scrub.",
+      "highlights": [
+        "Professional Kitchen Cabinet & Appliance Exterior Wash procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Kitchen Cabinet & Appliance Exterior Wash procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Kitchen & Bathroom Cleaning Service Variation 4 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Kitchen & Bathroom Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Kitchen & Bathroom Cleaning Service Variation 4 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 90 minutes.",
+          "question": "How long does Kitchen Cabinet & Appliance Exterior Wash take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Kitchen Cabinet & Appliance Exterior Wash | SmartServe",
+      "seo_description": "Wiping inside empty cabinets, degreasing fridge exterior, microwave exterior, and countertop scrub.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.624473+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "9a614042-e18d-4ab9-886a-0b07c93ef01a",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Kitchen & Bathroom Cleaning",
+      "service_name": "Kitchen Chimney & Hob Deep Degreasing",
+      "base_price_inr": 799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Dismantling chimney mesh filters, chemical degreasing bath, and gas stove burner cleaning.",
+      "highlights": [
+        "Professional Kitchen Chimney & Hob Deep Degreasing procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Kitchen Chimney & Hob Deep Degreasing procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Pest Control Service Variation 5 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Pest Control tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Pest Control Service Variation 5 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Kitchen Chimney & Hob Deep Degreasing take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Kitchen Chimney & Hob Deep Degreasing | SmartServe",
+      "seo_description": "Dismantling chimney mesh filters, chemical degreasing bath, and gas stove burner cleaning.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.641898+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "c4aef5dc-1115-4e65-a8c0-30f7ead61994",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Kitchen & Bathroom Cleaning",
+      "service_name": "Kitchen Countertop & Wall Tile Steam Clean",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "High-temperature steam spray dissolving oil drops on backsplashes and grout joints.",
+      "highlights": [
+        "Professional Kitchen Countertop & Wall Tile Steam Clean procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Kitchen Countertop & Wall Tile Steam Clean procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Sofa & Furniture Cleaning Service Variation 4 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Sofa & Furniture Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Sofa & Furniture Cleaning Service Variation 4 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Kitchen Countertop & Wall Tile Steam Clean take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Kitchen Countertop & Wall Tile Steam Clean | SmartServe",
+      "seo_description": "High-temperature steam spray dissolving oil drops on backsplashes and grout joints.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.656883+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "bffc5df7-1c34-44fb-80dd-84fb1d9be2c1",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Kitchen & Bathroom Cleaning",
+      "service_name": "Sink Drain Unclogging & Anti-Bacterial Wash",
+      "base_price_inr": 399.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Clearing slow kitchen sink drains, removing sludge, and flushing with odor-killing enzyme gel.",
+      "highlights": [
+        "Professional Sink Drain Unclogging & Anti-Bacterial Wash procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Sink Drain Unclogging & Anti-Bacterial Wash procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Sofa & Furniture Cleaning Service Variation 5 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Sofa & Furniture Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Sofa & Furniture Cleaning Service Variation 5 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Sink Drain Unclogging & Anti-Bacterial Wash take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Sink Drain Unclogging & Anti-Bacterial Wash | SmartServe",
+      "seo_description": "Clearing slow kitchen sink drains, removing sludge, and flushing with odor-killing enzyme gel.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.659194+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "d3677ffb-f3e5-4454-86b3-5a7b6d9fdad1",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Pest Control",
+      "service_name": "Ant & Silverfish Perimeter Spray",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Odorless liquid barrier spray along sugar ant trails, bookshelves, and bathroom baseboards.",
+      "highlights": [
+        "Professional Ant & Silverfish Perimeter Spray procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Ant & Silverfish Perimeter Spray procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Pest Control Service Variation 6 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Pest Control tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Pest Control Service Variation 6 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Ant & Silverfish Perimeter Spray take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Ant & Silverfish Perimeter Spray | SmartServe",
+      "seo_description": "Odorless liquid barrier spray along sugar ant trails, bookshelves, and bathroom baseboards.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.644601+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "cdd0be50-0dba-4241-bb94-06edf5d735dd",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Pest Control",
+      "service_name": "Anti-Termite Soil Drilling & Barrier Injection",
+      "base_price_inr": 2499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Drilling holes along wall skirts and injecting anti-termite chemical to protect wooden furniture with 2-year warranty.",
+      "highlights": [
+        "Professional Anti-Termite Soil Drilling & Barrier Injection procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Anti-Termite Soil Drilling & Barrier Injection procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Full Home / By Room Cleaning Service Variation 2 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Full Home / By Room Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Full Home / By Room Cleaning Service Variation 2 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 120 minutes.",
+          "question": "How long does Anti-Termite Soil Drilling & Barrier Injection take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Anti-Termite Soil Drilling & Barrier Injection | SmartServe",
+      "seo_description": "Drilling holes along wall skirts and injecting anti-termite chemical to protect wooden furniture with 2-year warranty.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.597159+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "c8bfc80e-aa4d-48a9-8d78-41a62ff587cb",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Pest Control",
+      "service_name": "Bed Bug Thermal & Chemical Treatment",
+      "base_price_inr": 1499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "2-visit spray treatment targeting mattress seams, bed frames, and wall cracks for complete bed bug eradication.",
+      "highlights": [
+        "Professional Bed Bug Thermal & Chemical Treatment procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Bed Bug Thermal & Chemical Treatment procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Full Home / By Room Cleaning Service Variation 4 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Full Home / By Room Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Full Home / By Room Cleaning Service Variation 4 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does Bed Bug Thermal & Chemical Treatment take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Bed Bug Thermal & Chemical Treatment | SmartServe",
+      "seo_description": "2-visit spray treatment targeting mattress seams, bed frames, and wall cracks for complete bed bug eradication.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.603788+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "c7529e16-f7f1-4785-bbf7-1e572aeaaaf0",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Pest Control",
+      "service_name": "Cockroach Herbal Gel Pest Control",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Odorless herbal gel baiting in kitchen cabinets and drain spray exterminating German cockroaches.",
+      "highlights": [
+        "Professional Cockroach Herbal Gel Pest Control procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Cockroach Herbal Gel Pest Control procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Deep Cleaning Service Variation 4 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Deep Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Deep Cleaning Service Variation 4 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Cockroach Herbal Gel Pest Control take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Cockroach Herbal Gel Pest Control | SmartServe",
+      "seo_description": "Odorless herbal gel baiting in kitchen cabinets and drain spray exterminating German cockroaches.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.581934+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "cedcf4c4-a0c8-460c-9aa3-dd839f66e80f",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Pest Control",
+      "service_name": "Mosquito & Fly Thermal Fogging",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Synthetic pyrethroid fogging for garden, balcony, and living areas suppressing adult mosquitoes.",
+      "highlights": [
+        "Professional Mosquito & Fly Thermal Fogging procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Mosquito & Fly Thermal Fogging procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Kitchen & Bathroom Cleaning Service Variation 3 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Kitchen & Bathroom Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Kitchen & Bathroom Cleaning Service Variation 3 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Mosquito & Fly Thermal Fogging take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Mosquito & Fly Thermal Fogging | SmartServe",
+      "seo_description": "Synthetic pyrethroid fogging for garden, balcony, and living areas suppressing adult mosquitoes.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.621652+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "d42758ef-14dd-4683-a944-80cc0c488fcf",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Pest Control",
+      "service_name": "Rodent Trapping & Entry Sealing Service",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Placement of glue pads, snap traps, and sealing open pipe gaps to keep rats and mice out.",
+      "highlights": [
+        "Professional Rodent Trapping & Entry Sealing Service procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Rodent Trapping & Entry Sealing Service procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Sofa & Furniture Cleaning Service Variation 1 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Sofa & Furniture Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Sofa & Furniture Cleaning Service Variation 1 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Rodent Trapping & Entry Sealing Service take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Rodent Trapping & Entry Sealing Service | SmartServe",
+      "seo_description": "Placement of glue pads, snap traps, and sealing open pipe gaps to keep rats and mice out.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.646807+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "e452fe98-b0b0-485a-ba63-7deb57ca7f89",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Sofa & Furniture Cleaning",
+      "service_name": "5-Seater Fabric Sofa Shampooing & Extraction",
+      "base_price_inr": 899.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Injection-extraction foam machine washing removing deep stains, sweat odors, and dust mites from sofa.",
+      "highlights": [
+        "Professional 5-Seater Fabric Sofa Shampooing & Extraction procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 5-Seater Fabric Sofa Shampooing & Extraction procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Full Home / By Room Cleaning Service Variation 5 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Full Home / By Room Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Full Home / By Room Cleaning Service Variation 5 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 60 minutes.",
+          "question": "How long does 5-Seater Fabric Sofa Shampooing & Extraction take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "5-Seater Fabric Sofa Shampooing & Extraction | SmartServe",
+      "seo_description": "Injection-extraction foam machine washing removing deep stains, sweat odors, and dust mites from sofa.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.606421+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "f40e6092-ddcd-4d8e-aaf1-be9fdbacbc0e",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Sofa & Furniture Cleaning",
+      "service_name": "6-Seater Dining Chair Upholstery Foam Wash",
+      "base_price_inr": 599.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Shampooing cushion seats of 6 dining chairs and polishing wooden/metal chair legs.",
+      "highlights": [
+        "Professional 6-Seater Dining Chair Upholstery Foam Wash procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete 6-Seater Dining Chair Upholstery Foam Wash procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Deep Cleaning Service Variation 3 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Deep Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Deep Cleaning Service Variation 3 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does 6-Seater Dining Chair Upholstery Foam Wash take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "6-Seater Dining Chair Upholstery Foam Wash | SmartServe",
+      "seo_description": "Shampooing cushion seats of 6 dining chairs and polishing wooden/metal chair legs.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.579087+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "fa2970d3-b25c-4521-b61b-efeb396dadac",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Sofa & Furniture Cleaning",
+      "service_name": "Carpet High-Extraction Deep Wash",
+      "base_price_inr": 699.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Rug and living room carpet shampooing lifting tea/coffee spots and reviving carpet pile texture.",
+      "highlights": [
+        "Professional Carpet High-Extraction Deep Wash procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Carpet High-Extraction Deep Wash procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Full Home / By Room Cleaning Service Variation 8 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Full Home / By Room Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Full Home / By Room Cleaning Service Variation 8 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Carpet High-Extraction Deep Wash take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Carpet High-Extraction Deep Wash | SmartServe",
+      "seo_description": "Rug and living room carpet shampooing lifting tea/coffee spots and reviving carpet pile texture.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.613363+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "f7804888-0442-4dff-b91f-e543ea8182ae",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Sofa & Furniture Cleaning",
+      "service_name": "King Size Mattress Deep Steam Sanitization",
+      "base_price_inr": 799.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "High-powered UV vacuuming and hot steam treatment sanitizing mattress from dead skin & allergens.",
+      "highlights": [
+        "Professional King Size Mattress Deep Steam Sanitization procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete King Size Mattress Deep Steam Sanitization procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Kitchen & Bathroom Cleaning Service Variation 1 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Kitchen & Bathroom Cleaning tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Kitchen & Bathroom Cleaning Service Variation 1 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 50 minutes.",
+          "question": "How long does King Size Mattress Deep Steam Sanitization take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "King Size Mattress Deep Steam Sanitization | SmartServe",
+      "seo_description": "High-powered UV vacuuming and hot steam treatment sanitizing mattress from dead skin & allergens.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.615513+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "ed433b58-b961-4023-9192-a7d45601daa2",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Sofa & Furniture Cleaning",
+      "service_name": "Leather Sofa Conditioning & Cream Polish",
+      "base_price_inr": 999.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Specialized leather cleaner wiping dirt followed by rich moisturizer cream to prevent leather cracking.",
+      "highlights": [
+        "Professional Leather Sofa Conditioning & Cream Polish procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Leather Sofa Conditioning & Cream Polish procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Pest Control Service Variation 4 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Pest Control tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Pest Control Service Variation 4 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 45 minutes.",
+          "question": "How long does Leather Sofa Conditioning & Cream Polish take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Leather Sofa Conditioning & Cream Polish | SmartServe",
+      "seo_description": "Specialized leather cleaner wiping dirt followed by rich moisturizer cream to prevent leather cracking.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.639474+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    },
+    {
+      "service_id": "fed5e15c-ad8c-4dcd-9fc5-bfdaad37d7a8",
+      "category_number": 2,
+      "category_name": "2. Cleaning & Pest Control",
+      "subcategory_name": "Sofa & Furniture Cleaning",
+      "service_name": "Recliner Chair Spot & Stain Scrub",
+      "base_price_inr": 499.0,
+      "estimated_duration_minutes": 60,
+      "max_demand_surge_percent": 20.0,
+      "max_discount_percent": 10.0,
+      "is_active": true,
+      "description": "Targeted stain removal scrub and fabric wash for single electronic or manual recliner chairs.",
+      "highlights": [
+        "Professional Recliner Chair Spot & Stain Scrub procedure",
+        "Certified & background-verified specialists",
+        "High-grade safety & sanitized tools",
+        "100% satisfaction guarantee",
+        "Transparent pricing with zero hidden charges"
+      ],
+      "included_features": [
+        "Complete Recliner Chair Spot & Stain Scrub procedure",
+        "Standard tools and supplies included",
+        "Post-service inspection and cleanup",
+        "Expert consultation and advice"
+      ],
+      "excluded_scope": [
+        "Structural heavy modifications",
+        "Spare hardware unless explicitly requested"
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "The professional examines the requirements and plans the service delivery.",
+          "is_key_step": true,
+          "step_number": 1
+        },
+        {
+          "title": "Preparation & Setup",
+          "description": "Setting up the necessary tools, materials, and safety measures.",
+          "is_key_step": false,
+          "step_number": 2
+        },
+        {
+          "title": "Core Execution",
+          "description": "Performing the main Pest Control Service Variation 1 tasks with precision.",
+          "is_key_step": true,
+          "step_number": 3
+        },
+        {
+          "title": "Finishing Touches",
+          "description": "Applying final finishing touches to ensure perfect results.",
+          "is_key_step": false,
+          "step_number": 4
+        },
+        {
+          "title": "Cleanup & Handover",
+          "description": "Cleaning the work area and handing over to the customer for approval.",
+          "is_key_step": true,
+          "step_number": 5
+        }
+      ],
+      "tools_materials": [
+        "Standard Pest Control tool kit",
+        "Eco-friendly supplies and consumables",
+        "Safety gear (gloves, masks, etc.)",
+        "Sanitization equipment",
+        "Disposable sheets/covers if applicable"
+      ],
+      "customer_setup_requirements": [
+        "Ensure a clear working space",
+        "Keep pets and children away from the service area",
+        "Provide access to a power socket and water supply if needed"
+      ],
+      "aftercare_precautions": [
+        "Avoid touching the treated area immediately",
+        "Follow the professional's specific post-service advice",
+        "Keep the area dry/ventilated for at least 2 hours"
+      ],
+      "expected_results": [
+        "High quality Pest Control Service Variation 1 completed successfully",
+        "A clean and safe environment",
+        "Complete customer satisfaction"
+      ],
+      "important_notes": [
+        "Service duration may vary based on actual on-site conditions",
+        "Please inform the professional of any allergies or sensitivities beforehand"
+      ],
+      "warranty_coverage": "7-day service warranty on workmanship",
+      "faqs": [
+        {
+          "answer": "The session typically takes around 30 minutes.",
+          "question": "How long does Recliner Chair Spot & Stain Scrub take?"
+        },
+        {
+          "answer": "Yes, strictly industry-approved and sanitized before every appointment.",
+          "question": "Are the tools and products safe?"
+        }
+      ],
+      "tips": [
+        "Regular maintenance can significantly extend the lifespan of the results.",
+        "Book in advance during weekends and holidays."
+      ],
+      "dos": [
+        "Do provide clear instructions before the service begins",
+        "Do inspect the work during the final handover"
+      ],
+      "donts": [
+        "Don't attempt to interrupt the core procedure",
+        "Don't use harsh chemicals on the treated area immediately after"
+      ],
+      "suggested_addons": [],
+      "seo_title": "Recliner Chair Spot & Stain Scrub | SmartServe",
+      "seo_description": "Targeted stain removal scrub and fabric wash for single electronic or manual recliner chairs.",
+      "keywords": [],
+      "created_at": "2026-09-05T14:21:17.629720+00:00",
+      "updated_at": "2026-09-05T16:19:58.614134+00:00"
+    }
+  ]
+}

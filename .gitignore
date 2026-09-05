@@ -70,6 +70,7 @@ scratch/
 !backend/backups/*.sql
 *.xlsx
 !backend/backups/*.xlsx
+!backend/backup/**
 *.zip
 *.db
 *.sqlite
@@ -79,6 +80,9 @@ scratch/
 # Screenshots & visual test captures
 *.png
 *.webp
+VIDEOS/
+*.mp4
+docker_inspect.json
 
 # Ad-hoc test, scraper, and local verification scripts
 capture_*.js
