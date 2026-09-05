@@ -15,7 +15,7 @@ class ServiceCreateRequest(BaseModel):
     highlights: Optional[List[str]] = None
     included: Optional[List[str]] = None
     excluded: Optional[List[str]] = None
-    process_steps: Optional[List[Dict[str, Any]]] = None
+    process_steps: Optional[List[Union[str, Dict[str, Any]]]] = None
     aftercare: Optional[List[str]] = None
     tools_materials: Optional[List[str]] = None
     customer_setup: Optional[List[str]] = None
@@ -45,7 +45,7 @@ class ServiceUpdateRequest(BaseModel):
     highlights: Optional[List[str]] = None
     included: Optional[List[str]] = None
     excluded: Optional[List[str]] = None
-    process_steps: Optional[List[Dict[str, Any]]] = None
+    process_steps: Optional[List[Union[str, Dict[str, Any]]]] = None
     aftercare: Optional[List[str]] = None
     tools_materials: Optional[List[str]] = None
     customer_setup: Optional[List[str]] = None
@@ -78,7 +78,7 @@ class ServiceResponse(BaseModel):
     highlights: Optional[List[str]] = None
     included: Optional[List[str]] = None
     excluded: Optional[List[str]] = None
-    process_steps: Optional[List[Dict[str, Any]]] = None
+    process_steps: Optional[List[Union[str, Dict[str, Any]]]] = None
     aftercare: Optional[List[str]] = None
     tools_materials: Optional[List[str]] = None
     customer_setup: Optional[List[str]] = None

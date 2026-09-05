@@ -1,4 +1,5 @@
 import uuid
+import datetime
 from typing import List, Optional
 from pydantic import BaseModel
 from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File
@@ -242,16 +243,40 @@ def update_service_item(
     if not service:
         raise HTTPException(status_code=404, detail="Service not found")
 
+    # Capture fields explicitly supplied in the request payload
+    fields_set = getattr(req, "model_fields_set", set())
+
+    # Snapshot previous state for rollback and versioned audit trail
     old_price = service.base_price
     old_active = service.is_active
     old_name = service.name
+    old_snapshot = {
+        "name": service.name,
+        "category": service.category,
+        "subcategory": service.subcategory,
+        "base_price": service.base_price,
+        "is_active": service.is_active,
+        "distinct_features": list(service.distinct_features or []),
+        "suggested_addons": list(service.suggested_addons or [])
+    }
 
-    # 1. Non-destructive distinct_features
-    distinct_features = service.distinct_features
-    if req.included is not None:
-        distinct_features = req.included
-    elif req.distinct_features is not None:
-        distinct_features = req.distinct_features
+    # Core attribute updates (preserve existing if field was omitted)
+    new_name = req.name if "name" in fields_set and req.name is not None and req.name.strip() else service.name
+    new_cat = req.category if "category" in fields_set and req.category is not None and req.category.strip() else service.category
+    new_subcat = req.subcategory if "subcategory" in fields_set and req.subcategory is not None and req.subcategory.strip() else service.subcategory
+    new_price = req.base_price if "base_price" in fields_set and req.base_price is not None and req.base_price > 0 else service.base_price
+    new_demand = req.max_demand_increase if "max_demand_increase" in fields_set and req.max_demand_increase is not None else service.max_demand_increase
+    new_discount = req.max_discount if "max_discount" in fields_set and req.max_discount is not None else service.max_discount
+    new_active = req.is_active if "is_active" in fields_set and req.is_active is not None else service.is_active
+
+    # 1. Non-destructive distinct_features (Inclusions)
+    distinct_features = list(service.distinct_features or [])
+    if "included" in fields_set and req.included is not None:
+        if len(req.included) > 0 or not distinct_features:
+            distinct_features = list(req.included)
+    elif "distinct_features" in fields_set and req.distinct_features is not None:
+        if len(req.distinct_features) > 0 or not distinct_features:
+            distinct_features = list(req.distinct_features)
 
     # 2. Extract existing addons and typed metadata blocks
     existing_addons = list(service.suggested_addons or [])
@@ -259,15 +284,12 @@ def update_service_item(
     existing_typed_blocks = [a for a in existing_addons if isinstance(a, dict) and a.get("type")]
     blocks_by_type = {a.get("type"): dict(a) for a in existing_typed_blocks}
 
-    # 3. Real Add-ons Preservation
-    if req.addons is not None:
+    # 3. Real Add-ons Preservation (NEVER silently clear existing real add-ons)
+    if "addons" in fields_set and req.addons is not None and len(req.addons) > 0:
         final_real_addons = list(req.addons)
-    elif req.suggested_addons is not None:
+    elif "suggested_addons" in fields_set and req.suggested_addons is not None:
         incoming_real_addons = [a for a in req.suggested_addons if isinstance(a, dict) and not a.get("type")]
-        if incoming_real_addons:
-            final_real_addons = incoming_real_addons
-        else:
-            final_real_addons = existing_real_addons
+        final_real_addons = incoming_real_addons if incoming_real_addons else existing_real_addons
     else:
         final_real_addons = existing_real_addons
 
@@ -328,130 +350,150 @@ def update_service_item(
         return False
 
     # 4. Typed Metadata Blocks Safe Non-destructive Merge
-    if req.description is not None:
-        if req.description.strip() or "description" not in blocks_by_type:
-            blocks_by_type["description"] = {"type": "description", "text": req.description}
+    if "description" in fields_set and req.description is not None:
+        if req.description.strip():
+            blocks_by_type["description"] = {"type": "description", "text": req.description.strip()}
 
-    if req.highlights is not None:
-        if req.highlights or "highlights" not in blocks_by_type:
+    if "highlights" in fields_set and req.highlights is not None:
+        if len(req.highlights) > 0:
             blocks_by_type["highlights"] = {"type": "highlights", "items": req.highlights}
             if "seo_metadata" in blocks_by_type:
                 seo = dict(blocks_by_type["seo_metadata"])
                 seo["highlights"] = req.highlights
                 blocks_by_type["seo_metadata"] = seo
 
-    if req.excluded is not None:
-        if req.excluded or "excluded_scope" not in blocks_by_type:
+    if "excluded" in fields_set and req.excluded is not None:
+        if len(req.excluded) > 0:
             blocks_by_type["excluded_scope"] = {"type": "excluded_scope", "items": req.excluded}
 
-    if req.process_steps is not None:
-        if req.process_steps or "process_steps" not in blocks_by_type:
+    if "process_steps" in fields_set and req.process_steps is not None:
+        if len(req.process_steps) > 0:
             blocks_by_type["process_steps"] = {"type": "process_steps", "steps": req.process_steps}
 
-    if req.aftercare is not None:
-        if req.aftercare or "aftercare_precautions" not in blocks_by_type:
+    if "aftercare" in fields_set and req.aftercare is not None:
+        if len(req.aftercare) > 0:
             blocks_by_type["aftercare_precautions"] = {"type": "aftercare_precautions", "aftercare": req.aftercare}
 
-    if req.tools_materials is not None:
-        if req.tools_materials or "tools_materials" not in blocks_by_type:
+    if "tools_materials" in fields_set and req.tools_materials is not None:
+        if len(req.tools_materials) > 0:
             existing_tm = blocks_by_type.get("tools_materials", {})
             existing_mat = existing_tm.get("materials", []) if isinstance(existing_tm, dict) else []
             blocks_by_type["tools_materials"] = {"type": "tools_materials", "tools": req.tools_materials, "materials": existing_mat}
 
-    if req.customer_setup is not None:
-        if req.customer_setup or "customer_setup" not in blocks_by_type:
+    if "customer_setup" in fields_set and req.customer_setup is not None:
+        if len(req.customer_setup) > 0:
             blocks_by_type["customer_setup"] = {"type": "customer_setup", "requirements": req.customer_setup}
 
-    if req.expected_results is not None:
-        if req.expected_results or "expected_results" not in blocks_by_type:
+    if "expected_results" in fields_set and req.expected_results is not None:
+        if len(req.expected_results) > 0:
             blocks_by_type["expected_results"] = {"type": "expected_results", "items": req.expected_results}
 
-    if req.important_notes is not None:
-        if req.important_notes or "important_notes" not in blocks_by_type:
+    if "important_notes" in fields_set and req.important_notes is not None:
+        if len(req.important_notes) > 0:
             blocks_by_type["important_notes"] = {"type": "important_notes", "items": req.important_notes}
 
-    if req.warranty is not None:
-        if (req.warranty and req.warranty.strip()) or "warranty" not in blocks_by_type:
+    if "warranty" in fields_set and req.warranty is not None:
+        if req.warranty.strip():
             blocks_by_type["warranty"] = {
                 "type": "warranty",
-                "has_warranty": bool(req.warranty and req.warranty.strip()),
-                "details": req.warranty
+                "has_warranty": True,
+                "details": req.warranty.strip()
+            }
+        else:
+            blocks_by_type["warranty"] = {
+                "type": "warranty",
+                "has_warranty": False,
+                "details": None
             }
 
-    if req.faqs is not None:
-        if req.faqs or "faqs" not in blocks_by_type:
+    if "faqs" in fields_set and req.faqs is not None:
+        if len(req.faqs) > 0:
             blocks_by_type["faqs"] = {"type": "faqs", "items": req.faqs}
 
-    if req.tips is not None:
-        if req.tips or "tips" not in blocks_by_type:
+    if "tips" in fields_set and req.tips is not None:
+        if len(req.tips) > 0:
             blocks_by_type["tips"] = {"type": "tips", "items": req.tips}
 
-    if req.dos is not None or req.donts is not None:
+    if ("dos" in fields_set and req.dos is not None) or ("donts" in fields_set and req.donts is not None):
         existing_dd = blocks_by_type.get("dos_donts", {})
-        cur_dos = req.dos if req.dos is not None else (existing_dd.get("dos", []) if isinstance(existing_dd, dict) else [])
-        cur_donts = req.donts if req.donts is not None else (existing_dd.get("donts", []) if isinstance(existing_dd, dict) else [])
-        if cur_dos or cur_donts or "dos_donts" not in blocks_by_type:
+        cur_dos = req.dos if ("dos" in fields_set and req.dos is not None) else (existing_dd.get("dos", []) if isinstance(existing_dd, dict) else [])
+        cur_donts = req.donts if ("donts" in fields_set and req.donts is not None) else (existing_dd.get("donts", []) if isinstance(existing_dd, dict) else [])
+        if cur_dos or cur_donts:
             blocks_by_type["dos_donts"] = {"type": "dos_donts", "dos": cur_dos, "donts": cur_donts}
 
-    if req.duration_minutes is not None:
+    if "duration_minutes" in fields_set and req.duration_minutes is not None:
         blocks_by_type["duration"] = {"type": "duration", "minutes": req.duration_minutes}
 
-    if req.service_media is not None:
-        if req.service_media or "service_media" not in blocks_by_type:
+    if "service_media" in fields_set and req.service_media is not None:
+        if len(req.service_media) > 0:
             blocks_by_type["service_media"] = {"type": "service_media", "items": req.service_media}
 
-    if req.service_features is not None:
-        if req.service_features or "service_features" not in blocks_by_type:
+    if "service_features" in fields_set and req.service_features is not None:
+        if len(req.service_features) > 0:
             blocks_by_type["service_features"] = {"type": "service_features", "items": req.service_features}
 
-    if req.seo_metadata is not None:
-        blocks_by_type["seo_metadata"] = req.seo_metadata
+    if "seo_metadata" in fields_set and req.seo_metadata is not None:
+        if req.seo_metadata:
+            blocks_by_type["seo_metadata"] = req.seo_metadata
 
-    # Merge incoming suggested_addons for any blocks not updated by explicit top-level fields
-    explicit_types = {
-        "description": req.description is not None,
-        "highlights": req.highlights is not None,
-        "excluded_scope": req.excluded is not None,
-        "process_steps": req.process_steps is not None,
-        "aftercare_precautions": req.aftercare is not None,
-        "tools_materials": req.tools_materials is not None,
-        "customer_setup": req.customer_setup is not None,
-        "expected_results": req.expected_results is not None,
-        "important_notes": req.important_notes is not None,
-        "warranty": req.warranty is not None,
-        "faqs": req.faqs is not None,
-        "tips": req.tips is not None,
-        "dos_donts": (req.dos is not None or req.donts is not None),
-        "duration": req.duration_minutes is not None,
-        "service_media": req.service_media is not None,
-        "service_features": req.service_features is not None,
-        "seo_metadata": req.seo_metadata is not None
+    # Merge incoming suggested_addons for any custom blocks not updated by explicit top-level fields
+    explicit_types_passed = {
+        "description": "description" in fields_set,
+        "highlights": "highlights" in fields_set,
+        "excluded_scope": "excluded" in fields_set,
+        "process_steps": "process_steps" in fields_set,
+        "aftercare_precautions": "aftercare" in fields_set,
+        "tools_materials": "tools_materials" in fields_set,
+        "customer_setup": "customer_setup" in fields_set,
+        "expected_results": "expected_results" in fields_set,
+        "important_notes": "important_notes" in fields_set,
+        "warranty": "warranty" in fields_set,
+        "faqs": "faqs" in fields_set,
+        "tips": "tips" in fields_set,
+        "dos_donts": ("dos" in fields_set or "donts" in fields_set),
+        "duration": "duration_minutes" in fields_set,
+        "service_media": "service_media" in fields_set,
+        "service_features": "service_features" in fields_set,
+        "seo_metadata": "seo_metadata" in fields_set
     }
-    if req.suggested_addons is not None:
+    if "suggested_addons" in fields_set and req.suggested_addons is not None:
         for b in req.suggested_addons:
             if isinstance(b, dict) and b.get("type"):
                 b_type = b.get("type")
-                if not explicit_types.get(b_type, False):
-                    # Never overwrite an existing non-empty block with an empty block
+                if not explicit_types_passed.get(b_type, False):
+                    # Never overwrite existing non-empty block with an empty block
                     if b_type in blocks_by_type and is_block_meaningfully_empty(b) and not is_block_meaningfully_empty(blocks_by_type[b_type]):
                         continue
-                    blocks_by_type[b_type] = b
+                    if not is_block_meaningfully_empty(b):
+                        blocks_by_type[b_type] = b
 
-    final_suggested_addons = list(final_real_addons) + list(blocks_by_type.values())
+    # Clean out any empty placeholder blocks
+    clean_blocks = [b for b in blocks_by_type.values() if not is_block_meaningfully_empty(b)]
+    final_suggested_addons = list(final_real_addons) + clean_blocks
 
-    updated = service_repository.update_service(
-        db,
-        service=service,
-        name=req.name,
-        category=req.category,
-        subcategory=req.subcategory,
-        base_price=req.base_price,
-        max_demand_increase=req.max_demand_increase,
-        max_discount=req.max_discount,
-        distinct_features=distinct_features,
-        suggested_addons=final_suggested_addons,
-        is_active=req.is_active
-    )
+    # Transaction safety: execute update with verification and rollback
+    try:
+        service.name = new_name
+        service.category = new_cat
+        service.subcategory = new_subcat
+        service.base_price = new_price
+        service.max_demand_increase = new_demand
+        service.max_discount = new_discount
+        service.distinct_features = distinct_features
+        service.suggested_addons = final_suggested_addons
+        service.is_active = new_active
+
+        db.commit()
+        db.refresh(service)
+
+        # Fresh SELECT to verify database write
+        updated = service_repository.get_service_by_id(db, s_uuid)
+        if not updated:
+            db.rollback()
+            raise HTTPException(status_code=500, detail="Service update verification failed on fresh SELECT")
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Database update transaction failed: {str(e)}")
 
     # SQLite parity sync
     try:
@@ -501,12 +543,25 @@ def update_service_item(
         metadata_json={
             "service_id": str(updated.id),
             "service_name": updated.name,
+            "operation_type": "CATALOG_UPDATE",
+            "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "fields_modified": list(fields_set),
             "old_price": old_price,
             "new_price": updated.base_price,
             "old_active": old_active,
             "new_active": updated.is_active,
             "changes_summary": change_desc,
-            "changes": changes
+            "changes": changes,
+            "previous_state": old_snapshot,
+            "new_state": {
+                "name": updated.name,
+                "category": updated.category,
+                "subcategory": updated.subcategory,
+                "base_price": updated.base_price,
+                "is_active": updated.is_active,
+                "distinct_features": list(updated.distinct_features or []),
+                "suggested_addons": list(updated.suggested_addons or [])
+            }
         }
     )
 

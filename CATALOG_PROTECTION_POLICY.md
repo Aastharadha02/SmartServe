@@ -1,12 +1,12 @@
 # SmartServe Master Catalog Protection Policy
-**Status**: FROZEN & PROTECTED (Category 1 & Category 2)
-**Date**: September 5, 2026
+**Status**: ACTIVE, ENFORCED & EXPANDED (Categories 1, 2, 3, and 4)  
+**Last Updated**: September 5, 2026  
 
 ---
 
-## 1. Protected Scope (87 Services)
+## 1. Protected Scope (156 Total Services)
 
-The following 87 services across Category 1 and Category 2 are strictly **PROTECTED AND FROZEN**:
+The following 156 services across Categories 1, 2, 3, and 4 are strictly **PROTECTED, PERSISTED, AND MONITORED**:
 
 ### Category 1: Beauty, Salon & Spa (55 Services)
 - **Facial & Skincare** (9 services)
@@ -23,27 +23,56 @@ The following 87 services across Category 1 and Category 2 are strictly **PROTEC
 - **Pest Control** (6 services)
 - **Sofa & Furniture Cleaning** (6 services)
 
+### Category 3: Painting, Waterproofing & Home Improvement (23 Services)
+- **Home Improvement** (4 services)
+- **Home Painting** (9 services)
+- **Specialized Painting** (5 services)
+- **Waterproofing & Grouting** (5 services)
+
+### Category 4: AC, Appliance & Electronics Repair (46 Services)
+- **AC** (7 services)
+- **Air Cooler** (3 services)
+- **Chimney** (3 services)
+- **Geyser** (4 services)
+- **Microwave** (3 services)
+- **RO / Water Purifier** (5 services)
+- **Refrigerator** (5 services)
+- **Television** (5 services)
+- **Variants** (6 services)
+- **Washing Machine** (5 services)
+
 ---
 
-## 2. Inviolable Protection Rules
+## 2. Inviolable Protection Policy (11 Mandatory Rules)
 
-1. **NO UNREQUESTED MODIFICATIONS**:
-   - NO automated script, seed script, migration, bulk updater, or content-generation tool may modify or overwrite any record in Category 1 or Category 2 without explicit user instruction.
-2. **NO CONTENT DELETION / OVERWRITE**:
-   - Save operations must never turn populated fields (`description`, `highlights`, `excluded`, `process_steps`, `tools_materials`, `customer_setup`, `aftercare`, `expected_results`, `important_notes`, `warranty`, `faqs`, `tips`, `dos`, `donts`, `service_features`, `seo_metadata`) into empty strings or nulls.
-3. **EXISTING ADD-ONS ARE IMMUTABLE**:
-   - Existing real add-ons must never be deleted, copied between services, or auto-generated.
-4. **SERVICE IDENTITY IS IMMUTABLE**:
-   - Service IDs, names, base prices, categories, subcategories, and active statuses are fixed.
-5. **LEGITIMATE ADMIN EDITING PRESERVED**:
-   - An authenticated Admin user intentionally modifying a field through the UI is fully supported, but untouched fields must remain preserved upon save.
+1. **Master Source of Truth**: The Admin Catalog in the local PostgreSQL database is the single authoritative master catalog.
+2. **Customer Application Read-Only**: The Customer frontend and backend are strictly read-only consumers of catalog data. No catalog write or mutation API exists on the customer application.
+3. **Authorized Admin Persistence Path**: Catalog writes and modifications occur exclusively through the authorized, authenticated Admin API persistence path (`/api/v1/admin/catalog/*`) requiring admin privileges.
+4. **No Automated Overwrite by AI/Scripts**: AI-generated scripts, background agents, and migrations must never automatically rewrite catalog records without explicit, verified user authorization.
+5. **Safe Merge for Partial Updates**: All partial updates (`PUT /admin/catalog/services/{id}`) must safely merge incoming fields with existing database metadata. Omitted fields must remain 100% untouched.
+6. **No Silent Data Loss**: Existing populated metadata (`description`, `highlights`, `included`, `excluded`, `process_steps`, `tools_materials`, `customer_setup`, `aftercare`, `expected_results`, `important_notes`, `warranty`, `faqs`, `tips`, `dos`, `donts`, `service_features`, `service_media`, `seo_metadata`) can never be silently cleared or replaced by empty defaults (`""`, `[]`, `null`, `{}`).
+7. **Real Add-ons Immutability**: Existing real database add-ons are strictly immutable; they cannot be regenerated, deleted, or overwritten during metadata edits.
+8. **Explicit Authorization for Bulk Operations**: Any batch catalog modification requires prior review and explicit user confirmation.
+9. **Pre-Write Backup Mandate**: Every batch or single-category catalog modification must automatically generate a timestamped local backup prior to execution.
+10. **Post-Write DB Read-Back Verification**: Every catalog transaction must perform an immediate fresh `SELECT` query from PostgreSQL to verify that data was properly committed before returning success.
+11. **Immediate Transaction Abort on Mutation Anomaly**: Any unexpected metadata corruption, type mismatch, or deletion anomaly must trigger an immediate `ROLLBACK` and halt execution.
 
 ---
 
-## 3. Recovery Points & Checksum Files
+## 3. Technical Safeguards Implemented
 
-- **Baseline Checksum File**: `backend/catalog_baseline_87_protected.json`
-- **Permanent JSON Backup**: `backend/backups/category1_category2_87_services_permanent_backup.json`
-- **Permanent SQL Dump**: `backend/backups/category1_category2_87_services_permanent_backup.sql`
-- **Verification Script**: `python backend/test_catalog_baseline_87.py`
-- **UI Save Data-Loss Test**: `python backend/test_ui_save_data_loss_11_services.py`
+- **Pydantic Field Tracking**: Uses `req.model_fields_set` in `app/api/v1/catalog.py` to distinguish explicitly provided fields from omitted fields.
+- **Empty-Block Overwrite Protection**: Filters out empty placeholder objects from incoming payloads and ensures non-empty existing blocks are never overwritten by empty structures.
+- **Transactional Atomicity**: Database writes use ACID transactions with rollback on verification error.
+- **Versioned Audit Logging**: Each edit captures `previous_state`, `new_state`, and `fields_modified` in the immutable `audit_logs` table.
+
+---
+
+## 4. Checkpoint Artifacts & Baselines
+
+- **Category 1 & 2 Permanent Backup**: `backend/backups/category1_category2_87_services_permanent_backup.json`
+- **Category 3 Pre-Restore Backup**: `backend/backups/category3_painting_waterproofing_home_improvement_pre_restore.json`
+- **Category 3 Post-Restore Backup**: `backend/backups/category3_painting_waterproofing_home_improvement_restored.json`
+- **Category 4 Pre-Change Snapshot**: `backend/backups/category4_ac_appliance_electronics_repair_pre_change_snapshot.json`
+- **Category 4 Final Checkpoints**: `backend/backups/category4_ac_appliance_electronics_repair_FINAL.{json,xlsx,sql}`
+- **Machine-Readable Baseline (156 Services)**: `backend/catalog_baseline_156_protected.json` (SHA-256: `4f05518c17be8322bec2fdf2ef6a6c8f019d1d89bad0213e4167b231b0ba1528`)

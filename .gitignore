@@ -61,6 +61,8 @@ scratch/
 
 # Database dumps, local backups & baselines (DO NOT COMMIT)
 backend/backups/
+backend/catalog_drafts/
+backend/catalog_verification/
 backend/catalog_baseline_*.json
 backend/backup_*.json
 *.sql
@@ -68,6 +70,7 @@ backend/backup_*.json
 *.db
 *.sqlite
 *.sqlite3
+!backend/scripts/*.py
 
 # Screenshots & visual test captures
 *.png
