@@ -1,7 +1,7 @@
 # Catalog Build Handoff
-Last updated: 2026-09-05T20:10:00+05:30
+Last updated: 2026-09-05T20:15:00+05:30
 Current branch: feat/customer-and-admin-integration
-Total services persisted: 255
+Total services persisted: 285
 
 ## Category status
 1. Beauty, Salon & Spa: DONE (regenerated 2026-09-05)
@@ -11,7 +11,7 @@ Total services persisted: 255
 5. Electrician, Plumber, Carpenter & Home Repairs: DONE (original)
 6. Smart Home & Security: DONE (expanded and generated 2026-09-05)
 7. Domestic Help & Cooking: DONE (generated 2026-09-05)
-8. Education, Teachers & Coaching: NOT STARTED
+8. Education, Teachers & Coaching: DONE (generated 2026-09-05)
 9. Health, Fitness & Wellness: NOT STARTED
 10. Events, Photography & Entertainment: NOT STARTED
 11. Pet Services: NOT STARTED
@@ -20,10 +20,10 @@ Total services persisted: 255
 14. Moving, Delivery & Local Assistance: NOT STARTED
 
 ## Exactly where I stopped
-Finished generating Category 7 (30 services). Ran the pipeline, verified local Postgres insertion, created backups, and committed them to git.
+Finished generating Category 8 (30 services). Ran the pipeline, verified local Postgres insertion, created backups, and committed them to git.
 
 ## Next single action
-Write and execute `backend/scripts/generate_cat8_base_data.py` to generate the service data for Category 8 (Education, Teachers & Coaching).
+Write and execute `backend/scripts/generate_cat9_base_data.py` to generate the service data for Category 9 (Health, Fitness & Wellness).
 
 ---
 
