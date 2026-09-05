@@ -9,10 +9,10 @@ from openpyxl.utils import get_column_letter
 
 # Add parent path to import builder modules
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from category7_content_builder.domestic_help_cooking_data import CAT7_SERVICES
+from category7_content_builder.domestic_help_cooking_data import DOMESTIC_HELP_SERVICES
 
 def build_category7_draft():
-    all_builder_services = CAT7_SERVICES
+    all_builder_services = DOMESTIC_HELP_SERVICES
     print(f"Loaded {len(all_builder_services)} total services from builder modules.")
     
     validated_draft_services = []
@@ -79,7 +79,7 @@ def build_category7_draft():
             "total_services": len(validated_draft_services),
             "subcategories_count": 1,
             "subcategories": {
-                "Domestic Services": len(validated_draft_services)
+                "Cooks / Chefs": len(validated_draft_services)
             }
         },
         "services": validated_draft_services
@@ -128,7 +128,7 @@ def build_category7_draft():
         cell.alignment = Alignment(horizontal="center", vertical="center")
         cell.border = cell_border
         
-    subcats = ["Domestic Services"]
+    subcats = ["Cooks / Chefs"]
     for sc in subcats:
         svcs = [s for s in validated_draft_services if s["subcategory"] == sc]
         s_ids = ", ".join(s["id"] for s in svcs)

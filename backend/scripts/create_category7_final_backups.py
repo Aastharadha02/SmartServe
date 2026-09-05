@@ -11,7 +11,7 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-def create_cat7_final_backups():
+def create_cat6_final_backups():
     load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
     db_url = os.getenv("DATABASE_URL", "postgresql://postgres@localhost:5432/smartserve")
     p = urlparse(db_url)
@@ -74,7 +74,7 @@ def create_cat7_final_backups():
             "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             "total_services": len(final_records),
             "subcategories": {
-                "Domestic Services": len([r for r in final_records if r["subcategory"] == "Domestic Services"])
+                "Cooks / Chefs": len([r for r in final_records if r["subcategory"] == "Cooks / Chefs"])
             },
             "status": "PROTECTED_AND_PERSISTED"
         },
@@ -130,4 +130,4 @@ def create_cat7_final_backups():
     # SQL Insert logic would go here if needed, but JSON/XLSX is standard.
     
 if __name__ == "__main__":
-    create_cat7_final_backups()
+    create_cat6_final_backups()

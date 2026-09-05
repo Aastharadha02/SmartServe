@@ -1,0 +1,4484 @@
+{
+  "metadata": {
+    "category": "7. Domestic Help & Cooking",
+    "backup_type": "CATEGORY_FINAL",
+    "timestamp": "2026-09-05T14:37:18.986914+00:00",
+    "total_services": 30,
+    "subcategories": {
+      "Cooks / Chefs": 7
+    },
+    "status": "PROTECTED_AND_PERSISTED"
+  },
+  "services": [
+    {
+      "id": "40b63594-5545-5186-8c79-12e95f135bbd",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Cooks / Chefs",
+      "name": "Cooks / Chefs Service Variation 1",
+      "base_price": 600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cooks / chefs service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Cooks / Chefs",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.846588+00:00",
+      "updated_at": "2026-09-05T14:37:11.846588+00:00"
+    },
+    {
+      "id": "a1ce921c-1580-5cc8-89c0-0c404e03620d",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Cooks / Chefs",
+      "name": "Cooks / Chefs Service Variation 2",
+      "base_price": 700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cooks / chefs service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Cooks / Chefs",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.851654+00:00",
+      "updated_at": "2026-09-05T14:37:11.851654+00:00"
+    },
+    {
+      "id": "c53f41db-6864-5098-962e-5b8cd6d01533",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Cooks / Chefs",
+      "name": "Cooks / Chefs Service Variation 3",
+      "base_price": 800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cooks / chefs service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Cooks / Chefs",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.854915+00:00",
+      "updated_at": "2026-09-05T14:37:11.854915+00:00"
+    },
+    {
+      "id": "50708bc9-4abb-563d-92a7-3266f4eb4213",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Cooks / Chefs",
+      "name": "Cooks / Chefs Service Variation 4",
+      "base_price": 900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cooks / chefs service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Cooks / Chefs",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.857639+00:00",
+      "updated_at": "2026-09-05T14:37:11.857639+00:00"
+    },
+    {
+      "id": "6f70225a-efcb-50ac-a11a-3abf2809908d",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Cooks / Chefs",
+      "name": "Cooks / Chefs Service Variation 5",
+      "base_price": 1000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cooks / chefs service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Cooks / Chefs",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.860484+00:00",
+      "updated_at": "2026-09-05T14:37:11.860484+00:00"
+    },
+    {
+      "id": "ab5ac2a7-edc9-5443-8456-b2f6c4ed5da9",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Cooks / Chefs",
+      "name": "Cooks / Chefs Service Variation 6",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cooks / chefs service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Cooks / Chefs",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.863651+00:00",
+      "updated_at": "2026-09-05T14:37:11.863651+00:00"
+    },
+    {
+      "id": "40735bdb-7e84-561a-bd66-3cac217acc77",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Cooks / Chefs",
+      "name": "Cooks / Chefs Service Variation 7",
+      "base_price": 1200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cooks / chefs service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Cooks / Chefs",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.866604+00:00",
+      "updated_at": "2026-09-05T14:37:11.866604+00:00"
+    },
+    {
+      "id": "ccc1f0a6-5a53-5b8f-8e95-51031f788e98",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Drivers",
+      "name": "Drivers Service Variation 1",
+      "base_price": 600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional drivers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Drivers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.870149+00:00",
+      "updated_at": "2026-09-05T14:37:11.870149+00:00"
+    },
+    {
+      "id": "f6b2113d-50a5-58a5-89a1-036347415a9b",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Drivers",
+      "name": "Drivers Service Variation 2",
+      "base_price": 700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional drivers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Drivers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.873571+00:00",
+      "updated_at": "2026-09-05T14:37:11.873571+00:00"
+    },
+    {
+      "id": "2527c933-3089-5fe2-aacd-fa3ae48c78f0",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Drivers",
+      "name": "Drivers Service Variation 3",
+      "base_price": 800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional drivers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Drivers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.875950+00:00",
+      "updated_at": "2026-09-05T14:37:11.875950+00:00"
+    },
+    {
+      "id": "571bc27a-c94c-539f-ba6c-f2766e13ada2",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Drivers",
+      "name": "Drivers Service Variation 4",
+      "base_price": 900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional drivers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Drivers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.878539+00:00",
+      "updated_at": "2026-09-05T14:37:11.878539+00:00"
+    },
+    {
+      "id": "cca6dfca-6a15-5ae5-af08-d060019cefb9",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Elder Care / Patient Care",
+      "name": "Elder Care / Patient Care Service Variation 1",
+      "base_price": 600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional elder care / patient care service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Elder Care / Patient Care",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.880839+00:00",
+      "updated_at": "2026-09-05T14:37:11.880839+00:00"
+    },
+    {
+      "id": "15d04ae6-56ea-505f-a737-f8f8cf9647e7",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Elder Care / Patient Care",
+      "name": "Elder Care / Patient Care Service Variation 2",
+      "base_price": 700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional elder care / patient care service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Elder Care / Patient Care",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.883570+00:00",
+      "updated_at": "2026-09-05T14:37:11.883570+00:00"
+    },
+    {
+      "id": "2aa7c0cc-9967-5a63-aa3e-d6f3b80b8304",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Elder Care / Patient Care",
+      "name": "Elder Care / Patient Care Service Variation 3",
+      "base_price": 800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional elder care / patient care service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Elder Care / Patient Care",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.886898+00:00",
+      "updated_at": "2026-09-05T14:37:11.886898+00:00"
+    },
+    {
+      "id": "7eacfce2-a4c4-55d7-a086-513e07cd294b",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Elder Care / Patient Care",
+      "name": "Elder Care / Patient Care Service Variation 4",
+      "base_price": 900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional elder care / patient care service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Elder Care / Patient Care",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.889391+00:00",
+      "updated_at": "2026-09-05T14:37:11.889391+00:00"
+    },
+    {
+      "id": "d90d7615-d97a-53e2-aa2f-917d4538765a",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Elder Care / Patient Care",
+      "name": "Elder Care / Patient Care Service Variation 5",
+      "base_price": 1000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional elder care / patient care service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Elder Care / Patient Care",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.891467+00:00",
+      "updated_at": "2026-09-05T14:37:11.891467+00:00"
+    },
+    {
+      "id": "fedc1832-7387-538a-afc3-010d00db636f",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Elder Care / Patient Care",
+      "name": "Elder Care / Patient Care Service Variation 6",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional elder care / patient care service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Elder Care / Patient Care",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.893865+00:00",
+      "updated_at": "2026-09-05T14:37:11.893865+00:00"
+    },
+    {
+      "id": "47d0dd4f-57ff-5cd3-9c81-edfd51dc96bc",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Maids / Housekeepers",
+      "name": "Maids / Housekeepers Service Variation 1",
+      "base_price": 600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional maids / housekeepers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Maids / Housekeepers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.895998+00:00",
+      "updated_at": "2026-09-05T14:37:11.895998+00:00"
+    },
+    {
+      "id": "1d77ddee-89f0-599a-a10b-36da34748e12",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Maids / Housekeepers",
+      "name": "Maids / Housekeepers Service Variation 2",
+      "base_price": 700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional maids / housekeepers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Maids / Housekeepers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.898695+00:00",
+      "updated_at": "2026-09-05T14:37:11.898695+00:00"
+    },
+    {
+      "id": "21214b3e-e44e-5cd7-9cec-1b17f71316af",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Maids / Housekeepers",
+      "name": "Maids / Housekeepers Service Variation 3",
+      "base_price": 800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional maids / housekeepers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Maids / Housekeepers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.901143+00:00",
+      "updated_at": "2026-09-05T14:37:11.901143+00:00"
+    },
+    {
+      "id": "8c70b4df-a510-56d3-be6f-fc7919a26797",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Maids / Housekeepers",
+      "name": "Maids / Housekeepers Service Variation 4",
+      "base_price": 900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional maids / housekeepers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Maids / Housekeepers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.904106+00:00",
+      "updated_at": "2026-09-05T14:37:11.904106+00:00"
+    },
+    {
+      "id": "6415a620-9830-50c4-84ba-b4a87693725b",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Maids / Housekeepers",
+      "name": "Maids / Housekeepers Service Variation 5",
+      "base_price": 1000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional maids / housekeepers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Maids / Housekeepers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.906356+00:00",
+      "updated_at": "2026-09-05T14:37:11.906356+00:00"
+    },
+    {
+      "id": "01d0d750-e8bf-58e1-bd31-8ff6ad447a4a",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Maids / Housekeepers",
+      "name": "Maids / Housekeepers Service Variation 6",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional maids / housekeepers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Maids / Housekeepers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.908696+00:00",
+      "updated_at": "2026-09-05T14:37:11.908696+00:00"
+    },
+    {
+      "id": "7986b1ac-f5d8-5ae3-8a37-dcc3c6f0dc6e",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Maids / Housekeepers",
+      "name": "Maids / Housekeepers Service Variation 7",
+      "base_price": 1200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional maids / housekeepers service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Maids / Housekeepers",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.911450+00:00",
+      "updated_at": "2026-09-05T14:37:11.911450+00:00"
+    },
+    {
+      "id": "e9557ae1-a799-5f82-b226-4287c9172840",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Nannies / Babysitters",
+      "name": "Nannies / Babysitters Service Variation 1",
+      "base_price": 600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional nannies / babysitters service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Nannies / Babysitters",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.913490+00:00",
+      "updated_at": "2026-09-05T14:37:11.913490+00:00"
+    },
+    {
+      "id": "78d97bd8-a6b1-5ce8-abc4-8f2bd1ab6794",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Nannies / Babysitters",
+      "name": "Nannies / Babysitters Service Variation 2",
+      "base_price": 700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional nannies / babysitters service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Nannies / Babysitters",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.915701+00:00",
+      "updated_at": "2026-09-05T14:37:11.915701+00:00"
+    },
+    {
+      "id": "b46c4c44-3d4a-5444-8490-b358be5234b1",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Nannies / Babysitters",
+      "name": "Nannies / Babysitters Service Variation 3",
+      "base_price": 800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional nannies / babysitters service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Nannies / Babysitters",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.918568+00:00",
+      "updated_at": "2026-09-05T14:37:11.918568+00:00"
+    },
+    {
+      "id": "24122f06-e74f-584d-83f0-8e07ffcc566e",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Nannies / Babysitters",
+      "name": "Nannies / Babysitters Service Variation 4",
+      "base_price": 900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional nannies / babysitters service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Nannies / Babysitters",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.921072+00:00",
+      "updated_at": "2026-09-05T14:37:11.921072+00:00"
+    },
+    {
+      "id": "ace45992-f43f-5773-84bd-90065e6fe0ac",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Nannies / Babysitters",
+      "name": "Nannies / Babysitters Service Variation 5",
+      "base_price": 1000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional nannies / babysitters service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Nannies / Babysitters",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.923398+00:00",
+      "updated_at": "2026-09-05T14:37:11.923398+00:00"
+    },
+    {
+      "id": "f8b1a090-ac7b-5e28-a7fc-43525597ecd7",
+      "category": "7. Domestic Help & Cooking",
+      "subcategory": "Nannies / Babysitters",
+      "name": "Nannies / Babysitters Service Variation 6",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and assessment",
+        "Professional service execution",
+        "Basic background verified personnel",
+        "Service guarantee"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional nannies / babysitters service for your household needs.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Nannies / Babysitters",
+            "Background verified",
+            "Punctual and reliable",
+            "Replacement guarantee"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of groceries or special equipment",
+            "Transportation costs for special errands"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Gathering",
+              "description": "Understanding specific household needs",
+              "step_number": 1
+            },
+            {
+              "title": "Personnel Matching",
+              "description": "Assigning the right professional for the task",
+              "step_number": 2
+            },
+            {
+              "title": "Service Execution",
+              "description": "Carrying out the requested domestic duties",
+              "step_number": 3
+            },
+            {
+              "title": "Quality Check",
+              "description": "Ensuring the service meets SmartServe standards",
+              "step_number": 4
+            },
+            {
+              "title": "Feedback",
+              "description": "Collecting customer feedback for continuous improvement",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Provide clear instructions for future visits",
+            "Maintain communication regarding preferences"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Standard household cleaning tools",
+            "Basic cooking utensils (provided by customer)"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide access to the premises",
+            "Ensure a safe working environment",
+            "Provide necessary groceries/materials"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Reliable and high-quality domestic assistance."
+        },
+        {
+          "type": "important_notes",
+          "items": "All personnel are background verified for safety and security."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee; replacement provided if unsatisfied.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, all our domestic helpers undergo strict background verification.",
+              "question": "Are the professionals background checked?"
+            },
+            {
+              "answer": "We offer a replacement guarantee to ensure you get the right match.",
+              "question": "What if I am not satisfied with the service?"
+            },
+            {
+              "answer": "No, it is not mandatory to provide meals.",
+              "question": "Do I need to provide meals for the helper?"
+            },
+            {
+              "answer": "Yes, you can request recurring services with the same professional.",
+              "question": "Can I request the same professional every time?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Communicate your specific preferences clearly on the first day."
+          ]
+        },
+        {
+          "dos": [
+            "Provide a safe and respectful working environment."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not request services outside the agreed scope."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:37:11.926098+00:00",
+      "updated_at": "2026-09-05T14:37:11.926098+00:00"
+    }
+  ]
+}

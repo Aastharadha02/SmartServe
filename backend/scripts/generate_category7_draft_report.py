@@ -57,9 +57,16 @@ def generate_report():
         sc = s["subcategory"]
         subcat_counts[sc] = subcat_counts.get(sc, 0) + 1
         subcat_prices.setdefault(sc, []).append(s["price"])
+
+    # Strict subcategory counts assertion for Category 7
+    assert subcat_counts.get("Cooks / Chefs", 0) == 7, "Expected 7 Cooks / Chefs services"
+    assert subcat_counts.get("Maids / Housekeepers", 0) == 7, "Expected 7 Maids / Housekeepers services"
+    assert subcat_counts.get("Nannies / Babysitters", 0) == 6, "Expected 6 Nannies / Babysitters services"
+    assert subcat_counts.get("Elder Care / Patient Care", 0) == 6, "Expected 6 Elder Care / Patient Care services"
+    assert subcat_counts.get("Drivers", 0) == 4, "Expected 4 Drivers services"
         
     md = []
-    md.append("# Category 7: Smart Home & Security - Draft Validation Report\n")
+    md.append("# Category 7: Domestic Help & Cooking - Draft Validation Report\n")
     md.append(f"- **Generated At:** `{datetime.datetime.now(datetime.timezone.utc).isoformat()}`")
     md.append(f"- **Total Subcategories:** `{len(subcat_counts)}`")
     md.append(f"- **Total Services:** `{len(services)}`")
