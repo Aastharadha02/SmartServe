@@ -1,0 +1,4514 @@
+{
+  "metadata": {
+    "category": "8. Education, Teachers & Coaching",
+    "backup_type": "CATEGORY_FINAL",
+    "timestamp": "2026-09-05T15:22:54.103113+00:00",
+    "total_services": 30,
+    "subcategories": {
+      "Academic Tutoring": 7
+    },
+    "status": "PROTECTED_AND_PERSISTED"
+  },
+  "services": [
+    {
+      "id": "d9cc76c1-de06-5737-8945-30bb558d5a13",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Academic Tutoring",
+      "name": "Academic Tutoring Service Variation 1",
+      "base_price": 950.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert academic tutoring tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Academic Tutoring Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.023255+00:00",
+      "updated_at": "2026-09-05T15:22:47.023255+00:00"
+    },
+    {
+      "id": "293ae0d9-5f80-5635-93cb-459e7ffcb6c1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Academic Tutoring",
+      "name": "Academic Tutoring Service Variation 2",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert academic tutoring tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Academic Tutoring Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.028305+00:00",
+      "updated_at": "2026-09-05T15:22:47.028305+00:00"
+    },
+    {
+      "id": "946f1a7c-5278-5372-9aee-571229c7d7a7",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Academic Tutoring",
+      "name": "Academic Tutoring Service Variation 3",
+      "base_price": 1250.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert academic tutoring tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Academic Tutoring Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.031218+00:00",
+      "updated_at": "2026-09-05T15:22:47.031218+00:00"
+    },
+    {
+      "id": "bf24b529-26a3-56e7-ba4f-85893181cd5d",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Academic Tutoring",
+      "name": "Academic Tutoring Service Variation 4",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert academic tutoring tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Academic Tutoring Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.035452+00:00",
+      "updated_at": "2026-09-05T15:22:47.035452+00:00"
+    },
+    {
+      "id": "e3a74561-e859-5f36-ab07-545c6823fbd1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Academic Tutoring",
+      "name": "Academic Tutoring Service Variation 5",
+      "base_price": 1550.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert academic tutoring tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Academic Tutoring Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.039114+00:00",
+      "updated_at": "2026-09-05T15:22:47.039114+00:00"
+    },
+    {
+      "id": "c9b53453-8a57-5ae6-843c-15688915434b",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Academic Tutoring",
+      "name": "Academic Tutoring Service Variation 6",
+      "base_price": 1700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert academic tutoring tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Academic Tutoring Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.041425+00:00",
+      "updated_at": "2026-09-05T15:22:47.041425+00:00"
+    },
+    {
+      "id": "d62dfd9c-d29f-576c-9470-2bbae0544e3a",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Academic Tutoring",
+      "name": "Academic Tutoring Service Variation 7",
+      "base_price": 1850.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert academic tutoring tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Academic Tutoring Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.044343+00:00",
+      "updated_at": "2026-09-05T15:22:47.044343+00:00"
+    },
+    {
+      "id": "6cdfea65-f777-5015-ab14-9629e747eb08",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language Coaching",
+      "name": "Language Coaching Service Variation 1",
+      "base_price": 950.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert language coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Language Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.046691+00:00",
+      "updated_at": "2026-09-05T15:22:47.046691+00:00"
+    },
+    {
+      "id": "41f10521-548d-5a2d-a4a9-840503b42220",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language Coaching",
+      "name": "Language Coaching Service Variation 2",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert language coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Language Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.049835+00:00",
+      "updated_at": "2026-09-05T15:22:47.049835+00:00"
+    },
+    {
+      "id": "3c7771ad-a2b2-51ce-8846-bbe481a7c7c1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language Coaching",
+      "name": "Language Coaching Service Variation 3",
+      "base_price": 1250.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert language coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Language Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.052666+00:00",
+      "updated_at": "2026-09-05T15:22:47.052666+00:00"
+    },
+    {
+      "id": "453266d6-b237-5e06-8df4-33eda2c614ee",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language Coaching",
+      "name": "Language Coaching Service Variation 4",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert language coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Language Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.055059+00:00",
+      "updated_at": "2026-09-05T15:22:47.055059+00:00"
+    },
+    {
+      "id": "479f80e0-44a1-531c-9ad2-ade93e865775",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language Coaching",
+      "name": "Language Coaching Service Variation 5",
+      "base_price": 1550.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert language coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Language Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.057378+00:00",
+      "updated_at": "2026-09-05T15:22:47.057378+00:00"
+    },
+    {
+      "id": "63f30e5d-4fa8-5c19-946f-1a524b8b74c1",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Language Coaching",
+      "name": "Language Coaching Service Variation 6",
+      "base_price": 1700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert language coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Language Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.059934+00:00",
+      "updated_at": "2026-09-05T15:22:47.059934+00:00"
+    },
+    {
+      "id": "7c32be20-c182-520a-81aa-023010c92589",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts",
+      "name": "Music & Arts Service Variation 1",
+      "base_price": 950.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert music & arts tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Music & Arts Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.062385+00:00",
+      "updated_at": "2026-09-05T15:22:47.062385+00:00"
+    },
+    {
+      "id": "68a89425-9371-557a-9350-1ab2b72dc715",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts",
+      "name": "Music & Arts Service Variation 2",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert music & arts tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Music & Arts Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.064979+00:00",
+      "updated_at": "2026-09-05T15:22:47.064979+00:00"
+    },
+    {
+      "id": "b4401132-f924-51fd-9ae0-7c765ac1c0d8",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts",
+      "name": "Music & Arts Service Variation 3",
+      "base_price": 1250.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert music & arts tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Music & Arts Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.067888+00:00",
+      "updated_at": "2026-09-05T15:22:47.067888+00:00"
+    },
+    {
+      "id": "c48b2fba-232c-52f6-8502-e4569b397a26",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts",
+      "name": "Music & Arts Service Variation 4",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert music & arts tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Music & Arts Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.070369+00:00",
+      "updated_at": "2026-09-05T15:22:47.070369+00:00"
+    },
+    {
+      "id": "e35ee0c0-dce3-52f3-9e81-29c86c1ffd37",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts",
+      "name": "Music & Arts Service Variation 5",
+      "base_price": 1550.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert music & arts tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Music & Arts Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.072557+00:00",
+      "updated_at": "2026-09-05T15:22:47.072557+00:00"
+    },
+    {
+      "id": "de519db1-8c08-5b9e-877e-fa214ff39a55",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Music & Arts",
+      "name": "Music & Arts Service Variation 6",
+      "base_price": 1700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert music & arts tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Music & Arts Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.074889+00:00",
+      "updated_at": "2026-09-05T15:22:47.074889+00:00"
+    },
+    {
+      "id": "b3caa66a-909e-5c9b-8e28-066ea5298ca7",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Sports & Fitness Coaching",
+      "name": "Sports & Fitness Coaching Service Variation 1",
+      "base_price": 950.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert sports & fitness coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Sports & Fitness Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.077035+00:00",
+      "updated_at": "2026-09-05T15:22:47.077035+00:00"
+    },
+    {
+      "id": "3a2c9ca8-d9fb-5031-b211-e6031179640d",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Sports & Fitness Coaching",
+      "name": "Sports & Fitness Coaching Service Variation 2",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert sports & fitness coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Sports & Fitness Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.079289+00:00",
+      "updated_at": "2026-09-05T15:22:47.079289+00:00"
+    },
+    {
+      "id": "fd8b9cf7-cd66-5e92-9e64-185217363d64",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Sports & Fitness Coaching",
+      "name": "Sports & Fitness Coaching Service Variation 3",
+      "base_price": 1250.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert sports & fitness coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Sports & Fitness Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.082206+00:00",
+      "updated_at": "2026-09-05T15:22:47.082206+00:00"
+    },
+    {
+      "id": "df4be4ea-2f76-566a-8ad7-db35cbbfafb0",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Sports & Fitness Coaching",
+      "name": "Sports & Fitness Coaching Service Variation 4",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert sports & fitness coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Sports & Fitness Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.085005+00:00",
+      "updated_at": "2026-09-05T15:22:47.085005+00:00"
+    },
+    {
+      "id": "22edd7f9-7d44-5119-aacc-7979474a88f5",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Sports & Fitness Coaching",
+      "name": "Sports & Fitness Coaching Service Variation 5",
+      "base_price": 1550.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert sports & fitness coaching tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Sports & Fitness Coaching Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.087244+00:00",
+      "updated_at": "2026-09-05T15:22:47.087244+00:00"
+    },
+    {
+      "id": "f1106c8b-997a-5d06-a1b6-b30fd8b10523",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Test Preparation",
+      "name": "Test Preparation Service Variation 1",
+      "base_price": 950.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert test preparation tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Test Preparation Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.089751+00:00",
+      "updated_at": "2026-09-05T15:22:47.089751+00:00"
+    },
+    {
+      "id": "d11d4e8e-10ab-52fa-8b31-c974ba7f8906",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Test Preparation",
+      "name": "Test Preparation Service Variation 2",
+      "base_price": 1100.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert test preparation tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Test Preparation Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.092066+00:00",
+      "updated_at": "2026-09-05T15:22:47.092066+00:00"
+    },
+    {
+      "id": "245d6207-15de-5adc-9b1b-7c387c372955",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Test Preparation",
+      "name": "Test Preparation Service Variation 3",
+      "base_price": 1250.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert test preparation tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Test Preparation Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.094264+00:00",
+      "updated_at": "2026-09-05T15:22:47.094264+00:00"
+    },
+    {
+      "id": "e4f0a121-e2bb-5118-a516-7a3c16944184",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Test Preparation",
+      "name": "Test Preparation Service Variation 4",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert test preparation tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Test Preparation Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.096490+00:00",
+      "updated_at": "2026-09-05T15:22:47.096490+00:00"
+    },
+    {
+      "id": "a05334fd-3b60-510c-ae8c-8d53275a302e",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Test Preparation",
+      "name": "Test Preparation Service Variation 5",
+      "base_price": 1550.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert test preparation tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Test Preparation Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.098887+00:00",
+      "updated_at": "2026-09-05T15:22:47.098887+00:00"
+    },
+    {
+      "id": "1b791937-c35c-5f48-83c8-e2f133823421",
+      "category": "8. Education, Teachers & Coaching",
+      "subcategory": "Test Preparation",
+      "name": "Test Preparation Service Variation 6",
+      "base_price": 1700.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial skill assessment",
+        "Personalized lesson plan",
+        "Interactive sessions",
+        "Progress tracking"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Expert test preparation tailored for your specific learning goals.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Test Preparation Instructor",
+            "Personalized attention",
+            "Flexible scheduling",
+            "Progress monitoring"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Cost of specialized learning materials",
+            "Transportation costs (for offline sessions)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "Evaluating the student's current proficiency level",
+              "step_number": 1
+            },
+            {
+              "title": "Goal Setting",
+              "description": "Defining clear learning objectives",
+              "step_number": 2
+            },
+            {
+              "title": "Instruction",
+              "description": "Conducting interactive coaching sessions",
+              "step_number": 3
+            },
+            {
+              "title": "Practice",
+              "description": "Assigning exercises to reinforce learning",
+              "step_number": 4
+            },
+            {
+              "title": "Review",
+              "description": "Tracking progress and adjusting the lesson plan",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Complete assigned homework/practice routines",
+            "Review feedback provided by the coach"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Notebooks/Digital tablets",
+            "Course material/Syllabus",
+            "Subject-specific tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure a quiet learning environment",
+            "Provide stable internet for online sessions"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Noticeable improvement in skills and knowledge."
+        },
+        {
+          "type": "important_notes",
+          "items": "Consistent attendance is required for best results."
+        },
+        {
+          "type": "warranty",
+          "details": "Satisfaction guarantee for the first session.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "We offer both online and offline options depending on the service.",
+              "question": "Are the classes online or offline?"
+            },
+            {
+              "answer": "Basic materials are included; specialized textbooks must be purchased separately.",
+              "question": "Are learning materials provided?"
+            },
+            {
+              "answer": "We conduct periodic tests and provide detailed progress reports.",
+              "question": "How do you track progress?"
+            },
+            {
+              "answer": "Yes, sessions can be rescheduled with 24 hours prior notice.",
+              "question": "Can I reschedule a session?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Set aside dedicated time for self-study to reinforce class learning."
+          ]
+        },
+        {
+          "dos": [
+            "Participate actively during sessions.",
+            "Ask questions whenever in doubt."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not skip practice assignments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:22:47.101322+00:00",
+      "updated_at": "2026-09-05T15:22:47.101322+00:00"
+    }
+  ]
+}
