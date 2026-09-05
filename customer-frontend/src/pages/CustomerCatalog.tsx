@@ -12,7 +12,6 @@ import {
   Search, 
   Star, 
   Clock, 
-  Loader2, 
   AlertCircle,
   RefreshCw,
   Layers,
@@ -24,6 +23,7 @@ import {
   ArrowLeft,
   Check
 } from 'lucide-react';
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
 
 export const CustomerCatalog: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -215,9 +215,8 @@ export const CustomerCatalog: React.FC = () => {
 
   if (loading && categories.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3 font-sans">
-        <Loader2 className="w-10 h-10 animate-spin text-[#2F5233]" />
-        <p className="text-sm font-semibold text-[#1F2A1E]/70">Loading SmartServe master catalog...</p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Loading SmartServe master catalog..." />
       </div>
     );
   }
@@ -577,9 +576,8 @@ export const CustomerCatalog: React.FC = () => {
 
           {/* Loading or Empty State */}
           {servicesLoading ? (
-            <div className="flex flex-col items-center justify-center py-20 space-y-3 font-sans bg-white rounded-3xl border border-[#E5DEC9]">
-              <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
-              <p className="text-xs font-semibold text-[#1F2A1E]/70">Fetching verified services from database...</p>
+            <div className="flex items-center justify-center py-20 bg-white rounded-3xl border border-[#E5DEC9]">
+              <SmartServeLoader size="md" text="Fetching verified services from database..." />
             </div>
           ) : displayedServices.length === 0 ? (
             <div className="py-16 text-center bg-white rounded-3xl border border-[#E5DEC9] shadow-2xs space-y-3">

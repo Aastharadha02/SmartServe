@@ -4,6 +4,7 @@ import { getTicketDetail, addTicketMessage, SupportTicketDetail } from '../api/s
 import { formatDateINR } from '../utils/formatters';
 import { useToast } from '../hooks/useToast';
 import { ArrowLeft, Send, Clock, User, ShieldCheck, AlertCircle, Loader2, RefreshCw } from 'lucide-react';
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
 
 export const CustomerSupportDetail: React.FC = () => {
   const { ticketId } = useParams<{ ticketId: string }>();
@@ -54,9 +55,8 @@ export const CustomerSupportDetail: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-10 h-10 animate-spin text-[#2563EB]" />
-        <p className="text-sm font-semibold text-slate-600">Loading conversation thread from database...</p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Loading conversation thread from database..." />
       </div>
     );
   }

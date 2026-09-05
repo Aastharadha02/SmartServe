@@ -25,8 +25,9 @@ import {
   replyToSupportTicket, 
   escalateSupportTicket, 
   updateTicketPriorityAndStatus, 
-  getSignedEvidenceUrl 
+  getSignedEvidenceUrl
 } from '../../../api/support';
+import { SmartServeLoader } from '../../../components/common/SmartServeLoader';
 import type { SupportTicketItem } from '../../../api/support';
 import { getAuthenticatedAdmin } from '../../../api/admins';
 import type { SessionAdminInfo } from '../../../api/admins';
@@ -163,9 +164,8 @@ export const SupportDetailView: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
-        <p className="text-sm font-semibold text-slate-600">Loading Support Ticket Conversation Thread...</p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Loading Support Ticket Conversation Thread..." />
       </div>
     );
   }

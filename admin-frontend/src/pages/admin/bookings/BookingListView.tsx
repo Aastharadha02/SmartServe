@@ -21,6 +21,7 @@ import { formatCurrencyINR } from '../../../utils/formatters';
 import { getAuthenticatedAdmin } from '../../../api/admins';
 import type { SessionAdminInfo } from '../../../api/admins';
 import { hasPermission } from '../../../utils/rbac';
+import { SmartServeLoader } from '../../../components/common/SmartServeLoader';
 
 export const BookingListView: React.FC = () => {
   const navigate = useNavigate();
@@ -188,9 +189,8 @@ export const BookingListView: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
-        <p className="text-sm font-semibold text-slate-600">Loading Bookings Directory & Live Dispatch Queue...</p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Loading Bookings Directory & Live Dispatch Queue..." />
       </div>
     );
   }

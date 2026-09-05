@@ -22,6 +22,7 @@ import type { ServiceItem } from '../../../api/catalog';
 import { getServiceIcon } from '../../../utils/catalogIcons';
 import { formatRupee, formatSurgePercent, formatDiscountPercent } from '../../../utils/formatters';
 import { getServiceImage, formatCategoryDisplayName, DEFAULT_SERVICE_IMAGE } from '../../../utils/serviceImages';
+import { SmartServeLoader } from '../../../components/common/SmartServeLoader';
 
 function safeDecode(val?: string | null): string {
   if (!val) return '';
@@ -189,11 +190,8 @@ export const ServiceListView: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4 font-sans">
-        <Loader2 className="w-9 h-9 animate-spin text-[#2563EB]" />
-        <p className="text-base font-semibold text-slate-700">
-          Loading services for {decodedSubcategory || 'Catalog'}...
-        </p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text={`Loading services for ${decodedSubcategory || 'Catalog'}...`} />
       </div>
     );
   }

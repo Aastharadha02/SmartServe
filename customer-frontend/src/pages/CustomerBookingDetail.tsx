@@ -14,6 +14,7 @@ import {
   XCircle,
   HelpCircle
 } from 'lucide-react';
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
 
 export const CustomerBookingDetail: React.FC = () => {
   const { bookingId } = useParams<{ bookingId: string }>();
@@ -61,9 +62,8 @@ export const CustomerBookingDetail: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3 font-sans">
-        <Loader2 className="w-10 h-10 animate-spin text-[#2563EB]" />
-        <p className="text-sm font-semibold text-slate-600">Loading booking status from database...</p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Loading booking status from database..." />
       </div>
     );
   }

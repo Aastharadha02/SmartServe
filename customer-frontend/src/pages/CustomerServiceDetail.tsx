@@ -29,6 +29,7 @@ import {
   Camera,
   Tag
 } from 'lucide-react';
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
 
 export const CustomerServiceDetail: React.FC = () => {
   const { serviceId } = useParams<{ serviceId: string }>();
@@ -135,11 +136,8 @@ export const CustomerServiceDetail: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4">
-        <Loader2 className="w-10 h-10 animate-spin text-[#2F5233]" />
-        <p className="text-sm font-semibold text-[#1F2A1E]/70 font-sans">
-          Retrieving live catalog service record...
-        </p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Retrieving live catalog service record..." />
       </div>
     );
   }

@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { getCustomerBookings, BookingDetail } from '../api/bookings';
 import { formatCurrencyINR } from '../utils/formatters';
 import { getServiceImage } from '../utils/serviceImages';
-import { Calendar, Clock, ChevronRight, Loader2, Plus, AlertCircle, RefreshCw } from 'lucide-react';
+import { Calendar, Clock, ChevronRight, Plus, AlertCircle, RefreshCw } from 'lucide-react';
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
 
 export const CustomerBookings: React.FC = () => {
   const navigate = useNavigate();
@@ -115,9 +116,8 @@ export const CustomerBookings: React.FC = () => {
 
       {/* Bookings List */}
       {loading ? (
-        <div className="flex flex-col items-center justify-center py-16 space-y-3">
-          <Loader2 className="w-10 h-10 animate-spin text-[#2563EB]" />
-          <p className="text-sm font-semibold text-slate-600">Fetching your bookings from database...</p>
+        <div className="flex items-center justify-center py-16">
+          <SmartServeLoader size="lg" text="Fetching your bookings from database..." />
         </div>
       ) : filteredBookings.length > 0 ? (
         <div className="space-y-4">

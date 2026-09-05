@@ -23,6 +23,7 @@ import {
   updateBookingStatus, 
   reassignBookingProvider 
 } from '../../../api/bookings';
+import { SmartServeLoader } from '../../../components/common/SmartServeLoader';
 import type { BookingItem } from '../../../api/bookings';
 import { getProvidersList } from '../../../api/providers';
 import { getAuthenticatedAdmin } from '../../../api/admins';
@@ -123,9 +124,8 @@ export const BookingDetailView: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
-        <p className="text-sm font-semibold text-slate-600">Loading Operational Booking Details & Lifecycle Timeline...</p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Loading Operational Booking Details & Lifecycle Timeline..." />
       </div>
     );
   }

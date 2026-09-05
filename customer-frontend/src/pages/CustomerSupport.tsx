@@ -4,6 +4,7 @@ import { getCustomerTickets, createSupportTicket, SupportTicketDetail } from '..
 import { formatDateINR } from '../utils/formatters';
 import { useToast } from '../hooks/useToast';
 import { HelpCircle, Plus, Clock, ChevronRight, Loader2, AlertCircle, RefreshCw, Send } from 'lucide-react';
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
 
 export const CustomerSupport: React.FC = () => {
   const navigate = useNavigate();
@@ -122,9 +123,8 @@ export const CustomerSupport: React.FC = () => {
 
       {/* Ticket List */}
       {loading ? (
-        <div className="flex flex-col items-center justify-center py-16 space-y-3">
-          <Loader2 className="w-10 h-10 animate-spin text-[#2563EB]" />
-          <p className="text-sm font-semibold text-slate-600">Loading support tickets from database...</p>
+        <div className="flex items-center justify-center py-16">
+          <SmartServeLoader size="lg" text="Loading support tickets from database..." />
         </div>
       ) : tickets.length > 0 ? (
         <div className="space-y-4">

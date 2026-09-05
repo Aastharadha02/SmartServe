@@ -6,9 +6,9 @@ import {
   List, 
   LayoutGrid, 
   ChevronRight,
-  Loader2,
   Flame
 } from 'lucide-react';
+import { SmartServeLoader } from '../../../components/common/SmartServeLoader';
 import { 
   getSupportTicketsList, 
   getSupportDashboardMetrics 
@@ -100,9 +100,8 @@ export const SupportListView: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
-        <p className="text-sm font-semibold text-slate-600">Loading Support Directory & Ticket Escalation Queue...</p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Loading Support Directory & Ticket Escalation Queue..." />
       </div>
     );
   }

@@ -3,6 +3,7 @@ import { useAuth } from '../auth/useAuth';
 import { updateCustomerProfile } from '../api/profile';
 import { useToast } from '../hooks/useToast';
 import { User, Mail, Phone, ShieldCheck, CheckCircle2, Loader2, Save } from 'lucide-react';
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
 
 export const CustomerProfile: React.FC = () => {
   const { user, refreshUser } = useAuth();
@@ -38,9 +39,8 @@ export const CustomerProfile: React.FC = () => {
 
   if (!user) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3 font-sans">
-        <Loader2 className="w-8 h-8 animate-spin text-[#2563EB]" />
-        <p className="text-sm font-semibold text-slate-600">Loading authenticated profile...</p>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <SmartServeLoader size="lg" text="Loading authenticated profile..." />
       </div>
     );
   }

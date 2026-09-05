@@ -16,6 +16,8 @@ import CustomerSupport from '../pages/CustomerSupport';
 import CustomerSupportDetail from '../pages/CustomerSupportDetail';
 import CustomerProfile from '../pages/CustomerProfile';
 
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
+
 interface ProtectedRouteProps {
   children: ReactNode;
 }
@@ -25,8 +27,8 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center font-sans text-sm font-semibold text-slate-600">
-        Verifying Customer Session...
+      <div className="min-h-screen bg-[#FAF7F0] flex items-center justify-center">
+        <SmartServeLoader size="lg" text="Verifying Customer Session..." />
       </div>
     );
   }

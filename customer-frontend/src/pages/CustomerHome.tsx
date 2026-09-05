@@ -12,10 +12,10 @@ import {
   Calendar, 
   Clock, 
   Star, 
-  Loader2, 
   Tag,
   ChevronRight
 } from 'lucide-react';
+import { SmartServeLoader } from '../components/common/SmartServeLoader';
 
 export const CustomerHome: React.FC = () => {
   const navigate = useNavigate();
@@ -170,7 +170,7 @@ export const CustomerHome: React.FC = () => {
 
         {loading ? (
           <div className="flex justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
+            <SmartServeLoader size="md" />
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
