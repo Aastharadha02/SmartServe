@@ -1,12 +1,12 @@
 # SmartServe Master Catalog Protection Policy
-**Status**: ACTIVE, ENFORCED & EXPANDED (Categories 1, 2, 3, and 4)  
+**Status**: ACTIVE, ENFORCED & EXPANDED (Categories 1-6)  
 **Last Updated**: September 5, 2026  
 
 ---
 
-## 1. Protected Scope (156 Total Services)
+## 1. Protected Scope (196 Total Services)
 
-The following 156 services across Categories 1, 2, 3, and 4 are strictly **PROTECTED, PERSISTED, AND MONITORED**:
+The following 196 services across Categories 1-6 are strictly **PROTECTED, PERSISTED, AND MONITORED**:
 
 ### Category 1: Beauty, Salon & Spa (55 Services)
 - **Facial & Skincare** (9 services)
@@ -40,6 +40,14 @@ The following 156 services across Categories 1, 2, 3, and 4 are strictly **PROTE
 - **Television** (5 services)
 - **Variants** (6 services)
 - **Washing Machine** (5 services)
+
+### Category 5: Electrician, Plumber, Carpenter & Home Repairs (39 Services)
+- **Carpenter** (17 services)
+- **Electrician** (11 services)
+- **Plumber** (11 services)
+
+### Category 6: Smart Home & Security (1 Services)
+- **Security Systems** (1 services)
 
 ---
 
