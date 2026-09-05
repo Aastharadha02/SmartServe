@@ -12,6 +12,9 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+from dotenv import load_dotenv
+load_dotenv(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".env")))
+
 from app.repositories.db import engine, get_db
 from app.models.base import Base
 # Import models to ensure tables are registered with Base.metadata
