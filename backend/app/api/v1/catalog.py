@@ -21,9 +21,12 @@ def safe_extract_service_response(s) -> ServiceResponse:
     addons = s.suggested_addons or []
     real_addons = [a for a in addons if isinstance(a, dict) and not a.get("type")]
     
+    features_dict = s.distinct_features if isinstance(s.distinct_features, dict) else {}
+    features_list = s.distinct_features if isinstance(s.distinct_features, list) else []
+    
     # 1. Description
     desc_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") in ["description", "service_description"]), None)
-    description = (desc_obj.get("text") or desc_obj.get("description") or desc_obj.get("content")) if desc_obj else None
+    description = (desc_obj.get("text") or desc_obj.get("description") or desc_obj.get("content")) if desc_obj else (features_dict.get("description") or None)
     
     # 2. Highlights
     hl_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "highlights"), None)
@@ -33,13 +36,27 @@ def safe_extract_service_response(s) -> ServiceResponse:
         highlights = hl_obj.get("items")
     elif seo_obj and isinstance(seo_obj.get("highlights"), list):
         highlights = seo_obj.get("highlights")
+    elif features_dict.get("highlights") and isinstance(features_dict.get("highlights"), list):
+        highlights = features_dict.get("highlights")
         
-    # 3. Included
-    included = s.distinct_features or []
+    # 3. Included & Distinct features (guaranteed List[str])
+    if features_list:
+        included = [str(x) for x in features_list]
+        distinct_features_clean = included
+    elif features_dict:
+        inc = features_dict.get("included") or features_dict.get("highlights") or []
+        if isinstance(inc, list):
+            included = [str(x) for x in inc]
+        else:
+            included = [str(inc)] if inc else []
+        distinct_features_clean = included
+    else:
+        included = []
+        distinct_features_clean = []
     
     # 4. Excluded
     exc_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") in ["excluded_scope", "exclusions"]), None)
-    excluded = (exc_obj.get("items") or exc_obj.get("exclusions")) if exc_obj else None
+    excluded = (exc_obj.get("items") or exc_obj.get("exclusions")) if exc_obj else (features_dict.get("excluded") if isinstance(features_dict.get("excluded"), list) else None)
     
     # 5. Process Steps
     proc_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "process_steps"), None)
@@ -67,11 +84,11 @@ def safe_extract_service_response(s) -> ServiceResponse:
     
     # 11. Warranty
     w_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "warranty"), None)
-    warranty = (w_obj.get("details") or w_obj.get("warranty")) if w_obj else None
+    warranty = (w_obj.get("details") or w_obj.get("warranty")) if w_obj else (features_dict.get("warranty") or None)
     
     # 12. FAQs
     faq_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "faqs"), None)
-    faqs = (faq_obj.get("items") or faq_obj.get("faqs")) if faq_obj else None
+    faqs = (faq_obj.get("items") or faq_obj.get("faqs")) if faq_obj else (features_dict.get("faqs") if isinstance(features_dict.get("faqs"), list) else None)
     
     # 13. Tips
     tips_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "tips"), None)
@@ -100,7 +117,7 @@ def safe_extract_service_response(s) -> ServiceResponse:
         base_price=s.base_price,
         max_demand_increase=s.max_demand_increase,
         max_discount=s.max_discount,
-        distinct_features=s.distinct_features or [],
+        distinct_features=distinct_features_clean,
         suggested_addons=s.suggested_addons or [],
         is_active=s.is_active,
         created_at=s.created_at.isoformat() if s.created_at else "",
