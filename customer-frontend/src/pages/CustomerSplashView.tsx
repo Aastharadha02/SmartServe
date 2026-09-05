@@ -15,7 +15,7 @@ export const CustomerSplashView: React.FC = () => {
     }
   };
 
-  return <SplashScreen onFinish={handleFinish} durationMs={5400} />;
+  return <SplashScreen onFinish={handleFinish} durationMs={8000} />;
 };
 
 export default CustomerSplashView;

@@ -152,33 +152,33 @@ export const SubcategoryListView: React.FC = () => {
   }
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto font-sans text-slate-800">
+    <div className="space-y-6 max-w-7xl mx-auto font-sans text-[#1F2A1E]">
       {/* Clickable Breadcrumbs Navigation */}
-      <nav className="flex items-center gap-2 text-xs text-slate-500 font-semibold overflow-x-auto">
-        <Link to="/admin/catalog" className="hover:text-[#2563EB] flex items-center gap-1 transition-colors">
-          <FolderTree className="w-3.5 h-3.5" />
+      <nav className="flex items-center gap-2 text-xs text-[#1F2A1E]/60 font-semibold overflow-x-auto">
+        <Link to="/admin/catalog" className="hover:text-[#2F5233] flex items-center gap-1 transition-colors">
+          <FolderTree className="w-3.5 h-3.5 text-[#C9A15A]" />
           <span>Catalog</span>
         </Link>
-        <ChevronRight className="w-3.5 h-3.5 text-slate-300 flex-shrink-0" />
-        <span className="text-slate-900 font-bold flex-shrink-0">{displayCategoryName}</span>
+        <ChevronRight className="w-3.5 h-3.5 text-[#E5DEC9] flex-shrink-0" />
+        <span className="text-[#1F2A1E] font-bold flex-shrink-0">{displayCategoryName}</span>
       </nav>
 
       {/* Header Banner */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-slate-200/90 shadow-2xs">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-xs">
         <div className="flex items-start gap-4">
           <button
             onClick={() => navigate('/admin/catalog')}
-            className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors mt-0.5"
+            className="p-2.5 rounded-xl bg-[#F2EDE1] hover:bg-[#E5DEC9] text-[#1F2A1E] transition-colors mt-0.5 cursor-pointer"
             title="Back to Categories"
           >
             <ArrowLeft className="w-4 h-4" />
           </button>
-          <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#2563EB] flex items-center justify-center flex-shrink-0 shadow-2xs">
+          <div className="w-12 h-12 rounded-2xl bg-[#F2EDE1] text-[#2F5233] flex items-center justify-center flex-shrink-0 border border-[#E5DEC9]">
             <CategoryIcon className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">{displayCategoryName}</h1>
-            <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
+            <h1 className="text-2xl font-serif text-[#1F2A1E] tracking-tight">{displayCategoryName}</h1>
+            <p className="text-xs sm:text-sm text-[#1F2A1E]/60 font-medium mt-0.5">
               {subcategorySummaries.length} Subcategories • {totalCategoryServices} Services Total • {activeCategoryServices} Active
             </p>
           </div>
@@ -187,7 +187,7 @@ export const SubcategoryListView: React.FC = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={() => navigate(`/admin/catalog/category/${encodeURIComponent(decodedCategory)}/subcategory/all`)}
-            className="px-4 py-2 bg-blue-50 hover:bg-[#2563EB] hover:text-white text-[#2563EB] font-bold text-xs rounded-xl transition-colors shadow-2xs"
+            className="px-4 py-2.5 bg-[#F2EDE1] hover:bg-[#2F5233] hover:text-white text-[#2F5233] font-bold text-xs rounded-xl transition-colors border border-[#E5DEC9] cursor-pointer shadow-2xs"
           >
             View All Services ({totalCategoryServices})
           </button>
@@ -195,30 +195,30 @@ export const SubcategoryListView: React.FC = () => {
       </div>
 
       {/* Search & Filter Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200/90 shadow-2xs">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-xs">
         <div className="relative flex-1 w-full max-w-md">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#1F2A1E]/40" />
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search subcategories..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30 focus:border-[#2563EB]"
+            className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl pl-10 pr-4 py-2 text-xs font-medium text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           />
         </div>
 
         {/* View Mode Toggle */}
-        <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+        <div className="flex items-center bg-[#F2EDE1] p-1 rounded-xl border border-[#E5DEC9]">
           <button
             onClick={() => setViewMode('grid')}
-            className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#2563EB] shadow-2xs' : 'text-slate-500 hover:text-slate-800'}`}
+            className={`p-1.5 rounded-lg transition-colors cursor-pointer ${viewMode === 'grid' ? 'bg-white text-[#2F5233] shadow-xs' : 'text-[#1F2A1E]/60 hover:text-[#1F2A1E]'}`}
             title="Grid View"
           >
             <LayoutGrid className="w-4 h-4" />
           </button>
           <button
             onClick={() => setViewMode('list')}
-            className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#2563EB] shadow-2xs' : 'text-slate-500 hover:text-slate-800'}`}
+            className={`p-1.5 rounded-lg transition-colors cursor-pointer ${viewMode === 'list' ? 'bg-white text-[#2F5233] shadow-xs' : 'text-[#1F2A1E]/60 hover:text-[#1F2A1E]'}`}
             title="List View"
           >
             <List className="w-4 h-4" />
@@ -228,10 +228,10 @@ export const SubcategoryListView: React.FC = () => {
 
       {/* Subcategory Grid or List Render */}
       {filteredSubcategories.length === 0 ? (
-        <div className="py-16 text-center bg-white rounded-3xl border border-slate-200 shadow-2xs space-y-3">
-          <FolderTree className="w-10 h-10 text-slate-400 mx-auto" />
-          <h3 className="text-base font-bold text-slate-800">No Subcategories Found</h3>
-          <p className="text-xs text-slate-500 font-medium">No subcategories match your search query.</p>
+        <div className="py-16 text-center bg-white rounded-3xl border border-[#E5DEC9] shadow-xs space-y-3">
+          <FolderTree className="w-10 h-10 text-[#1F2A1E]/40 mx-auto" />
+          <h3 className="text-base font-bold text-[#1F2A1E]">No Subcategories Found</h3>
+          <p className="text-xs text-[#1F2A1E]/60 font-medium">No subcategories match your search query.</p>
         </div>
       ) : viewMode === 'grid' ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -241,10 +241,10 @@ export const SubcategoryListView: React.FC = () => {
               <div
                 key={sub.name}
                 onClick={() => navigate(`/admin/catalog/category/${encodeURIComponent(decodedCategory)}/subcategory/${encodeURIComponent(sub.name)}`)}
-                className="group bg-white rounded-3xl border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-blue-300 transition-all cursor-pointer flex flex-col justify-between overflow-hidden"
+                className="group bg-white rounded-3xl border border-[#E5DEC9] shadow-xs hover:shadow-md hover:border-[#2F5233]/40 transition-all cursor-pointer flex flex-col justify-between overflow-hidden"
               >
                 {/* Subcategory Photography Cover */}
-                <div className="relative w-full h-40 bg-slate-100 overflow-hidden">
+                <div className="relative w-full h-40 bg-[#F2EDE1] overflow-hidden">
                   <img
                     src={subImage}
                     alt={sub.name}
@@ -255,31 +255,31 @@ export const SubcategoryListView: React.FC = () => {
                       e.currentTarget.src = DEFAULT_SERVICE_IMAGE;
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F2A1E]/80 via-[#1F2A1E]/30 to-transparent"></div>
 
                   <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold text-white tracking-tight drop-shadow-sm">
+                      <h3 className="text-base sm:text-lg font-serif font-bold text-white tracking-tight drop-shadow-xs">
                         {sub.name}
                       </h3>
-                      <p className="text-xs text-slate-200 font-medium">
+                      <p className="text-xs text-[#FAF7F0]/90 font-medium">
                         {sub.serviceCount} Services Available
                       </p>
                     </div>
 
-                    <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs text-white flex items-center justify-center group-hover:bg-[#2563EB] transition-colors">
+                    <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs text-white flex items-center justify-center group-hover:bg-[#2F5233] transition-colors">
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
                 </div>
 
                 <div className="p-4 sm:p-5 flex items-center justify-between text-xs">
-                  <span className="inline-flex items-center gap-1.5 text-emerald-700 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                  <span className="inline-flex items-center gap-1.5 text-emerald-800 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                     <span>{sub.activeCount} Active</span>
                   </span>
 
-                  <span className="font-bold text-[#2563EB] group-hover:underline flex items-center gap-1">
+                  <span className="font-bold text-[#2F5233] group-hover:underline flex items-center gap-1">
                     <span>View Services</span>
                     <ChevronRight className="w-3.5 h-3.5" />
                   </span>
@@ -289,30 +289,30 @@ export const SubcategoryListView: React.FC = () => {
           })}
         </div>
       ) : (
-        <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs overflow-hidden">
-          <div className="divide-y divide-slate-100">
+        <div className="bg-white rounded-2xl border border-[#E5DEC9] shadow-xs overflow-hidden">
+          <div className="divide-y divide-[#E5DEC9]">
             {filteredSubcategories.map((sub) => {
               return (
                 <div
                   key={sub.name}
                   onClick={() => navigate(`/admin/catalog/category/${encodeURIComponent(decodedCategory)}/subcategory/${encodeURIComponent(sub.name)}`)}
-                  className="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors cursor-pointer"
+                  className="p-4 flex items-center justify-between hover:bg-[#FAF7F0] transition-colors cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#2563EB] flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[#F2EDE1] text-[#2F5233] flex items-center justify-center flex-shrink-0 border border-[#E5DEC9]">
                       <FolderTree className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900 text-sm">{sub.name}</h4>
-                      <p className="text-xs text-slate-500 font-medium">{sub.serviceCount} Services in this subcategory</p>
+                      <h4 className="font-bold text-[#1F2A1E] text-sm font-serif">{sub.name}</h4>
+                      <p className="text-xs text-[#1F2A1E]/60 font-medium">{sub.serviceCount} Services in this subcategory</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                    <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                       {sub.activeCount} Active
                     </span>
-                    <ChevronRight className="w-4 h-4 text-slate-400" />
+                    <ChevronRight className="w-4 h-4 text-[#1F2A1E]/40" />
                   </div>
                 </div>
               );

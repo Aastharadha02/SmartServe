@@ -122,7 +122,7 @@ export const ProviderDetailView: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading Provider Profile & AI OCR Signals...</p>
       </div>
     );
@@ -132,11 +132,11 @@ export const ProviderDetailView: React.FC = () => {
     return (
       <div className="max-w-xl mx-auto my-12 p-8 bg-white border border-rose-200 rounded-3xl text-center space-y-4 shadow-sm">
         <ShieldAlert className="w-10 h-10 text-rose-500 mx-auto" />
-        <h3 className="text-lg font-bold text-slate-900">Provider Not Found</h3>
+        <h3 className="text-lg font-bold font-serif text-[#1F2A1E]">Provider Not Found</h3>
         <p className="text-xs text-slate-600">{error || 'Unable to retrieve requested provider account.'}</p>
         <button
           onClick={() => navigate('/admin/providers')}
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5CA8FF] text-white rounded-2xl text-xs font-bold"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2F5233] text-white rounded-2xl text-xs font-bold"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Provider Directory</span>
@@ -157,12 +157,12 @@ export const ProviderDetailView: React.FC = () => {
 
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 font-medium">
-        <Link to="/admin/providers" className="hover:text-[#5CA8FF] flex items-center gap-1 transition-colors">
+        <Link to="/admin/providers" className="hover:text-[#2F5233] flex items-center gap-1 transition-colors">
           <Users className="w-3.5 h-3.5" />
           <span>People</span>
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
-        <Link to="/admin/providers" className="hover:text-[#5CA8FF] transition-colors">
+        <Link to="/admin/providers" className="hover:text-[#2F5233] transition-colors">
           Providers
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
@@ -170,23 +170,23 @@ export const ProviderDetailView: React.FC = () => {
       </nav>
 
       {/* Profile Header Banner */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex items-start md:items-center gap-5">
           <button
             onClick={() => navigate('/admin/providers')}
-            className="p-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
+            className="p-2.5 rounded-2xl bg-[#F2EDE1] hover:bg-[#E5DEC9] text-slate-600 transition-colors"
             title="Back to Directory"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
 
-          <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#5CA8FF] font-extrabold text-2xl flex items-center justify-center border border-blue-100 shadow-xs flex-shrink-0">
+          <div className="w-16 h-16 rounded-2xl bg-[#F2EDE1] text-[#2F5233] font-extrabold text-2xl flex items-center justify-center border border-[#E5DEC9] shadow-xs flex-shrink-0">
             {provider.full_name.charAt(0)}
           </div>
 
           <div>
             <div className="flex items-center gap-3 flex-wrap">
-              <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+              <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight">
                 {provider.full_name}
               </h1>
               <span className={`px-3 py-1 rounded-full text-xs font-bold border ${
@@ -265,7 +265,7 @@ export const ProviderDetailView: React.FC = () => {
             <button
               disabled
               title="Provider verification and account suspension requires 'providers:manage' permission."
-              className="px-4 py-2 bg-slate-100 text-slate-400 font-bold rounded-2xl border border-slate-200 text-xs cursor-not-allowed opacity-70"
+              className="px-4 py-2 bg-[#F2EDE1] text-slate-400 font-bold rounded-2xl border border-[#E5DEC9] text-xs cursor-not-allowed opacity-70"
             >
               🔒 Actions Restricted (View Only)
             </button>
@@ -277,16 +277,16 @@ export const ProviderDetailView: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Column: Profile & Account Information */}
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <Users className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
+              <Users className="w-5 h-5 text-[#2F5233]" />
               <span>Profile Information</span>
             </h3>
 
             <div className="space-y-3 text-xs">
               <div>
                 <span className="text-slate-400 font-semibold block">Provider ID (UUID)</span>
-                <p className="font-mono font-bold text-slate-800 text-xs bg-slate-50 p-2 rounded-xl border border-slate-200 mt-1 select-all">
+                <p className="font-mono font-bold text-slate-800 text-xs bg-[#FAF7F0] p-2 rounded-xl border border-[#E5DEC9] mt-1 select-all">
                   {provider.id}
                 </p>
               </div>
@@ -312,8 +312,8 @@ export const ProviderDetailView: React.FC = () => {
           </div>
 
           {/* Dynamic ETA Estimation Card */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
               <MapPin className="w-5 h-5 text-emerald-500" />
               <span>Real-Time ETA & Dispatch Signal</span>
             </h3>
@@ -331,18 +331,18 @@ export const ProviderDetailView: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-slate-600 font-medium">
-                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                  <div className="p-3 bg-[#FAF7F0] rounded-xl border border-[#E5DEC9]">
                     <span className="text-[10px] text-slate-400 font-bold uppercase">Distance</span>
                     <p className="font-bold text-slate-800">{eta.distance_km} km</p>
                   </div>
-                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                  <div className="p-3 bg-[#FAF7F0] rounded-xl border border-[#E5DEC9]">
                     <span className="text-[10px] text-slate-400 font-bold uppercase">Prep Buffer</span>
                     <p className="font-bold text-slate-800">{eta.prep_buffer_minutes} min</p>
                   </div>
                 </div>
               </div>
             ) : (
-              <div className="p-4 bg-slate-50 rounded-2xl text-center text-xs text-slate-500 font-semibold">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl text-center text-xs text-slate-500 font-semibold">
                 ETA unavailable
               </div>
             )}
@@ -352,19 +352,19 @@ export const ProviderDetailView: React.FC = () => {
         {/* Right Column: Performance, Ranking & Verification Documents */}
         <div className="lg:col-span-2 space-y-6">
           {/* Performance & Provider Ranking Card */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                <Award className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-lg font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                <Award className="w-5 h-5 text-[#2F5233]" />
                 <span>Performance & Provider Composite Ranking</span>
               </h3>
-              <span className="text-xs font-bold text-[#5CA8FF] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+              <span className="text-xs font-bold text-[#2F5233] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
                 {provider.rank_tier}
               </span>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9]">
                 <span className="text-[10px] text-slate-400 font-bold uppercase">Rating</span>
                 <p className="text-lg font-bold text-slate-900 mt-1 flex items-center justify-center gap-1">
                   <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
@@ -372,17 +372,17 @@ export const ProviderDetailView: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9]">
                 <span className="text-[10px] text-slate-400 font-bold uppercase">Reliability Score</span>
                 <p className="text-lg font-bold text-emerald-600 mt-1">{provider.reliability_score}%</p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9]">
                 <span className="text-[10px] text-slate-400 font-bold uppercase">Acceptance Rate</span>
                 <p className="text-lg font-bold text-blue-600 mt-1">{provider.acceptance_rate}%</p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9]">
                 <span className="text-[10px] text-slate-400 font-bold uppercase">On-Time Arrival</span>
                 <p className="text-lg font-bold text-emerald-600 mt-1">{provider.on_time_rate}%</p>
               </div>
@@ -390,7 +390,7 @@ export const ProviderDetailView: React.FC = () => {
 
             <div className="p-4 bg-blue-50/60 rounded-2xl border border-blue-100 flex items-center justify-between text-xs">
               <span className="font-bold text-slate-800">
-                Composite Ranking Score: <strong className="text-[#5CA8FF] text-sm">{provider.composite_rank_score}</strong>
+                Composite Ranking Score: <strong className="text-[#2F5233] text-sm">{provider.composite_rank_score}</strong>
               </span>
               <span className="text-slate-500 font-medium">
                 Formula: (Reliability × 0.4) + (Acceptance × 0.3) + (On-Time × 0.2) - (Cancellation × 0.1)
@@ -399,21 +399,21 @@ export const ProviderDetailView: React.FC = () => {
           </div>
 
           {/* Verification Documents & AI-Assisted OCR Signals */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-            <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <FileText className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5">
+            <h3 className="text-lg font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
+              <FileText className="w-5 h-5 text-[#2F5233]" />
               <span>Verification Documents & AI OCR Signals</span>
             </h3>
 
             {provider.documents.length === 0 ? (
-              <div className="p-6 bg-slate-50 rounded-2xl text-center text-xs font-semibold text-slate-500">
+              <div className="p-6 bg-[#FAF7F0] rounded-2xl text-center text-xs font-semibold text-slate-500">
                 No verification documents submitted.
               </div>
             ) : (
               <div className="space-y-4">
                 {provider.documents.map((doc) => (
-                  <div key={doc.id} className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200/60 pb-3">
+                  <div key={doc.id} className="p-5 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E5DEC9]/60 pb-3">
                       <div>
                         <span className="font-bold text-slate-900 text-sm block">{doc.certificate_type}</span>
                         <p className="text-xs text-slate-500 font-mono mt-0.5">Doc #: {doc.document_number || 'N/A'}</p>
@@ -433,7 +433,7 @@ export const ProviderDetailView: React.FC = () => {
                     {/* AI-Assisted Signal Box */}
                     {doc.ai_scan_signal && (
                       <div className="p-4 bg-white rounded-xl border border-blue-200/80 space-y-2 text-xs">
-                        <div className="flex items-center gap-2 text-[#5CA8FF] font-bold">
+                        <div className="flex items-center gap-2 text-[#2F5233] font-bold">
                           <Sparkles className="w-4 h-4" />
                           <span>AI-Assisted Signal (Automated Document Scan)</span>
                         </div>
@@ -445,7 +445,7 @@ export const ProviderDetailView: React.FC = () => {
                             {doc.ai_scan_signal.duplicate_detected ? 'Duplicate Detected' : 'Clean (No Duplicates)'}
                           </strong></p>
                         </div>
-                        <p className="text-[11px] text-slate-400 italic pt-1 border-t border-slate-100">
+                        <p className="text-[11px] text-slate-400 italic pt-1 border-t border-[#E5DEC9]/60">
                           ℹ️ Note: AI signals provide diagnostic assistance. Final verification decision requires administrative review.
                         </p>
                       </div>
@@ -461,9 +461,9 @@ export const ProviderDetailView: React.FC = () => {
       {/* Verification Approve/Reject Modal */}
       {verifyModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleVerifySubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">
+          <form onSubmit={handleVerifySubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">
                 {verifyActionType === 'Approved' ? 'Approve' : 'Reject'} Provider Verification
               </h3>
               <button type="button" onClick={() => setVerifyModalOpen(false)} className="text-slate-400 hover:text-slate-600">
@@ -482,7 +482,7 @@ export const ProviderDetailView: React.FC = () => {
                   value={verifyReason}
                   onChange={(e) => setVerifyReason(e.target.value)}
                   placeholder="Explain reason for rejection (e.g. Expired document, name mismatch)..."
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-rose-400"
+                  className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-rose-400"
                   rows={3}
                   required
                 />
@@ -493,7 +493,7 @@ export const ProviderDetailView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setVerifyModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>
@@ -514,9 +514,9 @@ export const ProviderDetailView: React.FC = () => {
       {/* Account Status Suspend/Reactivate Modal */}
       {statusModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleStatusSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">
+          <form onSubmit={handleStatusSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">
                 {statusActionType ? 'Reactivate' : 'Suspend'} Provider Account
               </h3>
               <button type="button" onClick={() => setStatusModalOpen(false)} className="text-slate-400 hover:text-slate-600">
@@ -534,7 +534,7 @@ export const ProviderDetailView: React.FC = () => {
                 value={statusReason}
                 onChange={(e) => setStatusReason(e.target.value)}
                 placeholder="Internal administrative note..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 rows={2}
               />
             </div>
@@ -543,7 +543,7 @@ export const ProviderDetailView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setStatusModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>

@@ -77,6 +77,20 @@ class ServiceProcessStep(BaseModel):
     title: str
     description: str
     duration_minutes: int
+    is_key_step: Optional[bool] = False
+
+
+class ServiceFeatureItem(BaseModel):
+    title: str
+    description: str
+
+
+class ServiceMediaItem(BaseModel):
+    id: Optional[str] = None
+    url: str
+    caption: Optional[str] = None
+    media_type: Optional[str] = "image"
+    is_cover: Optional[bool] = False
 
 
 class ServiceFAQ(BaseModel):
@@ -112,6 +126,7 @@ class ServiceItem(BaseModel):
     subcategory: str
     subcategory_slug: str
     description: Optional[str] = None
+    distinct_features: List[str] = []
     features: List[str] = []
     included: List[str] = []
     excluded: List[str] = []
@@ -140,6 +155,10 @@ class ServiceItem(BaseModel):
     seo_title: Optional[str] = None
     seo_description: Optional[str] = None
     keywords: List[str] = []
+    service_features: List[ServiceFeatureItem] = []
+    service_media: List[ServiceMediaItem] = []
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
 
 
 # Booking Schemas

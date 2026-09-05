@@ -78,9 +78,9 @@ export const SupportListView: React.FC = () => {
       case 'high':
         return 'bg-amber-50 text-amber-700 border-amber-200 font-bold';
       case 'medium':
-        return 'bg-blue-50 text-[#5CA8FF] border-blue-200 font-semibold';
+        return 'bg-[#F2EDE1] text-[#2F5233] border-[#E5DEC9] font-semibold';
       default:
-        return 'bg-slate-100 text-slate-700 border-slate-200 font-medium';
+        return 'bg-[#F2EDE1] text-slate-700 border-[#E5DEC9] font-medium';
     }
   };
 
@@ -89,19 +89,19 @@ export const SupportListView: React.FC = () => {
       case 'open':
         return 'bg-amber-50 text-amber-700 border-amber-200';
       case 'in_progress':
-        return 'bg-blue-50 text-[#5CA8FF] border-blue-200';
+        return 'bg-[#F2EDE1] text-[#2F5233] border-[#E5DEC9]';
       case 'resolved':
       case 'closed':
         return 'bg-emerald-50 text-emerald-700 border-emerald-200';
       default:
-        return 'bg-slate-100 text-slate-700 border-slate-200';
+        return 'bg-[#F2EDE1] text-slate-700 border-[#E5DEC9]';
     }
   };
 
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading Support Directory & Ticket Escalation Queue...</p>
       </div>
     );
@@ -110,11 +110,11 @@ export const SupportListView: React.FC = () => {
   return (
     <div className="space-y-6 max-w-7xl mx-auto font-sans text-slate-800">
       {/* Header Banner */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+      <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
         <div>
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Support Center</h1>
-            <span className="text-xs font-bold text-[#5CA8FF] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight">Support Center</h1>
+            <span className="text-xs font-bold text-[#2F5233] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
               {tickets.length} Tickets Total
             </span>
           </div>
@@ -125,25 +125,25 @@ export const SupportListView: React.FC = () => {
 
         {/* Real Summary Metrics Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <div className="bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9]">
             <span className="text-[11px] font-bold text-slate-400 block uppercase">Open Tickets</span>
             <span className="text-xl md:text-2xl font-extrabold text-amber-600 mt-1 block">{metrics.open_tickets}</span>
           </div>
-          <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <div className="bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9]">
             <span className="text-[11px] font-bold text-slate-400 block uppercase">In Progress</span>
-            <span className="text-xl md:text-2xl font-extrabold text-[#5CA8FF] mt-1 block">{metrics.in_progress}</span>
+            <span className="text-xl md:text-2xl font-extrabold text-[#2F5233] mt-1 block">{metrics.in_progress}</span>
           </div>
-          <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <div className="bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9]">
             <span className="text-[11px] font-bold text-slate-400 block uppercase">Escalated</span>
             <span className="text-xl md:text-2xl font-extrabold text-rose-600 mt-1 block flex items-center gap-1">
               {metrics.escalated} <Flame className="w-4 h-4 text-rose-500 animate-pulse" />
             </span>
           </div>
-          <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <div className="bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9]">
             <span className="text-[11px] font-bold text-slate-400 block uppercase">High Priority</span>
             <span className="text-xl md:text-2xl font-extrabold text-indigo-600 mt-1 block">{metrics.high_priority}</span>
           </div>
-          <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 col-span-2 sm:col-span-1">
+          <div className="bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9] col-span-2 sm:col-span-1">
             <span className="text-[11px] font-bold text-slate-400 block uppercase">Resolved</span>
             <span className="text-xl md:text-2xl font-extrabold text-emerald-600 mt-1 block">{metrics.resolved}</span>
           </div>
@@ -151,7 +151,7 @@ export const SupportListView: React.FC = () => {
       </div>
 
       {/* Search & Filter Controls */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
         <div className="relative flex-1 w-full max-w-md">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
@@ -159,7 +159,7 @@ export const SupportListView: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search ticket ID, customer name, subject..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-medium"
+            className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-medium"
           />
         </div>
 
@@ -167,7 +167,7 @@ export const SupportListView: React.FC = () => {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           >
             <option value="">All Statuses</option>
             <option value="open">Open</option>
@@ -179,7 +179,7 @@ export const SupportListView: React.FC = () => {
           <select
             value={priorityFilter}
             onChange={(e) => setPriorityFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           >
             <option value="">All Priorities</option>
             <option value="urgent">Urgent</option>
@@ -191,7 +191,7 @@ export const SupportListView: React.FC = () => {
           <select
             value={escalatedFilter}
             onChange={(e) => setEscalatedFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           >
             <option value="">All Escalations</option>
             <option value="escalated">Escalated Only</option>
@@ -199,17 +199,17 @@ export const SupportListView: React.FC = () => {
           </select>
 
           {/* List / Grid View Toggle */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+          <div className="flex items-center bg-[#F2EDE1] p-1 rounded-xl border border-[#E5DEC9]">
             <button
               onClick={() => setViewMode('list')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#5CA8FF] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#2F5233] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
               title="List View (Primary)"
             >
               <List className="w-4 h-4" />
             </button>
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#5CA8FF] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#2F5233] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
               title="Grid View"
             >
               <LayoutGrid className="w-4 h-4" />
@@ -220,16 +220,16 @@ export const SupportListView: React.FC = () => {
 
       {/* Directory Render */}
       {filteredTickets.length === 0 ? (
-        <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+        <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
           <HelpCircle className="w-8 h-8 text-slate-400 mx-auto" />
           <h3 className="text-base font-bold text-slate-800">No support tickets found.</h3>
           <p className="text-xs text-slate-500 font-medium">Try changing your search terms or status filter settings.</p>
         </div>
       ) : viewMode === 'list' ? (
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-3xl border border-[#E5DEC9] shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] border-b border-slate-200">
+              <thead className="bg-[#FAF7F0] text-slate-600 font-bold uppercase text-[10px] border-b border-[#E5DEC9]">
                 <tr>
                   <th className="py-3.5 px-6">Ticket ID & Subject</th>
                   <th className="py-3.5 px-4">Customer</th>
@@ -245,7 +245,7 @@ export const SupportListView: React.FC = () => {
                   <tr
                     key={t.id}
                     onClick={() => navigate(`/admin/support/${t.id}`)}
-                    className="hover:bg-slate-50/80 transition-colors cursor-pointer"
+                    className="hover:bg-[#FAF7F0]/80 transition-colors cursor-pointer"
                   >
                     <td className="py-4 px-6 max-w-xs">
                       <p className="font-mono font-bold text-slate-400 text-[11px]">#{t.id.substring(0, 8)}</p>
@@ -291,7 +291,7 @@ export const SupportListView: React.FC = () => {
                           e.stopPropagation();
                           navigate(`/admin/support/${t.id}`);
                         }}
-                        className="px-3.5 py-1.5 bg-slate-100 hover:bg-[#5CA8FF] hover:text-white text-slate-700 font-bold rounded-xl transition-colors text-xs flex items-center gap-1 ml-auto"
+                        className="px-3.5 py-1.5 bg-[#F2EDE1] hover:bg-[#2F5233] hover:text-white text-slate-700 font-bold rounded-xl transition-colors text-xs flex items-center gap-1 ml-auto"
                       >
                         <span>Open Thread</span>
                         <ChevronRight className="w-3.5 h-3.5" />
@@ -309,7 +309,7 @@ export const SupportListView: React.FC = () => {
             <div
               key={t.id}
               onClick={() => navigate(`/admin/support/${t.id}`)}
-              className="group bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer flex flex-col justify-between space-y-4"
+              className="group bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer flex flex-col justify-between space-y-4"
             >
               <div className="space-y-3">
                 <div className="flex items-start justify-between">
@@ -319,7 +319,7 @@ export const SupportListView: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-[#5CA8FF] transition-colors line-clamp-2">
+                <h3 className="text-base font-bold font-serif text-[#1F2A1E] group-hover:text-[#2F5233] transition-colors line-clamp-2">
                   {t.subject}
                 </h3>
 
@@ -328,12 +328,12 @@ export const SupportListView: React.FC = () => {
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <div className="pt-3 border-t border-[#E5DEC9]/60 flex items-center justify-between text-xs">
                 <span className={`px-2.5 py-0.5 rounded-full text-[10px] border ${getPriorityBadgeStyle(t.priority)}`}>
                   {t.priority}
                 </span>
 
-                <span className="font-bold text-[#5CA8FF] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                <span className="font-bold text-[#2F5233] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
                   <span>Open Thread</span>
                   <ChevronRight className="w-4 h-4" />
                 </span>

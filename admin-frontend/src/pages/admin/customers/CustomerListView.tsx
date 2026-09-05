@@ -65,7 +65,7 @@ export const CustomerListView: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading SmartServe Customer Directory...</p>
       </div>
     );
@@ -74,11 +74,11 @@ export const CustomerListView: React.FC = () => {
   return (
     <div className="space-y-6 max-w-7xl mx-auto font-sans text-slate-800">
       {/* Header Banner */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm">
         <div>
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Customer Directory</h1>
-            <span className="text-xs font-bold text-[#5CA8FF] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight">Customer Directory</h1>
+            <span className="text-xs font-bold text-[#2F5233] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
               {customers.length} Accounts
             </span>
           </div>
@@ -87,7 +87,7 @@ export const CustomerListView: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-3 bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-2xl text-xs font-semibold">
+        <div className="flex items-center gap-3 bg-[#FAF7F0] border border-[#E5DEC9] px-4 py-2.5 rounded-2xl text-xs font-semibold">
           <div className="flex items-center gap-1.5 text-emerald-700">
             <UserCheck className="w-4 h-4 text-emerald-500" />
             <span>{activeCount} Active</span>
@@ -101,7 +101,7 @@ export const CustomerListView: React.FC = () => {
       </div>
 
       {/* Search & Filter Controls */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
         <div className="relative flex-1 w-full max-w-md">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
@@ -109,7 +109,7 @@ export const CustomerListView: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search customer name, email, or ID..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-medium"
+            className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-medium"
           />
         </div>
 
@@ -117,7 +117,7 @@ export const CustomerListView: React.FC = () => {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           >
             <option value="">All Account Statuses</option>
             <option value="active">Active Only</option>
@@ -127,7 +127,7 @@ export const CustomerListView: React.FC = () => {
           <select
             value={riskFilter}
             onChange={(e) => setRiskFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           >
             <option value="">All Risk Levels</option>
             <option value="flagged">Flagged Only</option>
@@ -135,17 +135,17 @@ export const CustomerListView: React.FC = () => {
           </select>
 
           {/* Grid / List View Toggle */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+          <div className="flex items-center bg-[#F2EDE1] p-1 rounded-xl border border-[#E5DEC9]">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#5CA8FF] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#2F5233] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
               title="Grid View"
             >
               <LayoutGrid className="w-4 h-4" />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#5CA8FF] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#2F5233] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
               title="List View"
             >
               <List className="w-4 h-4" />
@@ -156,7 +156,7 @@ export const CustomerListView: React.FC = () => {
 
       {/* Directory Render */}
       {filteredCustomers.length === 0 ? (
-        <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+        <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
           <Users className="w-8 h-8 text-slate-400 mx-auto" />
           <h3 className="text-base font-bold text-slate-800">No customers found.</h3>
           <p className="text-xs text-slate-500 font-medium">Try changing your search terms or filter settings.</p>
@@ -167,16 +167,16 @@ export const CustomerListView: React.FC = () => {
             <div
               key={customer.id}
               onClick={() => navigate(`/admin/customers/${customer.id}`)}
-              className="group bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer flex flex-col justify-between space-y-5"
+              className="group bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer flex flex-col justify-between space-y-5"
             >
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#5CA8FF] font-extrabold text-lg flex items-center justify-center border border-blue-100 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-[#F2EDE1] text-[#2F5233] font-extrabold text-lg flex items-center justify-center border border-[#E5DEC9] flex-shrink-0">
                       {customer.full_name.charAt(0)}
                     </div>
                     <div className="overflow-hidden">
-                      <h3 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-[#5CA8FF] transition-colors truncate">
+                      <h3 className="text-base md:text-lg font-bold font-serif text-[#1F2A1E] group-hover:text-[#2F5233] transition-colors truncate">
                         {customer.full_name}
                       </h3>
                       <p className="text-xs text-slate-500 font-semibold truncate">{customer.email}</p>
@@ -192,11 +192,11 @@ export const CustomerListView: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 p-3 bg-slate-50 rounded-2xl border border-slate-200/80 text-xs">
+                <div className="grid grid-cols-2 gap-2 p-3 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9]/80 text-xs">
                   <div>
                     <span className="text-[10px] text-slate-400 font-semibold uppercase">Total Bookings</span>
                     <p className="font-bold text-slate-900 flex items-center gap-1.5 mt-0.5">
-                      <CalendarCheck className="w-3.5 h-3.5 text-[#5CA8FF]" />
+                      <CalendarCheck className="w-3.5 h-3.5 text-[#2F5233]" />
                       <span>{customer.bookings_count} jobs</span>
                     </p>
                   </div>
@@ -212,12 +212,12 @@ export const CustomerListView: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <div className="pt-3 border-t border-[#E5DEC9]/60 flex items-center justify-between text-xs">
                 <span className="text-slate-400 font-medium">
                   Joined: {customer.created_at ? new Date(customer.created_at).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' }) : 'N/A'}
                 </span>
 
-                <span className="font-bold text-[#5CA8FF] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                <span className="font-bold text-[#2F5233] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
                   <span>View Details</span>
                   <ChevronRight className="w-4 h-4" />
                 </span>
@@ -226,10 +226,10 @@ export const CustomerListView: React.FC = () => {
           ))}
         </div>
       ) : (
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-3xl border border-[#E5DEC9] shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] border-b border-slate-200">
+              <thead className="bg-[#FAF7F0] text-slate-600 font-bold uppercase text-[10px] border-b border-[#E5DEC9]">
                 <tr>
                   <th className="py-3.5 px-6">Customer</th>
                   <th className="py-3.5 px-4">Contact</th>
@@ -245,11 +245,11 @@ export const CustomerListView: React.FC = () => {
                   <tr
                     key={customer.id}
                     onClick={() => navigate(`/admin/customers/${customer.id}`)}
-                    className="hover:bg-slate-50/80 transition-colors cursor-pointer"
+                    className="hover:bg-[#FAF7F0]/80 transition-colors cursor-pointer"
                   >
                     <td className="py-4 px-6">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#5CA8FF] font-extrabold text-base flex items-center justify-center border border-blue-100 flex-shrink-0">
+                        <div className="w-10 h-10 rounded-xl bg-[#F2EDE1] text-[#2F5233] font-extrabold text-base flex items-center justify-center border border-[#E5DEC9] flex-shrink-0">
                           {customer.full_name.charAt(0)}
                         </div>
                         <div>
@@ -274,7 +274,7 @@ export const CustomerListView: React.FC = () => {
                     </td>
                     <td className="py-4 px-4">
                       <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold ${
-                        customer.is_flagged ? 'bg-rose-50 text-rose-700' : 'bg-slate-100 text-slate-600'
+                        customer.is_flagged ? 'bg-rose-50 text-rose-700' : 'bg-[#F2EDE1] text-slate-600'
                       }`}>
                         {customer.is_flagged ? <ShieldAlert className="w-3.5 h-3.5 text-rose-500" /> : null}
                         <span>{customer.is_flagged ? 'Flagged' : 'Clean'}</span>
@@ -289,7 +289,7 @@ export const CustomerListView: React.FC = () => {
                           e.stopPropagation();
                           navigate(`/admin/customers/${customer.id}`);
                         }}
-                        className="px-3.5 py-1.5 bg-slate-100 hover:bg-[#5CA8FF] hover:text-white text-slate-700 font-bold rounded-xl transition-colors text-xs"
+                        className="px-3.5 py-1.5 bg-[#F2EDE1] hover:bg-[#2F5233] hover:text-white text-slate-700 font-bold rounded-xl transition-colors text-xs"
                       >
                         View Profile
                       </button>

@@ -1,18 +1,42 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --color-brand-ivory: #FAF7F0;
+  --color-brand-surface: #F2EDE1;
+  --color-brand-forest: #2F5233;
+  --color-brand-forest-hover: #3D6B42;
+  --color-brand-ink: #1F2A1E;
+  --color-brand-sage: #7A9E6E;
+  --color-brand-gold: #C9A15A;
+  --color-brand-emerald: #10B981;
+}
+
+.font-serif-display {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
 /* ── Base Reset ── */
 html {
   overflow-x: hidden;
   max-width: 100vw;
   scroll-behavior: smooth;
+  background-color: #FAF7F0;
 }
 
 body {
-  background-color: #f8fafc;
-  color: #0f172a;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #FAF7F0;
+  color: #1F2A1E;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
   max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -49,10 +73,28 @@ textarea {
 }
 
 :root {
-  --primary-blue: #2563EB;
-  --primary-blue-dark: #1d4ed8;
-  --bg-slate: #f8fafc;
-  --card-border: #e2e8f0;
+  --primary-forest: #2F5233;
+  --primary-forest-hover: #3D6B42;
+  --surface-ivory: #FAF7F0;
+  --surface-warm: #F2EDE1;
+  --color-ink: #1F2A1E;
+  --card-border: #E5DEC9;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5DEC9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A15A;
 }
 
 .table-responsive {

@@ -16,6 +16,115 @@ from app.services.ai_service import ai_service
 
 router = APIRouter(prefix="/admin/catalog", tags=["Admin Catalog Management"])
 
+def safe_extract_service_response(s) -> ServiceResponse:
+    addons = s.suggested_addons or []
+    real_addons = [a for a in addons if isinstance(a, dict) and not a.get("type")]
+    
+    # 1. Description
+    desc_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") in ["description", "service_description"]), None)
+    description = (desc_obj.get("text") or desc_obj.get("description") or desc_obj.get("content")) if desc_obj else None
+    
+    # 2. Highlights
+    hl_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "highlights"), None)
+    seo_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "seo_metadata"), None)
+    highlights = None
+    if hl_obj and isinstance(hl_obj.get("items"), list):
+        highlights = hl_obj.get("items")
+    elif seo_obj and isinstance(seo_obj.get("highlights"), list):
+        highlights = seo_obj.get("highlights")
+        
+    # 3. Included
+    included = s.distinct_features or []
+    
+    # 4. Excluded
+    exc_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") in ["excluded_scope", "exclusions"]), None)
+    excluded = (exc_obj.get("items") or exc_obj.get("exclusions")) if exc_obj else None
+    
+    # 5. Process Steps
+    proc_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "process_steps"), None)
+    process_steps = (proc_obj.get("steps") or proc_obj.get("items")) if proc_obj else None
+    
+    # 6. Aftercare
+    ac_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "aftercare_precautions"), None)
+    aftercare = (ac_obj.get("aftercare") or ac_obj.get("items") or ac_obj.get("precautions")) if ac_obj else None
+    
+    # 7. Tools & Materials
+    tm_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "tools_materials"), None)
+    tools_materials = (tm_obj.get("tools") or tm_obj.get("items") or tm_obj.get("materials")) if tm_obj else None
+    
+    # 8. Customer Setup
+    cs_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "customer_setup"), None)
+    customer_setup = (cs_obj.get("requirements") or cs_obj.get("items") or cs_obj.get("setup")) if cs_obj else None
+    
+    # 9. Expected Results
+    er_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "expected_results"), None)
+    expected_results = (er_obj.get("items") or er_obj.get("results")) if er_obj else None
+    
+    # 10. Important Notes
+    in_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "important_notes"), None)
+    important_notes = (in_obj.get("items") or in_obj.get("notes")) if in_obj else None
+    
+    # 11. Warranty
+    w_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "warranty"), None)
+    warranty = (w_obj.get("details") or w_obj.get("warranty")) if w_obj else None
+    
+    # 12. FAQs
+    faq_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "faqs"), None)
+    faqs = (faq_obj.get("items") or faq_obj.get("faqs")) if faq_obj else None
+    
+    # 13. Tips
+    tips_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "tips"), None)
+    tips = (tips_obj.get("items") or tips_obj.get("tips")) if tips_obj else None
+    
+    # 14. Dos & Don'ts
+    dd_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "dos_donts"), None)
+    dos = dd_obj.get("dos") if dd_obj else None
+    donts = dd_obj.get("donts") if dd_obj else None
+    
+    # 15. Duration
+    dur_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") in ["duration", "estimated_duration"]), None)
+    duration_minutes = (dur_obj.get("minutes") or dur_obj.get("duration")) if dur_obj else None
+    
+    # 16. Service Media & Features & SEO
+    sm_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "service_media"), None)
+    service_media = sm_obj.get("items") if sm_obj else None
+    sf_obj = next((a for a in addons if isinstance(a, dict) and a.get("type") == "service_features"), None)
+    service_features = sf_obj.get("items") if sf_obj else None
+    
+    return ServiceResponse(
+        id=str(s.id),
+        category=s.category,
+        subcategory=s.subcategory,
+        name=s.name,
+        base_price=s.base_price,
+        max_demand_increase=s.max_demand_increase,
+        max_discount=s.max_discount,
+        distinct_features=s.distinct_features or [],
+        suggested_addons=s.suggested_addons or [],
+        is_active=s.is_active,
+        created_at=s.created_at.isoformat() if s.created_at else "",
+        description=description,
+        highlights=highlights,
+        included=included,
+        excluded=excluded,
+        process_steps=process_steps,
+        aftercare=aftercare,
+        tools_materials=tools_materials,
+        customer_setup=customer_setup,
+        expected_results=expected_results,
+        important_notes=important_notes,
+        warranty=warranty,
+        faqs=faqs,
+        tips=tips,
+        dos=dos,
+        donts=donts,
+        duration_minutes=int(duration_minutes) if duration_minutes is not None else None,
+        addons=real_addons,
+        service_media=service_media,
+        service_features=service_features,
+        seo_metadata=seo_obj
+    )
+
 @router.get("/services", response_model=List[ServiceResponse])
 def list_catalog_services(
     category: Optional[str] = None,
@@ -25,23 +134,27 @@ def list_catalog_services(
     db: Session = Depends(get_db),
     admin: User = Depends(require_admin)
 ):
-    """Retrieve full catalog services hierarchy."""
+    """Retrieve full catalog services hierarchy with metadata unpacked."""
     services = service_repository.get_services(db, skip=skip, limit=limit, category=category, subcategory=subcategory)
-    return [
-        ServiceResponse(
-            id=str(s.id),
-            category=s.category,
-            subcategory=s.subcategory,
-            name=s.name,
-            base_price=s.base_price,
-            max_demand_increase=s.max_demand_increase,
-            max_discount=s.max_discount,
-            distinct_features=s.distinct_features or [],
-            suggested_addons=s.suggested_addons or [],
-            is_active=s.is_active,
-            created_at=s.created_at.isoformat()
-        ) for s in services
-    ]
+    return [safe_extract_service_response(s) for s in services]
+
+@router.get("/services/{service_id}", response_model=ServiceResponse)
+def get_service_item(
+    service_id: str,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin)
+):
+    """Retrieve a single service item by ID with full metadata unpacked."""
+    try:
+        s_uuid = uuid.UUID(service_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid service ID format")
+
+    service = service_repository.get_service_by_id(db, s_uuid)
+    if not service:
+        raise HTTPException(status_code=404, detail="Service not found")
+
+    return safe_extract_service_response(service)
 
 @router.post("/services", response_model=ServiceResponse, status_code=status.HTTP_201_CREATED)
 def create_service_item(
@@ -59,6 +172,8 @@ def create_service_item(
     suggested_addons = list(req.suggested_addons or [])
     if req.description:
         suggested_addons.append({"type": "description", "text": req.description})
+    if req.highlights:
+        suggested_addons.append({"type": "highlights", "items": req.highlights})
     if req.excluded:
         suggested_addons.append({"type": "excluded_scope", "items": req.excluded})
     if req.process_steps:
@@ -77,6 +192,18 @@ def create_service_item(
         suggested_addons.append({"type": "warranty", "has_warranty": True, "details": req.warranty})
     if req.faqs:
         suggested_addons.append({"type": "faqs", "items": req.faqs})
+    if req.tips:
+        suggested_addons.append({"type": "tips", "items": req.tips})
+    if req.dos or req.donts:
+        suggested_addons.append({"type": "dos_donts", "dos": req.dos or [], "donts": req.donts or []})
+    if req.duration_minutes:
+        suggested_addons.append({"type": "duration", "minutes": req.duration_minutes})
+    if req.service_media:
+        suggested_addons.append({"type": "service_media", "items": req.service_media})
+    if req.service_features:
+        suggested_addons.append({"type": "service_features", "items": req.service_features})
+    if req.seo_metadata:
+        suggested_addons.append(req.seo_metadata)
 
     service = service_repository.create_service(
         db,
@@ -96,26 +223,7 @@ def create_service_item(
         action=f"Created Service Catalog Item '{service.name}'", target_resource=str(service.id)
     )
 
-    return ServiceResponse(
-        id=str(service.id),
-        category=service.category,
-        subcategory=service.subcategory,
-        name=service.name,
-        base_price=service.base_price,
-        max_demand_increase=service.max_demand_increase,
-        max_discount=service.max_discount,
-        distinct_features=service.distinct_features or [],
-        suggested_addons=service.suggested_addons or [],
-        is_active=service.is_active,
-        created_at=service.created_at.isoformat(),
-        description=req.description,
-        included=req.included,
-        excluded=req.excluded,
-        process_steps=req.process_steps,
-        aftercare=req.aftercare,
-        warranty=req.warranty,
-        faqs=req.faqs
-    )
+    return safe_extract_service_response(service)
 
 @router.put("/services/{service_id}", response_model=ServiceResponse)
 def update_service_item(
@@ -124,7 +232,7 @@ def update_service_item(
     db: Session = Depends(get_db),
     admin: User = Depends(require_permission("catalog:edit"))
 ):
-    """Update existing service pricing, demand increase limits, or features."""
+    """Safely update existing service pricing, features, or metadata without overwriting unspecified data."""
     try:
         s_uuid = uuid.UUID(service_id)
     except ValueError:
@@ -138,55 +246,198 @@ def update_service_item(
     old_active = service.is_active
     old_name = service.name
 
-    distinct_features = req.distinct_features if req.distinct_features is not None else service.distinct_features
+    # 1. Non-destructive distinct_features
+    distinct_features = service.distinct_features
     if req.included is not None:
         distinct_features = req.included
+    elif req.distinct_features is not None:
+        distinct_features = req.distinct_features
 
-    suggested_addons = list(req.suggested_addons if req.suggested_addons is not None else (service.suggested_addons or []))
-    if any([req.description, req.excluded is not None, req.process_steps is not None, req.aftercare is not None, req.tools_materials is not None, req.customer_setup is not None, req.expected_results is not None, req.important_notes is not None, req.warranty is not None, req.faqs is not None, req.tips is not None, req.dos is not None, req.donts is not None, req.duration_minutes is not None]):
-        types_to_replace = set()
-        if req.description: types_to_replace.add("description")
-        if req.excluded is not None: types_to_replace.add("excluded_scope")
-        if req.process_steps is not None: types_to_replace.add("process_steps")
-        if req.aftercare is not None: types_to_replace.add("aftercare_precautions")
-        if req.tools_materials is not None: types_to_replace.add("tools_materials")
-        if req.customer_setup is not None: types_to_replace.add("customer_setup")
-        if req.expected_results is not None: types_to_replace.add("expected_results")
-        if req.important_notes is not None: types_to_replace.add("important_notes")
-        if req.warranty is not None: types_to_replace.add("warranty")
-        if req.faqs is not None: types_to_replace.add("faqs")
-        if req.tips is not None: types_to_replace.add("tips")
-        if req.dos is not None or req.donts is not None: types_to_replace.add("dos_donts")
-        if req.duration_minutes is not None: types_to_replace.add("duration")
+    # 2. Extract existing addons and typed metadata blocks
+    existing_addons = list(service.suggested_addons or [])
+    existing_real_addons = [a for a in existing_addons if isinstance(a, dict) and not a.get("type")]
+    existing_typed_blocks = [a for a in existing_addons if isinstance(a, dict) and a.get("type")]
+    blocks_by_type = {a.get("type"): dict(a) for a in existing_typed_blocks}
 
-        filtered = [a for a in suggested_addons if not (isinstance(a, dict) and a.get("type") in types_to_replace)]
-        if req.description:
-            filtered.append({"type": "description", "text": req.description})
-        if req.excluded is not None:
-            filtered.append({"type": "excluded_scope", "items": req.excluded})
-        if req.process_steps is not None:
-            filtered.append({"type": "process_steps", "steps": req.process_steps})
-        if req.aftercare is not None:
-            filtered.append({"type": "aftercare_precautions", "aftercare": req.aftercare})
-        if req.tools_materials is not None:
-            filtered.append({"type": "tools_materials", "tools": req.tools_materials})
-        if req.customer_setup is not None:
-            filtered.append({"type": "customer_setup", "requirements": req.customer_setup})
-        if req.expected_results is not None:
-            filtered.append({"type": "expected_results", "items": req.expected_results})
-        if req.important_notes is not None:
-            filtered.append({"type": "important_notes", "items": req.important_notes})
-        if req.warranty is not None:
-            filtered.append({"type": "warranty", "has_warranty": bool(req.warranty.strip()), "details": req.warranty})
-        if req.faqs is not None:
-            filtered.append({"type": "faqs", "items": req.faqs})
-        if req.tips is not None:
-            filtered.append({"type": "tips", "items": req.tips})
-        if req.dos is not None or req.donts is not None:
-            filtered.append({"type": "dos_donts", "dos": req.dos or [], "donts": req.donts or []})
-        if req.duration_minutes is not None:
-            filtered.append({"type": "duration", "minutes": req.duration_minutes})
-        suggested_addons = filtered
+    # 3. Real Add-ons Preservation
+    if req.addons is not None:
+        final_real_addons = list(req.addons)
+    elif req.suggested_addons is not None:
+        incoming_real_addons = [a for a in req.suggested_addons if isinstance(a, dict) and not a.get("type")]
+        if incoming_real_addons:
+            final_real_addons = incoming_real_addons
+        else:
+            final_real_addons = existing_real_addons
+    else:
+        final_real_addons = existing_real_addons
+
+    def is_block_meaningfully_empty(b: dict) -> bool:
+        if not isinstance(b, dict):
+            return True
+        b_type = b.get("type")
+        if not b_type:
+            return False
+        if b_type in ("description", "service_description"):
+            txt = b.get("text") or b.get("description") or b.get("content")
+            return not bool(txt and str(txt).strip())
+        if b_type == "highlights":
+            items = b.get("items") or b.get("highlights")
+            return not bool(items and len(items) > 0)
+        if b_type in ("excluded_scope", "exclusions"):
+            items = b.get("items") or b.get("exclusions")
+            return not bool(items and len(items) > 0)
+        if b_type == "process_steps":
+            steps = b.get("steps") or b.get("items")
+            return not bool(steps and len(steps) > 0)
+        if b_type == "aftercare_precautions":
+            items = b.get("aftercare") or b.get("items") or b.get("precautions")
+            return not bool(items and len(items) > 0)
+        if b_type == "tools_materials":
+            tools = b.get("tools") or b.get("items")
+            materials = b.get("materials")
+            return not bool((tools and len(tools) > 0) or (materials and len(materials) > 0))
+        if b_type == "customer_setup":
+            items = b.get("requirements") or b.get("items") or b.get("setup")
+            return not bool(items and len(items) > 0)
+        if b_type == "expected_results":
+            items = b.get("items") or b.get("results")
+            return not bool(items and len(items) > 0)
+        if b_type == "important_notes":
+            items = b.get("items") or b.get("notes")
+            return not bool(items and len(items) > 0)
+        if b_type == "warranty":
+            return not bool(b.get("has_warranty") or (b.get("details") and str(b.get("details")).strip()))
+        if b_type == "faqs":
+            items = b.get("items") or b.get("faqs")
+            return not bool(items and len(items) > 0)
+        if b_type == "tips":
+            items = b.get("items") or b.get("tips")
+            return not bool(items and len(items) > 0)
+        if b_type == "dos_donts":
+            dos = b.get("dos")
+            donts = b.get("donts")
+            return not bool((dos and len(dos) > 0) or (donts and len(donts) > 0))
+        if b_type == "service_media":
+            items = b.get("items")
+            return not bool(items and len(items) > 0)
+        if b_type == "service_features":
+            items = b.get("items")
+            return not bool(items and len(items) > 0)
+        if b_type == "seo_metadata":
+            return not bool(b.get("seo_title") or b.get("seo_description") or b.get("keywords") or b.get("highlights"))
+        return False
+
+    # 4. Typed Metadata Blocks Safe Non-destructive Merge
+    if req.description is not None:
+        if req.description.strip() or "description" not in blocks_by_type:
+            blocks_by_type["description"] = {"type": "description", "text": req.description}
+
+    if req.highlights is not None:
+        if req.highlights or "highlights" not in blocks_by_type:
+            blocks_by_type["highlights"] = {"type": "highlights", "items": req.highlights}
+            if "seo_metadata" in blocks_by_type:
+                seo = dict(blocks_by_type["seo_metadata"])
+                seo["highlights"] = req.highlights
+                blocks_by_type["seo_metadata"] = seo
+
+    if req.excluded is not None:
+        if req.excluded or "excluded_scope" not in blocks_by_type:
+            blocks_by_type["excluded_scope"] = {"type": "excluded_scope", "items": req.excluded}
+
+    if req.process_steps is not None:
+        if req.process_steps or "process_steps" not in blocks_by_type:
+            blocks_by_type["process_steps"] = {"type": "process_steps", "steps": req.process_steps}
+
+    if req.aftercare is not None:
+        if req.aftercare or "aftercare_precautions" not in blocks_by_type:
+            blocks_by_type["aftercare_precautions"] = {"type": "aftercare_precautions", "aftercare": req.aftercare}
+
+    if req.tools_materials is not None:
+        if req.tools_materials or "tools_materials" not in blocks_by_type:
+            existing_tm = blocks_by_type.get("tools_materials", {})
+            existing_mat = existing_tm.get("materials", []) if isinstance(existing_tm, dict) else []
+            blocks_by_type["tools_materials"] = {"type": "tools_materials", "tools": req.tools_materials, "materials": existing_mat}
+
+    if req.customer_setup is not None:
+        if req.customer_setup or "customer_setup" not in blocks_by_type:
+            blocks_by_type["customer_setup"] = {"type": "customer_setup", "requirements": req.customer_setup}
+
+    if req.expected_results is not None:
+        if req.expected_results or "expected_results" not in blocks_by_type:
+            blocks_by_type["expected_results"] = {"type": "expected_results", "items": req.expected_results}
+
+    if req.important_notes is not None:
+        if req.important_notes or "important_notes" not in blocks_by_type:
+            blocks_by_type["important_notes"] = {"type": "important_notes", "items": req.important_notes}
+
+    if req.warranty is not None:
+        if (req.warranty and req.warranty.strip()) or "warranty" not in blocks_by_type:
+            blocks_by_type["warranty"] = {
+                "type": "warranty",
+                "has_warranty": bool(req.warranty and req.warranty.strip()),
+                "details": req.warranty
+            }
+
+    if req.faqs is not None:
+        if req.faqs or "faqs" not in blocks_by_type:
+            blocks_by_type["faqs"] = {"type": "faqs", "items": req.faqs}
+
+    if req.tips is not None:
+        if req.tips or "tips" not in blocks_by_type:
+            blocks_by_type["tips"] = {"type": "tips", "items": req.tips}
+
+    if req.dos is not None or req.donts is not None:
+        existing_dd = blocks_by_type.get("dos_donts", {})
+        cur_dos = req.dos if req.dos is not None else (existing_dd.get("dos", []) if isinstance(existing_dd, dict) else [])
+        cur_donts = req.donts if req.donts is not None else (existing_dd.get("donts", []) if isinstance(existing_dd, dict) else [])
+        if cur_dos or cur_donts or "dos_donts" not in blocks_by_type:
+            blocks_by_type["dos_donts"] = {"type": "dos_donts", "dos": cur_dos, "donts": cur_donts}
+
+    if req.duration_minutes is not None:
+        blocks_by_type["duration"] = {"type": "duration", "minutes": req.duration_minutes}
+
+    if req.service_media is not None:
+        if req.service_media or "service_media" not in blocks_by_type:
+            blocks_by_type["service_media"] = {"type": "service_media", "items": req.service_media}
+
+    if req.service_features is not None:
+        if req.service_features or "service_features" not in blocks_by_type:
+            blocks_by_type["service_features"] = {"type": "service_features", "items": req.service_features}
+
+    if req.seo_metadata is not None:
+        blocks_by_type["seo_metadata"] = req.seo_metadata
+
+    # Merge incoming suggested_addons for any blocks not updated by explicit top-level fields
+    explicit_types = {
+        "description": req.description is not None,
+        "highlights": req.highlights is not None,
+        "excluded_scope": req.excluded is not None,
+        "process_steps": req.process_steps is not None,
+        "aftercare_precautions": req.aftercare is not None,
+        "tools_materials": req.tools_materials is not None,
+        "customer_setup": req.customer_setup is not None,
+        "expected_results": req.expected_results is not None,
+        "important_notes": req.important_notes is not None,
+        "warranty": req.warranty is not None,
+        "faqs": req.faqs is not None,
+        "tips": req.tips is not None,
+        "dos_donts": (req.dos is not None or req.donts is not None),
+        "duration": req.duration_minutes is not None,
+        "service_media": req.service_media is not None,
+        "service_features": req.service_features is not None,
+        "seo_metadata": req.seo_metadata is not None
+    }
+    if req.suggested_addons is not None:
+        for b in req.suggested_addons:
+            if isinstance(b, dict) and b.get("type"):
+                b_type = b.get("type")
+                if not explicit_types.get(b_type, False):
+                    # Never overwrite an existing non-empty block with an empty block
+                    if b_type in blocks_by_type and is_block_meaningfully_empty(b) and not is_block_meaningfully_empty(blocks_by_type[b_type]):
+                        continue
+                    blocks_by_type[b_type] = b
+
+    final_suggested_addons = list(final_real_addons) + list(blocks_by_type.values())
 
     updated = service_repository.update_service(
         db,
@@ -198,9 +449,36 @@ def update_service_item(
         max_demand_increase=req.max_demand_increase,
         max_discount=req.max_discount,
         distinct_features=distinct_features,
-        suggested_addons=suggested_addons,
+        suggested_addons=final_suggested_addons,
         is_active=req.is_active
     )
+
+    # SQLite parity sync
+    try:
+        import sqlite3, json, os
+        sqlite_file = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "smartserve_dev.db"))
+        if os.path.exists(sqlite_file):
+            conn = sqlite3.connect(sqlite_file)
+            cur = conn.cursor()
+            cur.execute("""
+                UPDATE services
+                SET name = ?, category = ?, subcategory = ?, base_price = ?,
+                    max_demand_increase = ?, max_discount = ?, distinct_features = ?,
+                    suggested_addons = ?, is_active = ?
+                WHERE id = ? OR id = ?
+            """, (
+                updated.name, updated.category, updated.subcategory, updated.base_price,
+                updated.max_demand_increase, updated.max_discount,
+                json.dumps(updated.distinct_features or []),
+                json.dumps(updated.suggested_addons or []),
+                1 if updated.is_active else 0,
+                str(updated.id),
+                str(updated.id).replace("-", "")
+            ))
+            conn.commit()
+            conn.close()
+    except Exception:
+        pass
 
     changes = []
     if old_price != updated.base_price:
@@ -232,19 +510,8 @@ def update_service_item(
         }
     )
 
-    return ServiceResponse(
-        id=str(updated.id),
-        category=updated.category,
-        subcategory=updated.subcategory,
-        name=updated.name,
-        base_price=updated.base_price,
-        max_demand_increase=updated.max_demand_increase,
-        max_discount=updated.max_discount,
-        distinct_features=updated.distinct_features or [],
-        suggested_addons=updated.suggested_addons or [],
-        is_active=updated.is_active,
-        created_at=updated.created_at.isoformat()
-    )
+    return safe_extract_service_response(updated)
+
 
 @router.get("/services/{service_id}/audit-logs", response_model=List[AuditLogResponse])
 def get_service_audit_history(

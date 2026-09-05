@@ -109,7 +109,7 @@ export const CustomerDetailView: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading Customer Profile & Booking History...</p>
       </div>
     );
@@ -119,11 +119,11 @@ export const CustomerDetailView: React.FC = () => {
     return (
       <div className="max-w-xl mx-auto my-12 p-8 bg-white border border-rose-200 rounded-3xl text-center space-y-4 shadow-sm">
         <ShieldAlert className="w-10 h-10 text-rose-500 mx-auto" />
-        <h3 className="text-lg font-bold text-slate-900">Customer Not Found</h3>
+        <h3 className="text-lg font-bold font-serif text-[#1F2A1E]">Customer Not Found</h3>
         <p className="text-xs text-slate-600">{error || 'Unable to retrieve requested customer account.'}</p>
         <button
           onClick={() => navigate('/admin/customers')}
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5CA8FF] text-white rounded-2xl text-xs font-bold"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2F5233] text-white rounded-2xl text-xs font-bold"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Customer Directory</span>
@@ -144,12 +144,12 @@ export const CustomerDetailView: React.FC = () => {
 
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 font-medium">
-        <Link to="/admin/customers" className="hover:text-[#5CA8FF] flex items-center gap-1 transition-colors">
+        <Link to="/admin/customers" className="hover:text-[#2F5233] flex items-center gap-1 transition-colors">
           <Users className="w-3.5 h-3.5" />
           <span>People</span>
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
-        <Link to="/admin/customers" className="hover:text-[#5CA8FF] transition-colors">
+        <Link to="/admin/customers" className="hover:text-[#2F5233] transition-colors">
           Customers
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
@@ -157,23 +157,23 @@ export const CustomerDetailView: React.FC = () => {
       </nav>
 
       {/* Profile Header Banner */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex items-start md:items-center gap-5">
           <button
             onClick={() => navigate('/admin/customers')}
-            className="p-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
+            className="p-2.5 rounded-2xl bg-[#F2EDE1] hover:bg-[#E5DEC9] text-slate-600 transition-colors"
             title="Back to Directory"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
 
-          <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#5CA8FF] font-extrabold text-2xl flex items-center justify-center border border-blue-100 shadow-xs flex-shrink-0">
+          <div className="w-16 h-16 rounded-2xl bg-[#F2EDE1] text-[#2F5233] font-extrabold text-2xl flex items-center justify-center border border-[#E5DEC9] shadow-xs flex-shrink-0">
             {customer.full_name.charAt(0)}
           </div>
 
           <div>
             <div className="flex items-center gap-3 flex-wrap">
-              <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+              <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight">
                 {customer.full_name}
               </h1>
               <span className={`px-3 py-1 rounded-full text-xs font-bold border ${
@@ -236,7 +236,7 @@ export const CustomerDetailView: React.FC = () => {
             <button
               disabled
               title="Customer account suspension and fraud flagging requires 'customers:manage' permission."
-              className="px-4 py-2 bg-slate-100 text-slate-400 font-bold rounded-2xl border border-slate-200 text-xs cursor-not-allowed opacity-70"
+              className="px-4 py-2 bg-[#F2EDE1] text-slate-400 font-bold rounded-2xl border border-[#E5DEC9] text-xs cursor-not-allowed opacity-70"
             >
               🔒 Actions Restricted (View Only)
             </button>
@@ -248,16 +248,16 @@ export const CustomerDetailView: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Column: Profile & Activity Metrics */}
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <Users className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
+              <Users className="w-5 h-5 text-[#2F5233]" />
               <span>Profile Information</span>
             </h3>
 
             <div className="space-y-3 text-xs">
               <div>
                 <span className="text-slate-400 font-semibold block">Customer ID (UUID)</span>
-                <p className="font-mono font-bold text-slate-800 text-xs bg-slate-50 p-2 rounded-xl border border-slate-200 mt-1 select-all">
+                <p className="font-mono font-bold text-slate-800 text-xs bg-[#FAF7F0] p-2 rounded-xl border border-[#E5DEC9] mt-1 select-all">
                   {customer.id}
                 </p>
               </div>
@@ -282,14 +282,14 @@ export const CustomerDetailView: React.FC = () => {
           </div>
 
           {/* Activity Breakdown */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <CalendarCheck className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
+              <CalendarCheck className="w-5 h-5 text-[#2F5233]" />
               <span>Activity Metrics</span>
             </h3>
 
             <div className="grid grid-cols-3 gap-2 text-center text-xs">
-              <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200">
+              <div className="p-3 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9]">
                 <span className="text-[10px] text-slate-400 font-bold uppercase block">Total</span>
                 <p className="text-base font-extrabold text-slate-900 mt-0.5">{customer.bookings_count}</p>
               </div>
@@ -308,14 +308,14 @@ export const CustomerDetailView: React.FC = () => {
         {/* Right Column: Booking History & Fraud Risk Flags */}
         <div className="lg:col-span-2 space-y-6">
           {/* Risk & Fraud Flag Context */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-            <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5">
+            <h3 className="text-lg font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
               <ShieldAlert className="w-5 h-5 text-rose-500" />
               <span>Risk Signals & Fraud Flags</span>
             </h3>
 
             {customer.flags.length === 0 ? (
-              <div className="p-4 bg-slate-50 rounded-2xl text-center text-xs font-semibold text-slate-500">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl text-center text-xs font-semibold text-slate-500">
                 No risk flags recorded.
               </div>
             ) : (
@@ -339,20 +339,20 @@ export const CustomerDetailView: React.FC = () => {
           </div>
 
           {/* Booking History */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-            <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <CalendarCheck className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5">
+            <h3 className="text-lg font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
+              <CalendarCheck className="w-5 h-5 text-[#2F5233]" />
               <span>Booking History</span>
             </h3>
 
             {!customer.bookings || customer.bookings.length === 0 ? (
-              <div className="p-6 bg-slate-50 rounded-2xl text-center text-xs font-semibold text-slate-500">
+              <div className="p-6 bg-[#FAF7F0] rounded-2xl text-center text-xs font-semibold text-slate-500">
                 No booking history available.
               </div>
             ) : (
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] border-b border-slate-200">
+                  <thead className="bg-[#FAF7F0] text-slate-600 font-bold uppercase text-[10px] border-b border-[#E5DEC9]">
                     <tr>
                       <th className="py-3 px-4">Service</th>
                       <th className="py-3 px-4">Scheduled Date</th>
@@ -363,7 +363,7 @@ export const CustomerDetailView: React.FC = () => {
                   </thead>
                   <tbody className="divide-y divide-slate-100">
                     {customer.bookings.map((booking) => (
-                      <tr key={booking.id} className="hover:bg-slate-50/80 transition-colors">
+                      <tr key={booking.id} className="hover:bg-[#FAF7F0]/80 transition-colors">
                         <td className="py-3.5 px-4 font-bold text-slate-900">
                           {booking.service_name}
                         </td>
@@ -400,9 +400,9 @@ export const CustomerDetailView: React.FC = () => {
       {/* Fraud Flagging Modal */}
       {flagModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleFlagSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">Flag Customer Account</h3>
+          <form onSubmit={handleFlagSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Flag Customer Account</h3>
               <button type="button" onClick={() => setFlagModalOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X className="w-5 h-5" />
               </button>
@@ -417,7 +417,7 @@ export const CustomerDetailView: React.FC = () => {
               <select
                 value={flagType}
                 onChange={(e) => setFlagType(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-rose-400"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-rose-400"
               >
                 <option value="Fraud Risk — Chargeback Abuse">Fraud Risk — Chargeback Abuse</option>
                 <option value="Frequent Cancellation Pattern">Frequent Cancellation Pattern</option>
@@ -432,7 +432,7 @@ export const CustomerDetailView: React.FC = () => {
                 value={flagReason}
                 onChange={(e) => setFlagReason(e.target.value)}
                 placeholder="Detail the suspicious activity or pattern observed..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-rose-400"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-rose-400"
                 rows={3}
                 required
               />
@@ -442,7 +442,7 @@ export const CustomerDetailView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setFlagModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>
@@ -461,9 +461,9 @@ export const CustomerDetailView: React.FC = () => {
       {/* Account Status Suspend/Reactivate Modal */}
       {statusModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleStatusSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">
+          <form onSubmit={handleStatusSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">
                 {statusActionType ? 'Reactivate' : 'Suspend'} Customer Account
               </h3>
               <button type="button" onClick={() => setStatusModalOpen(false)} className="text-slate-400 hover:text-slate-600">
@@ -481,7 +481,7 @@ export const CustomerDetailView: React.FC = () => {
                 value={statusReason}
                 onChange={(e) => setStatusReason(e.target.value)}
                 placeholder="Internal administrative note..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 rows={2}
               />
             </div>
@@ -490,7 +490,7 @@ export const CustomerDetailView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setStatusModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>

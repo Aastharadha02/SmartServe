@@ -4,15 +4,22 @@ import { SplashScreen } from './components/common/SplashScreen';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 
 export const App: React.FC = () => {
-  const [splashDone, setSplashDone] = useState(false);
+  const [splashDone, setSplashDone] = useState(() => {
+    return sessionStorage.getItem('smartserve_splash_done') === 'true';
+  });
+
+  const handleFinish = () => {
+    sessionStorage.setItem('smartserve_splash_done', 'true');
+    setSplashDone(true);
+  };
 
   return (
     <ErrorBoundary>
       <AppRoutes />
       {!splashDone && (
         <SplashScreen
-          durationMs={5400}
-          onFinish={() => setSplashDone(true)}
+          durationMs={8000}
+          onFinish={handleFinish}
         />
       )}
     </ErrorBoundary>
@@ -20,3 +27,4 @@ export const App: React.FC = () => {
 };
 
 export default App;
+

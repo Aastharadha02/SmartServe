@@ -1,7 +1,13 @@
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.ext.compiler import compiles
+from sqlalchemy.dialects.postgresql import JSONB
 from app.core.config import settings
+
+@compiles(JSONB, "sqlite")
+def compile_jsonb_sqlite(type_, compiler, **kw):
+    return "JSON"
 
 database_url = settings.DATABASE_URL
 if database_url.startswith("postgresql") and "+psycopg2" not in database_url and "+asyncpg" not in database_url:
@@ -14,7 +20,7 @@ def get_engine():
                 database_url,
                 pool_pre_ping=True,
                 pool_recycle=300,
-                connect_args={"connect_timeout": 15},
+                connect_args={"connect_timeout": 3},
             )
             with engine_test.connect():
                 pass

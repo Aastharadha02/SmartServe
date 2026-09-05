@@ -1,4 +1,5 @@
 import os
+import re
 import uuid
 from datetime import datetime
 from decimal import Decimal
@@ -30,6 +31,8 @@ from app.schemas.customer_schemas import (
     ServiceItem,
     AddonItem,
     ServiceProcessStep,
+    ServiceFeatureItem,
+    ServiceMediaItem,
     ServiceFAQ,
     CreateBookingPayload,
     CancelBookingPayload,
@@ -365,6 +368,8 @@ def parse_service_details(s) -> ServiceItem:
     
     addons: List[AddonItem] = []
     process_steps: List[ServiceProcessStep] = []
+    service_features: List[ServiceFeatureItem] = []
+    service_media: List[ServiceMediaItem] = []
     faqs: List[ServiceFAQ] = []
     excluded: List[Any] = []
     tools_materials: List[Any] = []
@@ -428,7 +433,29 @@ def parse_service_details(s) -> ServiceItem:
                                 step_number=int(st.get("step_number", len(process_steps) + 1)),
                                 title=str(st.get("title", f"Step {len(process_steps) + 1}")),
                                 description=str(st.get("description", "")),
-                                duration_minutes=dur
+                                duration_minutes=dur,
+                                is_key_step=bool(st.get("is_key_step", False))
+                            ))
+            elif i_type == "service_features":
+                sf = item.get("items") or item.get("features") or []
+                if isinstance(sf, list):
+                    for f in sf:
+                        if isinstance(f, dict) and (f.get("title") or f.get("description")):
+                            service_features.append(ServiceFeatureItem(
+                                title=str(f.get("title", "")),
+                                description=str(f.get("description", ""))
+                            ))
+            elif i_type == "service_media":
+                sm = item.get("items") or item.get("media") or []
+                if isinstance(sm, list):
+                    for m in sm:
+                        if isinstance(m, dict) and m.get("url"):
+                            service_media.append(ServiceMediaItem(
+                                id=str(m.get("id")) if m.get("id") else None,
+                                url=str(m.get("url")),
+                                caption=str(m.get("caption", "")),
+                                media_type=str(m.get("media_type", "image")),
+                                is_cover=bool(m.get("is_cover", False))
                             ))
             elif i_type in ["tools_materials", "products_and_tools"]:
                 pt = item.get("products_and_tools") or item.get("items") or []
@@ -489,7 +516,11 @@ def parse_service_details(s) -> ServiceItem:
             elif not description_text and item.get("description") and not i_type:
                 description_text = item.get("description")
 
-    duration_minutes = calc_duration if calc_duration > 0 else (explicit_duration or 45)
+    duration_minutes = explicit_duration if explicit_duration is not None else (calc_duration if calc_duration > 0 else 45)
+
+    cover_media = next((m.url for m in service_media if m.is_cover), None)
+    first_media = service_media[0].url if service_media else None
+    resolved_image = cover_media or first_media or None
 
     return ServiceItem(
         id=str(s.id),
@@ -499,6 +530,7 @@ def parse_service_details(s) -> ServiceItem:
         subcategory=s.subcategory,
         subcategory_slug=sub_slug,
         description=description_text,
+        distinct_features=included_features,
         features=included_features,
         included=included_features,
         excluded=normalize_to_strings(excluded),
@@ -511,7 +543,7 @@ def parse_service_details(s) -> ServiceItem:
         review_count=120,
         is_emergency=False,
         is_active=s.is_active,
-        image_url=None,
+        image_url=resolved_image,
         suggested_addons=addons,
         process_steps=process_steps,
         tools_materials=normalize_to_strings(tools_materials),
@@ -526,7 +558,11 @@ def parse_service_details(s) -> ServiceItem:
         donts=normalize_to_strings(donts),
         seo_title=seo_title,
         seo_description=seo_description,
-        keywords=keywords
+        keywords=keywords,
+        service_features=service_features,
+        service_media=service_media,
+        created_at=s.created_at,
+        updated_at=s.updated_at
     )
 
 
@@ -542,17 +578,22 @@ def get_catalog_services(
     from app.models.service import Service
     query = db.query(Service).filter(Service.is_active == True)
     if category:
-        query = query.filter((Service.category.ilike(f"%{category}%")) | (Service.subcategory.ilike(f"%{category}%")))
+        clean_cat = category.strip()
+        cat_no_num = re.sub(r'^\d+\.\s*', '', clean_cat)
+        query = query.filter(
+            (Service.category.ilike(f"%{clean_cat}%")) | 
+            (Service.category.ilike(f"%{cat_no_num}%"))
+        )
     if subcategory:
         clean_sub = subcategory.strip().lower()
         if clean_sub in ["men's salon", "mens salon"]:
-            query = query.filter(func.lower(Service.subcategory) == "men's salon")
+            query = query.filter(func.lower(func.trim(Service.subcategory)) == "men's salon")
         elif clean_sub in ["women's salon", "womens salon"]:
-            query = query.filter(func.lower(Service.subcategory) == "women's salon")
+            query = query.filter(func.lower(func.trim(Service.subcategory)) == "women's salon")
         elif clean_sub == "ac":
-            query = query.filter(func.lower(Service.subcategory) == "ac")
+            query = query.filter(func.lower(func.trim(Service.subcategory)) == "ac")
         else:
-            query = query.filter(Service.subcategory.ilike(f"%{subcategory}%"))
+            query = query.filter(func.lower(func.trim(Service.subcategory)) == clean_sub)
     if q:
         query = query.filter((Service.name.ilike(f"%{q}%")) | (Service.category.ilike(f"%{q}%")) | (Service.subcategory.ilike(f"%{q}%")))
 
@@ -570,9 +611,10 @@ def get_catalog_service_by_id(service_id: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail="Invalid service ID format")
 
     s = db.query(Service).filter(Service.id == s_uuid).first()
-    if not s or not s.is_active:
-        raise HTTPException(status_code=404, detail="Service not found or currently unavailable in catalog")
+    if not s:
+        raise HTTPException(status_code=404, detail="Service not found in catalog")
 
+    print(f"[DEBUG GET SERVICE] service_id={service_id}, db={db.bind.url}, found={s.name}, price={s.base_price}")
     return parse_service_details(s)
 
 

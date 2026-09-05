@@ -1,214 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // ═══════════════════════════════════════════════════════════════════════════
-// High-Precision Geometry & Arc-Length Parameterization
+// SmartServe Admin Splash Screen (~8-Second Cinematic Sequence)
 // ═══════════════════════════════════════════════════════════════════════════
-
-function bezier1D(t: number, p0: number, p1: number, p2: number, p3: number): number {
-  const m = 1 - t;
-  return m * m * m * p0 + 3 * m * m * t * p1 + 3 * m * t * t * p2 + t * t * t * p3;
-}
-
-function sampleBezierSegment(
-  n: number,
-  p0x: number, p0y: number,
-  c1x: number, c1y: number,
-  c2x: number, c2y: number,
-  p3x: number, p3y: number
-): [number, number][] {
-  const pts: [number, number][] = [];
-  for (let i = 0; i <= n; i++) {
-    const t = i / n;
-    pts.push([
-      bezier1D(t, p0x, c1x, c2x, p3x),
-      bezier1D(t, p0y, c1y, c2y, p3y)
-    ]);
-  }
-  return pts;
-}
-
-function reparameterizeArcLength(rawPts: [number, number][], totalSamples: number): [number, number][] {
-  if (rawPts.length < 2) return rawPts;
-
-  const dists: number[] = [0];
-  let totalLength = 0;
-  for (let i = 1; i < rawPts.length; i++) {
-    const dx = rawPts[i][0] - rawPts[i - 1][0];
-    const dy = rawPts[i][1] - rawPts[i - 1][1];
-    totalLength += Math.sqrt(dx * dx + dy * dy);
-    dists.push(totalLength);
-  }
-
-  if (totalLength === 0) return rawPts;
-
-  const uniformPts: [number, number][] = [];
-  for (let i = 0; i <= totalSamples; i++) {
-    const targetDist = (i / totalSamples) * totalLength;
-    let segIdx = 0;
-    while (segIdx < dists.length - 2 && dists[segIdx + 1] < targetDist) {
-      segIdx++;
-    }
-
-    const segStartDist = dists[segIdx];
-    const segEndDist = dists[segIdx + 1];
-    const segLen = segEndDist - segStartDist;
-    const factor = segLen > 0 ? (targetDist - segStartDist) / segLen : 0;
-
-    const p0 = rawPts[segIdx];
-    const p1 = rawPts[segIdx + 1];
-    uniformPts.push([
-      p0[0] + (p1[0] - p0[0]) * factor,
-      p0[1] + (p1[1] - p0[1]) * factor
-    ]);
-  }
-
-  return uniformPts;
-}
-
-/**
- * Geometric S path generation with 3 cubic curves:
- * Top lobe -> diagonal crossover -> bottom lobe
- */
-function generateSPath(
-  sx: number, sy: number,
-  w: number, h: number,
-  samplesPerSeg = 220
-): [number, number][] {
-  // 1. Top curve: start at top-right terminal, curve up & left, down left flank
-  const seg1 = sampleBezierSegment(
-    samplesPerSeg,
-    sx + w * 0.82, sy + h * 0.18,  // Start top-right
-    sx + w * 0.55, sy + h * 0.04,  // Control 1: pull up-right
-    sx + w * 0.12, sy + h * 0.08,  // Control 2: pull up-left
-    sx + w * 0.14, sy + h * 0.34   // End left crest
-  );
-
-  // 2. Middle crossover: from left crest, diagonal through center waist to right flank
-  const seg2 = sampleBezierSegment(
-    samplesPerSeg,
-    sx + w * 0.14, sy + h * 0.34,
-    sx + w * 0.16, sy + h * 0.50,  // Control 1: smooth waist entry
-    sx + w * 0.84, sy + h * 0.50,  // Control 2: smooth waist exit
-    sx + w * 0.86, sy + h * 0.66   // End right crest
-  );
-
-  // 3. Bottom curve: from right crest, down & left across bottom belly to bottom-left terminal
-  const seg3 = sampleBezierSegment(
-    samplesPerSeg,
-    sx + w * 0.86, sy + h * 0.66,
-    sx + w * 0.88, sy + h * 0.92,  // Control 1: pull down-right
-    sx + w * 0.45, sy + h * 0.96,  // Control 2: pull down-left
-    sx + w * 0.18, sy + h * 0.82   // End bottom-left terminal
-  );
-
-  const combined = [...seg1, ...seg2.slice(1), ...seg3.slice(1)];
-  return reparameterizeArcLength(combined, 650);
-}
-
-/**
- * Sample square perimeter clockwise starting from top-left:
- * Top-left -> Top-right -> Bottom-right -> Bottom-left -> Top-left
- */
-function generateSquarePath(
-  x: number, y: number,
-  size: number,
-  totalSamples = 600
-): [number, number][] {
-  const pts: [number, number][] = [];
-  const perimeter = size * 4;
-
-  for (let i = 0; i <= totalSamples; i++) {
-    const d = (i / totalSamples) * perimeter;
-    let px: number, py: number;
-
-    if (d <= size) {
-      px = x + d;
-      py = y;
-    } else if (d <= size * 2) {
-      px = x + size;
-      py = y + (d - size);
-    } else if (d <= size * 3) {
-      px = x + size - (d - size * 2);
-      py = y + size;
-    } else {
-      px = x;
-      py = y + size - (d - size * 3);
-    }
-
-    pts.push([px, py]);
-  }
-
-  return pts;
-}
-
-function clamp01(elapsed: number, start: number, end: number): number {
-  return Math.max(0, Math.min(1, (elapsed - start) / (end - start)));
-}
-
-function penEase(t: number): number {
-  return t < 0.5
-    ? 2 * t * t
-    : 1 - Math.pow(-2 * t + 2, 2) / 2;
-}
-
-const easeInOutCubic = (t: number) =>
-  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-const easeOutQuad = (t: number) => 1 - (1 - t) * (1 - t);
-
-/** Progressive point-by-point path rendering with sub-pixel interpolation */
-function drawProgressivePath(
-  ctx: CanvasRenderingContext2D,
-  pts: [number, number][],
-  progress: number
-): [number, number] | null {
-  if (pts.length < 2 || progress <= 0) return null;
-
-  const totalSegments = pts.length - 1;
-  const rawIdx = progress * totalSegments;
-  const fullIndex = Math.min(totalSegments, Math.floor(rawIdx));
-  const remainder = rawIdx - fullIndex;
-
-  ctx.beginPath();
-  ctx.moveTo(pts[0][0], pts[0][1]);
-
-  for (let i = 1; i <= fullIndex; i++) {
-    ctx.lineTo(pts[i][0], pts[i][1]);
-  }
-
-  let headX = pts[fullIndex][0];
-  let headY = pts[fullIndex][1];
-
-  if (fullIndex < totalSegments && remainder > 0) {
-    headX += (pts[fullIndex + 1][0] - pts[fullIndex][0]) * remainder;
-    headY += (pts[fullIndex + 1][1] - pts[fullIndex][1]) * remainder;
-    ctx.lineTo(headX, headY);
-  }
-
-  ctx.stroke();
-  return [headX, headY];
-}
-
-/** Draw a subtle, refined pen-tip dot at the stroke head */
-function drawPenTip(
-  ctx: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  radius = 3.0,
-  color = '#2563EB'
-): void {
-  ctx.save();
-  ctx.fillStyle = color;
-  ctx.shadowColor = 'rgba(37, 99, 235, 0.30)';
-  ctx.shadowBlur = 5;
-  ctx.beginPath();
-  ctx.arc(x, y, radius, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
-// SplashScreen Component
+// Sequence Timeline:
+// 0.0s – 0.5s: Background videos softly blurred with ivory overlay; center empty.
+// 0.5s – 2.2s: GOLDEN BOX boundary is progressively sketched with real SVG stroke
+//              (monoline draw from top-center -> corners -> sides -> closes).
+//              A glowing golden stylus tip tracks the leading edge.
+// 1.0s – 2.8s: S is progressively sketched with real SVG stroke (Forest Green + Gold).
+//              A glowing golden stylus tip tracks the leading edge.
+// 2.8s – 3.2s: S + golden box complete; gentle settling pause & subtle breath.
+// 3.0s – 4.2s: Original SmartServe wordmark reveals smoothly ("Smart" + "Serve").
+// 4.0s – 4.8s: "HOME SERVICES" subtitle appears between delicate golden rules.
+// 4.5s – 7.4s: Loading / progress bar fills gradually from 0% to 100%.
+// 7.4s – 8.0s: Smooth fade-out and seamless transition to existing Admin Login.
+// Total Duration: ~8.0 seconds (Maximum: 10 seconds).
 // ═══════════════════════════════════════════════════════════════════════════
 
 interface SplashScreenProps {
@@ -216,268 +23,227 @@ interface SplashScreenProps {
   durationMs?: number;
 }
 
+const VIDEOS = [
+  '/videos/cleaning.mp4',
+  '/videos/repair.mp4',
+  '/videos/home-service.mp4',
+];
+
+const easeInOutCubic = (t: number) =>
+  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+function clamp01(val: number): number {
+  return Math.max(0, Math.min(1, val));
+}
+
+// Exact rounded rectangle path (width=84, height=84, rx=18, center at 48,48)
+// Starts at top-center (48, 6) -> draws clockwise and closes back at (48, 6)
+const BOX_PATH_D =
+  'M 48 6 L 72 6 A 18 18 0 0 1 90 24 L 90 72 A 18 18 0 0 1 72 90 L 24 90 A 18 18 0 0 1 6 72 L 6 24 A 18 18 0 0 1 24 6 L 48 6 Z';
+
+// Authentic SmartServe S curve
+const S_PATH_D =
+  'M 62 30 C 62 23, 34 22, 34 38 C 34 54, 62 48, 62 64 C 62 80, 34 78, 34 70';
+
 export const SplashScreen: React.FC<SplashScreenProps> = ({
   onFinish,
-  durationMs = 5400,
+  durationMs = 8000,
 }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  // Video carousel state
+  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  // SVG Path References & Lengths
+  const boxPathRef = useRef<SVGPathElement>(null);
+  const sPathRef = useRef<SVGPathElement>(null);
+  const [boxPathLength, setBoxPathLength] = useState<number>(305);
+  const [sPathLength, setSPathLength] = useState<number>(186);
+
+  // Animation Timeline States
+  const [boxProgress, setBoxProgress] = useState<number>(0);
+  const [boxPenPos, setBoxPenPos] = useState<{ x: number; y: number } | null>(null);
+  const [boxPenOpacity, setBoxPenOpacity] = useState<number>(0);
+
+  const [sProgress, setSProgress] = useState<number>(0);
+  const [sPenPos, setSPenPos] = useState<{ x: number; y: number } | null>(null);
+  const [sPenOpacity, setPenOpacity] = useState<number>(0);
+
+  const [sScale, setSScale] = useState<number>(1);
+  const [wordmarkProgress, setWordmarkProgress] = useState<number>(0);
+  const [tagProgress, setTagProgress] = useState<number>(0);
+  const [barProgress, setBarProgress] = useState<number>(0);
+  const [splashOpacity, setSplashOpacity] = useState<number>(1);
+
   const rafRef = useRef<number>(0);
   const startRef = useRef<number>(0);
   const doneRef = useRef(false);
 
+  // Initialize precise SVG path lengths once mounted
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas || doneRef.current) return;
+    if (boxPathRef.current) {
+      try {
+        const len = boxPathRef.current.getTotalLength();
+        if (len > 0) setBoxPathLength(len);
+      } catch {
+        setBoxPathLength(305);
+      }
+    }
+    if (sPathRef.current) {
+      try {
+        const len = sPathRef.current.getTotalLength();
+        if (len > 0) setSPathLength(len);
+      } catch {
+        setSPathLength(186);
+      }
+    }
+  }, []);
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const VW = window.innerWidth;
-    const VH = window.innerHeight;
+  // Continuous background video carousel crossfade (rotates every ~2.6s across 8s)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveVideoIndex((prev) => (prev + 1) % VIDEOS.length);
+    }, 2600);
+    return () => clearInterval(interval);
+  }, []);
 
-    canvas.width = Math.round(VW * dpr);
-    canvas.height = Math.round(VH * dpr);
-    canvas.style.width = `${VW}px`;
-    canvas.style.height = `${VH}px`;
+  // Safely trigger video play
+  useEffect(() => {
+    const currVideo = videoRefs.current[activeVideoIndex];
+    if (currVideo) {
+      currVideo.play().catch(() => {});
+    }
+  }, [activeVideoIndex]);
 
-    const ctx = canvas.getContext('2d')!;
-    ctx.scale(dpr, dpr);
+  // Main 8-Second Animation Timeline
+  useEffect(() => {
+    // Exact timeline boundaries (in seconds):
+    const T_BOX_START = 0.50;      // 0.5s: Golden box sketching begins
+    const T_BOX_END = 2.20;        // 2.2s: Golden box drawing completes (1.7s draw)
+    const T_S_START = 1.00;        // 1.0s: S drawing begins
+    const T_S_END = 2.80;          // 2.8s: S drawing completes (1.8s draw)
+    const T_SETTLE_START = 2.80;   // 2.8s: S + Golden box subtle settling breath
+    const T_SETTLE_END = 3.20;     // 3.2s: Settling ends
+    const T_W_START = 3.00;        // 3.0s: SmartServe wordmark starts reveal
+    const T_W_END = 4.20;          // 4.2s: SmartServe wordmark fully visible
+    const T_TAG_START = 4.00;      // 4.0s: "HOME SERVICES" subtitle begins reveal
+    const T_TAG_END = 4.80;        // 4.8s: "HOME SERVICES" fully visible
+    const T_BAR_START = 4.50;      // 4.5s: Loading bar begins filling
+    const T_BAR_END = 7.40;        // 7.4s: Loading bar reaches 100%
+    const T_FADE_START = 7.40;     // 7.4s: Splash screen fade-out begins
+    const TOTAL_SECONDS = durationMs / 1000; // 8.0s total
 
-    // ── Exact Timeline Boundaries (seconds) ─────────────────────────────
-    const T_S_START = 0.30;       // Pen begins S stroke
-    const T_S_END = 1.80;         // S stroke complete (1.5s genuine drawing)
-    const T_SQ_START = 2.00;      // Pause ends, square outline begins
-    const T_SQ_END = 2.75;        // Square outline complete (0.75s drawing)
-    const T_W_START = 2.95;       // Pause ends, wordmark begins
-    const T_W_END = 4.00;         // Wordmark complete (1.05s reveal)
-    const T_TAG_START = 4.00;     // Tagline & subtle architectural detail
-    const T_TAG_END = 4.30;
-    const T_HOLD_END = 4.50;      // Complete logo holds
-    const T_TRANSITION_START = 4.50; // Smooth logo handoff + background crossfade
-    const TOTAL_TIME = durationMs / 1000;
-
-    // ── Responsive Layout & Typography ──────────────────────────────────
-    const FONT_SIZE = Math.max(32, Math.min(78, VW * 0.040));
-    ctx.font = `800 ${FONT_SIZE}px 'Inter', system-ui, -apple-system, sans-serif`;
-    const smartW = ctx.measureText('Smart').width;
-    const wordW = ctx.measureText('SmartServe').width;
-
-    const BOX_SZ = Math.round(FONT_SIZE * 1.50);
-    const GAP = Math.max(14, Math.round(FONT_SIZE * 0.36));
-    const LOGO_W = BOX_SZ + GAP + wordW;
-
-    const logoLeft = Math.round(VW / 2 - LOGO_W / 2);
-    const logoTop = Math.round(VH / 2 - BOX_SZ / 2 - Math.max(26, Math.round(VH * 0.058)));
-
-    const wordX = logoLeft + BOX_SZ + GAP;
-    const wordBase = logoTop + Math.round(BOX_SZ * 0.74);
-
-    // S Bounds inside the square box
-    const S_PAD = Math.round(BOX_SZ * 0.18);
-    const SW = BOX_SZ - S_PAD * 2;
-    const SH = BOX_SZ - S_PAD * 2;
-    const SX = logoLeft + S_PAD;
-    const SY = logoTop + S_PAD;
-
-    // Stroke widths
-    const sStrokeWidth = Math.max(3.2, FONT_SIZE * 0.075);
-    const sqStrokeWidth = Math.max(1.5, FONT_SIZE * 0.024);
-
-    // Continuous point-by-point paths
-    const sPath = generateSPath(SX, SY, SW, SH);
-    const sqPath = generateSquarePath(logoLeft, logoTop, BOX_SZ);
-
-    // Lower section positions
-    const tagY = logoTop + BOX_SZ + Math.max(42, Math.round(FONT_SIZE * 0.96));
-    const lineY = tagY + Math.max(22, Math.round(FONT_SIZE * 0.40));
-    const lineWidth = Math.min(260, Math.max(120, LOGO_W * 0.48));
-
-    // ── Login Target Position (for smooth logo handoff) ─────────────────
-    // Target matches the login card's top S-badge location (48x48 centered horizontally)
-    const targetLoginY = Math.round(VH / 2 - 208);
-    const targetScale = Math.min(1.0, 48 / BOX_SZ);
-    const startCenterX = logoLeft + BOX_SZ / 2;
-    const startCenterY = logoTop + BOX_SZ / 2;
-    const targetCenterX = Math.round(VW / 2);
-    const targetCenterY = targetLoginY + 24;
-
-    let eventDispatched = false;
-
-    // ─────────────────────────────────────────────────────────────────────
-    // Render Loop (60/120 fps Frame-by-Frame)
-    // ─────────────────────────────────────────────────────────────────────
-    function render(ts: number): void {
+    function render(ts: number) {
       if (doneRef.current) return;
       if (!startRef.current) startRef.current = ts;
 
       const elapsed = (ts - startRef.current) / 1000;
 
-      // ── Transition Progress & Timing ──────────────────────────────────
-      let bgFade = 0;
-      let canvasAlpha = 1.0;
-      let transEase = 0;
-      let wordmarkAlpha = 1.0;
-      let tagAlphaVal = 1.0;
+      // 1. Sketched Golden Box Boundary (0.5s – 2.2s)
+      if (elapsed < T_BOX_START) {
+        setBoxProgress(0);
+        setBoxPenOpacity(0);
+      } else if (elapsed <= T_BOX_END) {
+        const rawT = clamp01((elapsed - T_BOX_START) / (T_BOX_END - T_BOX_START));
+        const easedT = easeInOutCubic(rawT);
+        setBoxProgress(easedT);
 
-      if (elapsed >= T_TRANSITION_START) {
-        const transProg = clamp01(elapsed, T_TRANSITION_START, TOTAL_TIME);
-        transEase = easeInOutCubic(transProg);
-        bgFade = easeOutQuad(transProg);
-
-        // Wordmark and tagline fade out during the initial transition phase
-        tagAlphaVal = Math.max(0, 1.0 - clamp01(elapsed, 4.50, 4.75));
-        wordmarkAlpha = Math.max(0, 1.0 - clamp01(elapsed, 4.50, 4.90));
-
-        // Dispatch transition start event to trigger login card reveal beneath
-        if (elapsed >= 4.65 && !eventDispatched) {
-          eventDispatched = true;
-          window.dispatchEvent(new CustomEvent('smartserve:splash-transition-start'));
+        // Golden pen tip tracking the leading edge of the golden box
+        if (boxPathRef.current) {
+          try {
+            const currentDist = easedT * boxPathLength;
+            const pt = boxPathRef.current.getPointAtLength(currentDist);
+            setBoxPenPos({ x: pt.x, y: pt.y });
+            setBoxPenOpacity(1);
+          } catch {}
         }
-
-        // Smooth canvas crossfade out in final 450ms
-        if (elapsed >= 4.95) {
-          canvasAlpha = Math.max(0, 1.0 - clamp01(elapsed, 4.95, TOTAL_TIME));
-        }
-      }
-
-      // ── Background Color: Crossfade #FAFAF8 -> #F8FAFC ────────────────
-      ctx.save();
-      ctx.globalAlpha = canvasAlpha;
-
-      if (bgFade <= 0) {
-        ctx.fillStyle = '#FAFAF8';
       } else {
-        const r = Math.round(250 + (248 - 250) * bgFade);
-        const g = Math.round(250 + (250 - 250) * bgFade);
-        const b = Math.round(248 + (252 - 248) * bgFade);
-        ctx.fillStyle = `rgb(${r},${g},${b})`;
-      }
-      ctx.fillRect(0, 0, VW, VH);
-
-      // Subtle editorial warmth gradient during opening
-      if (elapsed < 3.0) {
-        const wAlpha = Math.max(0, 0.028 * Math.min(1, elapsed / 0.8));
-        const rg = ctx.createRadialGradient(VW * 0.5, VH * 0.46, 0, VW * 0.5, VH * 0.46, VW * 0.4);
-        rg.addColorStop(0, `rgba(244, 238, 226, ${wAlpha})`);
-        rg.addColorStop(1, 'rgba(250,250,248,0)');
-        ctx.fillStyle = rg;
-        ctx.fillRect(0, 0, VW, VH);
+        setBoxProgress(1);
+        // Fade out box pen tip gently
+        const fadeT = clamp01((elapsed - T_BOX_END) / 0.35);
+        setBoxPenOpacity(Math.max(0, 1 - fadeT));
       }
 
-      // ── Current S-Box Position & Scale for Logo Handoff ───────────────
-      const currCenterX = startCenterX + (targetCenterX - startCenterX) * transEase;
-      const currCenterY = startCenterY + (targetCenterY - startCenterY) * transEase;
-      const currScale = 1.0 + (targetScale - 1.0) * transEase;
+      // 2. Sketched "S" Path Drawing (1.0s – 2.8s)
+      if (elapsed < T_S_START) {
+        setSProgress(0);
+        setPenOpacity(0);
+      } else if (elapsed <= T_S_END) {
+        const rawT = clamp01((elapsed - T_S_START) / (T_S_END - T_S_START));
+        const easedT = easeInOutCubic(rawT);
+        setSProgress(easedT);
 
-      // ══════════════════════════════════════════════════════════════════
-      // S-BOX (S Stroke + Square Outline) with Smooth Handoff Transform
-      // ══════════════════════════════════════════════════════════════════
-      ctx.save();
-      ctx.translate(currCenterX, currCenterY);
-      ctx.scale(currScale, currScale);
-      ctx.translate(-startCenterX, -startCenterY);
-
-      // STEP 1 — S HAND-DRAWING (0.30s – 1.80s)
-      if (elapsed >= T_S_START) {
-        const rawProgress = clamp01(elapsed, T_S_START, T_S_END);
-        const sProg = elapsed >= T_S_END ? 1.0 : penEase(rawProgress);
-
-        ctx.save();
-        ctx.strokeStyle = '#0F172A';
-        ctx.lineWidth = sStrokeWidth;
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
-
-        const headPos = drawProgressivePath(ctx, sPath, sProg);
-
-        if (sProg < 0.999 && headPos) {
-          drawPenTip(ctx, headPos[0], headPos[1], Math.max(2.4, sStrokeWidth * 0.60), '#2563EB');
+        // Golden stylus tip tracking leading edge of S stroke
+        if (sPathRef.current) {
+          try {
+            const currentDist = easedT * sPathLength;
+            const pt = sPathRef.current.getPointAtLength(currentDist);
+            setSPenPos({ x: pt.x, y: pt.y });
+            setPenOpacity(1);
+          } catch {}
         }
-        ctx.restore();
+      } else {
+        setSProgress(1);
+        // Fade out S pen tip gently
+        const fadeT = clamp01((elapsed - T_S_END) / 0.35);
+        setPenOpacity(Math.max(0, 1 - fadeT));
       }
 
-      // STEP 2 — SQUARE HAND-DRAWING (2.00s – 2.75s)
-      if (elapsed >= T_SQ_START) {
-        const rawProgress = clamp01(elapsed, T_SQ_START, T_SQ_END);
-        const sqProg = elapsed >= T_SQ_END ? 1.0 : penEase(rawProgress);
-
-        ctx.save();
-        ctx.strokeStyle = '#0F172A';
-        ctx.lineWidth = sqStrokeWidth;
-        ctx.lineCap = 'butt';
-        ctx.lineJoin = 'miter';
-
-        const headPos = drawProgressivePath(ctx, sqPath, sqProg);
-
-        if (sqProg < 0.999 && headPos) {
-          drawPenTip(ctx, headPos[0], headPos[1], Math.max(2.0, sqStrokeWidth * 1.2), '#2563EB');
-        }
-        ctx.restore();
+      // 3. S + Golden Box Settling Pulse (2.8s – 3.2s)
+      if (elapsed >= T_SETTLE_START && elapsed <= T_SETTLE_END) {
+        const p = (elapsed - T_SETTLE_START) / (T_SETTLE_END - T_SETTLE_START);
+        const pulse = 1 + Math.sin(p * Math.PI) * 0.025;
+        setSScale(pulse);
+      } else {
+        setSScale(1);
       }
 
-      ctx.restore(); // Restore S-Box transform
-
-      // ══════════════════════════════════════════════════════════════════
-      // STEP 3 — SMARTSERVE WORDMARK REVEAL (2.95s – 4.00s)
-      // ══════════════════════════════════════════════════════════════════
-      if (elapsed >= T_W_START && wordmarkAlpha > 0.001) {
-        const rawProgress = clamp01(elapsed, T_W_START, T_W_END);
-        const wProg = elapsed >= T_W_END ? 1.0 : penEase(rawProgress);
-
-        ctx.save();
-        ctx.globalAlpha = wordmarkAlpha;
-        ctx.beginPath();
-        ctx.rect(
-          wordX - 4,
-          wordBase - FONT_SIZE * 1.15,
-          wordW * wProg + 8,
-          FONT_SIZE * 1.35
-        );
-        ctx.clip();
-
-        ctx.font = `800 ${FONT_SIZE}px 'Inter', system-ui, -apple-system, sans-serif`;
-        ctx.fillStyle = '#0F172A';
-        ctx.fillText('Smart', wordX, wordBase);
-
-        ctx.fillStyle = '#2563EB';
-        ctx.fillText('Serve', wordX + smartW, wordBase);
-        ctx.restore();
+      // 4. SmartServe Wordmark Reveal (3.0s – 4.2s)
+      if (elapsed < T_W_START) {
+        setWordmarkProgress(0);
+      } else if (elapsed <= T_W_END) {
+        const rawT = clamp01((elapsed - T_W_START) / (T_W_END - T_W_START));
+        setWordmarkProgress(easeOutCubic(rawT));
+      } else {
+        setWordmarkProgress(1);
       }
 
-      // ══════════════════════════════════════════════════════════════════
-      // STEP 4 — MINIMAL EDITORIAL LOWER SECTION (4.00s – 4.30s)
-      // ══════════════════════════════════════════════════════════════════
-      if (elapsed >= T_TAG_START && tagAlphaVal > 0.001) {
-        const tagProg = clamp01(elapsed, T_TAG_START, T_TAG_END);
-        const tagAlpha = easeInOutCubic(tagProg) * tagAlphaVal;
-        const yOffset = (1 - tagAlpha) * 5;
-
-        // Clean, elegant tagline
-        ctx.save();
-        ctx.globalAlpha = tagAlpha;
-        ctx.font = `400 ${Math.max(13, Math.min(16, FONT_SIZE * 0.23))}px 'Inter', system-ui, sans-serif`;
-        ctx.fillStyle = '#64748B';
-        ctx.textAlign = 'center';
-        ctx.fillText('Professional services, made simple.', VW / 2, tagY + yOffset);
-
-        // Thin architectural brand baseline
-        ctx.strokeStyle = '#E2E8F0';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(VW / 2 - lineWidth / 2, lineY);
-        ctx.lineTo(VW / 2 + lineWidth / 2, lineY);
-        ctx.stroke();
-
-        // Subtle center accent node on the baseline
-        ctx.fillStyle = '#94A3B8';
-        ctx.beginPath();
-        ctx.arc(VW / 2, lineY, 1.8, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.restore();
+      // 5. "HOME SERVICES" Subtitle Reveal (4.0s – 4.8s)
+      if (elapsed < T_TAG_START) {
+        setTagProgress(0);
+      } else if (elapsed <= T_TAG_END) {
+        const rawT = clamp01((elapsed - T_TAG_START) / (T_TAG_END - T_TAG_START));
+        setTagProgress(easeOutCubic(rawT));
+      } else {
+        setTagProgress(1);
       }
 
-      ctx.restore(); // Restore canvas alpha
+      // 6. Pill Loading / Progress Bar (4.5s – 7.4s)
+      if (elapsed < T_BAR_START) {
+        setBarProgress(0);
+      } else if (elapsed <= T_BAR_END) {
+        const rawT = clamp01((elapsed - T_BAR_START) / (T_BAR_END - T_BAR_START));
+        setBarProgress(easeOutCubic(rawT));
+      } else {
+        setBarProgress(1);
+      }
 
-      if (elapsed < TOTAL_TIME) {
+      // 7. Smooth Fade-Out (7.4s – 8.0s)
+      if (elapsed >= T_FADE_START) {
+        const fadeProg = clamp01((elapsed - T_FADE_START) / (TOTAL_SECONDS - T_FADE_START));
+        setSplashOpacity(Math.max(0, 1 - fadeProg));
+      }
+
+      // Expose progress for verification
+      try {
+        (window as any).__splashElapsed = elapsed;
+        (window as any).__splashBoxProgress = boxProgress;
+        (window as any).__splashSProgress = sProgress;
+      } catch {}
+
+      // Continue or trigger complete
+      if (elapsed < TOTAL_SECONDS) {
         rafRef.current = requestAnimationFrame(render);
       } else {
         doneRef.current = true;
@@ -485,40 +251,218 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
       }
     }
 
-    // Start render once fonts are loaded
-    document.fonts.ready.then(() => {
-      rafRef.current = requestAnimationFrame(render);
-    });
+    rafRef.current = requestAnimationFrame(render);
 
-    // Failsafe: ensure onFinish is called even if backgrounded
+    // Failsafe timer (guarantees transition around 8s)
     const failsafeTimer = setTimeout(() => {
       if (!doneRef.current) {
         doneRef.current = true;
         onFinish?.();
       }
-    }, durationMs + 800);
+    }, durationMs + 500);
 
     return () => {
       cancelAnimationFrame(rafRef.current);
       clearTimeout(failsafeTimer);
     };
-  }, [durationMs, onFinish]);
+  }, [durationMs, onFinish, boxPathLength, sPathLength]);
+
+  // Stroke Dash Calculations for real SVG stroke-drawing
+  const boxDashoffset = boxPathLength * (1 - boxProgress);
+  const sDashoffset = sPathLength * (1 - sProgress);
 
   return (
-    <canvas
-      ref={canvasRef}
-      aria-hidden="true"
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        zIndex: 9999,
-        display: 'block',
-        pointerEvents: 'none',
-      }}
-    />
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden select-none transition-opacity duration-300"
+      style={{ opacity: splashOpacity }}
+      aria-label="SmartServe Admin Splash Screen"
+    >
+      {/* Skip Intro Button */}
+      <button
+        onClick={() => {
+          doneRef.current = true;
+          onFinish?.();
+        }}
+        className="absolute top-6 right-6 z-50 px-4 py-2 rounded-full bg-black/50 hover:bg-black/80 text-white/90 hover:text-white text-xs font-bold backdrop-blur-md border border-white/20 transition-all cursor-pointer shadow-lg"
+        aria-label="Skip Intro"
+      >
+        Skip Intro ✕
+      </button>
+
+      {/* ── 1. Full-Screen Background Video Carousel ── */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none bg-[#1F2A1E]">
+        {VIDEOS.map((videoSrc, idx) => (
+          <video
+            key={videoSrc}
+            ref={(el) => {
+              videoRefs.current[idx] = el;
+            }}
+            src={videoSrc}
+            muted
+            playsInline
+            loop
+            preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              activeVideoIndex === idx ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              filter: 'blur(10px) brightness(0.92)',
+              transform: 'scale(1.08)',
+            }}
+          />
+        ))}
+
+        {/* Soft Ivory / Japandi Translucent Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundColor: 'rgba(250, 247, 240, 0.48)',
+            backgroundImage:
+              'radial-gradient(ellipse at center, rgba(250, 247, 240, 0.38) 0%, rgba(250, 247, 240, 0.65) 100%)',
+          }}
+        />
+      </div>
+
+      {/* ── 2. Central Identity Lockup ── */}
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 max-w-lg w-full text-center">
+        
+        {/* ── S & Sketched Golden Box Boundary Container ── */}
+        <div
+          className="relative w-36 h-36 md:w-44 md:h-44 flex items-center justify-center mb-6 transition-transform duration-200 ease-out"
+          style={{ transform: `scale(${sScale})` }}
+        >
+          {/* Subtle Ambient Gold Glow behind S */}
+          <div
+            className="absolute inset-0 rounded-3xl bg-[#C9A15A]/15 blur-2xl transition-opacity duration-700 pointer-events-none"
+            style={{ opacity: sProgress > 0.1 || boxProgress > 0.1 ? 0.8 : 0 }}
+          />
+
+          <svg
+            className="relative z-10 w-full h-full"
+            viewBox="0 0 96 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Defs: Forest Green and Warm Gold Gradient */}
+            <defs>
+              <linearGradient id="sStrokeGradient" x1="62" y1="23" x2="34" y2="80" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#C9A15A" />
+                <stop offset="18%" stopColor="#2F5233" />
+                <stop offset="82%" stopColor="#2F5233" />
+                <stop offset="100%" stopColor="#C9A15A" />
+              </linearGradient>
+            </defs>
+
+            {/* ── 1. SKETCHED GOLDEN BOX BOUNDARY (Real SVG Path Stroke-Draw) ── */}
+            <path
+              ref={boxPathRef}
+              d={BOX_PATH_D}
+              stroke="#C9A15A"
+              strokeWidth={1.85}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              style={{
+                strokeDasharray: `${boxPathLength} ${boxPathLength}`,
+                strokeDashoffset: boxDashoffset,
+                strokeOpacity: boxProgress > 0 ? 0.95 : 0,
+                filter: boxProgress > 0.05 ? 'drop-shadow(0 2px 8px rgba(201,161,90,0.22))' : 'none',
+                transition: 'none',
+              }}
+            />
+
+            {/* Glowing Golden Nib tracking the leading edge of the Golden Box */}
+            {boxPenOpacity > 0 && boxPenPos && (
+              <g style={{ opacity: boxPenOpacity }}>
+                <circle cx={boxPenPos.x} cy={boxPenPos.y} r={7.5} fill="#C9A15A" fillOpacity={0.4} />
+                <circle cx={boxPenPos.x} cy={boxPenPos.y} r={3.5} fill="#C9A15A" />
+                <circle cx={boxPenPos.x} cy={boxPenPos.y} r={1.5} fill="#FFFFFF" />
+              </g>
+            )}
+
+            {/* ── 2. SKETCHED "S" PATH (Real SVG Stroke-Draw) ── */}
+            <path
+              ref={sPathRef}
+              d={S_PATH_D}
+              stroke="url(#sStrokeGradient)"
+              strokeWidth={6.8}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              style={{
+                strokeDasharray: `${sPathLength} ${sPathLength}`,
+                strokeDashoffset: sDashoffset,
+                strokeOpacity: sProgress > 0 ? 1 : 0,
+                transition: 'none',
+              }}
+            />
+
+            {/* Glowing Golden Nib tracking leading edge of S */}
+            {sPenOpacity > 0 && sPenPos && (
+              <g style={{ opacity: sPenOpacity }}>
+                <circle cx={sPenPos.x} cy={sPenPos.y} r={9} fill="#C9A15A" fillOpacity={0.4} />
+                <circle cx={sPenPos.x} cy={sPenPos.y} r={4.2} fill="#C9A15A" />
+                <circle cx={sPenPos.x} cy={sPenPos.y} r={1.8} fill="#FFFFFF" />
+              </g>
+            )}
+          </svg>
+        </div>
+
+        {/* ── 3. Brand Typography Reveal (Appears at 3.0s – 4.2s) ── */}
+        <div
+          className="transition-all duration-500 ease-out"
+          style={{
+            opacity: wordmarkProgress,
+            transform: `translateY(${(1 - wordmarkProgress) * 14}px)`,
+          }}
+        >
+          {/* Authentic Wordmark: "Smart" (Forest Green) + "Serve" (Warm Gold) */}
+          <h1 className="font-serif-display text-5xl md:text-6xl tracking-tight leading-none text-[#2F5233] drop-shadow-[0_2px_8px_rgba(250,247,240,0.8)]">
+            <span>Smart</span>
+            <span className="text-[#C9A15A] ml-1">Serve</span>
+          </h1>
+
+          {/* Subtitle (Appears at 4.0s – 4.8s): "HOME SERVICES" */}
+          <div
+            className="mt-3 flex items-center justify-center gap-3 transition-all duration-500 ease-out"
+            style={{
+              opacity: tagProgress,
+              transform: `translateY(${(1 - tagProgress) * 8}px)`,
+            }}
+          >
+            <span className="h-[1px] w-8 bg-[#C9A15A]/60" />
+            <p className="font-jakarta text-xs md:text-sm font-bold tracking-[0.35em] text-[#1F2A1E] uppercase drop-shadow-xs">
+              HOME SERVICES
+            </p>
+            <span className="h-[1px] w-8 bg-[#C9A15A]/60" />
+          </div>
+        </div>
+
+        {/* ── 4. Minimalist Pill Loading / Progress Bar (Progresses 4.5s – 7.4s) ── */}
+        <div
+          className="mt-8 flex flex-col items-center transition-opacity duration-400"
+          style={{ opacity: tagProgress > 0.3 ? 1 : 0 }}
+        >
+          {/* Pill Track */}
+          <div className="w-52 md:w-60 h-1.5 rounded-full bg-[#E5DEC9] overflow-hidden shadow-inner p-[1px]">
+            {/* Fill Bar */}
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-[#2F5233] via-[#3D6B42] to-[#C9A15A] transition-[width] duration-75 ease-linear"
+              style={{ width: `${Math.round(barProgress * 100)}%` }}
+            />
+          </div>
+
+          {/* Status Micro-label */}
+          <span className="font-jakarta mt-2.5 text-[10px] md:text-[11px] font-semibold tracking-widest text-[#1F2A1E]/80 uppercase">
+            {barProgress < 0.35
+              ? 'Initializing'
+              : barProgress < 0.85
+              ? 'Curating Sanctuary'
+              : 'Welcome'}
+          </span>
+        </div>
+      </div>
+    </div>
   );
 };
 

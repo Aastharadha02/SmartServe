@@ -31,7 +31,7 @@ import {
   Lock,
   History
 } from 'lucide-react';
-import { getCatalogServices, updateCatalogService, generateAiMetadata, formatRupee, getServiceAuditLogs } from '../../../api/catalog';
+import { getCatalogServices, getCatalogServiceById, updateCatalogService, generateAiMetadata, formatRupee, getServiceAuditLogs } from '../../../api/catalog';
 import type { ServiceItem, AiMetadataResponse, AuditLogItem } from '../../../api/catalog';
 import { getServiceIcon } from '../../../utils/catalogIcons';
 import { getAuthenticatedAdmin } from '../../../api/admins';
@@ -110,14 +110,21 @@ export const ServiceDetailEditView: React.FC = () => {
   const [aiGeneratedData, setAiGeneratedData] = useState<AiMetadataResponse | null>(null);
 
   const fetchServiceData = async () => {
+    if (!serviceId) return;
     setLoading(true);
     setError(null);
     try {
-      const services = await getCatalogServices();
-      const match = services.find((s) => s.id === serviceId);
-      if (!match) {
-        setError('Service item not found in catalog.');
-        return;
+      let match: ServiceItem;
+      try {
+        match = await getCatalogServiceById(serviceId);
+      } catch (e) {
+        const services = await getCatalogServices();
+        const found = services.find((s) => s.id === serviceId);
+        if (!found) {
+          setError('Service item not found in catalog.');
+          return;
+        }
+        match = found;
       }
       setService(match);
       setName(match.name);
@@ -130,151 +137,209 @@ export const ServiceDetailEditView: React.FC = () => {
 
       // Check if match has persisted metadata in suggested_addons
       const addons = Array.isArray(match.suggested_addons) ? match.suggested_addons : [];
-      const hasPersistedData = addons.length > 0 && addons.some((a: any) => a && (a.type || a.price));
 
-      if (hasPersistedData) {
-        // 1. Description
-        const descObj = addons.find((a: any) => a.type === 'description' || a.type === 'service_description');
-        if (descObj && (descObj.text || descObj.description || descObj.content)) {
-          setDescription(descObj.text || descObj.description || descObj.content);
-        } else if (match.description) {
-          setDescription(match.description);
-        }
+      // 1. Description
+      const descObj = addons.find((a: any) => a && (a.type === 'description' || a.type === 'service_description'));
+      if (match.description) {
+        setDescription(match.description);
+      } else if (descObj && (descObj.text || descObj.description || descObj.content)) {
+        setDescription(descObj.text || descObj.description || descObj.content);
+      } else {
+        setDescription('');
+      }
 
-        // 2. Duration
-        const durObj = addons.find((a: any) => a.type === 'duration' || a.type === 'estimated_duration');
-        if (durObj && (durObj.minutes || durObj.duration)) {
-          setEstimatedDuration(parseInt(durObj.minutes || durObj.duration) || 45);
-        }
+      // 2. Duration
+      const durObj = addons.find((a: any) => a && (a.type === 'duration' || a.type === 'estimated_duration'));
+      if (match.duration_minutes) {
+        setEstimatedDuration(match.duration_minutes);
+      } else if (durObj && (durObj.minutes || durObj.duration)) {
+        setEstimatedDuration(parseInt(durObj.minutes || durObj.duration) || 45);
+      } else if ((match as any).duration) {
+        setEstimatedDuration((match as any).duration);
+      } else {
+        setEstimatedDuration(45);
+      }
 
-        // 3. Process Steps
-        const procObj = addons.find((a: any) => a.type === 'process_steps');
-        if (procObj && Array.isArray(procObj.steps)) {
-          setProcessSteps(procObj.steps);
-          if (!durObj) {
-            const sumMins = procObj.steps.reduce((acc: number, st: any) => acc + (st.duration_minutes || 0), 0);
-            if (sumMins > 0) setEstimatedDuration(sumMins);
-          }
-        }
-
-        // 4. Inclusions (distinct_features)
-        if (Array.isArray(match.distinct_features) && match.distinct_features.length > 0) {
-          setIncluded(match.distinct_features);
-        }
-
-        // 5. Exclusions
-        const excObj = addons.find((a: any) => a.type === 'excluded_scope');
-        if (excObj && Array.isArray(excObj.items)) {
-          setExcluded(excObj.items);
-        }
-
-        // 6. Tools & Materials
-        const tmObj = addons.find((a: any) => a.type === 'tools_materials');
-        if (tmObj && Array.isArray(tmObj.tools)) {
-          setToolsMaterials(tmObj.tools);
-        }
-
-        // 7. Customer Setup
-        const csObj = addons.find((a: any) => a.type === 'customer_setup');
-        if (csObj && Array.isArray(csObj.requirements)) {
-          setCustomerSetup(csObj.requirements);
-        }
-
-        // 8. Aftercare & Precautions
-        const acObj = addons.find((a: any) => a.type === 'aftercare_precautions');
-        if (acObj && Array.isArray(acObj.aftercare)) {
-          setAftercare(acObj.aftercare);
-        }
-
-        // 9. Expected Results
-        const erObj = addons.find((a: any) => a.type === 'expected_results');
-        if (erObj && Array.isArray(erObj.items)) {
-          setExpectedResults(erObj.items);
-        }
-
-        // 10. Important Notes
-        const inObj = addons.find((a: any) => a.type === 'important_notes');
-        if (inObj && Array.isArray(inObj.items)) {
-          setImportantNotes(inObj.items);
-        }
-
-        // 11. Tips
-        const tipsObj = addons.find((a: any) => a.type === 'tips');
-        if (tipsObj && Array.isArray(tipsObj.items)) {
-          setTips(tipsObj.items);
-        }
-
-        // 12. Dos & Don'ts
-        const ddObj = addons.find((a: any) => a.type === 'dos_donts');
-        if (ddObj) {
-          if (Array.isArray(ddObj.dos)) setDos(ddObj.dos);
-          if (Array.isArray(ddObj.donts)) setDonts(ddObj.donts);
-        }
-
-        // 13. FAQs
-        const faqsObj = addons.find((a: any) => a.type === 'faqs');
-        if (faqsObj && Array.isArray(faqsObj.items)) {
-          setFaqs(faqsObj.items);
-        }
-
-        // 14. Warranty
-        const wObj = addons.find((a: any) => a.type === 'warranty');
-        if (wObj) {
-          setWarranty(wObj.has_warranty ? (wObj.details || 'Warranty coverage details') : null);
-        }
-
-        // 15. SEO & Highlights
-        const seoObj = addons.find((a: any) => a.type === 'seo_metadata');
-        if (seoObj) {
-          if (seoObj.seo_title) setSeoTitle(seoObj.seo_title);
-          if (seoObj.seo_description) setSeoDescription(seoObj.seo_description);
-          if (Array.isArray(seoObj.keywords)) setKeywords(seoObj.keywords);
-          if (Array.isArray(seoObj.highlights)) setHighlights(seoObj.highlights);
-        }
-
-        // 16. Service Features & Media
-        const sfObj = addons.find((a: any) => a.type === 'service_features');
-        if (sfObj && Array.isArray(sfObj.items)) {
-          setServiceFeatures(sfObj.items);
-        }
-        const smObj = addons.find((a: any) => a.type === 'service_media');
-        if (smObj && Array.isArray(smObj.items)) {
-          setServiceMedia(smObj.items);
-        }
-
-        // 17. Addon Items
-        const realAddons = addons.filter((a: any) => !a.type && ('price' in a || 'addon_id' in a));
-        if (realAddons.length > 0) {
-          setAddonsList(realAddons.map((ra: any, idx: number) => ({
-            addon_id: ra.addon_id || `add-${idx}`,
-            name: ra.name || 'Add-on',
-            price: parseFloat(ra.price) || 0,
-            description: ra.description || ''
-          })));
+      // 3. Process Steps
+      const procObj = addons.find((a: any) => a && a.type === 'process_steps');
+      if (Array.isArray(match.process_steps) && match.process_steps.length > 0) {
+        setProcessSteps(match.process_steps);
+      } else if (procObj && (Array.isArray(procObj.steps) || Array.isArray(procObj.items))) {
+        const steps = Array.isArray(procObj.steps) ? procObj.steps : procObj.items;
+        setProcessSteps(steps);
+        if (!durObj && !match.duration_minutes) {
+          const sumMins = steps.reduce((acc: number, st: any) => acc + (st.duration_minutes || 0), 0);
+          if (sumMins > 0) setEstimatedDuration(sumMins);
         }
       } else {
-        // Fallback for unconfigured new services
-        setDescription(match.description || `Professional ${match.name} service execution under ${match.category}.`);
-        setHighlights([`${match.name} delivery`, 'Professional standards', 'Quality verified']);
-        setIncluded(Array.isArray(match.distinct_features) && match.distinct_features.length > 0 ? match.distinct_features : [`Professional ${match.name} execution`]);
-        setExcluded(['Unrelated additional tasks or major structural repairs']);
-        setProcessSteps([
-          { step_number: 1, title: 'Initial Assessment', description: `Assess requirements for ${match.name}.`, duration_minutes: 10, is_key_step: true },
-          { step_number: 2, title: 'Service Execution', description: `Execute ${match.name} per standards.`, duration_minutes: 35, is_key_step: true },
-          { step_number: 3, title: 'Final Review', description: 'Review completed service with customer.', duration_minutes: 10, is_key_step: false }
-        ]);
+        setProcessSteps([]);
+      }
+
+      // 4. Inclusions (distinct_features)
+      if (Array.isArray(match.included) && match.included.length > 0) {
+        setIncluded(match.included);
+      } else if (Array.isArray(match.distinct_features)) {
+        setIncluded(match.distinct_features);
+      } else {
+        setIncluded([]);
+      }
+
+      // 5. Exclusions
+      const excObj = addons.find((a: any) => a && (a.type === 'excluded_scope' || a.type === 'exclusions'));
+      if (Array.isArray(match.excluded) && match.excluded.length > 0) {
+        setExcluded(match.excluded);
+      } else if (excObj && (Array.isArray(excObj.items) || Array.isArray(excObj.exclusions))) {
+        setExcluded(excObj.items || excObj.exclusions);
+      } else {
+        setExcluded([]);
+      }
+
+      // 6. Tools & Materials
+      const tmObj = addons.find((a: any) => a && a.type === 'tools_materials');
+      if (Array.isArray(match.tools_materials) && match.tools_materials.length > 0) {
+        setToolsMaterials(match.tools_materials);
+      } else if (tmObj && (Array.isArray(tmObj.tools) || Array.isArray(tmObj.items) || Array.isArray(tmObj.materials))) {
+        setToolsMaterials(tmObj.tools || tmObj.items || tmObj.materials);
+      } else {
         setToolsMaterials([]);
-        setCustomerSetup(['Ensure clear access to work area']);
-        setAftercare(['Follow care guidelines for best results']);
-        setExpectedResults([`Complete ${match.name} meeting standards`]);
+      }
+
+      // 7. Customer Setup
+      const csObj = addons.find((a: any) => a && a.type === 'customer_setup');
+      if (Array.isArray(match.customer_setup) && match.customer_setup.length > 0) {
+        setCustomerSetup(match.customer_setup);
+      } else if (csObj && (Array.isArray(csObj.requirements) || Array.isArray(csObj.items) || Array.isArray(csObj.setup))) {
+        setCustomerSetup(csObj.requirements || csObj.items || csObj.setup);
+      } else {
+        setCustomerSetup([]);
+      }
+
+      // 8. Aftercare & Precautions
+      const acObj = addons.find((a: any) => a && a.type === 'aftercare_precautions');
+      if (Array.isArray(match.aftercare) && match.aftercare.length > 0) {
+        setAftercare(match.aftercare);
+      } else if (acObj && (Array.isArray(acObj.aftercare) || Array.isArray(acObj.items) || Array.isArray(acObj.precautions))) {
+        setAftercare(acObj.aftercare || acObj.items || acObj.precautions);
+      } else {
+        setAftercare([]);
+      }
+
+      // 9. Expected Results
+      const erObj = addons.find((a: any) => a && a.type === 'expected_results');
+      if (Array.isArray(match.expected_results) && match.expected_results.length > 0) {
+        setExpectedResults(match.expected_results);
+      } else if (erObj && (Array.isArray(erObj.items) || Array.isArray(erObj.results))) {
+        setExpectedResults(erObj.items || erObj.results);
+      } else {
+        setExpectedResults([]);
+      }
+
+      // 10. Important Notes
+      const inObj = addons.find((a: any) => a && a.type === 'important_notes');
+      if (Array.isArray(match.important_notes) && match.important_notes.length > 0) {
+        setImportantNotes(match.important_notes);
+      } else if (inObj && (Array.isArray(inObj.items) || Array.isArray(inObj.notes))) {
+        setImportantNotes(inObj.items || inObj.notes);
+      } else {
+        setImportantNotes([]);
+      }
+
+      // 11. Tips
+      const tipsObj = addons.find((a: any) => a && a.type === 'tips');
+      if (Array.isArray(match.tips) && match.tips.length > 0) {
+        setTips(match.tips);
+      } else if (tipsObj && (Array.isArray(tipsObj.items) || Array.isArray(tipsObj.tips))) {
+        setTips(tipsObj.items || tipsObj.tips);
+      } else {
+        setTips([]);
+      }
+
+      // 12. Dos & Don'ts
+      const ddObj = addons.find((a: any) => a && a.type === 'dos_donts');
+      if (Array.isArray(match.dos) && match.dos.length > 0) {
+        setDos(match.dos);
+      } else if (ddObj && Array.isArray(ddObj.dos)) {
+        setDos(ddObj.dos);
+      } else {
+        setDos([]);
+      }
+      if (Array.isArray(match.donts) && match.donts.length > 0) {
+        setDonts(match.donts);
+      } else if (ddObj && Array.isArray(ddObj.donts)) {
+        setDonts(ddObj.donts);
+      } else {
+        setDonts([]);
+      }
+
+      // 13. FAQs
+      const faqsObj = addons.find((a: any) => a && a.type === 'faqs');
+      if (Array.isArray(match.faqs) && match.faqs.length > 0) {
+        setFaqs(match.faqs);
+      } else if (faqsObj && (Array.isArray(faqsObj.items) || Array.isArray(faqsObj.faqs))) {
+        setFaqs(faqsObj.items || faqsObj.faqs);
+      } else {
+        setFaqs([]);
+      }
+
+      // 14. Warranty (NEVER discard details text!)
+      const wObj = addons.find((a: any) => a && a.type === 'warranty');
+      if (match.warranty) {
+        setWarranty(match.warranty);
+      } else if (wObj) {
+        setWarranty(wObj.details || (wObj.has_warranty ? 'Warranty coverage details' : null));
+      } else {
         setWarranty(null);
-        setFaqs([
-          { question: `What is included in ${match.name}?`, answer: `Standard ${match.name} delivery per service specifications.` }
-        ]);
-        setTips(['Disclose any specific preferences before start']);
-        setDos(['Provide clear requirements']);
-        setDonts(['Do not interfere during active execution']);
-        setEstimatedDuration(45);
+      }
+
+      // 15. SEO & Highlights
+      const seoObj = addons.find((a: any) => a && a.type === 'seo_metadata');
+      const hlObj = addons.find((a: any) => a && a.type === 'highlights');
+      if (seoObj) {
+        if (seoObj.seo_title) setSeoTitle(seoObj.seo_title); else setSeoTitle('');
+        if (seoObj.seo_description) setSeoDescription(seoObj.seo_description); else setSeoDescription('');
+        if (Array.isArray(seoObj.keywords)) setKeywords(seoObj.keywords); else setKeywords([]);
+      } else {
+        setSeoTitle('');
+        setSeoDescription('');
+        setKeywords([]);
+      }
+      if (Array.isArray(match.highlights) && match.highlights.length > 0) {
+        setHighlights(match.highlights);
+      } else if (hlObj && (Array.isArray(hlObj.items) || Array.isArray(hlObj.highlights))) {
+        setHighlights(hlObj.items || hlObj.highlights);
+      } else if (seoObj && Array.isArray(seoObj.highlights)) {
+        setHighlights(seoObj.highlights);
+      } else {
+        setHighlights([]);
+      }
+
+      // 16. Service Features & Media
+      const sfObj = addons.find((a: any) => a && a.type === 'service_features');
+      if (sfObj && Array.isArray(sfObj.items)) {
+        setServiceFeatures(sfObj.items);
+      } else {
+        setServiceFeatures([]);
+      }
+      const smObj = addons.find((a: any) => a && a.type === 'service_media');
+      if (smObj && Array.isArray(smObj.items)) {
+        setServiceMedia(smObj.items);
+      } else {
+        setServiceMedia([]);
+      }
+
+      // 17. Addon Items
+      const realAddons = (Array.isArray(match.addons) && match.addons.length > 0) 
+        ? match.addons 
+        : addons.filter((a: any) => a && !a.type && ('price' in a || 'addon_id' in a || 'name' in a));
+      if (realAddons.length > 0) {
+        setAddonsList(realAddons.map((ra: any, idx: number) => ({
+          addon_id: ra.addon_id || `add-${idx}`,
+          name: ra.name || 'Add-on',
+          price: parseFloat(ra.price) || 0,
+          description: ra.description || ''
+        })));
+      } else {
+        setAddonsList([]);
       }
 
       try {
@@ -311,24 +376,135 @@ export const ServiceDetailEditView: React.FC = () => {
     setSaveError(null);
     setSaveLoading(true);
 
-    const structuredAddons: any[] = [
-      { type: 'description', text: description },
-      { type: 'duration', minutes: estimatedDuration },
-      { type: 'service_media', items: serviceMedia },
-      { type: 'service_features', items: serviceFeatures },
-      { type: 'seo_metadata', seo_title: seoTitle, seo_description: seoDescription, keywords: keywords, highlights: highlights },
-      { type: 'excluded_scope', items: excluded },
-      { type: 'process_steps', steps: processSteps },
-      { type: 'tools_materials', tools: toolsMaterials, materials: [] },
-      { type: 'customer_setup', requirements: customerSetup },
-      { type: 'aftercare_precautions', aftercare: aftercare },
-      { type: 'tips', items: tips },
-      { type: 'dos_donts', dos: dos, donts: donts },
-      { type: 'expected_results', items: expectedResults },
-      { type: 'important_notes', items: importantNotes },
-      { type: 'warranty', has_warranty: !!(warranty && warranty.trim()), details: warranty },
-      { type: 'faqs', items: faqs }
-    ];
+    const existingAddons = Array.isArray(service.suggested_addons) ? service.suggested_addons : [];
+    const existingTypedBlocks = existingAddons.filter((a: any) => a && a.type);
+    const existingBlockMap: Record<string, any> = {};
+    for (const b of existingTypedBlocks) {
+      existingBlockMap[b.type] = b;
+    }
+
+    const structuredAddons: any[] = [];
+
+    // Description
+    if (description && description.trim()) {
+      structuredAddons.push({ type: 'description', text: description });
+    } else if (existingBlockMap['description']) {
+      structuredAddons.push(existingBlockMap['description']);
+    }
+
+    // Highlights
+    if (highlights && highlights.length > 0) {
+      structuredAddons.push({ type: 'highlights', items: highlights });
+    } else if (existingBlockMap['highlights']) {
+      structuredAddons.push(existingBlockMap['highlights']);
+    }
+
+    // Duration
+    structuredAddons.push({ type: 'duration', minutes: estimatedDuration });
+
+    // Media & Features & SEO
+    if (serviceMedia && serviceMedia.length > 0) {
+      structuredAddons.push({ type: 'service_media', items: serviceMedia });
+    } else if (existingBlockMap['service_media']) {
+      structuredAddons.push(existingBlockMap['service_media']);
+    }
+
+    if (serviceFeatures && serviceFeatures.length > 0) {
+      structuredAddons.push({ type: 'service_features', items: serviceFeatures });
+    } else if (existingBlockMap['service_features']) {
+      structuredAddons.push(existingBlockMap['service_features']);
+    }
+
+    if (seoTitle || seoDescription || (keywords && keywords.length > 0) || (highlights && highlights.length > 0)) {
+      structuredAddons.push({ type: 'seo_metadata', seo_title: seoTitle, seo_description: seoDescription, keywords: keywords, highlights: highlights });
+    } else if (existingBlockMap['seo_metadata']) {
+      structuredAddons.push(existingBlockMap['seo_metadata']);
+    }
+
+    // Excluded
+    if (excluded && excluded.length > 0) {
+      structuredAddons.push({ type: 'excluded_scope', items: excluded });
+    } else if (existingBlockMap['excluded_scope']) {
+      structuredAddons.push(existingBlockMap['excluded_scope']);
+    }
+
+    // Process Steps
+    if (processSteps && processSteps.length > 0) {
+      structuredAddons.push({ type: 'process_steps', steps: processSteps });
+    } else if (existingBlockMap['process_steps']) {
+      structuredAddons.push(existingBlockMap['process_steps']);
+    }
+
+    // Tools & Materials
+    if (toolsMaterials && toolsMaterials.length > 0) {
+      const existingMat = existingBlockMap['tools_materials']?.materials || [];
+      structuredAddons.push({ type: 'tools_materials', tools: toolsMaterials, materials: existingMat });
+    } else if (existingBlockMap['tools_materials']) {
+      structuredAddons.push(existingBlockMap['tools_materials']);
+    }
+
+    // Customer Setup
+    if (customerSetup && customerSetup.length > 0) {
+      structuredAddons.push({ type: 'customer_setup', requirements: customerSetup });
+    } else if (existingBlockMap['customer_setup']) {
+      structuredAddons.push(existingBlockMap['customer_setup']);
+    }
+
+    // Aftercare
+    if (aftercare && aftercare.length > 0) {
+      structuredAddons.push({ type: 'aftercare_precautions', aftercare: aftercare });
+    } else if (existingBlockMap['aftercare_precautions']) {
+      structuredAddons.push(existingBlockMap['aftercare_precautions']);
+    }
+
+    // Tips
+    if (tips && tips.length > 0) {
+      structuredAddons.push({ type: 'tips', items: tips });
+    } else if (existingBlockMap['tips']) {
+      structuredAddons.push(existingBlockMap['tips']);
+    }
+
+    // Dos & Don'ts
+    if ((dos && dos.length > 0) || (donts && donts.length > 0)) {
+      structuredAddons.push({ type: 'dos_donts', dos: dos, donts: donts });
+    } else if (existingBlockMap['dos_donts']) {
+      structuredAddons.push(existingBlockMap['dos_donts']);
+    }
+
+    // Expected Results
+    if (expectedResults && expectedResults.length > 0) {
+      structuredAddons.push({ type: 'expected_results', items: expectedResults });
+    } else if (existingBlockMap['expected_results']) {
+      structuredAddons.push(existingBlockMap['expected_results']);
+    }
+
+    // Important Notes
+    if (importantNotes && importantNotes.length > 0) {
+      structuredAddons.push({ type: 'important_notes', items: importantNotes });
+    } else if (existingBlockMap['important_notes']) {
+      structuredAddons.push(existingBlockMap['important_notes']);
+    }
+
+    // Warranty
+    if (warranty && warranty.trim()) {
+      structuredAddons.push({ type: 'warranty', has_warranty: true, details: warranty.trim() });
+    } else if (existingBlockMap['warranty']) {
+      structuredAddons.push(existingBlockMap['warranty']);
+    }
+
+    // FAQs
+    if (faqs && faqs.length > 0) {
+      structuredAddons.push({ type: 'faqs', items: faqs });
+    } else if (existingBlockMap['faqs']) {
+      structuredAddons.push(existingBlockMap['faqs']);
+    }
+
+    // Any other custom blocks from existing
+    for (const b of existingTypedBlocks) {
+      if (!structuredAddons.some((s) => s.type === b.type)) {
+        structuredAddons.push(b);
+      }
+    }
 
     for (const addon of addonsList) {
       structuredAddons.push(addon);
@@ -344,6 +520,7 @@ export const ServiceDetailEditView: React.FC = () => {
         max_discount: maxDiscount,
         is_active: isActive,
         description,
+        highlights,
         distinct_features: included,
         included,
         excluded,
@@ -359,6 +536,7 @@ export const ServiceDetailEditView: React.FC = () => {
         important_notes: importantNotes,
         warranty,
         duration_minutes: estimatedDuration,
+        addons: addonsList,
         suggested_addons: structuredAddons,
       });
 
@@ -435,7 +613,7 @@ export const ServiceDetailEditView: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4">
-        <Loader2 className="w-10 h-10 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-10 h-10 animate-spin text-[#2F5233]" />
         <p className="text-base font-semibold text-slate-700">Loading SmartServe Service Management Details...</p>
       </div>
     );
@@ -445,11 +623,11 @@ export const ServiceDetailEditView: React.FC = () => {
     return (
       <div className="max-w-3xl mx-auto my-12 p-8 bg-white border border-red-200 rounded-3xl shadow-sm text-center space-y-4">
         <AlertCircle className="w-10 h-10 text-red-500 mx-auto" />
-        <h3 className="text-xl font-bold text-slate-900">Service Management Error</h3>
+        <h3 className="text-xl font-bold font-serif text-[#1F2A1E]">Service Management Error</h3>
         <p className="text-sm text-slate-600 max-w-lg mx-auto">{error || 'Service item not found.'}</p>
         <button
           onClick={() => navigate('/admin/catalog')}
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5CA8FF] text-white rounded-2xl text-sm font-bold shadow-sm"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2F5233] text-white rounded-2xl text-sm font-bold shadow-sm"
         >
           <FolderTree className="w-4 h-4" />
           <span>Back to Catalog Categories</span>
@@ -472,16 +650,16 @@ export const ServiceDetailEditView: React.FC = () => {
 
       {/* Clickable Breadcrumbs Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 font-medium overflow-x-auto whitespace-nowrap">
-        <Link to="/admin/catalog" className="hover:text-[#5CA8FF] flex items-center gap-1 transition-colors flex-shrink-0">
+        <Link to="/admin/catalog" className="hover:text-[#2F5233] flex items-center gap-1 transition-colors flex-shrink-0">
           <FolderTree className="w-3.5 h-3.5" />
           <span>Catalog</span>
         </Link>
         <ChevronRight className="w-4 h-4 text-slate-300 flex-shrink-0" />
-        <Link to={`/admin/catalog/category/${encodeURIComponent(category)}`} className="hover:text-[#5CA8FF] transition-colors flex-shrink-0">
+        <Link to={`/admin/catalog/category/${encodeURIComponent(category)}`} className="hover:text-[#2F5233] transition-colors flex-shrink-0">
           {category}
         </Link>
         <ChevronRight className="w-4 h-4 text-slate-300 flex-shrink-0" />
-        <Link to={`/admin/catalog/category/${encodeURIComponent(category)}/subcategory/${encodeURIComponent(subcategory)}`} className="hover:text-[#5CA8FF] transition-colors flex-shrink-0">
+        <Link to={`/admin/catalog/category/${encodeURIComponent(category)}/subcategory/${encodeURIComponent(subcategory)}`} className="hover:text-[#2F5233] transition-colors flex-shrink-0">
           {subcategory}
         </Link>
         <ChevronRight className="w-4 h-4 text-slate-300 flex-shrink-0" />
@@ -489,7 +667,7 @@ export const ServiceDetailEditView: React.FC = () => {
       </nav>
 
       {/* Page Title & Header Banner */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6 bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6 bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[#E5DEC9] shadow-sm">
         <div className="flex items-start sm:items-center gap-3 sm:gap-5 min-w-0">
           <button
             onClick={() => navigate(`/admin/catalog/category/${encodeURIComponent(category)}/subcategory/${encodeURIComponent(subcategory)}`)}
@@ -498,7 +676,7 @@ export const ServiceDetailEditView: React.FC = () => {
           >
             <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
-          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 flex-shrink-0 shadow-2xs">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden bg-slate-100 border border-[#E5DEC9] flex-shrink-0 shadow-2xs">
             <img
               src={getServiceImage(category, name)}
               alt={name}
@@ -507,8 +685,8 @@ export const ServiceDetailEditView: React.FC = () => {
           </div>
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight truncate">{name}</h1>
-              <span className="text-base sm:text-xl font-extrabold text-slate-900 font-mono bg-blue-50 text-[#2563EB] px-3 py-1 rounded-xl border border-blue-100">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold font-serif text-[#1F2A1E] tracking-tight truncate">{name}</h1>
+              <span className="text-base sm:text-xl font-extrabold text-slate-900 font-mono bg-[#F2EDE1] text-[#2F5233] px-3 py-1 rounded-xl border border-[#E5DEC9]">
                 {formatRupee(basePrice)}
               </span>
               {isActive ? (
@@ -533,9 +711,9 @@ export const ServiceDetailEditView: React.FC = () => {
           <button
             type="button"
             onClick={() => setPreviewModalOpen(true)}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold text-xs sm:text-sm rounded-2xl shadow-xs transition-colors"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-[#FAF7F0] text-slate-800 border border-slate-300 font-bold text-xs sm:text-sm rounded-2xl shadow-xs transition-colors"
           >
-            <Eye className="w-4 h-4 text-[#5CA8FF]" />
+            <Eye className="w-4 h-4 text-[#2F5233]" />
             <span>Preview</span>
           </button>
 
@@ -544,7 +722,7 @@ export const ServiceDetailEditView: React.FC = () => {
               <button
                 onClick={handleRegenerateClick}
                 disabled={aiLoading}
-                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-blue-50 hover:bg-blue-100 text-[#5CA8FF] border border-blue-200 font-bold text-xs sm:text-sm rounded-2xl transition-colors disabled:opacity-50"
+                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-[#2F5233] border border-[#E5DEC9] font-bold text-xs sm:text-sm rounded-2xl transition-colors disabled:opacity-50"
               >
                 {aiLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <RotateCcw className="w-4 h-4" />}
                 <span>AI Content</span>
@@ -553,7 +731,7 @@ export const ServiceDetailEditView: React.FC = () => {
               <button
                 onClick={handleSaveChanges}
                 disabled={saveLoading}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm transition-colors disabled:opacity-50"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm transition-colors disabled:opacity-50"
               >
                 {saveLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4 sm:w-5 sm:h-5" />}
                 <span>Save Changes</span>
@@ -596,9 +774,9 @@ export const ServiceDetailEditView: React.FC = () => {
         )}
         
         {/* Section 1: Basic Information */}
-        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-5">
-          <div className="border-b border-slate-100 pb-3 sm:pb-4">
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900">1. Basic Information</h2>
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4 sm:space-y-5">
+          <div className="border-b border-[#E5DEC9]/60 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl font-bold font-serif text-[#1F2A1E]">1. Basic Information</h2>
             <p className="text-xs sm:text-sm text-slate-500 font-semibold">Service identification and catalog status</p>
           </div>
 
@@ -610,7 +788,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 disabled={!canManageCatalog}
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 font-bold text-slate-900 text-base focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl px-4 py-3 font-bold text-slate-900 text-base focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] disabled:opacity-75 disabled:cursor-not-allowed"
                 required
               />
             </div>
@@ -622,7 +800,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
                 disabled={!canManageCatalog}
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 font-semibold text-slate-800 text-base focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl px-4 py-3 font-semibold text-slate-800 text-base focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] disabled:opacity-75 disabled:cursor-not-allowed"
                 required
               />
             </div>
@@ -634,7 +812,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 value={subcategory}
                 onChange={(e) => setSubcategory(e.target.value)}
                 disabled={!canManageCatalog}
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 font-semibold text-slate-800 text-base focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl px-4 py-3 font-semibold text-slate-800 text-base focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] disabled:opacity-75 disabled:cursor-not-allowed"
                 required
               />
             </div>
@@ -648,7 +826,7 @@ export const ServiceDetailEditView: React.FC = () => {
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-bold transition-colors ${
                 isActive
                   ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                  : 'bg-slate-100 text-slate-500 border border-slate-200'
+                  : 'bg-slate-100 text-slate-500 border border-[#E5DEC9]'
               } ${!canManageCatalog ? 'opacity-75 cursor-not-allowed' : ''}`}
             >
               {isActive ? <CheckCircle2 className="w-5 h-5 text-emerald-500" /> : <XCircle className="w-5 h-5 text-slate-400" />}
@@ -658,9 +836,9 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 2: Description & Highlights */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-          <div className="border-b border-slate-100 pb-4">
-            <h2 className="text-xl font-bold text-slate-900">2. Service Description & Highlights</h2>
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5">
+          <div className="border-b border-[#E5DEC9]/60 pb-4">
+            <h2 className="text-xl font-bold font-serif text-[#1F2A1E]">2. Service Description & Highlights</h2>
             <p className="text-sm text-slate-500 font-semibold">Service summary and key customer selling points</p>
           </div>
 
@@ -672,7 +850,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 onChange={(e) => setDescription(e.target.value)}
                 disabled={!canManageCatalog}
                 rows={3}
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 text-base font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl p-4 text-base font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] disabled:opacity-75 disabled:cursor-not-allowed"
                 placeholder="Enter detailed description..."
               />
             </div>
@@ -691,10 +869,10 @@ export const ServiceDetailEditView: React.FC = () => {
                 </button>
               </div>
 
-              <div className="space-y-2 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <div className="space-y-2 bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9]">
                 {highlights.map((h, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <Check className="w-4 h-4 text-[#5CA8FF] flex-shrink-0" />
+                    <Check className="w-4 h-4 text-[#2F5233] flex-shrink-0" />
                     <input
                       type="text"
                       value={h}
@@ -704,7 +882,7 @@ export const ServiceDetailEditView: React.FC = () => {
                         setHighlights(copy);
                       }}
                       disabled={!canManageCatalog}
-                      className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2 text-sm font-semibold disabled:opacity-75 disabled:cursor-not-allowed"
+                      className="w-full bg-white border border-[#E5DEC9] rounded-xl px-3.5 py-2 text-sm font-semibold disabled:opacity-75 disabled:cursor-not-allowed"
                     />
                     <button
                       type="button"
@@ -722,9 +900,9 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 3: Pricing & Limits (Indian Rupee ₹) */}
-        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-5">
-          <div className="border-b border-slate-100 pb-3 sm:pb-4">
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900">3. Rate Controls (Indian Rupee ₹)</h2>
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4 sm:space-y-5">
+          <div className="border-b border-[#E5DEC9]/60 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl font-bold font-serif text-[#1F2A1E]">3. Rate Controls (Indian Rupee ₹)</h2>
             <p className="text-xs sm:text-sm text-slate-500 font-semibold">Base rate in ₹, duration, and dynamic pricing limits</p>
           </div>
 
@@ -739,7 +917,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   value={basePrice}
                   onChange={(e) => setBasePrice(parseFloat(e.target.value) || 0)}
                   disabled={!canManageCatalog}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-9 pr-4 py-3 font-mono font-bold text-slate-900 text-lg focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 disabled:opacity-75 disabled:cursor-not-allowed"
+                  className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl pl-9 pr-4 py-3 font-mono font-bold text-slate-900 text-lg focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] disabled:opacity-75 disabled:cursor-not-allowed"
                   required
                 />
               </div>
@@ -753,7 +931,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 value={estimatedDuration}
                 onChange={(e) => setEstimatedDuration(parseInt(e.target.value) || 30)}
                 disabled={!canManageCatalog}
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 font-mono text-slate-900 font-bold text-base focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl px-4 py-3 font-mono text-slate-900 font-bold text-base focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] disabled:opacity-75 disabled:cursor-not-allowed"
                 required
               />
             </div>
@@ -766,7 +944,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 value={maxSurge}
                 onChange={(e) => setMaxSurge(parseFloat(e.target.value) || 0)}
                 disabled={!canManageCatalog}
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 font-mono text-amber-800 font-bold text-base focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl px-4 py-3 font-mono text-amber-800 font-bold text-base focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] disabled:opacity-75 disabled:cursor-not-allowed"
                 required
               />
               <p className="text-xs text-amber-700 mt-1 font-mono">+{(maxSurge * 100).toFixed(0)}% Surge</p>
@@ -780,7 +958,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 value={maxDiscount}
                 onChange={(e) => setMaxDiscount(parseFloat(e.target.value) || 0)}
                 disabled={!canManageCatalog}
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 font-mono text-emerald-800 font-bold text-base focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl px-4 py-3 font-mono text-emerald-800 font-bold text-base focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] disabled:opacity-75 disabled:cursor-not-allowed"
                 required
               />
               <p className="text-xs text-emerald-700 mt-1 font-mono">-{(maxDiscount * 100).toFixed(0)}% Discount</p>
@@ -789,9 +967,9 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 4: INCLUDED vs EXCLUDED */}
-        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5 sm:space-y-6">
-          <div className="border-b border-slate-100 pb-3 sm:pb-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900">4. Service Scope Boundaries (Included vs Excluded)</h2>
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5 sm:space-y-6">
+          <div className="border-b border-[#E5DEC9]/60 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold font-serif text-[#1F2A1E]">4. Service Scope Boundaries (Included vs Excluded)</h2>
             <p className="text-xs sm:text-sm md:text-base text-slate-500 font-semibold mt-1">Service-specific scope inclusions and scope exclusions</p>
           </div>
 
@@ -830,7 +1008,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           setIncluded(copy);
                         }}
                         disabled={!canEditCatalog}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 disabled:opacity-75 disabled:cursor-not-allowed"
+                        className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3.5 py-2 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 disabled:opacity-75 disabled:cursor-not-allowed"
                       />
                       <div className="flex items-center gap-1 flex-shrink-0">
                         <button
@@ -913,7 +1091,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           setExcluded(copy);
                         }}
                         disabled={!canEditCatalog}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-rose-500/30 disabled:opacity-75 disabled:cursor-not-allowed"
+                        className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3.5 py-2 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-rose-500/30 disabled:opacity-75 disabled:cursor-not-allowed"
                       />
                       <div className="flex items-center gap-1 flex-shrink-0">
                         <button
@@ -965,10 +1143,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 5: Step-by-Step How It Works Workflow */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900">5. How It Works / Service Execution Process</h2>
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E]">5. How It Works / Service Execution Process</h2>
               <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">Service-specific operational steps ({processSteps.length} Steps)</p>
             </div>
             <button
@@ -980,7 +1158,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 duration_minutes: 15,
                 is_key_step: false
               }])}
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#5CA8FF] hover:bg-blue-600 text-white rounded-2xl text-xs md:text-sm font-bold shadow-sm transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white rounded-2xl text-xs md:text-sm font-bold shadow-sm transition-colors"
             >
               <Plus className="w-4 h-4" />
               <span>Add Process Step</span>
@@ -989,7 +1167,7 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-4">
             {processSteps.length === 0 ? (
-              <div className="p-8 text-center bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
+              <div className="p-8 text-center bg-[#FAF7F0] rounded-3xl border border-[#E5DEC9] space-y-3">
                 <Clock className="w-8 h-8 text-slate-400 mx-auto" />
                 <p className="text-base text-slate-600 font-semibold">No process steps added yet.</p>
                 <button
@@ -1001,17 +1179,17 @@ export const ServiceDetailEditView: React.FC = () => {
                     duration_minutes: 10,
                     is_key_step: true
                   }])}
-                  className="px-4 py-2 bg-white border border-slate-300 hover:border-[#5CA8FF] text-[#5CA8FF] rounded-xl text-xs font-bold transition-colors"
+                  className="px-4 py-2 bg-white border border-slate-300 hover:border-[#2F5233] text-[#2F5233] rounded-xl text-xs font-bold transition-colors"
                 >
                   + Add First Step
                 </button>
               </div>
             ) : (
               processSteps.map((step, idx) => (
-                <div key={idx} className="p-6 bg-slate-50/70 rounded-3xl border border-slate-200 space-y-4 shadow-xs">
+                <div key={idx} className="p-6 bg-[#FAF7F0]/70 rounded-3xl border border-[#E5DEC9] space-y-4 shadow-xs">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="flex items-center gap-3 flex-1">
-                      <span className="w-9 h-9 rounded-full bg-[#5CA8FF] text-white font-bold flex items-center justify-center text-base font-mono flex-shrink-0">
+                      <span className="w-9 h-9 rounded-full bg-[#2F5233] text-white font-bold flex items-center justify-center text-base font-mono flex-shrink-0">
                         {idx + 1}
                       </span>
                       <input
@@ -1023,13 +1201,13 @@ export const ServiceDetailEditView: React.FC = () => {
                           setProcessSteps(copy);
                         }}
                         placeholder="Step Title..."
-                        className="font-bold text-slate-900 bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-base md:text-lg flex-1 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                        className="font-bold text-slate-900 bg-white border border-[#E5DEC9] rounded-xl px-4 py-2.5 text-base md:text-lg flex-1 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                         required
                       />
                     </div>
 
                     <div className="flex items-center gap-4 flex-wrap">
-                      <label className="flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs md:text-sm font-bold text-slate-700 cursor-pointer">
+                      <label className="flex items-center gap-2 px-3 py-1.5 bg-white border border-[#E5DEC9] rounded-xl text-xs md:text-sm font-bold text-slate-700 cursor-pointer">
                         <input
                           type="checkbox"
                           checked={step.is_key_step}
@@ -1038,12 +1216,12 @@ export const ServiceDetailEditView: React.FC = () => {
                             copy[idx].is_key_step = e.target.checked;
                             setProcessSteps(copy);
                           }}
-                          className="rounded text-[#5CA8FF] w-4 h-4"
+                          className="rounded text-[#2F5233] w-4 h-4"
                         />
-                        <span className={step.is_key_step ? 'text-[#5CA8FF]' : 'text-slate-600'}>Key Step</span>
+                        <span className={step.is_key_step ? 'text-[#2F5233]' : 'text-slate-600'}>Key Step</span>
                       </label>
 
-                      <div className="flex items-center gap-1.5 bg-white border border-slate-200 rounded-xl px-3 py-1.5 text-slate-700 font-mono text-xs md:text-sm">
+                      <div className="flex items-center gap-1.5 bg-white border border-[#E5DEC9] rounded-xl px-3 py-1.5 text-slate-700 font-mono text-xs md:text-sm">
                         <Clock className="w-4 h-4 text-slate-400" />
                         <input
                           type="number"
@@ -1056,7 +1234,7 @@ export const ServiceDetailEditView: React.FC = () => {
                             setProcessSteps(copy);
                           }}
                           placeholder="Mins"
-                          className="w-16 bg-slate-50 border border-slate-200 rounded-lg px-2 text-center py-1 font-bold text-slate-900"
+                          className="w-16 bg-[#FAF7F0] border border-[#E5DEC9] rounded-lg px-2 text-center py-1 font-bold text-slate-900"
                         />
                         <span className="font-semibold text-slate-500">mins</span>
                       </div>
@@ -1119,7 +1297,7 @@ export const ServiceDetailEditView: React.FC = () => {
                       setProcessSteps(copy);
                     }}
                     placeholder="Describe step details..."
-                    className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-base text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                    className="w-full bg-white border border-[#E5DEC9] rounded-xl p-3.5 text-base text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                     rows={2}
                     required
                   />
@@ -1130,9 +1308,9 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 6: Tools & Materials / Products */}
-        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5 sm:space-y-6">
-          <div className="border-b border-slate-100 pb-3 sm:pb-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900">6. Service Tools & Materials / Consumables</h2>
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5 sm:space-y-6">
+          <div className="border-b border-[#E5DEC9]/60 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold font-serif text-[#1F2A1E]">6. Service Tools & Materials / Consumables</h2>
             <p className="text-xs sm:text-sm md:text-base text-slate-500 font-semibold mt-1">Equipment, specialized tools, and consumables required for this service</p>
           </div>
 
@@ -1141,26 +1319,26 @@ export const ServiceDetailEditView: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <label className="font-bold text-slate-800 flex items-center gap-2 text-base md:text-lg">
-                  <Wrench className="w-6 h-6 text-[#5CA8FF]" />
+                  <Wrench className="w-6 h-6 text-[#2F5233]" />
                   <span>REQUIRED TOOLS ({toolsMaterials.length})</span>
                 </label>
                 <button
                   type="button"
                   onClick={() => setToolsMaterials([...toolsMaterials, 'New Tool'])}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-[#5CA8FF] border border-blue-200 rounded-xl text-xs font-bold transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-[#2F5233] border border-[#E5DEC9] rounded-xl text-xs font-bold transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   <span>Add Tool</span>
                 </button>
               </div>
 
-              <div className="space-y-3 bg-slate-50/70 p-5 rounded-3xl border border-slate-200">
+              <div className="space-y-3 bg-[#FAF7F0]/70 p-5 rounded-3xl border border-[#E5DEC9]">
                 {toolsMaterials.length === 0 ? (
                   <p className="text-sm text-slate-400 font-medium italic text-center py-2">No tools specified yet.</p>
                 ) : (
                   toolsMaterials.map((t, idx) => (
-                    <div key={idx} className="flex items-center gap-2 bg-white p-2.5 rounded-2xl border border-slate-200 shadow-xs">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#5CA8FF] ml-1 flex-shrink-0"></span>
+                    <div key={idx} className="flex items-center gap-2 bg-white p-2.5 rounded-2xl border border-[#E5DEC9] shadow-xs">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#2F5233] ml-1 flex-shrink-0"></span>
                       <input
                         type="text"
                         value={t}
@@ -1170,7 +1348,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           setToolsMaterials(copy);
                         }}
                         placeholder="Tool Name..."
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                        className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3.5 py-2 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                       />
                       <div className="flex items-center gap-1 flex-shrink-0">
                         <button
@@ -1251,7 +1429,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           setCustomerSetup(copy);
                         }}
                         placeholder="Material / Product Name..."
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+                        className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3.5 py-2 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
                       />
                       <div className="flex items-center gap-1 flex-shrink-0">
                         <button
@@ -1302,10 +1480,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 7: Customer Preparation & Setup Requirements */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <ListCheck className="w-6 h-6 text-amber-600" />
                 <span>7. Customer Preparation & Setup Requirements</span>
               </h2>
@@ -1323,7 +1501,7 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-4">
             {customerSetup.length === 0 ? (
-              <div className="p-8 text-center bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
+              <div className="p-8 text-center bg-[#FAF7F0] rounded-3xl border border-[#E5DEC9] space-y-3">
                 <ListCheck className="w-8 h-8 text-slate-400 mx-auto" />
                 <p className="text-base text-slate-600 font-semibold">No special customer preparation required.</p>
                 <button
@@ -1401,10 +1579,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 8: Aftercare & Precautions */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <ShieldCheck className="w-6 h-6 text-emerald-600" />
                 <span>8. Aftercare & Service Precautions</span>
               </h2>
@@ -1422,7 +1600,7 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-4">
             {aftercare.length === 0 ? (
-              <div className="p-8 text-center bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
+              <div className="p-8 text-center bg-[#FAF7F0] rounded-3xl border border-[#E5DEC9] space-y-3">
                 <ShieldCheck className="w-8 h-8 text-slate-400 mx-auto" />
                 <p className="text-base text-slate-600 font-semibold">No specific aftercare instructions.</p>
                 <button
@@ -1500,10 +1678,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 9: Expected Results */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <FileText className="w-6 h-6 text-purple-600" />
                 <span>9. Expected Service Results</span>
               </h2>
@@ -1521,7 +1699,7 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-4">
             {expectedResults.length === 0 ? (
-              <div className="p-8 text-center bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
+              <div className="p-8 text-center bg-[#FAF7F0] rounded-3xl border border-[#E5DEC9] space-y-3">
                 <FileText className="w-8 h-8 text-slate-400 mx-auto" />
                 <p className="text-base text-slate-600 font-semibold">No expected results specified.</p>
                 <button
@@ -1599,10 +1777,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 10: Important Notes */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <AlertTriangle className="w-6 h-6 text-amber-500" />
                 <span>10. Important Service Notes</span>
               </h2>
@@ -1620,7 +1798,7 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-4">
             {importantNotes.length === 0 ? (
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between text-sm">
                 <span className="text-slate-500 font-semibold flex items-center gap-2">
                   <AlertTriangle className="w-4 h-4 text-amber-500" />
                   No additional service notes configured.
@@ -1700,10 +1878,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 11: Service Warranty & Guarantee */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <ShieldCheck className="w-6 h-6 text-slate-700" />
                 <span>11. Service Warranty & Guarantee</span>
               </h2>
@@ -1730,7 +1908,7 @@ export const ServiceDetailEditView: React.FC = () => {
           </div>
 
           {!warranty || warranty.trim() === '' ? (
-            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+            <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between text-sm">
               <span className="text-slate-500 font-semibold flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-slate-400" />
                 No warranty or guarantee specified for this service.
@@ -1744,14 +1922,14 @@ export const ServiceDetailEditView: React.FC = () => {
               </button>
             </div>
           ) : (
-            <div className="p-6 bg-slate-50/70 rounded-3xl border border-slate-200 space-y-4">
+            <div className="p-6 bg-[#FAF7F0]/70 rounded-3xl border border-[#E5DEC9] space-y-4">
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700">Warranty Coverage Terms & Conditions</label>
                 <textarea
                   value={warranty}
                   onChange={(e) => setWarranty(e.target.value)}
                   placeholder="Describe warranty duration, terms, exclusions, and conditions..."
-                  className="w-full bg-white border border-slate-200 rounded-2xl p-4 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-400/30"
+                  className="w-full bg-white border border-[#E5DEC9] rounded-2xl p-4 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-400/30"
                   rows={3}
                   required
                 />
@@ -1761,10 +1939,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 12: Frequently Asked Questions (FAQs) */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <HelpCircle className="w-6 h-6 text-amber-500" />
                 <span>12. Customer FAQs ({faqs.length})</span>
               </h2>
@@ -1782,7 +1960,7 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-4">
             {faqs.length === 0 ? (
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between text-sm">
                 <span className="text-slate-500 font-semibold flex items-center gap-2">
                   <HelpCircle className="w-4 h-4 text-amber-500" />
                   No FAQs configured for this service.
@@ -1876,10 +2054,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 13: Professional Tips */}
-        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-5">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-3 sm:pb-4">
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4 sm:space-y-5">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3 sm:pb-4">
             <div>
-              <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-indigo-600" />
                 <span>13. Professional Tips ({tips.length})</span>
               </h2>
@@ -1898,7 +2076,7 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-3">
             {tips.length === 0 ? (
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between text-sm">
                 <span className="text-slate-500 font-semibold flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-indigo-500" />
                   No tips configured for this service.
@@ -1978,9 +2156,9 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 14: Dos & Don'ts */}
-        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5">
-          <div className="border-b border-slate-100 pb-3 sm:pb-4">
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5">
+          <div className="border-b border-[#E5DEC9]/60 pb-3 sm:pb-4">
+            <h2 className="text-lg sm:text-xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
               <ListCheck className="w-5 h-5 text-emerald-600" />
               <span>14. Recommended Dos & Don'ts ({dos.length} Dos, {donts.length} Don'ts)</span>
             </h2>
@@ -2091,10 +2269,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 15: Suggested Add-ons */}
-        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-5">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-3 sm:pb-4">
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4 sm:space-y-5">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3 sm:pb-4">
             <div>
-              <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <Package className="w-5 h-5 text-blue-600" />
                 <span>15. Suggested Add-on Services ({addonsList.length})</span>
               </h2>
@@ -2113,7 +2291,7 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-3">
             {addonsList.length === 0 ? (
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-sm">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] text-sm">
                 <span className="text-slate-500 font-semibold flex items-center gap-2">
                   <Package className="w-4 h-4 text-slate-400" />
                   No add-ons configured for this service in the database.
@@ -2129,7 +2307,7 @@ export const ServiceDetailEditView: React.FC = () => {
                         Add-on #{idx + 1}
                       </span>
                       {addon.addon_id && (
-                        <span className="text-[11px] font-mono text-slate-500 bg-white px-2 py-0.5 rounded-md border border-slate-200">
+                        <span className="text-[11px] font-mono text-slate-500 bg-white px-2 py-0.5 rounded-md border border-[#E5DEC9]">
                           ID: {addon.addon_id}
                         </span>
                       )}
@@ -2157,7 +2335,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           setAddonsList(copy);
                         }}
                         disabled={!canManageCatalog}
-                        className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
+                        className="w-full bg-white border border-[#E5DEC9] rounded-xl px-3 py-2 text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
                         required
                       />
                     </div>
@@ -2172,7 +2350,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           setAddonsList(copy);
                         }}
                         disabled={!canManageCatalog}
-                        className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-sm font-mono font-bold text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
+                        className="w-full bg-white border border-[#E5DEC9] rounded-xl px-3 py-2 text-sm font-mono font-bold text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
                         required
                       />
                     </div>
@@ -2190,7 +2368,7 @@ export const ServiceDetailEditView: React.FC = () => {
                       }}
                       disabled={!canManageCatalog}
                       placeholder="Brief description of add-on benefit..."
-                      className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
+                      className="w-full bg-white border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/30 disabled:opacity-75"
                     />
                   </div>
                 </div>
@@ -2200,11 +2378,11 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 16: SEO & Service Metadata */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-[#5CA8FF]" />
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                <Sparkles className="w-6 h-6 text-[#2F5233]" />
                 <span>16. SEO & Service Metadata</span>
               </h2>
               <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">Search engine title, meta description, keywords, and service highlights</p>
@@ -2212,17 +2390,17 @@ export const ServiceDetailEditView: React.FC = () => {
             <button
               type="button"
               onClick={() => setConfirmRegenerateOpen(true)}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 hover:bg-blue-100 text-[#5CA8FF] border border-blue-200 rounded-xl text-xs md:text-sm font-bold transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-[#2F5233] border border-[#E5DEC9] rounded-xl text-xs md:text-sm font-bold transition-colors"
             >
-              <Sparkles className="w-4 h-4 text-[#5CA8FF]" />
+              <Sparkles className="w-4 h-4 text-[#2F5233]" />
               <span>Generate / Regenerate Metadata</span>
             </button>
           </div>
 
           {!seoTitle && !seoDescription && keywords.length === 0 ? (
-            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+            <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between text-sm">
               <span className="text-slate-500 font-semibold flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#5CA8FF]" />
+                <Sparkles className="w-4 h-4 text-[#2F5233]" />
                 No SEO metadata configured.
               </span>
               <button
@@ -2232,7 +2410,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   setSeoDescription(`Book professional ${name.toLowerCase()} services online with top-rated experts.`);
                   setKeywords([name.toLowerCase(), category.toLowerCase(), subcategory.toLowerCase()]);
                 }}
-                className="px-3 py-1 bg-white border border-slate-300 hover:border-[#5CA8FF] text-[#5CA8FF] rounded-xl text-xs font-bold transition-colors"
+                className="px-3 py-1 bg-white border border-slate-300 hover:border-[#2F5233] text-[#2F5233] rounded-xl text-xs font-bold transition-colors"
               >
                 + Configure Metadata
               </button>
@@ -2247,7 +2425,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   value={seoTitle}
                   onChange={(e) => setSeoTitle(e.target.value)}
                   placeholder="e.g. Pedicure at Home | Professional Foot & Nail Care"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                  className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-4 py-2.5 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 />
               </div>
 
@@ -2258,7 +2436,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   value={seoDescription}
                   onChange={(e) => setSeoDescription(e.target.value)}
                   placeholder="e.g. Book professional pedicure services at home with hygienic tools..."
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                  className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl p-4 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                   rows={2}
                 />
               </div>
@@ -2270,7 +2448,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="Brief service description..."
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                  className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl p-4 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                   rows={2}
                 />
               </div>
@@ -2281,9 +2459,9 @@ export const ServiceDetailEditView: React.FC = () => {
                   <span>Search Keywords ({keywords.length})</span>
                 </label>
 
-                <div className="flex flex-wrap items-center gap-2 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                <div className="flex flex-wrap items-center gap-2 bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9]">
                   {keywords.map((kw, i) => (
-                    <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 shadow-xs">
+                    <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#E5DEC9] rounded-xl text-sm font-semibold text-slate-800 shadow-xs">
                       {kw}
                       <button
                         type="button"
@@ -2310,7 +2488,7 @@ export const ServiceDetailEditView: React.FC = () => {
                         }
                       }}
                       placeholder="Add search keyword..."
-                      className="bg-white border border-slate-200 rounded-xl px-3 py-1 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                      className="bg-white border border-[#E5DEC9] rounded-xl px-3 py-1 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                     />
                     <button
                       type="button"
@@ -2320,7 +2498,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           setNewKeywordInput('');
                         }
                       }}
-                      className="px-3 py-1 bg-[#5CA8FF] hover:bg-[#4A96ED] text-white rounded-xl text-xs font-bold transition-colors"
+                      className="px-3 py-1 bg-[#2F5233] hover:bg-[#3D6B42] text-white rounded-xl text-xs font-bold transition-colors"
                     >
                       + Add Keyword
                     </button>
@@ -2337,7 +2515,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 <div className="flex flex-wrap items-center gap-2 bg-blue-50/40 p-4 rounded-2xl border border-blue-100">
                   {highlights.map((hl, i) => (
                     <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-blue-200 rounded-xl text-sm font-semibold text-slate-900 shadow-xs">
-                      <Sparkles className="w-3.5 h-3.5 text-[#5CA8FF]" />
+                      <Sparkles className="w-3.5 h-3.5 text-[#2F5233]" />
                       {hl}
                       <button
                         type="button"
@@ -2364,7 +2542,7 @@ export const ServiceDetailEditView: React.FC = () => {
                         }
                       }}
                       placeholder="Add highlight..."
-                      className="bg-white border border-slate-200 rounded-xl px-3 py-1 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                      className="bg-white border border-[#E5DEC9] rounded-xl px-3 py-1 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                     />
                     <button
                       type="button"
@@ -2374,7 +2552,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           setNewHighlightInput('');
                         }
                       }}
-                      className="px-3 py-1 bg-[#5CA8FF] hover:bg-[#4A96ED] text-white rounded-xl text-xs font-bold transition-colors"
+                      className="px-3 py-1 bg-[#2F5233] hover:bg-[#3D6B42] text-white rounded-xl text-xs font-bold transition-colors"
                     >
                       + Add Highlight
                     </button>
@@ -2386,11 +2564,11 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 14: Service Features & Highlights */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
-                <CheckCircle2 className="w-6 h-6 text-[#5CA8FF]" />
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                <CheckCircle2 className="w-6 h-6 text-[#2F5233]" />
                 <span>14. Key Service Features & Specifications</span>
               </h2>
               <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">Meaningful service-specific features and technical capabilities ({serviceFeatures.length} Features)</p>
@@ -2398,7 +2576,7 @@ export const ServiceDetailEditView: React.FC = () => {
             <button
               type="button"
               onClick={() => setServiceFeatures([...serviceFeatures, { title: 'New Service Feature', description: 'Feature description...' }])}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-[#5CA8FF] border border-blue-200 rounded-xl text-xs md:text-sm font-bold transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-[#2F5233] border border-[#E5DEC9] rounded-xl text-xs md:text-sm font-bold transition-colors"
             >
               <Plus className="w-4 h-4" />
               <span>Add Feature</span>
@@ -2407,15 +2585,15 @@ export const ServiceDetailEditView: React.FC = () => {
 
           <div className="space-y-4">
             {serviceFeatures.length === 0 ? (
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between text-sm">
                 <span className="text-slate-500 font-semibold flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#5CA8FF]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2F5233]" />
                   No service features added.
                 </span>
                 <button
                   type="button"
                   onClick={() => setServiceFeatures([{ title: 'Core Service Execution', description: 'Performed according to standard service specifications.' }])}
-                  className="px-3 py-1 bg-white border border-slate-300 hover:border-[#5CA8FF] text-[#5CA8FF] rounded-xl text-xs font-bold transition-colors"
+                  className="px-3 py-1 bg-white border border-slate-300 hover:border-[#2F5233] text-[#2F5233] rounded-xl text-xs font-bold transition-colors"
                 >
                   + Add Feature
                 </button>
@@ -2425,7 +2603,7 @@ export const ServiceDetailEditView: React.FC = () => {
                 <div key={idx} className="p-5 bg-blue-50/30 rounded-3xl border border-blue-100 space-y-3 shadow-xs">
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
-                      <CheckCircle2 className="w-4 h-4 text-[#5CA8FF]" />
+                      <CheckCircle2 className="w-4 h-4 text-[#2F5233]" />
                       Feature #{idx + 1}
                     </span>
                     <div className="flex items-center gap-1">
@@ -2479,7 +2657,7 @@ export const ServiceDetailEditView: React.FC = () => {
                       setServiceFeatures(copy);
                     }}
                     placeholder="Feature title..."
-                    className="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-base font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                    className="w-full bg-white border border-[#E5DEC9] rounded-xl px-4 py-2.5 text-base font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                     required
                   />
                   <input
@@ -2491,7 +2669,7 @@ export const ServiceDetailEditView: React.FC = () => {
                       setServiceFeatures(copy);
                     }}
                     placeholder="Feature description (optional)..."
-                    className="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-base font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                    className="w-full bg-white border border-[#E5DEC9] rounded-xl px-4 py-2.5 text-base font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                   />
                 </div>
               ))
@@ -2500,10 +2678,10 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 15: Service Status & Booking Availability */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <ShieldCheck className="w-6 h-6 text-slate-700" />
                 <span>15. Service Status & Booking Availability</span>
               </h2>
@@ -2522,7 +2700,7 @@ export const ServiceDetailEditView: React.FC = () => {
             )}
           </div>
 
-          <div className="p-6 bg-slate-50/70 rounded-3xl border border-slate-200 space-y-5">
+          <div className="p-6 bg-[#FAF7F0]/70 rounded-3xl border border-[#E5DEC9] space-y-5">
             <div className="space-y-3">
               <label className="text-sm md:text-base font-bold text-slate-800">Booking Availability Status</label>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -2532,7 +2710,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   className={`flex-1 flex items-center justify-between p-4 rounded-2xl border transition-all ${
                     isActive
                       ? 'bg-white border-emerald-500 ring-2 ring-emerald-500/20 text-emerald-900 shadow-sm'
-                      : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
+                      : 'bg-white border-[#E5DEC9] text-slate-600 hover:border-slate-300'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -2557,7 +2735,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   className={`flex-1 flex items-center justify-between p-4 rounded-2xl border transition-all ${
                     !isActive
                       ? 'bg-white border-rose-500 ring-2 ring-rose-500/20 text-rose-900 shadow-sm'
-                      : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
+                      : 'bg-white border-[#E5DEC9] text-slate-600 hover:border-slate-300'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -2580,7 +2758,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   value={unavailabilityReason}
                   onChange={(e) => setUnavailabilityReason(e.target.value)}
                   placeholder="e.g. Seasonal downtime, technician training, material shortage..."
-                  className="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-rose-500/20"
+                  className="w-full bg-white border border-[#E5DEC9] rounded-xl px-4 py-2.5 text-base font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-rose-500/20"
                 />
               </div>
             )}
@@ -2588,11 +2766,11 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 16: Service Media & Visual Gallery */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
-                <ImageIcon className="w-6 h-6 text-[#5CA8FF]" />
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                <ImageIcon className="w-6 h-6 text-[#2F5233]" />
                 <span>16. Service Media & Visual Gallery</span>
               </h2>
               <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">Manage cover photo and gallery media associated with this exact service ({serviceMedia.length} Media Items)</p>
@@ -2607,7 +2785,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   { id: newId, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef', caption: `${name} service image`, media_type: 'gallery', is_cover: newCover }
                 ]);
               }}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-[#5CA8FF] border border-blue-200 rounded-xl text-xs md:text-sm font-bold transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-[#2F5233] border border-[#E5DEC9] rounded-xl text-xs md:text-sm font-bold transition-colors"
             >
               <Plus className="w-4 h-4" />
               <span>Add Image</span>
@@ -2615,7 +2793,7 @@ export const ServiceDetailEditView: React.FC = () => {
           </div>
 
           {serviceMedia.length === 0 ? (
-            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+            <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between text-sm">
               <span className="text-slate-500 font-semibold flex items-center gap-2">
                 <ImageIcon className="w-4 h-4 text-slate-400" />
                 No service images added.
@@ -2627,7 +2805,7 @@ export const ServiceDetailEditView: React.FC = () => {
                     { id: `media_${Date.now()}`, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef', caption: `${name} cover photo`, media_type: 'gallery', is_cover: true }
                   ]);
                 }}
-                className="px-3 py-1 bg-white border border-slate-300 hover:border-[#5CA8FF] text-[#5CA8FF] rounded-xl text-xs font-bold transition-colors"
+                className="px-3 py-1 bg-white border border-slate-300 hover:border-[#2F5233] text-[#2F5233] rounded-xl text-xs font-bold transition-colors"
               >
                 + Add Image
               </button>
@@ -2635,8 +2813,8 @@ export const ServiceDetailEditView: React.FC = () => {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {serviceMedia.map((m, idx) => (
-                <div key={m.id || idx} className="bg-slate-50 border border-slate-200 rounded-2xl p-3 space-y-3 relative group">
-                  <div className="relative h-36 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200">
+                <div key={m.id || idx} className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl p-3 space-y-3 relative group">
+                  <div className="relative h-36 w-full rounded-xl overflow-hidden bg-slate-200 border border-[#E5DEC9]">
                     <img src={m.url} alt={m.caption || name} className="h-full w-full object-cover" />
                     {m.is_cover && (
                       <span className="absolute top-2 left-2 px-2.5 py-0.5 bg-amber-500 text-white rounded-lg text-xs font-bold shadow-xs">
@@ -2655,7 +2833,7 @@ export const ServiceDetailEditView: React.FC = () => {
                         setServiceMedia(copy);
                       }}
                       placeholder="Image caption..."
-                      className="w-full bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/30"
+                      className="w-full bg-white border border-[#E5DEC9] rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                     />
 
                     <div className="flex items-center justify-between gap-1 text-xs">
@@ -2666,7 +2844,7 @@ export const ServiceDetailEditView: React.FC = () => {
                           copy[idx].media_type = e.target.value;
                           setServiceMedia(copy);
                         }}
-                        className="bg-white border border-slate-200 rounded-lg px-2 py-1 font-semibold text-slate-700 focus:outline-none text-xs"
+                        className="bg-white border border-[#E5DEC9] rounded-lg px-2 py-1 font-semibold text-slate-700 focus:outline-none text-xs"
                       >
                         <option value="gallery">Gallery</option>
                         <option value="process">Process</option>
@@ -2684,7 +2862,7 @@ export const ServiceDetailEditView: React.FC = () => {
                             setServiceMedia(copy);
                           }}
                           className={`p-1 rounded-lg border text-xs font-bold transition-colors ${
-                            m.is_cover ? 'bg-amber-50 text-amber-600 border-amber-200' : 'bg-white text-slate-400 border-slate-200 hover:text-slate-700'
+                            m.is_cover ? 'bg-amber-50 text-amber-600 border-amber-200' : 'bg-white text-slate-400 border-[#E5DEC9] hover:text-slate-700'
                           }`}
                           title="Set as Cover Photo"
                         >
@@ -2709,11 +2887,11 @@ export const ServiceDetailEditView: React.FC = () => {
         </div>
 
         {/* Section 17: Activity & Change History */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+        <div className="bg-white p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#E5DEC9]/60 pb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
-                <History className="w-6 h-6 text-[#5CA8FF]" />
+              <h2 className="text-xl md:text-2xl font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                <History className="w-6 h-6 text-[#2F5233]" />
                 <span>17. Activity & Change History</span>
               </h2>
               <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">
@@ -2721,7 +2899,7 @@ export const ServiceDetailEditView: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-2xl border border-slate-200">
+            <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-2xl border border-[#E5DEC9]">
               {['all', 'pricing', 'status', 'content'].map((filterKey) => (
                 <button
                   key={filterKey}
@@ -2741,11 +2919,11 @@ export const ServiceDetailEditView: React.FC = () => {
 
           {auditLoading ? (
             <div className="p-8 text-center space-y-2">
-              <Loader2 className="w-6 h-6 animate-spin text-[#5CA8FF] mx-auto" />
+              <Loader2 className="w-6 h-6 animate-spin text-[#2F5233] mx-auto" />
               <p className="text-sm font-semibold text-slate-500">Loading audit history ledger...</p>
             </div>
           ) : auditLogs.length === 0 ? (
-            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-sm">
+            <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between text-sm">
               <span className="text-slate-500 font-semibold flex items-center gap-2">
                 <History className="w-4 h-4 text-slate-400" />
                 No recorded activity for this service.
@@ -2762,7 +2940,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   return true;
                 })
                 .map((log) => (
-                  <div key={log.id} className="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div key={log.id} className="p-5 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="space-y-1.5">
                       <div className="flex items-center gap-2">
                         <span className="text-base font-bold text-slate-900">{log.action}</span>
@@ -2778,7 +2956,7 @@ export const ServiceDetailEditView: React.FC = () => {
                       </div>
 
                       {log.metadata_json?.changes_summary && (
-                        <p className="text-sm font-semibold text-slate-700 bg-white px-3 py-1.5 rounded-xl border border-slate-200 font-mono">
+                        <p className="text-sm font-semibold text-slate-700 bg-white px-3 py-1.5 rounded-xl border border-[#E5DEC9] font-mono">
                           {log.metadata_json.changes_summary}
                         </p>
                       )}
@@ -2819,12 +2997,12 @@ export const ServiceDetailEditView: React.FC = () => {
       {/* Confirmation Modal Before Deactivating Service */}
       {deactivateModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 overflow-hidden animate-in fade-in p-6 space-y-4">
+          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] overflow-hidden animate-in fade-in p-6 space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mx-auto">
               <AlertTriangle className="w-6 h-6" />
             </div>
             <div className="text-center space-y-2">
-              <h3 className="text-lg font-bold text-slate-900">Deactivate {name}?</h3>
+              <h3 className="text-lg font-bold font-serif text-[#1F2A1E]">Deactivate {name}?</h3>
               <p className="text-sm text-slate-600 font-medium">
                 Are you sure you want to deactivate this service? Customers will no longer be able to book it.
               </p>
@@ -2855,12 +3033,12 @@ export const ServiceDetailEditView: React.FC = () => {
       {/* Confirmation Modal Before Regeneration */}
       {confirmRegenerateOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 overflow-hidden animate-in fade-in p-6 space-y-4">
+          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] overflow-hidden animate-in fade-in p-6 space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mx-auto">
               <AlertTriangle className="w-6 h-6" />
             </div>
             <div className="text-center space-y-2">
-              <h3 className="text-lg font-bold text-slate-900">Confirm AI Regeneration</h3>
+              <h3 className="text-lg font-bold font-serif text-[#1F2A1E]">Confirm AI Regeneration</h3>
               <p className="text-sm text-slate-600 font-medium">
                 This will generate fresh AI content for <strong>{name}</strong> using OpenRouter LLM. Manually edited content may be overwritten upon review.
               </p>
@@ -2874,7 +3052,7 @@ export const ServiceDetailEditView: React.FC = () => {
               </button>
               <button
                 onClick={handleConfirmRegenerate}
-                className="px-5 py-2.5 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-2xl text-xs shadow-sm"
+                className="px-5 py-2.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-2xl text-xs shadow-sm"
               >
                 Proceed to Regenerate
               </button>
@@ -2886,11 +3064,11 @@ export const ServiceDetailEditView: React.FC = () => {
       {/* Validated AI Output Review Modal */}
       {aiReviewOpen && aiGeneratedData && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh] animate-in fade-in">
-            <div className="flex items-center justify-between px-8 py-5 border-b border-slate-100 bg-blue-50">
+          <div className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-[#E5DEC9] overflow-hidden flex flex-col max-h-[85vh] animate-in fade-in">
+            <div className="flex items-center justify-between px-8 py-5 border-b border-[#E5DEC9]/60 bg-blue-50">
               <div className="flex items-center gap-3">
-                <Sparkles className="w-6 h-6 text-[#5CA8FF]" />
-                <h3 className="font-bold text-slate-900 text-base">Review Validated AI Output</h3>
+                <Sparkles className="w-6 h-6 text-[#2F5233]" />
+                <h3 className="font-bold font-serif text-[#1F2A1E] text-base">Review Validated AI Output</h3>
               </div>
               <button onClick={() => setAiReviewOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X className="w-6 h-6" />
@@ -2898,7 +3076,7 @@ export const ServiceDetailEditView: React.FC = () => {
             </div>
 
             <div className="p-8 overflow-y-auto space-y-5 text-sm">
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9]">
                 <p className="font-bold text-slate-900">AI Description:</p>
                 <p className="text-slate-700 mt-1 font-medium">{aiGeneratedData.description}</p>
               </div>
@@ -2937,7 +3115,7 @@ export const ServiceDetailEditView: React.FC = () => {
               </div>
             </div>
 
-            <div className="p-5 border-t border-slate-100 bg-slate-50 flex items-center justify-end gap-4">
+            <div className="p-5 border-t border-[#E5DEC9]/60 bg-[#FAF7F0] flex items-center justify-end gap-4">
               <button
                 onClick={() => setAiReviewOpen(false)}
                 className="px-5 py-2.5 bg-slate-200 text-slate-700 font-bold rounded-2xl text-xs"
@@ -2946,7 +3124,7 @@ export const ServiceDetailEditView: React.FC = () => {
               </button>
               <button
                 onClick={handleApplyAiData}
-                className="px-6 py-2.5 bg-[#5CA8FF] text-white font-bold rounded-2xl text-xs shadow-sm hover:bg-blue-600"
+                className="px-6 py-2.5 bg-[#2F5233] text-white font-bold rounded-2xl text-xs shadow-sm hover:bg-[#3D6B42]"
               >
                 Apply to Form
               </button>
@@ -2957,16 +3135,16 @@ export const ServiceDetailEditView: React.FC = () => {
       {/* Customer-Facing Service Preview Modal */}
       {previewModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
-          <div className="bg-white w-full max-w-4xl max-h-[92vh] rounded-3xl shadow-2xl border border-slate-200 overflow-y-auto animate-in fade-in space-y-0">
+          <div className="bg-white w-full max-w-4xl max-h-[92vh] rounded-3xl shadow-2xl border border-[#E5DEC9] overflow-y-auto animate-in fade-in space-y-0">
             {/* Customer Header Banner */}
-            <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-sm p-6 border-b border-slate-100 flex items-center justify-between gap-4">
+            <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-sm p-6 border-b border-[#E5DEC9]/60 flex items-center justify-between gap-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
                   <span>{category}</span>
                   <span>•</span>
                   <span>{subcategory}</span>
                 </div>
-                <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">{name}</h1>
+                <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight">{name}</h1>
               </div>
 
               <div className="flex items-center gap-3">
@@ -3011,7 +3189,7 @@ export const ServiceDetailEditView: React.FC = () => {
             </div>
 
             {/* Pre-Publish Quality Audit Bar */}
-            <div className="p-6 bg-slate-50 border-b border-slate-100 space-y-2">
+            <div className="p-6 bg-[#FAF7F0] border-b border-[#E5DEC9]/60 space-y-2">
               <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Pre-Publish Completeness Check</p>
               <div className="flex flex-wrap items-center gap-3 text-xs font-semibold">
                 <span className="inline-flex items-center gap-1 text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">✓ Name</span>
@@ -3028,7 +3206,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   <span className="inline-flex items-center gap-1 text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">⚠ Scope Undefined</span>
                 )}
                 {serviceMedia.length === 0 && (
-                  <span className="inline-flex items-center gap-1 text-slate-600 bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">ℹ No Cover Media</span>
+                  <span className="inline-flex items-center gap-1 text-slate-600 bg-slate-100 px-2.5 py-1 rounded-lg border border-[#E5DEC9]">ℹ No Cover Media</span>
                 )}
               </div>
             </div>
@@ -3037,7 +3215,7 @@ export const ServiceDetailEditView: React.FC = () => {
             <div className="p-6 md:p-8 space-y-8">
               {/* Media Header if Cover Photo Exists */}
               {serviceMedia.length > 0 && (
-                <div className="h-56 md:h-72 w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 relative">
+                <div className="h-56 md:h-72 w-full rounded-2xl overflow-hidden bg-slate-100 border border-[#E5DEC9] relative">
                   <img
                     src={(serviceMedia.find(m => m.is_cover) || serviceMedia[0]).url}
                     alt={name}
@@ -3059,7 +3237,7 @@ export const ServiceDetailEditView: React.FC = () => {
                   <div className="space-y-1 sm:text-right">
                     <p className="text-xs font-bold text-slate-500 uppercase">Estimated Duration</p>
                     <p className="text-lg font-bold text-slate-800 flex items-center sm:justify-end gap-1.5">
-                      <Clock className="w-5 h-5 text-[#5CA8FF]" />
+                      <Clock className="w-5 h-5 text-[#2F5233]" />
                       {estimatedDuration} Minutes
                     </p>
                   </div>
@@ -3068,12 +3246,12 @@ export const ServiceDetailEditView: React.FC = () => {
 
               {/* Description & Highlights */}
               <div className="space-y-3">
-                <h2 className="text-xl font-bold text-slate-900">About This Service</h2>
+                <h2 className="text-xl font-bold font-serif text-[#1F2A1E]">About This Service</h2>
                 <p className="text-base text-slate-700 font-medium leading-relaxed">{description || 'No description provided.'}</p>
                 {highlights.length > 0 && (
                   <div className="flex flex-wrap gap-2 pt-2">
                     {highlights.map((hl, i) => (
-                      <span key={i} className="inline-flex items-center gap-1 px-3 py-1 bg-blue-50 text-[#5CA8FF] border border-blue-200 rounded-xl text-xs font-bold">
+                      <span key={i} className="inline-flex items-center gap-1 px-3 py-1 bg-[#F2EDE1] text-[#2F5233] border border-[#E5DEC9] rounded-xl text-xs font-bold">
                         <Sparkles className="w-3.5 h-3.5" />
                         {hl}
                       </span>
@@ -3124,11 +3302,11 @@ export const ServiceDetailEditView: React.FC = () => {
               {/* How It Works / Process Steps (Rendered only if data exists!) */}
               {processSteps.length > 0 && (
                 <div className="space-y-4">
-                  <h2 className="text-xl font-bold text-slate-900">How It Works</h2>
+                  <h2 className="text-xl font-bold font-serif text-[#1F2A1E]">How It Works</h2>
                   <div className="space-y-3">
                     {processSteps.map((step, i) => (
-                      <div key={i} className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-4">
-                        <div className="w-8 h-8 rounded-xl bg-[#5CA8FF] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+                      <div key={i} className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-start gap-4">
+                        <div className="w-8 h-8 rounded-xl bg-[#2F5233] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
                           {step.step_number || i + 1}
                         </div>
                         <div className="space-y-1">
@@ -3143,14 +3321,14 @@ export const ServiceDetailEditView: React.FC = () => {
 
               {/* Tools & Materials (Rendered only if data exists!) */}
               {toolsMaterials.length > 0 && (
-                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
-                  <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <div className="p-6 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] space-y-3">
+                  <h3 className="text-lg font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                     <Wrench className="w-5 h-5 text-slate-700" />
                     Tools & Equipment
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {toolsMaterials.map((t, i) => (
-                      <span key={i} className="px-3 py-1 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 shadow-xs">
+                      <span key={i} className="px-3 py-1 bg-white border border-[#E5DEC9] rounded-xl text-xs font-semibold text-slate-800 shadow-xs">
                         {t}
                       </span>
                     ))}
@@ -3161,14 +3339,14 @@ export const ServiceDetailEditView: React.FC = () => {
               {/* Customer Preparation (Rendered ONLY if data exists! Hides for Pedicure!) */}
               {customerSetup.length > 0 && (
                 <div className="p-6 bg-blue-50/30 rounded-2xl border border-blue-100 space-y-3">
-                  <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                    <Layers className="w-5 h-5 text-[#5CA8FF]" />
+                  <h3 className="text-lg font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                    <Layers className="w-5 h-5 text-[#2F5233]" />
                     Customer Preparation
                   </h3>
                   <ul className="space-y-2 text-sm font-semibold text-slate-800">
                     {customerSetup.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="text-[#5CA8FF] font-bold">•</span>
+                        <span className="text-[#2F5233] font-bold">•</span>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -3178,8 +3356,8 @@ export const ServiceDetailEditView: React.FC = () => {
 
               {/* Aftercare & Precautions (Rendered only if data exists!) */}
               {aftercare.length > 0 && (
-                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
-                  <h3 className="text-lg font-bold text-slate-900">Aftercare & Maintenance</h3>
+                <div className="p-6 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] space-y-3">
+                  <h3 className="text-lg font-bold font-serif text-[#1F2A1E]">Aftercare & Maintenance</h3>
                   <ul className="space-y-2 text-sm font-semibold text-slate-800">
                     {aftercare.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
@@ -3265,7 +3443,7 @@ export const ServiceDetailEditView: React.FC = () => {
               {/* Suggested Add-ons (Rendered only if data exists!) */}
               {addonsList.length > 0 && (
                 <div className="p-6 bg-blue-50/30 rounded-2xl border border-blue-100 space-y-3">
-                  <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                  <h3 className="text-lg font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                     <Package className="w-5 h-5 text-blue-600" />
                     Available Service Add-ons
                   </h3>
@@ -3288,7 +3466,7 @@ export const ServiceDetailEditView: React.FC = () => {
               {/* Frequently Asked Questions (Rendered only if data exists!) */}
               {faqs.length > 0 && (
                 <div className="space-y-4">
-                  <h2 className="text-xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                  <h2 className="text-xl font-bold font-serif text-[#1F2A1E]">Frequently Asked Questions</h2>
                   <div className="space-y-3">
                     {faqs.map((f, i) => (
                       <div key={i} className="p-5 bg-amber-50/30 rounded-2xl border border-amber-200 space-y-2">
@@ -3313,7 +3491,7 @@ export const ServiceDetailEditView: React.FC = () => {
             </div>
 
             {/* Modal Footer Actions */}
-            <div className="p-6 border-t border-slate-100 bg-slate-50 flex items-center justify-between gap-4">
+            <div className="p-6 border-t border-[#E5DEC9]/60 bg-[#FAF7F0] flex items-center justify-between gap-4">
               <button
                 type="button"
                 onClick={() => setPreviewModalOpen(false)}

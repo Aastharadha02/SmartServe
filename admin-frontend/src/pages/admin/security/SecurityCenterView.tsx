@@ -186,7 +186,7 @@ export const SecurityCenterView: React.FC = () => {
       case 'high':
         return 'bg-amber-50 text-amber-700 border-amber-200 font-bold';
       default:
-        return 'bg-blue-50 text-[#5CA8FF] border-blue-200 font-semibold';
+        return 'bg-[#F2EDE1] text-[#2F5233] border-[#E5DEC9] font-semibold';
     }
   };
 
@@ -197,7 +197,7 @@ export const SecurityCenterView: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading Security & Risk Control Center...</p>
       </div>
     );
@@ -209,7 +209,7 @@ export const SecurityCenterView: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+            <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight flex items-center gap-2">
               <ShieldAlert className="w-7 h-7 text-rose-600" />
               <span>Security & Audit Logs Center</span>
             </h1>
@@ -220,26 +220,26 @@ export const SecurityCenterView: React.FC = () => {
         </div>
 
         {/* Restricted Notice Card */}
-        <div className="bg-white p-8 md:p-12 rounded-3xl border border-slate-200 shadow-sm text-center max-w-2xl mx-auto space-y-6 my-12">
+        <div className="bg-white p-8 md:p-12 rounded-3xl border border-[#E5DEC9] shadow-sm text-center max-w-2xl mx-auto space-y-6 my-12">
           <div className="w-16 h-16 bg-rose-50 text-rose-600 rounded-2xl border border-rose-200 flex items-center justify-center mx-auto shadow-sm">
             <Lock className="w-8 h-8 text-rose-600" />
           </div>
           <div className="space-y-2">
-            <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-2xl font-extrabold font-serif text-[#1F2A1E] tracking-tight">
               Security Audit Logs Restricted
             </h2>
             <p className="text-slate-600 text-sm font-medium leading-relaxed">
               Viewing security audit logs, system session controls, and login risk activity metrics is strictly restricted to <strong>Super Admin</strong> accounts (`admin@smartserve.com`).
             </p>
           </div>
-          <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs text-slate-500 font-semibold flex items-center justify-center gap-2">
+          <div className="bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9] text-xs text-slate-500 font-semibold flex items-center justify-center gap-2">
             <ShieldAlert className="w-4 h-4 text-amber-500 flex-shrink-0" />
             <span>Current Session: <strong>{adminSession.email}</strong> ({adminSession.role_name || adminSession.role})</span>
           </div>
           <div className="pt-2">
             <a
               href="/admin/dashboard"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-2xl text-xs transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-2xl text-xs transition-colors shadow-sm"
             >
               Back to Dashboard
             </a>
@@ -252,7 +252,7 @@ export const SecurityCenterView: React.FC = () => {
   if (!summary) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading Security & Risk Control Center...</p>
       </div>
     );
@@ -269,10 +269,10 @@ export const SecurityCenterView: React.FC = () => {
       )}
 
       {/* Header Banner */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Security & Risk Center</h1>
+            <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight">Security & Risk Center</h1>
             <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
               <span>System Guard Active</span>
@@ -290,7 +290,7 @@ export const SecurityCenterView: React.FC = () => {
             disabled={totpLoading}
             className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl text-xs flex items-center gap-2 shadow-xs transition-colors"
           >
-            {totpLoading ? <Loader2 className="w-4 h-4 animate-spin text-[#5CA8FF]" /> : <Smartphone className="w-4 h-4 text-[#5CA8FF]" />}
+            {totpLoading ? <Loader2 className="w-4 h-4 animate-spin text-[#2F5233]" /> : <Smartphone className="w-4 h-4 text-[#2F5233]" />}
             <span>Configure 2FA Authenticator</span>
           </button>
         </div>
@@ -298,32 +298,32 @@ export const SecurityCenterView: React.FC = () => {
 
       {/* KPI Overview Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-        <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
           <span className="text-[10px] font-bold text-slate-400 uppercase block">Audit Log Entries</span>
           <span className="text-xl md:text-2xl font-extrabold text-slate-900 mt-1 block">{summary.total_audit_events}</span>
         </div>
 
-        <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
           <span className="text-[10px] font-bold text-slate-400 uppercase block">Active Sessions</span>
-          <span className="text-xl md:text-2xl font-extrabold text-[#5CA8FF] mt-1 block">{summary.active_sessions}</span>
+          <span className="text-xl md:text-2xl font-extrabold text-[#2F5233] mt-1 block">{summary.active_sessions}</span>
         </div>
 
-        <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
           <span className="text-[10px] font-bold text-slate-400 uppercase block">Failed Logins</span>
           <span className="text-xl md:text-2xl font-extrabold text-amber-600 mt-1 block">{summary.failed_logins}</span>
         </div>
 
-        <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
           <span className="text-[10px] font-bold text-slate-400 uppercase block">Suspicious Events</span>
           <span className="text-xl md:text-2xl font-extrabold text-rose-600 mt-1 block">{summary.suspicious_activities}</span>
         </div>
 
-        <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
           <span className="text-[10px] font-bold text-slate-400 uppercase block">Critical Events</span>
           <span className="text-xl md:text-2xl font-extrabold text-rose-700 mt-1 block">{summary.critical_events}</span>
         </div>
 
-        <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
           <span className="text-[10px] font-bold text-slate-400 uppercase block">Admin 2FA Status</span>
           <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg border border-emerald-200 mt-2.5 inline-block">
             {summary.is_totp_enabled ? '2FA Enabled' : 'Not Enabled'}
@@ -332,13 +332,13 @@ export const SecurityCenterView: React.FC = () => {
       </div>
 
       {/* Module Navigation Tabs */}
-      <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-2 overflow-x-auto">
+      <div className="bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm flex items-center gap-2 overflow-x-auto">
         <button
           onClick={() => setActiveTab('audit')}
           className={`px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm transition-all flex items-center gap-2 ${
             activeTab === 'audit'
-              ? 'bg-[#5CA8FF] text-white shadow-xs'
-              : 'text-slate-600 hover:bg-slate-100'
+              ? 'bg-[#2F5233] text-white shadow-xs'
+              : 'text-slate-600 hover:bg-[#F2EDE1]'
           }`}
         >
           <FileText className="w-4 h-4" />
@@ -349,8 +349,8 @@ export const SecurityCenterView: React.FC = () => {
           onClick={() => setActiveTab('suspicious')}
           className={`px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm transition-all flex items-center gap-2 ${
             activeTab === 'suspicious'
-              ? 'bg-[#5CA8FF] text-white shadow-xs'
-              : 'text-slate-600 hover:bg-slate-100'
+              ? 'bg-[#2F5233] text-white shadow-xs'
+              : 'text-slate-600 hover:bg-[#F2EDE1]'
           }`}
         >
           <ShieldAlert className="w-4 h-4" />
@@ -361,8 +361,8 @@ export const SecurityCenterView: React.FC = () => {
           onClick={() => setActiveTab('failed')}
           className={`px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm transition-all flex items-center gap-2 ${
             activeTab === 'failed'
-              ? 'bg-[#5CA8FF] text-white shadow-xs'
-              : 'text-slate-600 hover:bg-slate-100'
+              ? 'bg-[#2F5233] text-white shadow-xs'
+              : 'text-slate-600 hover:bg-[#F2EDE1]'
           }`}
         >
           <Key className="w-4 h-4" />
@@ -373,8 +373,8 @@ export const SecurityCenterView: React.FC = () => {
           onClick={() => setActiveTab('sessions')}
           className={`px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm transition-all flex items-center gap-2 ${
             activeTab === 'sessions'
-              ? 'bg-[#5CA8FF] text-white shadow-xs'
-              : 'text-slate-600 hover:bg-slate-100'
+              ? 'bg-[#2F5233] text-white shadow-xs'
+              : 'text-slate-600 hover:bg-[#F2EDE1]'
           }`}
         >
           <Monitor className="w-4 h-4" />
@@ -386,7 +386,7 @@ export const SecurityCenterView: React.FC = () => {
       {activeTab === 'audit' && (
         <div className="space-y-6">
           {/* Search & Risk Filters */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
             <div className="relative flex-1 w-full max-w-md">
               <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
@@ -394,7 +394,7 @@ export const SecurityCenterView: React.FC = () => {
                 value={auditSearch}
                 onChange={(e) => setAuditSearch(e.target.value)}
                 placeholder="Search actor email, action, target resource..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-medium"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-medium"
               />
             </div>
 
@@ -406,7 +406,7 @@ export const SecurityCenterView: React.FC = () => {
               <select
                 value={riskFilter}
                 onChange={(e) => setRiskFilter(e.target.value)}
-                className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
               >
                 <option value="">All Risk Levels</option>
                 <option value="info">Info</option>
@@ -419,16 +419,16 @@ export const SecurityCenterView: React.FC = () => {
 
           {/* Audit Log Table */}
           {filteredAuditLogs.length === 0 ? (
-            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
               <FileText className="w-8 h-8 text-slate-400 mx-auto" />
               <h3 className="text-base font-bold text-slate-800">No recent security events found.</h3>
               <p className="text-xs text-slate-500 font-medium">Try clearing your risk level filter or search term.</p>
             </div>
           ) : (
-            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-3xl border border-[#E5DEC9] shadow-sm overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] border-b border-slate-200">
+                  <thead className="bg-[#FAF7F0] text-slate-600 font-bold uppercase text-[10px] border-b border-[#E5DEC9]">
                     <tr>
                       <th className="py-3.5 px-6">Timestamp</th>
                       <th className="py-3.5 px-4">Actor / Email</th>
@@ -440,7 +440,7 @@ export const SecurityCenterView: React.FC = () => {
                   </thead>
                   <tbody className="divide-y divide-slate-100 font-medium">
                     {filteredAuditLogs.map((log) => (
-                      <tr key={log.id} className="hover:bg-slate-50 transition-colors">
+                      <tr key={log.id} className="hover:bg-[#FAF7F0] transition-colors">
                         <td className="py-4 px-6 text-slate-500 whitespace-nowrap font-mono text-[11px]">
                           {log.created_at ? new Date(log.created_at).toLocaleString('en-IN') : 'N/A'}
                         </td>
@@ -467,7 +467,7 @@ export const SecurityCenterView: React.FC = () => {
       {activeTab === 'suspicious' && (
         <div className="space-y-6">
           {suspiciousList.length === 0 ? (
-            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
               <ShieldCheck className="w-8 h-8 text-emerald-500 mx-auto" />
               <h3 className="text-base font-bold text-slate-800">No suspicious activity detected.</h3>
               <p className="text-xs text-slate-500 font-medium">System anomaly monitoring reports zero active risk flags.</p>
@@ -501,7 +501,7 @@ export const SecurityCenterView: React.FC = () => {
                         </div>
                       )}
 
-                      <div className="pt-2 flex items-center justify-between text-[11px] text-slate-500 font-medium border-t border-slate-100">
+                      <div className="pt-2 flex items-center justify-between text-[11px] text-slate-500 font-medium border-t border-[#E5DEC9]/60">
                         <span>IP: {act.details_json.ip_address || '185.220.101.4'}</span>
                         <span>Location: {act.details_json.geo_location || 'Remote Host'}</span>
                       </div>
@@ -522,16 +522,16 @@ export const SecurityCenterView: React.FC = () => {
       {activeTab === 'failed' && (
         <div className="space-y-6">
           {failedLogins.length === 0 ? (
-            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
               <CheckCircle2 className="w-8 h-8 text-emerald-500 mx-auto" />
               <h3 className="text-base font-bold text-slate-800">No failed login activity.</h3>
               <p className="text-xs text-slate-500 font-medium">All authentication attempts have passed security verification.</p>
             </div>
           ) : (
-            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-3xl border border-[#E5DEC9] shadow-sm overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] border-b border-slate-200">
+                  <thead className="bg-[#FAF7F0] text-slate-600 font-bold uppercase text-[10px] border-b border-[#E5DEC9]">
                     <tr>
                       <th className="py-3.5 px-6">Target Account Email</th>
                       <th className="py-3.5 px-4">Origin IP Address</th>
@@ -542,7 +542,7 @@ export const SecurityCenterView: React.FC = () => {
                   </thead>
                   <tbody className="divide-y divide-slate-100">
                     {failedLogins.map((fl) => (
-                      <tr key={fl.id} className="hover:bg-slate-50 transition-colors">
+                      <tr key={fl.id} className="hover:bg-[#FAF7F0] transition-colors">
                         <td className="py-4 px-6 font-bold text-slate-900">{fl.email}</td>
                         <td className="py-4 px-4 font-mono text-[11px] text-slate-600">{fl.ip_address || 'Unknown'}</td>
                         <td className="py-4 px-4 font-bold text-rose-600">{fl.attempt_count} attempts</td>
@@ -574,15 +574,15 @@ export const SecurityCenterView: React.FC = () => {
       {activeTab === 'sessions' && (
         <div className="space-y-6">
           {sessions.length === 0 ? (
-            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
               <Monitor className="w-8 h-8 text-slate-400 mx-auto" />
               <h3 className="text-base font-bold text-slate-800">No active sessions.</h3>
             </div>
           ) : (
-            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-3xl border border-[#E5DEC9] shadow-sm overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] border-b border-slate-200">
+                  <thead className="bg-[#FAF7F0] text-slate-600 font-bold uppercase text-[10px] border-b border-[#E5DEC9]">
                     <tr>
                       <th className="py-3.5 px-6">Session ID / Token JTI</th>
                       <th className="py-3.5 px-4">Device / User Agent</th>
@@ -593,13 +593,13 @@ export const SecurityCenterView: React.FC = () => {
                   </thead>
                   <tbody className="divide-y divide-slate-100">
                     {sessions.map((s) => (
-                      <tr key={s.id} className="hover:bg-slate-50 transition-colors">
+                      <tr key={s.id} className="hover:bg-[#FAF7F0] transition-colors">
                         <td className="py-4 px-6 font-mono font-bold text-slate-900 text-[11px]">{s.token_jti}</td>
                         <td className="py-4 px-4 text-slate-700 truncate max-w-xs">{s.user_agent || 'Chrome / Windows 11'}</td>
                         <td className="py-4 px-4 font-mono text-[11px] text-slate-600">{s.ip_address || '127.0.0.1'}</td>
                         <td className="py-4 px-4">
                           {s.is_revoked ? (
-                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200">
+                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#F2EDE1] text-slate-600 border border-[#E5DEC9]">
                               Revoked
                             </span>
                           ) : (
@@ -625,7 +625,7 @@ export const SecurityCenterView: React.FC = () => {
                               <button
                                 disabled
                                 title="Revoking active sessions requires 'security:manage' or Super Admin permission."
-                                className="px-3 py-1.5 bg-slate-100 text-slate-400 font-bold rounded-xl border border-slate-200 text-xs inline-flex items-center gap-1 cursor-not-allowed opacity-60"
+                                className="px-3 py-1.5 bg-[#F2EDE1] text-slate-400 font-bold rounded-xl border border-[#E5DEC9] text-xs inline-flex items-center gap-1 cursor-not-allowed opacity-60"
                               >
                                 <Ban className="w-3.5 h-3.5 text-slate-400" />
                                 <span>Revoke (Disabled)</span>
@@ -646,10 +646,10 @@ export const SecurityCenterView: React.FC = () => {
       {/* TOTP 2FA Setup & Verification Modal */}
       {totpModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Smartphone className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                <Smartphone className="w-5 h-5 text-[#2F5233]" />
                 <span>Configure Admin TOTP 2FA</span>
               </h3>
               <button type="button" onClick={() => setTotpModalOpen(false)} className="text-slate-400 hover:text-slate-600">
@@ -670,7 +670,7 @@ export const SecurityCenterView: React.FC = () => {
                 </p>
 
                 {totpUri && (
-                  <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 text-center font-mono text-[11px] text-slate-700 truncate">
+                  <div className="p-3 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] text-center font-mono text-[11px] text-slate-700 truncate">
                     {totpUri}
                   </div>
                 )}
@@ -682,7 +682,7 @@ export const SecurityCenterView: React.FC = () => {
                     value={totpCode}
                     onChange={(e) => setTotpCode(e.target.value.replace(/\D/g, '').substring(0, 6))}
                     placeholder="e.g. 123456"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-center text-lg font-mono font-bold text-slate-900 tracking-widest focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                    className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-center text-lg font-mono font-bold text-slate-900 tracking-widest focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                     maxLength={6}
                     required
                   />
@@ -692,14 +692,14 @@ export const SecurityCenterView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setTotpModalOpen(false)}
-                    className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                    className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={totpLoading || totpCode.length < 6}
-                    className="px-5 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
+                    className="px-5 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
                   >
                     {totpLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Verify 2FA Code'}
                   </button>
@@ -713,9 +713,9 @@ export const SecurityCenterView: React.FC = () => {
       {/* Revoke Session Confirmation Modal */}
       {revokeModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">Revoke Active JWT Session?</h3>
+          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Revoke Active JWT Session?</h3>
               <button type="button" onClick={() => setRevokeModalOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X className="w-5 h-5" />
               </button>
@@ -729,7 +729,7 @@ export const SecurityCenterView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setRevokeModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>

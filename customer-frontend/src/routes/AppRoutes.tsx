@@ -75,6 +75,14 @@ export const AppRoutes: React.FC = () => {
           </CustomerLayout>
         }
       />
+      <Route
+        path="/catalog/service/:serviceId"
+        element={
+          <CustomerLayout>
+            <CustomerServiceDetail />
+          </CustomerLayout>
+        }
+      />
 
       {/* Protected Routes */}
       <Route

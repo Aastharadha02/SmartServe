@@ -164,7 +164,7 @@ export const SupportDetailView: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading Support Ticket Conversation Thread...</p>
       </div>
     );
@@ -174,11 +174,11 @@ export const SupportDetailView: React.FC = () => {
     return (
       <div className="max-w-xl mx-auto my-12 p-8 bg-white border border-rose-200 rounded-3xl text-center space-y-4 shadow-sm">
         <AlertTriangle className="w-10 h-10 text-rose-500 mx-auto" />
-        <h3 className="text-lg font-bold text-slate-900">Support Ticket Not Found</h3>
+        <h3 className="text-lg font-bold font-serif text-[#1F2A1E]">Support Ticket Not Found</h3>
         <p className="text-xs text-slate-600">{error || 'Unable to retrieve requested ticket.'}</p>
         <button
           onClick={() => navigate('/admin/support')}
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5CA8FF] text-white rounded-2xl text-xs font-bold"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2F5233] text-white rounded-2xl text-xs font-bold"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Support Directory</span>
@@ -199,12 +199,12 @@ export const SupportDetailView: React.FC = () => {
 
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 font-medium">
-        <Link to="/admin/support" className="hover:text-[#5CA8FF] flex items-center gap-1 transition-colors">
+        <Link to="/admin/support" className="hover:text-[#2F5233] flex items-center gap-1 transition-colors">
           <HelpCircle className="w-3.5 h-3.5" />
           <span>Operations</span>
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
-        <Link to="/admin/support" className="hover:text-[#5CA8FF] transition-colors">
+        <Link to="/admin/support" className="hover:text-[#2F5233] transition-colors">
           Support
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
@@ -212,11 +212,11 @@ export const SupportDetailView: React.FC = () => {
       </nav>
 
       {/* Support Header Banner */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex items-start md:items-center gap-5">
           <button
             onClick={() => navigate('/admin/support')}
-            className="p-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
+            className="p-2.5 rounded-2xl bg-[#F2EDE1] hover:bg-[#E5DEC9] text-slate-600 transition-colors"
             title="Back to Directory"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -225,13 +225,13 @@ export const SupportDetailView: React.FC = () => {
           <div>
             <div className="flex items-center gap-3 flex-wrap">
               <span className="text-xs font-mono font-bold text-slate-400">#{ticketData.id.substring(0, 8)}</span>
-              <h1 className="text-lg md:text-xl font-bold text-slate-900 tracking-tight">
+              <h1 className="text-lg md:text-xl font-bold font-serif text-[#1F2A1E] tracking-tight">
                 {ticketData.subject}
               </h1>
-              <span className="px-3 py-1 bg-blue-50 text-[#5CA8FF] rounded-full text-xs font-bold border border-blue-200">
+              <span className="px-3 py-1 bg-[#F2EDE1] text-[#2F5233] rounded-full text-xs font-bold border border-[#E5DEC9]">
                 {ticketData.status.replace('_', ' ')}
               </span>
-              <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold border border-slate-200">
+              <span className="px-3 py-1 bg-[#F2EDE1] text-slate-700 rounded-full text-xs font-bold border border-[#E5DEC9]">
                 Priority: {ticketData.priority}
               </span>
               {ticketData.escalated_to_admin && (
@@ -255,7 +255,7 @@ export const SupportDetailView: React.FC = () => {
             <>
               <button
                 onClick={() => setStatusModalOpen(true)}
-                className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-2xl border border-slate-200 text-xs transition-colors"
+                className="px-4 py-2 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-slate-700 font-bold rounded-2xl border border-[#E5DEC9] text-xs transition-colors"
               >
                 Update Priority/Status
               </button>
@@ -274,7 +274,7 @@ export const SupportDetailView: React.FC = () => {
             <button
               disabled
               title="Updating support ticket status or escalating requires 'support:manage' permission."
-              className="px-4 py-2 bg-slate-100 text-slate-400 font-bold rounded-2xl border border-slate-200 text-xs cursor-not-allowed opacity-70"
+              className="px-4 py-2 bg-[#F2EDE1] text-slate-400 font-bold rounded-2xl border border-[#E5DEC9] text-xs cursor-not-allowed opacity-70"
             >
               🔒 Actions Restricted (View Only)
             </button>
@@ -287,11 +287,11 @@ export const SupportDetailView: React.FC = () => {
         {/* Main Conversation Thread & Admin Reply Box (Main Visual Focus) */}
         <div className="lg:col-span-2 space-y-6">
           {/* Conversation Thread Container */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 flex flex-col justify-between min-h-[500px]">
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-6 flex flex-col justify-between min-h-[500px]">
             <div>
-              <div className="border-b border-slate-100 pb-4 mb-6 flex items-center justify-between">
-                <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-[#5CA8FF]" />
+              <div className="border-b border-[#E5DEC9]/60 pb-4 mb-6 flex items-center justify-between">
+                <h3 className="text-lg font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-[#2F5233]" />
                   <span>Conversation History Thread</span>
                 </h3>
                 <span className="text-xs font-semibold text-slate-400">
@@ -300,7 +300,7 @@ export const SupportDetailView: React.FC = () => {
               </div>
 
               {/* Description / Initial Post */}
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 mb-6">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] space-y-2 mb-6">
                 <span className="text-xs font-bold text-slate-700 block">Initial Issue Description</span>
                 <p className="text-sm text-slate-800 font-medium leading-relaxed">{ticketData.description}</p>
               </div>
@@ -322,10 +322,10 @@ export const SupportDetailView: React.FC = () => {
                         <div
                           className={`max-w-md p-4 rounded-3xl text-xs space-y-1 ${
                             isAdmin
-                              ? 'bg-[#5CA8FF] text-white rounded-br-none'
+                              ? 'bg-[#2F5233] text-white rounded-br-none'
                               : isBot
                               ? 'bg-purple-50 text-purple-900 border border-purple-200 rounded-bl-none'
-                              : 'bg-slate-100 text-slate-800 rounded-bl-none'
+                              : 'bg-[#F2EDE1] text-slate-800 rounded-bl-none'
                           }`}
                         >
                           <div className="flex items-center justify-between gap-4 font-bold text-[11px]">
@@ -345,7 +345,7 @@ export const SupportDetailView: React.FC = () => {
             </div>
 
             {/* Admin Reply Box */}
-            <form onSubmit={handleReplySubmit} className="pt-4 border-t border-slate-100 space-y-3">
+            <form onSubmit={handleReplySubmit} className="pt-4 border-t border-[#E5DEC9]/60 space-y-3">
               <label className="block text-xs font-bold text-slate-700">
                 Admin Response {!canManageSupport && '(Read Only Mode)'}
               </label>
@@ -355,14 +355,14 @@ export const SupportDetailView: React.FC = () => {
                   onChange={(e) => setReplyText(e.target.value)}
                   disabled={!canManageSupport}
                   placeholder={canManageSupport ? "Type official support reply to customer..." : "Replying to support tickets requires 'support:manage' permission."}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-medium disabled:opacity-75 disabled:cursor-not-allowed"
+                  className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl p-4 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-medium disabled:opacity-75 disabled:cursor-not-allowed"
                   rows={3}
                   required
                 />
                 <button
                   type="submit"
                   disabled={!canManageSupport || replyLoading || !replyText.trim()}
-                  className="absolute right-3 bottom-3.5 p-2.5 bg-[#5CA8FF] hover:bg-blue-600 disabled:bg-slate-300 text-white rounded-xl shadow-xs transition-colors disabled:cursor-not-allowed"
+                  className="absolute right-3 bottom-3.5 p-2.5 bg-[#2F5233] hover:bg-[#3D6B42] disabled:bg-slate-300 text-white rounded-xl shadow-xs transition-colors disabled:cursor-not-allowed"
                   title={canManageSupport ? "Send Reply" : "Replying requires 'support:manage' permission"}
                 >
                   {replyLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
@@ -375,9 +375,9 @@ export const SupportDetailView: React.FC = () => {
         {/* Right Column: Customer Context & AI Signals */}
         <div className="space-y-6">
           {/* Customer Context Panel */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <User className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
+              <User className="w-5 h-5 text-[#2F5233]" />
               <span>Customer Context Panel</span>
             </h3>
 
@@ -400,11 +400,11 @@ export const SupportDetailView: React.FC = () => {
               </div>
 
               {ticketData.booking_id && (
-                <div className="pt-2 border-t border-slate-100">
+                <div className="pt-2 border-t border-[#E5DEC9]/60">
                   <span className="text-slate-400 font-semibold block">Linked Booking</span>
                   <Link
                     to={`/admin/bookings/${ticketData.booking_id}`}
-                    className="font-mono font-bold text-[#5CA8FF] hover:underline flex items-center gap-1 mt-0.5 text-xs"
+                    className="font-mono font-bold text-[#2F5233] hover:underline flex items-center gap-1 mt-0.5 text-xs"
                   >
                     <span>#{ticketData.booking_id.substring(0, 8)}...</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -413,7 +413,7 @@ export const SupportDetailView: React.FC = () => {
               )}
 
               {ticketData.customer_context && (
-                <div className="pt-2 border-t border-slate-100 space-y-2">
+                <div className="pt-2 border-t border-[#E5DEC9]/60 space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-slate-400 font-semibold">Previous Tickets</span>
                     <span className="font-bold text-slate-800">{ticketData.customer_context.previous_tickets_count || 1} tickets</span>
@@ -432,9 +432,9 @@ export const SupportDetailView: React.FC = () => {
           {/* AI-Assisted Analysis Panel (Only when available from backend!) */}
           {ticketData.ai_analysis && (
             <div className="bg-white p-6 rounded-3xl border border-blue-200 shadow-sm space-y-4 bg-gradient-to-b from-blue-50/50 to-white">
-              <h3 className="text-base font-bold text-slate-900 border-b border-blue-100 pb-3 flex items-center justify-between">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-blue-100 pb-3 flex items-center justify-between">
                 <span className="flex items-center gap-2">
-                  <Bot className="w-5 h-5 text-[#5CA8FF]" />
+                  <Bot className="w-5 h-5 text-[#2F5233]" />
                   <span>AI-assisted analysis</span>
                 </span>
                 <Sparkles className="w-4 h-4 text-amber-500" />
@@ -468,7 +468,7 @@ export const SupportDetailView: React.FC = () => {
                 {ticketData.ai_analysis.ocr_extracted_text && (
                   <div className="pt-2 border-t border-blue-100">
                     <span className="text-slate-400 font-semibold block">OCR Extracted Text from Evidence</span>
-                    <p className="font-mono text-slate-700 bg-white p-2.5 rounded-xl border border-slate-200 mt-1 text-[11px] leading-relaxed">
+                    <p className="font-mono text-slate-700 bg-white p-2.5 rounded-xl border border-[#E5DEC9] mt-1 text-[11px] leading-relaxed">
                       "{ticketData.ai_analysis.ocr_extracted_text}"
                     </p>
                   </div>
@@ -478,19 +478,19 @@ export const SupportDetailView: React.FC = () => {
           )}
 
           {/* Image Evidence & 15-Min HMAC Signed URL Panel */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
               <Paperclip className="w-5 h-5 text-indigo-500" />
               <span>Evidence & File Attachments</span>
             </h3>
 
             {!ticketData.image_evidence_url ? (
-              <div className="p-4 bg-slate-50 rounded-2xl text-center text-xs font-semibold text-slate-500">
+              <div className="p-4 bg-[#FAF7F0] rounded-2xl text-center text-xs font-semibold text-slate-500">
                 No evidence attached.
               </div>
             ) : (
               <div className="space-y-3 text-xs">
-                <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between">
+                <div className="p-3 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Paperclip className="w-4 h-4 text-slate-400" />
                     <span className="font-bold text-slate-800 truncate">Evidence Document / Photo</span>
@@ -499,7 +499,7 @@ export const SupportDetailView: React.FC = () => {
                   <button
                     onClick={handleGenerateSignedEvidence}
                     disabled={evidenceLoading}
-                    className="px-3 py-1.5 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-xl text-xs flex items-center gap-1 shadow-xs"
+                    className="px-3 py-1.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl text-xs flex items-center gap-1 shadow-xs"
                   >
                     {evidenceLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : 'View Evidence'}
                   </button>
@@ -536,9 +536,9 @@ export const SupportDetailView: React.FC = () => {
       {/* Escalation Modal */}
       {escalateModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleEscalateSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
+          <form onSubmit={handleEscalateSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <Flame className="w-5 h-5 text-rose-600 animate-pulse" />
                 <span>Escalate Ticket to Executive Queue</span>
               </h3>
@@ -555,7 +555,7 @@ export const SupportDetailView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setEscalateModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>
@@ -574,9 +574,9 @@ export const SupportDetailView: React.FC = () => {
       {/* Priority & Status Modal */}
       {statusModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleStatusPrioritySubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">Update Ticket Priority & Status</h3>
+          <form onSubmit={handleStatusPrioritySubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Update Ticket Priority & Status</h3>
               <button type="button" onClick={() => setStatusModalOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X className="w-5 h-5" />
               </button>
@@ -587,7 +587,7 @@ export const SupportDetailView: React.FC = () => {
               <select
                 value={selectedStatus}
                 onChange={(e) => setSelectedStatus(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
               >
                 <option value="Open">Open</option>
                 <option value="In_Progress">In Progress</option>
@@ -601,7 +601,7 @@ export const SupportDetailView: React.FC = () => {
               <select
                 value={selectedPriority}
                 onChange={(e) => setSelectedPriority(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
               >
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
@@ -614,14 +614,14 @@ export const SupportDetailView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setStatusModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={updateLoading}
-                className="px-5 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
+                className="px-5 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
               >
                 {updateLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Save Changes'}
               </button>

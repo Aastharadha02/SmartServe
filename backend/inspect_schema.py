@@ -1,32 +1,31 @@
-import sys
 import os
-from dotenv import load_dotenv
 
-sys.stdout.reconfigure(encoding="utf-8")
-backend_dir = os.path.dirname(os.path.abspath(__file__))
-load_dotenv(os.path.join(backend_dir, ".env"))
-if backend_dir not in sys.path:
-    sys.path.insert(0, backend_dir)
+database_url = os.getenv("DATABASE_URL", "postgresql://postgres@localhost:5432/smartserve")
+conn = psycopg2.connect(database_url)
+cur = conn.cursor()
 
-from sqlalchemy import inspect
-from app.repositories.db import engine
+cur.execute("""
+    SELECT table_name 
+    FROM information_schema.tables 
+    WHERE table_schema = 'public'
+""")
+tables = cur.fetchall()
+print('Tables in Postgres:', [t[0] for t in tables])
 
-def main():
-    inspector = inspect(engine)
-    tables = inspector.get_table_names()
-    print("Tables in PostgreSQL:", tables)
+cur.execute("""
+    SELECT column_name, data_type, is_nullable
+    FROM information_schema.columns
+    WHERE table_name = 'services'
+""")
+columns = cur.fetchall()
+print('\nColumns in services table:')
+for c in columns:
+    print(f' - {c[0]}: {c[1]} (nullable: {c[2]})')
 
-    for table in sorted(tables):
-        print(f"\n=== Table: {table} ===")
-        cols = inspector.get_columns(table)
-        for c in cols:
-            pk = " [PK]" if c.get("primary_key") else ""
-            nullable = "NULL" if c.get("nullable") else "NOT NULL"
-            print(f"  - {c['name']}: {c['type']} {nullable}{pk}")
-        fks = inspector.get_foreign_keys(table)
-        if fks:
-            for fk in fks:
-                print(f"  -> FK ({', '.join(fk['constrained_columns'])}) references {fk['referred_table']}({', '.join(fk['referred_columns'])})")
+cur.execute("SELECT * FROM services WHERE name ILIKE '%Recliner Cleaning%'")
+row = cur.fetchone()
+print('\nRecliner Cleaning full row:')
+for col, val in zip([c[0] for c in columns], row):
+    print(f'  {col}: {val}')
 
-if __name__ == "__main__":
-    main()
+conn.close()

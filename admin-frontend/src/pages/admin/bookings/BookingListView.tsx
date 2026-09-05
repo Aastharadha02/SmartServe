@@ -169,7 +169,7 @@ export const BookingListView: React.FC = () => {
       case 'requested':
         return 'bg-amber-50 text-amber-700 border-amber-200';
       case 'assigned':
-        return 'bg-blue-50 text-[#5CA8FF] border-blue-200';
+        return 'bg-[#F2EDE1] text-[#2F5233] border-[#E5DEC9]';
       case 'accepted':
         return 'bg-indigo-50 text-indigo-700 border-indigo-200';
       case 'started':
@@ -182,14 +182,14 @@ export const BookingListView: React.FC = () => {
       case 'expired':
         return 'bg-rose-50 text-rose-700 border-rose-200';
       default:
-        return 'bg-slate-100 text-slate-700 border-slate-200';
+        return 'bg-[#F2EDE1] text-slate-700 border-[#E5DEC9]';
     }
   };
 
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading Bookings Directory & Live Dispatch Queue...</p>
       </div>
     );
@@ -222,11 +222,11 @@ export const BookingListView: React.FC = () => {
       )}
 
       {/* Header Banner */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm">
         <div>
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Bookings & Operations</h1>
-            <span className="text-xs font-bold text-[#5CA8FF] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight">Bookings & Operations</h1>
+            <span className="text-xs font-bold text-[#2F5233] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
               {bookings.length} Total Bookings
             </span>
             {emergencyCount > 0 && (
@@ -264,7 +264,7 @@ export const BookingListView: React.FC = () => {
       </div>
 
       {/* Search & Filter Controls */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
         <div className="relative flex-1 w-full max-w-md">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
@@ -272,7 +272,7 @@ export const BookingListView: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search booking ID, customer, provider, service..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-medium"
+            className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-medium"
           />
         </div>
 
@@ -280,7 +280,7 @@ export const BookingListView: React.FC = () => {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           >
             <option value="">All Statuses</option>
             <option value="requested">Requested</option>
@@ -295,7 +295,7 @@ export const BookingListView: React.FC = () => {
           <select
             value={emergencyFilter}
             onChange={(e) => setEmergencyFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           >
             <option value="">All Priority Types</option>
             <option value="emergency">Emergency Only</option>
@@ -303,17 +303,17 @@ export const BookingListView: React.FC = () => {
           </select>
 
           {/* List / Grid View Toggle */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+          <div className="flex items-center bg-[#F2EDE1] p-1 rounded-xl border border-[#E5DEC9]">
             <button
               onClick={() => setViewMode('list')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#5CA8FF] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#2F5233] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
               title="List View (Primary)"
             >
               <List className="w-4 h-4" />
             </button>
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#5CA8FF] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#2F5233] shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}
               title="Grid View"
             >
               <LayoutGrid className="w-4 h-4" />
@@ -324,16 +324,16 @@ export const BookingListView: React.FC = () => {
 
       {/* Directory Render */}
       {filteredBookings.length === 0 ? (
-        <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+        <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
           <CalendarCheck className="w-8 h-8 text-slate-400 mx-auto" />
           <h3 className="text-base font-bold text-slate-800">No bookings found.</h3>
           <p className="text-xs text-slate-500 font-medium">Try changing your search terms or status filter settings.</p>
         </div>
       ) : viewMode === 'list' ? (
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-3xl border border-[#E5DEC9] shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] border-b border-slate-200">
+              <thead className="bg-[#FAF7F0] text-slate-600 font-bold uppercase text-[10px] border-b border-[#E5DEC9]">
                 <tr>
                   <th className="py-3.5 px-6">Booking ID & Date</th>
                   <th className="py-3.5 px-4">Customer</th>
@@ -350,7 +350,7 @@ export const BookingListView: React.FC = () => {
                   <tr
                     key={b.id}
                     onClick={() => navigate(`/admin/bookings/${b.id}`)}
-                    className="hover:bg-slate-50/80 transition-colors cursor-pointer"
+                    className="hover:bg-[#FAF7F0]/80 transition-colors cursor-pointer"
                   >
                     <td className="py-4 px-6">
                       <p className="font-mono font-bold text-slate-900 text-xs">#{b.id.substring(0, 8)}</p>
@@ -363,7 +363,7 @@ export const BookingListView: React.FC = () => {
                       {b.customer_name || 'Customer'}
                     </td>
 
-                    <td className="py-4 px-4 font-semibold text-[#5CA8FF]">
+                    <td className="py-4 px-4 font-semibold text-[#2F5233]">
                       {b.service_name || 'Home Service'}
                     </td>
 
@@ -402,7 +402,7 @@ export const BookingListView: React.FC = () => {
                           e.stopPropagation();
                           navigate(`/admin/bookings/${b.id}`);
                         }}
-                        className="px-3.5 py-1.5 bg-slate-100 hover:bg-[#5CA8FF] hover:text-white text-slate-700 font-bold rounded-xl transition-colors text-xs"
+                        className="px-3.5 py-1.5 bg-[#F2EDE1] hover:bg-[#2F5233] hover:text-white text-slate-700 font-bold rounded-xl transition-colors text-xs"
                       >
                         View & Control
                       </button>
@@ -419,13 +419,13 @@ export const BookingListView: React.FC = () => {
             <div
               key={b.id}
               onClick={() => navigate(`/admin/bookings/${b.id}`)}
-              className="group bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer flex flex-col justify-between space-y-4"
+              className="group bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer flex flex-col justify-between space-y-4"
             >
               <div className="space-y-3">
                 <div className="flex items-start justify-between">
                   <div>
                     <span className="text-[10px] font-mono font-bold text-slate-400 block">#{b.id.substring(0, 8)}</span>
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#5CA8FF] transition-colors">
+                    <h3 className="text-base font-bold font-serif text-[#1F2A1E] group-hover:text-[#2F5233] transition-colors">
                       {b.service_name || 'Service Booking'}
                     </h3>
                   </div>
@@ -444,10 +444,10 @@ export const BookingListView: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <div className="pt-3 border-t border-[#E5DEC9]/60 flex items-center justify-between text-xs">
                 <span className="text-base font-extrabold text-slate-900">₹{b.total_price.toLocaleString('en-IN')}</span>
 
-                <span className="font-bold text-[#5CA8FF] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                <span className="font-bold text-[#2F5233] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
                   <span>View Detail</span>
                   <ChevronRight className="w-4 h-4" />
                 </span>
@@ -460,9 +460,9 @@ export const BookingListView: React.FC = () => {
       {/* Emergency Dispatch Modal */}
       {dispatchModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleDispatchSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
+          <form onSubmit={handleDispatchSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <Siren className="w-5 h-5 text-rose-600 animate-pulse" />
                 <span>Create Emergency Dispatch</span>
               </h3>
@@ -476,7 +476,7 @@ export const BookingListView: React.FC = () => {
               <select
                 value={selectedCustomerId}
                 onChange={(e) => setSelectedCustomerId(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 required
               >
                 {customerOptions.map((c) => (
@@ -494,7 +494,7 @@ export const BookingListView: React.FC = () => {
                   const found = serviceOptions.find((s) => s.id === e.target.value);
                   if (found) setDispatchPrice(found.price || 999);
                 }}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 required
               >
                 {serviceOptions.map((s) => (
@@ -510,7 +510,7 @@ export const BookingListView: React.FC = () => {
                 value={dispatchFlag}
                 onChange={(e) => setDispatchFlag(e.target.value)}
                 placeholder="e.g. Emergency — Circuit Breaker Trip"
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-semibold text-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-semibold text-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500/40"
                 required
               />
             </div>
@@ -521,7 +521,7 @@ export const BookingListView: React.FC = () => {
                 value={dispatchAddress}
                 onChange={(e) => setDispatchAddress(e.target.value)}
                 placeholder="Full address..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 rows={2}
                 required
               />
@@ -533,7 +533,7 @@ export const BookingListView: React.FC = () => {
                 type="number"
                 value={dispatchPrice}
                 onChange={(e) => setDispatchPrice(Number(e.target.value))}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-extrabold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-extrabold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 required
               />
             </div>
@@ -542,7 +542,7 @@ export const BookingListView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setDispatchModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>

@@ -6,6 +6,7 @@ export interface ServiceItem {
   subcategory: string;
   name: string;
   description?: string;
+  highlights?: string[];
   base_price: number;
   max_demand_increase: number;
   max_discount: number;
@@ -13,6 +14,21 @@ export interface ServiceItem {
   suggested_addons?: any[];
   is_active: boolean;
   created_at: string;
+  included?: string[];
+  excluded?: string[];
+  process_steps?: any[];
+  aftercare?: string[];
+  tools_materials?: string[];
+  customer_setup?: string[];
+  expected_results?: string[];
+  important_notes?: string[];
+  warranty?: string | null;
+  faqs?: any[];
+  tips?: string[];
+  dos?: string[];
+  donts?: string[];
+  duration_minutes?: number;
+  addons?: any[];
 }
 
 export interface ServiceCreatePayload {
@@ -20,6 +36,7 @@ export interface ServiceCreatePayload {
   subcategory: string;
   name: string;
   description?: string;
+  highlights?: string[];
   base_price: number;
   max_demand_increase?: number;
   max_discount?: number;
@@ -33,6 +50,7 @@ export interface ServiceUpdatePayload {
   subcategory?: string;
   name?: string;
   description?: string;
+  highlights?: string[];
   base_price?: number;
   max_demand_increase?: number;
   max_discount?: number;
@@ -53,6 +71,7 @@ export interface ServiceUpdatePayload {
   dos?: string[];
   donts?: string[];
   duration_minutes?: number;
+  addons?: any[];
 }
 
 export interface ProcessStepItem {
@@ -116,6 +135,11 @@ export const getCatalogServices = async (
   if (subcategory) params.subcategory = subcategory;
 
   const response = await apiClient.get<ServiceItem[]>('/admin/catalog/services', { params });
+  return response.data;
+};
+
+export const getCatalogServiceById = async (id: string): Promise<ServiceItem> => {
+  const response = await apiClient.get<ServiceItem>(`/admin/catalog/services/${id}`);
   return response.data;
 };
 

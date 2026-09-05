@@ -8,20 +8,32 @@ from app.core.security import hash_password
 def seed_initial_admins():
     db = next(get_db())
 
-    # Ensure admin@smartserve.com has AdminRole record
+    # Ensure admin@smartserve.com exists and has AdminRole record
     default_admin = db.query(User).filter(User.email == "admin@smartserve.com").first()
-    if default_admin:
-        role_entry = db.query(AdminRole).filter(AdminRole.user_id == default_admin.id).first()
-        if not role_entry:
-            role_entry = AdminRole(
-                id=uuid.uuid4(),
-                user_id=default_admin.id,
-                role_name="super_admin",
-                permissions=["dashboard:view", "catalog:manage", "providers:manage", "customers:manage", "bookings:manage", "insights:view", "support:manage", "security:manage", "admins:manage"],
-                is_active=True
-            )
-            db.add(role_entry)
-            db.commit()
+    if not default_admin:
+        default_admin = User(
+            id=uuid.uuid4(),
+            email="admin@smartserve.com",
+            password_hash=hash_password("AdminPassword123!"),
+            role="super_admin",
+            is_active=True,
+            is_2fa_enabled=False,
+            created_at=datetime.now(timezone.utc) - timedelta(days=90)
+        )
+        db.add(default_admin)
+        db.flush()
+
+    role_entry = db.query(AdminRole).filter(AdminRole.user_id == default_admin.id).first()
+    if not role_entry:
+        role_entry = AdminRole(
+            id=uuid.uuid4(),
+            user_id=default_admin.id,
+            role_name="super_admin",
+            permissions=["dashboard:view", "catalog:manage", "providers:manage", "customers:manage", "bookings:manage", "insights:view", "support:manage", "security:manage", "admins:manage", "emails:manage", "settings:manage"],
+            is_active=True
+        )
+        db.add(role_entry)
+        db.commit()
 
     existing_count = db.query(User).filter(User.role == "admin").count()
     if existing_count >= 4:
@@ -62,7 +74,7 @@ def seed_initial_admins():
         user = User(
             id=uuid.uuid4(),
             email=adata["email"],
-            password_hash=hash_password("AdminPass123!"),
+            password_hash=hash_password("AdminPassword123!"),
             role="admin",
             is_active=adata["is_active"],
             is_2fa_enabled=adata["is_2fa"],

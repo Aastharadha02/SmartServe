@@ -10,6 +10,7 @@ from app.models.customer import (
     BookingFeedback,
 )
 from app.models.security import AuditLog, FailedLoginAttempt, AdminRole
+from app.models.email import EmailTemplate, EmailLog
 
 __all__ = [
     "Provider",
@@ -27,5 +28,7 @@ __all__ = [
     "AuditLog",
     "FailedLoginAttempt",
     "AdminRole",
+    "EmailTemplate",
+    "EmailLog",
 ]
 

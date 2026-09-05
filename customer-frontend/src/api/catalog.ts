@@ -31,6 +31,20 @@ export interface ServiceProcessStep {
   title: string;
   description: string;
   duration_minutes: number;
+  is_key_step?: boolean;
+}
+
+export interface ServiceFeatureItem {
+  title: string;
+  description: string;
+}
+
+export interface ServiceMediaItem {
+  id?: string;
+  url: string;
+  caption?: string;
+  media_type?: string;
+  is_cover?: boolean;
 }
 
 export interface ServiceFAQ {
@@ -46,6 +60,7 @@ export interface ServiceItem {
   subcategory?: string;
   subcategory_slug?: string;
   description?: string;
+  distinct_features?: string[];
   features?: string[];
   included?: string[];
   excluded?: string[];
@@ -60,6 +75,8 @@ export interface ServiceItem {
   image_url?: string;
   suggested_addons?: AddonItem[];
   process_steps?: ServiceProcessStep[];
+  service_features?: ServiceFeatureItem[];
+  service_media?: ServiceMediaItem[];
   tools_materials?: string[];
   customer_setup?: string[];
   aftercare?: string[];
@@ -74,6 +91,8 @@ export interface ServiceItem {
   seo_description?: string;
   keywords?: string[];
   is_active?: boolean;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export const getCatalogCategories = async (): Promise<CategoryItem[]> => {

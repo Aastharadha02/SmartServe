@@ -124,7 +124,7 @@ export const BookingDetailView: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-3">
-        <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
         <p className="text-sm font-semibold text-slate-600">Loading Operational Booking Details & Lifecycle Timeline...</p>
       </div>
     );
@@ -134,11 +134,11 @@ export const BookingDetailView: React.FC = () => {
     return (
       <div className="max-w-xl mx-auto my-12 p-8 bg-white border border-rose-200 rounded-3xl text-center space-y-4 shadow-sm">
         <AlertTriangle className="w-10 h-10 text-rose-500 mx-auto" />
-        <h3 className="text-lg font-bold text-slate-900">Booking Record Not Found</h3>
+        <h3 className="text-lg font-bold font-serif text-[#1F2A1E]">Booking Record Not Found</h3>
         <p className="text-xs text-slate-600">{error || 'Unable to retrieve requested booking record.'}</p>
         <button
           onClick={() => navigate('/admin/bookings')}
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5CA8FF] text-white rounded-2xl text-xs font-bold"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2F5233] text-white rounded-2xl text-xs font-bold"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Bookings Directory</span>
@@ -159,12 +159,12 @@ export const BookingDetailView: React.FC = () => {
 
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 font-medium">
-        <Link to="/admin/bookings" className="hover:text-[#5CA8FF] flex items-center gap-1 transition-colors">
+        <Link to="/admin/bookings" className="hover:text-[#2F5233] flex items-center gap-1 transition-colors">
           <CalendarCheck className="w-3.5 h-3.5" />
           <span>Operations</span>
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
-        <Link to="/admin/bookings" className="hover:text-[#5CA8FF] transition-colors">
+        <Link to="/admin/bookings" className="hover:text-[#2F5233] transition-colors">
           Bookings
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
@@ -172,11 +172,11 @@ export const BookingDetailView: React.FC = () => {
       </nav>
 
       {/* Operational Header Banner */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex items-start md:items-center gap-5">
           <button
             onClick={() => navigate('/admin/bookings')}
-            className="p-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
+            className="p-2.5 rounded-2xl bg-[#F2EDE1] hover:bg-[#E5DEC9] text-slate-600 transition-colors"
             title="Back to Directory"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -184,10 +184,10 @@ export const BookingDetailView: React.FC = () => {
 
           <div>
             <div className="flex items-center gap-3 flex-wrap">
-              <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight font-mono">
+              <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight font-mono">
                 Booking #{bookingData.id.substring(0, 8)}
               </h1>
-              <span className="px-3.5 py-1 bg-blue-50 text-[#5CA8FF] rounded-full text-xs font-bold border border-blue-200">
+              <span className="px-3.5 py-1 bg-[#F2EDE1] text-[#2F5233] rounded-full text-xs font-bold border border-[#E5DEC9]">
                 {bookingData.status}
               </span>
               {bookingData.emergency_flag && (
@@ -211,7 +211,7 @@ export const BookingDetailView: React.FC = () => {
             <>
               <button
                 onClick={() => setReassignModalOpen(true)}
-                className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-2xl border border-slate-200 text-xs transition-colors flex items-center gap-1.5"
+                className="px-4 py-2 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-slate-700 font-bold rounded-2xl border border-[#E5DEC9] text-xs transition-colors flex items-center gap-1.5"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
                 <span>Reassign Provider</span>
@@ -223,7 +223,7 @@ export const BookingDetailView: React.FC = () => {
                     setTargetNextStatus(bookingData.allowed_next_statuses[0]);
                     setTransitionModalOpen(true);
                   }}
-                  className="px-5 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-2xl shadow-sm text-xs transition-colors flex items-center gap-1.5"
+                  className="px-5 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-2xl shadow-sm text-xs transition-colors flex items-center gap-1.5"
                 >
                   <Zap className="w-4 h-4" />
                   <span>Execute State Transition</span>
@@ -234,7 +234,7 @@ export const BookingDetailView: React.FC = () => {
             <button
               disabled
               title="Reassigning providers or executing state transitions requires 'bookings:manage' permission."
-              className="px-4 py-2 bg-slate-100 text-slate-400 font-bold rounded-2xl border border-slate-200 text-xs cursor-not-allowed opacity-70"
+              className="px-4 py-2 bg-[#F2EDE1] text-slate-400 font-bold rounded-2xl border border-[#E5DEC9] text-xs cursor-not-allowed opacity-70"
             >
               🔒 Actions Restricted (View Only)
             </button>
@@ -247,9 +247,9 @@ export const BookingDetailView: React.FC = () => {
         {/* Left Column: Customer, Service & Provider Details */}
         <div className="space-y-6">
           {/* Customer Details */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <User className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
+              <User className="w-5 h-5 text-[#2F5233]" />
               <span>Customer Details</span>
             </h3>
 
@@ -269,7 +269,7 @@ export const BookingDetailView: React.FC = () => {
 
               <div>
                 <span className="text-slate-400 font-semibold block">Service Location Address</span>
-                <p className="font-medium text-slate-700 mt-0.5 flex items-start gap-1.5 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                <p className="font-medium text-slate-700 mt-0.5 flex items-start gap-1.5 bg-[#FAF7F0] p-2.5 rounded-xl border border-[#E5DEC9]">
                   <MapPin className="w-4 h-4 text-rose-500 flex-shrink-0 mt-0.5" />
                   <span>{bookingData.address || 'Address not specified.'}</span>
                 </p>
@@ -278,8 +278,8 @@ export const BookingDetailView: React.FC = () => {
           </div>
 
           {/* Service & Financial Card */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
               <IndianRupee className="w-5 h-5 text-emerald-600" />
               <span>Service & Payment Details</span>
             </h3>
@@ -290,7 +290,7 @@ export const BookingDetailView: React.FC = () => {
                 <span className="font-extrabold text-slate-900 text-lg">₹{bookingData.total_price.toLocaleString('en-IN')}</span>
               </div>
 
-              <div className="flex items-center justify-between border-t border-slate-100 pt-2">
+              <div className="flex items-center justify-between border-t border-[#E5DEC9]/60 pt-2">
                 <span className="text-slate-400 font-semibold">Payment Status</span>
                 <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold ${
                   bookingData.payment_status === 'Paid' ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-700'
@@ -300,7 +300,7 @@ export const BookingDetailView: React.FC = () => {
               </div>
 
               {bookingData.otp_code && (
-                <div className="flex items-center justify-between border-t border-slate-100 pt-2">
+                <div className="flex items-center justify-between border-t border-[#E5DEC9]/60 pt-2">
                   <span className="text-slate-400 font-semibold">Start OTP Verification Code</span>
                   <span className="font-mono font-extrabold text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-lg border border-indigo-200">
                     {bookingData.otp_code}
@@ -311,9 +311,9 @@ export const BookingDetailView: React.FC = () => {
           </div>
 
           {/* Provider Info Card */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
+          <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
                 <UserCheck className="w-5 h-5 text-indigo-500" />
                 <span>Assigned Provider</span>
               </h3>
@@ -326,7 +326,7 @@ export const BookingDetailView: React.FC = () => {
                   + Reassign Provider
                 </button>
               ) : (
-                <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded-lg border border-slate-200">
+                <span className="text-[10px] font-bold text-slate-500 bg-[#F2EDE1] px-2 py-1 rounded-lg border border-[#E5DEC9]">
                   🔒 View Only Mode
                 </span>
               )}
@@ -343,7 +343,7 @@ export const BookingDetailView: React.FC = () => {
                   <p className="font-mono text-slate-600 text-[11px]">{bookingData.provider_id}</p>
                 </div>
                 {!canManageBookings && (
-                  <p className="text-[11px] text-slate-500 italic pt-1 border-t border-slate-100">
+                  <p className="text-[11px] text-slate-500 italic pt-1 border-t border-[#E5DEC9]/60">
                     Reassignment requires Operations Admin or Super Admin permission.
                   </p>
                 )}
@@ -357,7 +357,7 @@ export const BookingDetailView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setReassignModalOpen(true)}
-                    className="w-full py-2.5 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold text-xs rounded-2xl transition-colors shadow-xs"
+                    className="w-full py-2.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold text-xs rounded-2xl transition-colors shadow-xs"
                   >
                     Assign Provider Now
                   </button>
@@ -370,8 +370,8 @@ export const BookingDetailView: React.FC = () => {
         {/* Right Column: Lifecycle Timeline & State Machine Status Control */}
         <div className="lg:col-span-2 space-y-6">
           {/* Allowed Next Transitions Banner */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center justify-between">
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
+            <h3 className="text-lg font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center justify-between">
               <span className="flex items-center gap-2">
                 <Zap className="w-5 h-5 text-amber-500" />
                 <span>Backend State Machine Authorization</span>
@@ -397,7 +397,7 @@ export const BookingDetailView: React.FC = () => {
                           setTargetNextStatus(st);
                           setTransitionModalOpen(true);
                         }}
-                        className="px-4 py-2 bg-blue-50 hover:bg-[#5CA8FF] text-[#5CA8FF] hover:text-white font-bold rounded-2xl border border-blue-200 text-xs transition-colors flex items-center gap-1.5"
+                        className="px-4 py-2 bg-[#F2EDE1] hover:bg-[#2F5233] text-[#2F5233] hover:text-white font-bold rounded-2xl border border-[#E5DEC9] text-xs transition-colors flex items-center gap-1.5"
                       >
                         <ChevronRight className="w-4 h-4" />
                         <span>Transition to {st}</span>
@@ -407,7 +407,7 @@ export const BookingDetailView: React.FC = () => {
                         key={st}
                         disabled
                         title="State transition requires 'bookings:manage' permission."
-                        className="px-4 py-2 bg-slate-100 text-slate-400 font-bold rounded-2xl border border-slate-200 text-xs cursor-not-allowed opacity-60 flex items-center gap-1.5"
+                        className="px-4 py-2 bg-[#F2EDE1] text-slate-400 font-bold rounded-2xl border border-[#E5DEC9] text-xs cursor-not-allowed opacity-60 flex items-center gap-1.5"
                       >
                         <ChevronRight className="w-4 h-4 text-slate-400" />
                         <span>Transition to {st} (Disabled)</span>
@@ -420,22 +420,22 @@ export const BookingDetailView: React.FC = () => {
           </div>
 
           {/* Booking Lifecycle Timeline */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-            <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <History className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5">
+            <h3 className="text-lg font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
+              <History className="w-5 h-5 text-[#2F5233]" />
               <span>Booking Lifecycle History Timeline</span>
             </h3>
 
             {!bookingData.timeline || bookingData.timeline.length === 0 ? (
-              <div className="p-6 bg-slate-50 rounded-2xl text-center text-xs font-semibold text-slate-500">
+              <div className="p-6 bg-[#FAF7F0] rounded-2xl text-center text-xs font-semibold text-slate-500">
                 No booking activity recorded.
               </div>
             ) : (
-              <div className="relative pl-6 border-l-2 border-slate-200 space-y-6 text-xs">
+              <div className="relative pl-6 border-l-2 border-[#E5DEC9] space-y-6 text-xs">
                 {bookingData.timeline.map((eventItem, idx) => (
                   <div key={idx} className="relative group">
-                    <div className="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-white border-4 border-[#5CA8FF] group-hover:scale-110 transition-transform" />
-                    <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-1">
+                    <div className="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-white border-4 border-[#2F5233] group-hover:scale-110 transition-transform" />
+                    <div className="bg-[#FAF7F0] p-4 rounded-2xl border border-[#E5DEC9] space-y-1">
                       <p className="font-bold text-slate-900 text-xs md:text-sm">{eventItem.event}</p>
                       {eventItem.reason && (
                         <p className="text-xs text-slate-600 font-medium">Reason: {eventItem.reason}</p>
@@ -455,9 +455,9 @@ export const BookingDetailView: React.FC = () => {
       {/* State Machine Transition Modal */}
       {transitionModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleTransitionSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">Execute Booking State Transition</h3>
+          <form onSubmit={handleTransitionSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Execute Booking State Transition</h3>
               <button type="button" onClick={() => setTransitionModalOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X className="w-5 h-5" />
               </button>
@@ -472,7 +472,7 @@ export const BookingDetailView: React.FC = () => {
               <select
                 value={targetNextStatus}
                 onChange={(e) => setTargetNextStatus(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
               >
                 {bookingData.allowed_next_statuses.map((st) => (
                   <option key={st} value={st}>{st}</option>
@@ -486,7 +486,7 @@ export const BookingDetailView: React.FC = () => {
                 value={transitionReason}
                 onChange={(e) => setTransitionReason(e.target.value)}
                 placeholder="Operational transition note..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 rows={2}
               />
             </div>
@@ -495,14 +495,14 @@ export const BookingDetailView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setTransitionModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={transitionLoading}
-                className="px-5 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
+                className="px-5 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
               >
                 {transitionLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Confirm Transition'}
               </button>
@@ -514,9 +514,9 @@ export const BookingDetailView: React.FC = () => {
       {/* Provider Reassignment Modal */}
       {reassignModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleReassignSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">Reassign Booking Provider</h3>
+          <form onSubmit={handleReassignSubmit} className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Reassign Booking Provider</h3>
               <button type="button" onClick={() => setReassignModalOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X className="w-5 h-5" />
               </button>
@@ -531,7 +531,7 @@ export const BookingDetailView: React.FC = () => {
               <select
                 value={selectedProviderId}
                 onChange={(e) => setSelectedProviderId(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 required
               >
                 {providerOptions.map((p) => (
@@ -547,7 +547,7 @@ export const BookingDetailView: React.FC = () => {
                 value={reassignReason}
                 onChange={(e) => setReassignReason(e.target.value)}
                 placeholder="Reason for reassignment..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
               />
             </div>
 
@@ -555,7 +555,7 @@ export const BookingDetailView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setReassignModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>

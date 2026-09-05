@@ -7,6 +7,11 @@ from app.api.v1.customer import router as customer_router
 
 # Auto-create tables for local development mode
 Base.metadata.create_all(bind=engine)
+try:
+    from app.seed_admins import seed_initial_admins
+    seed_initial_admins()
+except Exception:
+    pass
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -37,6 +42,7 @@ def health_check():
         "status": "healthy",
         "service": settings.APP_NAME,
         "environment": settings.ENVIRONMENT,
+        "database_engine": str(engine.url),
     }
 
 

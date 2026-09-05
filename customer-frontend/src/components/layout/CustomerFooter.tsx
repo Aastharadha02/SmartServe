@@ -4,7 +4,7 @@ import { ShieldCheck, Phone, Mail, MapPin } from 'lucide-react';
 
 export const CustomerFooter: React.FC = () => {
   return (
-    <footer className="bg-[#0A1128] text-white pt-14 pb-8 font-sans border-t border-slate-800">
+    <footer className="bg-[#1F2A1E] text-[#FAF7F0] pt-14 pb-8 font-sans border-t border-[#2F5233]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Top Grid */}
@@ -13,24 +13,44 @@ export const CustomerFooter: React.FC = () => {
           {/* Brand Info (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#2563EB] flex items-center justify-center text-white font-black text-xl shadow-sm">
-                S
+              <div className="w-10 h-10 rounded-xl border border-[#C9A15A]/40 bg-[#FAF7F0] flex items-center justify-center shadow-xs p-1 flex-shrink-0">
+                <svg className="w-full h-full" viewBox="0 0 96 96" fill="none">
+                  <path
+                    d="M 48 6 L 72 6 A 18 18 0 0 1 90 24 L 90 72 A 18 18 0 0 1 72 90 L 24 90 A 18 18 0 0 1 6 72 L 6 24 A 18 18 0 0 1 24 6 L 48 6 Z"
+                    stroke="#C9A15A"
+                    strokeWidth={2.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                  <path
+                    d="M 62 30 C 62 23, 34 22, 34 38 C 34 54, 62 48, 62 64 C 62 80, 34 78, 34 70"
+                    stroke="#2F5233"
+                    strokeWidth={7}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                </svg>
               </div>
-              <h3 className="font-extrabold text-xl tracking-tight text-white">SmartServe</h3>
+              <div className="flex items-baseline font-serif">
+                <span className="font-bold text-white text-xl tracking-tight leading-none">Smart</span>
+                <span className="font-bold text-[#C9A15A] text-xl tracking-tight leading-none ml-0.5">Serve</span>
+              </div>
             </div>
-            <p className="text-slate-400 text-sm font-normal leading-relaxed max-w-sm">
-              India's premier verified home services platform. Professional deep cleaning, AC maintenance, plumbing, electrical, and urban lifestyle services delivered to your doorstep.
+            <p className="text-[#FAF7F0]/70 text-sm font-normal leading-relaxed max-w-sm">
+              India's premier verified home and urban services marketplace. Professional salon, deep cleaning, AC repair, plumbing, electrical, and lifestyle services delivered to your doorstep.
             </p>
             <div className="pt-2 flex items-center gap-3 text-xs text-emerald-400 font-semibold">
               <ShieldCheck className="w-4 h-4" />
-              <span>100% Verified Local Service Professionals</span>
+              <span>100% Verified Service Professionals & Standard Upfront Pricing</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wider">Quick Navigation</h4>
-            <ul className="space-y-2 text-sm text-slate-300">
+            <h4 className="text-xs font-bold text-[#C9A15A] uppercase tracking-wider">Quick Navigation</h4>
+            <ul className="space-y-2 text-sm text-[#FAF7F0]/75">
               <li><Link to="/home" className="hover:text-white transition-colors">Home Marketplace</Link></li>
               <li><Link to="/catalog" className="hover:text-white transition-colors">Full Catalog</Link></li>
               <li><Link to="/bookings" className="hover:text-white transition-colors">My Bookings</Link></li>
@@ -41,30 +61,30 @@ export const CustomerFooter: React.FC = () => {
 
           {/* Popular Categories */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wider">Top Categories</h4>
-            <ul className="space-y-2 text-sm text-slate-300">
+            <h4 className="text-xs font-bold text-[#C9A15A] uppercase tracking-wider">Top Categories</h4>
+            <ul className="space-y-2 text-sm text-[#FAF7F0]/75">
               <li><Link to="/catalog?category=Cleaning" className="hover:text-white transition-colors">Deep Cleaning</Link></li>
               <li><Link to="/catalog?category=AC" className="hover:text-white transition-colors">AC & Appliance Repair</Link></li>
-              <li><Link to="/catalog?category=Electrician" className="hover:text-white transition-colors">Electrician Services</Link></li>
-              <li><Link to="/catalog?category=Plumbing" className="hover:text-white transition-colors">Plumbing & Leakages</Link></li>
+              <li><Link to="/catalog?category=Electrician" className="hover:text-white transition-colors">Electrician & Repairs</Link></li>
+              <li><Link to="/catalog?category=Plumbing" className="hover:text-white transition-colors">Plumbing Solutions</Link></li>
               <li><Link to="/catalog?category=Beauty" className="hover:text-white transition-colors">Salon & Spa at Home</Link></li>
             </ul>
           </div>
 
           {/* Contact & Support */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wider">Need Help?</h4>
-            <ul className="space-y-2.5 text-xs text-slate-300">
+            <h4 className="text-xs font-bold text-[#C9A15A] uppercase tracking-wider">Need Help?</h4>
+            <ul className="space-y-2.5 text-xs text-[#FAF7F0]/75">
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-[#C9A15A] flex-shrink-0" />
                 <span>+91 1800 200 4000 (Toll Free)</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-[#C9A15A] flex-shrink-0" />
                 <span>support@smartserve.in</span>
               </li>
               <li className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-[#C9A15A] flex-shrink-0" />
                 <span>SmartServe Tower, Noida Sector 62</span>
               </li>
             </ul>
@@ -73,12 +93,12 @@ export const CustomerFooter: React.FC = () => {
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div className="pt-8 border-t border-[#FAF7F0]/10 flex flex-col sm:flex-row items-center justify-between text-xs text-[#FAF7F0]/50 gap-4">
           <p>© {new Date().getFullYear()} SmartServe Marketplace Operations. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-slate-400 cursor-pointer">Terms of Service</span>
-            <span className="hover:text-slate-400 cursor-pointer">Refund Policy</span>
+            <span className="hover:text-[#FAF7F0] cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-[#FAF7F0] cursor-pointer">Terms of Service</span>
+            <span className="hover:text-[#FAF7F0] cursor-pointer">Refund Policy</span>
           </div>
         </div>
 

@@ -220,31 +220,31 @@ export const ServiceListView: React.FC = () => {
   }
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto font-sans text-slate-800">
+    <div className="space-y-6 max-w-7xl mx-auto font-sans text-[#1F2A1E]">
       {/* Clickable Breadcrumbs Navigation */}
-      <nav className="flex items-center gap-2 text-xs text-slate-500 font-semibold overflow-x-auto">
-        <Link to="/admin/catalog" className="hover:text-[#2563EB] flex items-center gap-1 transition-colors">
-          <FolderTree className="w-3.5 h-3.5" />
+      <nav className="flex items-center gap-2 text-xs text-[#1F2A1E]/60 font-semibold overflow-x-auto">
+        <Link to="/admin/catalog" className="hover:text-[#2F5233] flex items-center gap-1 transition-colors">
+          <FolderTree className="w-3.5 h-3.5 text-[#C9A15A]" />
           <span>Catalog</span>
         </Link>
         {decodedCategory && (
           <>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-300 flex-shrink-0" />
-            <Link to={`/admin/catalog/category/${encodeURIComponent(decodedCategory)}`} className="hover:text-[#2563EB] transition-colors flex-shrink-0">
+            <ChevronRight className="w-3.5 h-3.5 text-[#E5DEC9] flex-shrink-0" />
+            <Link to={`/admin/catalog/category/${encodeURIComponent(decodedCategory)}`} className="hover:text-[#2F5233] transition-colors flex-shrink-0">
               {formatCategoryDisplayName(decodedCategory)}
             </Link>
           </>
         )}
         {decodedSubcategory && (
           <>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-300 flex-shrink-0" />
-            <span className="text-slate-900 font-bold flex-shrink-0">{decodedSubcategory}</span>
+            <ChevronRight className="w-3.5 h-3.5 text-[#E5DEC9] flex-shrink-0" />
+            <span className="text-[#1F2A1E] font-bold flex-shrink-0">{decodedSubcategory}</span>
           </>
         )}
       </nav>
 
       {/* Header Banner */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-slate-200/90 shadow-2xs">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-xs">
         <div className="flex items-start gap-4">
           <button
             onClick={() => {
@@ -254,40 +254,40 @@ export const ServiceListView: React.FC = () => {
                 navigate('/admin/catalog');
               }
             }}
-            className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors mt-0.5"
+            className="p-2.5 rounded-xl bg-[#F2EDE1] hover:bg-[#E5DEC9] text-[#1F2A1E] transition-colors mt-0.5 cursor-pointer"
             title="Back to Subcategories"
           >
             <ArrowLeft className="w-4 h-4" />
           </button>
           <div>
-            <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+            <h1 className="text-2xl font-serif text-[#1F2A1E] tracking-tight">
               {decodedSubcategory ? `${decodedSubcategory} Services` : 'All Catalog Services'}
             </h1>
-            <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
+            <p className="text-xs sm:text-sm text-[#1F2A1E]/60 font-medium mt-0.5">
               {decodedCategory ? `Category: ${formatCategoryDisplayName(decodedCategory)} • ` : ''}
-              <strong className="text-slate-800 font-bold">{totalItems}</strong> Services Available
+              <strong className="text-[#1F2A1E] font-bold">{totalItems}</strong> Services Available
             </p>
           </div>
         </div>
 
         {/* Pagination Info Badge */}
         {totalItems > 0 && (
-          <div className="text-xs font-bold text-slate-700 bg-slate-50 px-4 py-2 rounded-xl border border-slate-200/80 shadow-2xs">
+          <div className="text-xs font-bold text-[#2F5233] bg-[#F2EDE1] px-4 py-2 rounded-xl border border-[#E5DEC9] shadow-2xs">
             Showing {startIndex + 1}–{endIndex} of {totalItems} Services
           </div>
         )}
       </div>
 
       {/* Search & Filter Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200/90 shadow-2xs">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-xs">
         <div className="relative flex-1 w-full max-w-md">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#1F2A1E]/40" />
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search service name..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30 focus:border-[#2563EB]"
+            className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl pl-10 pr-4 py-2 text-xs font-medium text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
           />
         </div>
 
@@ -295,7 +295,7 @@ export const ServiceListView: React.FC = () => {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-bold text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20"
           >
             <option value="">All Statuses</option>
             <option value="active">Active Only</option>
@@ -305,7 +305,7 @@ export const ServiceListView: React.FC = () => {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-bold text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20"
           >
             <option value="name_asc">Sort: Name (A–Z)</option>
             <option value="name_desc">Sort: Name (Z–A)</option>
@@ -316,7 +316,7 @@ export const ServiceListView: React.FC = () => {
           <select
             value={pageSize}
             onChange={(e) => setPageSize(Number(e.target.value))}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2563EB]/30"
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-bold text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20"
           >
             <option value={12}>12 / page</option>
             <option value={24}>24 / page</option>
@@ -326,7 +326,7 @@ export const ServiceListView: React.FC = () => {
           <button
             onClick={handleExportFilteredExcel}
             disabled={exportLoading}
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs rounded-xl border border-emerald-200 transition-colors disabled:opacity-50"
+            className="flex items-center gap-1.5 px-3.5 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs rounded-xl border border-emerald-200 transition-colors disabled:opacity-50 cursor-pointer shadow-2xs"
             title="Export filtered catalog to Excel"
           >
             {exportLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <FileSpreadsheet className="w-3.5 h-3.5" />}
@@ -334,17 +334,17 @@ export const ServiceListView: React.FC = () => {
           </button>
 
           {/* Grid / List View Toggle */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+          <div className="flex items-center bg-[#F2EDE1] p-1 rounded-xl border border-[#E5DEC9]">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-[#2563EB] shadow-2xs' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors cursor-pointer ${viewMode === 'grid' ? 'bg-white text-[#2F5233] shadow-xs' : 'text-[#1F2A1E]/60 hover:text-[#1F2A1E]'}`}
               title="Grid View"
             >
               <LayoutGrid className="w-4 h-4" />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-[#2563EB] shadow-2xs' : 'text-slate-500 hover:text-slate-800'}`}
+              className={`p-1.5 rounded-lg transition-colors cursor-pointer ${viewMode === 'list' ? 'bg-white text-[#2F5233] shadow-xs' : 'text-[#1F2A1E]/60 hover:text-[#1F2A1E]'}`}
               title="List View"
             >
               <List className="w-4 h-4" />
@@ -355,10 +355,10 @@ export const ServiceListView: React.FC = () => {
 
       {/* Services Grid or List Render */}
       {paginatedServices.length === 0 ? (
-        <div className="py-16 p-6 text-center bg-white rounded-3xl border border-slate-200 shadow-2xs space-y-3">
-          <FolderTree className="w-10 h-10 text-slate-400 mx-auto" />
-          <h3 className="text-lg font-bold text-slate-800">No services found in this subcategory.</h3>
-          <p className="text-xs sm:text-sm text-slate-500 font-medium">
+        <div className="py-16 p-6 text-center bg-white rounded-3xl border border-[#E5DEC9] shadow-xs space-y-3">
+          <FolderTree className="w-10 h-10 text-[#1F2A1E]/40 mx-auto" />
+          <h3 className="text-lg font-bold text-[#1F2A1E]">No services found in this subcategory.</h3>
+          <p className="text-xs sm:text-sm text-[#1F2A1E]/60 font-medium">
             There are currently no active catalog services recorded under {decodedSubcategory || 'this filter'}.
           </p>
           <button
@@ -367,7 +367,7 @@ export const ServiceListView: React.FC = () => {
               setStatusFilter('');
               fetchSubcategoryServices();
             }}
-            className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-50 text-[#2563EB] hover:bg-blue-100 rounded-xl text-xs font-bold transition-colors"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#F2EDE1] text-[#2F5233] hover:bg-[#E5DEC9] rounded-xl text-xs font-bold transition-colors cursor-pointer"
           >
             <RefreshCw className="w-3.5 h-3.5" />
             <span>Reset Search & Filters</span>
@@ -381,10 +381,10 @@ export const ServiceListView: React.FC = () => {
               <div
                 key={svc.id}
                 onClick={() => navigate(`/admin/catalog/service/${svc.id}`)}
-                className="group bg-white rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-blue-300 transition-all cursor-pointer flex flex-col justify-between overflow-hidden"
+                className="group bg-white rounded-3xl border border-[#E5DEC9] shadow-xs hover:shadow-md hover:border-[#2F5233]/40 transition-all cursor-pointer flex flex-col justify-between overflow-hidden"
               >
                 {/* Real Service Image Cover */}
-                <div className="relative w-full h-40 bg-slate-100 overflow-hidden">
+                <div className="relative w-full h-40 bg-[#F2EDE1] overflow-hidden">
                   <img
                     src={serviceImg}
                     alt={svc.name}
@@ -395,7 +395,7 @@ export const ServiceListView: React.FC = () => {
                       e.currentTarget.src = DEFAULT_SERVICE_IMAGE;
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F2A1E]/60 via-transparent to-transparent"></div>
 
                   {/* Top Bar on Image: Checkbox & Status */}
                   <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
@@ -411,15 +411,15 @@ export const ServiceListView: React.FC = () => {
                         }
                       }}
                       onClick={(e) => e.stopPropagation()}
-                      className="w-4 h-4 rounded text-[#2563EB] focus:ring-[#2563EB] cursor-pointer bg-white/90 shadow-xs"
+                      className="w-4 h-4 rounded text-[#2F5233] focus:ring-[#2F5233] cursor-pointer bg-white/90 shadow-xs"
                     />
 
                     <button
                       onClick={(e) => handleToggleStatus(svc, e)}
-                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold shadow-xs transition-colors backdrop-blur-xs ${
+                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold shadow-xs transition-colors backdrop-blur-xs cursor-pointer ${
                         svc.is_active
-                          ? 'bg-emerald-500/90 text-white'
-                          : 'bg-slate-700/90 text-slate-200'
+                          ? 'bg-emerald-600/90 text-white'
+                          : 'bg-[#1F2A1E]/80 text-[#FAF7F0]'
                       }`}
                     >
                       {svc.is_active ? <CheckCircle2 className="w-3 h-3" /> : <XCircle className="w-3 h-3" />}
@@ -429,7 +429,7 @@ export const ServiceListView: React.FC = () => {
 
                   {/* Subcategory / Classification Pill on Image */}
                   <div className="absolute bottom-2.5 left-3">
-                    <span className="inline-block px-2.5 py-0.5 rounded-lg bg-black/50 backdrop-blur-xs text-white text-[11px] font-bold">
+                    <span className="inline-block px-2.5 py-0.5 rounded-lg bg-black/60 backdrop-blur-xs text-white text-[11px] font-bold">
                       {svc.subcategory}
                     </span>
                   </div>
@@ -438,30 +438,30 @@ export const ServiceListView: React.FC = () => {
                 {/* Card Content */}
                 <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#2563EB] transition-colors line-clamp-1">
+                    <h3 className="text-base sm:text-lg font-serif font-bold text-[#1F2A1E] group-hover:text-[#2F5233] transition-colors line-clamp-1">
                       {svc.name}
                     </h3>
-                    <p className="text-xs text-slate-500 font-medium mt-0.5 truncate">
+                    <p className="text-xs text-[#1F2A1E]/60 font-medium mt-0.5 truncate">
                       {formatCategoryDisplayName(svc.category)}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-100 space-y-2.5">
+                  <div className="pt-3 border-t border-[#E5DEC9] space-y-2.5">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-slate-400 font-semibold uppercase">Base Price</span>
-                      <span className="text-lg font-extrabold text-slate-900 font-mono">
+                      <span className="text-xs text-[#1F2A1E]/50 font-semibold uppercase">Base Price</span>
+                      <span className="text-lg font-extrabold text-[#1F2A1E] font-serif">
                         {formatRupee(svc.base_price)}
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between text-[11px] font-mono text-slate-600 bg-slate-50 p-2 rounded-xl border border-slate-100">
-                      <span className="text-amber-700 font-semibold">{formatSurgePercent(svc.max_demand_increase)}</span>
-                      <span className="text-emerald-700 font-semibold">{formatDiscountPercent(svc.max_discount)}</span>
+                    <div className="flex items-center justify-between text-[11px] font-mono text-[#1F2A1E]/70 bg-[#FAF7F0] p-2 rounded-xl border border-[#E5DEC9]">
+                      <span className="text-amber-800 font-semibold">{formatSurgePercent(svc.max_demand_increase)}</span>
+                      <span className="text-emerald-800 font-semibold">{formatDiscountPercent(svc.max_discount)}</span>
                     </div>
 
                     <div className="flex items-center justify-between pt-1">
-                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-lg">
-                        <Sparkles className="w-3 h-3" />
+                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#2F5233] bg-[#F2EDE1] px-2 py-0.5 rounded-lg border border-[#E5DEC9]">
+                        <Sparkles className="w-3 h-3 text-[#C9A15A]" />
                         AI Verified
                       </span>
                       <button
@@ -469,7 +469,7 @@ export const ServiceListView: React.FC = () => {
                           e.stopPropagation();
                           navigate(`/admin/catalog/service/${svc.id}`);
                         }}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 hover:bg-[#2563EB] text-[#2563EB] hover:text-white font-bold text-xs rounded-xl transition-all shadow-2xs"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F2EDE1] hover:bg-[#2F5233] text-[#2F5233] hover:text-white font-bold text-xs rounded-xl transition-all shadow-2xs border border-[#E5DEC9] cursor-pointer"
                       >
                         <Edit3 className="w-3.5 h-3.5" />
                         <span>Manage</span>
@@ -485,11 +485,11 @@ export const ServiceListView: React.FC = () => {
         /* List View */
         <div className="space-y-4">
           {/* Desktop & Tablet Table View */}
-          <div className="hidden md:block bg-white rounded-2xl border border-slate-200/90 shadow-2xs overflow-hidden">
+          <div className="hidden md:block bg-white rounded-3xl border border-[#E5DEC9] shadow-xs overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
-                  <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 font-bold uppercase tracking-wider">
+                  <tr className="bg-[#F2EDE1] border-b border-[#E5DEC9] text-[#1F2A1E] font-bold uppercase tracking-wider text-[11px]">
                     <th className="py-3.5 px-4">Service</th>
                     <th className="py-3.5 px-4">Base Price (INR)</th>
                     <th className="py-3.5 px-4">Max Surge</th>
@@ -498,14 +498,14 @@ export const ServiceListView: React.FC = () => {
                     <th className="py-3.5 px-4 text-right">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100">
+                <tbody className="divide-y divide-[#E5DEC9]">
                   {paginatedServices.map((svc) => {
                     const ServiceIcon = getServiceIcon(svc.name, svc.category);
                     return (
                       <tr
                         key={svc.id}
                         onClick={() => navigate(`/admin/catalog/service/${svc.id}`)}
-                        className="hover:bg-slate-50 transition-colors cursor-pointer"
+                        className="hover:bg-[#FAF7F0] transition-colors cursor-pointer"
                       >
                         <td className="py-3 px-4">
                           <div className="flex items-center gap-3">
@@ -521,28 +521,28 @@ export const ServiceListView: React.FC = () => {
                                 }
                               }}
                               onClick={(e) => e.stopPropagation()}
-                              className="w-4 h-4 rounded text-[#2563EB] focus:ring-[#2563EB] cursor-pointer"
+                              className="w-4 h-4 rounded text-[#2F5233] focus:ring-[#2F5233] cursor-pointer"
                             />
-                            <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#2563EB] flex items-center justify-center flex-shrink-0">
+                            <div className="w-8 h-8 rounded-lg bg-[#F2EDE1] text-[#2F5233] flex items-center justify-center flex-shrink-0 border border-[#E5DEC9]">
                               <ServiceIcon className="w-4 h-4" />
                             </div>
                             <div>
-                              <p className="font-bold text-slate-900">{svc.name}</p>
-                              <p className="text-[11px] text-slate-500 font-medium">{formatCategoryDisplayName(svc.category)} • {svc.subcategory}</p>
+                              <p className="font-bold text-[#1F2A1E] font-serif">{svc.name}</p>
+                              <p className="text-[11px] text-[#1F2A1E]/60 font-medium">{formatCategoryDisplayName(svc.category)} • {svc.subcategory}</p>
                             </div>
                           </div>
                         </td>
-                        <td className="py-3 px-4 font-mono font-bold text-slate-900 text-sm">
+                        <td className="py-3 px-4 font-serif font-bold text-[#1F2A1E] text-sm">
                           {formatRupee(svc.base_price)}
                         </td>
-                        <td className="py-3 px-4 font-mono text-amber-700 font-semibold">
+                        <td className="py-3 px-4 font-mono text-amber-800 font-semibold">
                           {formatSurgePercent(svc.max_demand_increase)}
                         </td>
-                        <td className="py-3 px-4 font-mono text-emerald-700 font-semibold">
+                        <td className="py-3 px-4 font-mono text-emerald-800 font-semibold">
                           {formatDiscountPercent(svc.max_discount)}
                         </td>
                         <td className="py-3 px-4">
-                          <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold ${svc.is_active ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-500'}`}>
+                          <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold ${svc.is_active ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-[#FAF7F0] text-[#1F2A1E]/60 border border-[#E5DEC9]'}`}>
                             {svc.is_active ? 'Active' : 'Disabled'}
                           </span>
                         </td>
@@ -552,7 +552,7 @@ export const ServiceListView: React.FC = () => {
                               e.stopPropagation();
                               navigate(`/admin/catalog/service/${svc.id}`);
                             }}
-                            className="px-3 py-1 bg-slate-100 hover:bg-[#2563EB] hover:text-white text-slate-700 font-bold rounded-lg transition-colors text-xs"
+                            className="px-3 py-1 bg-[#F2EDE1] hover:bg-[#2F5233] hover:text-white text-[#1F2A1E] font-bold rounded-xl transition-colors text-xs border border-[#E5DEC9] cursor-pointer"
                           >
                             Manage Service
                           </button>
@@ -599,19 +599,19 @@ export const ServiceListView: React.FC = () => {
                         <p className="text-[11px] text-slate-500 truncate">{formatCategoryDisplayName(svc.category)} • {svc.subcategory}</p>
                       </div>
                     </div>
-                    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold flex-shrink-0 ${svc.is_active ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-500'}`}>
+                    <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold flex-shrink-0 ${svc.is_active ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-[#FAF7F0] text-[#1F2A1E]/60 border border-[#E5DEC9]'}`}>
                       {svc.is_active ? 'Active' : 'Disabled'}
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-xs pt-1 border-t border-slate-100">
+                  <div className="flex items-center justify-between text-xs pt-2 border-t border-[#E5DEC9]">
                     <div>
-                      <span className="text-[10px] text-slate-400 uppercase font-semibold">Price: </span>
-                      <span className="font-mono font-bold text-slate-900">{formatRupee(svc.base_price)}</span>
+                      <span className="text-[10px] text-[#1F2A1E]/50 uppercase font-semibold">Price: </span>
+                      <span className="font-serif font-bold text-[#1F2A1E]">{formatRupee(svc.base_price)}</span>
                     </div>
-                    <div className="text-[10px] font-mono text-slate-500 flex gap-2">
-                      <span className="text-amber-700 font-semibold">{formatSurgePercent(svc.max_demand_increase)}</span>
-                      <span className="text-emerald-700 font-semibold">{formatDiscountPercent(svc.max_discount)}</span>
+                    <div className="text-[10px] font-mono text-[#1F2A1E]/70 flex gap-2">
+                      <span className="text-amber-800 font-semibold">{formatSurgePercent(svc.max_demand_increase)}</span>
+                      <span className="text-emerald-800 font-semibold">{formatDiscountPercent(svc.max_discount)}</span>
                     </div>
                   </div>
 
@@ -621,7 +621,7 @@ export const ServiceListView: React.FC = () => {
                         e.stopPropagation();
                         navigate(`/admin/catalog/service/${svc.id}`);
                       }}
-                      className="w-full py-2 bg-slate-50 hover:bg-[#2563EB] hover:text-white text-slate-700 font-bold rounded-xl transition-colors text-xs text-center border border-slate-200"
+                      className="w-full py-2 bg-[#F2EDE1] hover:bg-[#2F5233] hover:text-white text-[#1F2A1E] font-bold rounded-xl transition-colors text-xs text-center border border-[#E5DEC9] cursor-pointer"
                     >
                       Manage Service
                     </button>
@@ -635,30 +635,30 @@ export const ServiceListView: React.FC = () => {
 
       {/* Floating Bulk Action Bar */}
       {selectedServiceIds.length > 0 && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-slate-900 text-white px-4 sm:px-6 py-3 rounded-2xl shadow-2xl border border-slate-700 flex flex-wrap items-center justify-center gap-2 sm:gap-4 max-w-[calc(100vw-24px)] animate-in slide-in-from-bottom">
-          <span className="text-xs font-bold text-slate-300 whitespace-nowrap">
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-[#1F2A1E] text-white px-5 sm:px-7 py-3 rounded-2xl shadow-2xl border border-[#2F5233] flex flex-wrap items-center justify-center gap-2 sm:gap-4 max-w-[calc(100vw-24px)] animate-in slide-in-from-bottom">
+          <span className="text-xs font-bold text-[#FAF7F0]/80 whitespace-nowrap">
             <strong className="text-white text-sm">{selectedServiceIds.length}</strong> Selected
           </span>
 
-          <div className="hidden sm:block h-4 w-px bg-slate-700" />
+          <div className="hidden sm:block h-4 w-px bg-white/20" />
 
           <button
             onClick={() => setBulkConfirmAction(true)}
-            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow-xs transition-colors"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl text-xs shadow-xs transition-colors cursor-pointer"
           >
             Activate
           </button>
 
           <button
             onClick={() => setBulkConfirmAction(false)}
-            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl text-xs shadow-xs transition-colors"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-rose-700 hover:bg-rose-800 text-white font-bold rounded-xl text-xs shadow-xs transition-colors cursor-pointer"
           >
             Deactivate
           </button>
 
           <button
             onClick={() => setSelectedServiceIds([])}
-            className="text-xs text-slate-400 hover:text-white underline ml-1"
+            className="text-xs text-[#FAF7F0]/60 hover:text-white underline ml-1 cursor-pointer"
           >
             Deselect
           </button>
@@ -667,16 +667,16 @@ export const ServiceListView: React.FC = () => {
 
       {/* Confirmation Modal for Bulk Status Action */}
       {bulkConfirmAction !== null && (
-        <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 text-center animate-in fade-in">
-            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mx-auto ${bulkConfirmAction ? 'bg-emerald-50 text-emerald-600' : 'bg-rose-50 text-rose-600'}`}>
+        <div className="fixed inset-0 z-50 bg-[#1F2A1E]/50 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 text-center animate-in fade-in">
+            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mx-auto ${bulkConfirmAction ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}>
               <AlertCircle className="w-6 h-6" />
             </div>
             <div className="space-y-2">
-              <h3 className="text-lg font-bold text-slate-900">
+              <h3 className="text-lg font-serif font-bold text-[#1F2A1E]">
                 {bulkConfirmAction ? 'Activate' : 'Deactivate'} {selectedServiceIds.length} Selected Services?
               </h3>
-              <p className="text-xs text-slate-600 font-medium">
+              <p className="text-xs text-[#1F2A1E]/70 font-medium leading-relaxed">
                 {bulkConfirmAction
                   ? 'Selected services will become available for customer bookings immediately.'
                   : 'Selected services will no longer be available for customer bookings. Existing bookings will not be deleted.'}
@@ -685,15 +685,15 @@ export const ServiceListView: React.FC = () => {
             <div className="flex items-center justify-end gap-3 pt-3">
               <button
                 onClick={() => setBulkConfirmAction(null)}
-                className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition-colors"
+                className="px-5 py-2.5 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-[#1F2A1E] font-bold rounded-xl text-xs transition-colors cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 onClick={() => handleBulkStatusExecute(bulkConfirmAction)}
                 disabled={bulkLoading}
-                className={`px-5 py-2.5 text-white font-bold rounded-xl text-xs shadow-sm transition-colors ${
-                  bulkConfirmAction ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-rose-600 hover:bg-rose-700'
+                className={`px-5 py-2.5 text-white font-bold rounded-xl text-xs shadow-xs transition-colors cursor-pointer ${
+                  bulkConfirmAction ? 'bg-[#2F5233] hover:bg-[#3D6B42]' : 'bg-rose-700 hover:bg-rose-800'
                 }`}
               >
                 {bulkLoading ? <Loader2 className="w-4 h-4 animate-spin mx-auto" /> : `Confirm ${bulkConfirmAction ? 'Activation' : 'Deactivation'}`}
@@ -705,26 +705,26 @@ export const ServiceListView: React.FC = () => {
 
       {/* Pagination Bar */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-xs">
-          <span className="text-slate-500 font-medium">
-            Showing <strong className="text-slate-900">{startIndex + 1}</strong> to <strong className="text-slate-900">{endIndex}</strong> of <strong className="text-slate-900">{totalItems}</strong> services
+        <div className="flex items-center justify-between bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-xs text-xs">
+          <span className="text-[#1F2A1E]/60 font-medium">
+            Showing <strong className="text-[#1F2A1E]">{startIndex + 1}</strong> to <strong className="text-[#1F2A1E]">{endIndex}</strong> of <strong className="text-[#1F2A1E]">{totalItems}</strong> services
           </span>
 
           <div className="flex items-center gap-2">
             <button
               onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
               disabled={currentPage === 1}
-              className="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 disabled:opacity-40 disabled:cursor-not-allowed"
+              className="p-2 rounded-xl bg-[#FAF7F0] hover:bg-[#F2EDE1] border border-[#E5DEC9] text-[#1F2A1E] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
-            <span className="font-semibold text-slate-700 px-2">
+            <span className="font-semibold text-[#1F2A1E] px-2 font-mono">
               Page {currentPage} of {totalPages}
             </span>
             <button
               onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
               disabled={currentPage === totalPages}
-              className="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 disabled:opacity-40 disabled:cursor-not-allowed"
+              className="p-2 rounded-xl bg-[#FAF7F0] hover:bg-[#F2EDE1] border border-[#E5DEC9] text-[#1F2A1E] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

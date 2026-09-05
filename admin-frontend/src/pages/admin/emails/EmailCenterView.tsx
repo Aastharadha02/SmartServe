@@ -204,11 +204,11 @@ export const EmailCenterView: React.FC = () => {
       )}
 
       {/* Header Banner */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+      <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
         <div>
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Email Center</h1>
-            <span className="text-xs font-bold text-[#5CA8FF] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            <h1 className="text-2xl md:text-3xl font-bold font-serif text-[#1F2A1E] tracking-tight">Email Center</h1>
+            <span className="text-xs font-bold text-[#2F5233] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
               {templates.length} Templates Configured
             </span>
           </div>
@@ -218,12 +218,12 @@ export const EmailCenterView: React.FC = () => {
         </div>
 
         {/* Module Navigation Tabs */}
-        <div className="flex items-center gap-2 border-b border-slate-100 pt-2">
+        <div className="flex items-center gap-2 border-b border-[#E5DEC9]/60 pt-2">
           <button
             onClick={() => setActiveTab('templates')}
             className={`px-5 py-3 font-bold text-xs md:text-sm transition-all border-b-2 flex items-center gap-2 ${
               activeTab === 'templates'
-                ? 'border-[#5CA8FF] text-[#5CA8FF]'
+                ? 'border-[#2F5233] text-[#2F5233]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -235,7 +235,7 @@ export const EmailCenterView: React.FC = () => {
             onClick={() => setActiveTab('compose')}
             className={`px-5 py-3 font-bold text-xs md:text-sm transition-all border-b-2 flex items-center gap-2 ${
               activeTab === 'compose'
-                ? 'border-[#5CA8FF] text-[#5CA8FF]'
+                ? 'border-[#2F5233] text-[#2F5233]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -247,7 +247,7 @@ export const EmailCenterView: React.FC = () => {
             onClick={() => setActiveTab('history')}
             className={`px-5 py-3 font-bold text-xs md:text-sm transition-all border-b-2 flex items-center gap-2 ${
               activeTab === 'history'
-                ? 'border-[#5CA8FF] text-[#5CA8FF]'
+                ? 'border-[#2F5233] text-[#2F5233]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -260,7 +260,7 @@ export const EmailCenterView: React.FC = () => {
       {/* TAB 1: TEMPLATES DIRECTORY */}
       {activeTab === 'templates' && (
         <div className="space-y-6">
-          <div className="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+          <div className="flex items-center justify-between bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
             <h3 className="text-sm font-bold text-slate-800">System Notification Templates</h3>
 
             {canManageEmails ? (
@@ -269,7 +269,7 @@ export const EmailCenterView: React.FC = () => {
                   setCurrentTemplate({ template_key: '', subject: '', body_html: '<p>Hi {{customer_name}},</p>\n\n<p>Your service update: {{service_name}}.</p>', is_active: true });
                   setEditorModalOpen(true);
                 }}
-                className="px-4 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 shadow-xs transition-colors"
+                className="px-4 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl text-xs flex items-center gap-1.5 shadow-xs transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 <span>Add Template</span>
@@ -288,11 +288,11 @@ export const EmailCenterView: React.FC = () => {
 
           {templatesLoading ? (
             <div className="flex flex-col items-center justify-center py-12 space-y-3">
-              <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+              <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
               <p className="text-sm font-semibold text-slate-600">Loading System Email Templates...</p>
             </div>
           ) : templates.length === 0 ? (
-            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
               <Mail className="w-8 h-8 text-slate-400 mx-auto" />
               <h3 className="text-base font-bold text-slate-800">No email templates configured.</h3>
               <p className="text-xs text-slate-500 font-medium">Click "+ New Template" above to create system notification templates.</p>
@@ -302,11 +302,11 @@ export const EmailCenterView: React.FC = () => {
               {templates.map((tmpl) => (
                 <div
                   key={tmpl.id}
-                  className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 hover:border-blue-200 transition-all flex flex-col justify-between"
+                  className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4 hover:border-blue-200 transition-all flex flex-col justify-between"
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-xs font-bold text-[#5CA8FF] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                      <span className="font-mono text-xs font-bold text-[#2F5233] bg-[#F2EDE1] px-3 py-1 rounded-full border border-[#E5DEC9]">
                         {tmpl.template_key}
                       </span>
                       <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
@@ -314,14 +314,14 @@ export const EmailCenterView: React.FC = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-base font-bold text-slate-900 line-clamp-1">{tmpl.subject}</h3>
+                    <h3 className="text-base font-bold font-serif text-[#1F2A1E] line-clamp-1">{tmpl.subject}</h3>
 
                     {/* Supported Variables Badges */}
                     <div>
                       <span className="text-[11px] font-bold text-slate-400 block mb-1 uppercase">Supported Variables</span>
                       <div className="flex flex-wrap gap-1">
                         {tmpl.supported_variables.map((v) => (
-                          <span key={v} className="font-mono text-[10px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-lg border border-slate-200">
+                          <span key={v} className="font-mono text-[10px] font-semibold text-slate-600 bg-[#F2EDE1] px-2 py-0.5 rounded-lg border border-[#E5DEC9]">
                             &#123;&#123;{v}&#125;&#125;
                           </span>
                         ))}
@@ -329,7 +329,7 @@ export const EmailCenterView: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3 text-xs">
+                  <div className="pt-4 border-t border-[#E5DEC9]/60 flex items-center justify-between gap-3 text-xs">
                     <span className="text-slate-400 font-semibold">
                       Updated: {tmpl.updated_at ? new Date(tmpl.updated_at).toLocaleDateString('en-IN') : 'N/A'}
                     </span>
@@ -340,7 +340,7 @@ export const EmailCenterView: React.FC = () => {
                           setCurrentTemplate(tmpl);
                           setPreviewModalOpen(true);
                         }}
-                        className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition-colors flex items-center gap-1"
+                        className="px-3 py-1.5 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-slate-700 font-bold rounded-xl transition-colors flex items-center gap-1"
                       >
                         <Eye className="w-3.5 h-3.5 text-slate-500" />
                         <span>Preview</span>
@@ -351,7 +351,7 @@ export const EmailCenterView: React.FC = () => {
                           setCurrentTemplate(tmpl);
                           setEditorModalOpen(true);
                         }}
-                        className="px-3 py-1.5 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-xl transition-colors flex items-center gap-1 shadow-xs"
+                        className="px-3 py-1.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl transition-colors flex items-center gap-1 shadow-xs"
                       >
                         <Edit3 className="w-3.5 h-3.5" />
                         <span>Edit</span>
@@ -367,10 +367,10 @@ export const EmailCenterView: React.FC = () => {
 
       {/* TAB 2: COMPOSE EMAIL */}
       {activeTab === 'compose' && (
-        <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm max-w-3xl mx-auto space-y-6">
-          <div className="border-b border-slate-100 pb-4">
-            <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <Send className="w-5 h-5 text-[#5CA8FF]" />
+        <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm max-w-3xl mx-auto space-y-6">
+          <div className="border-b border-[#E5DEC9]/60 pb-4">
+            <h3 className="text-lg font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+              <Send className="w-5 h-5 text-[#2F5233]" />
               <span>Compose & Dispatch Manual Notification Email</span>
             </h3>
             <p className="text-xs text-slate-500 font-semibold mt-1">
@@ -386,7 +386,7 @@ export const EmailCenterView: React.FC = () => {
                 value={composeRecipient}
                 onChange={(e) => setComposeRecipient(e.target.value)}
                 placeholder="customer@example.com"
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-medium"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-medium"
                 required
               />
             </div>
@@ -396,7 +396,7 @@ export const EmailCenterView: React.FC = () => {
               <select
                 value={composeTemplateKey}
                 onChange={(e) => handleComposeTemplateSelect(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
               >
                 <option value="">Custom Manual Email (No Template)</option>
                 {templates.map((t) => (
@@ -414,7 +414,7 @@ export const EmailCenterView: React.FC = () => {
                 value={composeSubject}
                 onChange={(e) => setComposeSubject(e.target.value)}
                 placeholder="Enter email subject..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-bold text-slate-900"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-bold text-slate-900"
                 required
               />
             </div>
@@ -425,19 +425,19 @@ export const EmailCenterView: React.FC = () => {
                 value={composeBody}
                 onChange={(e) => setComposeBody(e.target.value)}
                 rows={6}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-medium"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-medium"
                 required
               />
             </div>
 
-            <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div className="pt-4 border-t border-[#E5DEC9]/60 flex items-center justify-between">
               <button
                 type="button"
                 onClick={() => {
                   setCurrentTemplate({ subject: composeSubject, body_html: `<p>${composeBody.replace(/\n/g, '<br/>')}</p>` });
                   setPreviewModalOpen(true);
                 }}
-                className="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-2xl text-xs flex items-center gap-1.5 transition-colors"
+                className="px-4 py-2.5 bg-[#F2EDE1] hover:bg-[#E5DEC9] text-slate-700 font-bold rounded-2xl text-xs flex items-center gap-1.5 transition-colors"
               >
                 <Eye className="w-4 h-4 text-slate-500" />
                 <span>Preview Recipient View</span>
@@ -446,7 +446,7 @@ export const EmailCenterView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setConfirmSendModalOpen(true)}
-                className="px-6 py-2.5 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-2xl text-xs flex items-center gap-2 shadow-sm transition-colors"
+                className="px-6 py-2.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-2xl text-xs flex items-center gap-2 shadow-sm transition-colors"
               >
                 <Send className="w-4 h-4" />
                 <span>Send Email...</span>
@@ -460,7 +460,7 @@ export const EmailCenterView: React.FC = () => {
       {activeTab === 'history' && (
         <div className="space-y-6">
           {/* Search & Filters */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-[#E5DEC9] shadow-sm">
             <div className="relative flex-1 w-full max-w-md">
               <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
@@ -468,7 +468,7 @@ export const EmailCenterView: React.FC = () => {
                 value={historySearch}
                 onChange={(e) => setHistorySearch(e.target.value)}
                 placeholder="Search recipient email, subject, template key..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40 font-medium"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] font-medium"
               />
             </div>
 
@@ -476,7 +476,7 @@ export const EmailCenterView: React.FC = () => {
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
               >
                 <option value="">All Delivery Statuses</option>
                 <option value="sent">Sent</option>
@@ -488,20 +488,20 @@ export const EmailCenterView: React.FC = () => {
           {/* History Log Table */}
           {logsLoading ? (
             <div className="flex flex-col items-center justify-center py-12 space-y-3">
-              <Loader2 className="w-8 h-8 animate-spin text-[#5CA8FF]" />
+              <Loader2 className="w-8 h-8 animate-spin text-[#2F5233]" />
               <p className="text-sm font-semibold text-slate-600">Loading Outbound Email History Logs...</p>
             </div>
           ) : filteredLogs.length === 0 ? (
-            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div className="py-12 p-6 text-center bg-white rounded-2xl border border-[#E5DEC9] shadow-sm space-y-2">
               <History className="w-8 h-8 text-slate-400 mx-auto" />
               <h3 className="text-base font-bold text-slate-800">No email activity recorded.</h3>
               <p className="text-xs text-slate-500 font-medium">Outbound email dispatch logs will appear here.</p>
             </div>
           ) : (
-            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-3xl border border-[#E5DEC9] shadow-sm overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] border-b border-slate-200">
+                  <thead className="bg-[#FAF7F0] text-slate-600 font-bold uppercase text-[10px] border-b border-[#E5DEC9]">
                     <tr>
                       <th className="py-3.5 px-6">Recipient Email</th>
                       <th className="py-3.5 px-4">Subject Line</th>
@@ -512,10 +512,10 @@ export const EmailCenterView: React.FC = () => {
                   </thead>
                   <tbody className="divide-y divide-slate-100">
                     {filteredLogs.map((log) => (
-                      <tr key={log.id} className="hover:bg-slate-50 transition-colors">
+                      <tr key={log.id} className="hover:bg-[#FAF7F0] transition-colors">
                         <td className="py-4 px-6 font-bold text-slate-900">{log.recipient_email}</td>
                         <td className="py-4 px-4 font-semibold text-slate-800">{log.subject}</td>
-                        <td className="py-4 px-4 font-mono text-[11px] text-[#5CA8FF]">
+                        <td className="py-4 px-4 font-mono text-[11px] text-[#2F5233]">
                           {log.template_key || 'Manual Email'}
                         </td>
                         <td className="py-4 px-4">
@@ -547,9 +547,9 @@ export const EmailCenterView: React.FC = () => {
       {/* Editor Modal */}
       {editorModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <form onSubmit={handleTemplateSave} className="bg-white w-full max-w-2xl rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">
+          <form onSubmit={handleTemplateSave} className="bg-white w-full max-w-2xl rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">
                 {currentTemplate.id ? 'Edit System Email Template' : 'Create New Email Template'}
               </h3>
               <button type="button" onClick={() => setEditorModalOpen(false)} className="text-slate-400 hover:text-slate-600">
@@ -564,7 +564,7 @@ export const EmailCenterView: React.FC = () => {
                 value={currentTemplate.template_key || ''}
                 onChange={(e) => setCurrentTemplate({ ...currentTemplate, template_key: e.target.value.toLowerCase().replace(/\s+/g, '_') })}
                 placeholder="e.g. booking_confirmation"
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-mono font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-mono font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 required
               />
             </div>
@@ -576,20 +576,20 @@ export const EmailCenterView: React.FC = () => {
                 value={currentTemplate.subject || ''}
                 onChange={(e) => setCurrentTemplate({ ...currentTemplate, subject: e.target.value })}
                 placeholder="e.g. SmartServe Booking Confirmation — #{{booking_id}}"
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-2.5 text-xs font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 required
               />
             </div>
 
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1">Supported Template Variables</label>
-              <div className="flex flex-wrap gap-1.5 p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+              <div className="flex flex-wrap gap-1.5 p-2.5 bg-[#FAF7F0] rounded-xl border border-[#E5DEC9]">
                 {['customer_name', 'booking_id', 'service_name', 'provider_name', 'scheduled_time', 'amount', 'otp_code'].map((v) => (
                   <button
                     key={v}
                     type="button"
                     onClick={() => setCurrentTemplate({ ...currentTemplate, body_html: (currentTemplate.body_html || '') + ` {{${v}}}` })}
-                    className="font-mono text-[10px] font-bold text-slate-700 bg-white hover:bg-blue-50 hover:text-[#5CA8FF] px-2 py-1 rounded-lg border border-slate-200 transition-colors"
+                    className="font-mono text-[10px] font-bold text-slate-700 bg-white hover:bg-[#F2EDE1] hover:text-[#2F5233] px-2 py-1 rounded-lg border border-[#E5DEC9] transition-colors"
                   >
                     + &#123;&#123;{v}&#125;&#125;
                   </button>
@@ -603,7 +603,7 @@ export const EmailCenterView: React.FC = () => {
                 value={currentTemplate.body_html || ''}
                 onChange={(e) => setCurrentTemplate({ ...currentTemplate, body_html: e.target.value })}
                 rows={7}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs font-mono text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5CA8FF]/40"
+                className="w-full bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-xs font-mono text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
                 required
               />
             </div>
@@ -612,14 +612,14 @@ export const EmailCenterView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setEditorModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={saveTemplateLoading}
-                className="px-5 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
+                className="px-5 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
               >
                 {saveTemplateLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Save Template'}
               </button>
@@ -631,10 +631,10 @@ export const EmailCenterView: React.FC = () => {
       {/* Preview Modal */}
       {previewModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-xl rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Eye className="w-5 h-5 text-[#5CA8FF]" />
+          <div className="bg-white w-full max-w-xl rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                <Eye className="w-5 h-5 text-[#2F5233]" />
                 <span>Recipient Email Preview</span>
               </h3>
               <button type="button" onClick={() => setPreviewModalOpen(false)} className="text-slate-400 hover:text-slate-600">
@@ -642,13 +642,13 @@ export const EmailCenterView: React.FC = () => {
               </button>
             </div>
 
-            <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 text-xs space-y-1">
+            <div className="p-3 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] text-xs space-y-1">
               <p><strong className="text-slate-400">Subject:</strong> <span className="font-bold text-slate-900">{currentTemplate.subject?.replace(/{{booking_id}}/g, '5716e23b')}</span></p>
               <p><strong className="text-slate-400">Recipient Preview:</strong> <span className="text-slate-700">ananya.rao@example.com</span></p>
             </div>
 
             <div
-              className="p-5 bg-white border border-slate-200 rounded-2xl text-sm space-y-2 shadow-xs"
+              className="p-5 bg-white border border-[#E5DEC9] rounded-2xl text-sm space-y-2 shadow-xs"
               dangerouslySetInnerHTML={{ __html: renderLivePreviewHTML(currentTemplate) }}
             />
 
@@ -656,7 +656,7 @@ export const EmailCenterView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setPreviewModalOpen(false)}
-                className="px-5 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-5 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Close Preview
               </button>
@@ -668,9 +668,9 @@ export const EmailCenterView: React.FC = () => {
       {/* Send Confirmation Modal */}
       {confirmSendModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-slate-200 p-6 space-y-4 animate-in fade-in">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h3 className="text-base font-bold text-slate-900">Send this email?</h3>
+          <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-[#E5DEC9] p-6 space-y-4 animate-in fade-in">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Send this email?</h3>
               <button type="button" onClick={() => setConfirmSendModalOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X className="w-5 h-5" />
               </button>
@@ -680,7 +680,7 @@ export const EmailCenterView: React.FC = () => {
               Are you sure you want to dispatch this email to <strong>{composeRecipient}</strong>?
             </p>
 
-            <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 text-xs font-bold text-slate-800">
+            <div className="p-3 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] text-xs font-bold text-slate-800">
               Subject: {composeSubject}
             </div>
 
@@ -688,7 +688,7 @@ export const EmailCenterView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setConfirmSendModalOpen(false)}
-                className="px-4 py-2 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-[#F2EDE1] text-slate-700 font-bold rounded-xl text-xs"
               >
                 Cancel
               </button>
@@ -696,7 +696,7 @@ export const EmailCenterView: React.FC = () => {
                 type="button"
                 onClick={handleDispatchConfirm}
                 disabled={dispatchLoading}
-                className="px-5 py-2 bg-[#5CA8FF] hover:bg-blue-600 text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
+                className="px-5 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold rounded-xl text-xs shadow-sm flex items-center gap-1.5"
               >
                 {dispatchLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Confirm & Dispatch'}
               </button>
