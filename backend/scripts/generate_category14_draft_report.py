@@ -7,7 +7,7 @@ import psycopg2
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def generate_report():
-    draft_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "catalog_drafts", "category8", "category8_education_coaching_DRAFT.json"))
+    draft_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "catalog_drafts", "category14", "category14_moving_delivery_local_assistance_DRAFT.json"))
     with open(draft_path, "r", encoding="utf-8") as f:
         draft = json.load(f)
         
@@ -32,7 +32,7 @@ def generate_report():
         
         cur.execute("""
             SELECT COUNT(*) FROM services 
-            WHERE category = '8. Education, Teachers & Coaching'
+            WHERE category = '14. Moving, Delivery & Local Assistance'
             AND EXISTS (
                 SELECT 1 FROM jsonb_array_elements(COALESCE(suggested_addons, '[]'::jsonb)) elem 
                 WHERE elem ? 'type'
@@ -42,7 +42,7 @@ def generate_report():
         
         cur.execute("""
             SELECT COUNT(*) FROM services 
-            WHERE category = '8. Education, Teachers & Coaching';
+            WHERE category = '14. Moving, Delivery & Local Assistance';
         """)
         total_in_db = cur.fetchone()[0]
         conn.close()
@@ -58,12 +58,12 @@ def generate_report():
         subcat_counts[sc] = subcat_counts.get(sc, 0) + 1
         subcat_prices.setdefault(sc, []).append(s["price"])
 
-    # Strict subcategory counts assertion for Category 8
-    assert subcat_counts.get("School Tutoring (K-12)", 0) == 7, "Expected 7 School Tutoring (K-12) services"
-    assert subcat_counts.get("Competitive Exam Coaching", 0) == 7, "Expected 7 Competitive Exam Coaching services"
-    assert subcat_counts.get("Language & Communication", 0) == 5, "Expected 5 Language & Communication services"
-    assert subcat_counts.get("Music & Arts Lessons", 0) == 5, "Expected 5 Music & Arts Lessons services"
-    assert subcat_counts.get("Skills & Hobby Classes", 0) == 6, "Expected 6 Skills & Hobby Classes services"
+    # Strict subcategory counts assertion for Category 14
+    assert subcat_counts.get("Home Shifting & Packing", 0) == 7, "Expected 7 Home Shifting & Packing services"
+    assert subcat_counts.get("Vehicle Transport", 0) == 5, "Expected 5 Vehicle Transport services"
+    assert subcat_counts.get("Last-Mile Delivery", 0) == 5, "Expected 5 Last-Mile Delivery services"
+    assert subcat_counts.get("Junk Removal & Disposal", 0) == 5, "Expected 5 Junk Removal & Disposal services"
+    assert subcat_counts.get("Local Errands & Assistance", 0) == 5, "Expected 5 Local Errands & Assistance services"
 
 if __name__ == "__main__":
     generate_report()

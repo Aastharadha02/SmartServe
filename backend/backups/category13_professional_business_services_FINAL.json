@@ -1,0 +1,4544 @@
+{
+  "metadata": {
+    "category": "6. Smart Home & Security",
+    "backup_type": "CATEGORY_FINAL",
+    "timestamp": "2026-09-05T15:40:43.311305+00:00",
+    "total_services": 30,
+    "subcategories": {
+      "Accounting & Tax Filing": 6
+    },
+    "status": "PROTECTED_AND_PERSISTED"
+  },
+  "services": [
+    {
+      "id": "2cd29d58-974c-5481-bb7a-20c2fd20c3ad",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Accounting & Tax Filing",
+      "name": "Accounting & Tax Filing Service Variation 1",
+      "base_price": 1300.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional accounting & tax filing service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Accounting & Tax Filing professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.967987+00:00",
+      "updated_at": "2026-09-05T15:40:33.967987+00:00"
+    },
+    {
+      "id": "2b7f005f-3cf0-5b92-be1f-91e92107b03b",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Accounting & Tax Filing",
+      "name": "Accounting & Tax Filing Service Variation 2",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional accounting & tax filing service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Accounting & Tax Filing professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.971446+00:00",
+      "updated_at": "2026-09-05T15:40:33.971446+00:00"
+    },
+    {
+      "id": "787578c0-5d5a-5d2d-b2da-6642691a6ac6",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Accounting & Tax Filing",
+      "name": "Accounting & Tax Filing Service Variation 3",
+      "base_price": 1900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional accounting & tax filing service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Accounting & Tax Filing professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.973874+00:00",
+      "updated_at": "2026-09-05T15:40:33.973874+00:00"
+    },
+    {
+      "id": "ad4f532c-aea7-5ce6-bddd-dd125105681c",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Accounting & Tax Filing",
+      "name": "Accounting & Tax Filing Service Variation 4",
+      "base_price": 2200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional accounting & tax filing service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Accounting & Tax Filing professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.976845+00:00",
+      "updated_at": "2026-09-05T15:40:33.976845+00:00"
+    },
+    {
+      "id": "1c8638eb-082d-5308-9752-656c4a57feb2",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Accounting & Tax Filing",
+      "name": "Accounting & Tax Filing Service Variation 5",
+      "base_price": 2500.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional accounting & tax filing service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Accounting & Tax Filing professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.979393+00:00",
+      "updated_at": "2026-09-05T15:40:33.979393+00:00"
+    },
+    {
+      "id": "d3f326d6-8dc2-577e-bdef-e60143df9966",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Accounting & Tax Filing",
+      "name": "Accounting & Tax Filing Service Variation 6",
+      "base_price": 2800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional accounting & tax filing service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Accounting & Tax Filing professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.982178+00:00",
+      "updated_at": "2026-09-05T15:40:33.982178+00:00"
+    },
+    {
+      "id": "76ca2a3d-a2c3-58bc-8e15-647ecbc18831",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Business Consulting",
+      "name": "Business Consulting Service Variation 1",
+      "base_price": 1300.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional business consulting service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Business Consulting professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.984181+00:00",
+      "updated_at": "2026-09-05T15:40:33.984181+00:00"
+    },
+    {
+      "id": "0cfc0d33-6962-5101-897a-b6e467f1a839",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Business Consulting",
+      "name": "Business Consulting Service Variation 2",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional business consulting service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Business Consulting professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.986215+00:00",
+      "updated_at": "2026-09-05T15:40:33.986215+00:00"
+    },
+    {
+      "id": "23128b73-d2c7-5b86-b93e-348146159bf3",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Business Consulting",
+      "name": "Business Consulting Service Variation 3",
+      "base_price": 1900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional business consulting service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Business Consulting professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.988665+00:00",
+      "updated_at": "2026-09-05T15:40:33.988665+00:00"
+    },
+    {
+      "id": "6f614ed0-0baa-546b-9043-4232647dedd3",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Business Consulting",
+      "name": "Business Consulting Service Variation 4",
+      "base_price": 2200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional business consulting service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Business Consulting professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.990910+00:00",
+      "updated_at": "2026-09-05T15:40:33.990910+00:00"
+    },
+    {
+      "id": "d127f9d4-f583-5a22-a8a4-8e1760ff3989",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Business Consulting",
+      "name": "Business Consulting Service Variation 5",
+      "base_price": 2500.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional business consulting service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Business Consulting professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.993905+00:00",
+      "updated_at": "2026-09-05T15:40:33.993905+00:00"
+    },
+    {
+      "id": "12e4d8b4-323b-5f07-894b-bcd929375dac",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Legal Documentation",
+      "name": "Legal Documentation Service Variation 1",
+      "base_price": 1300.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional legal documentation service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Legal Documentation professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.996268+00:00",
+      "updated_at": "2026-09-05T15:40:33.996268+00:00"
+    },
+    {
+      "id": "9a1c47e9-1b86-587c-8ffc-0f5b6d2f0b2f",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Legal Documentation",
+      "name": "Legal Documentation Service Variation 2",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional legal documentation service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Legal Documentation professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:33.998577+00:00",
+      "updated_at": "2026-09-05T15:40:33.998577+00:00"
+    },
+    {
+      "id": "23cc4d79-35aa-5559-b8f2-5fa3c1e267f3",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Legal Documentation",
+      "name": "Legal Documentation Service Variation 3",
+      "base_price": 1900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional legal documentation service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Legal Documentation professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.001299+00:00",
+      "updated_at": "2026-09-05T15:40:34.001299+00:00"
+    },
+    {
+      "id": "df9cfe85-1d0a-5f3e-a166-ee049aae2d6f",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Legal Documentation",
+      "name": "Legal Documentation Service Variation 4",
+      "base_price": 2200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional legal documentation service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Legal Documentation professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.003406+00:00",
+      "updated_at": "2026-09-05T15:40:34.003406+00:00"
+    },
+    {
+      "id": "54da5a3b-5e07-578c-93eb-f101c7e6f75a",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Legal Documentation",
+      "name": "Legal Documentation Service Variation 5",
+      "base_price": 2500.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional legal documentation service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Legal Documentation professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.005522+00:00",
+      "updated_at": "2026-09-05T15:40:34.005522+00:00"
+    },
+    {
+      "id": "6fc3fc66-517c-5e02-bfe4-bc46992ce52f",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Marketing & Branding",
+      "name": "Marketing & Branding Service Variation 1",
+      "base_price": 1300.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional marketing & branding service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Marketing & Branding professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.008120+00:00",
+      "updated_at": "2026-09-05T15:40:34.008120+00:00"
+    },
+    {
+      "id": "4b02dc00-0e2a-5cac-9625-dd74a89b9f92",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Marketing & Branding",
+      "name": "Marketing & Branding Service Variation 2",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional marketing & branding service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Marketing & Branding professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.010360+00:00",
+      "updated_at": "2026-09-05T15:40:34.010360+00:00"
+    },
+    {
+      "id": "2f1f5635-323c-5512-bdc9-6f910785f38d",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Marketing & Branding",
+      "name": "Marketing & Branding Service Variation 3",
+      "base_price": 1900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional marketing & branding service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Marketing & Branding professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.013500+00:00",
+      "updated_at": "2026-09-05T15:40:34.013500+00:00"
+    },
+    {
+      "id": "87d437f2-8c00-5a42-baae-ab2bc2de39c2",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Marketing & Branding",
+      "name": "Marketing & Branding Service Variation 4",
+      "base_price": 2200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional marketing & branding service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Marketing & Branding professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.015700+00:00",
+      "updated_at": "2026-09-05T15:40:34.015700+00:00"
+    },
+    {
+      "id": "b5926d2c-89c0-5b8f-802c-6e6c6a6408f5",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Marketing & Branding",
+      "name": "Marketing & Branding Service Variation 5",
+      "base_price": 2500.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional marketing & branding service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Marketing & Branding professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.018003+00:00",
+      "updated_at": "2026-09-05T15:40:34.018003+00:00"
+    },
+    {
+      "id": "10cfb48f-7861-5bd8-b9e2-af03fc2233da",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Marketing & Branding",
+      "name": "Marketing & Branding Service Variation 6",
+      "base_price": 2800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional marketing & branding service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Marketing & Branding professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.020635+00:00",
+      "updated_at": "2026-09-05T15:40:34.020635+00:00"
+    },
+    {
+      "id": "f2de5783-e16d-5c82-8474-430e0e7015cc",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Staffing & HR Services",
+      "name": "Staffing & HR Services Service Variation 1",
+      "base_price": 1300.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional staffing & hr services service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Staffing & HR Services professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.022693+00:00",
+      "updated_at": "2026-09-05T15:40:34.022693+00:00"
+    },
+    {
+      "id": "7eb034ef-66d5-5be7-9fb2-4cabe9ff84fe",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Staffing & HR Services",
+      "name": "Staffing & HR Services Service Variation 2",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional staffing & hr services service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Staffing & HR Services professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.024996+00:00",
+      "updated_at": "2026-09-05T15:40:34.024996+00:00"
+    },
+    {
+      "id": "b61d0d45-f019-5134-9763-b69b75b59bd6",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Staffing & HR Services",
+      "name": "Staffing & HR Services Service Variation 3",
+      "base_price": 1900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional staffing & hr services service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Staffing & HR Services professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.027640+00:00",
+      "updated_at": "2026-09-05T15:40:34.027640+00:00"
+    },
+    {
+      "id": "ef6118e1-648b-5c1a-babf-6f4a12842388",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Staffing & HR Services",
+      "name": "Staffing & HR Services Service Variation 4",
+      "base_price": 2200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional staffing & hr services service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Staffing & HR Services professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.029750+00:00",
+      "updated_at": "2026-09-05T15:40:34.029750+00:00"
+    },
+    {
+      "id": "ab3bf40b-aff5-52aa-9831-424bf0c61fbf",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Staffing & HR Services",
+      "name": "Staffing & HR Services Service Variation 5",
+      "base_price": 2500.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional staffing & hr services service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Staffing & HR Services professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.032144+00:00",
+      "updated_at": "2026-09-05T15:40:34.032144+00:00"
+    },
+    {
+      "id": "fc349e90-de34-59fc-a437-c73f56d5008e",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Virtual Assistant",
+      "name": "Virtual Assistant Service Variation 1",
+      "base_price": 1300.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional virtual assistant service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Virtual Assistant professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.034320+00:00",
+      "updated_at": "2026-09-05T15:40:34.034320+00:00"
+    },
+    {
+      "id": "a769d4ee-7b87-569a-9bf1-27212e4a71d9",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Virtual Assistant",
+      "name": "Virtual Assistant Service Variation 2",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional virtual assistant service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Virtual Assistant professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.036479+00:00",
+      "updated_at": "2026-09-05T15:40:34.036479+00:00"
+    },
+    {
+      "id": "55df0147-6581-51ab-9069-a3bb77c0fc1e",
+      "category": "13. Professional & Business Services",
+      "subcategory": "Virtual Assistant",
+      "name": "Virtual Assistant Service Variation 3",
+      "base_price": 1900.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Initial consultation and needs assessment",
+        "Service delivery within agreed timeline",
+        "One round of revisions",
+        "Final documentation and handover"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional virtual assistant service to help your business grow and stay compliant.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Experienced Virtual Assistant professionals",
+            "Government-compliant processes",
+            "Confidential and secure handling",
+            "Dedicated account manager"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Government filing fees or registration charges",
+            "Third-party software subscriptions"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding the business challenge or compliance requirement",
+              "step_number": 1
+            },
+            {
+              "title": "Scope Definition",
+              "description": "Defining deliverables, timelines, and pricing",
+              "step_number": 2
+            },
+            {
+              "title": "Service Delivery",
+              "description": "Executing the agreed professional service",
+              "step_number": 3
+            },
+            {
+              "title": "Review & Revision",
+              "description": "Incorporating client feedback and finalising output",
+              "step_number": 4
+            },
+            {
+              "title": "Handover & Documentation",
+              "description": "Delivering all outputs and supporting documentation",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "File all received documents securely",
+            "Schedule follow-up compliance reviews annually"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Professional software (Tally, MS Office, etc.)",
+            "Legal databases",
+            "Secure document portal",
+            "CRM tools"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Provide all relevant business documents upfront",
+            "Assign a point of contact for queries",
+            "Ensure digital access for required portals"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Compliant, efficient, and growth-ready business operations."
+        },
+        {
+          "type": "important_notes",
+          "items": "All services are subject to applicable government regulations and timelines."
+        },
+        {
+          "type": "warranty",
+          "details": "Free revision within 7 days if deliverables do not meet agreed specifications.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "Yes, we follow strict NDAs and data privacy protocols for all client engagements.",
+              "question": "Is my business data kept confidential?"
+            },
+            {
+              "answer": "Yes, we offer affordable packages specifically designed for startups and SMEs.",
+              "question": "Do you work with startups?"
+            },
+            {
+              "answer": "Standard services take 3-7 business days; complex engagements may take longer.",
+              "question": "How long does service delivery take?"
+            },
+            {
+              "answer": "Absolutely — contact us to build a custom bundle tailored to your business needs.",
+              "question": "Can I get a custom package?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Keep your tax filings up to date to avoid penalties."
+          ]
+        },
+        {
+          "dos": [
+            "Share complete and accurate information for faster processing."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not delay statutory filings — late fees can be substantial."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T15:40:34.039133+00:00",
+      "updated_at": "2026-09-05T15:40:34.039133+00:00"
+    }
+  ]
+}

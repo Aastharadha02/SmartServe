@@ -29,20 +29,20 @@ def create_cat6_final_backups():
         SELECT id, category, subcategory, name, base_price, max_demand_increase, max_discount,
                is_active, distinct_features, suggested_addons, created_at, updated_at
         FROM services
-        WHERE category = '8. Education, Teachers & Coaching'
+        WHERE category = '14. Moving, Delivery & Local Assistance'
         ORDER BY subcategory, name;
     """)
     rows = cur.fetchall()
     cur.close()
     conn.close()
     
-    print(f"Fetched {len(rows)} Category 8 services from PostgreSQL.")
+    print(f"Fetched {len(rows)} Category 14 services from PostgreSQL.")
     
     backup_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "backups"))
     os.makedirs(backup_dir, exist_ok=True)
     
     # 1. FINAL JSON
-    json_path = os.path.join(backup_dir, "category8_education_coaching_FINAL.json")
+    json_path = os.path.join(backup_dir, "category14_moving_delivery_local_assistance_FINAL.json")
     final_records = []
     for r in rows:
         sa = r["suggested_addons"] or []
@@ -74,7 +74,7 @@ def create_cat6_final_backups():
             "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             "total_services": len(final_records),
             "subcategories": {
-                "School Tutoring (K-12)": len([r for r in final_records if r["subcategory"] == "School Tutoring (K-12)"])
+                "Home Shifting & Packing": len([r for r in final_records if r["subcategory"] == "Home Shifting & Packing"])
             },
             "status": "PROTECTED_AND_PERSISTED"
         },
@@ -86,7 +86,7 @@ def create_cat6_final_backups():
     print(f"Saved FINAL JSON: {json_path} ({os.path.getsize(json_path)} bytes)")
     
     # 2. FINAL XLSX
-    xlsx_path = os.path.join(backup_dir, "category8_education_coaching_FINAL.xlsx")
+    xlsx_path = os.path.join(backup_dir, "category14_moving_delivery_local_assistance_FINAL.xlsx")
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
     

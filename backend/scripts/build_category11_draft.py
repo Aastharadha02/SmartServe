@@ -9,10 +9,10 @@ from openpyxl.utils import get_column_letter
 
 # Add parent path to import builder modules
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from category8_content_builder.education_coaching_data import EDUCATION_COACHING_SERVICES
+from category11_content_builder.pet_services_data import PET_SERVICES
 
-def build_category8_draft():
-    all_builder_services = EDUCATION_COACHING_SERVICES
+def build_category11_draft():
+    all_builder_services = PET_SERVICES
     print(f"Loaded {len(all_builder_services)} total services from builder modules.")
     
     validated_draft_services = []
@@ -61,17 +61,17 @@ def build_category8_draft():
         }
         validated_draft_services.append(draft_record)
         
-    print(f"[OK] All {len(validated_draft_services)} Category 8 services validated successfully.")
+    print(f"[OK] All {len(validated_draft_services)} Category 11 services validated successfully.")
     
     # Sort logically by subcategory, then name
     validated_draft_services.sort(key=lambda s: (s["subcategory"], s["name"]))
     
     # Draft directory
-    draft_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "catalog_drafts", "category8"))
+    draft_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "catalog_drafts", "category11"))
     os.makedirs(draft_dir, exist_ok=True)
     
     # 1. Save JSON Draft
-    json_path = os.path.join(draft_dir, "category8_education_coaching_DRAFT.json")
+    json_path = os.path.join(draft_dir, "category11_pet_services_DRAFT.json")
     draft_doc = {
         "metadata": {
             "category": "6. Smart Home & Security",
@@ -79,7 +79,7 @@ def build_category8_draft():
             "total_services": len(validated_draft_services),
             "subcategories_count": 5,
             "subcategories": {
-                "School Tutoring (K-12)": len(validated_draft_services)
+                "Dog Grooming": len(validated_draft_services)
             }
         },
         "services": validated_draft_services
@@ -91,7 +91,7 @@ def build_category8_draft():
     print(f"Saved Draft JSON: {json_path} ({os.path.getsize(json_path)} bytes)")
     
     # 2. Save XLSX Draft
-    xlsx_path = os.path.join(draft_dir, "category8_education_coaching_DRAFT.xlsx")
+    xlsx_path = os.path.join(draft_dir, "category11_pet_services_DRAFT.xlsx")
     wb = openpyxl.Workbook()
     wb.remove(wb.active)  # Remove default sheet
     
@@ -111,7 +111,7 @@ def build_category8_draft():
     
     ws_index.merge_cells("A1:C1")
     title_cell = ws_index["A1"]
-    title_cell.value = "SmartServe Catalog - Category 8: Education, Teachers & Coaching Index"
+    title_cell.value = "SmartServe Catalog - Category 11: Pet Services Index"
     title_cell.font = title_font
     title_cell.fill = navy_fill
     title_cell.alignment = Alignment(horizontal="center", vertical="center")
@@ -128,7 +128,7 @@ def build_category8_draft():
         cell.alignment = Alignment(horizontal="center", vertical="center")
         cell.border = cell_border
         
-    subcats = ["School Tutoring (K-12)"]
+    subcats = ["Dog Grooming"]
     for sc in subcats:
         svcs = [s for s in validated_draft_services if s["subcategory"] == sc]
         s_ids = ", ".join(s["id"] for s in svcs)
@@ -223,4 +223,4 @@ def build_category8_draft():
     return json_path, xlsx_path, json_sha, xlsx_sha, validated_draft_services
 
 if __name__ == "__main__":
-    build_category8_draft()
+    build_category11_draft()
