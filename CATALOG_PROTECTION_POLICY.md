@@ -1,14 +1,15 @@
 # SmartServe Master Catalog Protection Policy
-**Status**: ACTIVE, ENFORCED & EXPANDED (Categories 1-6)  
+**Status**: ACTIVE, ENFORCED & EXPANDED (Categories 1, 2, 3, and 4)  
 **Last Updated**: September 5, 2026  
 
 ---
 
-## 1. Protected Scope (196 Total Services)
+## 1. Protected Scope (156 Total Services)
 
-The following 196 services across Categories 1-6 are strictly **PROTECTED, PERSISTED, AND MONITORED**:
+The following 156 services across Categories 1, 2, 3, and 4 are strictly **PROTECTED, PERSISTED, AND MONITORED**:
 
 ### Category 1: Beauty, Salon & Spa (55 Services)
+*(Regenerated Sep 5, 2026 after original Neon data became inaccessible due to network transfer suspension - resets Oct 1, 2026)*
 - **Facial & Skincare** (9 services)
 - **Makeup & Styling** (6 services)
 - **Men's Salon** (11 services)
@@ -17,6 +18,7 @@ The following 196 services across Categories 1-6 are strictly **PROTECTED, PERSI
 - **Women's Salon** (13 services)
 
 ### Category 2: Cleaning & Home Cleaning (32 Services)
+*(Regenerated Sep 5, 2026 after original Neon data became inaccessible due to network transfer suspension - resets Oct 1, 2026)*
 - **Deep Cleaning** (7 services)
 - **Full Home / By Room Cleaning** (8 services)
 - **Kitchen & Bathroom Cleaning** (5 services)
@@ -40,14 +42,6 @@ The following 196 services across Categories 1-6 are strictly **PROTECTED, PERSI
 - **Television** (5 services)
 - **Variants** (6 services)
 - **Washing Machine** (5 services)
-
-### Category 5: Electrician, Plumber, Carpenter & Home Repairs (39 Services)
-- **Carpenter** (17 services)
-- **Electrician** (11 services)
-- **Plumber** (11 services)
-
-### Category 6: Smart Home & Security (1 Services)
-- **Security Systems** (1 services)
 
 ---
 
