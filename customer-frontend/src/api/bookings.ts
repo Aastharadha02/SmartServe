@@ -49,6 +49,10 @@ export const getBookingDetail = async (bookingId: string): Promise<BookingDetail
 };
 
 export const cancelBooking = async (bookingId: string, reason?: string): Promise<BookingDetail> => {
-  const res = await apiClient.post<BookingDetail>(`/customer/bookings/${bookingId}/cancel`, { cancellation_reason: reason });
+  const r = reason || 'Cancelled by Customer';
+  const res = await apiClient.post<BookingDetail>(`/customer/bookings/${bookingId}/cancel`, { 
+    reason: r,
+    cancellation_reason: r 
+  });
   return res.data;
 };

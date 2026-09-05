@@ -812,28 +812,41 @@ def cancel_booking(
     current_customer: Customer = Depends(get_current_customer),
     db: Session = Depends(get_db),
 ):
-    record = db.query(Booking).filter(Booking.id == booking_id, Booking.customer_id == current_customer.id).first()
+    effective_reason = payload.reason or payload.cancellation_reason or "Cancelled by Customer"
+    record = (
+        db.query(Booking)
+        .filter((Booking.id == booking_id) | (Booking.booking_reference == booking_id))
+        .filter(Booking.customer_id == current_customer.id)
+        .first()
+    )
     if record:
         record.status = "CANCELLED"
-        record.cancellation_reason = payload.reason
+        record.cancellation_reason = effective_reason
         db.commit()
         db.refresh(record)
+        
+        sched_time_str = (
+            record.scheduled_time.strftime("%H:%M:%S")
+            if hasattr(record.scheduled_time, "strftime")
+            else str(record.scheduled_time)
+        )
+        
         return BookingDetail(
             id=str(record.id),
             booking_reference=record.booking_reference,
             customer_id=str(record.customer_id),
-            service_id=record.service_id,
+            service_id=str(record.service_id),
             service_name=record.service_name,
             category=record.category,
-            status=record.status,
+            status=str(record.status.value if hasattr(record.status, "value") else record.status),
             scheduled_date=record.scheduled_date,
-            scheduled_time=record.scheduled_time,
+            scheduled_time=sched_time_str,
             address_line1=record.address_line1,
             city=record.city,
             pincode=record.pincode,
             total_price=float(record.total_price),
             payment_method=record.payment_method,
-            cancellation_reason=record.cancellation_reason,
+            cancellation_reason=effective_reason,
             created_at=record.created_at,
         )
 
