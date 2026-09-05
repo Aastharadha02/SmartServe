@@ -4,9 +4,9 @@
 
 ---
 
-## 1. Protected Scope (225 Total Services)
+## 1. Protected Scope (255 Total Services)
 
-The following 225 services across Categories 1 through 6 are strictly **PROTECTED, PERSISTED, AND MONITORED**:
+The following 255 services across Categories 1 through 7 are strictly **PROTECTED, PERSISTED, AND MONITORED**:
 
 ### Category 1: Beauty, Salon & Spa (55 Services)
 *(Regenerated Sep 5, 2026 after original Neon data became inaccessible due to network transfer suspension - resets Oct 1, 2026)*
@@ -54,6 +54,13 @@ The following 225 services across Categories 1 through 6 are strictly **PROTECTE
 - **Smart Lighting/Switches** (5 services)
 - **Smart Locks & Access Control** (6 services)
 - **Video Doorbells** (5 services)
+
+### Category 7: Domestic Help & Cooking (30 Services)
+- **Cooks / Chefs** (7 services)
+- **Drivers** (4 services)
+- **Elder Care / Patient Care** (6 services)
+- **Maids / Housekeepers** (7 services)
+- **Nannies / Babysitters** (6 services)
 
 ---
 
