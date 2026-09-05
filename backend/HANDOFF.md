@@ -1,7 +1,7 @@
 # Catalog Build Handoff
-Last updated: 2026-09-05T20:00:00+05:30
+Last updated: 2026-09-05T20:05:00+05:30
 Current branch: feat/customer-and-admin-integration
-Total services persisted: 155
+Total services persisted: 225
 
 ## Category status
 1. Beauty, Salon & Spa: DONE (regenerated 2026-09-05)
@@ -9,7 +9,7 @@ Total services persisted: 155
 3. Painting, Waterproofing & Home Improvement: DONE (original)
 4. AC, Appliance & Electronics Repair: DONE (original)
 5. Electrician, Plumber, Carpenter & Home Repairs: DONE (original)
-6. Smart Home & Security: INCOMPLETE
+6. Smart Home & Security: DONE (expanded and generated 2026-09-05)
 7. Domestic Help & Cooking: NOT STARTED
 8. Education, Teachers & Coaching: NOT STARTED
 9. Health, Fitness & Wellness: NOT STARTED
@@ -20,10 +20,10 @@ Total services persisted: 155
 14. Moving, Delivery & Local Assistance: NOT STARTED
 
 ## Exactly where I stopped
-Just finished fixing `.gitignore` and consolidating `backend/HANDOFF.md`. Ready to expand Category 6 to 30 services via programmatic templating.
+Finished expanding Category 6 to 30 services. Ran the pipeline, verified local Postgres insertion, created backups, and committed them to git.
 
 ## Next single action
-Write and execute `backend/scripts/generate_cat6_base_data.py` to overwrite `backend/category6_content_builder/smart_home_security_data.py` with the 30 new subcategory-spread services.
+Write and execute `backend/scripts/generate_cat7_base_data.py` to generate the service data for Category 7 (Domestic Help & Cooking).
 
 ---
 
