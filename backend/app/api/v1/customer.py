@@ -5,7 +5,7 @@ from datetime import datetime
 from decimal import Decimal
 from typing import Optional, List
 from fastapi import APIRouter, Depends, HTTPException, status, Query, UploadFile, File
-from sqlalchemy import func
+from sqlalchemy import func, or_
 from sqlalchemy.orm import Session
 from app.core.dependencies import get_db, get_current_customer
 from app.core.security import hash_password, verify_password, create_access_token
@@ -757,16 +757,21 @@ def get_booking_by_id(
     current_customer: Customer = Depends(get_current_customer),
     db: Session = Depends(get_db),
 ):
+    booking_filters = [Booking.booking_reference == booking_id]
+    try:
+        booking_filters.append(Booking.id == uuid.UUID(str(booking_id)))
+    except Exception:
+        pass
     record = (
         db.query(Booking)
-        .filter((Booking.id == booking_id) | (Booking.booking_reference == booking_id))
+        .filter(or_(*booking_filters))
         .filter(Booking.customer_id == current_customer.id)
         .first()
     )
     if not record:
         record = (
             db.query(Booking)
-            .filter((Booking.id == booking_id) | (Booking.booking_reference == booking_id))
+            .filter(or_(*booking_filters))
             .first()
         )
     if not record:
@@ -819,16 +824,21 @@ def cancel_booking(
     db: Session = Depends(get_db),
 ):
     effective_reason = payload.reason or payload.cancellation_reason or "Cancelled by Customer"
+    booking_filters = [Booking.booking_reference == booking_id]
+    try:
+        booking_filters.append(Booking.id == uuid.UUID(str(booking_id)))
+    except Exception:
+        pass
     record = (
         db.query(Booking)
-        .filter((Booking.id == booking_id) | (Booking.booking_reference == booking_id))
+        .filter(or_(*booking_filters))
         .filter(Booking.customer_id == current_customer.id)
         .first()
     )
     if not record:
         record = (
             db.query(Booking)
-            .filter((Booking.id == booking_id) | (Booking.booking_reference == booking_id))
+            .filter(or_(*booking_filters))
             .first()
         )
     if record:

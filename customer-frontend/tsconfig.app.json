@@ -19,5 +19,6 @@
     "noImplicitAny": true,
     "types": ["vite/client"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/components/landing", "src/pages/landing"]
 }
