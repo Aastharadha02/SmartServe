@@ -43,10 +43,11 @@ def restore_category3():
                 WHERE id = %s
             """, (sid,))
             row = cur.fetchone()
-            if not row:
-                raise Exception(f"Service {sname} [{sid}] not found in database!")
-                
-            db_id, db_cat, db_subcat, db_name, db_price, db_active, db_df, db_sa = row
+            
+            db_sa = []
+            db_df = []
+            if row:
+                db_id, db_cat, db_subcat, db_name, db_price, db_active, db_df, db_sa = row
             
             # Extract existing real addons
             existing_sa = db_sa or []
@@ -141,12 +142,22 @@ def restore_category3():
             
             # Step 2: Update in transaction
             cur.execute("""
-                UPDATE services
-                SET distinct_features = %s,
-                    suggested_addons = %s,
+                INSERT INTO services (id, name, category, subcategory, base_price, is_active, distinct_features, suggested_addons, max_demand_increase, max_discount, created_at, updated_at)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())
+                ON CONFLICT (id) DO UPDATE SET
+                    name = EXCLUDED.name,
+                    category = EXCLUDED.category,
+                    subcategory = EXCLUDED.subcategory,
+                    base_price = EXCLUDED.base_price,
+                    is_active = EXCLUDED.is_active,
+                    distinct_features = EXCLUDED.distinct_features,
+                    suggested_addons = EXCLUDED.suggested_addons,
                     updated_at = NOW()
-                WHERE id = %s
-            """, (json.dumps(distinct_features), json.dumps(final_suggested_addons), sid))
+            """, (
+                sid, sname, s["category"], subcat, s["price"], s.get("active", True), 
+                json.dumps(distinct_features), json.dumps(final_suggested_addons), 
+                20.0, 10.0
+            ))
             
             # Step 3: Verification on fresh SELECT within transaction
             cur.execute("""
@@ -162,8 +173,8 @@ def restore_category3():
                 "id": sid,
                 "name": sname,
                 "subcategory": subcat,
-                "price": float(db_price),
-                "active": db_active,
+                "price": float(s["price"]),
+                "active": s.get("active", True),
                 "distinct_features_count": len(verify_row[0] or []),
                 "suggested_addons_count": len(verify_row[1] or []),
                 "real_addons_count": len(existing_real_addons)

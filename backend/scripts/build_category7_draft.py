@@ -9,23 +9,16 @@ from openpyxl.utils import get_column_letter
 
 # Add parent path to import builder modules
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from category5_content_builder.carpenter_services_data import CARPENTER_SERVICES
-from category5_content_builder.electrician_services_data import ELECTRICIAN_SERVICES
-from category5_content_builder.plumber_services_data import PLUMBER_SERVICES
+from category7_content_builder.domestic_help_cooking_data import CAT7_SERVICES
 
-def build_category5_draft():
-    all_builder_services = CARPENTER_SERVICES + ELECTRICIAN_SERVICES + PLUMBER_SERVICES
+def build_category7_draft():
+    all_builder_services = CAT7_SERVICES
     print(f"Loaded {len(all_builder_services)} total services from builder modules.")
-    assert len(all_builder_services) == 39, f"Expected 39 builder services, got {len(all_builder_services)}"
     
     validated_draft_services = []
     
     for b_svc in all_builder_services:
         s_id = b_svc["id"]
-        
-        # We skip DB parity checking because we are seeding a fresh local database.
-        distinct_features = b_svc.get("included") or []
-        real_addons = []
         
         # Validate rich fields completeness
         for fld in ["description", "highlights", "included", "excluded", "process_steps", 
@@ -63,32 +56,30 @@ def build_category5_draft():
             "dos": b_svc["dos"],
             "donts": b_svc["donts"],
             "tips": b_svc["tips"],
-            "existing_add_ons": real_addons,
-            "distinct_features_in_db": distinct_features
+            "existing_add_ons": [],
+            "distinct_features_in_db": []
         }
         validated_draft_services.append(draft_record)
         
-    print(f"[OK] All 39 Category 5 services validated against PostgreSQL with 100% parity.")
+    print(f"[OK] All {len(validated_draft_services)} Category 7 services validated successfully.")
     
     # Sort logically by subcategory, then name
     validated_draft_services.sort(key=lambda s: (s["subcategory"], s["name"]))
     
     # Draft directory
-    draft_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "catalog_drafts", "category5"))
+    draft_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "catalog_drafts", "category7"))
     os.makedirs(draft_dir, exist_ok=True)
     
     # 1. Save JSON Draft
-    json_path = os.path.join(draft_dir, "category5_electrician_plumber_carpenter_home_repairs_DRAFT.json")
+    json_path = os.path.join(draft_dir, "category7_domestic_help_cooking_DRAFT.json")
     draft_doc = {
         "metadata": {
-            "category": "5. Electrician, Plumber, Carpenter & Home Repairs",
+            "category": "7. Domestic Help & Cooking",
             "draft_generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             "total_services": len(validated_draft_services),
-            "subcategories_count": 3,
+            "subcategories_count": 1,
             "subcategories": {
-                "Carpenter": 17,
-                "Electrician": 11,
-                "Plumber": 11
+                "Domestic Services": len(validated_draft_services)
             }
         },
         "services": validated_draft_services
@@ -100,7 +91,7 @@ def build_category5_draft():
     print(f"Saved Draft JSON: {json_path} ({os.path.getsize(json_path)} bytes)")
     
     # 2. Save XLSX Draft
-    xlsx_path = os.path.join(draft_dir, "category5_electrician_plumber_carpenter_home_repairs_DRAFT.xlsx")
+    xlsx_path = os.path.join(draft_dir, "category7_domestic_help_cooking_DRAFT.xlsx")
     wb = openpyxl.Workbook()
     wb.remove(wb.active)  # Remove default sheet
     
@@ -120,7 +111,7 @@ def build_category5_draft():
     
     ws_index.merge_cells("A1:C1")
     title_cell = ws_index["A1"]
-    title_cell.value = "SmartServe Catalog - Category 5: Electrician, Plumber, Carpenter & Home Repairs Index"
+    title_cell.value = "SmartServe Catalog - Category 7: Smart Home & Security Index"
     title_cell.font = title_font
     title_cell.fill = navy_fill
     title_cell.alignment = Alignment(horizontal="center", vertical="center")
@@ -137,7 +128,7 @@ def build_category5_draft():
         cell.alignment = Alignment(horizontal="center", vertical="center")
         cell.border = cell_border
         
-    subcats = ["Carpenter", "Electrician", "Plumber"]
+    subcats = ["Domestic Services"]
     for sc in subcats:
         svcs = [s for s in validated_draft_services if s["subcategory"] == sc]
         s_ids = ", ".join(s["id"] for s in svcs)
@@ -188,7 +179,7 @@ def build_category5_draft():
         dos_str = "\n".join(f"• {d}" for d in s["dos"])
         dont_str = "\n".join(f"• {dt}" for dt in s["donts"])
         tips_str = "\n".join(f"• {t}" for t in s["tips"])
-        addons_str = "\n".join(f"• {a.get('name')}: Rs.{a.get('price')}" for a in s["existing_add_ons"]) if s["existing_add_ons"] else "None"
+        addons_str = "None"
         
         return [
             s["id"], s["name"], s["category"], s["subcategory"], s["price"], "True" if s["active"] else "False",
@@ -216,42 +207,6 @@ def build_category5_draft():
             ws_master.column_dimensions[col_letter].width = 16
         else:
             ws_master.column_dimensions[col_letter].width = 45
-            
-    # Subcategory individual sheets: CARPENTER, ELECTRICIAN, PLUMBER
-    for sc in subcats:
-        sheet_name = sc.upper()
-        ws_sub = wb.create_sheet(title=sheet_name)
-        ws_sub.views.sheetView[0].showGridLines = True
-        
-        ws_sub.append(master_columns)
-        ws_sub.row_dimensions[1].height = 25
-        for col_idx in range(1, len(master_columns) + 1):
-            cell = ws_sub.cell(row=1, column=col_idx)
-            cell.font = header_font
-            cell.fill = blue_header_fill
-            cell.alignment = Alignment(horizontal="center", vertical="center")
-            cell.border = cell_border
-            
-        sc_services = [s for s in validated_draft_services if s["subcategory"] == sc]
-        for s in sc_services:
-            row_data = format_service_row(s)
-            ws_sub.append(row_data)
-            curr_row = ws_sub.max_row
-            ws_sub.row_dimensions[curr_row].height = 65
-            for col_idx in range(1, len(row_data) + 1):
-                c = ws_sub.cell(row=curr_row, column=col_idx)
-                c.font = cell_font
-                c.border = cell_border
-                c.alignment = Alignment(vertical="top", wrap_text=True)
-                
-        for col_idx in range(1, len(master_columns) + 1):
-            col_letter = get_column_letter(col_idx)
-            if col_idx in [1, 2, 4]:
-                ws_sub.column_dimensions[col_letter].width = 30
-            elif col_idx in [3, 5, 6]:
-                ws_sub.column_dimensions[col_letter].width = 16
-            else:
-                ws_sub.column_dimensions[col_letter].width = 45
                 
     wb.save(xlsx_path)
     print(f"Saved Draft XLSX: {xlsx_path} ({os.path.getsize(xlsx_path)} bytes)")
@@ -268,4 +223,4 @@ def build_category5_draft():
     return json_path, xlsx_path, json_sha, xlsx_sha, validated_draft_services
 
 if __name__ == "__main__":
-    build_category5_draft()
+    build_category7_draft()
