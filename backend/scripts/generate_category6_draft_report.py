@@ -57,6 +57,13 @@ def generate_report():
         sc = s["subcategory"]
         subcat_counts[sc] = subcat_counts.get(sc, 0) + 1
         subcat_prices.setdefault(sc, []).append(s["price"])
+
+    # Strict subcategory counts assertion for Category 6
+    assert subcat_counts.get("CCTV/Camera Installation", 0) == 7, "Expected 7 CCTV/Camera Installation services"
+    assert subcat_counts.get("Video Doorbells", 0) == 5, "Expected 5 Video Doorbells services"
+    assert subcat_counts.get("Smart Locks & Access Control", 0) == 6, "Expected 6 Smart Locks & Access Control services"
+    assert subcat_counts.get("Alarm & Sensor Systems", 0) == 7, "Expected 7 Alarm & Sensor Systems services"
+    assert subcat_counts.get("Smart Lighting/Switches", 0) == 5, "Expected 5 Smart Lighting/Switches services"
         
     md = []
     md.append("# Category 6: Smart Home & Security - Draft Validation Report\n")

@@ -2,84 +2,76 @@
   "metadata": {
     "category": "6. Smart Home & Security",
     "backup_type": "CATEGORY_FINAL",
-    "timestamp": "2026-09-05T13:40:57.177021+00:00",
-    "total_services": 1,
+    "timestamp": "2026-09-05T14:33:49.579575+00:00",
+    "total_services": 30,
     "subcategories": {
-      "Security Systems": 1
+      "Security Systems": 0
     },
     "status": "PROTECTED_AND_PERSISTED"
   },
   "services": [
     {
-      "id": "c979bf9e-4b28-47ad-8c79-2d91e2cce3b2",
+      "id": "b542de45-1772-55c6-831a-1857e2534465",
       "category": "6. Smart Home & Security",
-      "subcategory": "Security Systems",
-      "name": "CCTV Camera Installation",
-      "base_price": 1499.0,
+      "subcategory": "Alarm & Sensor Systems",
+      "name": "Alarm & Sensor Systems Service Variation 1",
+      "base_price": 1200.0,
       "max_demand_increase": 20.0,
       "max_discount": 10.0,
       "is_active": true,
       "distinct_features": [
-        "Mounting of up to 4 CCTV cameras (Dome/Bullet)",
-        "Routing and clipping of BNC/CAT6 cables up to 20 meters per camera",
-        "Connection to DVR/NVR and power supply",
-        "Configuration of recording settings (continuous/motion-based)",
-        "Mobile app installation and pairing on up to 2 devices"
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
       ],
       "suggested_addons": [
         {
-          "text": "Professional installation and configuration of IP or Analog CCTV cameras, including optimal placement for blind-spot coverage, secure wiring routing, DVR/NVR setup, and mobile app pairing for remote live viewing.",
+          "text": "Professional alarm & sensor systems service for your smart home.",
           "type": "description"
         },
         {
           "type": "highlights",
           "items": [
-            "Optimal angle positioning to eliminate security blind spots",
-            "Concealed or neatly clipped wiring to maintain home aesthetics",
-            "DVR/NVR storage configuration for maximum video retention",
-            "Mobile application setup for real-time remote monitoring",
-            "Night vision and motion detection calibration"
+            "Expert Alarm & Sensor Systems setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
           ]
         },
         {
           "type": "excluded_scope",
           "items": [
-            "Supply of cameras, DVR/NVR, cables, or storage hard drives (labor only)",
-            "Concealed internal wall wiring requiring masonry/chasing",
-            "Setting up static IP configurations with ISP for older DVR models"
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
           ]
         },
         {
           "type": "process_steps",
           "steps": [
             {
-              "title": "Site Assessment & Angle Planning",
-              "description": "Technician surveys the property to identify critical entry points and determine the optimal mounting locations and angles for maximum coverage.",
-              "is_key_step": true,
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
               "step_number": 1
             },
             {
-              "title": "Camera Mounting & Wiring",
-              "description": "Cameras are securely drilled and mounted. Cables are routed from the cameras to the central DVR/NVR location using wire clips or PVC casing.",
-              "is_key_step": true,
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
               "step_number": 2
             },
             {
-              "title": "System Connection & Power Up",
-              "description": "BNC/RJ45 connectors are crimped and connected to the cameras and the recording unit. Power supplies are securely connected and tested.",
-              "is_key_step": false,
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
               "step_number": 3
             },
             {
-              "title": "DVR/NVR Configuration",
-              "description": "The hard drive is formatted, and recording parameters (resolution, frame rate, motion triggers) are configured in the DVR/NVR interface.",
-              "is_key_step": true,
+              "title": "Testing",
+              "description": "Functional testing and system verification",
               "step_number": 4
             },
             {
-              "title": "Mobile App Pairing & Handover",
-              "description": "The security system is connected to the home router, and the manufacturer's app is installed and paired on the customer's phone for live viewing.",
-              "is_key_step": true,
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
               "step_number": 5
             }
           ]
@@ -87,87 +79,74 @@
         {
           "type": "aftercare_precautions",
           "aftercare": [
-            "Wipe camera lenses monthly with a microfiber cloth to ensure clear night vision",
-            "Regularly check the DVR/NVR storage to ensure older footage is overwriting correctly",
-            "Keep the DVR/NVR in a well-ventilated area to prevent hard drive overheating"
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
           ]
         },
         {
           "type": "tools_materials",
           "tools": [
-            "Impact drill machine and masonry drill bits",
-            "Cable crimping tools (RJ45/BNC) and wire strippers",
-            "Digital multimeter for power testing",
-            "Ladder, wire clips, rawl plugs, and mounting screws",
-            "Portable test monitor for angle adjustments"
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
           ],
           "materials": []
         },
         {
           "type": "customer_setup",
           "requirements": [
-            "Ensure the cameras, DVR/NVR, hard drive, and cables are ready before the technician arrives",
-            "Provide access to a working power socket near the DVR/NVR location",
-            "Have your Wi-Fi password ready for network and mobile app configuration"
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
           ]
         },
         {
           "type": "expected_results",
-          "items": [
-            "All cameras firmly mounted with clear, unobstructed fields of view",
-            "Continuous or motion-triggered video reliably recording to the hard drive",
-            "Instant access to live camera feeds on the customer's smartphone"
-          ]
+          "items": "Fully functional smart home system."
         },
         {
           "type": "important_notes",
-          "items": [
-            "For heights exceeding 10 feet, the customer must arrange suitable scaffolding or safely secure long ladders",
-            "Drilling through heavily reinforced concrete beams may require specialized equipment not covered in standard installation"
-          ]
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
         },
         {
           "type": "warranty",
-          "details": "30-day SmartServe warranty on wiring integrity and camera mounting stability",
+          "details": "30 days service warranty.",
           "has_warranty": true
         },
         {
           "type": "faqs",
           "items": [
             {
-              "answer": "No, this is an installation-only service. You must purchase the cameras, DVR/NVR, hard drive, and cables separately.",
-              "question": "Does this service include the cost of the CCTV cameras?"
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
             },
             {
-              "answer": "Yes, if your TV is near the DVR/NVR, the technician will connect it via HDMI/VGA. If it is in another room, additional long-distance cabling is required.",
-              "question": "Can the technician help me view the cameras on my TV?"
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
             },
             {
-              "answer": "Standard through-wall drilling (up to 8 inches) is included. However, deep core cutting or concealed in-wall routing is excluded.",
-              "question": "What happens if the cable needs to run through a thick wall?"
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
             },
             {
-              "answer": "Most modern CCTV brands provide a free cloud P2P app for remote viewing. You only need an active internet connection at home.",
-              "question": "Is the mobile app viewing free?"
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
             }
           ]
         },
         {
           "type": "tips",
           "items": [
-            "Enable push notifications on your mobile app only for motion in specific critical zones to avoid alert fatigue.",
-            "Install a small UPS for your DVR and router so cameras keep recording during power cuts."
+            "Change default passwords immediately after setup."
           ]
         },
         {
           "dos": [
-            "Mount cameras high enough to prevent easy tampering or vandalism",
-            "Use outdoor-rated (IP67) cameras for any exterior installations"
+            "Connect devices to a secure network."
           ],
           "type": "dos_donts",
           "donts": [
-            "Don't point cameras directly at bright light sources (like streetlights) which can cause glare",
-            "Don't install the DVR/NVR in a locked, unventilated cabinet where it can overheat"
+            "Do not expose indoor cameras to outdoor environments."
           ]
         },
         {
@@ -178,8 +157,4358 @@
       "real_addons_count": 0,
       "real_addons": [],
       "typed_blocks_count": 14,
-      "created_at": "2026-09-05T13:40:49.273929+00:00",
-      "updated_at": "2026-09-05T13:40:49.273929+00:00"
+      "created_at": "2026-09-05T14:33:06.730975+00:00",
+      "updated_at": "2026-09-05T14:33:06.730975+00:00"
+    },
+    {
+      "id": "0e851c0a-84d4-5afb-ae7d-0e0c2437e626",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Alarm & Sensor Systems",
+      "name": "Alarm & Sensor Systems Service Variation 2",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional alarm & sensor systems service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Alarm & Sensor Systems setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.737713+00:00",
+      "updated_at": "2026-09-05T14:33:06.737713+00:00"
+    },
+    {
+      "id": "ade4e808-0a25-57d1-aedf-ce4675b91799",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Alarm & Sensor Systems",
+      "name": "Alarm & Sensor Systems Service Variation 3",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional alarm & sensor systems service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Alarm & Sensor Systems setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.741411+00:00",
+      "updated_at": "2026-09-05T14:33:06.741411+00:00"
+    },
+    {
+      "id": "5bde4e4d-cdb9-55ec-9ab8-37292638bffa",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Alarm & Sensor Systems",
+      "name": "Alarm & Sensor Systems Service Variation 4",
+      "base_price": 1800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional alarm & sensor systems service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Alarm & Sensor Systems setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.745310+00:00",
+      "updated_at": "2026-09-05T14:33:06.745310+00:00"
+    },
+    {
+      "id": "a69d6500-8c3d-5141-9372-0a7948e42b6e",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Alarm & Sensor Systems",
+      "name": "Alarm & Sensor Systems Service Variation 5",
+      "base_price": 2000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional alarm & sensor systems service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Alarm & Sensor Systems setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.748529+00:00",
+      "updated_at": "2026-09-05T14:33:06.748529+00:00"
+    },
+    {
+      "id": "9568064a-7915-5aa9-ae1a-f94af8e1fc12",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Alarm & Sensor Systems",
+      "name": "Alarm & Sensor Systems Service Variation 6",
+      "base_price": 2200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional alarm & sensor systems service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Alarm & Sensor Systems setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.753126+00:00",
+      "updated_at": "2026-09-05T14:33:06.753126+00:00"
+    },
+    {
+      "id": "d2f0b4d6-9668-51e3-b38a-fee45502db49",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Alarm & Sensor Systems",
+      "name": "Alarm & Sensor Systems Service Variation 7",
+      "base_price": 2400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional alarm & sensor systems service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Alarm & Sensor Systems setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.756948+00:00",
+      "updated_at": "2026-09-05T14:33:06.756948+00:00"
+    },
+    {
+      "id": "a67d4f70-245d-5813-9d48-9fd288e1dbce",
+      "category": "6. Smart Home & Security",
+      "subcategory": "CCTV/Camera Installation",
+      "name": "CCTV/Camera Installation Service Variation 1",
+      "base_price": 1200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cctv/camera installation service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert CCTV/Camera Installation setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.759898+00:00",
+      "updated_at": "2026-09-05T14:33:06.759898+00:00"
+    },
+    {
+      "id": "66075a60-6209-592c-8f05-88c118937c5d",
+      "category": "6. Smart Home & Security",
+      "subcategory": "CCTV/Camera Installation",
+      "name": "CCTV/Camera Installation Service Variation 2",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cctv/camera installation service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert CCTV/Camera Installation setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.762855+00:00",
+      "updated_at": "2026-09-05T14:33:06.762855+00:00"
+    },
+    {
+      "id": "4e3e71a2-a412-5605-af49-fc63375f93b6",
+      "category": "6. Smart Home & Security",
+      "subcategory": "CCTV/Camera Installation",
+      "name": "CCTV/Camera Installation Service Variation 3",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cctv/camera installation service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert CCTV/Camera Installation setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.765493+00:00",
+      "updated_at": "2026-09-05T14:33:06.765493+00:00"
+    },
+    {
+      "id": "4ff11f6d-96bf-5327-a8e4-dd961adcd046",
+      "category": "6. Smart Home & Security",
+      "subcategory": "CCTV/Camera Installation",
+      "name": "CCTV/Camera Installation Service Variation 4",
+      "base_price": 1800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cctv/camera installation service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert CCTV/Camera Installation setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.768448+00:00",
+      "updated_at": "2026-09-05T14:33:06.768448+00:00"
+    },
+    {
+      "id": "6fea0268-604f-519a-ad5c-abdfd1a729fd",
+      "category": "6. Smart Home & Security",
+      "subcategory": "CCTV/Camera Installation",
+      "name": "CCTV/Camera Installation Service Variation 5",
+      "base_price": 2000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cctv/camera installation service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert CCTV/Camera Installation setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.772526+00:00",
+      "updated_at": "2026-09-05T14:33:06.772526+00:00"
+    },
+    {
+      "id": "8b8c479d-6a45-5786-b4ab-25221ac13a69",
+      "category": "6. Smart Home & Security",
+      "subcategory": "CCTV/Camera Installation",
+      "name": "CCTV/Camera Installation Service Variation 6",
+      "base_price": 2200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cctv/camera installation service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert CCTV/Camera Installation setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.775779+00:00",
+      "updated_at": "2026-09-05T14:33:06.775779+00:00"
+    },
+    {
+      "id": "ca6d27c1-08c7-5464-9667-5a710ee21ca3",
+      "category": "6. Smart Home & Security",
+      "subcategory": "CCTV/Camera Installation",
+      "name": "CCTV/Camera Installation Service Variation 7",
+      "base_price": 2400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional cctv/camera installation service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert CCTV/Camera Installation setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.779273+00:00",
+      "updated_at": "2026-09-05T14:33:06.779273+00:00"
+    },
+    {
+      "id": "e2f0890f-da86-515c-bac5-bd65bc73b5d9",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Lighting/Switches",
+      "name": "Smart Lighting/Switches Service Variation 1",
+      "base_price": 1200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart lighting/switches service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Lighting/Switches setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.782841+00:00",
+      "updated_at": "2026-09-05T14:33:06.782841+00:00"
+    },
+    {
+      "id": "78f4f8dd-d22b-5c0f-b200-48bfe3f7d7d3",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Lighting/Switches",
+      "name": "Smart Lighting/Switches Service Variation 2",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart lighting/switches service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Lighting/Switches setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.787881+00:00",
+      "updated_at": "2026-09-05T14:33:06.787881+00:00"
+    },
+    {
+      "id": "11e176e7-7858-5027-a21b-254ee0a13f5b",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Lighting/Switches",
+      "name": "Smart Lighting/Switches Service Variation 3",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart lighting/switches service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Lighting/Switches setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.792484+00:00",
+      "updated_at": "2026-09-05T14:33:06.792484+00:00"
+    },
+    {
+      "id": "228282a0-e1db-5968-9075-7aadeeffd9d9",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Lighting/Switches",
+      "name": "Smart Lighting/Switches Service Variation 4",
+      "base_price": 1800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart lighting/switches service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Lighting/Switches setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.796562+00:00",
+      "updated_at": "2026-09-05T14:33:06.796562+00:00"
+    },
+    {
+      "id": "44bdaeee-a1bd-57b2-a909-3d3e7f7a977e",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Lighting/Switches",
+      "name": "Smart Lighting/Switches Service Variation 5",
+      "base_price": 2000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart lighting/switches service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Lighting/Switches setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.800784+00:00",
+      "updated_at": "2026-09-05T14:33:06.800784+00:00"
+    },
+    {
+      "id": "95f80990-65e5-50cf-94bd-69c75aaa4e69",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Locks & Access Control",
+      "name": "Smart Locks & Access Control Service Variation 1",
+      "base_price": 1200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart locks & access control service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Locks & Access Control setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.809709+00:00",
+      "updated_at": "2026-09-05T14:33:06.809709+00:00"
+    },
+    {
+      "id": "37ab940a-b8b6-59f4-a683-d15ae462f3af",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Locks & Access Control",
+      "name": "Smart Locks & Access Control Service Variation 2",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart locks & access control service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Locks & Access Control setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.813203+00:00",
+      "updated_at": "2026-09-05T14:33:06.813203+00:00"
+    },
+    {
+      "id": "65b4eb53-7577-519d-b48a-2bd16e49e717",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Locks & Access Control",
+      "name": "Smart Locks & Access Control Service Variation 3",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart locks & access control service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Locks & Access Control setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.816270+00:00",
+      "updated_at": "2026-09-05T14:33:06.816270+00:00"
+    },
+    {
+      "id": "92cd5608-ff4f-5707-bf92-a1c30a111b06",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Locks & Access Control",
+      "name": "Smart Locks & Access Control Service Variation 4",
+      "base_price": 1800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart locks & access control service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Locks & Access Control setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.820376+00:00",
+      "updated_at": "2026-09-05T14:33:06.820376+00:00"
+    },
+    {
+      "id": "7570d619-e759-5651-afe6-f797e3dacc05",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Locks & Access Control",
+      "name": "Smart Locks & Access Control Service Variation 5",
+      "base_price": 2000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart locks & access control service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Locks & Access Control setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.824135+00:00",
+      "updated_at": "2026-09-05T14:33:06.824135+00:00"
+    },
+    {
+      "id": "37a1f344-ab86-5ebf-869c-9e26f805cb1d",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Smart Locks & Access Control",
+      "name": "Smart Locks & Access Control Service Variation 6",
+      "base_price": 2200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional smart locks & access control service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Smart Locks & Access Control setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.827218+00:00",
+      "updated_at": "2026-09-05T14:33:06.827218+00:00"
+    },
+    {
+      "id": "498d667b-30bc-57fa-b3d2-7d7b1d46408f",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Video Doorbells",
+      "name": "Video Doorbells Service Variation 1",
+      "base_price": 1200.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional video doorbells service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Video Doorbells setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.830339+00:00",
+      "updated_at": "2026-09-05T14:33:06.830339+00:00"
+    },
+    {
+      "id": "f7b119f9-13b1-59f1-98e7-62a8a8d9273f",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Video Doorbells",
+      "name": "Video Doorbells Service Variation 2",
+      "base_price": 1400.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional video doorbells service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Video Doorbells setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.834067+00:00",
+      "updated_at": "2026-09-05T14:33:06.834067+00:00"
+    },
+    {
+      "id": "37cfa6a0-7a1d-52f2-9505-8c13fb818728",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Video Doorbells",
+      "name": "Video Doorbells Service Variation 3",
+      "base_price": 1600.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional video doorbells service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Video Doorbells setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.839062+00:00",
+      "updated_at": "2026-09-05T14:33:06.839062+00:00"
+    },
+    {
+      "id": "b24100aa-9570-547f-98cd-5d68c66dbddb",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Video Doorbells",
+      "name": "Video Doorbells Service Variation 4",
+      "base_price": 1800.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional video doorbells service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Video Doorbells setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.842148+00:00",
+      "updated_at": "2026-09-05T14:33:06.842148+00:00"
+    },
+    {
+      "id": "8e6d6f16-3511-5e08-bc92-35f12025e142",
+      "category": "6. Smart Home & Security",
+      "subcategory": "Video Doorbells",
+      "name": "Video Doorbells Service Variation 5",
+      "base_price": 2000.0,
+      "max_demand_increase": 20.0,
+      "max_discount": 10.0,
+      "is_active": true,
+      "distinct_features": [
+        "Standard installation",
+        "Basic setup and testing",
+        "Clean up post-service",
+        "System demonstration"
+      ],
+      "suggested_addons": [
+        {
+          "text": "Professional video doorbells service for your smart home.",
+          "type": "description"
+        },
+        {
+          "type": "highlights",
+          "items": [
+            "Expert Video Doorbells setup",
+            "Secure configuration",
+            "Post-installation demo",
+            "24/7 Support available"
+          ]
+        },
+        {
+          "type": "excluded_scope",
+          "items": [
+            "Major structural modifications",
+            "Cost of equipment (unless specified)"
+          ]
+        },
+        {
+          "type": "process_steps",
+          "steps": [
+            {
+              "title": "Inspection",
+              "description": "Site inspection for optimal placement",
+              "step_number": 1
+            },
+            {
+              "title": "Installation",
+              "description": "Mounting and wiring of the device",
+              "step_number": 2
+            },
+            {
+              "title": "Configuration",
+              "description": "Connecting the device to the smart network",
+              "step_number": 3
+            },
+            {
+              "title": "Testing",
+              "description": "Functional testing and system verification",
+              "step_number": 4
+            },
+            {
+              "title": "Handover",
+              "description": "Demonstrating usage and safety guidelines to the customer",
+              "step_number": 5
+            }
+          ]
+        },
+        {
+          "type": "aftercare_precautions",
+          "aftercare": [
+            "Do not touch exposed wiring before setup is complete",
+            "Keep devices clean from dust"
+          ]
+        },
+        {
+          "type": "tools_materials",
+          "tools": [
+            "Drill machine",
+            "Screwdrivers",
+            "Wire strippers",
+            "Mounting hardware"
+          ],
+          "materials": []
+        },
+        {
+          "type": "customer_setup",
+          "requirements": [
+            "Ensure Wi-Fi availability",
+            "Provide access to installation points"
+          ]
+        },
+        {
+          "type": "expected_results",
+          "items": "Fully functional smart home system."
+        },
+        {
+          "type": "important_notes",
+          "items": "Wi-Fi connectivity issues are not covered under installation warranty."
+        },
+        {
+          "type": "warranty",
+          "details": "30 days service warranty.",
+          "has_warranty": true
+        },
+        {
+          "type": "faqs",
+          "items": [
+            {
+              "answer": "No, this is an installation service only unless specified.",
+              "question": "Do you provide the devices?"
+            },
+            {
+              "answer": "Typically 1 to 2 hours depending on complexity.",
+              "question": "How long does the installation take?"
+            },
+            {
+              "answer": "Yes, someone needs to be present to grant access and verify the setup.",
+              "question": "Do I need to be home during the service?"
+            },
+            {
+              "answer": "Yes, we provide a 30-day service warranty on our work.",
+              "question": "Is the installation covered by warranty?"
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "items": [
+            "Change default passwords immediately after setup."
+          ]
+        },
+        {
+          "dos": [
+            "Connect devices to a secure network."
+          ],
+          "type": "dos_donts",
+          "donts": [
+            "Do not expose indoor cameras to outdoor environments."
+          ]
+        },
+        {
+          "type": "duration",
+          "minutes": 60
+        }
+      ],
+      "real_addons_count": 0,
+      "real_addons": [],
+      "typed_blocks_count": 14,
+      "created_at": "2026-09-05T14:33:06.845213+00:00",
+      "updated_at": "2026-09-05T14:33:06.845213+00:00"
     }
   ]
 }
