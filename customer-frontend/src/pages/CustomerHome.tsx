@@ -11,6 +11,7 @@ import { getCategoryImageUrl, getServiceImage } from '../utils/serviceImages';
 import { getLocalizedCategory, getLocalizedServiceName, getLocalizedDescription, getLocalizedStatus } from '../utils/localizedNames';
 import { 
   Search, 
+  Tag,
   ArrowRight, 
   Calendar, 
   Clock, 
@@ -376,22 +377,20 @@ export const CustomerHome: React.FC = () => {
                     className="w-full h-full object-cover rounded-xl"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F2A1E]/90 via-[#1F2A1E]/40 to-transparent" />
-                  <div className="relative z-10 space-y-0.5">
-                    <h3 className="font-bold text-white text-sm leading-snug drop-shadow-xs">
-                      {getLocalizedCategory(cat.display_name || cat.name)}
-                    </h3>
-                    <span className="text-[10px] text-[#C9A15A] font-semibold block">
-                      {cat.service_count ? t('common.services_count', { count: cat.service_count, defaultValue: `${cat.service_count} Services` }) : t('common.verified', { defaultValue: 'Verified Professionals' })}
-                    </span>
-                  </div>
                 </div>
-              );
-            })}
-          </div>
-        )}
+                <div className="space-y-0.5">
+                  <span className="text-xs font-bold text-[#1F2A1E] group-hover:text-[#2F5233] transition-colors block line-clamp-1">
+                    {getLocalizedCategory(cat.display_name || cat.name)}
+                  </span>
+                  <span className="text-[10px] text-[#1F2A1E]/50 font-medium block">
+                    {cat.service_count ? t('common.services_count', { count: cat.service_count, defaultValue: `${cat.service_count} Services` }) : t('common.verified', { defaultValue: 'Verified Professionals' })}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-
       {/* PROMOTIONAL DISCOUNT BANNER */}
       <div className="relative rounded-3xl overflow-hidden bg-[#F2EDE1] border border-[#E5DEC9] text-[#1F2A1E] p-8 sm:p-10 shadow-xs">
         <div className="relative z-10 max-w-xl space-y-3">

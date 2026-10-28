@@ -19,7 +19,6 @@ export const CustomerLogin: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [socialLoading, setSocialLoading] = useState<'google' | 'apple' | 'github' | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [forgotSent, setForgotSent] = useState(false);
   const [is2FaRequired, setIs2FaRequired] = useState(false);
   const [twoFactorCode, setTwoFactorCode] = useState('');
   const [isRecoveryMode, setIsRecoveryMode] = useState(false);
@@ -244,13 +243,6 @@ export const CustomerLogin: React.FC = () => {
             <div className="mb-5 flex items-start gap-3 p-3.5 bg-red-50 border border-red-200/80 rounded-xl text-red-800 text-xs sm:text-sm font-medium animate-in fade-in">
               <AlertCircle className="w-4 h-4 flex-shrink-0 text-red-600 mt-0.5" />
               <span className="flex-1">{errorMessage}</span>
-            </div>
-          )}
-
-          {/* ── Forgot Password Notification ── */}
-          {forgotSent && (
-            <div className="mb-5 p-3.5 bg-[#F2EDE1] border border-[#C9A15A]/30 rounded-xl text-[#1F2A1E] text-xs sm:text-sm font-medium animate-in fade-in text-center">
-              {t('auth.reset_sent', { defaultValue: 'Password reset instructions sent to your registered email.' })}
             </div>
           )}
 
