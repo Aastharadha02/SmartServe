@@ -7,6 +7,14 @@ from app.models.payment import BookingOTP, OTPType
 from app.models.customer import Booking
 
 
+def _normalize_dt(dt: Optional[datetime]) -> Optional[datetime]:
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
 def generate_secure_otp(
     booking_id: uuid.UUID,
     otp_type: str,
@@ -77,18 +85,22 @@ def get_active_otp(
     """Retrieve the current active (unused & non-expired & non-locked) OTP."""
     otp_type_norm = str(otp_type).strip().upper()
     now_utc = datetime.now(timezone.utc)
-    return (
+    otps = (
         db.query(BookingOTP)
         .filter(
             BookingOTP.booking_id == booking_id,
             BookingOTP.otp_type == otp_type_norm,
             BookingOTP.is_used == False,
             BookingOTP.is_locked == False,
-            BookingOTP.expires_at > now_utc,
         )
         .order_by(BookingOTP.created_at.desc())
-        .first()
+        .all()
     )
+    for otp in otps:
+        exp = _normalize_dt(otp.expires_at)
+        if exp and exp > now_utc:
+            return otp
+    return None
 
 
 def verify_and_consume_otp(
@@ -136,7 +148,8 @@ def verify_and_consume_otp(
     if otp_record.is_locked or otp_record.failed_attempts >= otp_record.max_attempts:
         return False, f"Too many incorrect attempts. This {otp_type.lower()} OTP is locked for security."
 
-    if now_utc > otp_record.expires_at:
+    exp = _normalize_dt(otp_record.expires_at)
+    if exp and now_utc > exp:
         return False, f"This {otp_type.lower()} OTP has expired. Please request a new OTP."
 
     # Timing-safe comparison to prevent timing attacks

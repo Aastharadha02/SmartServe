@@ -155,6 +155,7 @@ def test_password_reset_delivery_failure_resilience(sec_db: Session, seeded_acto
     user_c1 = sec_db.query(User).filter(User.id == c1.user_id).first()
 
     with patch("app.services.email_service.settings.EMAIL_BACKEND", "smtp"), \
+         patch("app.services.email_service._is_safe_smtp_recipient", return_value=True), \
          patch("app.services.email_service.settings.SMTP_HOST", "invalid.smtp.nonexistent.local"), \
          patch("app.services.email_service._dispatch_via_smtp", side_effect=ConnectionRefusedError("SMTP server down")):
 
@@ -513,7 +514,7 @@ def test_google_signup_profile_completion_workflow(sec_db: Session):
         pending_token = data["access_token"]
 
         # 2. Incomplete signup session CANNOT access protected customer APIs (e.g., bookings)
-        blocked_res = client.get("/api/v1/bookings", headers={"Authorization": f"Bearer {pending_token}"})
+        blocked_res = client.get("/api/v1/customer/bookings", headers={"Authorization": f"Bearer {pending_token}"})
         assert blocked_res.status_code == 403
         assert "onboarding incomplete" in blocked_res.json()["detail"].lower()
 
@@ -537,6 +538,6 @@ def test_google_signup_profile_completion_workflow(sec_db: Session):
         full_token = complete_data["access_token"]
 
         # 5. Full token CAN now access protected customer APIs
-        allowed_res = client.get("/api/v1/bookings", headers={"Authorization": f"Bearer {full_token}"})
+        allowed_res = client.get("/api/v1/customer/bookings", headers={"Authorization": f"Bearer {full_token}"})
         assert allowed_res.status_code == 200
 
