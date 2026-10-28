@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { 
   getBookingDetail, 
   cancelBooking, 
@@ -43,12 +43,24 @@ import { CustomerLiveMap } from '../components/CustomerLiveMap';
 import { CustomerProviderCard, BookingTimeline } from '../components/CustomerProviderCard';
 import { WarrantyCard } from '../components/common/WarrantyCard';
 import { PhotoGallery } from '../components/common/PhotoGallery';
+import { PostBookingPromotions } from '../components/promotions/PostBookingPromotions';
+import { PostBookingSuccessCelebration } from '../components/booking/PostBookingSuccessCelebration';
 
 export const CustomerBookingDetail: React.FC = () => {
   const { t } = useTranslation();
   const { bookingId } = useParams<{ bookingId: string }>();
   const navigate = useNavigate();
   const { showToast } = useToast();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const [showCelebration, setShowCelebration] = useState<boolean>(() => {
+    return searchParams.get('new') === '1' || Boolean((location.state as any)?.isNewBooking);
+  });
+  const promotionsRef = useRef<HTMLDivElement>(null);
+
+  const scrollToPromotions = () => {
+    promotionsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const [booking, setBooking] = useState<BookingDetail | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -390,6 +402,21 @@ export const CustomerBookingDetail: React.FC = () => {
         </div>
       )}
 
+      {/* 0. POST-BOOKING SUCCESS CELEBRATION (SWIGGY/ZOMATO STYLE) */}
+      {showCelebration && booking && (
+        <PostBookingSuccessCelebration
+          bookingReference={booking.booking_reference}
+          serviceName={booking.service_name}
+          totalPrice={booking.total_price || (booking as any).total_amount || 0}
+          scheduledDate={booking.scheduled_date}
+          scheduledTime={booking.scheduled_time}
+          address={booking.address_line1 || booking.address || ''}
+          startOtp={booking.start_otp || booking.otp_code || undefined}
+          onDismiss={() => setShowCelebration(false)}
+          onScrollToRewards={scrollToPromotions}
+        />
+      )}
+
       {/* Main Status & Reference Ribbon */}
       <div className="bg-[#0A1128] text-white p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
@@ -709,6 +736,13 @@ export const CustomerBookingDetail: React.FC = () => {
           )}
         </div>
       )}
+
+      {/* ========================================================= */}
+      {/* 6. THIRD-PARTY PROMOTIONS & PARTNER BRAND OFFERS          */}
+      {/* ========================================================= */}
+      <div ref={promotionsRef} className="pt-2">
+        <PostBookingPromotions bookingId={booking.id} />
+      </div>
 
       {/* Details Grid */}
       <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8 space-y-6">

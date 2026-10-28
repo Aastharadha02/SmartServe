@@ -353,7 +353,7 @@ export const CustomerServiceDetail: React.FC = () => {
 
       showToast(t('booking.toast_confirmed', { ref: newBooking.booking_reference, defaultValue: `Booking ${newBooking.booking_reference} confirmed!` }), 'success');
       setShowBookingModal(false);
-      navigate(`/bookings/${newBooking.id}`);
+      navigate(`/bookings/${newBooking.id}?new=1`, { state: { isNewBooking: true } });
     } catch (err: any) {
       const detail = err.response?.data?.detail;
       if (err.response?.status === 403 && (detail?.code === 'PROFILE_INCOMPLETE' || String(detail).includes('complete your profile'))) {
