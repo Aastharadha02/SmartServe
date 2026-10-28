@@ -203,10 +203,16 @@ export const BookingsListScreen = ({ navigation }: any) => {
                       <Text style={styles.awaitingProviderText}>Technician assignment in progress...</Text>
                     )}
 
-                    {item.otp_code && isInTransit && (
+                    {(item.start_otp || item.otp_code) && isInTransit && (
                       <View style={styles.otpPill}>
                         <KeyRound size={12} color="#7C3AED" />
-                        <Text style={styles.otpText}>Start OTP: <Text style={{ fontWeight: '800' }}>{item.otp_code}</Text></Text>
+                        <Text style={styles.otpText}>Start OTP: <Text style={{ fontWeight: '800' }}>{item.start_otp || item.otp_code}</Text></Text>
+                      </View>
+                    )}
+                    {item.completion_otp && stLower === 'started' && (
+                      <View style={[styles.otpPill, { backgroundColor: '#ECFDF5', borderColor: '#A7F3D0' }]}>
+                        <KeyRound size={12} color="#059669" />
+                        <Text style={[styles.otpText, { color: '#065F46' }]}>Done OTP: <Text style={{ fontWeight: '800' }}>{item.completion_otp}</Text></Text>
                       </View>
                     )}
                   </View>

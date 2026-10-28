@@ -168,8 +168,11 @@ export const LiveTrackingScreen = ({ route, navigation }: any) => {
     city: booking.city,
   };
 
-  // Show OTP whenever in transit (On The Way or Arrived)
-  const showOtp = Boolean(booking.otp_code && ['on the way', 'arrived'].includes(statusLower));
+  // Show Start OTP whenever in transit (On The Way or Arrived)
+  const startOtp = booking.start_otp || booking.otp_code;
+  const showOtp = Boolean(startOtp && ['requested', 'assigned', 'accepted', 'on the way', 'arrived'].includes(statusLower));
+  const completionOtp = booking.completion_otp;
+  const showCompletionOtp = Boolean(completionOtp && statusLower === 'started');
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -241,13 +244,37 @@ export const LiveTrackingScreen = ({ route, navigation }: any) => {
             </Text>
 
             <View style={styles.otpBoxesRow}>
-              {booking.otp_code!.split('').map((digit, i) => (
+              {startOtp!.split('').map((digit, i) => (
                 <View key={`digit-${i}`} style={styles.otpBox}>
                   <Text style={styles.otpDigit}>{digit}</Text>
                 </View>
               ))}
             </View>
             <Text style={styles.otpNotice}>Backend state machine requires this OTP to transition to STARTED.</Text>
+          </View>
+        )}
+
+        {/* Completion Service OTP Box (Shown only when service is in progress) */}
+        {showCompletionOtp && (
+          <View style={[styles.otpCard, { backgroundColor: '#ECFDF5', borderColor: '#A7F3D0' }]}>
+            <View style={styles.otpHeaderRow}>
+              <KeyRound size={20} color="#059669" />
+              <Text style={[styles.otpTitle, { color: '#065F46' }]}>Service Completion OTP</Text>
+            </View>
+            <Text style={[styles.otpSubtitle, { color: '#047857' }]}>
+              Share this 4-digit completion code with your technician ONLY after you have inspected the finished work.
+            </Text>
+
+            <View style={styles.otpBoxesRow}>
+              {completionOtp!.split('').map((digit, i) => (
+                <View key={`comp-digit-${i}`} style={[styles.otpBox, { borderColor: '#10B981', backgroundColor: '#FFFFFF' }]}>
+                  <Text style={[styles.otpDigit, { color: '#065F46' }]}>{digit}</Text>
+                </View>
+              ))}
+            </View>
+            <Text style={[styles.otpNotice, { color: '#059669' }]}>
+              After entering this code, technician will record your cash on delivery payment.
+            </Text>
           </View>
         )}
 
