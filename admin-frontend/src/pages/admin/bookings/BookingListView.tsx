@@ -31,6 +31,7 @@ export const BookingListView: React.FC = () => {
   // Search & Filter State
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [statusFilter, setStatusFilter] = useState<string>('');
+  const [paymentStatusFilter, setPaymentStatusFilter] = useState<string>('');
   const [emergencyFilter, setEmergencyFilter] = useState<string>('');
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
 
@@ -184,13 +185,15 @@ export const BookingListView: React.FC = () => {
 
       const matchesStatus = !statusFilter || b.status.toLowerCase() === statusFilter.toLowerCase();
 
+      const matchesPayment = !paymentStatusFilter || (b.payment_status || '').toLowerCase() === paymentStatusFilter.toLowerCase();
+
       const matchesEmergency = !emergencyFilter ||
         (emergencyFilter === 'emergency' && !!b.emergency_flag) ||
         (emergencyFilter === 'standard' && !b.emergency_flag);
 
-      return matchesSearch && matchesStatus && matchesEmergency;
+      return matchesSearch && matchesStatus && matchesEmergency && matchesPayment;
     });
-  }, [bookings, searchTerm, statusFilter, emergencyFilter]);
+  }, [bookings, searchTerm, statusFilter, paymentStatusFilter, emergencyFilter]);
 
   const emergencyCount = bookings.filter((b) => b.emergency_flag).length;
 
@@ -323,6 +326,18 @@ export const BookingListView: React.FC = () => {
           </select>
 
           <select
+            value={paymentStatusFilter}
+            onChange={(e) => setPaymentStatusFilter(e.target.value)}
+            className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
+          >
+            <option value="">All Payment Statuses</option>
+            <option value="pending">COD Pending</option>
+            <option value="collection reported">COD Collection Reported</option>
+            <option value="paid">COD Paid / Verified</option>
+            <option value="rejected">COD Rejected</option>
+          </select>
+
+          <select
             value={emergencyFilter}
             onChange={(e) => setEmergencyFilter(e.target.value)}
             className="bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233]"
@@ -371,7 +386,8 @@ export const BookingListView: React.FC = () => {
                   <th className="py-3.5 px-4">Assigned Provider</th>
                   <th className="py-3.5 px-4">Amount (₹)</th>
                   <th className="py-3.5 px-4">Priority / Emergency</th>
-                  <th className="py-3.5 px-4">Status</th>
+                  <th className="py-3.5 px-4">Payment Status</th>
+                  <th className="py-3.5 px-4">Booking Status</th>
                   <th className="py-3.5 px-6 text-right">Actions</th>
                 </tr>
               </thead>
@@ -418,6 +434,20 @@ export const BookingListView: React.FC = () => {
                       ) : (
                         <span className="text-slate-400 text-[11px] font-semibold">Standard</span>
                       )}
+                    </td>
+
+                    <td className="py-4 px-4">
+                      <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
+                        (b.payment_status || '').toLowerCase() === 'paid'
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : (b.payment_status || '').toLowerCase() === 'collection reported'
+                          ? 'bg-amber-50 text-amber-700 border-amber-300'
+                          : (b.payment_status || '').toLowerCase() === 'rejected'
+                          ? 'bg-rose-50 text-rose-700 border-rose-200'
+                          : 'bg-slate-100 text-slate-600 border-slate-200'
+                      }`}>
+                        {b.payment_status || 'Pending'}
+                      </span>
                     </td>
 
                     <td className="py-4 px-4">

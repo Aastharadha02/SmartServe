@@ -19,6 +19,7 @@ import { apiClient } from '../../api/client';
 import { BackendPulse } from '../common/BackendPulse';
 import { AISupportAssistant } from '../common/AISupportAssistant';
 import { LanguageSelector } from '../common/LanguageSelector';
+import { ProviderNotificationSystem } from '../notifications/ProviderNotificationSystem';
 
 export const ProviderLayout: React.FC = () => {
   const { user, logout } = useAuth();
@@ -214,6 +215,9 @@ export const ProviderLayout: React.FC = () => {
 
           {/* Right Header Controls */}
           <div className="flex items-center gap-3">
+            {/* Real-time Booking Notification Dropdown & Popup */}
+            <ProviderNotificationSystem />
+
             {/* Rating / Tier Badge */}
             <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-xl border border-[#E5DEC9] text-xs font-bold shadow-2xs">
               <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />

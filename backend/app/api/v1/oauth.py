@@ -1,4 +1,5 @@
 import uuid
+import re
 import secrets
 import logging
 import urllib.parse
@@ -55,10 +56,38 @@ class OAuthCallbackPayload(BaseModel):
 
 # --- Helpers ---
 
-def generate_oauth_state(provider: str) -> str:
-    """Generate a signed, tamper-proof, 15-minute expiring state parameter."""
+def generate_pkce_pair() -> tuple[str, str]:
+    """Generate RFC 7636 PKCE code_verifier and S256 code_challenge."""
+    import base64
+    import hashlib
+    verifier = secrets.token_urlsafe(64)
+    digest = hashlib.sha256(verifier.encode('ascii')).digest()
+    challenge = base64.urlsafe_b64encode(digest).decode('ascii').rstrip('=')
+    return verifier, challenge
+
+
+def is_allowed_redirect_uri(redirect_uri: str) -> bool:
+    """Verify that client-provided redirect_uri belongs to an allowed frontend origin."""
+    try:
+        parsed = urllib.parse.urlparse(redirect_uri)
+        if not (parsed.scheme in ("http", "https") and parsed.netloc):
+            return False
+        origin = f"{parsed.scheme}://{parsed.netloc}"
+        if origin in settings.CORS_ORIGINS:
+            return True
+        if parsed.hostname in ("localhost", "127.0.0.1"):
+            return True
+        return False
+    except Exception:
+        return False
+
+
+def generate_oauth_state(provider: str, redirect_uri: Optional[str] = None, code_verifier: Optional[str] = None) -> str:
+    """Generate a signed, tamper-proof, 15-minute expiring state parameter with anti-replay nonce, bound redirect_uri, and PKCE verifier."""
     payload = {
         "provider": provider,
+        "redirect_uri": redirect_uri,
+        "code_verifier": code_verifier,
         "nonce": secrets.token_hex(16),
         "exp": datetime.now(timezone.utc) + timedelta(minutes=15),
     }
@@ -73,6 +102,33 @@ def verify_oauth_state(state: str, expected_provider: str) -> bool:
     except Exception as e:
         logger.warning(f"[OAuth] Invalid state token: {e}")
         return False
+
+
+def verify_and_consume_oauth_state(state: str, expected_provider: str, db: Session) -> Optional[Dict[str, Any]]:
+    """Validate state signature, expiration, provider, and atomically consume nonce to prevent replay attacks."""
+    try:
+        payload = jwt.decode(state, settings.JWT_SECRET_KEY, algorithms=[settings.JWT_ALGORITHM])
+        if payload.get("provider") != expected_provider:
+            logger.warning("[OAuth] State provider mismatch")
+            return None
+        nonce = payload.get("nonce")
+        if not nonce:
+            return None
+
+        from app.models.security import RateLimitEntry
+        nonce_key = f"oauth_nonce:{nonce}"
+        existing = db.query(RateLimitEntry).filter(RateLimitEntry.key == nonce_key).first()
+        if existing:
+            logger.warning("[OAuth] State replay detected for nonce: %s", nonce)
+            return None
+
+        # Atomically record nonce as consumed
+        db.add(RateLimitEntry(key=nonce_key, created_at=datetime.now(timezone.utc)))
+        db.commit()
+        return payload
+    except Exception as e:
+        logger.warning(f"[OAuth] Invalid state token: {e}")
+        return None
 
 
 def is_provider_configured(provider: str) -> bool:
@@ -109,7 +165,7 @@ def get_oauth_providers():
 
 
 @router.get("/{provider}/authorize", response_model=OAuthAuthorizeResponse)
-def authorize_oauth(provider: str):
+def authorize_oauth(provider: str, redirect_uri: Optional[str] = None):
     """
     Initiate OAuth authentication.
     Returns the official provider authorization URL if configured;
@@ -134,35 +190,49 @@ def authorize_oauth(provider: str):
             detail=msg
         )
 
-    state = generate_oauth_state(p)
+    # Validate client-requested redirect_uri or fallback to settings
+    effective_redirect_uri = None
+    if redirect_uri and is_allowed_redirect_uri(redirect_uri):
+        effective_redirect_uri = redirect_uri
+
+    code_verifier = None
+    code_challenge = None
+    if p == "google":
+        effective_redirect_uri = effective_redirect_uri or settings.GOOGLE_REDIRECT_URI
+        code_verifier, code_challenge = generate_pkce_pair()
+    elif p == "github":
+        effective_redirect_uri = effective_redirect_uri or settings.GITHUB_REDIRECT_URI
+    elif p == "apple":
+        effective_redirect_uri = effective_redirect_uri or settings.APPLE_REDIRECT_URI
+
+    state = generate_oauth_state(p, redirect_uri=effective_redirect_uri, code_verifier=code_verifier)
 
     if p == "google":
-        redirect_uri = settings.GOOGLE_REDIRECT_URI
         params = {
             "client_id": settings.GOOGLE_CLIENT_ID,
-            "redirect_uri": redirect_uri,
+            "redirect_uri": effective_redirect_uri,
             "response_type": "code",
             "scope": "openid email profile",
             "state": state,
             "access_type": "offline",
             "prompt": "select_account",
+            "code_challenge": code_challenge,
+            "code_challenge_method": "S256",
         }
         auth_url = f"https://accounts.google.com/o/oauth2/v2/auth?{urllib.parse.urlencode(params)}"
     elif p == "github":
-        redirect_uri = settings.GITHUB_REDIRECT_URI
         auth_url = (
             f"https://github.com/login/oauth/authorize"
             f"?client_id={settings.GITHUB_CLIENT_ID}"
-            f"&redirect_uri={redirect_uri}"
+            f"&redirect_uri={urllib.parse.quote(effective_redirect_uri, safe='')}"
             f"&scope=user:email%20read:user"
             f"&state={state}"
         )
     elif p == "apple":
-        redirect_uri = settings.APPLE_REDIRECT_URI
         auth_url = (
             f"https://appleid.apple.com/auth/authorize"
             f"?client_id={settings.APPLE_CLIENT_ID}"
-            f"&redirect_uri={redirect_uri}"
+            f"&redirect_uri={urllib.parse.quote(effective_redirect_uri, safe='')}"
             f"&response_type=code%20id_token"
             f"&response_mode=form_post"
             f"&scope=name%20email"
@@ -203,12 +273,17 @@ def oauth_callback(
             detail=f"{p.capitalize()} OAuth is not configured on this server."
         )
 
-    # 1. State verification (Anti-CSRF)
-    if not verify_oauth_state(payload.state, p):
+    # 1. State verification (Anti-CSRF & Anti-Replay)
+    state_payload = verify_and_consume_oauth_state(payload.state, p, db)
+    if not state_payload:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Invalid or expired OAuth state parameter. Please try logging in again."
         )
+
+    # Effective redirect URI bound to state at authorize time
+    bound_redirect_uri = state_payload.get("redirect_uri")
+    code_verifier = state_payload.get("code_verifier")
 
     # 2. Token Exchange & Profile Extraction
     provider_user_id = None
@@ -221,9 +296,11 @@ def oauth_callback(
             "code": payload.code,
             "client_id": settings.GOOGLE_CLIENT_ID,
             "client_secret": settings.GOOGLE_CLIENT_SECRET,
-            "redirect_uri": payload.redirect_uri or settings.GOOGLE_REDIRECT_URI,
+            "redirect_uri": bound_redirect_uri or payload.redirect_uri or settings.GOOGLE_REDIRECT_URI,
             "grant_type": "authorization_code",
         }
+        if code_verifier:
+            token_data["code_verifier"] = code_verifier
         try:
             res = requests.post(token_endpoint, data=token_data, timeout=10)
             if not res.ok:
@@ -262,7 +339,7 @@ def oauth_callback(
             "code": payload.code,
             "client_id": settings.GITHUB_CLIENT_ID,
             "client_secret": settings.GITHUB_CLIENT_SECRET,
-            "redirect_uri": payload.redirect_uri or settings.GITHUB_REDIRECT_URI,
+            "redirect_uri": bound_redirect_uri or payload.redirect_uri or settings.GITHUB_REDIRECT_URI,
         }
         try:
             res = requests.post(token_endpoint, json=token_data, headers={"Accept": "application/json"}, timeout=10)
@@ -308,7 +385,7 @@ def oauth_callback(
             "client_id": settings.APPLE_CLIENT_ID,
             "client_secret": settings.APPLE_CLIENT_SECRET,
             "grant_type": "authorization_code",
-            "redirect_uri": payload.redirect_uri or settings.APPLE_REDIRECT_URI,
+            "redirect_uri": bound_redirect_uri or payload.redirect_uri or settings.APPLE_REDIRECT_URI,
         }
         try:
             res = requests.post(token_endpoint, data=token_data, timeout=10)
@@ -349,6 +426,9 @@ def oauth_callback(
         .first()
     )
 
+    is_new_user = False
+    requires_profile_completion = False
+
     if oauth_acc:
         # User already linked with this specific OAuth identity
         user = db.query(User).filter(User.id == oauth_acc.user_id).first()
@@ -369,11 +449,16 @@ def oauth_callback(
                 user_id=user.id,
                 email=user.email,
                 full_name=full_name or user.email.split("@")[0],
+                phone=None,
                 is_verified=True,
                 is_active=True,
             )
             db.add(customer)
             db.commit()
+            db.refresh(customer)
+
+        # Check if customer profile has a valid phone number
+        requires_profile_completion = not bool(customer.phone and customer.phone.strip())
     else:
         # Check if an existing User exists with this email address
         existing_user = db.query(User).filter(User.email == clean_email).first()
@@ -388,7 +473,9 @@ def oauth_callback(
                 )
             )
 
-        # Create new customer account
+        # Create new customer account with pending profile onboarding
+        is_new_user = True
+        requires_profile_completion = True
         random_pwd_hash = hash_password(secrets.token_urlsafe(32))
         user = User(
             id=uuid.uuid4(),
@@ -402,6 +489,7 @@ def oauth_callback(
             user_id=user.id,
             email=clean_email,
             full_name=full_name or clean_email.split("@")[0],
+            phone=None,
             password_hash=random_pwd_hash,
             is_verified=True,
             is_active=True,
@@ -421,25 +509,35 @@ def oauth_callback(
         db.refresh(customer)
 
     # 4. Issue authenticated SmartServe JWT session
+    token_jti = f"jwt_{uuid.uuid4().hex}"
     token = create_access_token({
         "sub": str(user.id),
         "role": "customer",
         "customer_id": str(customer.id),
+        "email": user.email,
+        "jti": token_jti,
+        "pending_profile": requires_profile_completion,
     })
 
-    # Optional: Log session
+    # Track active session in database
     try:
-        user_session = UserSession(
-            id=uuid.uuid4(),
-            user_id=user.id,
-            device_info=request.headers.get("user-agent", "Web Browser")[:250],
+        from app.services import security_service
+        security_service.create_active_session(
+            db, user_id=user.id, token_jti=token_jti,
             ip_address=request.client.host if request.client else "127.0.0.1",
-            last_active=datetime.utcnow(),
+            user_agent=request.headers.get("user-agent", "Web Browser")[:250],
+            expires_in_minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES
         )
-        db.add(user_session)
-        db.commit()
     except Exception:
-        db.rollback()
+        pass
+
+    missing_fields = []
+    if not customer.full_name or len(customer.full_name.strip()) < 2:
+        missing_fields.append("full_name")
+    if not (customer.phone and len(re.sub(r"\D", "", customer.phone)) >= 10):
+        missing_fields.append("phone")
+
+    loc = customer.preferences.get("location") if isinstance(customer.preferences, dict) else None
 
     return CustomerTokenResponse(
         access_token=token,
@@ -448,4 +546,9 @@ def oauth_callback(
         email=customer.email,
         full_name=customer.full_name,
         phone=customer.phone,
+        requires_profile_completion=requires_profile_completion,
+        is_profile_complete=len(missing_fields) == 0,
+        missing_profile_fields=missing_fields,
+        is_new_user=is_new_user,
+        location=loc,
     )

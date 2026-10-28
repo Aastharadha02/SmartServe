@@ -230,3 +230,23 @@ def list_suspicious_activities(
             created_at=act.created_at.isoformat()
         ) for act in activities
     ]
+
+
+@router.post("/maintenance/cleanup")
+def run_security_maintenance_cleanup(
+    max_records: int = 1000,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_permission("security:manage"))
+):
+    """Safely and boundedly prune expired security records (revoked sessions, stale rate limits, used tokens)."""
+    results = security_service.cleanup_expired_security_records(db, max_records_per_table=max_records)
+    audit_repository.create_audit_log(
+        db, actor_id=admin.id, actor_email=admin.email, actor_role=admin.role,
+        action="Ran Security Maintenance Cleanup", risk_level="Info",
+        details_json=results
+    )
+    return {
+        "status": "success",
+        "message": "Security maintenance cleanup completed successfully.",
+        "purged_counts": results
+    }

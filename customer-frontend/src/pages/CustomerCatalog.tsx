@@ -115,19 +115,45 @@ export const CustomerCatalog: React.FC = () => {
   // Derived current category object
   const currentCategoryObj = useMemo(() => {
     if (!selectedCategory) return null;
-    return categories.find(
-      c => c.name.toLowerCase() === selectedCategory.toLowerCase() ||
-           (c.display_name && c.display_name.toLowerCase() === selectedCategory.toLowerCase())
-    );
+    const cleanSel = selectedCategory.toLowerCase().trim();
+    const cleanSelFuzzy = cleanSel.replace(/^[\d\.\-\s]+/, '').replace(/[\-\,\&]+/g, ' ').replace(/\s+/g, ' ').trim();
+    return categories.find(c => {
+      const cName = c.name.toLowerCase();
+      const cDisplay = (c.display_name || '').toLowerCase();
+      const cSlug = (c.slug || '').toLowerCase();
+      const cFuzzy = cName.replace(/^[\d\.\-\s]+/, '').replace(/[\-\,\&]+/g, ' ').replace(/\s+/g, ' ').trim();
+      return (
+        cName === cleanSel ||
+        cDisplay === cleanSel ||
+        cSlug === cleanSel ||
+        cFuzzy === cleanSelFuzzy ||
+        cName.includes(cleanSelFuzzy) ||
+        cleanSelFuzzy.includes(cFuzzy)
+      );
+    }) || null;
   }, [categories, selectedCategory]);
 
-  // Derived available subcategories for selected category from live backend category response
+  // Derived available subcategories for selected category from live backend category response or active services
   const currentSubcategories = useMemo(() => {
     if (currentCategoryObj && currentCategoryObj.subcategories && currentCategoryObj.subcategories.length > 0) {
       return currentCategoryObj.subcategories;
     }
+    // Dynamic fallback from loaded services
+    if (allServices && allServices.length > 0) {
+      const subMap: Record<string, number> = {};
+      allServices.forEach(s => {
+        if (s.subcategory) {
+          subMap[s.subcategory] = (subMap[s.subcategory] || 0) + 1;
+        }
+      });
+      return Object.entries(subMap).map(([name, count]) => ({
+        name,
+        service_count: count,
+        active_count: count,
+      }));
+    }
     return [];
-  }, [currentCategoryObj]);
+  }, [currentCategoryObj, allServices]);
 
   // 2. Exact Services Load based on active Category / Subcategory / Query
   useEffect(() => {
@@ -156,22 +182,29 @@ export const CustomerCatalog: React.FC = () => {
     fetchTargetServices();
   }, [selectedCategory, selectedSubcategory, searchQuery, currentCategoryObj]);
 
-  // Filtered & Sorted Services for Level 3
+  // Filtered & Sorted Services
   const displayedServices = useMemo(() => {
     let result = allServices.filter(s => s.is_active);
 
     const canonicalCat = currentCategoryObj ? currentCategoryObj.name.toLowerCase() : (selectedCategory ? selectedCategory.toLowerCase() : '');
+    const canonicalFuzzy = canonicalCat.replace(/^[\d\.\-\s]+/, '').replace(/[\-\,\&]+/g, ' ').replace(/\s+/g, ' ').trim();
 
     if (selectedCategory) {
-      result = result.filter(
-        s => s.category.toLowerCase() === canonicalCat ||
-             s.category.toLowerCase().includes(selectedCategory.toLowerCase())
-      );
+      result = result.filter(s => {
+        const sCat = s.category.toLowerCase();
+        const sFuzzy = sCat.replace(/^[\d\.\-\s]+/, '').replace(/[\-\,\&]+/g, ' ').replace(/\s+/g, ' ').trim();
+        return sCat === canonicalCat || sFuzzy === canonicalFuzzy || sCat.includes(canonicalFuzzy) || canonicalFuzzy.includes(sFuzzy);
+      });
     }
 
     if (selectedSubcategory) {
+      const cleanSub = selectedSubcategory.trim().toLowerCase();
       result = result.filter(
-        s => s.subcategory && s.subcategory.trim().toLowerCase() === selectedSubcategory.trim().toLowerCase()
+        s => s.subcategory && (
+          s.subcategory.trim().toLowerCase() === cleanSub ||
+          s.subcategory.toLowerCase().includes(cleanSub) ||
+          cleanSub.includes(s.subcategory.toLowerCase())
+        )
       );
     }
 
@@ -200,8 +233,8 @@ export const CustomerCatalog: React.FC = () => {
   // State Level Detection
   const isSearching = searchQuery.trim().length > 0;
   const isLevel1 = !selectedCategory && !selectedSubcategory && !viewAllServices && !isSearching;
-  const isLevel2 = selectedCategory !== '' && selectedSubcategory === '' && !viewAllServices && !isSearching;
-  const isLevel3 = selectedSubcategory !== '' || viewAllServices || isSearching;
+  const isCategoryOrServicesActive = !isLevel1;
+  const showVisualSubcategories = Boolean(selectedCategory && !selectedSubcategory && currentSubcategories.length > 0 && !isSearching);
 
   // Handlers
   const handleSelectCategory = (catName: string) => {
@@ -274,6 +307,41 @@ export const CustomerCatalog: React.FC = () => {
   return (
     <div className="space-y-8 font-sans max-w-7xl mx-auto pb-12">
 
+      {/* BREADCRUMB HIERARCHY BAR */}
+      <nav className="flex items-center gap-2 text-xs font-bold text-[#1F2A1E]/50 flex-wrap">
+        <button 
+          onClick={handleResetToCategories}
+          className={`hover:text-[#2F5233] transition-colors cursor-pointer ${isLevel1 ? 'text-[#2F5233]' : ''}`}
+        >
+          {t('catalog_page.all_categories', { defaultValue: 'All Categories' })}
+        </button>
+
+        {selectedCategory && (
+          <>
+            <ChevronRight className="w-3.5 h-3.5 text-[#C9A15A] flex-shrink-0" />
+            <button 
+              onClick={() => handleSelectCategory(selectedCategory)}
+              className={`hover:text-[#2F5233] transition-colors cursor-pointer ${!selectedSubcategory ? 'text-[#2F5233]' : ''}`}
+            >
+              {getLocalizedCategory(selectedCategory)}
+            </button>
+          </>
+        )}
+
+        {selectedSubcategory && (
+          <>
+            <ChevronRight className="w-3.5 h-3.5 text-[#C9A15A] flex-shrink-0" />
+            <span className="text-[#1F2A1E] font-extrabold">{getLocalizedSubcategory(selectedSubcategory)}</span>
+          </>
+        )}
+
+        {viewAllServices && !selectedCategory && (
+          <>
+            <ChevronRight className="w-3.5 h-3.5 text-[#C9A15A] flex-shrink-0" />
+            <span className="text-[#1F2A1E] font-extrabold">{t('catalog_page.all_services_catalog', { defaultValue: 'All Services Catalog' })}</span>
+          </>
+        )}
+      </nav>
 
       {/* SEARCH & QUICK ACTION BAR */}
       <div className="bg-white p-4 sm:p-5 rounded-3xl border border-[#E5DEC9] shadow-2xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
@@ -393,11 +461,11 @@ export const CustomerCatalog: React.FC = () => {
       )}
 
       {/* ========================================================================= */}
-      {/* LEVEL 2 — SUBCATEGORY GRID (When a Category is selected) */}
+      {/* SUBCATEGORY VISUAL CARDS (When a Category is selected and viewing all) */}
       {/* ========================================================================= */}
-      {isLevel2 && (
+      {showVisualSubcategories && (
         <div className="space-y-6 animate-in fade-in duration-200">
-          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E5DEC9] shadow-2xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="flex items-center justify-between">
             <div>
               <div className="flex items-center gap-2">
                 <button
@@ -427,6 +495,7 @@ export const CustomerCatalog: React.FC = () => {
               <span>{t('catalog_page.view_all_category_services', { category: getLocalizedCategory(selectedCategory), defaultValue: `View All ${getLocalizedCategory(selectedCategory)} Services` })}</span>
               <ChevronRight className="w-4 h-4 text-[#C9A15A]" />
             </button>
+
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -488,9 +557,9 @@ export const CustomerCatalog: React.FC = () => {
       )}
 
       {/* ========================================================================= */}
-      {/* LEVEL 3 — SERVICE LIST VIEW (When subcategory or search/all is active) */}
+      {/* SERVICE LIST VIEW (Active when a category, subcategory, search, or view-all is chosen) */}
       {/* ========================================================================= */}
-      {isLevel3 && (
+      {isCategoryOrServicesActive && (
         <div className="space-y-6 animate-in fade-in duration-200">
           {/* Header & Subcategory Switcher */}
           <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E5DEC9] shadow-2xs space-y-4">

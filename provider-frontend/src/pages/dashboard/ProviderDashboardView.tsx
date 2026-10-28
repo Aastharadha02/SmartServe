@@ -31,6 +31,7 @@ import {
   Upload,
   FileText,
   Eye,
+  Banknote,
 } from 'lucide-react';
 import { apiClient } from '../../api/client';
 import { subscribeToRealtime } from '../../utils/realtime';
@@ -118,6 +119,19 @@ export const ProviderDashboardView: React.FC = () => {
   const [startingBooking, setStartingBooking] = useState<any | null>(null);
   const [startOtp, setStartOtp] = useState<string>('');
   const [startOtpError, setStartOtpError] = useState<string | null>(null);
+
+  // Service Completion OTP state
+  const [completingBooking, setCompletingBooking] = useState<any | null>(null);
+  const [completeOtp, setCompleteOtp] = useState<string>('');
+  const [completeOtpError, setCompleteOtpError] = useState<string | null>(null);
+
+  // Cash Collection Reporting state
+  const [cashCollectionBooking, setCashCollectionBooking] = useState<any | null>(null);
+  const [collectedAmount, setCollectedAmount] = useState<string>('');
+  const [collectionNotes, setCollectionNotes] = useState<string>('');
+  const [collectionLoading, setCollectionLoading] = useState<boolean>(false);
+  const [collectionError, setCollectionError] = useState<string | null>(null);
+  const [collectionSuccess, setCollectionSuccess] = useState<string | null>(null);
 
   // Real Geolocation Tracking state
   const [locationPermission, setLocationPermission] = useState<'prompt' | 'granted' | 'denied' | 'unsupported'>('prompt');
@@ -427,22 +441,29 @@ export const ProviderDashboardView: React.FC = () => {
       }
     } catch (e) {}
 
-    const channels = ['bookings', 'dashboard'];
+    const channels: string[] = [];
     if (providerId) {
       channels.push(`provider_${providerId}`, `user_${providerId}`);
     }
+
+    const handleCustomBookingReceived = () => {
+      fetchAll();
+    };
+    window.addEventListener('smartserve:booking_received', handleCustomBookingReceived);
 
     // Real-Time WebSocket Subscription (No Polling Required)
     const unsubscribeWs = subscribeToRealtime(channels, (payload) => {
       const type = payload.type || payload.event_type || payload.event;
       if (
         type === 'BOOKING_CREATED' ||
+        type === 'BOOKING_ASSIGNED' ||
         type === 'BOOKING_ACCEPTED' ||
         type === 'BOOKING_REJECTED' ||
         type === 'BOOKING_STATUS_UPDATED' ||
         type === 'BOOKING_STARTED' ||
         type === 'BOOKING_COMPLETED' ||
         type === 'booking.created' ||
+        type === 'booking.assigned' ||
         type === 'booking.accepted' ||
         type === 'booking.rejected' ||
         type === 'booking.updated' ||
@@ -462,6 +483,7 @@ export const ProviderDashboardView: React.FC = () => {
 
     return () => {
       unsubscribeWs();
+      window.removeEventListener('smartserve:booking_received', handleCustomBookingReceived);
     };
   }, []);
 
@@ -508,14 +530,56 @@ export const ProviderDashboardView: React.FC = () => {
           throw err;
         }
       } else if (action === 'complete') {
-        await apiClient.post(`/providers/me/bookings/${bookingId}/complete`);
-        setIsBroadcastingGps(false);
+        try {
+          await apiClient.post(`/providers/me/bookings/${bookingId}/complete`, {
+            otp_code: otpCode ? otpCode.trim() : undefined,
+          });
+          setIsBroadcastingGps(false);
+          setCompletingBooking(null);
+          setCompleteOtp('');
+          setCompleteOtpError(null);
+        } catch (err: any) {
+          const detail = err.response?.data?.detail || 'Invalid service completion OTP verification code.';
+          setCompleteOtpError(detail);
+          throw err;
+        }
       }
       await fetchAll();
     } catch (err: any) {
       setActionError(err.response?.data?.detail || `Failed to ${action} booking.`);
     } finally {
       setActionLoading(null);
+    }
+  };
+
+  const handleReportCashCollection = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!cashCollectionBooking) return;
+    setCollectionLoading(true);
+    setCollectionError(null);
+    try {
+      const parsedAmount = parseFloat(collectedAmount);
+      if (isNaN(parsedAmount) || parsedAmount <= 0) {
+        setCollectionError('Please enter a valid cash amount collected.');
+        setCollectionLoading(false);
+        return;
+      }
+      await apiClient.post(`/providers/me/bookings/${cashCollectionBooking.id}/cash-collected`, {
+        reported_amount: parsedAmount,
+        notes: collectionNotes.trim() || undefined,
+      });
+      setCollectionSuccess(`Cash collection of ₹${parsedAmount} reported successfully! Awaiting SmartServe Admin verification.`);
+      setTimeout(() => {
+        setCashCollectionBooking(null);
+        setCollectionSuccess(null);
+        setCollectedAmount('');
+        setCollectionNotes('');
+      }, 1500);
+      await fetchAll();
+    } catch (err: any) {
+      setCollectionError(err.response?.data?.detail || 'Failed to report cash collection.');
+    } finally {
+      setCollectionLoading(false);
     }
   };
 
@@ -948,6 +1012,19 @@ export const ProviderDashboardView: React.FC = () => {
                           >
                             {booking.status}
                           </span>
+                          <span
+                            className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full border ${
+                              (booking.payment_status || '').toLowerCase() === 'paid'
+                                ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                : (booking.payment_status || '').toLowerCase() === 'collection reported'
+                                ? 'bg-amber-50 text-amber-700 border-amber-200'
+                                : (booking.payment_status || '').toLowerCase() === 'rejected'
+                                ? 'bg-rose-50 text-rose-700 border-rose-200'
+                                : 'bg-slate-50 text-slate-600 border-slate-200'
+                            }`}
+                          >
+                            COD: {booking.payment_status || 'Pending'}
+                          </span>
                           {booking.emergency_flag === 'EMERGENCY' && (
                             <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-200 flex items-center gap-1">
                               <Zap className="w-3 h-3 text-rose-600" />
@@ -1218,14 +1295,76 @@ export const ProviderDashboardView: React.FC = () => {
                           }
                           if (s === 'started') {
                             return (
-                              <button
-                                onClick={() => handleBookingAction(booking.id, 'complete')}
-                                disabled={actionLoading === booking.id}
-                                className="flex items-center gap-1.5 px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded-xl hover:bg-emerald-700 transition-colors disabled:opacity-50"
-                              >
-                                <CheckCircle2 className="w-3.5 h-3.5" />
-                                <span>{actionLoading === booking.id ? 'Completing...' : 'Complete Service'}</span>
-                              </button>
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <button
+                                  onClick={() => {
+                                    setCompletingBooking(booking);
+                                    setCompleteOtp('');
+                                    setCompleteOtpError(null);
+                                  }}
+                                  disabled={actionLoading === booking.id}
+                                  className="flex items-center gap-1.5 px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded-xl hover:bg-emerald-700 transition-colors disabled:opacity-50"
+                                >
+                                  <CheckCircle2 className="w-3.5 h-3.5" />
+                                  <span>Complete Service (Enter OTP)</span>
+                                </button>
+                                {booking.payment_status !== 'Paid' && booking.payment_status !== 'Collection Reported' ? (
+                                  <button
+                                    onClick={() => {
+                                      setCashCollectionBooking(booking);
+                                      setCollectedAmount(String(booking.total_price || ''));
+                                      setCollectionNotes('');
+                                      setCollectionError(null);
+                                      setCollectionSuccess(null);
+                                    }}
+                                    className="flex items-center gap-1.5 px-4 py-2 bg-[#2F5233] text-white text-xs font-bold rounded-xl hover:bg-[#3D6B42] transition-colors shadow-xs"
+                                  >
+                                    <Banknote className="w-3.5 h-3.5" />
+                                    <span>Mark Cash Collected (₹{booking.total_price || 0})</span>
+                                  </button>
+                                ) : booking.payment_status === 'Collection Reported' ? (
+                                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 border border-amber-300 text-amber-800 rounded-xl text-xs font-semibold">
+                                    <Clock className="w-3.5 h-3.5 text-amber-600" />
+                                    <span>Collection Reported • Awaiting Verification</span>
+                                  </div>
+                                ) : booking.payment_status === 'Paid' ? (
+                                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl text-xs font-bold">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                                    <span>Payment Verified & Settled</span>
+                                  </div>
+                                ) : null}
+                              </div>
+                            );
+                          }
+                          if (s === 'completed') {
+                            return (
+                              <div className="flex items-center gap-2 flex-wrap">
+                                {booking.payment_status !== 'Paid' && booking.payment_status !== 'Collection Reported' ? (
+                                  <button
+                                    onClick={() => {
+                                      setCashCollectionBooking(booking);
+                                      setCollectedAmount(String(booking.total_price || ''));
+                                      setCollectionNotes('');
+                                      setCollectionError(null);
+                                      setCollectionSuccess(null);
+                                    }}
+                                    className="flex items-center gap-1.5 px-4 py-2 bg-[#2F5233] text-white text-xs font-bold rounded-xl hover:bg-[#3D6B42] transition-colors shadow-xs"
+                                  >
+                                    <Banknote className="w-3.5 h-3.5" />
+                                    <span>Mark Cash Collected (₹{booking.total_price || 0})</span>
+                                  </button>
+                                ) : booking.payment_status === 'Collection Reported' ? (
+                                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 border border-amber-300 text-amber-800 rounded-xl text-xs font-semibold">
+                                    <Clock className="w-3.5 h-3.5 text-amber-600" />
+                                    <span>Cash Collection Reported • Awaiting Admin Verification</span>
+                                  </div>
+                                ) : booking.payment_status === 'Paid' ? (
+                                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl text-xs font-bold">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                                    <span>Payment Verified & Settled</span>
+                                  </div>
+                                ) : null}
+                              </div>
                             );
                           }
                           return null;
@@ -1555,6 +1694,249 @@ export const ProviderDashboardView: React.FC = () => {
               }}
             />
           </div>
+        </div>
+      )}
+
+      {/* Service Completion OTP Verification Modal */}
+      {completingBooking && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in">
+          <div className="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 shadow-2xl border border-[#E5DEC9]">
+            <div className="flex items-start justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 shadow-xs">
+                  <KeyRound className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Verify Completion OTP</h3>
+                  <p className="text-[11px] text-[#1F2A1E]/60 font-mono">
+                    {completingBooking.reference || completingBooking.booking_reference || completingBooking.id}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setCompletingBooking(null);
+                  setCompleteOtp('');
+                  setCompleteOtpError(null);
+                }}
+                className="text-[#1F2A1E]/40 hover:text-[#1F2A1E] p-1 rounded-full hover:bg-black/5"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="p-3 bg-[#FAF7F0] rounded-xl border border-[#E5DEC9] text-xs space-y-1">
+              <p className="font-bold text-[#1F2A1E]">{completingBooking.service_name}</p>
+              <p className="text-[#1F2A1E]/70">Customer: <span className="font-semibold">{completingBooking.customer_name}</span></p>
+            </div>
+
+            {completeOtpError && (
+              <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                <span>{completeOtpError}</span>
+              </div>
+            )}
+
+            <div className="space-y-3">
+              <label className="block text-xs font-bold text-[#1F2A1E] uppercase tracking-wider">
+                Enter 4-Digit Customer Completion OTP
+              </label>
+              <input
+                data-testid="complete-otp-input"
+                type="text"
+                maxLength={6}
+                value={completeOtp}
+                onChange={(e) => {
+                  setCompleteOtp(e.target.value);
+                  setCompleteOtpError(null);
+                }}
+                placeholder="4-digit OTP"
+                className="w-full text-center font-mono text-2xl tracking-widest bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-3 py-3 text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]"
+              />
+              <p className="text-[11px] text-[#1F2A1E]/60">
+                Ask the customer for the completion code displayed on their screen after they inspect and approve the completed service.
+              </p>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setCompletingBooking(null);
+                  setCompleteOtp('');
+                  setCompleteOtpError(null);
+                }}
+                className="px-4 py-2 bg-[#FAF7F0] hover:bg-[#F2EDE1] text-[#1F2A1E] font-bold text-xs rounded-xl transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                data-testid="verify-complete-otp-btn"
+                type="button"
+                disabled={!completeOtp.trim() || actionLoading === completingBooking.id}
+                onClick={async () => {
+                  try {
+                    await handleBookingAction(completingBooking.id, 'complete', undefined, completeOtp.trim());
+                  } catch (e) {
+                    // Handled inside handleBookingAction with setCompleteOtpError
+                  }
+                }}
+                className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition-colors disabled:opacity-50 flex items-center gap-1.5"
+              >
+                {actionLoading === completingBooking.id ? (
+                  <span>Verifying...</span>
+                ) : (
+                  <>
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    <span>Verify & Complete Service</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mark Cash Collected Modal */}
+      {cashCollectionBooking && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in">
+          <form onSubmit={handleReportCashCollection} className="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 shadow-2xl border border-[#E5DEC9]">
+            <div className="flex items-start justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-10 h-10 rounded-2xl bg-[#2F5233]/10 border border-[#2F5233]/20 flex items-center justify-center text-[#2F5233] shadow-xs">
+                  <Banknote className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Mark Cash Collected</h3>
+                  <p className="text-[11px] text-[#1F2A1E]/60 font-mono">
+                    {cashCollectionBooking.reference || cashCollectionBooking.booking_reference || cashCollectionBooking.id}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setCashCollectionBooking(null);
+                  setCollectionError(null);
+                  setCollectionSuccess(null);
+                }}
+                className="text-[#1F2A1E]/40 hover:text-[#1F2A1E] p-1 rounded-full hover:bg-black/5"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="p-3.5 bg-[#FAF7F0] rounded-xl border border-[#E5DEC9] text-xs space-y-1.5">
+              <div className="flex justify-between items-center">
+                <span className="text-[#1F2A1E]/60">Service:</span>
+                <span className="font-bold text-[#1F2A1E]">{cashCollectionBooking.service_name}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-[#1F2A1E]/60">Customer:</span>
+                <span className="font-semibold text-[#1F2A1E]">{cashCollectionBooking.customer_name}</span>
+              </div>
+              <div className="flex justify-between items-center pt-1 border-t border-[#E5DEC9]">
+                <span className="font-semibold text-[#1F2A1E]/70">Agreed Amount:</span>
+                <span className="font-mono font-bold text-sm text-[#2F5233]">
+                  ₹{parseFloat(cashCollectionBooking.total_price || 0).toLocaleString('en-IN')}
+                </span>
+              </div>
+            </div>
+
+            {collectionError && (
+              <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                <span>{collectionError}</span>
+              </div>
+            )}
+
+            {collectionSuccess && (
+              <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs text-emerald-800 flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>{collectionSuccess}</span>
+              </div>
+            )}
+
+            <div className="space-y-3">
+              <div>
+                <label className="block text-xs font-bold text-[#1F2A1E] uppercase tracking-wider mb-1.5">
+                  Amount Collected (₹)
+                </label>
+                <input
+                  type="number"
+                  step="0.01"
+                  required
+                  value={collectedAmount}
+                  onChange={(e) => {
+                    setCollectedAmount(e.target.value);
+                    setCollectionError(null);
+                  }}
+                  placeholder="Enter collected cash amount"
+                  className="w-full font-mono text-lg font-bold bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl px-4 py-2.5 text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]"
+                />
+              </div>
+
+              {/* Discrepancy Alert */}
+              {collectedAmount && parseFloat(collectedAmount) !== parseFloat(cashCollectionBooking.total_price || 0) && (
+                <div className="p-3 bg-amber-50 border border-amber-300 rounded-xl text-xs text-amber-900 flex items-start gap-2">
+                  <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold block">Amount Discrepancy Detected</span>
+                    <span>
+                      Reported: ₹{collectedAmount} vs Agreed: ₹{cashCollectionBooking.total_price}.
+                      This discrepancy of ₹{Math.abs(parseFloat(collectedAmount) - parseFloat(cashCollectionBooking.total_price || 0)).toFixed(2)} will be flagged for SmartServe Admin review.
+                    </span>
+                  </div>
+                </div>
+              )}
+
+              <div>
+                <label className="block text-xs font-bold text-[#1F2A1E] uppercase tracking-wider mb-1.5">
+                  Collection Notes (Optional)
+                </label>
+                <textarea
+                  rows={2}
+                  value={collectionNotes}
+                  onChange={(e) => setCollectionNotes(e.target.value)}
+                  placeholder="e.g. Exact cash received, tip included, or reason for difference"
+                  className="w-full text-xs bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]"
+                />
+              </div>
+
+              <p className="text-[11px] text-[#1F2A1E]/60 italic">
+                Note: Reporting cash collection updates the payment status to "Collection Reported". Final verification is conducted by a SmartServe Operations Admin.
+              </p>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-2 border-t border-[#E5DEC9]">
+              <button
+                type="button"
+                onClick={() => {
+                  setCashCollectionBooking(null);
+                  setCollectionError(null);
+                  setCollectionSuccess(null);
+                }}
+                className="px-4 py-2 bg-[#FAF7F0] hover:bg-[#F2EDE1] text-[#1F2A1E] font-bold text-xs rounded-xl transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={collectionLoading || !collectedAmount}
+                className="px-5 py-2.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold text-xs rounded-xl shadow-xs transition-colors disabled:opacity-50 flex items-center gap-1.5"
+              >
+                {collectionLoading ? (
+                  <span>Recording Report...</span>
+                ) : (
+                  <>
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    <span>Confirm Cash Report</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </form>
         </div>
       )}
     </div>

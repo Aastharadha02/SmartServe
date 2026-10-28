@@ -22,6 +22,10 @@ import {
   Camera,
   FileText,
   Eye,
+  Banknote,
+  ShieldAlert,
+  Bell,
+  Mail,
 } from 'lucide-react';
 import { getBookingConversation } from '../../../api/support';
 import type { SupportTicketItem } from '../../../api/support';
@@ -31,9 +35,16 @@ import {
   reassignBookingProvider,
   getAdminBookingLocation,
   resolveAdminWarrantyClaim,
+  getBookingPayments,
+  verifyPaymentCollection,
+  rejectPaymentCollection,
+  getAdminBookingNotifications,
+  retryAdminNotification,
   type BookingItem,
+  type PaymentRecord,
   type AdminBookingLocationResponse,
-  type AdminProviderLocation
+  type AdminProviderLocation,
+  type AdminNotificationItem,
 } from '../../../api/bookings';
 import { getProvidersList } from '../../../api/providers';
 import { getAuthenticatedAdmin } from '../../../api/admins';
@@ -73,6 +84,17 @@ export const BookingDetailView: React.FC = () => {
   const [auditTicket, setAuditTicket] = useState<SupportTicketItem | null>(null);
   const [auditError, setAuditError] = useState<string | null>(null);
 
+  // Payment Review State
+  const [bookingPayments, setBookingPayments] = useState<PaymentRecord[]>([]);
+  const [paymentActionLoading, setPaymentActionLoading] = useState<string | null>(null);
+  const [rejectPaymentModalOpen, setRejectPaymentModalOpen] = useState<boolean>(false);
+  const [targetRejectPaymentId, setTargetRejectPaymentId] = useState<string>('');
+  const [rejectPaymentReason, setRejectPaymentReason] = useState<string>('');
+
+  // Notification Monitoring State
+  const [adminNotifications, setAdminNotifications] = useState<AdminNotificationItem[]>([]);
+  const [retryingNotificationId, setRetryingNotificationId] = useState<string | null>(null);
+
   const [toastMessage, setToastMessage] = useState<{ text: string; type: 'success' | 'warning' | 'error' } | null>(null);
 
   // Warranty Audit & Photo Lightbox State
@@ -93,16 +115,68 @@ export const BookingDetailView: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await getBookingDetail(bookingId);
+      const [data, payments] = await Promise.all([
+        getBookingDetail(bookingId),
+        getBookingPayments(bookingId).catch(() => []),
+      ]);
       setBookingData(data);
+      setBookingPayments(payments || []);
       if (data.allowed_next_statuses && data.allowed_next_statuses.length > 0) {
         setTargetNextStatus(data.allowed_next_statuses[0]);
       }
       fetchLocation();
+      if (data && data.booking_reference) {
+        getAdminBookingNotifications(data.booking_reference)
+          .then(setAdminNotifications)
+          .catch(() => []);
+      }
     } catch (err: any) {
       setError(err.response?.data?.detail || 'Failed to load booking details from backend.');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleVerifyCollection = async (paymentId: string) => {
+    setPaymentActionLoading(paymentId);
+    try {
+      await verifyPaymentCollection(paymentId);
+      showToast('Cash collection verified successfully! Booking payment marked as PAID.', 'success');
+      await fetchBookingProfile();
+    } catch (err: any) {
+      showToast(err.response?.data?.detail || 'Failed to verify payment collection.', 'error');
+    } finally {
+      setPaymentActionLoading(null);
+    }
+  };
+
+  const handleRejectCollection = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!targetRejectPaymentId || !rejectPaymentReason.trim()) return;
+    setPaymentActionLoading(targetRejectPaymentId);
+    try {
+      await rejectPaymentCollection(targetRejectPaymentId, rejectPaymentReason.trim());
+      showToast('Payment report rejected. Follow-up reason recorded.', 'warning');
+      setRejectPaymentModalOpen(false);
+      setRejectPaymentReason('');
+      await fetchBookingProfile();
+    } catch (err: any) {
+      showToast(err.response?.data?.detail || 'Failed to reject payment collection.', 'error');
+    } finally {
+      setPaymentActionLoading(null);
+    }
+  };
+
+  const handleRetryNotification = async (notificationId: string) => {
+    try {
+      setRetryingNotificationId(notificationId);
+      const updated = await retryAdminNotification(notificationId);
+      setAdminNotifications((prev) => prev.map((n) => (n.id === notificationId ? updated : n)));
+      showToast(`Notification retry completed. Status: ${updated.delivery_status}`, updated.delivery_status === 'Sent' ? 'success' : 'warning');
+    } catch (err: any) {
+      showToast(err.response?.data?.detail || 'Failed to retry notification delivery.', 'error');
+    } finally {
+      setRetryingNotificationId(null);
     }
   };
 
@@ -485,33 +559,126 @@ export const BookingDetailView: React.FC = () => {
             </div>
           </div>
 
-          {/* Service & Financial Card */}
+          {/* Service & Payment Review Card */}
           <div className="bg-white p-6 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-4">
-            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center gap-2">
-              <IndianRupee className="w-5 h-5 text-emerald-600" />
-              <span>Service & Payment Details</span>
+            <h3 className="text-base font-bold font-serif text-[#1F2A1E] border-b border-[#E5DEC9]/60 pb-3 flex items-center justify-between">
+              <span className="flex items-center gap-2">
+                <Banknote className="w-5 h-5 text-[#2F5233]" />
+                <span>Payment & Cash Review</span>
+              </span>
+              <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
+                (bookingData.payment_status || '').toLowerCase() === 'paid'
+                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                  : (bookingData.payment_status || '').toLowerCase() === 'collection reported'
+                  ? 'bg-amber-50 text-amber-700 border-amber-300 animate-pulse'
+                  : (bookingData.payment_status || '').toLowerCase() === 'rejected'
+                  ? 'bg-rose-50 text-rose-700 border-rose-200'
+                  : 'bg-slate-100 text-slate-600 border-slate-200'
+              }`}>
+                {bookingData.payment_status}
+              </span>
             </h3>
 
             <div className="space-y-3 text-xs">
               <div className="flex items-center justify-between">
-                <span className="text-slate-400 font-semibold">Total Price</span>
-                <span className="font-extrabold text-slate-900 text-lg">₹{bookingData.total_price.toLocaleString('en-IN')}</span>
-              </div>
-
-              <div className="flex items-center justify-between border-t border-[#E5DEC9]/60 pt-2">
-                <span className="text-slate-400 font-semibold">Payment Status</span>
-                <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold ${
-                  bookingData.payment_status === 'Paid' ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-700'
-                }`}>
-                  {bookingData.payment_status}
+                <span className="text-slate-400 font-semibold">Payment Method</span>
+                <span className="font-bold text-slate-800 uppercase text-xs">
+                  {bookingData.payment_method || 'Cash on Delivery (COD)'}
                 </span>
               </div>
 
-              {bookingData.otp_code && (
+              <div className="flex items-center justify-between">
+                <span className="text-slate-400 font-semibold">Agreed Service Price</span>
+                <span className="font-extrabold text-slate-900 text-base font-mono">
+                  ₹{bookingData.total_price.toLocaleString('en-IN')}
+                </span>
+              </div>
+
+              {/* Reported Collection details if any */}
+              {bookingPayments && bookingPayments.length > 0 && (() => {
+                const latest = bookingPayments[0];
+                const hasDiscrepancy = Boolean(latest.discrepancy_flag);
+                return (
+                  <div className="p-3 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] space-y-2 mt-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-slate-500 font-medium">Reported by Provider:</span>
+                      <span className="font-mono font-bold text-slate-900">
+                        {latest.reported_amount !== null && latest.reported_amount !== undefined ? `₹${latest.reported_amount}` : 'Not reported'}
+                      </span>
+                    </div>
+
+                    {hasDiscrepancy && (
+                      <div className="p-2 bg-rose-50 border border-rose-200 rounded-xl text-[11px] text-rose-800 flex items-start gap-1.5">
+                        <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0 mt-0.5" />
+                        <div>
+                          <strong className="block">Discrepancy Detected</strong>
+                          <span>Agreed ₹{latest.agreed_amount} vs Reported ₹{latest.reported_amount} (Diff: ₹{latest.discrepancy_amount || Math.abs(latest.agreed_amount - (latest.reported_amount || 0))})</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {latest.collected_at && (
+                      <div className="flex items-center justify-between text-[11px] text-slate-500">
+                        <span>Reported At:</span>
+                        <span>{new Date(latest.collected_at).toLocaleString('en-IN')}</span>
+                      </div>
+                    )}
+
+                    {latest.reviewed_by_name && (
+                      <div className="pt-2 border-t border-[#E5DEC9] text-[11px] text-slate-600 space-y-0.5">
+                        <p><strong>Audited By:</strong> {latest.reviewed_by_name}</p>
+                        <p><strong>Audited At:</strong> {latest.reviewed_at ? new Date(latest.reviewed_at).toLocaleString('en-IN') : 'N/A'}</p>
+                        {latest.rejection_reason && (
+                          <p className="text-rose-700"><strong>Rejection Reason:</strong> {latest.rejection_reason}</p>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Admin Action Buttons */}
+                    {(latest.status === 'Collection Reported' || (bookingData.payment_status || '').toLowerCase() === 'collection reported') && (
+                      <div className="flex items-center gap-2 pt-2 border-t border-[#E5DEC9]">
+                        <button
+                          type="button"
+                          onClick={() => handleVerifyCollection(latest.id)}
+                          disabled={paymentActionLoading === latest.id}
+                          className="flex-1 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold text-xs rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 disabled:opacity-50"
+                        >
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          <span>{paymentActionLoading === latest.id ? 'Verifying...' : 'Verify Collection (Paid)'}</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setTargetRejectPaymentId(latest.id);
+                            setRejectPaymentReason('');
+                            setRejectPaymentModalOpen(true);
+                          }}
+                          disabled={paymentActionLoading === latest.id}
+                          className="px-3 py-2 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-bold text-xs rounded-xl transition-colors disabled:opacity-50"
+                        >
+                          Reject
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
+
+              {/* Start & Completion OTP Information */}
+              {(bookingData.start_otp || bookingData.otp_code) && (
                 <div className="flex items-center justify-between border-t border-[#E5DEC9]/60 pt-2">
-                  <span className="text-slate-400 font-semibold">Start OTP Verification Code</span>
-                  <span className="font-mono font-extrabold text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-lg border border-indigo-200">
-                    {bookingData.otp_code}
+                  <span className="text-slate-400 font-semibold">Service Start OTP</span>
+                  <span className="font-mono font-extrabold text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded-lg border border-amber-200">
+                    {bookingData.start_otp || bookingData.otp_code}
+                  </span>
+                </div>
+              )}
+
+              {bookingData.completion_otp && (
+                <div className="flex items-center justify-between border-t border-[#E5DEC9]/60 pt-2">
+                  <span className="text-slate-400 font-semibold">Service Completion OTP</span>
+                  <span className="font-mono font-extrabold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-lg border border-emerald-200">
+                    {bookingData.completion_otp}
                   </span>
                 </div>
               )}
@@ -827,6 +994,106 @@ export const BookingDetailView: React.FC = () => {
               </div>
             )}
           </div>
+
+          {/* Automated Notification Monitoring (Email & WhatsApp) */}
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#E5DEC9] shadow-sm space-y-5">
+            <div className="flex items-center justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <h3 className="text-lg font-bold font-serif text-[#1F2A1E] flex items-center gap-2">
+                <Bell className="w-5 h-5 text-[#2F5233]" />
+                <span>Automated Notification Monitoring</span>
+              </h3>
+              <span className="text-xs font-semibold text-slate-400">
+                {adminNotifications.length} log entr{adminNotifications.length !== 1 ? 'ies' : 'y'}
+              </span>
+            </div>
+
+            {adminNotifications.length === 0 ? (
+              <div className="p-6 bg-[#FAF7F0] rounded-2xl text-center text-xs font-semibold text-slate-500">
+                No notification events logged for booking reference {bookingData.booking_reference}.
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs">
+                  <thead>
+                    <tr className="border-b border-[#E5DEC9] text-slate-400 uppercase text-[10px] tracking-wider font-semibold">
+                      <th className="pb-2.5">Event</th>
+                      <th className="pb-2.5">Channel</th>
+                      <th className="pb-2.5">Recipient</th>
+                      <th className="pb-2.5">Status</th>
+                      <th className="pb-2.5">Retries</th>
+                      <th className="pb-2.5">Last Attempt</th>
+                      <th className="pb-2.5 text-right">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-[#E5DEC9]/50">
+                    {adminNotifications.map((n) => {
+                      const isEmail = n.channel === 'email';
+                      const stLower = (n.delivery_status || '').toLowerCase();
+                      return (
+                        <tr key={n.id} className="hover:bg-slate-50/50">
+                          <td className="py-3 font-bold text-slate-900 font-mono text-[11px]">
+                            {n.event_type}
+                          </td>
+                          <td className="py-3">
+                            <span className="inline-flex items-center gap-1 font-semibold text-slate-700 capitalize">
+                              {isEmail ? <Mail className="w-3.5 h-3.5 text-sky-600" /> : <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />}
+                              <span>{n.channel}</span>
+                            </span>
+                          </td>
+                          <td className="py-3 text-slate-600 font-mono text-[11px]">
+                            {n.recipient}
+                          </td>
+                          <td className="py-3">
+                            <span
+                              className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
+                                stLower === 'sent' || stLower === 'delivered'
+                                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                  : stLower === 'pending'
+                                  ? 'bg-amber-50 text-amber-700 border-amber-200'
+                                  : stLower === 'unconfigured'
+                                  ? 'bg-slate-100 text-slate-600 border-slate-300'
+                                  : 'bg-rose-50 text-rose-700 border-rose-200'
+                              }`}
+                            >
+                              {n.delivery_status}
+                            </span>
+                            {n.error_message && (
+                              <p className="text-[10px] text-rose-600 font-normal mt-0.5 max-w-xs truncate" title={n.error_message}>
+                                {n.error_message}
+                              </p>
+                            )}
+                          </td>
+                          <td className="py-3 font-semibold text-slate-600">
+                            {n.retry_count}
+                          </td>
+                          <td className="py-3 text-[11px] text-slate-500">
+                            {new Date(n.last_attempt_at || n.created_at).toLocaleString('en-IN')}
+                          </td>
+                          <td className="py-3 text-right">
+                            {stLower === 'failed' && canManageBookings && (
+                              <button
+                                type="button"
+                                onClick={() => handleRetryNotification(n.id)}
+                                disabled={retryingNotificationId === n.id}
+                                className="px-2.5 py-1 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 font-bold text-[10px] rounded-lg transition-colors inline-flex items-center gap-1 disabled:opacity-50"
+                              >
+                                {retryingNotificationId === n.id ? (
+                                  <Loader2 className="w-3 h-3 animate-spin" />
+                                ) : (
+                                  <RefreshCw className="w-3 h-3" />
+                                )}
+                                <span>Retry</span>
+                              </button>
+                            )}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -1060,6 +1327,63 @@ export const BookingDetailView: React.FC = () => {
               className="max-w-full max-h-[80vh] object-contain rounded-2xl"
             />
           </div>
+        </div>
+      )}
+
+      {/* Reject Payment Report Modal */}
+      {rejectPaymentModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in">
+          <form onSubmit={handleRejectCollection} className="bg-white rounded-3xl max-w-md w-full p-6 space-y-4 shadow-2xl border border-[#E5DEC9]">
+            <div className="flex items-start justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <div className="flex items-center gap-2">
+                <div className="w-9 h-9 rounded-xl bg-rose-50 border border-rose-200 flex items-center justify-center text-rose-600">
+                  <ShieldAlert className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Reject Cash Collection Report</h3>
+                  <p className="text-[11px] font-mono text-[#1F2A1E]/60">Booking ID: {bookingData.id.substring(0, 8)}</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setRejectPaymentModalOpen(false)}
+                className="text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-black/5"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="block text-xs font-bold text-[#1F2A1E] uppercase tracking-wider">
+                Rejection Reason (Audit Trail Required)
+              </label>
+              <textarea
+                required
+                rows={3}
+                value={rejectPaymentReason}
+                onChange={(e) => setRejectPaymentReason(e.target.value)}
+                placeholder="State the reason for rejecting this cash collection report..."
+                className="w-full text-xs bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]"
+              />
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-2 border-t border-[#E5DEC9]">
+              <button
+                type="button"
+                onClick={() => setRejectPaymentModalOpen(false)}
+                className="px-4 py-2 bg-[#FAF7F0] hover:bg-[#F2EDE1] text-[#1F2A1E] font-bold text-xs rounded-xl transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={!rejectPaymentReason.trim() || paymentActionLoading === targetRejectPaymentId}
+                className="px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl shadow-xs transition-colors disabled:opacity-50 flex items-center gap-1.5"
+              >
+                {paymentActionLoading === targetRejectPaymentId ? 'Saving...' : 'Confirm Rejection'}
+              </button>
+            </div>
+          </form>
         </div>
       )}
     </div>

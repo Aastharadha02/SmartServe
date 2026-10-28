@@ -24,6 +24,35 @@ export interface CustomerTokenResponse {
   email: string;
   full_name: string;
   phone?: string;
+  requires_profile_completion?: boolean;
+  is_profile_complete?: boolean;
+  missing_profile_fields?: string[];
+  is_new_user?: boolean;
+  location?: CustomerLocationPayload;
+}
+
+export interface CustomerLocationPayload {
+  address?: string;
+  city?: string;
+  state?: string;
+  postal_code?: string;
+  latitude?: number;
+  longitude?: number;
+  source?: string;
+}
+
+export interface CompleteProfilePayload {
+  full_name: string;
+  phone: string;
+  preferences?: string[];
+  location?: CustomerLocationPayload;
+}
+
+export interface SkipProfilePayload {
+  full_name?: string;
+  phone?: string;
+  preferences?: string[];
+  location?: CustomerLocationPayload;
 }
 
 export interface CustomerSessionResponse {
@@ -34,6 +63,9 @@ export interface CustomerSessionResponse {
   phone?: string;
   is_active: boolean;
   preferences?: string[];
+  is_profile_complete?: boolean;
+  missing_profile_fields?: string[];
+  location?: CustomerLocationPayload;
 }
 
 export const registerCustomer = async (payload: CustomerRegisterPayload): Promise<CustomerTokenResponse> => {
@@ -73,6 +105,21 @@ export const resetPassword = async (token: string, new_password: string): Promis
   return res.data;
 };
 
+export const completeCustomerProfile = async (payload: CompleteProfilePayload): Promise<CustomerTokenResponse> => {
+  const res = await apiClient.post<CustomerTokenResponse>('/customer/auth/complete-profile', payload);
+  return res.data;
+};
+
+export const skipCustomerProfile = async (payload: SkipProfilePayload): Promise<CustomerTokenResponse> => {
+  const res = await apiClient.post<CustomerTokenResponse>('/customer/auth/skip-profile', payload);
+  return res.data;
+};
+
+export const updateCustomerLocation = async (payload: CustomerLocationPayload): Promise<{ status: string; location: CustomerLocationPayload }> => {
+  const res = await apiClient.post<{ status: string; location: CustomerLocationPayload }>('/customer/profile/location', payload);
+  return res.data;
+};
+
 export interface OAuthProvidersResponse {
   google: { configured: boolean; name: string };
   apple: { configured: boolean; name: string };
@@ -90,8 +137,10 @@ export const getOAuthProviders = async (): Promise<OAuthProvidersResponse> => {
   return res.data;
 };
 
-export const initiateOAuth = async (provider: 'google' | 'apple' | 'github'): Promise<OAuthAuthorizeResponse> => {
-  const res = await apiClient.get<OAuthAuthorizeResponse>(`/customer/auth/oauth/${provider}/authorize`);
+export const initiateOAuth = async (provider: 'google' | 'apple' | 'github', redirect_uri?: string): Promise<OAuthAuthorizeResponse> => {
+  const res = await apiClient.get<OAuthAuthorizeResponse>(`/customer/auth/oauth/${provider}/authorize`, {
+    params: redirect_uri ? { redirect_uri } : undefined
+  });
   return res.data;
 };
 

@@ -48,10 +48,11 @@ def parse_scheduled_datetime(scheduled_date: str, scheduled_time: str) -> dateti
 def generate_slot_times(slot: Availability, active_bookings: List[Booking]) -> List[str]:
     """
     Generate non-conflicting time intervals within a provider's availability window.
-    Strictly filters out past times for today and active booking overlaps.
+    Strictly filters out past dates and active booking overlaps.
     """
-    now = datetime.now()
     slot_date = slot.slot_date
+    if slot_date < date.today():
+        return []
 
     curr_hour = slot.start_time.hour
     curr_min = slot.start_time.minute
@@ -77,11 +78,8 @@ def generate_slot_times(slot: Availability, active_bookings: List[Booking]) -> L
     valid_times = []
     for cand in candidates:
         cand_dt = datetime.combine(slot_date, cand)
-        # 1. Past check (allow 5-minute leeway for clock differences)
-        if cand_dt <= now - timedelta(minutes=5):
-            continue
 
-        # 2. Conflict check against active bookings (60-minute window)
+        # Conflict check against active bookings (60-minute window)
         has_conflict = False
         for b in active_bookings:
             if not b.scheduled_time:
@@ -110,22 +108,21 @@ def find_eligible_provider(
     Determine the most eligible provider for a requested service and time slot.
 
     Strict eligibility rules:
-    1. Past Date/Time Guard: Requested slot must be strictly in the future.
+    1. Past Date Guard: Requested date must not be in the past (before today).
     2. Service Association: Provider must actively offer the specific catalog service.
     3. Verification & Active Status: Provider must be approved (is_verified == True) and user account active.
     4. Availability Window: Provider must have an active, FREE slot covering requested date and time.
     5. Conflict Prevention: Provider must not have an active booking overlapping the requested slot.
     """
-    now = datetime.now()
     check_dt = scheduled_datetime
     if hasattr(check_dt, "tzinfo") and check_dt.tzinfo is not None:
         check_dt = check_dt.replace(tzinfo=None)
 
-    if check_dt < now - timedelta(minutes=5):
-        return None, None, "Cannot schedule a booking in the past. Please select an upcoming date and time."
-
     req_date = check_dt.date()
     req_time = check_dt.time()
+
+    if req_date < date.today():
+        return None, None, "Cannot schedule a booking in the past. Please select an upcoming date and time."
 
     # Step 1: Filter by Service Association
     active_services = (

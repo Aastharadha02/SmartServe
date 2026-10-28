@@ -240,6 +240,17 @@ export const CustomerBookings: React.FC = () => {
                           <span>✨</span> Multi-Service Bundle
                         </span>
                       )}
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
+                        (b.payment_status || '').toLowerCase() === 'paid'
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : (b.payment_status || '').toLowerCase() === 'collection reported'
+                          ? 'bg-amber-50 text-amber-700 border-amber-200'
+                          : (b.payment_status || '').toLowerCase() === 'rejected'
+                          ? 'bg-rose-50 text-rose-700 border-rose-200'
+                          : 'bg-slate-100 text-slate-600 border-slate-200'
+                      }`}>
+                        COD: {b.payment_status || 'Pending'}
+                      </span>
                     </div>
 
                     <h3 className="font-extrabold text-slate-900 text-base truncate group-hover:text-[#2563EB] transition-colors">
@@ -260,10 +271,17 @@ export const CustomerBookings: React.FC = () => {
                       <span>• {t("booking.provider_label", { defaultValue: "Provider" })}: <strong className="text-slate-700">{b.provider_name || t("booking.assigned_soon", { defaultValue: "Assigned Soon" })}</strong></span>
                     </div>
 
-                    {b.otp_code && ['accepted', 'on the way', 'arrived'].includes(stLower) && (
-                      <div className="flex items-center gap-1.5 px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-200 rounded-lg text-xs font-bold w-fit mt-1">
+                    {(b.start_otp || b.otp_code) && ['requested', 'assigned', 'accepted', 'on the way', 'arrived'].includes(stLower) && (
+                      <div className="flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 text-amber-800 border border-amber-300 rounded-lg text-xs font-bold w-fit mt-1">
                         <KeyRound className="w-3.5 h-3.5" />
-                        <span>{t("booking.start_otp_display", { otp: b.otp_code, defaultValue: `Start OTP: ${b.otp_code}` })}</span>
+                        <span>{t("booking.start_otp_display", { otp: b.start_otp || b.otp_code, defaultValue: `Start OTP: ${b.start_otp || b.otp_code}` })}</span>
+                      </div>
+                    )}
+
+                    {b.completion_otp && stLower === 'started' && (
+                      <div className="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-300 rounded-lg text-xs font-bold w-fit mt-1">
+                        <KeyRound className="w-3.5 h-3.5" />
+                        <span>Completion OTP: {b.completion_otp}</span>
                       </div>
                     )}
 

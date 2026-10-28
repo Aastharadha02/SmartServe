@@ -22,6 +22,7 @@ export interface AdminWarrantyInfo {
 
 export interface BookingItem {
   id: string;
+  booking_reference?: string | null;
   customer_id: string;
   customer_name?: string;
   customer_phone?: string;
@@ -31,10 +32,13 @@ export interface BookingItem {
   service_name?: string;
   status: string;
   payment_status: string;
+  payment_method?: string;
   scheduled_time: string;
   address: string;
   total_price: number;
   otp_code?: string | null;
+  start_otp?: string | null;
+  completion_otp?: string | null;
   timeline: TimelineItem[];
   allowed_next_statuses: string[];
   emergency_flag?: string | null;
@@ -168,3 +172,71 @@ export const resolveAdminWarrantyClaim = async (
   });
   return response.data;
 };
+export interface PaymentRecord {
+  id: string;
+  booking_id: string;
+  booking_reference?: string;
+  payment_method: string;
+  agreed_amount: number;
+  reported_amount?: number | null;
+  status: string;
+  discrepancy_flag: boolean;
+  discrepancy_amount?: number | null;
+  collected_at?: string | null;
+  reviewed_by_id?: string | null;
+  reviewed_by_name?: string | null;
+  reviewed_at?: string | null;
+  rejection_reason?: string | null;
+  notes?: string | null;
+  created_at: string;
+  customer_name?: string | null;
+  provider_name?: string | null;
+  service_name?: string | null;
+}
+
+export const getPaymentReviewList = async (statusFilter?: string): Promise<PaymentRecord[]> => {
+  const query = statusFilter ? `?status_filter=${encodeURIComponent(statusFilter)}` : '';
+  const response = await apiClient.get<PaymentRecord[]>(`/admin/bookings/payments/review${query}`);
+  return response.data;
+};
+
+export const getBookingPayments = async (bookingId: string): Promise<PaymentRecord[]> => {
+  const response = await apiClient.get<PaymentRecord[]>(`/admin/bookings/${bookingId}/payments`);
+  return response.data;
+};
+
+export const verifyPaymentCollection = async (paymentId: string, notes?: string): Promise<PaymentRecord> => {
+  const response = await apiClient.post<PaymentRecord>(`/admin/bookings/payments/${paymentId}/verify`, { notes });
+  return response.data;
+};
+
+export const rejectPaymentCollection = async (paymentId: string, reason: string): Promise<PaymentRecord> => {
+  const response = await apiClient.post<PaymentRecord>(`/admin/bookings/payments/${paymentId}/reject`, { reason });
+  return response.data;
+};
+
+export interface AdminNotificationItem {
+  id: string;
+  booking_id: string;
+  booking_reference: string;
+  customer_id?: string | null;
+  event_type: string;
+  channel: string;
+  recipient: string;
+  delivery_status: string;
+  retry_count: number;
+  last_attempt_at: string;
+  error_message?: string | null;
+  created_at: string;
+}
+
+export const getAdminBookingNotifications = async (bookingReference: string): Promise<AdminNotificationItem[]> => {
+  const response = await apiClient.get<AdminNotificationItem[]>(`/admins/notifications?booking_reference=${encodeURIComponent(bookingReference)}`);
+  return response.data;
+};
+
+export const retryAdminNotification = async (notificationId: string): Promise<AdminNotificationItem> => {
+  const response = await apiClient.post<AdminNotificationItem>(`/admins/notifications/${notificationId}/retry`);
+  return response.data;
+};
+

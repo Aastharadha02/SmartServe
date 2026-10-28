@@ -17,8 +17,16 @@ export function getWebSocketUrl(channels: string[] = []): string {
   const isHttps = rawApiUrl.startsWith('https:') || (typeof window !== 'undefined' && window.location.protocol === 'https:');
   const wsProtocol = isHttps ? 'wss:' : 'ws:';
   const hostDomain = rawApiUrl.replace(/^https?:\/\//, '').replace(/\/api\/v1\/?$/, '');
-  const channelParam = channels.length > 0 ? `?channels=${encodeURIComponent(channels.join(','))}` : '';
-  return `${wsProtocol}//${hostDomain}/ws/stream${channelParam}`;
+  const token = typeof window !== 'undefined' ? localStorage.getItem('smartserve_provider_token') : null;
+  const params = new URLSearchParams();
+  if (channels.length > 0) {
+    params.set('channels', channels.join(','));
+  }
+  if (token) {
+    params.set('token', token);
+  }
+  const queryString = params.toString() ? `?${params.toString()}` : '';
+  return `${wsProtocol}//${hostDomain}/ws/stream${queryString}`;
 }
 
 export function subscribeToRealtime(
@@ -83,15 +91,19 @@ export function subscribeToRealtime(
       const socket = new WebSocket(url);
       ws = socket;
 
-      socket.onopen = () => {
-        if (gen !== generation || disposed) { socket.close(); return; }
-        retryCount = 0;
-        pingInterval = setInterval(() => {
-          if (socket.readyState === WebSocket.OPEN) {
-            try { socket.send(JSON.stringify({ action: 'ping' })); } catch (_) {}
+        socket.onopen = () => {
+          if (gen !== generation || disposed) { socket.close(); return; }
+          retryCount = 0;
+          const token = typeof window !== 'undefined' ? localStorage.getItem('smartserve_provider_token') : null;
+          if (token && socket.readyState === WebSocket.OPEN) {
+            try { socket.send(JSON.stringify({ action: 'auth', token })); } catch (_) {}
           }
-        }, 25000);
-      };
+          pingInterval = setInterval(() => {
+            if (socket.readyState === WebSocket.OPEN) {
+              try { socket.send(JSON.stringify({ action: 'ping' })); } catch (_) {}
+            }
+          }, 25000);
+        };
 
       socket.onmessage = (event) => {
         if (gen !== generation || disposed) return;

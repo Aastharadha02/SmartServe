@@ -32,6 +32,7 @@ import {
   Zap,
   UserCheck,
   Layers,
+  Banknote
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { addBundleItem, isInBundle } from '../utils/bundleCart';
@@ -63,6 +64,14 @@ export const CustomerServiceDetail: React.FC = () => {
   const [notes, setNotes] = useState<string>('');
   const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
   const [bookingLoading, setBookingLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (user?.location) {
+      if (user.location.address) setAddress(user.location.address);
+      if (user.location.city) setCity(user.location.city);
+      if (user.location.postal_code) setPincode(user.location.postal_code);
+    }
+  }, [user]);
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -169,15 +178,29 @@ export const CustomerServiceDetail: React.FC = () => {
       });
     }
 
+    const parseTimeMinutes = (timeStr?: string) => {
+      const match = (timeStr || '').match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+      if (!match) return 0;
+      const hStr = match[1] || '0';
+      const mStr = match[2] || '0';
+      const meridiem = (match[3] || '').toUpperCase();
+      let h = parseInt(hStr, 10);
+      const m = parseInt(mStr, 10);
+      if (meridiem === 'PM' && h < 12) h += 12;
+      if (meridiem === 'AM' && h === 12) h = 0;
+      return h * 60 + m;
+    };
+
     // Combine across slots by date, strictly filtering out past dates
     const map = new Map<string, ProviderSlotDetail>();
     targetSlots.forEach((slot) => {
       if (slot.slot_date < todayStr) return; // Prevent past dates
       if (!map.has(slot.slot_date)) {
-        map.set(slot.slot_date, { ...slot, available_times: [...(slot.available_times || [])] });
+        const sortedTimes = Array.from(new Set(slot.available_times || [])).sort((a, b) => parseTimeMinutes(a) - parseTimeMinutes(b));
+        map.set(slot.slot_date, { ...slot, available_times: sortedTimes });
       } else {
         const existing = map.get(slot.slot_date)!;
-        const combined = Array.from(new Set([...existing.available_times, ...(slot.available_times || [])])).sort();
+        const combined = Array.from(new Set([...existing.available_times, ...(slot.available_times || [])])).sort((a, b) => parseTimeMinutes(a) - parseTimeMinutes(b));
         map.set(slot.slot_date, { ...existing, available_times: combined });
       }
     });
@@ -297,6 +320,21 @@ export const CustomerServiceDetail: React.FC = () => {
       return;
     }
 
+    // Verify required profile fields are complete before booking
+    if (user.is_profile_complete === false) {
+      showToast('Please complete your profile before placing a booking.', 'info');
+      setShowBookingModal(false);
+      navigate('/complete-profile', {
+        state: {
+          returnUrl: `/service/${service.id}`,
+          fromBooking: true,
+          explanation: 'Please provide your missing mobile phone number and complete your profile before confirming your order.',
+          missingFields: user.missing_profile_fields || ['phone']
+        }
+      });
+      return;
+    }
+
     setBookingLoading(true);
     try {
       const newBooking = await createBooking({
@@ -308,6 +346,7 @@ export const CustomerServiceDetail: React.FC = () => {
         address_line1: `${address}, ${city} - ${pincode}`,
         city,
         pincode,
+        payment_method: 'COD',
         notes: notes || (isEmergency ? t('booking.emergency_notes', { defaultValue: 'Emergency fast-track dispatch requested' }) : t('booking.standard_notes', { defaultValue: 'Standard booking requested via Customer Web' })),
         provider_id: isProviderSelectable && selectedProviderId ? selectedProviderId : undefined,
       });
@@ -316,7 +355,27 @@ export const CustomerServiceDetail: React.FC = () => {
       setShowBookingModal(false);
       navigate(`/bookings/${newBooking.id}`);
     } catch (err: any) {
-      showToast(err.response?.data?.detail || t('booking.err_create_failed', { defaultValue: 'Failed to create booking. Please try again.' }), 'error');
+      const detail = err.response?.data?.detail;
+      if (err.response?.status === 403 && (detail?.code === 'PROFILE_INCOMPLETE' || String(detail).includes('complete your profile'))) {
+        showToast('Your profile is not complete yet. Redirecting to complete profile...', 'info');
+        setShowBookingModal(false);
+        navigate('/complete-profile', {
+          state: {
+            returnUrl: `/service/${service.id}`,
+            fromBooking: true,
+            explanation: detail?.message || 'Please complete your required profile details (mobile phone number) before continuing with this order.',
+            missingFields: detail?.missing_fields || ['phone'],
+          }
+        });
+        return;
+      }
+      showToast(typeof detail === 'string' ? detail : (detail?.message || t('booking.err_create_failed', { defaultValue: 'Failed to create booking. Please try again.' })), 'error');
+      // Refresh provider availability in case slots changed or were booked
+      if (serviceId) {
+        getServiceEligibleProviders(serviceId)
+          .then((provs) => setEligibleProviders(provs))
+          .catch(() => {});
+      }
     } finally {
       setBookingLoading(false);
     }
@@ -1298,8 +1357,26 @@ export const CustomerServiceDetail: React.FC = () => {
                 />
               </div>
 
+              <div className="p-3.5 bg-[#FAF7F0] border border-[#E5DEC9] rounded-2xl flex items-center justify-between shadow-2xs">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#2F5233]/10 text-[#2F5233] flex items-center justify-center">
+                    <Banknote className="w-5 h-5 text-[#2F5233]" />
+                  </div>
+                  <div>
+                    <h5 className="text-xs font-bold text-[#1F2A1E]">Payment Method</h5>
+                    <p className="text-[11px] text-[#1F2A1E]/70 font-medium">Cash on Delivery (COD) upon completion</p>
+                  </div>
+                </div>
+                <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#2F5233]/10 text-[#2F5233] uppercase">
+                  COD (Pay after service)
+                </span>
+              </div>
+
               <div className="pt-2 border-t border-[#E5DEC9] flex items-center justify-between text-sm">
-                <span className="font-semibold text-[#1F2A1E]/70">{t('booking.total', { defaultValue: 'Total Amount' })}</span>
+                <div>
+                  <span className="font-semibold text-[#1F2A1E]/80 block">{t('booking.total', { defaultValue: 'Estimated Service Amount' })}</span>
+                  <span className="text-[11px] text-[#1F2A1E]/50">Payable in cash upon satisfactory completion</span>
+                </div>
                 <span className="text-xl font-bold font-serif-display text-[#1F2A1E]">{formatCurrencyINR(calculateTotalPrice())}</span>
               </div>
 

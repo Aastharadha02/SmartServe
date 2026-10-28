@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.models.customer import Booking
 from app.models.booking import BookingStatus, PaymentStatus
 from app.core.dependencies import AuthUser
+from app.services.booking.otp_service import generate_secure_otp, get_active_otp, verify_and_consume_otp
 
 # Valid state transitions mapping: source_status -> set of allowed next_statuses
 ALLOWED_TRANSITIONS: Dict[str, set] = {
@@ -135,13 +136,13 @@ def transition_booking_status(
     # Use normalized status for all subsequent checks and persistence
     next_status = next_status_normalized
 
-    # 4. Enforce OTP Generation & Verification BEFORE Service Starts
+    # 4. Enforce Start OTP Generation on On The Way / Arrived
     if next_status in [BookingStatus.ON_THE_WAY.value, BookingStatus.ARRIVED.value]:
-        if not booking.otp_code or len(str(booking.otp_code).strip()) != 4 or not str(booking.otp_code).strip().isdigit():
-            booking.otp_code = f"{uuid.uuid4().int % 9000 + 1000}"
+        active_start = get_active_otp(booking.id, "START", db)
+        if not active_start:
+            generate_secure_otp(booking.id, "START", db)
 
     if next_status == BookingStatus.ARRIVED.value:
-        # Append arrival timeline event
         tl_arrived = {
             "event": "Provider arrived at service location",
             "actor": user.full_name or user.email,
@@ -152,19 +153,23 @@ def transition_booking_status(
         cur_tl.append(tl_arrived)
         booking.timeline = cur_tl
 
+    # 5. FIRST OTP: Starting the Service
     if next_status == BookingStatus.STARTED.value:
         if curr_status != BookingStatus.ARRIVED.value and user.role == "provider":
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"Invalid state transition: Must mark 'Arrived' before starting service. Current status: '{curr_status}'.",
             )
-        # Provider role MUST provide valid OTP
-        if user.role == "provider" or booking.otp_code:
-            if not otp_code or not booking.otp_code or otp_code.strip() != str(booking.otp_code).strip():
+
+        # Provider must provide valid Start OTP
+        if user.role == "provider" or otp_code is not None:
+            is_valid, msg = verify_and_consume_otp(booking.id, "START", otp_code, db)
+            if not is_valid:
                 tl_fail = {
                     "event": "Failed Service Start OTP Verification Attempt",
                     "actor": user.full_name or user.email,
                     "role": user.role,
+                    "error": msg,
                     "timestamp": datetime.now(timezone.utc).isoformat(),
                 }
                 cur_tl = list(booking.timeline or [])
@@ -174,9 +179,9 @@ def transition_booking_status(
                 db.commit()
                 raise HTTPException(
                     status_code=status.HTTP_400_BAD_REQUEST,
-                    detail="Invalid service start OTP verification code. Please request the customer's 4-digit start OTP.",
+                    detail=msg,
                 )
-            # Record audit and invalidate single-use OTP
+
             tl_otp = {
                 "event": "Service Start OTP Verified",
                 "actor": user.full_name or user.email,
@@ -186,11 +191,51 @@ def transition_booking_status(
             cur_tl = list(booking.timeline or [])
             cur_tl.append(tl_otp)
             booking.timeline = cur_tl
-            booking.otp_code = None  # Consumed single-use OTP
+            booking.otp_code = None  # Invalidate start code
 
-    # 4b. Service Completion handling (No OTP required at completion; already validated at Start)
+        # Automatically generate Completion OTP for the customer to access
+        generate_secure_otp(booking.id, "COMPLETE", db)
+
+    # 6. SECOND OTP: Completing the Service
     if next_status == BookingStatus.COMPLETED.value:
-        booking.payment_status = "Completed"
+        if curr_status != BookingStatus.STARTED.value and user.role == "provider":
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Invalid state transition: Service must be 'Started' before it can be 'Completed'. Current status: '{curr_status}'.",
+            )
+
+        # Provider must provide valid Completion OTP
+        if user.role == "provider" or otp_code is not None:
+            is_valid, msg = verify_and_consume_otp(booking.id, "COMPLETE", otp_code, db)
+            if not is_valid:
+                tl_fail = {
+                    "event": "Failed Service Completion OTP Verification Attempt",
+                    "actor": user.full_name or user.email,
+                    "role": user.role,
+                    "error": msg,
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                }
+                cur_tl = list(booking.timeline or [])
+                cur_tl.append(tl_fail)
+                booking.timeline = cur_tl
+                db.add(booking)
+                db.commit()
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail=msg,
+                )
+
+            tl_otp = {
+                "event": "Service Completion OTP Verified",
+                "actor": user.full_name or user.email,
+                "role": user.role,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+            }
+            cur_tl = list(booking.timeline or [])
+            cur_tl.append(tl_otp)
+            booking.timeline = cur_tl
+
+        # Stop active location tracking in PostgreSQL
         try:
             from app.models.customer import BookingWarranty
             from datetime import timedelta
@@ -221,7 +266,11 @@ def transition_booking_status(
         except Exception:
             pass
 
-    # 4b. If booking is rejected or cancelled, release reserved slot back to FREE
+        # IMPORTANT: Keep payment status separate from booking status!
+        # Do not mark payment as completed/paid here. Payment remains in its current state
+        # (e.g. Pending or Collection Reported) until reported and admin-verified.
+
+    # 7. Release reserved slot if cancelled or rejected
     if next_status in [BookingStatus.REJECTED.value, BookingStatus.CANCELLED.value]:
         try:
             from app.models.provider import Availability
@@ -245,11 +294,10 @@ def transition_booking_status(
                 if reserved_slot:
                     reserved_slot.status = "FREE"
                     db.add(reserved_slot)
-        except Exception as e:
-            # Non-blocking slot release guard
+        except Exception:
             pass
 
-    # 5. Append timeline audit event
+    # 8. Append timeline audit event
     now_iso = datetime.now(timezone.utc).isoformat()
     timeline_event = {
         "event": f"Job status updated to {next_status}",
@@ -272,4 +320,27 @@ def transition_booking_status(
 
     db.commit()
     db.refresh(booking)
+
+    # Automated Email & WhatsApp Notification Trigger
+    try:
+        from app.services.notification import notify_booking_event
+        event_map = {
+            BookingStatus.ACCEPTED.value: "booking.accepted",
+            BookingStatus.REJECTED.value: "booking.rejected",
+            BookingStatus.ASSIGNED.value: "booking.assigned",
+            BookingStatus.STARTED.value: "service.started",
+            BookingStatus.COMPLETED.value: "service.completed",
+            BookingStatus.CANCELLED.value: "booking.cancelled",
+        }
+        if next_status in event_map:
+            notify_booking_event(
+                db,
+                booking,
+                event_map[next_status],
+                extra_context={"notes": reason, "previous_status": curr_status},
+            )
+    except Exception as exc:
+        # Never break or rollback successful state transition if notification fails
+        pass
+
     return booking

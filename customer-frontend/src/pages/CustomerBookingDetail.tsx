@@ -9,7 +9,9 @@ import {
   BookingLocationResponse,
   ProviderProfileInfo,
   ProviderGpsLocation,
-  CustomerLocationInfo
+  CustomerLocationInfo,
+  getBookingNotifications,
+  CustomerNotificationItem,
 } from '../api/bookings';
 import { getBookingChat, sendBookingChatMessage, SupportTicketDetail, MessageItem } from '../api/support';
 import { formatCurrencyINR } from '../utils/formatters';
@@ -31,6 +33,9 @@ import {
   User,
   ShieldCheck,
   FileText,
+  Banknote,
+  Bell,
+  Mail,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { subscribeToRealtime } from '../utils/realtime';
@@ -51,6 +56,7 @@ export const CustomerBookingDetail: React.FC = () => {
   const [cancelling, setCancelling] = useState<boolean>(false);
   const [showCancelModal, setShowCancelModal] = useState<boolean>(false);
   const [selectedReason, setSelectedReason] = useState<string>('Change of plans / schedule conflict');
+  const [notifications, setNotifications] = useState<CustomerNotificationItem[]>([]);
 
   // Live Location & Provider Profile state
   const [providerProfile, setProviderProfile] = useState<ProviderProfileInfo | null>(null);
@@ -118,6 +124,12 @@ export const CustomerBookingDetail: React.FC = () => {
       setBooking(data);
       // Fetch live location & provider details
       fetchLocationData();
+      try {
+        const notifs = await getBookingNotifications(bookingId);
+        setNotifications(notifs);
+      } catch (errNotif) {
+        console.warn('Failed to load notification history:', errNotif);
+      }
     } catch (err: any) {
       setError(err.response?.data?.detail || 'Failed to fetch booking details from database.');
     } finally {
@@ -392,7 +404,18 @@ export const CustomerBookingDetail: React.FC = () => {
                 ? 'bg-purple-500/20 text-purple-300 border-purple-400/30'
                 : 'bg-blue-500/20 text-blue-300 border-blue-400/30'
             }`}>
-              {getLocalizedStatus(booking.status)}
+              Booking: {getLocalizedStatus(booking.status)}
+            </span>
+            <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
+              (booking.payment_status || '').toLowerCase() === 'paid'
+                ? 'bg-emerald-500/20 text-emerald-300 border-emerald-400/30'
+                : (booking.payment_status || '').toLowerCase() === 'collection reported'
+                ? 'bg-amber-500/20 text-amber-300 border-amber-400/30'
+                : (booking.payment_status || '').toLowerCase() === 'rejected'
+                ? 'bg-rose-500/20 text-rose-300 border-rose-400/30'
+                : 'bg-slate-700/60 text-slate-300 border-slate-600'
+            }`}>
+              Payment: {booking.payment_status || 'Pending'}
             </span>
             {showLiveTracking && (
               <span className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
@@ -492,7 +515,7 @@ export const CustomerBookingDetail: React.FC = () => {
       )}
 
       {/* Service Start OTP Code Box (Before Service Starts) */}
-      {booking.otp_code && (stLower === 'arrived' || stLower === 'on the way' || stLower === 'accepted') && (
+      {(booking.start_otp || booking.otp_code) && ['requested', 'assigned', 'accepted', 'on the way', 'arrived'].includes(stLower) && (
         <div className="p-5 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-2 border-amber-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
           <div className="flex items-center gap-3.5">
             <div className="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center flex-shrink-0 shadow-md">
@@ -516,7 +539,7 @@ export const CustomerBookingDetail: React.FC = () => {
           </div>
           <div className="text-left sm:text-right shrink-0">
             <span className="font-mono text-3xl font-black text-amber-950 tracking-widest bg-white px-5 py-2.5 rounded-2xl border-2 border-amber-400 shadow-sm inline-block">
-              {booking.otp_code}
+              {booking.start_otp || booking.otp_code}
             </span>
             <span className="text-[10px] font-bold text-amber-700 tracking-wider uppercase mt-1 block">
               {t('booking.single_use_code', { defaultValue: 'Single-Use Start Code' })}
@@ -525,25 +548,96 @@ export const CustomerBookingDetail: React.FC = () => {
         </div>
       )}
 
-      {/* Service In Progress Banner */}
+      {/* Service In Progress Banner & Service Completion OTP */}
       {stLower === 'started' && (
-        <div className="p-5 rounded-3xl bg-purple-50 border-2 border-purple-200 flex items-center gap-3.5 shadow-sm">
-          <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
-            <ShieldCheck className="w-6 h-6" />
+        <div className="space-y-4">
+          <div className="p-5 rounded-3xl bg-purple-50 border-2 border-purple-200 flex items-center gap-3.5 shadow-sm">
+            <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h4 className="font-extrabold text-purple-950 text-base">{t('booking.service_in_progress', { defaultValue: 'Service In Progress' })}</h4>
+                <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800 border border-purple-300">
+                  {t('booking.otp_verified', { defaultValue: 'OTP Verified' })}
+                </span>
+              </div>
+              <p className="text-xs text-purple-800 mt-0.5">
+                {t('booking.in_progress_desc', { defaultValue: 'Technician is currently performing your service. Start OTP was successfully verified.' })}
+              </p>
+            </div>
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h4 className="font-extrabold text-purple-950 text-base">{t('booking.service_in_progress', { defaultValue: 'Service In Progress' })}</h4>
-              <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800 border border-purple-300">
-                {t('booking.otp_verified', { defaultValue: 'OTP Verified' })}
+
+          {booking.completion_otp && (
+            <div className="p-5 rounded-3xl bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-2 border-emerald-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-in fade-in">
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                  <KeyRound className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-extrabold text-emerald-950 text-base">Service Completion OTP</h4>
+                    <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 animate-pulse">
+                      Provide Only When Done
+                    </span>
+                  </div>
+                  <p className="text-xs text-emerald-800 mt-1 max-w-lg">
+                    Share this 4-digit completion code with the technician <strong>only after you have inspected the service and are fully satisfied</strong> with the work done.
+                  </p>
+                </div>
+              </div>
+              <div className="text-left sm:text-right shrink-0">
+                <span className="font-mono text-3xl font-black text-emerald-950 tracking-widest bg-white px-5 py-2.5 rounded-2xl border-2 border-emerald-400 shadow-sm inline-block">
+                  {booking.completion_otp}
+                </span>
+                <span className="text-[10px] font-bold text-emerald-700 tracking-wider uppercase mt-1 block">
+                  Single-Use Completion Code
+                </span>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Cash on Delivery (COD) Payment & Verification Status Card */}
+      <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+        <div className="flex items-start sm:items-center gap-4">
+          <div className="w-12 h-12 rounded-2xl bg-[#2F5233]/10 text-[#2F5233] flex items-center justify-center flex-shrink-0">
+            <Banknote className="w-6 h-6" />
+          </div>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 flex-wrap">
+              <h4 className="font-extrabold text-slate-900 text-base">Payment: {booking.payment_method || 'Cash on Delivery (COD)'}</h4>
+              <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
+                (booking.payment_status || '').toLowerCase() === 'paid'
+                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                  : (booking.payment_status || '').toLowerCase() === 'collection reported'
+                  ? 'bg-amber-50 text-amber-700 border-amber-200'
+                  : (booking.payment_status || '').toLowerCase() === 'rejected'
+                  ? 'bg-rose-50 text-rose-700 border-rose-200'
+                  : 'bg-slate-100 text-slate-700 border-slate-200'
+              }`}>
+                {booking.payment_status || 'Pending'}
               </span>
             </div>
-            <p className="text-xs text-purple-800 mt-0.5">
-              {t('booking.in_progress_desc', { defaultValue: 'Technician is currently performing your service. Start OTP was successfully verified.' })}
+            <p className="text-xs text-slate-600">
+              {(booking.payment_status || '').toLowerCase() === 'paid'
+                ? 'Payment has been verified and settled by SmartServe Operations Admin.'
+                : (booking.payment_status || '').toLowerCase() === 'collection reported'
+                ? 'Technician has reported receiving cash payment. Awaiting SmartServe Admin verification.'
+                : (booking.payment_status || '').toLowerCase() === 'rejected'
+                ? 'Reported cash collection was rejected by Admin for follow-up review.'
+                : 'Pay the agreed service amount in cash directly to your technician upon satisfactory service completion.'}
             </p>
           </div>
         </div>
-      )}
+        <div className="text-left sm:text-right shrink-0 border-t sm:border-t-0 pt-3 sm:pt-0 border-slate-100">
+          <span className="text-[11px] font-semibold text-slate-400 block uppercase">Agreed Amount</span>
+          <span className="text-xl font-mono font-extrabold text-slate-900">
+            {formatCurrencyINR(booking.total_price || booking.total_amount || 0)}
+          </span>
+        </div>
+      </div>
 
       {/* ========================================================= */}
       {/* 1. LIVE TRACKING MAP (Ola / Swiggy Style Road Tracking)   */}
@@ -692,6 +786,76 @@ export const CustomerBookingDetail: React.FC = () => {
             </button>
           )}
         </div>
+      </div>
+
+      {/* Automated Booking Notifications History (Email & WhatsApp) */}
+      <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8 space-y-4">
+        <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+              <Bell className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-slate-900">Delivery Receipts & Notifications</h3>
+              <p className="text-[11px] text-slate-500">Automated updates sent to your registered Email and WhatsApp</p>
+            </div>
+          </div>
+          <span className="text-xs font-semibold text-slate-400">
+            {notifications.length} update{notifications.length !== 1 ? 's' : ''}
+          </span>
+        </div>
+
+        {notifications.length === 0 ? (
+          <div className="py-6 text-center bg-slate-50 rounded-2xl border border-slate-100">
+            <Bell className="w-6 h-6 text-slate-300 mx-auto mb-1.5" />
+            <p className="text-xs text-slate-500 font-medium">No automated notifications logged yet for this booking.</p>
+          </div>
+        ) : (
+          <div className="space-y-2.5">
+            {notifications.map((n) => {
+              const isEmail = n.channel === 'email';
+              const eventTitle = n.event_type
+                .split('.')
+                .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+                .join(' ');
+              const stLower = (n.delivery_status || '').toLowerCase();
+              return (
+                <div
+                  key={n.id}
+                  className="p-3.5 rounded-2xl bg-slate-50/70 border border-slate-200/80 flex items-center justify-between gap-3 text-xs"
+                >
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${
+                        isEmail ? 'bg-sky-100 text-sky-700' : 'bg-emerald-100 text-emerald-700'
+                      }`}
+                    >
+                      {isEmail ? <Mail className="w-4 h-4" /> : <MessageCircle className="w-4 h-4" />}
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 capitalize">{eventTitle}</p>
+                      <p className="text-[11px] text-slate-500 capitalize">
+                        Channel: <strong>{n.channel}</strong> • {new Date(n.created_at).toLocaleString()}
+                      </p>
+                    </div>
+                  </div>
+
+                  <span
+                    className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase shrink-0 border ${
+                      stLower === 'sent' || stLower === 'delivered'
+                        ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                        : stLower === 'pending'
+                        ? 'bg-amber-50 text-amber-700 border-amber-200'
+                        : 'bg-rose-50 text-rose-700 border-rose-200'
+                    }`}
+                  >
+                    {n.delivery_status}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {/* Provider Chat Section */}

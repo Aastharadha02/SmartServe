@@ -32,6 +32,8 @@ from app.schemas.provider import (
     BookingStartPayload,
     BookingRejectPayload,
     BookingCompletePayload,
+    CashCollectionReportPayload,
+    ProviderPaymentReportResponse,
     ProviderTicketCreateRequest,
 )
 from app.schemas.support import (
@@ -716,7 +718,7 @@ def start_booking(
 @router.post(
     "/providers/me/bookings/{booking_id}/complete",
     response_model=ProviderBookingResponse,
-    summary="Complete a job in progress (OTP previously validated at start)",
+    summary="Complete a job in progress with verified customer 4-digit completion OTP",
 )
 def complete_booking(
     booking_id: uuid.UUID,
@@ -728,12 +730,14 @@ def complete_booking(
     from app.models.provider import ProviderLocation
 
     reason = payload.notes if payload else None
+    otp = payload.otp_code.strip() if (payload and payload.otp_code) else None
     updated = transition_booking_status(
         db=db,
         booking_id=booking_id,
         next_status="Completed",
         user=current_user,
         reason=reason,
+        otp_code=otp,
     )
 
     # Stop active location tracking in PostgreSQL
@@ -749,7 +753,7 @@ def complete_booking(
     cust_id = str(updated.customer_id) if updated.customer_id else None
     cust_user_id = str(updated.customer.user_id) if updated.customer and hasattr(updated.customer, 'user_id') else None
 
-    # Direct realtime WebSocket broadcast (Phase 1: No Kafka required)
+    # Direct realtime WebSocket broadcast
     channels = ["dashboard", "bookings", "admin", f"booking_{updated.id}", f"admin_booking_{updated.id}"]
     if cust_id:
         channels.extend([f"customer_{cust_id}", f"user_{cust_id}"])
@@ -782,6 +786,156 @@ def complete_booking(
     broadcast_realtime(channels, completed_msg)
 
     return _serialize_booking_response(updated)
+
+
+@router.post(
+    "/providers/me/bookings/{booking_id}/cash-collected",
+    response_model=ProviderPaymentReportResponse,
+    summary="Report Cash on Delivery collection from customer",
+)
+def report_cash_collected(
+    booking_id: uuid.UUID,
+    payload: CashCollectionReportPayload,
+    current_user: AuthUser = Depends(require_provider),
+    db: Session = Depends(get_db),
+):
+    from datetime import datetime, timezone
+    from app.core.websockets import broadcast_realtime
+    from app.models.payment import BookingPayment
+
+    booking = db.query(Booking).filter(Booking.id == booking_id).first()
+    if not booking:
+        raise HTTPException(status_code=404, detail="Booking not found")
+
+    # Only assigned provider may report collection
+    if booking.provider_id != current_user.id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Forbidden: You can only report cash collection for your assigned bookings.",
+        )
+
+    # Booking must be started or completed
+    curr_st = str(booking.status.value if hasattr(booking.status, "value") else booking.status).lower()
+    if curr_st not in ["started", "completed", "arrived"]:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Cannot report cash collection when booking is in '{booking.status}' status. Service must be started or completed.",
+        )
+
+    # Prevent duplicate collection reports
+    curr_pay_st = str(booking.payment_status or "Pending").strip().lower()
+    if curr_pay_st in ["collection reported", "paid", "collection_reported"]:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Cash collection has already been reported or verified for this booking. Duplicate reports are not permitted.",
+        )
+
+    agreed_amount = Decimal(str(booking.total_price or "0.00"))
+    reported_amount = Decimal(str(payload.reported_amount))
+    discrepancy_amount = abs(reported_amount - agreed_amount)
+    has_discrepancy = (reported_amount != agreed_amount)
+
+    now_utc = datetime.now(timezone.utc)
+
+    # Check for existing BookingPayment record
+    payment = db.query(BookingPayment).filter(BookingPayment.booking_id == booking.id).first()
+    if not payment:
+        payment = BookingPayment(
+            id=uuid.uuid4(),
+            booking_id=booking.id,
+            customer_id=booking.customer_id,
+            provider_id=current_user.id,
+            payment_method="COD",
+            agreed_amount=agreed_amount,
+            created_at=now_utc,
+        )
+
+    payment.reported_amount = reported_amount
+    payment.status = "Collection Reported"
+    payment.discrepancy_flag = has_discrepancy
+    payment.discrepancy_amount = discrepancy_amount
+    payment.collected_at = now_utc
+    payment.collection_notes = payload.notes
+    payment.updated_at = now_utc
+    db.add(payment)
+
+    booking.payment_status = "Collection Reported"
+    booking.payment_method = "COD"
+
+    # Add audit event to booking timeline
+    tl_event = {
+        "event": "Provider Reported Cash Collection",
+        "actor": current_user.full_name or current_user.email,
+        "role": "provider",
+        "reported_amount": float(reported_amount),
+        "agreed_amount": float(agreed_amount),
+        "discrepancy_flag": has_discrepancy,
+        "discrepancy_amount": float(discrepancy_amount),
+        "notes": payload.notes or "",
+        "timestamp": now_utc.isoformat(),
+    }
+    cur_tl = list(booking.timeline or [])
+    cur_tl.append(tl_event)
+    booking.timeline = cur_tl
+
+    from sqlalchemy.orm.attributes import flag_modified
+    flag_modified(booking, "timeline")
+
+    db.commit()
+    db.refresh(payment)
+    db.refresh(booking)
+
+    # Automated Notification Trigger: Payment Collection Reported
+    try:
+        from app.services.notification import notify_booking_event
+        notify_booking_event(
+            db,
+            booking,
+            "payment.collection_reported",
+            extra_context={
+                "payment_id": str(payment.id),
+                "notes": payload.notes,
+            },
+        )
+    except Exception as exc:
+        pass
+
+    # Broadcast notification across channels
+    cust_id = str(booking.customer_id) if booking.customer_id else None
+    channels = ["dashboard", "bookings", "admin", f"booking_{booking.id}", f"admin_booking_{booking.id}"]
+    if cust_id:
+        channels.extend([f"customer_{cust_id}", f"user_{cust_id}"])
+    channels.extend([f"provider_{current_user.id}", f"user_{current_user.id}"])
+
+    msg = {
+        "type": "PAYMENT_COLLECTION_REPORTED",
+        "event": "payment.collection_reported",
+        "event_type": "payment.collection_reported",
+        "booking_id": str(booking.id),
+        "payment_id": str(payment.id),
+        "payment_status": "Collection Reported",
+        "agreed_amount": float(agreed_amount),
+        "reported_amount": float(reported_amount),
+        "discrepancy_flag": has_discrepancy,
+        "discrepancy_amount": float(discrepancy_amount),
+        "timestamp": now_utc.isoformat(),
+    }
+    broadcast_realtime(channels, msg)
+
+    discrepancy_msg = f" Discrepancy of ₹{abs(float(discrepancy_amount)):.2f} flagged for admin review." if has_discrepancy else ""
+    return ProviderPaymentReportResponse(
+        payment_id=str(payment.id),
+        booking_id=str(booking.id),
+        booking_reference=booking.booking_reference,
+        agreed_amount=float(agreed_amount),
+        reported_amount=float(reported_amount),
+        status="Collection Reported",
+        discrepancy_flag=has_discrepancy,
+        discrepancy_amount=float(discrepancy_amount),
+        collected_at=now_utc.isoformat(),
+        message=f"Cash collection of ₹{float(reported_amount):.2f} recorded.{discrepancy_msg} Awaiting admin verification.",
+    )
+
 
 
 @router.post(

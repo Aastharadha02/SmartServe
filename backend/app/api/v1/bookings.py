@@ -1,9 +1,11 @@
 import uuid
-from datetime import datetime, timezone
+from decimal import Decimal
+from datetime import datetime, timezone, timedelta
 from typing import List, Optional, Dict, Any
 from pydantic import BaseModel
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 
 from app.core.dependencies import require_admin, require_permission, get_current_customer
 from app.repositories.db import get_db
@@ -12,14 +14,20 @@ from app.models.user import User
 from app.models.provider import Provider
 from app.models.customer import Customer, BookingWarranty
 from app.models.booking import Booking, BookingStatus, PaymentStatus
+from app.models.payment import BookingPayment
+from app.services.booking.otp_service import generate_secure_otp, get_active_otp, verify_and_consume_otp
 from app.schemas.booking import (
     BookingCreateRequest,
     BookingStatusUpdateRequest,
     ProviderReassignRequest,
-    BookingDetailResponse
+    BookingDetailResponse,
+    PaymentRecordResponse,
+    PaymentVerifyRequest,
+    PaymentRejectRequest,
 )
 
 router = APIRouter(prefix="/admin/bookings", tags=["Admin Booking Operations"])
+payments_admin_router = APIRouter(prefix="/admin/payments", tags=["Admin Payment Review Operations"])
 
 VALID_TRANSITIONS = {
     BookingStatus.REQUESTED: [BookingStatus.ASSIGNED, BookingStatus.ACCEPTED, BookingStatus.CANCELLED, BookingStatus.REJECTED, BookingStatus.EXPIRED],
@@ -87,6 +95,42 @@ def clean_admin_photos(photos):
                 res.append(p)
     return res
 
+def _serialize_admin_booking(b: Booking) -> BookingDetailResponse:
+    c_name = b.customer.full_name if b.customer else "Customer"
+    c_phone = b.customer.phone if (b.customer and b.customer.phone) else "+91 98765 43210"
+    p_name = b.provider.full_name if b.provider else None
+    s_name = b.service.name if b.service else "Home Service"
+    allowed_next = get_allowed_next(b.status)
+
+    return BookingDetailResponse(
+        id=str(b.id),
+        customer_id=str(b.customer_id),
+        customer_name=c_name,
+        customer_phone=c_phone,
+        provider_id=str(b.provider_id) if b.provider_id else None,
+        provider_name=p_name,
+        service_id=str(b.service_id),
+        service_name=s_name,
+        status=b.status.value if hasattr(b.status, 'value') else str(b.status),
+        payment_method=b.payment_method or "COD",
+        payment_status=b.payment_status.value if hasattr(b.payment_status, 'value') else str(b.payment_status),
+        scheduled_time=b.scheduled_time.isoformat() if b.scheduled_time else "",
+        address=b.address or "",
+        total_price=float(b.total_price or 0.0),
+        otp_code=b.otp_code,
+        start_otp=b.start_otp,
+        completion_otp=b.completion_otp,
+        timeline=safe_timeline(b.timeline),
+        allowed_next_statuses=allowed_next,
+        emergency_flag=b.emergency_flag,
+        cancellation_reason=b.cancellation_reason,
+        customer_notes=b.customer_notes,
+        before_photos=clean_admin_photos(b.before_photos),
+        after_photos=clean_admin_photos(b.after_photos),
+        warranty=format_warranty(b.warranty),
+        created_at=b.created_at.isoformat() if b.created_at else ""
+    )
+
 @router.get("/", response_model=List[BookingDetailResponse])
 def list_admin_bookings(
     status_filter: Optional[str] = None,
@@ -127,41 +171,399 @@ def list_admin_bookings(
             matches_search = (s_lower in c_name or s_lower in p_name or s_lower in srv_name or s_lower in str(b.id))
 
         if matches_search:
-            c_name = b.customer.full_name if b.customer else "Customer"
-            c_phone = b.customer.phone if (b.customer and b.customer.phone) else "+91 98765 43210"
-            p_name = b.provider.full_name if b.provider else None
-            s_name = b.service.name if b.service else "Home Service"
-            allowed_next = get_allowed_next(b.status)
-
-            res.append(
-                BookingDetailResponse(
-                    id=str(b.id),
-                    customer_id=str(b.customer_id),
-                    customer_name=c_name,
-                    customer_phone=c_phone,
-                    provider_id=str(b.provider_id) if b.provider_id else None,
-                    provider_name=p_name,
-                    service_id=str(b.service_id),
-                    service_name=s_name,
-                    status=b.status.value if hasattr(b.status, 'value') else str(b.status),
-                    payment_status=b.payment_status.value if hasattr(b.payment_status, 'value') else str(b.payment_status),
-                    scheduled_time=b.scheduled_time.isoformat() if b.scheduled_time else "",
-                    address=b.address,
-                    total_price=b.total_price,
-                    otp_code=b.otp_code,
-                    timeline=safe_timeline(b.timeline),
-                    allowed_next_statuses=allowed_next,
-                    emergency_flag=b.emergency_flag,
-                    cancellation_reason=b.cancellation_reason,
-                    customer_notes=b.customer_notes,
-                    before_photos=clean_admin_photos(b.before_photos),
-                    after_photos=clean_admin_photos(b.after_photos),
-                    warranty=format_warranty(b.warranty),
-                    created_at=b.created_at.isoformat() if b.created_at else ""
-                )
-            )
+            res.append(_serialize_admin_booking(b))
 
     return res
+
+
+# =========================================================================
+# ADMIN COD PAYMENT REVIEW QUEUE & AUDIT TRAIL ENDPOINTS
+# =========================================================================
+
+def _serialize_payment_record(p: BookingPayment) -> PaymentRecordResponse:
+    b = p.booking
+    c = p.customer or (b.customer if b else None)
+    prov = p.provider or (b.provider if b else None)
+    srv = b.service if b else None
+
+    c_name = c.full_name if c else "Customer"
+    c_phone = c.phone if c and c.phone else "+91 98765 43210"
+    prov_name = prov.full_name if prov else None
+    srv_name = srv.name if srv else "Home Service"
+    ref_code = b.booking_reference if b else f"BK-{str(p.booking_id)[:8].upper()}"
+
+    return PaymentRecordResponse(
+        id=str(p.id),
+        booking_id=str(p.booking_id),
+        booking_reference=ref_code,
+        customer_id=str(p.customer_id),
+        customer_name=c_name,
+        customer_phone=c_phone,
+        provider_id=str(p.provider_id) if p.provider_id else None,
+        provider_name=prov_name,
+        service_id=str(b.service_id) if b else None,
+        service_name=srv_name,
+        payment_method=p.payment_method or "COD",
+        agreed_amount=float(p.agreed_amount or 0.0),
+        reported_amount=float(p.reported_amount) if p.reported_amount is not None else None,
+        status=p.status,
+        discrepancy_flag=bool(p.discrepancy_flag),
+        discrepancy_amount=float(p.discrepancy_amount or 0.0),
+        collected_at=p.collected_at.isoformat() if p.collected_at else None,
+        collection_notes=p.collection_notes,
+        reviewed_by_id=str(p.reviewed_by_id) if p.reviewed_by_id else None,
+        reviewed_by_name=p.reviewed_by_name,
+        reviewed_at=p.reviewed_at.isoformat() if p.reviewed_at else None,
+        rejection_reason=p.rejection_reason,
+        created_at=p.created_at.isoformat() if p.created_at else "",
+        updated_at=p.updated_at.isoformat() if p.updated_at else "",
+    )
+
+
+@router.get("/payments/review", response_model=List[PaymentRecordResponse])
+@payments_admin_router.get("/", response_model=List[PaymentRecordResponse])
+@payments_admin_router.get("/review", response_model=List[PaymentRecordResponse])
+def list_cod_payments_for_review(
+    status_filter: Optional[str] = None,
+    discrepancy_only: Optional[bool] = None,
+    search: Optional[str] = None,
+    skip: int = 0,
+    limit: int = 100,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin)
+):
+    """
+    List COD payment records for Admin Payment Review.
+    Enforces Admin authorization and allows filtering by status and discrepancy flag.
+    """
+    query = db.query(BookingPayment).join(Booking, BookingPayment.booking_id == Booking.id)
+
+    if status_filter and status_filter.strip().lower() != "all":
+        norm_st = status_filter.strip().lower()
+        if norm_st in ["collection_reported", "collection reported"]:
+            query = query.filter(func.lower(BookingPayment.status) == "collection reported")
+        elif norm_st in ["pending"]:
+            query = query.filter(func.lower(BookingPayment.status) == "pending")
+        elif norm_st in ["paid"]:
+            query = query.filter(func.lower(BookingPayment.status) == "paid")
+        elif norm_st in ["rejected"]:
+            query = query.filter(func.lower(BookingPayment.status) == "rejected")
+        else:
+            query = query.filter(func.lower(BookingPayment.status) == norm_st)
+
+    if discrepancy_only:
+        query = query.filter(BookingPayment.discrepancy_flag == True)
+
+    payments = query.order_by(BookingPayment.created_at.desc()).offset(skip).limit(limit).all()
+
+    res = []
+    for p in payments:
+        b = p.booking
+        c = p.customer or (b.customer if b else None)
+        prov = p.provider or (b.provider if b else None)
+        srv = b.service if b else None
+
+        c_name = c.full_name if c else "Customer"
+        prov_name = prov.full_name if prov else None
+        srv_name = srv.name if srv else "Home Service"
+        ref_code = b.booking_reference if b else f"BK-{str(p.booking_id)[:8].upper()}"
+
+        if search:
+            s_low = search.lower()
+            matches = (
+                s_low in ref_code.lower()
+                or s_low in c_name.lower()
+                or (prov_name and s_low in prov_name.lower())
+                or (srv_name and s_low in srv_name.lower())
+                or s_low in str(p.booking_id).lower()
+            )
+            if not matches:
+                continue
+
+        res.append(_serialize_payment_record(p))
+    return res
+
+
+@router.post("/payments/{payment_id}/verify", response_model=PaymentRecordResponse)
+@payments_admin_router.post("/{payment_id}/verify", response_model=PaymentRecordResponse)
+def verify_payment_collection_by_id(
+    payment_id: str,
+    req: Optional[PaymentVerifyRequest] = None,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin)
+):
+    """Admin endpoint to verify a reported cash collection."""
+    from app.core.websockets import broadcast_realtime
+
+    try:
+        p_uuid = uuid.UUID(payment_id)
+        payment = db.query(BookingPayment).filter(BookingPayment.id == p_uuid).first()
+    except ValueError:
+        payment = None
+
+    if not payment:
+        # Fallback by booking_id
+        try:
+            b_uuid = uuid.UUID(payment_id)
+            payment = db.query(BookingPayment).filter(BookingPayment.booking_id == b_uuid).order_by(BookingPayment.created_at.desc()).first()
+        except ValueError:
+            b_match = db.query(Booking).filter(Booking.booking_reference == payment_id).first()
+            if b_match:
+                payment = db.query(BookingPayment).filter(BookingPayment.booking_id == b_match.id).order_by(BookingPayment.created_at.desc()).first()
+
+    if not payment:
+        raise HTTPException(status_code=404, detail="Payment record not found")
+
+    booking = payment.booking or db.query(Booking).filter(Booking.id == payment.booking_id).first()
+    if not booking:
+        raise HTTPException(status_code=404, detail="Associated booking not found")
+
+    now_utc = datetime.now(timezone.utc)
+    admin_name = getattr(admin, "full_name", None) or getattr(admin, "email", "Admin")
+
+    payment.status = "Paid"
+    payment.reviewed_by_id = admin.id
+    payment.reviewed_by_name = admin_name
+    payment.reviewed_at = now_utc
+    payment.updated_at = now_utc
+    db.add(payment)
+
+    booking.payment_status = "Paid"
+
+    # Append audit event to booking timeline
+    audit_event = {
+        "event": "Admin Verified Cash Collection",
+        "actor": admin_name,
+        "role": admin.role,
+        "agreed_amount": float(payment.agreed_amount),
+        "verified_amount": float(payment.reported_amount or payment.agreed_amount),
+        "notes": req.notes if req and req.notes else "Admin verified cash collection",
+        "timestamp": now_utc.isoformat(),
+    }
+    tl = list(booking.timeline or [])
+    tl.append(audit_event)
+    booking.timeline = tl
+
+    from sqlalchemy.orm.attributes import flag_modified
+    flag_modified(booking, "timeline")
+
+    audit_repository.create_audit_log(
+        db, actor_id=admin.id, actor_email=admin.email, actor_role=admin.role,
+        action=f"Verified COD Payment for Booking {booking.booking_reference}",
+        target_resource=str(payment.id),
+        metadata_json={
+            "booking_id": str(booking.id),
+            "agreed_amount": float(payment.agreed_amount),
+            "reported_amount": float(payment.reported_amount or payment.agreed_amount),
+            "discrepancy_flag": payment.discrepancy_flag,
+        }
+    )
+
+    db.commit()
+    db.refresh(payment)
+    db.refresh(booking)
+
+    # Automated Notification Trigger: Payment Verified
+    try:
+        from app.services.notification import notify_booking_event
+        notify_booking_event(
+            db,
+            booking,
+            "payment.verified",
+            extra_context={
+                "payment_id": str(payment.id),
+                "notes": req.notes if req and req.notes else "Admin verified cash collection",
+            },
+        )
+    except Exception as exc:
+        pass
+
+    # Broadcast notification across channels
+    cust_id = str(booking.customer_id) if booking.customer_id else None
+    channels = ["dashboard", "bookings", "admin", f"booking_{booking.id}", f"admin_booking_{booking.id}"]
+    if cust_id:
+        channels.extend([f"customer_{cust_id}", f"user_{cust_id}"])
+    if booking.provider_id:
+        channels.extend([f"provider_{booking.provider_id}", f"user_{booking.provider_id}"])
+
+    broadcast_realtime(channels, {
+        "type": "PAYMENT_VERIFIED",
+        "event": "payment.verified",
+        "event_type": "payment.verified",
+        "booking_id": str(booking.id),
+        "payment_id": str(payment.id),
+        "payment_status": "Paid",
+        "reviewed_by": admin_name,
+        "timestamp": now_utc.isoformat(),
+    })
+
+    return _serialize_payment_record(payment)
+
+
+@router.post("/{booking_id}/verify-payment", response_model=PaymentRecordResponse)
+def verify_payment_collection_by_booking(
+    booking_id: str,
+    req: Optional[PaymentVerifyRequest] = None,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin)
+):
+    """Admin shortcut to verify payment by booking reference or ID."""
+    return verify_payment_collection_by_id(payment_id=booking_id, req=req, db=db, admin=admin)
+
+
+@router.post("/payments/{payment_id}/reject", response_model=PaymentRecordResponse)
+@payments_admin_router.post("/{payment_id}/reject", response_model=PaymentRecordResponse)
+def reject_payment_collection_by_id(
+    payment_id: str,
+    req: PaymentRejectRequest,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin)
+):
+    """Admin endpoint to reject a reported cash collection with mandatory reason."""
+    from app.core.websockets import broadcast_realtime
+
+    if not req.reason or not req.reason.strip():
+        raise HTTPException(status_code=400, detail="Rejection reason is required")
+
+    try:
+        p_uuid = uuid.UUID(payment_id)
+        payment = db.query(BookingPayment).filter(BookingPayment.id == p_uuid).first()
+    except ValueError:
+        payment = None
+
+    if not payment:
+        # Fallback by booking_id
+        try:
+            b_uuid = uuid.UUID(payment_id)
+            payment = db.query(BookingPayment).filter(BookingPayment.booking_id == b_uuid).order_by(BookingPayment.created_at.desc()).first()
+        except ValueError:
+            b_match = db.query(Booking).filter(Booking.booking_reference == payment_id).first()
+            if b_match:
+                payment = db.query(BookingPayment).filter(BookingPayment.booking_id == b_match.id).order_by(BookingPayment.created_at.desc()).first()
+
+    if not payment:
+        raise HTTPException(status_code=404, detail="Payment record not found")
+
+    booking = payment.booking or db.query(Booking).filter(Booking.id == payment.booking_id).first()
+    if not booking:
+        raise HTTPException(status_code=404, detail="Associated booking not found")
+
+    now_utc = datetime.now(timezone.utc)
+    admin_name = getattr(admin, "full_name", None) or getattr(admin, "email", "Admin")
+
+    payment.status = "Rejected"
+    payment.rejection_reason = req.reason.strip()
+    payment.reviewed_by_id = admin.id
+    payment.reviewed_by_name = admin_name
+    payment.reviewed_at = now_utc
+    payment.updated_at = now_utc
+    db.add(payment)
+
+    booking.payment_status = "Rejected"
+
+    # Append audit event to booking timeline
+    audit_event = {
+        "event": "Admin Rejected Cash Collection Report",
+        "actor": admin_name,
+        "role": admin.role,
+        "reason": req.reason.strip(),
+        "timestamp": now_utc.isoformat(),
+    }
+    tl = list(booking.timeline or [])
+    tl.append(audit_event)
+    booking.timeline = tl
+
+    from sqlalchemy.orm.attributes import flag_modified
+    flag_modified(booking, "timeline")
+
+    audit_repository.create_audit_log(
+        db, actor_id=admin.id, actor_email=admin.email, actor_role=admin.role,
+        action=f"Rejected COD Payment for Booking {booking.booking_reference}: {req.reason.strip()}",
+        target_resource=str(payment.id),
+        metadata_json={
+            "booking_id": str(booking.id),
+            "reason": req.reason.strip(),
+        }
+    )
+
+    db.commit()
+    db.refresh(payment)
+    db.refresh(booking)
+
+    # Automated Notification Trigger: Payment Rejected
+    try:
+        from app.services.notification import notify_booking_event
+        notify_booking_event(
+            db,
+            booking,
+            "payment.rejected",
+            extra_context={
+                "payment_id": str(payment.id),
+                "notes": req.reason.strip(),
+            },
+        )
+    except Exception as exc:
+        pass
+
+    # Broadcast notification across channels
+    cust_id = str(booking.customer_id) if booking.customer_id else None
+    channels = ["dashboard", "bookings", "admin", f"booking_{booking.id}", f"admin_booking_{booking.id}"]
+    if cust_id:
+        channels.extend([f"customer_{cust_id}", f"user_{cust_id}"])
+    if booking.provider_id:
+        channels.extend([f"provider_{booking.provider_id}", f"user_{booking.provider_id}"])
+
+    broadcast_realtime(channels, {
+        "type": "PAYMENT_REJECTED",
+        "event": "payment.rejected",
+        "event_type": "payment.rejected",
+        "booking_id": str(booking.id),
+        "payment_id": str(payment.id),
+        "payment_status": "Rejected",
+        "reason": req.reason.strip(),
+        "reviewed_by": admin_name,
+        "timestamp": now_utc.isoformat(),
+    })
+
+    return _serialize_payment_record(payment)
+
+
+@router.post("/{booking_id}/reject-payment", response_model=PaymentRecordResponse)
+def reject_payment_collection_by_booking(
+    booking_id: str,
+    req: PaymentRejectRequest,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin)
+):
+    """Admin shortcut to reject payment by booking reference or ID."""
+    return reject_payment_collection_by_id(payment_id=booking_id, req=req, db=db, admin=admin)
+
+
+@router.get("/{booking_id}/payments", response_model=List[PaymentRecordResponse])
+def get_booking_payments(
+    booking_id: str,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin)
+):
+    """Retrieve full payment collection history and audit trail for a booking."""
+    booking = None
+    try:
+        b_uuid = uuid.UUID(booking_id)
+        booking = db.query(Booking).filter(Booking.id == b_uuid).first()
+    except ValueError:
+        booking = db.query(Booking).filter(Booking.booking_reference == booking_id).first()
+
+    if not booking:
+        raise HTTPException(status_code=404, detail="Booking not found")
+
+    payments = (
+        db.query(BookingPayment)
+        .filter(BookingPayment.booking_id == booking.id)
+        .order_by(BookingPayment.created_at.desc())
+        .all()
+    )
+    return [_serialize_payment_record(p) for p in payments]
+
 
 @router.get("/{booking_id}", response_model=BookingDetailResponse)
 def get_admin_booking_detail(
@@ -190,38 +592,9 @@ def get_admin_booking_detail(
     if not b:
         raise HTTPException(status_code=404, detail="Booking not found")
 
-    c_name = b.customer.full_name if b.customer else "Customer"
-    c_phone = b.customer.phone if (b.customer and b.customer.phone) else "+91 98765 43210"
-    p_name = b.provider.full_name if b.provider else None
-    s_name = b.service.name if b.service else "Home Service"
+    return _serialize_admin_booking(b)
 
-    allowed_next = get_allowed_next(b.status)
 
-    return BookingDetailResponse(
-        id=str(b.id),
-        customer_id=str(b.customer_id),
-        customer_name=c_name,
-        customer_phone=c_phone,
-        provider_id=str(b.provider_id) if b.provider_id else None,
-        provider_name=p_name,
-        service_id=str(b.service_id),
-        service_name=s_name,
-        status=b.status.value if hasattr(b.status, 'value') else str(b.status),
-        payment_status=b.payment_status.value if hasattr(b.payment_status, 'value') else str(b.payment_status),
-        scheduled_time=b.scheduled_time.isoformat() if b.scheduled_time else "",
-        address=b.address,
-        total_price=b.total_price,
-        otp_code=b.otp_code,
-        timeline=safe_timeline(b.timeline),
-        allowed_next_statuses=allowed_next,
-        emergency_flag=b.emergency_flag,
-        cancellation_reason=b.cancellation_reason,
-        customer_notes=b.customer_notes,
-        before_photos=clean_admin_photos(b.before_photos),
-        after_photos=clean_admin_photos(b.after_photos),
-        warranty=format_warranty(b.warranty),
-        created_at=b.created_at.isoformat() if b.created_at else ""
-    )
 
 @router.post("/", response_model=BookingDetailResponse, status_code=status.HTTP_201_CREATED)
 def create_admin_booking(
@@ -279,33 +652,8 @@ def create_admin_booking(
     except Exception as exc:
         print(f"[Admin Booking Kafka Error] {exc}")
 
-    c_name = booking.customer.full_name if booking.customer else "Customer"
-    c_phone = booking.customer.phone if (booking.customer and booking.customer.phone) else "+91 98765 43210"
-    p_name = booking.provider.full_name if booking.provider else None
-    s_name = booking.service.name if booking.service else "Home Service"
-    allowed_next = [st.value for st in VALID_TRANSITIONS.get(booking.status, [])]
+    return _serialize_admin_booking(booking)
 
-    return BookingDetailResponse(
-        id=str(booking.id),
-        customer_id=str(booking.customer_id),
-        customer_name=c_name,
-        customer_phone=c_phone,
-        provider_id=str(booking.provider_id) if booking.provider_id else None,
-        provider_name=p_name,
-        service_id=str(booking.service_id),
-        service_name=s_name,
-        status=booking.status.value if hasattr(booking.status, "value") else str(booking.status),
-        payment_status=booking.payment_status.value if hasattr(booking.payment_status, "value") else str(booking.payment_status),
-        scheduled_time=booking.scheduled_time.isoformat() if booking.scheduled_time else "",
-        address=booking.address,
-        total_price=booking.total_price,
-        otp_code=booking.otp_code,
-        timeline=safe_timeline(booking.timeline),
-        allowed_next_statuses=allowed_next,
-        emergency_flag=booking.emergency_flag,
-        cancellation_reason=booking.cancellation_reason,
-        created_at=booking.created_at.isoformat() if booking.created_at else ""
-    )
 
 @router.patch("/{booking_id}/status", response_model=BookingDetailResponse)
 def transition_booking_status(
@@ -354,34 +702,8 @@ def transition_booking_status(
         metadata_json={"reason": req.reason or "Admin Override"}
     )
 
-    c_name = updated.customer.full_name if updated.customer else "Customer"
-    c_phone = updated.customer.phone if (updated.customer and updated.customer.phone) else "+91 98765 43210"
-    p_name = updated.provider.full_name if updated.provider else None
-    s_name = updated.service.name if updated.service else "Home Service"
-    fresh_status_enum = BookingStatus(updated.status) if isinstance(updated.status, str) else updated.status
-    fresh_allowed_next = [st.value for st in VALID_TRANSITIONS.get(fresh_status_enum, [])]
+    return _serialize_admin_booking(updated)
 
-    return BookingDetailResponse(
-        id=str(updated.id),
-        customer_id=str(updated.customer_id),
-        customer_name=c_name,
-        customer_phone=c_phone,
-        provider_id=str(updated.provider_id) if updated.provider_id else None,
-        provider_name=p_name,
-        service_id=str(updated.service_id),
-        service_name=s_name,
-        status=updated.status.value if hasattr(updated.status, 'value') else str(updated.status),
-        payment_status=updated.payment_status.value if hasattr(updated.payment_status, 'value') else str(updated.payment_status),
-        scheduled_time=updated.scheduled_time.isoformat() if updated.scheduled_time else "",
-        address=updated.address,
-        total_price=updated.total_price,
-        otp_code=updated.otp_code,
-        timeline=safe_timeline(updated.timeline),
-        allowed_next_statuses=fresh_allowed_next,
-        emergency_flag=updated.emergency_flag,
-        cancellation_reason=updated.cancellation_reason,
-        created_at=updated.created_at.isoformat() if updated.created_at else ""
-    )
 
 @router.post("/{booking_id}/reassign")
 def reassign_provider(
@@ -405,7 +727,6 @@ def reassign_provider(
     if not provider:
         raise HTTPException(status_code=404, detail="New provider not found")
 
-    old_provider_id = booking.provider_id
     booking.provider_id = p_uuid
     booking.status = BookingStatus.ASSIGNED
 
@@ -420,128 +741,102 @@ def reassign_provider(
 
     db.commit()
 
-    audit_repository.create_audit_log(
-        db, actor_id=admin.id, actor_email=admin.email, actor_role=admin.role,
-        action=f"Reassigned Booking #{booking.id} to Provider {provider.full_name}",
-        target_resource=str(b_uuid)
-    )
+    # Automated Notification Trigger: Provider Assigned
+    try:
+        from app.services.notification import notify_booking_event
+        notify_booking_event(
+            db,
+            booking,
+            "booking.assigned",
+            extra_context={"notes": f"Assigned to {provider.full_name}. {req.reason or ''}".strip()},
+        )
+    except Exception as exc:
+        pass
 
-    return {
-        "status": "success",
-        "booking_id": booking_id,
-        "new_provider_id": req.new_provider_id,
-        "provider_name": provider.full_name,
-        "message": f"Successfully reassigned booking #{booking_id} to {provider.full_name}."
-    }
-
-
-from pydantic import BaseModel as PyBaseModel
-
-customer_bookings_router = APIRouter(prefix="/bookings", tags=["Customer Bookings"])
-
-class MobileBookingPayload(PyBaseModel):
-    service_id: Optional[str] = None
-    service_name: Optional[str] = None
-    category: Optional[str] = None
-    subcategory: Optional[str] = None
-    customer_name: Optional[str] = None
-    customer_phone: Optional[str] = None
-    customer_email: Optional[str] = None
-    service_address: Optional[str] = None
-    scheduled_date: Optional[str] = None
-    scheduled_time: Optional[str] = None
-    total_amount: Optional[float] = None
-    notes: Optional[str] = None
-
-@customer_bookings_router.get("")
-@customer_bookings_router.get("/")
-def list_customer_bookings(
-    current_customer: Customer = Depends(get_current_customer),
-    db: Session = Depends(get_db),
-):
-    bookings = (
-        db.query(Booking)
-        .filter(Booking.customer_id == current_customer.id)
-        .order_by(Booking.created_at.desc())
-        .limit(50)
-        .all()
-    )
-    results = []
-    for b in bookings:
-        results.append({
-            "id": str(b.id),
-            "booking_reference": f"BK-{str(b.id)[:8].upper()}",
-            "customer_name": current_customer.full_name or "Customer",
-            "service_name": b.service.name if b.service else "Service",
-            "category": b.service.category if b.service else "General",
-            "subcategory": b.service.subcategory if b.service else "",
-            "provider_name": b.provider.full_name if b.provider else "Assigned Soon",
-            "status": b.status.value.lower() if hasattr(b.status, 'value') else str(b.status).lower(),
-            "scheduled_date": b.scheduled_time.strftime("%d %b %Y") if b.scheduled_time else "Upcoming",
-            "scheduled_time": b.scheduled_time.strftime("%I:%M %p") if b.scheduled_time else "Morning",
-            "total_amount": b.total_price,
-            "service_address": b.address,
+    # Realtime notification to assigned provider
+    try:
+        from app.core.websockets import broadcast_realtime
+        channels = ["dashboard", "bookings", f"booking_{booking.id}", f"provider_{p_uuid}", f"user_{p_uuid}"]
+        if booking.customer_id:
+            channels.extend([f"customer_{booking.customer_id}", f"user_{booking.customer_id}"])
+        
+        service_title = booking.service.name if booking.service else "Home Service"
+        ref = getattr(booking, "booking_reference", None) or str(booking.id)[:8].upper()
+        sched_time = str(booking.scheduled_time) if booking.scheduled_time else ""
+        booking_data = {
+            "id": str(booking.id),
+            "booking_reference": ref,
+            "service_name": service_title,
+            "scheduled_date": str(booking.scheduled_date),
+            "scheduled_time": sched_time,
+            "address": booking.address_line1 or "",
+            "total_price": float(booking.total_price) if booking.total_price else 0.0,
+            "status": str(booking.status),
+        }
+        broadcast_realtime(channels, {
+            "type": "BOOKING_ASSIGNED",
+            "event": "booking.assigned",
+            "event_type": "booking.assigned",
+            "booking_id": str(booking.id),
+            "status": str(booking.status),
+            "booking": booking_data,
+            "data": booking_data,
         })
-    return results
+    except Exception as exc:
+        logger.warning(f"[ReassignProvider] Realtime broadcast error: {exc}")
 
-@customer_bookings_router.post("")
+    return {"status": "success", "message": f"Booking {booking_id} reassigned to {provider.full_name}"}
+
+
+# =========================================================================
+# CUSTOMER FACING BOOKING ROUTER (App compatibility)
+# =========================================================================
+
+customer_bookings_router = APIRouter(prefix="/customer/bookings", tags=["Customer Booking Flow"])
+
+class CustomerDirectBookingRequest(BookingCreateRequest):
+    scheduled_date: Optional[str] = None
+
+
 @customer_bookings_router.post("/")
-def create_customer_mobile_booking(
-    req: MobileBookingPayload,
-    current_customer: Customer = Depends(get_current_customer),
+def create_customer_direct_booking(
+    req: CustomerDirectBookingRequest,
     db: Session = Depends(get_db),
+    current_customer: Customer = Depends(get_current_customer)
 ):
     """
-    Create a real booking persisted to DB. Auto-assigns a verified provider
-    matching the requested service category.
+    Direct Booking Creation for Customers via Mobile/Web clients.
     """
     from app.models.service import Service
-    from app.models.provider import Provider, ProviderService
-    from app.models.user import User
-    from datetime import datetime, timezone, timedelta
 
-    # 1. Resolve service from DB
-    service = None
-    if req.service_id:
+    try:
+        s_uuid = uuid.UUID(req.service_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid service ID")
+
+    service = db.query(Service).filter(Service.id == s_uuid, Service.is_active == True).first()
+    if not service:
+        raise HTTPException(status_code=404, detail="Selected service is unavailable or inactive.")
+
+    resolved_address = (req.address or "").strip()
+    if not resolved_address and current_customer.phone:
+        resolved_address = "Sector 62, Noida, Uttar Pradesh"
+
+    if not resolved_address:
+        raise HTTPException(status_code=400, detail="Service location address is required to place a booking.")
+
+    matched_provider = None
+    if req.provider_id:
         try:
-            s_uuid = uuid.UUID(req.service_id)
-            service = db.query(Service).filter(Service.id == s_uuid).first()
+            p_uuid = uuid.UUID(req.provider_id)
+            matched_provider = (
+                db.query(Provider)
+                .filter(Provider.user_id == p_uuid, Provider.is_verified == True)
+                .first()
+            )
         except ValueError:
             pass
-    if not service and req.service_name:
-        service = db.query(Service).filter(
-            Service.name.ilike(f"%{req.service_name.strip()}%")
-        ).first()
-    if not service and req.category:
-        service = db.query(Service).filter(
-            Service.category.ilike(f"%{req.category.strip()}%"),
-            Service.is_active == True,
-        ).first()
 
-    if not service:
-        # Fallback: pick any active service
-        service = db.query(Service).filter(Service.is_active == True).first()
-
-    if not service:
-        raise HTTPException(status_code=400, detail="No matching service found in catalog.")
-
-    # 2. Auto-assign a verified provider who offers this service category
-    category = service.category
-    matched_provider = None
-
-    # Find providers in matching category that are verified and active
-    candidate_providers = (
-        db.query(Provider)
-        .filter(Provider.is_verified == True, Provider.category == category)
-        .all()
-    )
-    for p in candidate_providers:
-        p_user = db.query(User).filter(User.id == p.user_id, User.is_active == True).first()
-        if p_user:
-            matched_provider = p
-            break
-
-    # If none found for exact category, pick any verified+active provider
     if not matched_provider:
         all_verified = (
             db.query(Provider)
@@ -554,7 +849,6 @@ def create_customer_mobile_booking(
                 matched_provider = p
                 break
 
-    # 3. Build scheduled datetime
     try:
         date_part = req.scheduled_date or ""
         time_part = req.scheduled_time or "10:00"
@@ -564,18 +858,18 @@ def create_customer_mobile_booking(
     except (ValueError, TypeError):
         sched_dt = datetime.now(timezone.utc) + timedelta(hours=24)
 
-    # 4. Persist booking
+    total_price = float(service.base_price if service.base_price is not None else 499.0)
     new_booking = Booking(
         id=uuid.uuid4(),
         customer_id=current_customer.id,
         service_id=service.id,
         provider_id=matched_provider.user_id if matched_provider else None,
         status="Assigned" if matched_provider else "Requested",
+        payment_method="COD",
         payment_status="Pending",
         scheduled_time=sched_dt,
-        address=req.service_address or "Address on File",
-        total_price=float(service.base_price if service.base_price is not None else 499.0),
-        otp_code=str(uuid.uuid4().int)[:4],
+        address=resolved_address,
+        total_price=Decimal(str(total_price)),
         emergency_flag=None,
         timeline=[{
             "event": "Booking Requested by Customer",
@@ -592,6 +886,33 @@ def create_customer_mobile_booking(
     db.commit()
     db.refresh(new_booking)
 
+    # Generate secure START OTP
+    secure_otp = generate_secure_otp(new_booking.id, "START", db)
+    new_booking.otp_code = secure_otp.otp_code
+
+    # Create initial BookingPayment record
+    init_payment = BookingPayment(
+        id=uuid.uuid4(),
+        booking_id=new_booking.id,
+        customer_id=current_customer.id,
+        provider_id=matched_provider.user_id if matched_provider else None,
+        payment_method="COD",
+        agreed_amount=Decimal(str(total_price)),
+        status="Pending",
+        created_at=datetime.now(timezone.utc),
+        updated_at=datetime.now(timezone.utc),
+    )
+    db.add(init_payment)
+    db.commit()
+    db.refresh(new_booking)
+
+    # Automated Notification Trigger: Booking Confirmed
+    try:
+        from app.services.notification import notify_booking_event
+        notify_booking_event(db, new_booking, "booking.confirmed")
+    except Exception as exc:
+        pass
+
     return {
         "id": str(new_booking.id),
         "booking_reference": f"BK-{str(new_booking.id)[:8].upper()}",
@@ -601,6 +922,8 @@ def create_customer_mobile_booking(
         "subcategory": service.subcategory or "",
         "provider_name": matched_provider.full_name if matched_provider else "Being Assigned",
         "status": str(new_booking.status),
+        "payment_method": "COD",
+        "payment_status": "Pending",
         "scheduled_date": sched_dt.strftime("%d %b %Y"),
         "scheduled_time": sched_dt.strftime("%I:%M %p"),
         "total_amount": float(new_booking.total_price),
