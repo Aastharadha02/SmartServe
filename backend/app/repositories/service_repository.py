@@ -119,6 +119,11 @@ def create_service(
     db.add(service)
     db.commit()
     db.refresh(service)
+    try:
+        from app.core.cache import get_cache
+        get_cache().invalidate_prefix("catalog:")
+    except Exception:
+        pass
     return service
 
 def update_service(
@@ -155,4 +160,9 @@ def update_service(
 
     db.commit()
     db.refresh(service)
+    try:
+        from app.core.cache import get_cache
+        get_cache().invalidate_prefix("catalog:")
+    except Exception:
+        pass
     return service
