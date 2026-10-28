@@ -75,6 +75,12 @@ def get_current_user(
         except Exception:
             pass
 
+    if payload.get("pending_profile") is True:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Profile onboarding incomplete. Please complete your profile to continue.",
+        )
+
     sub = payload.get("sub")
     if not sub:
         raise HTTPException(
@@ -242,6 +248,12 @@ def get_current_customer(
             raise
         except Exception:
             pass
+
+    if payload.get("pending_profile") is True:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Profile onboarding incomplete. Please complete your profile to continue.",
+        )
 
     sub = payload.get("sub")
     if not sub:

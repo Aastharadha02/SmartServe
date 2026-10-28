@@ -20,6 +20,30 @@ class CustomerLoginPayload(BaseModel):
     recovery_code: Optional[str] = None
 
 
+class CustomerLocationPayload(BaseModel):
+    address: Optional[str] = None
+    city: Optional[str] = None
+    state: Optional[str] = None
+    postal_code: Optional[str] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    source: Optional[str] = "manual"
+
+    @field_validator("latitude")
+    @classmethod
+    def validate_latitude(cls, v):
+        if v is not None and (v < -90 or v > 90):
+            raise ValueError("Latitude must be between -90 and 90")
+        return v
+
+    @field_validator("longitude")
+    @classmethod
+    def validate_longitude(cls, v):
+        if v is not None and (v < -180 or v > 180):
+            raise ValueError("Longitude must be between -180 and 180")
+        return v
+
+
 class CustomerTokenResponse(BaseModel):
     access_token: str
     token_type: str = "bearer"
@@ -29,6 +53,25 @@ class CustomerTokenResponse(BaseModel):
     email: str
     full_name: str
     phone: Optional[str] = None
+    requires_profile_completion: bool = False
+    is_profile_complete: bool = True
+    missing_profile_fields: List[str] = []
+    is_new_user: bool = False
+    location: Optional[Dict[str, Any]] = None
+
+
+class CompleteProfilePayload(BaseModel):
+    full_name: str = Field(..., min_length=2, max_length=255)
+    phone: str = Field(..., min_length=10, max_length=20)
+    preferences: Optional[Union[List[str], Dict[str, Any]]] = None
+    location: Optional[CustomerLocationPayload] = None
+
+
+class SkipProfilePayload(BaseModel):
+    full_name: Optional[str] = None
+    phone: Optional[str] = None
+    preferences: Optional[Union[List[str], Dict[str, Any]]] = None
+    location: Optional[CustomerLocationPayload] = None
 
 
 class CustomerSessionResponse(BaseModel):
@@ -42,7 +85,10 @@ class CustomerSessionResponse(BaseModel):
     lifetime_spent: float = 0.0
     total_bookings: int = 0
     created_at: Optional[datetime] = None
-    preferences: Optional[List[str]] = None
+    preferences: Optional[Union[List[str], Dict[str, Any]]] = None
+    is_profile_complete: bool = True
+    missing_profile_fields: List[str] = []
+    location: Optional[Dict[str, Any]] = None
 
 
 class ForgotPasswordPayload(BaseModel):
@@ -193,10 +239,10 @@ class CreateBookingPayload(BaseModel):
     service_id: str
     scheduled_date: str
     scheduled_time: str
-    address_line1: str = Field(..., min_length=10)
+    address_line1: Optional[str] = None
     landmark: Optional[str] = None
-    city: str = "Noida"
-    pincode: str = "201301"
+    city: Optional[str] = None
+    pincode: Optional[str] = None
     notes: Optional[str] = None
     addon_ids: List[str] = []
     payment_method: str = "COD"
@@ -229,13 +275,16 @@ class BookingDetail(BaseModel):
     city: str
     pincode: str
     total_price: float
-    payment_method: str
+    payment_method: str = "COD"
+    payment_status: str = "Pending"
     cancellation_reason: Optional[str] = None
     notes: Optional[str] = None
     provider_id: Optional[str] = None
     provider_name: Optional[str] = None
     provider: Optional[Dict[str, Any]] = None
     otp_code: Optional[str] = None
+    start_otp: Optional[str] = None
+    completion_otp: Optional[str] = None
     emergency_flag: Optional[str] = None
     timeline: Optional[List[Dict[str, Any]]] = None
     created_at: datetime

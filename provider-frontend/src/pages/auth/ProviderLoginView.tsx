@@ -8,8 +8,8 @@ export const ProviderLoginView: React.FC = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
 
-  const [email, setEmail] = useState('rajesh.sharma@smartserve.com');
-  const [password, setPassword] = useState('ProviderPassword123!');
+  const [email, setEmail] = useState('demo.provider@smartserve.com');
+  const [password, setPassword] = useState('DemoProvider123!');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -156,6 +156,44 @@ export const ProviderLoginView: React.FC = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {!is2FaRequired ? (
               <>
+                {/* Demo Credentials Helper Card */}
+                <div className="p-3 bg-amber-50/90 border border-amber-200/90 rounded-xl text-xs flex items-center justify-between gap-3 shadow-xs">
+                  <div className="min-w-0">
+                    <div className="font-bold flex items-center gap-1.5 text-amber-900">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <span>Demo Partner</span>
+                    </div>
+                    <div className="text-[11px] text-amber-800/90 font-mono truncate mt-0.5">
+                      demo.provider@smartserve.com
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEmail('demo.provider@smartserve.com');
+                        setPassword('DemoProvider123!');
+                        setError(null);
+                      }}
+                      className="px-2.5 py-1.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-semibold rounded-lg text-xs transition-colors shadow-xs cursor-pointer"
+                    >
+                      Prefill Demo
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEmail('rajesh.sharma@smartserve.com');
+                        setPassword('ProviderPassword123!');
+                        setError(null);
+                      }}
+                      className="px-2 py-1.5 bg-white border border-[#E5DEC9] hover:bg-neutral-50 text-[#1F2A1E] font-medium rounded-lg text-xs transition-colors shadow-xs cursor-pointer"
+                      title="Prefill Rajesh Sharma"
+                    >
+                      Rajesh
+                    </button>
+                  </div>
+                </div>
+
                 {/* Email Address */}
                 <div>
                   <label className="block text-[11px] font-bold text-[#1F2A1E]/70 uppercase tracking-wider mb-1.5">

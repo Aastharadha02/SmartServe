@@ -46,7 +46,9 @@ apiClient.interceptors.response.use(
     if (error.response && error.response.status === 401) {
       localStorage.removeItem('smartserve_customer_token');
       localStorage.removeItem('smartserve_customer_user');
-      if (window.location.pathname !== '/login' && window.location.pathname !== '/register' && window.location.pathname !== '/') {
+      // Only forcibly redirect to login if the user is attempting to access a strictly protected route
+      const isProtectedRoute = ['/bookings', '/profile'].some((p) => window.location.pathname.startsWith(p));
+      if (isProtectedRoute) {
         window.location.assign('/login');
       }
     }

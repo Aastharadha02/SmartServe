@@ -2,6 +2,13 @@ import os
 from pydantic_settings import BaseSettings
 from pydantic import field_validator
 from typing import List, Union, Any
+from dotenv import load_dotenv
+
+_backend_env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), ".env")
+if os.path.exists(_backend_env_path):
+    load_dotenv(_backend_env_path)
+else:
+    load_dotenv()
 
 
 class Settings(BaseSettings):
@@ -95,6 +102,33 @@ class Settings(BaseSettings):
     GITHUB_CLIENT_ID: str = os.getenv("GITHUB_CLIENT_ID", "")
     GITHUB_CLIENT_SECRET: str = os.getenv("GITHUB_CLIENT_SECRET", "")
     GITHUB_REDIRECT_URI: str = os.getenv("GITHUB_REDIRECT_URI", "http://localhost:5174/auth/callback/github")
+
+    # Email & SMTP Configuration
+    SMTP_HOST: str = os.getenv("SMTP_HOST", "")
+    SMTP_PORT: int = int(os.getenv("SMTP_PORT", "587"))
+    SMTP_USER: str = os.getenv("SMTP_USER", "")
+    SMTP_PASSWORD: str = os.getenv("SMTP_PASSWORD", "")
+    SMTP_USE_TLS: bool = os.getenv("SMTP_USE_TLS", "true").lower() in ("true", "1", "yes")
+    SMTP_USE_SSL: bool = os.getenv("SMTP_USE_SSL", "false").lower() in ("true", "1", "yes")
+    SMTP_FROM_EMAIL: str = os.getenv("SMTP_FROM_EMAIL", "noreply@smartserve.com")
+    SMTP_TIMEOUT_SECONDS: int = int(os.getenv("SMTP_TIMEOUT_SECONDS", "10"))
+    EMAIL_BACKEND: str = os.getenv("EMAIL_BACKEND", "memory")  # "smtp" or "memory" (test adapter)
+    FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:5174")
+
+    # WhatsApp Business API Configuration
+    WHATSAPP_BACKEND: str = os.getenv("WHATSAPP_BACKEND", "memory")  # "memory", "meta", "unconfigured"
+    WHATSAPP_PHONE_NUMBER_ID: str = os.getenv("WHATSAPP_PHONE_NUMBER_ID", "")
+    WHATSAPP_ACCESS_TOKEN: str = os.getenv("WHATSAPP_ACCESS_TOKEN", "")
+    WHATSAPP_BUSINESS_ACCOUNT_ID: str = os.getenv("WHATSAPP_BUSINESS_ACCOUNT_ID", "")
+    WHATSAPP_API_URL: str = os.getenv("WHATSAPP_API_URL", "https://graph.facebook.com/v18.0")
+    WHATSAPP_ENABLED: bool = os.getenv("WHATSAPP_ENABLED", "false").lower() in ("true", "1", "yes")
+
+    # Antivirus & Upload Malware Scanning (ClamAV)
+    CLAMAV_ENABLED: bool = os.getenv("CLAMAV_ENABLED", "false").lower() in ("true", "1", "yes")
+    CLAMAV_HOST: str = os.getenv("CLAMAV_HOST", "localhost")
+    CLAMAV_PORT: int = int(os.getenv("CLAMAV_PORT", "3310"))
+    CLAMAV_TIMEOUT_SECONDS: int = int(os.getenv("CLAMAV_TIMEOUT_SECONDS", "5"))
+    CLAMAV_OPTIONAL_IN_DEV: bool = os.getenv("CLAMAV_OPTIONAL_IN_DEV", "true").lower() in ("true", "1", "yes")
 
     class Config:
         case_sensitive = True

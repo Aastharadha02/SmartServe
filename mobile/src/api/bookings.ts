@@ -75,7 +75,10 @@ export interface BookingItem {
   pincode: string;
   notes?: string;
   payment_method?: string;
+  payment_status?: string;
   otp_code?: string;
+  start_otp?: string;
+  completion_otp?: string;
   cancellation_reason?: string;
   emergency_flag?: string;
   timeline?: BookingTimelineItem[];

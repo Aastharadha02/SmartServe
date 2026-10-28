@@ -23,6 +23,9 @@ export interface BookingDetail {
   category: string;
   status: string;
   payment_status?: string;
+  payment_method?: string;
+  start_otp?: string;
+  completion_otp?: string;
   scheduled_date: string;
   scheduled_time: string;
   address_line1?: string;
@@ -40,6 +43,25 @@ export interface BookingDetail {
   cancellation_reason?: string;
   created_at: string;
 }
+
+export interface BookingPaymentItem {
+  id: string;
+  booking_id: string;
+  payment_method: string;
+  agreed_amount: number;
+  reported_amount?: number | null;
+  status: string;
+  discrepancy_flag: boolean;
+  collected_at?: string | null;
+  reviewed_at?: string | null;
+  rejection_reason?: string | null;
+  created_at: string;
+}
+
+export const getBookingPayments = async (bookingId: string): Promise<BookingPaymentItem[]> => {
+  const res = await apiClient.get<BookingPaymentItem[]>(`/customer/bookings/${bookingId}/payments`);
+  return res.data;
+};
 
 export const createBooking = async (payload: CreateBookingPayload): Promise<BookingDetail> => {
   const res = await apiClient.post<BookingDetail>('/customer/bookings', payload);
@@ -118,4 +140,21 @@ export const getBookingLiveLocation = async (bookingId: string): Promise<Booking
   const res = await apiClient.get<BookingLocationResponse>(`/customer/bookings/${bookingId}/location`);
   return res.data;
 };
+
+export interface CustomerNotificationItem {
+  id: string;
+  booking_id: string;
+  booking_reference: string;
+  event_type: string;
+  channel: string;
+  delivery_status: string;
+  created_at: string;
+  last_attempt_at?: string | null;
+}
+
+export const getBookingNotifications = async (bookingId: string): Promise<CustomerNotificationItem[]> => {
+  const res = await apiClient.get<CustomerNotificationItem[]>(`/customer/bookings/${bookingId}/notifications`);
+  return res.data;
+};
+
 

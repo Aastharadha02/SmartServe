@@ -8,6 +8,8 @@ import CustomerSplashView from '../pages/CustomerSplashView';
 import CustomerLogin from '../pages/auth/CustomerLogin';
 import CustomerRegister from '../pages/auth/CustomerRegister';
 import OAuthCallback from '../pages/auth/OAuthCallback';
+import ResetPassword from '../pages/auth/ResetPassword';
+import CompleteProfile from '../pages/auth/CompleteProfile';
 import CustomerHome from '../pages/CustomerHome';
 import CustomerCatalog from '../pages/CustomerCatalog';
 import CustomerServiceDetail from '../pages/CustomerServiceDetail';
@@ -48,6 +50,9 @@ export const AppRoutes: React.FC = () => {
       {/* 2. Public Auth Routes */}
       <Route path="/login" element={<CustomerLogin />} />
       <Route path="/register" element={<CustomerRegister />} />
+      <Route path="/signup" element={<CustomerRegister />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/complete-profile" element={<CompleteProfile />} />
       <Route path="/auth/callback/:provider" element={<OAuthCallback />} />
 
       {/* 3. Customer Application Routes (Wrapped in CustomerLayout) */}

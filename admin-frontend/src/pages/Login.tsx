@@ -6,8 +6,8 @@ import { AdminLoginVideoCarousel } from '../components/auth/AdminLoginVideoCarou
 
 export const Login: React.FC = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('admin@smartserve.com');
-  const [password, setPassword] = useState('AdminPassword123!');
+  const [email, setEmail] = useState('demo.admin@smartserve.com');
+  const [password, setPassword] = useState('DemoAdmin123!');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [is2FaRequired, setIs2FaRequired] = useState(false);
@@ -180,6 +180,44 @@ export const Login: React.FC = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             {!is2FaRequired ? (
               <>
+                {/* Demo Credentials Helper Card */}
+                <div className="p-3 bg-amber-50/90 border border-amber-200/90 rounded-xl text-xs flex items-center justify-between gap-3 shadow-xs">
+                  <div className="min-w-0">
+                    <div className="font-bold flex items-center gap-1.5 text-amber-900">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <span>Demo SuperAdmin</span>
+                    </div>
+                    <div className="text-[11px] text-amber-800/90 font-mono truncate mt-0.5">
+                      demo.admin@smartserve.com
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEmail('demo.admin@smartserve.com');
+                        setPassword('DemoAdmin123!');
+                        setErrorMessage(null);
+                      }}
+                      className="px-2.5 py-1.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-semibold rounded-lg text-xs transition-colors shadow-xs cursor-pointer"
+                    >
+                      Prefill Demo
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEmail('admin@smartserve.com');
+                        setPassword('AdminPassword123!');
+                        setErrorMessage(null);
+                      }}
+                      className="px-2 py-1.5 bg-white border border-[#E5DEC9] hover:bg-neutral-50 text-[#1F2A1E] font-medium rounded-lg text-xs transition-colors shadow-xs cursor-pointer"
+                      title="Prefill SuperAdmin"
+                    >
+                      Admin
+                    </button>
+                  </div>
+                </div>
+
                 {/* Email Address */}
                 <div>
                   <label className="block text-[11px] font-bold text-[#1F2A1E]/70 uppercase tracking-wider mb-1.5">

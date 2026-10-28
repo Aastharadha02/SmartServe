@@ -173,5 +173,87 @@ def revoke_all_user_sessions(db: Session, user_id: uuid.UUID) -> int:
         .filter(ActiveSession.user_id == user_id, ActiveSession.is_revoked == False)
         .update({"is_revoked": True}, synchronize_session=False)
     )
+    try:
+        from app.models.user import UserSession
+        db.query(UserSession).filter(UserSession.user_id == user_id).delete(synchronize_session=False)
+    except Exception:
+        pass
     db.commit()
     return count
+def cleanup_expired_security_records(
+    db: Session,
+    max_records_per_table: int = 1000
+) -> Dict[str, int]:
+    """
+    Safely and boundedly purges expired records across security tables:
+    1. Revoked ActiveSessions whose expiration time has passed (expires_at < now).
+       NEVER touches active or non-expired sessions.
+    2. RateLimitEntry records older than 15 minutes.
+       NEVER touches active rate-limit windows (last 60 seconds).
+    3. PasswordResetTokens that are either expired (expires_at < now) or already used (is_used == True).
+    4. TwoFactorRecoveryCodes that have already been used (is_used == True).
+    """
+    from app.models.security import RateLimitEntry, PasswordResetToken, TwoFactorRecoveryCode
+
+    now = datetime.now(timezone.utc)
+    results = {}
+
+    # 1. Purge expired AND revoked sessions
+    expired_sess = (
+        db.query(ActiveSession.id)
+        .filter(ActiveSession.is_revoked == True, ActiveSession.expires_at < now)
+        .limit(max_records_per_table)
+        .all()
+    )
+    expired_sess_ids = [s[0] for s in expired_sess]
+    if expired_sess_ids:
+        del_sess = db.query(ActiveSession).filter(ActiveSession.id.in_(expired_sess_ids)).delete(synchronize_session=False)
+    else:
+        del_sess = 0
+    results["revoked_sessions_purged"] = del_sess
+
+    # 2. Purge stale rate limit entries older than 15 mins
+    rate_cutoff = now - timedelta(minutes=15)
+    stale_rl = (
+        db.query(RateLimitEntry.id)
+        .filter(RateLimitEntry.created_at < rate_cutoff)
+        .limit(max_records_per_table)
+        .all()
+    )
+    stale_rl_ids = [r[0] for r in stale_rl]
+    if stale_rl_ids:
+        del_rl = db.query(RateLimitEntry).filter(RateLimitEntry.id.in_(stale_rl_ids)).delete(synchronize_session=False)
+    else:
+        del_rl = 0
+    results["rate_limit_entries_purged"] = del_rl
+
+    # 3. Purge expired or used password reset tokens
+    stale_tokens = (
+        db.query(PasswordResetToken.id)
+        .filter((PasswordResetToken.expires_at < now) | (PasswordResetToken.is_used == True))
+        .limit(max_records_per_table)
+        .all()
+    )
+    stale_token_ids = [t[0] for t in stale_tokens]
+    if stale_token_ids:
+        del_tokens = db.query(PasswordResetToken).filter(PasswordResetToken.id.in_(stale_token_ids)).delete(synchronize_session=False)
+    else:
+        del_tokens = 0
+    results["password_reset_tokens_purged"] = del_tokens
+
+    # 4. Purge used 2FA recovery codes
+    stale_rc = (
+        db.query(TwoFactorRecoveryCode.id)
+        .filter(TwoFactorRecoveryCode.is_used == True)
+        .limit(max_records_per_table)
+        .all()
+    )
+    stale_rc_ids = [rc[0] for rc in stale_rc]
+    if stale_rc_ids:
+        del_rc = db.query(TwoFactorRecoveryCode).filter(TwoFactorRecoveryCode.id.in_(stale_rc_ids)).delete(synchronize_session=False)
+    else:
+        del_rc = 0
+    results["used_recovery_codes_purged"] = del_rc
+
+    db.commit()
+    return results

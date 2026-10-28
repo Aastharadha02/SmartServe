@@ -217,7 +217,7 @@ export const CustomerBookings: React.FC = () => {
                   </div>
 
                   <div className="min-w-0 space-y-1">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap">
                       <span className="font-mono text-xs font-bold text-slate-500">{b.booking_reference}</span>
                       <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
                         stLower === 'completed' || stLower === 'paid'
@@ -227,6 +227,17 @@ export const CustomerBookings: React.FC = () => {
                           : 'bg-blue-50 text-[#2563EB] border-blue-200'
                       }`}>
                         {b.status}
+                      </span>
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
+                        (b.payment_status || '').toLowerCase() === 'paid'
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : (b.payment_status || '').toLowerCase() === 'collection reported'
+                          ? 'bg-amber-50 text-amber-700 border-amber-200'
+                          : (b.payment_status || '').toLowerCase() === 'rejected'
+                          ? 'bg-rose-50 text-rose-700 border-rose-200'
+                          : 'bg-slate-100 text-slate-600 border-slate-200'
+                      }`}>
+                        COD: {b.payment_status || 'Pending'}
                       </span>
                     </div>
 
@@ -242,10 +253,17 @@ export const CustomerBookings: React.FC = () => {
                       <span>• Provider: <strong className="text-slate-700">{b.provider_name || 'Assigned Soon'}</strong></span>
                     </div>
 
-                    {b.otp_code && ['accepted', 'on the way', 'arrived'].includes(stLower) && (
-                      <div className="flex items-center gap-1.5 px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-200 rounded-lg text-xs font-bold w-fit mt-1">
+                    {(b.start_otp || b.otp_code) && ['requested', 'assigned', 'accepted', 'on the way', 'arrived'].includes(stLower) && (
+                      <div className="flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 text-amber-800 border border-amber-300 rounded-lg text-xs font-bold w-fit mt-1">
                         <KeyRound className="w-3.5 h-3.5" />
-                        <span>Start OTP: {b.otp_code}</span>
+                        <span>Start OTP: {b.start_otp || b.otp_code}</span>
+                      </div>
+                    )}
+
+                    {b.completion_otp && stLower === 'started' && (
+                      <div className="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-300 rounded-lg text-xs font-bold w-fit mt-1">
+                        <KeyRound className="w-3.5 h-3.5" />
+                        <span>Completion OTP: {b.completion_otp}</span>
                       </div>
                     )}
 

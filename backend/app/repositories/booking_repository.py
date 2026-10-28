@@ -16,7 +16,10 @@ def create_booking(
     provider_id: Optional[uuid.UUID] = None,
     emergency_flag: Optional[str] = None
 ) -> Booking:
-    otp_code = str(uuid.uuid4().int)[:4]
+    from app.services.booking.otp_service import generate_secure_otp
+    from app.models.payment import BookingPayment
+    from decimal import Decimal
+
     initial_event = {
         "event": "Booking Created",
         "status": BookingStatus.REQUESTED.value,
@@ -28,18 +31,38 @@ def create_booking(
         customer_id=customer_id,
         provider_id=provider_id,
         service_id=service_id,
-        status=BookingStatus.REQUESTED if not provider_id else BookingStatus.ASSIGNED,
-        payment_status=PaymentStatus.PENDING,
+        status=BookingStatus.REQUESTED.value if not provider_id else BookingStatus.ASSIGNED.value,
+        payment_method="COD",
+        payment_status="Pending",
         scheduled_time=scheduled_time,
         address=address,
-        total_price=total_price,
-        otp_code=otp_code,
+        total_price=Decimal(str(total_price)),
         timeline=[initial_event],
         emergency_flag=emergency_flag,
         created_at=datetime.now(timezone.utc),
         updated_at=datetime.now(timezone.utc)
     )
     db.add(booking)
+    db.commit()
+    db.refresh(booking)
+
+    # Generate secure START OTP
+    secure_otp = generate_secure_otp(booking.id, "START", db)
+    booking.otp_code = secure_otp.otp_code
+
+    # Create initial BookingPayment record
+    init_payment = BookingPayment(
+        id=uuid.uuid4(),
+        booking_id=booking.id,
+        customer_id=customer_id,
+        provider_id=provider_id,
+        payment_method="COD",
+        agreed_amount=Decimal(str(total_price)),
+        status="Pending",
+        created_at=datetime.now(timezone.utc),
+        updated_at=datetime.now(timezone.utc)
+    )
+    db.add(init_payment)
     db.commit()
     db.refresh(booking)
     return booking

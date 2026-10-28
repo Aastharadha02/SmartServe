@@ -36,6 +36,7 @@ class Booking(Base):
     provider_id = Column(GUID(), ForeignKey("providers.user_id", ondelete="CASCADE"), nullable=True)
     service_id = Column(GUID(), ForeignKey("services.id", ondelete="CASCADE"), nullable=False)
     status = Column(String(50), default="Requested", nullable=False)
+    payment_method = Column(String(50), default="COD", nullable=False)
     payment_status = Column(String(50), default="Pending", nullable=False)
     scheduled_time = Column(DateTime(timezone=True), nullable=False, default=datetime.utcnow)
     address = Column(String(500), nullable=False, default="Address on File")
@@ -51,6 +52,22 @@ class Booking(Base):
     service = relationship("Service", primaryjoin="Booking.service_id == Service.id", foreign_keys=[service_id])
     tickets = relationship("SupportTicket", back_populates="booking")
     feedback = relationship("BookingFeedback", back_populates="booking", uselist=False, cascade="all, delete-orphan")
+    payments = relationship("BookingPayment", back_populates="booking", cascade="all, delete-orphan", foreign_keys="[BookingPayment.booking_id]", order_by="BookingPayment.created_at.desc()")
+    otps = relationship("BookingOTP", back_populates="booking", cascade="all, delete-orphan", foreign_keys="[BookingOTP.booking_id]", order_by="BookingOTP.created_at.desc()")
+
+    @property
+    def start_otp(self) -> str:
+        for o in (self.otps or []):
+            if o.otp_type == "START" and not o.is_used:
+                return o.otp_code
+        return self.otp_code or ""
+
+    @property
+    def completion_otp(self) -> str:
+        for o in (self.otps or []):
+            if o.otp_type == "COMPLETE" and not o.is_used:
+                return o.otp_code
+        return ""
 
     @property
     def booking_reference(self) -> str:
@@ -116,15 +133,6 @@ class Booking(Base):
     @pincode.setter
     def pincode(self, value):
         pass
-
-    @property
-    def payment_method(self) -> str:
-        return self.payment_status or "COD"
-
-    @payment_method.setter
-    def payment_method(self, value):
-        if value:
-            self.payment_status = value
 
     @property
     def notes(self) -> str:

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { CustomerLoginPayload, CustomerSessionResponse, CustomerTokenResponse, loginCustomer, getCurrentCustomer, logoutCustomer } from '../api/auth';
+import { CustomerLoginPayload, CustomerSessionResponse, CustomerTokenResponse, CustomerLocationPayload, loginCustomer, getCurrentCustomer, logoutCustomer } from '../api/auth';
 
 interface AuthContextType {
   user: CustomerSessionResponse | null;
@@ -8,6 +8,7 @@ interface AuthContextType {
   loading: boolean;
   login: (credentials: CustomerLoginPayload) => Promise<void>;
   setSessionFromTokenResponse: (data: CustomerTokenResponse) => void;
+  setUserLocation: (loc: CustomerLocationPayload) => void;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
 }
@@ -15,14 +16,21 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<CustomerSessionResponse | null>(null);
+  const [user, setUser] = useState<CustomerSessionResponse | null>(() => {
+    try {
+      const saved = localStorage.getItem('smartserve_customer_user');
+      return saved ? JSON.parse(saved) : null;
+    } catch {
+      return null;
+    }
+  });
   const [token, setToken] = useState<string | null>(localStorage.getItem('smartserve_customer_token'));
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(!localStorage.getItem('smartserve_customer_user'));
 
   const fetchSession = async () => {
     const existingToken = localStorage.getItem('smartserve_customer_token');
     if (!existingToken) {
-      setUser(null);
+      // Keep cached user if guest or clean if expired
       setLoading(false);
       return;
     }
@@ -57,6 +65,9 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       full_name: data.full_name,
       phone: data.phone,
       is_active: true,
+      is_profile_complete: data.is_profile_complete !== false,
+      missing_profile_fields: data.missing_profile_fields || [],
+      location: data.location,
     };
     setUser(userObj);
     localStorage.setItem('smartserve_customer_user', JSON.stringify(userObj));
@@ -73,9 +84,21 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       full_name: data.full_name,
       phone: data.phone,
       is_active: true,
+      is_profile_complete: data.is_profile_complete !== false,
+      missing_profile_fields: data.missing_profile_fields || [],
+      location: data.location,
     };
     setUser(userObj);
     localStorage.setItem('smartserve_customer_user', JSON.stringify(userObj));
+  };
+
+  const setUserLocation = (loc: CustomerLocationPayload) => {
+    setUser((prev) => {
+      if (!prev) return null;
+      const updated = { ...prev, location: loc };
+      localStorage.setItem('smartserve_customer_user', JSON.stringify(updated));
+      return updated;
+    });
   };
 
   const logout = async () => {
@@ -91,7 +114,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, isAuthenticated: !!user, loading, login, setSessionFromTokenResponse, logout, refreshUser }}>
+    <AuthContext.Provider value={{ user, token, isAuthenticated: !!user, loading, login, setSessionFromTokenResponse, setUserLocation, logout, refreshUser }}>
       {children}
     </AuthContext.Provider>
   );

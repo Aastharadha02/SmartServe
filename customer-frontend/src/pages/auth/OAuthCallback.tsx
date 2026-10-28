@@ -50,10 +50,17 @@ export const OAuthCallback: React.FC = () => {
         const tokenResponse = await submitOAuthCallback(provider, code, state, redirectUri);
         setSessionFromTokenResponse(tokenResponse);
         setSuccess(true);
-        showToast(`Signed in successfully with ${provider.charAt(0).toUpperCase() + provider.slice(1)}!`, 'success');
-        setTimeout(() => {
-          navigate('/home', { replace: true });
-        }, 1000);
+        if (tokenResponse.requires_profile_completion) {
+          showToast('Welcome to SmartServe! Please complete your profile details.', 'info');
+          setTimeout(() => {
+            navigate('/complete-profile', { replace: true, state: { tokenResponse } });
+          }, 800);
+        } else {
+          showToast(`Signed in successfully with ${provider.charAt(0).toUpperCase() + provider.slice(1)}!`, 'success');
+          setTimeout(() => {
+            navigate('/home', { replace: true });
+          }, 1000);
+        }
       } catch (err: any) {
         const detail = err.response?.data?.detail || 'Authentication failed. Please verify your account and try again.';
         setErrorMessage(detail);

@@ -251,6 +251,7 @@ class ProviderBookingResponse(BaseModel):
     service_name: str
     category: str
     status: str
+    payment_method: str = "COD"
     payment_status: str
     scheduled_time: datetime
     scheduled_date: str
@@ -280,11 +281,31 @@ class BookingStartPayload(BaseModel):
 
 
 class BookingCompletePayload(BaseModel):
+    otp_code: Optional[str] = Field(None, description="Customer 4-digit completion OTP verification code")
     notes: Optional[str] = Field(None, description="Optional completion notes")
+
+
+class CashCollectionReportPayload(BaseModel):
+    reported_amount: Decimal = Field(..., description="Cash amount collected from customer", ge=Decimal("0.00"))
+    notes: Optional[str] = Field(None, description="Optional notes regarding the collection")
+
+
+class ProviderPaymentReportResponse(BaseModel):
+    payment_id: str
+    booking_id: str
+    booking_reference: str
+    agreed_amount: float
+    reported_amount: float
+    status: str
+    discrepancy_flag: bool
+    discrepancy_amount: float
+    collected_at: Optional[str] = None
+    message: str
 
 
 class BookingRejectPayload(BaseModel):
     reason: Optional[str] = Field(None, description="Reason for declining the booking request")
+
 
 
 from app.schemas.support import TicketMessageResponse

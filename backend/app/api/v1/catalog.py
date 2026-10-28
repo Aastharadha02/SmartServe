@@ -643,6 +643,10 @@ def _validate_excel_contents(contents: bytes, filename: str):
             detail="File content does not match genuine Excel (.xlsx / .xls) structure."
         )
 
+    # 3. Antivirus & Malware Scanning
+    from app.services.malware_scanner import validate_upload_safety
+    validate_upload_safety(contents, filename)
+
 @router.post("/preview-import-excel")
 async def preview_import_catalog_excel(
     file: UploadFile = File(...),

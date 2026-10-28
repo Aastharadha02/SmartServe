@@ -12,6 +12,8 @@ from app.models.customer import (
 from app.models.security import AuditLog, FailedLoginAttempt, AdminRole, PasswordResetToken, RateLimitEntry, TwoFactorRecoveryCode
 from app.models.email import EmailTemplate, EmailLog
 from app.models.oauth import OAuthAccount
+from app.models.payment import PaymentStatus, PaymentMethod, OTPType, BookingPayment, BookingOTP
+from app.models.notification import NotificationLog
 
 __all__ = [
     "Provider",
@@ -35,4 +37,10 @@ __all__ = [
     "EmailTemplate",
     "EmailLog",
     "OAuthAccount",
+    "PaymentStatus",
+    "PaymentMethod",
+    "OTPType",
+    "BookingPayment",
+    "BookingOTP",
+    "NotificationLog",
 ]

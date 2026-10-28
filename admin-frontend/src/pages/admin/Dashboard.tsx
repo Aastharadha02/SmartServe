@@ -19,12 +19,17 @@ import {
   Tag,
   CheckCircle2,
   MapPin,
-  Star
+  Star,
+  Banknote,
+  XCircle,
+  X,
+  ShieldAlert,
+  AlertCircle
 } from 'lucide-react';
 import { getDashboardOverview } from '../../api/dashboard';
 import type { OperationsDashboardData } from '../../api/dashboard';
-import { getBookingsList } from '../../api/bookings';
-import type { BookingItem } from '../../api/bookings';
+import { getBookingsList, getPaymentReviewList, verifyPaymentCollection, rejectPaymentCollection } from '../../api/bookings';
+import type { BookingItem, PaymentRecord } from '../../api/bookings';
 import { formatCurrencyINR } from '../../utils/formatters';
 import { CATEGORY_IMAGE_MAP, getServiceImage } from '../../utils/serviceImages';
 
@@ -32,19 +37,32 @@ export const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const [data, setData] = useState<OperationsDashboardData | null>(null);
   const [recentBookings, setRecentBookings] = useState<BookingItem[]>([]);
+  const [paymentReviews, setPaymentReviews] = useState<PaymentRecord[]>([]);
+  const [paymentFilter, setPaymentFilter] = useState<'all' | 'pending' | 'verified' | 'rejected'>('all');
+  const [reviewActionLoading, setReviewActionLoading] = useState<string | null>(null);
+  const [rejectModalPayment, setRejectModalPayment] = useState<PaymentRecord | null>(null);
+  const [rejectReason, setRejectReason] = useState<string>('');
+  const [reviewToast, setReviewToast] = useState<{ text: string; type: 'success' | 'error' } | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+
+  const showReviewToast = (text: string, type: 'success' | 'error' = 'success') => {
+    setReviewToast({ text, type });
+    setTimeout(() => setReviewToast(null), 4000);
+  };
 
   const fetchDashboardData = async () => {
     setLoading(true);
     setError(null);
     try {
-      const [overviewRes, bookingsRes] = await Promise.all([
+      const [overviewRes, bookingsRes, paymentsRes] = await Promise.all([
         getDashboardOverview(),
-        getBookingsList().catch(() => [])
+        getBookingsList().catch(() => []),
+        getPaymentReviewList().catch(() => [])
       ]);
       setData(overviewRes);
       setRecentBookings(bookingsRes.slice(0, 4));
+      setPaymentReviews(paymentsRes || []);
     } catch (err: any) {
       if (err.response) {
         setError(err.response.data?.detail || `API Error (${err.response.status}): Failed to load dashboard stats.`);
@@ -55,6 +73,38 @@ export const Dashboard: React.FC = () => {
       }
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleVerifyPayment = async (paymentId: string) => {
+    setReviewActionLoading(paymentId);
+    try {
+      await verifyPaymentCollection(paymentId);
+      showReviewToast('COD Cash payment collection successfully verified and marked as PAID.', 'success');
+      const updated = await getPaymentReviewList().catch(() => []);
+      setPaymentReviews(updated);
+    } catch (err: any) {
+      showReviewToast(err.response?.data?.detail || 'Failed to verify payment collection.', 'error');
+    } finally {
+      setReviewActionLoading(null);
+    }
+  };
+
+  const handleRejectPayment = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!rejectModalPayment || !rejectReason.trim()) return;
+    setReviewActionLoading(rejectModalPayment.id);
+    try {
+      await rejectPaymentCollection(rejectModalPayment.id, rejectReason.trim());
+      showReviewToast(`Payment report rejected. Follow-up reason recorded.`, 'success');
+      setRejectModalPayment(null);
+      setRejectReason('');
+      const updated = await getPaymentReviewList().catch(() => []);
+      setPaymentReviews(updated);
+    } catch (err: any) {
+      showReviewToast(err.response?.data?.detail || 'Failed to reject payment collection.', 'error');
+    } finally {
+      setReviewActionLoading(null);
     }
   };
 
@@ -153,6 +203,11 @@ export const Dashboard: React.FC = () => {
   const adminName = localStorage.getItem('smartserve_user') 
     ? JSON.parse(localStorage.getItem('smartserve_user')!).email.split('@')[0]
     : 'Admin';
+
+  const pendingCollectionCount = paymentReviews.filter(
+    (p) => (p.status || '').toLowerCase().replace(/_/g, ' ').trim() === 'collection reported'
+  ).length;
+  const discrepancyCount = paymentReviews.filter((p) => p.discrepancy_flag).length;
 
   return (
     <div className="space-y-8 max-w-7xl mx-auto font-sans">
@@ -263,6 +318,344 @@ export const Dashboard: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#1F2A1E] via-[#1F2A1E]/70 to-transparent"></div>
         </div>
       </div>
+
+      {/* Review Action Toast */}
+      {reviewToast && (
+        <div className={`fixed top-20 right-8 z-50 flex items-center gap-2.5 px-5 py-3.5 rounded-2xl shadow-xl text-xs font-bold border animate-in fade-in ${
+          reviewToast.type === 'success'
+            ? 'bg-emerald-900 text-emerald-100 border-emerald-700'
+            : 'bg-rose-900 text-rose-100 border-rose-700'
+        }`}>
+          {reviewToast.type === 'success' ? (
+            <CheckCircle2 className="w-4 h-4 text-emerald-300" />
+          ) : (
+            <AlertCircle className="w-4 h-4 text-rose-300" />
+          )}
+          <span>{reviewToast.text}</span>
+        </div>
+      )}
+
+      {/* ══════════════════════════════════════════════════
+          3.5. CASH ON DELIVERY (COD) PAYMENT REVIEW QUEUE
+          ════════════════════════════════════════════════*/}
+      <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E5DEC9] shadow-xs space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#E5DEC9]/60 pb-5">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-2xl bg-[#2F5233]/10 text-[#2F5233] flex items-center justify-center">
+                <Banknote className="w-5 h-5 text-[#2F5233]" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h2 className="text-xl sm:text-2xl font-serif text-[#1F2A1E] tracking-tight">
+                    COD Collections & Payment Review
+                  </h2>
+                  {pendingCollectionCount > 0 && (
+                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300 animate-pulse">
+                      {pendingCollectionCount} Awaiting Verification
+                    </span>
+                  )}
+                  {discrepancyCount > 0 && (
+                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-rose-100 text-rose-800 border border-rose-300 flex items-center gap-1">
+                      <AlertTriangle className="w-3 h-3 text-rose-600" />
+                      {discrepancyCount} Discrepancies Flagged
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-[#1F2A1E]/60 font-medium">
+                  Review and verify cash collections reported by service providers. Ensure physical or settled cash reconciles before marking as Paid.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Filter Pills */}
+          <div className="flex items-center gap-1.5 p-1 bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] self-start sm:self-auto flex-wrap">
+            <button
+              onClick={() => setPaymentFilter('all')}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                paymentFilter === 'all'
+                  ? 'bg-[#2F5233] text-white shadow-xs'
+                  : 'text-[#1F2A1E]/70 hover:text-[#1F2A1E]'
+              }`}
+            >
+              All Records ({paymentReviews.length})
+            </button>
+            <button
+              onClick={() => setPaymentFilter('pending')}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                paymentFilter === 'pending'
+                  ? 'bg-amber-600 text-white shadow-xs'
+                  : 'text-[#1F2A1E]/70 hover:text-[#1F2A1E]'
+              }`}
+            >
+              Awaiting Verification ({paymentReviews.filter((p) => (p.status || '').toLowerCase().replace(/_/g, ' ').trim() === 'collection reported').length})
+            </button>
+            <button
+              onClick={() => setPaymentFilter('verified')}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                paymentFilter === 'verified'
+                  ? 'bg-emerald-700 text-white shadow-xs'
+                  : 'text-[#1F2A1E]/70 hover:text-[#1F2A1E]'
+              }`}
+            >
+              Verified / Paid ({paymentReviews.filter((p) => (p.status || '').toLowerCase().replace(/_/g, ' ').trim() === 'paid').length})
+            </button>
+            <button
+              onClick={() => setPaymentFilter('rejected')}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                paymentFilter === 'rejected'
+                  ? 'bg-rose-700 text-white shadow-xs'
+                  : 'text-[#1F2A1E]/70 hover:text-[#1F2A1E]'
+              }`}
+            >
+              Rejected ({paymentReviews.filter((p) => (p.status || '').toLowerCase().replace(/_/g, ' ').trim() === 'rejected').length})
+            </button>
+          </div>
+        </div>
+
+        {/* Payments Table / List */}
+        {(() => {
+          const list = paymentReviews.filter((p) => {
+            if (paymentFilter === 'all') return true;
+            const st = (p.status || '').toLowerCase().replace(/_/g, ' ').trim();
+            if (paymentFilter === 'pending') return st === 'collection reported';
+            if (paymentFilter === 'verified') return st === 'paid';
+            if (paymentFilter === 'rejected') return st === 'rejected';
+            return true;
+          });
+
+          if (list.length === 0) {
+            return (
+              <div className="p-8 text-center bg-[#FAF7F0] rounded-2xl border border-[#E5DEC9] space-y-2">
+                <Banknote className="w-8 h-8 text-[#1F2A1E]/30 mx-auto" />
+                <p className="text-sm font-bold text-[#1F2A1E]">No payment collections found in this filter.</p>
+                <p className="text-xs text-[#1F2A1E]/50">
+                  When providers report cash collected on bookings, records will appear here for admin review.
+                </p>
+              </div>
+            );
+          }
+
+          return (
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="border-b border-[#E5DEC9] text-[#1F2A1E]/50 uppercase tracking-wider text-[10px] font-bold">
+                    <th className="py-3 px-3">Booking Ref</th>
+                    <th className="py-3 px-3">Customer / Provider</th>
+                    <th className="py-3 px-3">Agreed Amount</th>
+                    <th className="py-3 px-3">Reported Amount</th>
+                    <th className="py-3 px-3">Collection Time</th>
+                    <th className="py-3 px-3">Payment Status</th>
+                    <th className="py-3 px-3">Audit / Reviewer</th>
+                    <th className="py-3 px-3 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#E5DEC9]/60 font-medium">
+                  {list.map((item) => {
+                    const st = (item.status || '').toLowerCase().replace(/_/g, ' ').trim();
+                    const isAwaitingVerification = st === 'collection reported';
+                    const hasDiscrepancy = Boolean(item.discrepancy_flag);
+
+                    return (
+                      <tr key={item.id} className="hover:bg-[#FAF7F0]/60 transition-colors">
+                        <td className="py-3.5 px-3">
+                          <button
+                            onClick={() => navigate(`/admin/bookings/${item.booking_id}`)}
+                            className="font-mono font-bold text-[#2F5233] hover:underline"
+                          >
+                            {item.booking_reference || item.booking_id.substring(0, 8)}
+                          </button>
+                          <span className="block text-[11px] text-[#1F2A1E]/60 truncate max-w-[140px]">
+                            {item.service_name || 'Home Service'}
+                          </span>
+                        </td>
+                        <td className="py-3.5 px-3">
+                          <p className="font-semibold text-[#1F2A1E] truncate max-w-[150px]">
+                            {item.customer_name || 'Customer'}
+                          </p>
+                          <p className="text-[11px] text-[#1F2A1E]/60 truncate max-w-[150px]">
+                            Provider: <span className="font-medium text-[#1F2A1E]/80">{item.provider_name || 'Assigned'}</span>
+                          </p>
+                        </td>
+                        <td className="py-3.5 px-3 font-mono font-bold text-[#1F2A1E]">
+                          ₹{item.agreed_amount?.toLocaleString('en-IN') || 0}
+                        </td>
+                        <td className="py-3.5 px-3">
+                          {item.reported_amount !== null && item.reported_amount !== undefined ? (
+                            <div className="space-y-0.5">
+                              <span className="font-mono font-bold text-[#1F2A1E]">
+                                ₹{item.reported_amount?.toLocaleString('en-IN')}
+                              </span>
+                              {hasDiscrepancy && (
+                                <span className="flex items-center gap-1 text-[10px] font-bold text-rose-700 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200 w-fit">
+                                  <AlertTriangle className="w-2.5 h-2.5 text-rose-600" />
+                                  <span>Diff: ₹{item.discrepancy_amount || Math.abs(item.agreed_amount - (item.reported_amount || 0))}</span>
+                                </span>
+                              )}
+                            </div>
+                          ) : (
+                            <span className="text-slate-400 italic text-[11px]">Unreported</span>
+                          )}
+                        </td>
+                        <td className="py-3.5 px-3 text-[11px] text-[#1F2A1E]/70">
+                          {item.collected_at ? (
+                            <span>
+                              {new Date(item.collected_at).toLocaleString('en-IN', {
+                                day: '2-digit',
+                                month: 'short',
+                                hour: '2-digit',
+                                minute: '2-digit'
+                              })}
+                            </span>
+                          ) : (
+                            <span className="text-slate-400 italic">Pending</span>
+                          )}
+                        </td>
+                        <td className="py-3.5 px-3">
+                          <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase border ${
+                            st === 'paid'
+                              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                              : st === 'collection reported'
+                              ? 'bg-amber-50 text-amber-800 border-amber-300 font-extrabold'
+                              : st === 'rejected'
+                              ? 'bg-rose-50 text-rose-700 border-rose-200'
+                              : 'bg-slate-100 text-slate-600 border-slate-200'
+                          }`}>
+                            {item.status}
+                          </span>
+                        </td>
+                        <td className="py-3.5 px-3 text-[11px] text-[#1F2A1E]/70">
+                          {item.reviewed_by_name ? (
+                            <div className="space-y-0.5">
+                              <span className="font-semibold text-[#1F2A1E] block">By: {item.reviewed_by_name}</span>
+                              <span className="text-[10px] text-[#1F2A1E]/50 block">
+                                {item.reviewed_at ? new Date(item.reviewed_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' }) : ''}
+                              </span>
+                              {item.rejection_reason && (
+                                <span className="text-[10px] text-rose-700 font-semibold block truncate max-w-[150px]" title={item.rejection_reason}>
+                                  Reason: {item.rejection_reason}
+                                </span>
+                              )}
+                            </div>
+                          ) : (
+                            <span className="text-slate-400 italic text-[10px]">—</span>
+                          )}
+                        </td>
+                        <td className="py-3.5 px-3 text-right">
+                          {isAwaitingVerification ? (
+                            <div className="flex items-center justify-end gap-1.5 flex-wrap">
+                              <button
+                                onClick={() => handleVerifyPayment(item.id)}
+                                disabled={reviewActionLoading === item.id}
+                                className="px-3 py-1.5 bg-[#2F5233] hover:bg-[#3D6B42] text-white font-bold text-xs rounded-xl shadow-2xs transition-colors disabled:opacity-50 flex items-center gap-1"
+                              >
+                                <CheckCircle2 className="w-3.5 h-3.5" />
+                                <span>{reviewActionLoading === item.id ? 'Verifying...' : 'Verify'}</span>
+                              </button>
+                              <button
+                                onClick={() => {
+                                  setRejectModalPayment(item);
+                                  setRejectReason('');
+                                }}
+                                disabled={reviewActionLoading === item.id}
+                                className="px-2.5 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-bold text-xs rounded-xl transition-colors disabled:opacity-50"
+                              >
+                                Reject
+                              </button>
+                            </div>
+                          ) : st === 'paid' ? (
+                            <span className="text-[11px] font-bold text-emerald-700 flex items-center justify-end gap-1">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                              <span>Verified</span>
+                            </span>
+                          ) : st === 'rejected' ? (
+                            <span className="text-[11px] font-bold text-rose-700 flex items-center justify-end gap-1">
+                              <XCircle className="w-3.5 h-3.5 text-rose-600" />
+                              <span>Rejected</span>
+                            </span>
+                          ) : (
+                            <span className="text-[11px] text-slate-400 italic">Uncollected</span>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          );
+        })()}
+      </div>
+
+      {/* Rejection Reason Modal */}
+      {rejectModalPayment && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in">
+          <form onSubmit={handleRejectPayment} className="bg-white rounded-3xl max-w-md w-full p-6 space-y-4 shadow-2xl border border-[#E5DEC9]">
+            <div className="flex items-start justify-between border-b border-[#E5DEC9]/60 pb-3">
+              <div className="flex items-center gap-2">
+                <div className="w-9 h-9 rounded-xl bg-rose-50 border border-rose-200 flex items-center justify-center text-rose-600">
+                  <ShieldAlert className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold font-serif text-[#1F2A1E]">Reject Cash Collection Report</h3>
+                  <p className="text-[11px] font-mono text-[#1F2A1E]/60">
+                    {rejectModalPayment.booking_reference || rejectModalPayment.booking_id}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setRejectModalPayment(null)}
+                className="text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-black/5"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="p-3 bg-[#FAF7F0] rounded-xl border border-[#E5DEC9] text-xs space-y-1">
+              <p><strong className="text-[#1F2A1E]">Provider:</strong> {rejectModalPayment.provider_name || 'Assigned'}</p>
+              <p><strong className="text-[#1F2A1E]">Agreed:</strong> ₹{rejectModalPayment.agreed_amount} | <strong className="text-[#1F2A1E]">Reported:</strong> ₹{rejectModalPayment.reported_amount}</p>
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="block text-xs font-bold text-[#1F2A1E] uppercase tracking-wider">
+                Rejection Reason (Required for Audit Trail)
+              </label>
+              <textarea
+                required
+                rows={3}
+                value={rejectReason}
+                onChange={(e) => setRejectReason(e.target.value)}
+                placeholder="Explain why this reported collection is being rejected (e.g. customer disputes payment, provider reported incorrect amount)..."
+                className="w-full text-xs bg-[#FAF7F0] border border-[#E5DEC9] rounded-xl p-3 text-[#1F2A1E] focus:outline-none focus:ring-2 focus:ring-[#2F5233]"
+              />
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-2 border-t border-[#E5DEC9]">
+              <button
+                type="button"
+                onClick={() => setRejectModalPayment(null)}
+                className="px-4 py-2 bg-[#FAF7F0] hover:bg-[#F2EDE1] text-[#1F2A1E] font-bold text-xs rounded-xl transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={!rejectReason.trim() || reviewActionLoading === rejectModalPayment.id}
+                className="px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl shadow-xs transition-colors disabled:opacity-50 flex items-center gap-1.5"
+              >
+                {reviewActionLoading === rejectModalPayment.id ? (
+                  <span>Recording Rejection...</span>
+                ) : (
+                  <span>Confirm Rejection</span>
+                )}
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
 
       {/* ══════════════════════════════════════════════════
           4. UPCOMING BOOKINGS & RECENT ACTIVITY

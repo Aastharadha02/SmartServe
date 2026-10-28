@@ -55,9 +55,9 @@ def _is_authorized_for_channel(auth_payload: Optional[Dict[str, Any]], channel: 
     if clean_channel in admin_channels or clean_channel.startswith("admin_"):
         return role in ["admin", "super_admin"]
 
-    # 2. General Bookings list channel
+    # 2. General Bookings list channel (Admin / Super Admin only)
     if clean_channel == "bookings":
-        return role in ["admin", "super_admin"] or (auth_payload is not None)
+        return role in ["admin", "super_admin"]
 
     # 3. Customer-Specific Channels
     if clean_channel.startswith("customer_"):
@@ -80,14 +80,60 @@ def _is_authorized_for_channel(auth_payload: Optional[Dict[str, Any]], channel: 
             return True
         return target_id in [sub, cust_id]
 
-    # 6. Specific Booking or Ticket tracking channels
+    # 6. Specific Booking or Ticket tracking channels (Enforce tenant boundary)
     if clean_channel.startswith("booking_") or clean_channel.startswith("ticket_"):
         if role in ["admin", "super_admin"]:
             return True
-        # Authenticated users with valid session permitted
-        if auth_payload and role in ["customer", "provider"]:
-            return True
-        return False
+        if not auth_payload:
+            return False
+
+        target_uuid_str = clean_channel.split("_", 1)[1] if "_" in clean_channel else ""
+        if not target_uuid_str:
+            return False
+
+        try:
+            import uuid
+            t_uuid = uuid.UUID(target_uuid_str)
+            from app.core.database import SessionLocal
+            db = SessionLocal()
+            try:
+                if clean_channel.startswith("booking_"):
+                    from app.models.booking import Booking
+                    from app.models.customer import Customer
+                    b = db.query(Booking).filter(Booking.id == t_uuid).first()
+                    if not b:
+                        return False
+                    if role == "customer":
+                        # Match customer_id against auth token's customer_id or resolve from user_id
+                        if cust_id and str(b.customer_id).lower() == cust_id:
+                            return True
+                        cust_rec = db.query(Customer).filter(Customer.user_id == sub).first()
+                        if cust_rec and str(b.customer_id).lower() == str(cust_rec.id).lower():
+                            return True
+                        return False
+                    elif role == "provider":
+                        return str(b.provider_id).lower() == sub
+                    return False
+                else:  # ticket_
+                    from app.models.support import SupportTicket
+                    from app.models.customer import Customer
+                    t = db.query(SupportTicket).filter(SupportTicket.id == t_uuid).first()
+                    if not t:
+                        return False
+                    if role == "customer":
+                        if cust_id and str(t.customer_id).lower() == cust_id:
+                            return True
+                        cust_rec = db.query(Customer).filter(Customer.user_id == sub).first()
+                        if cust_rec and str(t.customer_id).lower() == str(cust_rec.id).lower():
+                            return True
+                        return False
+                    elif role == "provider":
+                        return str(t.provider_id).lower() == sub
+                    return False
+            finally:
+                db.close()
+        except Exception:
+            return False
 
     # Default fallback: strictly deny unauthenticated / unauthorized channel subscriptions
     return False
