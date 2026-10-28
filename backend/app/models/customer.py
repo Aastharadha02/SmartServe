@@ -35,6 +35,8 @@ class Booking(Base):
     customer_id = Column(GUID(), ForeignKey("customers.id", ondelete="CASCADE"), nullable=False)
     provider_id = Column(GUID(), ForeignKey("providers.user_id", ondelete="CASCADE"), nullable=True)
     service_id = Column(GUID(), ForeignKey("services.id", ondelete="CASCADE"), nullable=False)
+    service_name = Column(String(255), nullable=True)
+    category = Column(String(100), nullable=True)
     status = Column(String(50), default="Requested", nullable=False)
     payment_method = Column(String(50), default="COD", nullable=False)
     payment_status = Column(String(50), default="Pending", nullable=False)
@@ -81,21 +83,12 @@ class Booking(Base):
     def booking_reference(self, value):
         pass
 
-    @property
-    def service_name(self) -> str:
-        return self.service.name if self.service else "Home Service"
+    # Backwards-compatible getter fallbacks if DB column is empty
+    def get_service_name(self) -> str:
+        return self.service_name or (self.service.name if self.service else "Home Service")
 
-    @service_name.setter
-    def service_name(self, value):
-        pass
-
-    @property
-    def category(self) -> str:
-        return self.service.category if self.service else "General"
-
-    @category.setter
-    def category(self, value):
-        pass
+    def get_category(self) -> str:
+        return self.category or (self.service.category if self.service else "General")
 
     @property
     def scheduled_date(self) -> str:

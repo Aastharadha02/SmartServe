@@ -1688,31 +1688,36 @@ def get_booking_warranty(
     if booking.customer_id != current_customer.id:
         raise HTTPException(status_code=403, detail="Forbidden")
 
-    warranty = db.query(BookingWarranty).filter(BookingWarranty.booking_id == booking.id).first()
-    if not warranty:
-        if str(booking.status).lower() in ["completed", "paid"]:
-            from app.models.catalog import Service
-            service_obj = db.query(Service).filter(Service.id == booking.service_id).first()
-            s_name = service_obj.name if service_obj else "Completed Service"
-            base_time = booking.updated_at or datetime.utcnow()
-            warranty = BookingWarranty(
-                id=uuid.uuid4(),
-                booking_id=booking.id,
-                customer_id=booking.customer_id,
-                provider_id=booking.provider_id,
-                service_name=s_name,
-                issued_at=base_time,
-                expires_at=base_time + timedelta(days=7),
-                is_active=True,
-                claim_status="None",
-            )
-            db.add(warranty)
-            db.commit()
-            db.refresh(warranty)
-        else:
-            raise HTTPException(status_code=404, detail="No warranty card found for this booking")
+    from app.services.booking.warranty_service import get_warranty_policy, issue_booking_warranty
+    policy = get_warranty_policy(booking.category, booking.service_name)
 
-    days_rem = max(0, (warranty.expires_at.date() - datetime.utcnow().date()).days)
+    warranty = db.query(BookingWarranty).filter(BookingWarranty.booking_id == booking.id).first()
+    if not warranty and str(booking.status).lower() in ["completed", "paid"] and policy["is_eligible"]:
+        warranty = issue_booking_warranty(booking, db)
+
+    if not warranty:
+        if not policy["is_eligible"]:
+            now_dt = datetime.now(timezone.utc)
+            return WarrantyCardResponse(
+                id=str(uuid.uuid4()),
+                booking_id=str(booking.id),
+                customer_id=str(booking.customer_id),
+                service_name=booking.service_name or "Service",
+                issued_at=now_dt,
+                expires_at=now_dt,
+                is_active=False,
+                claim_status="None",
+                days_remaining=0,
+                duration_days=0,
+                nominal_fee=0.0,
+                terms=policy["terms"],
+                badge_label=policy["badge_label"],
+                is_eligible=False,
+            )
+        raise HTTPException(status_code=404, detail="No warranty card found for this booking")
+
+    exp_dt = warranty.expires_at.date() if hasattr(warranty.expires_at, "date") else datetime.utcnow().date()
+    days_rem = max(0, (exp_dt - datetime.utcnow().date()).days)
     return WarrantyCardResponse(
         id=str(warranty.id),
         booking_id=str(warranty.booking_id),
@@ -1728,6 +1733,11 @@ def get_booking_warranty(
         claim_resolved_at=warranty.claim_resolved_at,
         claim_notes=warranty.claim_notes,
         days_remaining=days_rem,
+        duration_days=policy["duration_days"],
+        nominal_fee=policy["nominal_fee"],
+        terms=policy["terms"],
+        badge_label=policy["badge_label"],
+        is_eligible=policy["is_eligible"],
     )
 
 
@@ -1749,37 +1759,14 @@ def raise_warranty_claim(
     if booking.customer_id != current_customer.id:
         raise HTTPException(status_code=403, detail="Forbidden")
 
+    from app.services.booking.warranty_service import get_warranty_policy, issue_booking_warranty, validate_warranty_claim
     warranty = db.query(BookingWarranty).filter(BookingWarranty.booking_id == booking.id).first()
-    if not warranty:
-        if str(booking.status).lower() in ["completed", "paid"]:
-            from app.models.catalog import Service
-            service_obj = db.query(Service).filter(Service.id == booking.service_id).first()
-            s_name = service_obj.name if service_obj else "Completed Service"
-            base_time = booking.updated_at or datetime.utcnow()
-            warranty = BookingWarranty(
-                id=uuid.uuid4(),
-                booking_id=booking.id,
-                customer_id=booking.customer_id,
-                provider_id=booking.provider_id,
-                service_name=s_name,
-                issued_at=base_time,
-                expires_at=base_time + timedelta(days=7),
-                is_active=True,
-                claim_status="None",
-            )
-            db.add(warranty)
-            db.commit()
-            db.refresh(warranty)
-        else:
-            raise HTTPException(status_code=404, detail="No warranty card found for this booking")
+    if not warranty and str(booking.status).lower() in ["completed", "paid"]:
+        warranty = issue_booking_warranty(booking, db)
 
-    if not warranty.is_active:
-        raise HTTPException(status_code=400, detail="This warranty card is inactive or has been revoked")
-
-    exp_at = warranty.expires_at
-    now_cmp = datetime.now(timezone.utc) if (exp_at and exp_at.tzinfo is not None) else datetime.utcnow()
-    if exp_at and now_cmp > exp_at:
-        raise HTTPException(status_code=400, detail="Warranty claim period has expired (7-day validity exceeded)")
+    is_valid, claim_msg, nominal_fee = validate_warranty_claim(warranty, booking.category, booking.service_name)
+    if not is_valid:
+        raise HTTPException(status_code=400, detail=claim_msg)
 
     if warranty.claim_status in ["Pending", "Resolved"]:
         return {
@@ -1789,7 +1776,7 @@ def raise_warranty_claim(
             "claim_submitted_at": warranty.claim_submitted_at.isoformat() if hasattr(warranty.claim_submitted_at, "isoformat") else str(warranty.claim_submitted_at),
         }
 
-    sub_time = datetime.now(timezone.utc) if (exp_at and exp_at.tzinfo is not None) else datetime.utcnow()
+    sub_time = datetime.now(timezone.utc)
     warranty.claim_status = "Pending"
     warranty.claim_description = payload.description.strip()
     warranty.claim_submitted_at = sub_time
@@ -1798,6 +1785,7 @@ def raise_warranty_claim(
     cur_tl.append({
         "event": "Warranty Claim Raised",
         "claim_description": warranty.claim_description,
+        "nominal_fee": nominal_fee,
         "timestamp": sub_time.isoformat(),
         "actor": current_customer.full_name,
         "role": "customer",
@@ -1811,8 +1799,9 @@ def raise_warranty_claim(
 
     return {
         "success": True,
-        "message": "Warranty claim raised successfully. Our support team will inspect and resolve within 24 hours.",
+        "message": f"Warranty claim raised successfully. A minimal platform fee of ₹{nominal_fee:.0f} applies for processing and re-dispatch, with 100% free rework labor.",
         "claim_status": warranty.claim_status,
+        "nominal_fee": nominal_fee,
         "claim_submitted_at": warranty.claim_submitted_at.isoformat() if hasattr(warranty.claim_submitted_at, "isoformat") else str(warranty.claim_submitted_at),
     }
 

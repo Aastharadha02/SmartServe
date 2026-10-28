@@ -235,25 +235,10 @@ def transition_booking_status(
             cur_tl.append(tl_otp)
             booking.timeline = cur_tl
 
-        # Stop active location tracking in PostgreSQL
+        # Issue Category-Specific Warranty (10-15 days for eligible home maintenance, excluding beauty)
         try:
-            from app.models.customer import BookingWarranty
-            from datetime import timedelta
-            existing_w = db.query(BookingWarranty).filter(BookingWarranty.booking_id == booking.id).first()
-            if not existing_w:
-                now_utc = datetime.now(timezone.utc)
-                new_w = BookingWarranty(
-                    id=uuid.uuid4(),
-                    booking_id=booking.id,
-                    customer_id=booking.customer_id,
-                    provider_id=booking.provider_id,
-                    service_name=booking.service_name or "Home Service",
-                    issued_at=now_utc,
-                    expires_at=now_utc + timedelta(days=7),
-                    is_active=True,
-                    claim_status="None",
-                )
-                db.add(new_w)
+            from app.services.booking.warranty_service import issue_booking_warranty
+            issue_booking_warranty(booking, db)
         except Exception as e:
             pass
         try:

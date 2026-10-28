@@ -18,6 +18,11 @@ export interface WarrantyData {
   claim_resolved_at?: string;
   claim_notes?: string;
   days_remaining?: number;
+  duration_days?: number;
+  nominal_fee?: number;
+  terms?: string;
+  badge_label?: string;
+  is_eligible?: boolean;
 }
 
 interface WarrantyCardProps {
@@ -99,7 +104,7 @@ export const WarrantyCard: React.FC<WarrantyCardProps> = ({
           <div>
             <div className="flex items-center gap-2 flex-wrap">
               <h3 className="text-sm font-bold text-[#1F2A1E]">
-                {t('warranty.title', { defaultValue: 'SmartServe 7-Day Digital Warranty' })}
+                {warranty?.badge_label || (warranty?.duration_days ? `${warranty.duration_days}-Day Digital Warranty` : t('warranty.title', { defaultValue: 'SmartServe Quality Guarantee' }))}
               </h3>
               <span className={`px-2 py-0.5 text-[11px] font-extrabold rounded-full ${
                 localClaimStatus === 'Pending'
@@ -124,9 +129,9 @@ export const WarrantyCard: React.FC<WarrantyCardProps> = ({
               </span>
             </div>
             <p className="text-xs text-[#1F2A1E]/70 mt-1 max-w-xl leading-relaxed">
-              {t('warranty.description', {
+              {warranty?.terms || t('warranty.description', {
                 defaultValue:
-                  'This service is covered by our 7-day guarantee. If you experience any recurring issue with this job, you can raise a free warranty rework claim.',
+                  'This service is covered by our home maintenance quality guarantee. If you experience any recurring issue with this job, you can raise a warranty rework claim.',
               })}
             </p>
 
@@ -243,12 +248,16 @@ export const WarrantyCard: React.FC<WarrantyCardProps> = ({
               </div>
             </div>
 
-            <p className="text-xs text-[#1F2A1E]/70 mb-4 leading-relaxed">
-              {t('warranty.claim_instructions', {
-                defaultValue:
-                  'Please explain what recurring issue or fault you are experiencing. A certified technician will be assigned to inspect and fix it at no additional cost.',
-              })}
-            </p>
+            <div className="p-3 bg-amber-50 rounded-xl border border-amber-200 mb-4 text-xs space-y-1">
+              <p className="font-bold text-amber-900">
+                Minimal Inspection Fee: ₹{warranty?.nominal_fee || 49}
+              </p>
+              <p className="text-amber-800 leading-relaxed">
+                {t('warranty.claim_fee_note', {
+                  defaultValue: 'A nominal platform processing fee of ₹49 applies upon inspection dispatch. All rework labor and repairs are 100% free under warranty terms.',
+                })}
+              </p>
+            </div>
 
             <form onSubmit={handleClaimSubmit} className="space-y-4">
               <div>

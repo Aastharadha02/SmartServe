@@ -323,6 +323,11 @@ class WarrantyCardResponse(BaseModel):
     claim_resolved_at: Optional[datetime] = None
     claim_notes: Optional[str] = None
     days_remaining: int = 0
+    duration_days: Optional[int] = 10
+    nominal_fee: Optional[float] = 49.0
+    terms: Optional[str] = None
+    badge_label: Optional[str] = None
+    is_eligible: Optional[bool] = True
 
 
 # Combined Booking Schemas
