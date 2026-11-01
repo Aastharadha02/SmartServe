@@ -217,11 +217,14 @@ def notify_booking_event(
     customer_email = customer.email if customer and customer.email else None
     customer_phone = customer.phone if customer and customer.phone else None
 
-    # If customer profile phone is missing, try checking linked User record
-    if not customer_phone and customer and customer.user_id:
+    # If customer profile email or phone is missing, try checking linked User record
+    if customer and customer.user_id:
         linked_user = db.query(User).filter(User.id == customer.user_id).first()
-        if linked_user and getattr(linked_user, "phone", None):
-            customer_phone = getattr(linked_user, "phone")
+        if linked_user:
+            if not customer_email and getattr(linked_user, 'email', None):
+                customer_email = getattr(linked_user, 'email')
+            if not customer_phone and getattr(linked_user, 'phone', None):
+                customer_phone = getattr(linked_user, 'phone')
 
     booking_ref = getattr(booking, "booking_reference", str(booking.id)[:8])
     service_name = getattr(booking, "service_name", "Home Service")
