@@ -90,7 +90,8 @@ export const CustomerLogin: React.FC = () => {
     setErrorMessage(null);
     setSocialLoading(provider);
     try {
-      const res = await initiateOAuth(provider);
+      const redirectUri = `${window.location.origin}/auth/callback/${provider}`;
+      const res = await initiateOAuth(provider, redirectUri);
       if (res?.authorization_url) {
         window.location.href = res.authorization_url;
       } else {

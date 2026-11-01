@@ -77,6 +77,8 @@ def is_allowed_redirect_uri(redirect_uri: str) -> bool:
             return True
         if parsed.hostname in ("localhost", "127.0.0.1"):
             return True
+        if parsed.hostname and (parsed.hostname.endswith(".vercel.app") or parsed.hostname == "smartserve.app"):
+            return True
         return False
     except Exception:
         return False
