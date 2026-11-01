@@ -17,13 +17,16 @@ import {
   KeyRound, 
   User, 
   RefreshCw,
-  Plus
+  Plus,
+  ShieldCheck
 } from 'lucide-react-native';
 import { bookingsApi, BookingItem } from '../api/bookings';
-import { formatRupee, formatCategoryDisplayName } from '../utils/formatters';
+import { formatRupee } from '../utils/formatters';
 import { getServiceImage } from '../utils/serviceImages';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export const BookingsListScreen = ({ navigation }: any) => {
+  const { t } = useLanguage();
   const [bookings, setBookings] = useState<BookingItem[]>([]);
   const [filterTab, setFilterTab] = useState<'all' | 'active' | 'completed' | 'cancelled'>('all');
   const [isLoading, setIsLoading] = useState(true);
@@ -43,8 +46,8 @@ export const BookingsListScreen = ({ navigation }: any) => {
 
   useEffect(() => {
     loadBookings();
-    // Auto-sync polling every 5 seconds to keep live with Web and PostgreSQL
-    const interval = setInterval(loadBookings, 5000);
+    // Auto-sync polling every 6 seconds to keep synchronized with Web portals
+    const interval = setInterval(loadBookings, 6000);
     return () => clearInterval(interval);
   }, [loadBookings]);
 
@@ -56,7 +59,7 @@ export const BookingsListScreen = ({ navigation }: any) => {
   const filteredBookings = bookings.filter((b) => {
     const st = (b.status || '').toLowerCase().trim();
     if (filterTab === 'active') {
-      return ['requested', 'assigned', 'accepted', 'on the way', 'arrived', 'started'].includes(st);
+      return ['requested', 'assigned', 'accepted', 'on the way', 'arrived', 'started', 'in_progress'].includes(st);
     }
     if (filterTab === 'completed') {
       return ['completed', 'paid'].includes(st);
@@ -73,12 +76,14 @@ export const BookingsListScreen = ({ navigation }: any) => {
       case 'requested':
         return { bg: '#FEF3C7', text: '#B45309', border: '#FDE68A' };
       case 'accepted':
+      case 'assigned':
         return { bg: '#EFF6FF', text: '#1D4ED8', border: '#BFDBFE' };
       case 'on the way':
         return { bg: '#FFF7ED', text: '#C2410C', border: '#FED7AA' };
       case 'arrived':
         return { bg: '#FAF5FF', text: '#7E22CE', border: '#E9D5FF' };
       case 'started':
+      case 'in_progress':
         return { bg: '#EEF2FF', text: '#4338CA', border: '#C7D2FE' };
       case 'completed':
       case 'paid':
@@ -94,8 +99,8 @@ export const BookingsListScreen = ({ navigation }: any) => {
   if (isLoading) {
     return (
       <SafeAreaView style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#2563EB" />
-        <Text style={styles.loadingText}>Fetching bookings from backend...</Text>
+        <ActivityIndicator size="large" color="#1E40AF" />
+        <Text style={styles.loadingText}>Loading bookings...</Text>
       </SafeAreaView>
     );
   }
@@ -105,15 +110,15 @@ export const BookingsListScreen = ({ navigation }: any) => {
       {/* Header Bar */}
       <View style={styles.header}>
         <View>
-          <Text style={styles.title}>My Service Bookings</Text>
-          <Text style={styles.subtitle}>Track live technician dispatches and status updates</Text>
+          <Text style={styles.title}>{t('nav_bookings')}</Text>
+          <Text style={styles.subtitle}>Track technician dispatch, OTPs & service warranties</Text>
         </View>
         <TouchableOpacity style={styles.refreshIconBtn} onPress={onRefresh} activeOpacity={0.7}>
           <RefreshCw size={16} color="#475569" />
         </TouchableOpacity>
       </View>
 
-      {/* Filter Tabs matching Customer Web */}
+      {/* Filter Tabs */}
       <View style={styles.tabsRow}>
         {[
           { key: 'all', label: `All (${bookings.length})` },
@@ -159,73 +164,94 @@ export const BookingsListScreen = ({ navigation }: any) => {
           data={filteredBookings}
           keyExtractor={(item) => item.id}
           contentContainerStyle={styles.listContainer}
-          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={['#2563EB']} />}
+          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={['#1E40AF']} />}
           showsVerticalScrollIndicator={false}
           renderItem={({ item }) => {
             const badge = getStatusBadgeStyle(item.status);
             const stLower = (item.status || '').toLowerCase().trim();
+            const isCompleted = ['completed', 'paid'].includes(stLower);
             const isInTransit = ['on the way', 'arrived'].includes(stLower);
             const imgUrl = getServiceImage(item.category, item.subcategory, item.service_name);
 
             return (
-              <TouchableOpacity
-                style={styles.card}
-                activeOpacity={0.85}
-                onPress={() => navigation.navigate('LiveTracking', { bookingId: item.id })}
-              >
-                <View style={styles.cardTop}>
-                  <Image source={{ uri: imgUrl }} style={styles.serviceThumbnail} />
-                  <View style={{ flex: 1 }}>
-                    <View style={styles.refRow}>
-                      <Text style={styles.refCode}>{item.booking_reference}</Text>
-                      <View style={[styles.statusBadge, { backgroundColor: badge.bg, borderColor: badge.border }]}>
-                        <Text style={[styles.statusText, { color: badge.text }]}>
-                          {item.status.toUpperCase()}
-                        </Text>
+              <View style={styles.card}>
+                <TouchableOpacity
+                  activeOpacity={0.85}
+                  onPress={() => navigation.navigate('LiveTracking', { bookingId: item.id })}
+                >
+                  <View style={styles.cardTop}>
+                    <Image source={{ uri: imgUrl }} style={styles.serviceThumbnail} />
+                    <View style={{ flex: 1 }}>
+                      <View style={styles.refRow}>
+                        <Text style={styles.refCode}>{item.booking_reference}</Text>
+                        <View style={[styles.statusBadge, { backgroundColor: badge.bg, borderColor: badge.border }]}>
+                          <Text style={[styles.statusText, { color: badge.text }]}>
+                            {item.status.toUpperCase()}
+                          </Text>
+                        </View>
                       </View>
-                    </View>
 
-                    <Text style={styles.serviceName} numberOfLines={1}>{item.service_name}</Text>
+                      <Text style={styles.serviceName} numberOfLines={1}>{item.service_name}</Text>
 
-                    <View style={styles.metaRow}>
-                      <Clock size={12} color="#64748B" />
-                      <Text style={styles.metaText}>{item.scheduled_date} at {item.scheduled_time?.slice(0, 5)}</Text>
-                    </View>
-
-                    {item.provider_name ? (
                       <View style={styles.metaRow}>
-                        <User size={12} color="#64748B" />
-                        <Text style={styles.metaText}>
-                          Provider: <Text style={{ color: '#0F172A', fontWeight: '700' }}>{item.provider_name}</Text>
-                        </Text>
+                        <Clock size={12} color="#64748B" />
+                        <Text style={styles.metaText}>{item.scheduled_date} at {item.scheduled_time?.slice(0, 5)}</Text>
                       </View>
-                    ) : (
-                      <Text style={styles.awaitingProviderText}>Technician assignment in progress...</Text>
-                    )}
 
-                    {(item.start_otp || item.otp_code) && isInTransit && (
-                      <View style={styles.otpPill}>
-                        <KeyRound size={12} color="#7C3AED" />
-                        <Text style={styles.otpText}>Start OTP: <Text style={{ fontWeight: '800' }}>{item.start_otp || item.otp_code}</Text></Text>
-                      </View>
-                    )}
-                    {item.completion_otp && stLower === 'started' && (
-                      <View style={[styles.otpPill, { backgroundColor: '#ECFDF5', borderColor: '#A7F3D0' }]}>
-                        <KeyRound size={12} color="#059669" />
-                        <Text style={[styles.otpText, { color: '#065F46' }]}>Done OTP: <Text style={{ fontWeight: '800' }}>{item.completion_otp}</Text></Text>
-                      </View>
-                    )}
-                  </View>
-                </View>
+                      {item.provider_name ? (
+                        <View style={styles.metaRow}>
+                          <User size={12} color="#64748B" />
+                          <Text style={styles.metaText}>
+                            Provider: <Text style={{ color: '#0F172A', fontWeight: '700' }}>{item.provider_name}</Text>
+                          </Text>
+                        </View>
+                      ) : (
+                        <Text style={styles.awaitingProviderText}>Technician assignment in progress...</Text>
+                      )}
 
-                <View style={styles.cardBottom}>
-                  <Text style={styles.priceText}>{formatRupee(item.total_price || item.total_amount)}</Text>
-                  <View style={styles.viewDetailRow}>
-                    <Text style={styles.viewDetailText}>Live Dispatch & Details</Text>
-                    <ChevronRight size={14} color="#2563EB" />
+                      {/* Start OTP Display */}
+                      {(item.start_otp || item.otp_code) && (
+                        <View style={styles.otpPill}>
+                          <KeyRound size={12} color="#1E40AF" />
+                          <Text style={styles.otpText}>
+                            {t('otp_start_label')}: <Text style={{ fontWeight: '800' }}>{item.start_otp || item.otp_code}</Text>
+                          </Text>
+                        </View>
+                      )}
+                    </View>
                   </View>
-                </View>
-              </TouchableOpacity>
+
+                  <View style={styles.cardBottom}>
+                    <Text style={styles.priceText}>{formatRupee(item.total_price || item.total_amount)}</Text>
+                    <View style={styles.viewDetailRow}>
+                      <Text style={styles.viewDetailText}>Live Dispatch & Tracking</Text>
+                      <ChevronRight size={14} color="#1E40AF" />
+                    </View>
+                  </View>
+                </TouchableOpacity>
+
+                {/* Standardized 7-Day Warranty Action for Completed Services */}
+                {isCompleted && (
+                  <View style={styles.warrantyBar}>
+                    <View style={styles.warrantyBarLeft}>
+                      <ShieldCheck size={16} color="#059669" />
+                      <Text style={styles.warrantyBarText}>{t('warranty_badge')} (₹0 Rework)</Text>
+                    </View>
+                    <TouchableOpacity
+                      style={styles.claimBtn}
+                      onPress={() =>
+                        navigation.navigate('WarrantyClaim', {
+                          bookingId: item.id,
+                          bookingReference: item.booking_reference,
+                          serviceName: item.service_name,
+                        })
+                      }
+                    >
+                      <Text style={styles.claimBtnText}>{t('warranty_claim_btn')}</Text>
+                    </TouchableOpacity>
+                  </View>
+                )}
+              </View>
             );
           }}
         />
@@ -261,82 +287,103 @@ const styles = StyleSheet.create({
   tabsRow: {
     flexDirection: 'row',
     paddingHorizontal: 20,
+    paddingBottom: 12,
     gap: 8,
-    marginBottom: 12,
   },
   tabButton: {
+    paddingVertical: 6,
     paddingHorizontal: 12,
-    paddingVertical: 7,
-    borderRadius: 10,
+    borderRadius: 20,
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: '#CBD5E1',
   },
   tabButtonActive: {
-    backgroundColor: '#EFF6FF',
-    borderColor: '#2563EB',
+    backgroundColor: '#1E40AF',
+    borderColor: '#1E40AF',
   },
   tabButtonText: { fontSize: 12, fontWeight: '600', color: '#64748B' },
-  tabButtonTextActive: { color: '#2563EB', fontWeight: '800' },
-  listContainer: { paddingHorizontal: 20, paddingBottom: 40 },
+  tabButtonTextActive: { color: '#FFFFFF' },
+  listContainer: { padding: 16, paddingBottom: 40 },
   card: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 16,
+    borderRadius: 14,
     borderWidth: 1,
     borderColor: '#E2E8F0',
-    padding: 14,
-    marginBottom: 12,
+    marginBottom: 14,
+    overflow: 'hidden',
     shadowColor: '#0F172A',
-    shadowOpacity: 0.03,
-    shadowRadius: 6,
-    elevation: 1,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 2,
   },
-  cardTop: { flexDirection: 'row', gap: 12 },
-  serviceThumbnail: { width: 68, height: 68, borderRadius: 12, backgroundColor: '#F1F5F9' },
+  cardTop: { flexDirection: 'row', padding: 14, gap: 12 },
+  serviceThumbnail: { width: 64, height: 64, borderRadius: 10, backgroundColor: '#F1F5F9' },
   refRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 },
-  refCode: { fontSize: 11, fontWeight: '800', color: '#64748B', fontFamily: 'monospace' },
-  statusBadge: { paddingHorizontal: 8, paddingVertical: 2, borderRadius: 6, borderWidth: 1 },
-  statusText: { fontSize: 9, fontWeight: '800', letterSpacing: 0.3 },
+  refCode: { fontSize: 11, fontWeight: '700', color: '#94A3B8', letterSpacing: 0.5 },
+  statusBadge: { paddingHorizontal: 6, paddingVertical: 2, borderRadius: 6, borderWidth: 1 },
+  statusText: { fontSize: 9, fontWeight: '800' },
   serviceName: { fontSize: 15, fontWeight: '800', color: '#0F172A', marginBottom: 4 },
-  metaRow: { flexDirection: 'row', alignItems: 'center', gap: 5, marginBottom: 3 },
+  metaRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 2 },
   metaText: { fontSize: 11, color: '#64748B' },
-  awaitingProviderText: { fontSize: 11, color: '#D97706', fontStyle: 'italic', marginBottom: 3 },
+  awaitingProviderText: { fontSize: 11, color: '#D97706', fontStyle: 'italic', marginTop: 4 },
   otpPill: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
-    backgroundColor: '#F5F3FF',
+    backgroundColor: '#EFF6FF',
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
     paddingHorizontal: 8,
     paddingVertical: 3,
     borderRadius: 6,
-    borderWidth: 1,
-    borderColor: '#DDD6FE',
     alignSelf: 'flex-start',
-    marginTop: 4,
+    marginTop: 6,
   },
-  otpText: { fontSize: 11, fontWeight: '700', color: '#7C3AED' },
+  otpText: { fontSize: 11, color: '#1E40AF', fontWeight: '600' },
   cardBottom: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 12,
-    paddingTop: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    backgroundColor: '#F8FAFC',
     borderTopWidth: 1,
     borderTopColor: '#F1F5F9',
   },
-  priceText: { fontSize: 16, fontWeight: '800', color: '#0F172A' },
+  priceText: { fontSize: 14, fontWeight: '800', color: '#0F172A' },
   viewDetailRow: { flexDirection: 'row', alignItems: 'center', gap: 4 },
-  viewDetailText: { fontSize: 12, fontWeight: '700', color: '#2563EB' },
-  emptyContainer: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32, marginTop: 40 },
-  emptyTitle: { fontSize: 18, fontWeight: '800', color: '#0F172A', marginBottom: 4 },
-  emptySubtitle: { fontSize: 13, color: '#64748B', textAlign: 'center', marginBottom: 20 },
-  bookFirstBtn: {
-    backgroundColor: '#2563EB',
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 12,
+  viewDetailText: { fontSize: 11, fontWeight: '700', color: '#1E40AF' },
+  warrantyBar: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#ECFDF5',
+    borderTopWidth: 1,
+    borderTopColor: '#A7F3D0',
+    paddingHorizontal: 14,
+    paddingVertical: 8,
   },
-  bookFirstText: { color: '#FFFFFF', fontSize: 14, fontWeight: '700' },
+  warrantyBarLeft: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  warrantyBarText: { fontSize: 12, fontWeight: '700', color: '#065F46' },
+  claimBtn: {
+    backgroundColor: '#059669',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  claimBtnText: { color: '#FFFFFF', fontSize: 11, fontWeight: '700' },
+  emptyContainer: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 40 },
+  emptyTitle: { fontSize: 18, fontWeight: '700', color: '#0F172A', marginBottom: 6 },
+  emptySubtitle: { fontSize: 13, color: '#64748B', textAlign: 'center', lineHeight: 18, marginBottom: 20 },
+  bookFirstBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#1E40AF',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+  },
+  bookFirstText: { color: '#FFFFFF', fontSize: 13, fontWeight: '700' },
 });

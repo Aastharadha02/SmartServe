@@ -141,8 +141,8 @@ class ProviderServiceCatalogResponse(BaseModel):
     price: Decimal
     duration_minutes: int
     active: bool
-    service_name: str
-    category: str
+    service_name: Optional[str] = "Home Service"
+    category: Optional[str] = "General"
     subcategory: str
     base_price: Decimal
     is_emergency_eligible: bool
@@ -248,8 +248,8 @@ class ProviderBookingResponse(BaseModel):
     customer_name: str
     customer_phone: Optional[str] = None
     service_id: uuid.UUID
-    service_name: str
-    category: str
+    service_name: Optional[str] = "Home Service"
+    category: Optional[str] = "General"
     status: str
     payment_method: str = "COD"
     payment_status: str

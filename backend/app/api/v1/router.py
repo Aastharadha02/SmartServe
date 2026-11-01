@@ -19,6 +19,7 @@ from app.api.v1.ai_support import router as ai_support_router
 from app.api.v1.combined_bookings import router as combined_bookings_router
 from app.api.v1.oauth import router as oauth_router
 from app.api.v1.admin_notifications import router as admin_notifications_router
+from app.api.v1.coupons import router as coupons_router, admin_coupons_router
 
 
 api_v1_router = APIRouter(prefix="/api/v1")
@@ -45,5 +46,7 @@ for r in [
     combined_bookings_router,
     oauth_router,
     admin_notifications_router,
+    coupons_router,
+    admin_coupons_router,
 ]:
     api_v1_router.include_router(r)

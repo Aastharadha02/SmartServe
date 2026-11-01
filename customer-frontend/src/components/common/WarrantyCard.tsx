@@ -248,13 +248,14 @@ export const WarrantyCard: React.FC<WarrantyCardProps> = ({
               </div>
             </div>
 
-            <div className="p-3 bg-amber-50 rounded-xl border border-amber-200 mb-4 text-xs space-y-1">
-              <p className="font-bold text-amber-900">
-                Minimal Inspection Fee: ₹{warranty?.nominal_fee || 49}
+            <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-200 mb-4 text-xs space-y-1">
+              <p className="font-bold text-emerald-900 flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                {t('warranty.free_guarantee_title', { defaultValue: '100% Free Rework Guarantee' })}
               </p>
-              <p className="text-amber-800 leading-relaxed">
-                {t('warranty.claim_fee_note', {
-                  defaultValue: 'A nominal platform processing fee of ₹49 applies upon inspection dispatch. All rework labor and repairs are 100% free under warranty terms.',
+              <p className="text-emerald-800 leading-relaxed">
+                {t('warranty.claim_free_note', {
+                  defaultValue: 'Under your 7-day SmartServe warranty, all follow-up inspection and rework labor is completely free with zero additional charges.',
                 })}
               </p>
             </div>

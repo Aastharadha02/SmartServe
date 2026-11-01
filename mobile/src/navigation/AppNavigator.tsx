@@ -3,14 +3,16 @@ import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Home, LayoutGrid, CalendarDays, Tag, User } from 'lucide-react-native';
 
 import { useAuth } from '../context/AuthContext';
+import { useLanguage } from '../i18n/LanguageContext';
 
 // Auth screens
 import { LoginScreen } from '../screens/LoginScreen';
 import { SignupScreen } from '../screens/SignupScreen';
 
-// Main app screens
+// Customer screens
 import { HomeScreen } from '../screens/HomeScreen';
 import { CatalogScreen } from '../screens/CatalogScreen';
 import { SubcategoryListScreen } from '../screens/SubcategoryListScreen';
@@ -19,14 +21,19 @@ import { ServiceDetailScreen } from '../screens/ServiceDetailScreen';
 import { BookingModalScreen } from '../screens/BookingModalScreen';
 import { BookingsListScreen } from '../screens/BookingsListScreen';
 import { LiveTrackingScreen } from '../screens/LiveTrackingScreen';
+import { OffersScreen } from '../screens/OffersScreen';
 import { SupportScreen } from '../screens/SupportScreen';
 import { SupportDetailScreen } from '../screens/SupportDetailScreen';
 import { ProfileScreen } from '../screens/ProfileScreen';
+import { WarrantyClaimModalScreen } from '../screens/WarrantyClaimModalScreen';
+
+// Provider stack
+import { ProviderNavigator } from './ProviderNavigator';
 
 const RootStack = createNativeStackNavigator();
 const AuthStack = createNativeStackNavigator();
 const CatalogStack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
+const CustomerTab = createBottomTabNavigator();
 
 const AuthNavigator = () => (
   <AuthStack.Navigator screenOptions={{ headerShown: false }}>
@@ -43,63 +50,65 @@ const CatalogNavigator = () => (
   </CatalogStack.Navigator>
 );
 
-import { Home, LayoutGrid, CalendarDays, Headphones, User } from 'lucide-react-native';
+const CustomerTabNavigator = () => {
+  const { t } = useLanguage();
 
-const MainTabNavigator = () => (
-  <Tab.Navigator
-    screenOptions={{
-      headerShown: false,
-      tabBarStyle: styles.tabBar,
-      tabBarActiveTintColor: '#1E40AF',
-      tabBarInactiveTintColor: '#94A3B8',
-      tabBarLabelStyle: styles.tabBarLabel,
-    }}
-  >
-    <Tab.Screen
-      name="HomeTab"
-      component={HomeScreen}
-      options={{
-        tabBarLabel: 'Home',
-        tabBarIcon: ({ color, size }) => <Home size={22} color={color} />,
+  return (
+    <CustomerTab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: styles.tabBar,
+        tabBarActiveTintColor: '#1E40AF',
+        tabBarInactiveTintColor: '#94A3B8',
+        tabBarLabelStyle: styles.tabBarLabel,
       }}
-    />
-    <Tab.Screen
-      name="CatalogTab"
-      component={CatalogNavigator}
-      options={{
-        tabBarLabel: 'Services',
-        tabBarIcon: ({ color, size }) => <LayoutGrid size={22} color={color} />,
-      }}
-    />
-    <Tab.Screen
-      name="BookingsTab"
-      component={BookingsListScreen}
-      options={{
-        tabBarLabel: 'Bookings',
-        tabBarIcon: ({ color, size }) => <CalendarDays size={22} color={color} />,
-      }}
-    />
-    <Tab.Screen
-      name="SupportTab"
-      component={SupportScreen}
-      options={{
-        tabBarLabel: 'Support',
-        tabBarIcon: ({ color, size }) => <Headphones size={22} color={color} />,
-      }}
-    />
-    <Tab.Screen
-      name="ProfileTab"
-      component={ProfileScreen}
-      options={{
-        tabBarLabel: 'Profile',
-        tabBarIcon: ({ color, size }) => <User size={22} color={color} />,
-      }}
-    />
-  </Tab.Navigator>
-);
+    >
+      <CustomerTab.Screen
+        name="HomeTab"
+        component={HomeScreen}
+        options={{
+          tabBarLabel: t('nav_home'),
+          tabBarIcon: ({ color, size }) => <Home size={22} color={color} />,
+        }}
+      />
+      <CustomerTab.Screen
+        name="CatalogTab"
+        component={CatalogNavigator}
+        options={{
+          tabBarLabel: t('nav_services'),
+          tabBarIcon: ({ color, size }) => <LayoutGrid size={22} color={color} />,
+        }}
+      />
+      <CustomerTab.Screen
+        name="BookingsTab"
+        component={BookingsListScreen}
+        options={{
+          tabBarLabel: t('nav_bookings'),
+          tabBarIcon: ({ color, size }) => <CalendarDays size={22} color={color} />,
+        }}
+      />
+      <CustomerTab.Screen
+        name="OffersTab"
+        component={OffersScreen}
+        options={{
+          tabBarLabel: t('nav_offers'),
+          tabBarIcon: ({ color, size }) => <Tag size={22} color={color} />,
+        }}
+      />
+      <CustomerTab.Screen
+        name="ProfileTab"
+        component={ProfileScreen}
+        options={{
+          tabBarLabel: t('nav_profile'),
+          tabBarIcon: ({ color, size }) => <User size={22} color={color} />,
+        }}
+      />
+    </CustomerTab.Navigator>
+  );
+};
 
 export const AppNavigator = () => {
-  const { user, isLoading } = useAuth();
+  const { user, activeRole, isLoading } = useAuth();
 
   if (isLoading) {
     return (
@@ -118,9 +127,11 @@ export const AppNavigator = () => {
       <RootStack.Navigator screenOptions={{ headerShown: false }}>
         {!user ? (
           <RootStack.Screen name="Auth" component={AuthNavigator} />
+        ) : activeRole === 'provider' ? (
+          <RootStack.Screen name="ProviderRoot" component={ProviderNavigator} />
         ) : (
           <>
-            <RootStack.Screen name="Main" component={MainTabNavigator} />
+            <RootStack.Screen name="Main" component={CustomerTabNavigator} />
             <RootStack.Screen
               name="ServiceDetail"
               component={ServiceDetailScreen}
@@ -135,6 +146,11 @@ export const AppNavigator = () => {
               name="LiveTracking"
               component={LiveTrackingScreen}
               options={{ animation: 'slide_from_right' }}
+            />
+            <RootStack.Screen
+              name="WarrantyClaim"
+              component={WarrantyClaimModalScreen}
+              options={{ presentation: 'modal', animation: 'slide_from_bottom' }}
             />
             <RootStack.Screen
               name="SupportDetail"

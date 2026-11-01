@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { LanguageSelector } from '../common/LanguageSelector';
 import { 
   LayoutDashboard, 
   FolderTree, 
@@ -31,6 +33,7 @@ interface AdminLayoutProps {
 export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useTranslation();
   const [adminSession, setAdminSession] = useState<SessionAdminInfo | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -78,17 +81,17 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   }, [navigate]);
 
   const navItems = [
-    { label: 'Dashboard', path: '/admin/dashboard', icon: LayoutDashboard },
-    { label: 'Bookings', path: '/admin/bookings', icon: CalendarCheck },
-    { label: 'My Services & Catalog', path: '/admin/catalog', icon: FolderTree },
-    { label: 'Providers', path: '/admin/providers', icon: Users },
-    { label: 'Customers', path: '/admin/customers', icon: Users },
-    { label: 'Admins & RBAC', path: '/admin/admins', icon: ShieldAlert },
-    { label: 'Insights & Reports', path: '/admin/reports', icon: BarChart3 },
-    { label: 'Support & Tickets', path: '/admin/support', icon: HelpCircle },
-    { label: 'Email Center', path: '/admin/emails', icon: Mail },
-    { label: 'Security Center', path: '/admin/security', icon: ShieldCheck },
-    { label: 'Settings', path: '/admin/settings', icon: Settings },
+    { label: t('nav.dashboard', { defaultValue: 'Dashboard' }), path: '/admin/dashboard', icon: LayoutDashboard },
+    { label: t('nav.bookings', { defaultValue: 'Bookings' }), path: '/admin/bookings', icon: CalendarCheck },
+    { label: t('nav.catalog', { defaultValue: 'My Services & Catalog' }), path: '/admin/catalog', icon: FolderTree },
+    { label: t('nav.providers', { defaultValue: 'Providers' }), path: '/admin/providers', icon: Users },
+    { label: t('nav.customers', { defaultValue: 'Customers' }), path: '/admin/customers', icon: Users },
+    { label: t('nav.admins', { defaultValue: 'Admins & RBAC' }), path: '/admin/admins', icon: ShieldAlert },
+    { label: t('nav.reports', { defaultValue: 'Insights & Reports' }), path: '/admin/reports', icon: BarChart3 },
+    { label: t('nav.support', { defaultValue: 'Support & Tickets' }), path: '/admin/support', icon: HelpCircle },
+    { label: t('nav.emails', { defaultValue: 'Email Center' }), path: '/admin/emails', icon: Mail },
+    { label: t('nav.security', { defaultValue: 'Security Center' }), path: '/admin/security', icon: ShieldCheck },
+    { label: t('nav.settings', { defaultValue: 'Settings' }), path: '/admin/settings', icon: Settings },
   ];
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -266,14 +269,15 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
                 type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search for services, bookings, providers..."
+                placeholder={t('nav.search_placeholder', { defaultValue: 'Search for services, bookings, providers...' })}
                 className="w-full bg-white border border-[#E5DEC9] rounded-xl pl-10 pr-4 py-2 text-xs sm:text-sm font-medium text-[#1F2A1E] placeholder-[#1F2A1E]/40 focus:outline-none focus:ring-2 focus:ring-[#2F5233]/20 focus:border-[#2F5233] transition-all shadow-xs"
               />
             </form>
           </div>
 
-          {/* Top Header Actions (Notifications, Messages, Avatar) */}
+          {/* Top Header Actions (Language Selector, Notifications, Messages, Avatar) */}
           <div className="flex items-center gap-2.5 sm:gap-3.5">
+            <LanguageSelector />
             <button
               onClick={() => navigate('/admin/bookings')}
               className="p-2.5 rounded-xl text-[#1F2A1E]/60 hover:bg-[#F2EDE1] hover:text-[#1F2A1E] transition-colors relative cursor-pointer"

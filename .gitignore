@@ -145,3 +145,6 @@ backend/cleaning_data_*.py
 install.cmd
 run_*.js
 
+
+backend/customer_uploads/
+customer_uploads/

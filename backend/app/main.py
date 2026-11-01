@@ -291,16 +291,10 @@ app.mount("/static/uploads", StaticFiles(directory="customer_uploads"), name="st
 @app.get("/api/v1/health", tags=["System"])
 def health_check():
     """Sanitized health check endpoint: reports status without disclosing database credentials."""
-    db_desc = (
-        engine.url.render_as_string(hide_password=True)
-        if hasattr(engine.url, "render_as_string")
-        else str(engine.url)
-    )
     return {
         "status": "healthy",
         "service": settings.APP_NAME,
         "environment": settings.ENVIRONMENT,
-        "database_engine": db_desc,
         "database": "connected" if engine else "disconnected",
     }
 

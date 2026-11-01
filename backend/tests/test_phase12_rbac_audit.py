@@ -106,7 +106,7 @@ def test_unauthenticated_requests_rejected(client: TestClient):
         ("GET", "/api/v1/providers/me/availability"),
         ("GET", "/api/v1/admin/bookings/"),
         ("GET", "/api/v1/admin/providers/"),
-        ("GET", "/api/v1/bookings/"),
+        ("GET", "/api/v1/admins/notifications"),
     ]
     for method, path in endpoints:
         if method == "GET":

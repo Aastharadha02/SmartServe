@@ -16,6 +16,7 @@ import {
   Flame
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { apiClient } from '../../api/client';
 
 export interface PartnerPromo {
   id: string;
@@ -240,12 +241,29 @@ export const PostBookingPromotions: React.FC<PostBookingPromotionsProps> = ({
 
     setSpinDeg(totalRotation);
 
-    setTimeout(() => {
+    setTimeout(async () => {
       setIsSpinning(false);
       setHasSpun(true);
       const wonSector = WHEEL_SECTORS[winningIndex] ?? WHEEL_SECTORS[0]!;
-      const won = wonSector.promo;
+      let won = wonSector.promo;
       if (won) {
+        // Mint authentic server-backed coupon record for this customer
+        try {
+          const res = await apiClient.post('/coupons/spin-reward', {
+            reward_tier: won.brand === 'SmartServe' ? 'SERVE75' : 'SERVE50',
+            booking_id: bookingId,
+          });
+          if (res.data?.code) {
+            won = {
+              ...won,
+              code: res.data.code,
+              description: res.data.description || won.description,
+            };
+          }
+        } catch (err) {
+          console.error('Failed to mint server spin coupon:', err);
+        }
+
         setWonPromo(won);
         setShowWonModal(true);
 

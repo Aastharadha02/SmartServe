@@ -6,8 +6,11 @@ from sqlalchemy.orm import Session
 from app.models.customer import Booking, BookingWarranty
 from app.models.service import Service
 
-# Predefined minimal platform/service fee for warranty claims (INR)
-DEFAULT_WARRANTY_NOMINAL_FEE = 49.0
+# Standardized 7-day platform warranty duration for eligible home services
+DEFAULT_WARRANTY_DAYS = 7
+
+# Zero nominal fee: warranty rework is 100% free with no unapproved inspection charges
+DEFAULT_WARRANTY_NOMINAL_FEE = 0.0
 
 # Ineligible categories (consumables, personal grooming, salon/beauty)
 EXCLUDED_CATEGORIES = {
@@ -21,16 +24,12 @@ EXCLUDED_CATEGORIES = {
     "massage",
 }
 
-# 15-day coverage categories (critical home maintenance & core infrastructure)
-FIFTEEN_DAY_CATEGORIES = {
+# Recognized eligible home service categories (plumbing, electrical, carpentry, painting, appliances, cleaning)
+ELIGIBLE_HOME_CATEGORIES = {
     "plumbing",
     "electrical",
     "electrician",
     "plumber",
-}
-
-# 10-day coverage categories (carpentry, painting, appliances)
-TEN_DAY_CATEGORIES = {
     "carpentry",
     "carpenter",
     "painting",
@@ -38,18 +37,23 @@ TEN_DAY_CATEGORIES = {
     "appliance repair",
     "ac & appliance repair",
     "ac repair",
+    "cleaning",
+    "deep cleaning",
+    "home maintenance",
+    "handyman",
 }
 
 
 def get_warranty_policy(category: Optional[str], service_name: Optional[str] = None) -> Dict[str, Any]:
     """
-    Determine warranty eligibility, duration (10-15 days), terms, and fee.
+    Determine warranty eligibility, standardized 7-day duration, terms, and fee.
     Excludes beauty/parlour/salon services.
+    All eligible home maintenance services receive a consistent 7-day guarantee with zero fees.
     """
     cat_norm = (category or "").lower().strip()
     srv_norm = (service_name or "").lower().strip()
 
-    # 1. Check exclusions
+    # 1. Check exclusions (personal grooming, salon, beauty)
     for exc in EXCLUDED_CATEGORIES:
         if exc in cat_norm or exc in srv_norm:
             return {
@@ -58,42 +62,49 @@ def get_warranty_policy(category: Optional[str], service_name: Optional[str] = N
                 "nominal_fee": 0.0,
                 "policy_tier": "Excluded",
                 "badge_label": "Warranty Not Applicable",
-                "terms": "Personal grooming, salon, beauty, and consumable treatments are excluded from home maintenance warranty.",
+                "terms": "Personal grooming, salon, beauty, and consumable treatments are excluded from the 7-day home service warranty.",
             }
 
-    # 2. Check 15-day critical infrastructure
-    for fifteen in FIFTEEN_DAY_CATEGORIES:
-        if fifteen in cat_norm or fifteen in srv_norm:
-            return {
-                "is_eligible": True,
-                "duration_days": 15,
-                "nominal_fee": DEFAULT_WARRANTY_NOMINAL_FEE,
-                "policy_tier": "15-Day Premium Guarantee",
-                "badge_label": "15-Day Quality Guarantee",
-                "terms": "Covers pipe leakages, wiring faults, installation defects, and joint failures under standard residential usage for 15 days.",
-            }
-
-    # 3. Check 10-day maintenance & appliances
-    for ten in TEN_DAY_CATEGORIES:
-        if ten in cat_norm or ten in srv_norm:
-            return {
-                "is_eligible": True,
-                "duration_days": 10,
-                "nominal_fee": DEFAULT_WARRANTY_NOMINAL_FEE,
-                "policy_tier": "10-Day Standard Guarantee",
-                "badge_label": "10-Day Quality Guarantee",
-                "terms": "Covers carpentry joints, surface peelings, and technical workmanship for 10 days.",
-            }
-
-    # Default fallback for home maintenance services: 10 days
+    # 2. Standardized 7-day quality guarantee for all eligible home services
     return {
         "is_eligible": True,
-        "duration_days": 10,
+        "duration_days": DEFAULT_WARRANTY_DAYS,
         "nominal_fee": DEFAULT_WARRANTY_NOMINAL_FEE,
-        "policy_tier": "10-Day Standard Guarantee",
-        "badge_label": "10-Day Quality Guarantee",
-        "terms": "Covers workmanship and installation defects for 10 days from service completion.",
+        "policy_tier": "7-Day Quality Guarantee",
+        "badge_label": "7-Day Quality Guarantee",
+        "terms": "Covers workmanship and installation defects for 7 days from service completion. 100% free rework labor with zero additional inspection charges.",
     }
+
+
+def get_service_completion_time(booking: Booking, base_time: Optional[datetime] = None) -> datetime:
+    """
+    Determine the exact service completion timestamp from booking timeline or updated_at.
+    """
+    if base_time:
+        return base_time if base_time.tzinfo else base_time.replace(tzinfo=timezone.utc)
+
+    # Search timeline in reverse for the completion event timestamp
+    if booking.timeline and isinstance(booking.timeline, list):
+        for event in reversed(booking.timeline):
+            if isinstance(event, dict):
+                ev_name = str(event.get("event") or "").lower()
+                ev_status = str(event.get("status") or "").lower()
+                if "completed" in ev_name or "completed" in ev_status or "completion otp verified" in ev_name:
+                    ts_str = event.get("timestamp")
+                    if ts_str:
+                        try:
+                            clean_ts = ts_str.replace("Z", "+00:00")
+                            dt = datetime.fromisoformat(clean_ts)
+                            return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+                        except Exception:
+                            pass
+
+    # Fallback to updated_at if booking is completed
+    if str(booking.status).lower() in ["completed", "paid"] and booking.updated_at:
+        dt = booking.updated_at
+        return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+
+    return datetime.now(timezone.utc)
 
 
 def issue_booking_warranty(
@@ -103,7 +114,7 @@ def issue_booking_warranty(
 ) -> Optional[BookingWarranty]:
     """
     Issue a digital warranty card for eligible home maintenance services upon completion.
-    Respects category-specific 10-15 day durations and excludes salon/beauty.
+    Standardized to a consistent 7-day duration calculated from service completion.
     """
     category = getattr(booking, "category", None)
     service_name = getattr(booking, "service_name", None)
@@ -120,7 +131,7 @@ def issue_booking_warranty(
     if not policy["is_eligible"]:
         return None
 
-    now_utc = base_time or datetime.now(timezone.utc)
+    completion_time = get_service_completion_time(booking, base_time)
     duration_days = policy["duration_days"]
 
     # Check if already issued
@@ -134,8 +145,8 @@ def issue_booking_warranty(
         customer_id=booking.customer_id,
         provider_id=booking.provider_id,
         service_name=service_name or "Home Maintenance Service",
-        issued_at=now_utc,
-        expires_at=now_utc + timedelta(days=duration_days),
+        issued_at=completion_time,
+        expires_at=completion_time + timedelta(days=duration_days),
         is_active=True,
         claim_status="None",
     )
@@ -167,12 +178,12 @@ def validate_warranty_claim(
         exp = exp.replace(tzinfo=timezone.utc)
 
     if exp and now_utc > exp:
-        return False, f"Warranty expired on {exp.strftime('%d %b %Y')}. Claims cannot be accepted after expiry.", 0.0
+        return False, f"Warranty expired on {exp.strftime('%d %b %Y')}. Claims cannot be accepted after the 7-day warranty period.", 0.0
 
     if warranty.claim_status == "Pending":
-        return False, "A warranty claim is already pending inspection for this booking.", policy["nominal_fee"]
+        return False, "A warranty claim is already pending inspection for this booking.", 0.0
 
     if warranty.claim_status == "Resolved":
-        return False, "A warranty claim for this booking has already been resolved and fulfilled.", policy["nominal_fee"]
+        return False, "A warranty claim for this booking has already been resolved and fulfilled.", 0.0
 
-    return True, "Warranty claim eligible.", policy["nominal_fee"]
+    return True, "Warranty claim eligible.", 0.0

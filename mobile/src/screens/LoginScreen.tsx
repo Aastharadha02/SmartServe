@@ -11,10 +11,14 @@ import {
   ScrollView,
   SafeAreaView,
 } from 'react-native';
-import { useAuth } from '../context/AuthContext';
+import { useAuth, UserRole } from '../context/AuthContext';
+import { useLanguage } from '../i18n/LanguageContext';
+import { SupportedLanguage } from '../i18n/translations';
 
 export const LoginScreen = ({ navigation }: any) => {
   const { login } = useAuth();
+  const { t, language, setLanguage } = useLanguage();
+  const [role, setRole] = useState<UserRole>('customer');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -39,6 +43,7 @@ export const LoginScreen = ({ navigation }: any) => {
       await login(
         email.trim(),
         password.trim(),
+        role,
         is2FaRequired && !isRecoveryMode ? twoFactorCode.trim() : undefined,
         is2FaRequired && isRecoveryMode ? twoFactorCode.trim() : undefined
       );
@@ -55,13 +60,25 @@ export const LoginScreen = ({ navigation }: any) => {
       if (err.response?.data?.detail) {
         setErrorMessage(err.response.data.detail);
       } else if (err.message?.includes('Network Error') || !err.response) {
-        setErrorMessage('Unable to connect to SmartServe backend. Please check your network.');
+        setErrorMessage('Unable to connect to SmartServe backend. Please verify your network.');
       } else {
         setErrorMessage('Invalid credentials. Please verify and try again.');
       }
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleFillDemo = (targetRole: UserRole) => {
+    setRole(targetRole);
+    if (targetRole === 'customer') {
+      setEmail('demo.customer@smartserve.com');
+      setPassword('DemoCustomer123!');
+    } else {
+      setEmail('demo.provider@smartserve.com');
+      setPassword('DemoProvider123!');
+    }
+    setErrorMessage(null);
   };
 
   return (
@@ -71,6 +88,21 @@ export const LoginScreen = ({ navigation }: any) => {
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
         <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
+          {/* Language Switcher Bar */}
+          <View style={styles.langBar}>
+            {(['en', 'hi', 'gu'] as SupportedLanguage[]).map((l) => (
+              <TouchableOpacity
+                key={l}
+                onPress={() => setLanguage(l)}
+                style={[styles.langChip, language === l && styles.langChipActive]}
+              >
+                <Text style={[styles.langChipText, language === l && styles.langChipTextActive]}>
+                  {l === 'en' ? 'English' : l === 'hi' ? 'हिंदी' : 'ગુજરાતી'}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+
           {/* Header Branding */}
           <View style={styles.brandHeader}>
             <View style={styles.logoBadge}>
@@ -80,18 +112,48 @@ export const LoginScreen = ({ navigation }: any) => {
               <Text style={styles.brandSmart}>Smart</Text>
               <Text style={styles.brandServe}>Serve</Text>
             </View>
-            <Text style={styles.portalSubtitle}>Customer Portal</Text>
+            <Text style={styles.portalSubtitle}>
+              {role === 'customer' ? 'Customer Portal' : 'Service Expert Partner Portal'}
+            </Text>
+          </View>
+
+          {/* Role Selector Tabs */}
+          <View style={styles.roleTabsContainer}>
+            <TouchableOpacity
+              style={[styles.roleTab, role === 'customer' && styles.roleTabActive]}
+              onPress={() => {
+                setRole('customer');
+                setErrorMessage(null);
+              }}
+            >
+              <Text style={[styles.roleTabText, role === 'customer' && styles.roleTabTextActive]}>
+                {t('auth_role_customer')}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.roleTab, role === 'provider' && styles.roleTabActive]}
+              onPress={() => {
+                setRole('provider');
+                setErrorMessage(null);
+              }}
+            >
+              <Text style={[styles.roleTabText, role === 'provider' && styles.roleTabTextActive]}>
+                {t('auth_role_provider')}
+              </Text>
+            </TouchableOpacity>
           </View>
 
           {/* Form Card */}
           <View style={styles.card}>
-            <Text style={styles.cardTitle}>{is2FaRequired ? 'Two-Factor Verification' : 'Sign In'}</Text>
+            <Text style={styles.cardTitle}>
+              {is2FaRequired ? 'Two-Factor Verification' : t('auth_login_title')}
+            </Text>
             <Text style={styles.cardDescription}>
               {is2FaRequired
                 ? (isRecoveryMode
                     ? 'Enter your single-use backup recovery code.'
                     : 'Enter the 6-digit verification code from your authenticator app.')
-                : 'Enter your credentials to access your SmartServe account.'}
+                : `Enter your credentials to access as a ${role === 'customer' ? 'Customer' : 'Service Expert'}.`}
             </Text>
 
             {errorMessage ? (
@@ -103,122 +165,105 @@ export const LoginScreen = ({ navigation }: any) => {
             {!is2FaRequired ? (
               <>
                 <View style={styles.inputGroup}>
-                  <Text style={styles.inputLabel}>Email Address</Text>
+                  <Text style={styles.inputLabel}>{t('auth_email')}</Text>
                   <TextInput
                     style={styles.textInput}
-                    placeholder="name@example.com"
-                    placeholderTextColor="#94A3B8"
-                    autoCapitalize="none"
-                    keyboardType="email-address"
-                    autoCorrect={false}
                     value={email}
                     onChangeText={setEmail}
+                    placeholder="name@example.com"
+                    placeholderTextColor="#94A3B8"
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                    autoCorrect={false}
                   />
                 </View>
 
                 <View style={styles.inputGroup}>
-                  <View style={styles.passwordLabelRow}>
-                    <Text style={styles.inputLabel}>Password</Text>
+                  <View style={styles.labelRow}>
+                    <Text style={styles.inputLabel}>{t('auth_password')}</Text>
                     <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                      <Text style={styles.togglePasswordText}>{showPassword ? 'Hide' : 'Show'}</Text>
+                      <Text style={styles.showHideText}>{showPassword ? 'Hide' : 'Show'}</Text>
                     </TouchableOpacity>
                   </View>
                   <TextInput
                     style={styles.textInput}
+                    value={password}
+                    onChangeText={setPassword}
                     placeholder="••••••••"
                     placeholderTextColor="#94A3B8"
                     secureTextEntry={!showPassword}
                     autoCapitalize="none"
-                    value={password}
-                    onChangeText={setPassword}
                   />
                 </View>
               </>
             ) : (
-              <>
-                <View style={styles.inputGroup}>
-                  <View style={styles.passwordLabelRow}>
-                    <Text style={styles.inputLabel}>
-                      {isRecoveryMode ? 'Recovery Code' : '6-Digit Authenticator Code'}
-                    </Text>
-                    <TouchableOpacity
-                      onPress={() => {
-                        setIsRecoveryMode(!isRecoveryMode);
-                        setTwoFactorCode('');
-                        setErrorMessage(null);
-                      }}
-                    >
-                      <Text style={styles.togglePasswordText}>
-                        {isRecoveryMode ? 'Use Authenticator App' : 'Use Recovery Code'}
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
-                  <TextInput
-                    style={[
-                      styles.textInput,
-                      { fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace', letterSpacing: 2 },
-                    ]}
-                    placeholder={isRecoveryMode ? 'XXXX-XXXX' : '123456'}
-                    placeholderTextColor="#94A3B8"
-                    autoCapitalize="characters"
-                    maxLength={isRecoveryMode ? 20 : 6}
-                    value={twoFactorCode}
-                    onChangeText={setTwoFactorCode}
-                  />
-                </View>
-
+              <View style={styles.inputGroup}>
+                <Text style={styles.inputLabel}>
+                  {isRecoveryMode ? 'Backup Recovery Code' : 'Authenticator Code'}
+                </Text>
+                <TextInput
+                  style={[styles.textInput, styles.codeField]}
+                  value={twoFactorCode}
+                  onChangeText={setTwoFactorCode}
+                  placeholder={isRecoveryMode ? 'ABCD-EFGH-1234' : '123456'}
+                  placeholderTextColor="#94A3B8"
+                  keyboardType={isRecoveryMode ? 'default' : 'number-pad'}
+                  maxLength={isRecoveryMode ? 24 : 6}
+                  autoCapitalize="characters"
+                />
                 <TouchableOpacity
-                  style={{ marginBottom: 16 }}
-                  onPress={() => {
-                    setIs2FaRequired(false);
-                    setTwoFactorCode('');
-                    setErrorMessage(null);
-                  }}
+                  style={{ marginTop: 8 }}
+                  onPress={() => setIsRecoveryMode(!isRecoveryMode)}
                 >
-                  <Text style={{ fontSize: 13, color: '#64748B', fontWeight: '600' }}>
-                    ← Back to email & password
+                  <Text style={styles.recoveryToggleText}>
+                    {isRecoveryMode ? 'Use Authenticator App OTP' : 'Use Backup Recovery Code'}
                   </Text>
                 </TouchableOpacity>
-              </>
+              </View>
             )}
 
             <TouchableOpacity
-              style={[styles.submitButton, isLoading && styles.submitButtonDisabled]}
+              style={[styles.primaryButton, isLoading && styles.buttonDisabled]}
               onPress={handleLogin}
               disabled={isLoading}
               activeOpacity={0.8}
             >
               {isLoading ? (
-                <ActivityIndicator color="#FFFFFF" size="small" />
+                <ActivityIndicator color="#FFFFFF" />
               ) : (
-                <Text style={styles.submitButtonText}>
-                  {is2FaRequired ? 'Verify & Sign In' : 'Sign In to SmartServe'}
+                <Text style={styles.primaryButtonText}>
+                  {is2FaRequired ? 'Verify & Continue' : t('auth_login_btn')}
                 </Text>
               )}
             </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styles.quickFillButton}
-              onPress={() => {
-                setEmail('ananya.rao@example.com');
-                setPassword('CustomerPass123!');
-              }}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.quickFillText}>⚡ Quick-Fill Customer Account (Ananya Rao)</Text>
-            </TouchableOpacity>
-          </View>
+            {/* Quick Demo Logins */}
+            <View style={styles.demoBox}>
+              <Text style={styles.demoLabel}>Demo Fast Fill:</Text>
+              <View style={styles.demoRow}>
+                <TouchableOpacity
+                  style={styles.demoBtn}
+                  onPress={() => handleFillDemo('customer')}
+                >
+                  <Text style={styles.demoBtnText}>Customer Demo</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.demoBtn}
+                  onPress={() => handleFillDemo('provider')}
+                >
+                  <Text style={styles.demoBtnText}>Expert Demo</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
 
-          {/* Sign Up Link */}
-          <TouchableOpacity style={styles.signupLink} onPress={() => navigation.navigate('Signup')}>
-            <Text style={styles.signupText}>
-              New to SmartServe?{' '}
-              <Text style={styles.signupHighlight}>Create an Account</Text>
-            </Text>
-          </TouchableOpacity>
-
-          <View style={styles.securityFooter}>
-            <Text style={styles.securityText}>🔒 256-Bit Encrypted Session • SmartServe</Text>
+            {role === 'customer' && !is2FaRequired && (
+              <TouchableOpacity
+                style={styles.secondaryLink}
+                onPress={() => navigation.navigate('Signup')}
+              >
+                <Text style={styles.secondaryLinkText}>{t('auth_no_account')}</Text>
+              </TouchableOpacity>
+            )}
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -227,94 +272,255 @@ export const LoginScreen = ({ navigation }: any) => {
 };
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: '#FAF9F5' },
-  container: { flex: 1 },
-  scrollContent: { flexGrow: 1, justifyContent: 'center', paddingHorizontal: 24, paddingVertical: 32 },
-  brandHeader: { alignItems: 'center', marginBottom: 28 },
-  logoBadge: {
-    width: 56,
-    height: 56,
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#FAF9F5',
+  },
+  container: {
+    flex: 1,
+  },
+  scrollContent: {
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: '100%',
+  },
+  langBar: {
+    flexDirection: 'row',
+    gap: 8,
+    marginBottom: 16,
+    alignSelf: 'center',
+  },
+  langChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 5,
     borderRadius: 16,
+    backgroundColor: '#F1F5F9',
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+  },
+  langChipActive: {
+    backgroundColor: '#1E40AF',
+    borderColor: '#1E40AF',
+  },
+  langChipText: {
+    fontSize: 12,
+    color: '#475569',
+    fontWeight: '600',
+  },
+  langChipTextActive: {
+    color: '#FFFFFF',
+  },
+  brandHeader: {
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  logoBadge: {
+    width: 60,
+    height: 60,
+    borderRadius: 18,
     backgroundColor: '#1E40AF',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 12,
+    marginBottom: 10,
+    shadowColor: '#1E40AF',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 4,
   },
-  logoLetter: { fontSize: 28, fontWeight: '800', color: '#FFFFFF' },
-  wordmarkRow: { flexDirection: 'row', alignItems: 'baseline', marginBottom: 4 },
-  brandSmart: { fontSize: 26, fontWeight: '800', color: '#0F172A' },
-  brandServe: { fontSize: 26, fontWeight: '800', color: '#2563EB' },
-  portalSubtitle: { fontSize: 14, fontWeight: '500', color: '#64748B' },
-  card: {
+  logoLetter: {
+    fontSize: 32,
+    fontWeight: '900',
+    color: '#FFFFFF',
+  },
+  wordmarkRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  brandSmart: {
+    fontSize: 26,
+    fontWeight: '800',
+    color: '#0F172A',
+  },
+  brandServe: {
+    fontSize: 26,
+    fontWeight: '800',
+    color: '#1E40AF',
+  },
+  portalSubtitle: {
+    fontSize: 13,
+    color: '#64748B',
+    fontWeight: '500',
+    marginTop: 2,
+  },
+  roleTabsContainer: {
+    flexDirection: 'row',
+    backgroundColor: '#E2E8F0',
+    borderRadius: 10,
+    padding: 4,
+    width: '100%',
+    maxWidth: 380,
+    marginBottom: 16,
+  },
+  roleTab: {
+    flex: 1,
+    paddingVertical: 8,
+    alignItems: 'center',
+    borderRadius: 8,
+  },
+  roleTabActive: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 20,
-    padding: 24,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  roleTabText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#64748B',
+  },
+  roleTabTextActive: {
+    color: '#1E40AF',
+  },
+  card: {
+    width: '100%',
+    maxWidth: 380,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 16,
+    padding: 22,
     borderWidth: 1,
     borderColor: '#E2E8F0',
     shadowColor: '#0F172A',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.05,
-    shadowRadius: 12,
+    shadowRadius: 10,
     elevation: 3,
   },
-  cardTitle: { fontSize: 22, fontWeight: '700', color: '#0F172A', marginBottom: 6 },
-  cardDescription: { fontSize: 14, color: '#64748B', marginBottom: 20, lineHeight: 20 },
+  cardTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#0F172A',
+    marginBottom: 4,
+  },
+  cardDescription: {
+    fontSize: 13,
+    color: '#64748B',
+    marginBottom: 16,
+    lineHeight: 18,
+  },
   errorBox: {
-    backgroundColor: '#FEF2F2',
-    borderColor: '#FCA5A5',
+    backgroundColor: '#FEE2E2',
     borderWidth: 1,
-    borderRadius: 12,
-    padding: 12,
+    borderColor: '#F87171',
+    borderRadius: 8,
+    padding: 10,
     marginBottom: 16,
   },
-  errorText: { color: '#DC2626', fontSize: 13, fontWeight: '500' },
-  inputGroup: { marginBottom: 18 },
-  passwordLabelRow: {
+  errorText: {
+    color: '#991B1B',
+    fontSize: 13,
+    fontWeight: '500',
+  },
+  inputGroup: {
+    marginBottom: 14,
+  },
+  labelRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 6,
   },
-  inputLabel: { fontSize: 14, fontWeight: '600', color: '#334155', marginBottom: 6 },
-  togglePasswordText: { fontSize: 13, fontWeight: '600', color: '#2563EB' },
+  inputLabel: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#334155',
+    marginBottom: 6,
+  },
+  showHideText: {
+    fontSize: 12,
+    color: '#1E40AF',
+    fontWeight: '600',
+  },
   textInput: {
-    backgroundColor: '#F8FAFC',
     borderWidth: 1,
     borderColor: '#CBD5E1',
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    fontSize: 15,
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 14,
     color: '#0F172A',
+    backgroundColor: '#F8FAFC',
   },
-  submitButton: {
+  codeField: {
+    fontSize: 18,
+    letterSpacing: 4,
+    textAlign: 'center',
+    fontWeight: '700',
+  },
+  recoveryToggleText: {
+    fontSize: 12,
+    color: '#1E40AF',
+    fontWeight: '500',
+    textAlign: 'right',
+  },
+  primaryButton: {
     backgroundColor: '#1E40AF',
-    borderRadius: 12,
-    paddingVertical: 14,
+    borderRadius: 8,
+    paddingVertical: 12,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 8,
-    shadowColor: '#1E40AF',
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.2,
-    shadowRadius: 6,
-    elevation: 2,
   },
-  submitButtonDisabled: { opacity: 0.7 },
-  submitButtonText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700' },
-  quickFillButton: {
-    marginTop: 12,
-    paddingVertical: 10,
-    borderRadius: 10,
-    backgroundColor: '#EFF6FF',
+  buttonDisabled: {
+    opacity: 0.6,
+  },
+  primaryButtonText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  demoBox: {
+    marginTop: 18,
+    paddingTop: 14,
+    borderTopWidth: 1,
+    borderTopColor: '#F1F5F9',
+  },
+  demoLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#94A3B8',
+    textTransform: 'uppercase',
+    marginBottom: 6,
+  },
+  demoRow: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  demoBtn: {
+    flex: 1,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    backgroundColor: '#F1F5F9',
+    borderRadius: 6,
+    alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#BFDBFE',
+    borderColor: '#E2E8F0',
+  },
+  demoBtnText: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: '#334155',
+  },
+  secondaryLink: {
+    marginTop: 16,
     alignItems: 'center',
   },
-  quickFillText: { color: '#1D4ED8', fontSize: 12, fontWeight: '700' },
-  signupLink: { marginTop: 24, alignItems: 'center' },
-  signupText: { fontSize: 14, color: '#64748B' },
-  signupHighlight: { color: '#2563EB', fontWeight: '700' },
-  securityFooter: { marginTop: 20, alignItems: 'center' },
-  securityText: { fontSize: 12, color: '#94A3B8', fontWeight: '500' },
+  secondaryLinkText: {
+    color: '#1E40AF',
+    fontSize: 13,
+    fontWeight: '600',
+  },
 });

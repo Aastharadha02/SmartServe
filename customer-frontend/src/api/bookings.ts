@@ -89,6 +89,7 @@ export interface CombinedBookingCreatePayload {
   customer_notes?: string | null;
   payment_method?: string;
   provider_ids?: Record<string, string>;
+  coupon_code?: string;
 }
 
 export interface CombinedBookingItemDetail {

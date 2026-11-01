@@ -6,16 +6,22 @@ from app.main import app
 from app.core.config import settings
 from app.services.kafka.transport import build_kafka_kwargs
 from app.services.kafka.topics import KafkaTopics
+from app.core.security import create_access_token
 
 
 @pytest.fixture
 def client():
     return TestClient(app)
 
+@pytest.fixture
+def admin_headers():
+    token = create_access_token({"sub": "admin@smartserve.com", "role": "admin"})
+    return {"Authorization": f"Bearer {token}"}
 
-def test_kafka_status_endpoint_structure(client):
+
+def test_kafka_status_endpoint_structure(client, admin_headers):
     """Verify /api/v1/kafka/status endpoint returns all required spec fields."""
-    response = client.get("/api/v1/kafka/status")
+    response = client.get("/api/v1/kafka/status", headers=admin_headers)
     assert response.status_code == 200
     data = response.json()
 
@@ -39,7 +45,7 @@ def test_kafka_status_endpoint_structure(client):
     assert len(data["expected_topics"]) == 7
 
 
-def test_kafka_status_never_exposes_secrets(client):
+def test_kafka_status_never_exposes_secrets(client, admin_headers):
     """
     Critical security test: Assert the status response body NEVER contains:
     - KAFKA_SASL_PASSWORD
@@ -47,7 +53,7 @@ def test_kafka_status_never_exposes_secrets(client):
     - DATABASE_URL credentials
     - OPENROUTER_API_KEY
     """
-    response = client.get("/api/v1/kafka/status")
+    response = client.get("/api/v1/kafka/status", headers=admin_headers)
     assert response.status_code == 200
     body_text = response.text
 
@@ -90,5 +96,4 @@ def test_health_endpoint_immediate_and_safe(client):
         data = response.json()
         assert data["status"] == "healthy"
         assert "service" in data
-        assert "database_engine" in data
-        assert "@" not in data["database_engine"] or ":***@" in data["database_engine"] or "localhost" in data["database_engine"]
+        assert data.get("database") == "connected"

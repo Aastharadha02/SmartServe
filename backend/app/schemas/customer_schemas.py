@@ -247,6 +247,7 @@ class CreateBookingPayload(BaseModel):
     addon_ids: List[str] = []
     payment_method: str = "COD"
     provider_id: Optional[str] = None
+    coupon_code: Optional[str] = None
 
 
 class CancelBookingPayload(BaseModel):
@@ -265,8 +266,8 @@ class BookingDetail(BaseModel):
     booking_reference: str
     customer_id: str
     service_id: str
-    service_name: str
-    category: str
+    service_name: Optional[str] = "Home Service"
+    category: Optional[str] = "General"
     status: str
     scheduled_date: str
     scheduled_time: str
@@ -280,6 +281,8 @@ class BookingDetail(BaseModel):
     cancellation_reason: Optional[str] = None
     notes: Optional[str] = None
     customer_notes: Optional[str] = None
+    coupon_code: Optional[str] = None
+    coupon_discount: Optional[float] = 0.0
     before_photos: Optional[List[str]] = None
     after_photos: Optional[List[str]] = None
     warranty: Optional[Dict[str, Any]] = None
@@ -323,8 +326,8 @@ class WarrantyCardResponse(BaseModel):
     claim_resolved_at: Optional[datetime] = None
     claim_notes: Optional[str] = None
     days_remaining: int = 0
-    duration_days: Optional[int] = 10
-    nominal_fee: Optional[float] = 49.0
+    duration_days: Optional[int] = 7
+    nominal_fee: Optional[float] = 0.0
     terms: Optional[str] = None
     badge_label: Optional[str] = None
     is_eligible: Optional[bool] = True
@@ -358,15 +361,18 @@ class CombinedBookingCreatePayload(BaseModel):
     city: str = "Noida"
     pincode: str = "201301"
     customer_notes: Optional[str] = None
+    coupon_code: Optional[str] = None
+    coupon_discount: Optional[float] = 0.0
     payment_method: str = "COD"
     provider_ids: Optional[Dict[str, str]] = None
+    coupon_code: Optional[str] = None
 
 
 class CombinedBookingItemDetail(BaseModel):
     id: str
     service_id: str
-    service_name: str
-    category: str
+    service_name: Optional[str] = "Home Service"
+    category: Optional[str] = "General"
     provider_id: Optional[str] = None
     unit_price: float
     status: str
@@ -384,7 +390,11 @@ class CombinedBookingDetail(BaseModel):
     scheduled_time: datetime
     address: str
     customer_notes: Optional[str] = None
+    coupon_code: Optional[str] = None
+    coupon_discount: Optional[float] = 0.0
     payment_status: str
+    coupon_code: Optional[str] = None
+    coupon_discount: Optional[float] = 0.0
     items: List[CombinedBookingItemDetail] = []
     created_at: datetime
 

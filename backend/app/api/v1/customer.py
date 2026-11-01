@@ -1296,8 +1296,8 @@ def get_customer_bookings(
             booking_reference=b.booking_reference,
             customer_id=str(b.customer_id),
             service_id=str(b.service_id),
-            service_name=b.service_name,
-            category=b.category,
+            service_name=b.get_service_name() if hasattr(b, "get_service_name") else (b.service_name or "Home Service"),
+            category=b.get_category() if hasattr(b, "get_category") else (b.category or "General"),
             status=str(b.status.value if hasattr(b.status, "value") else b.status),
             scheduled_date=b.scheduled_date,
             scheduled_time=b.scheduled_time.strftime("%H:%M:%S") if hasattr(b.scheduled_time, "strftime") else str(b.scheduled_time),
@@ -1311,6 +1311,8 @@ def get_customer_bookings(
             cancellation_reason=b.cancellation_reason,
             notes=b.notes,
             customer_notes=b.customer_notes or b.notes,
+            coupon_code=getattr(b, "coupon_code", None),
+            coupon_discount=float(getattr(b, "coupon_discount", 0.0) or 0.0),
             before_photos=_sanitize_photos(b.before_photos),
             after_photos=_sanitize_photos(b.after_photos),
             warranty={
@@ -1433,6 +1435,25 @@ def create_customer_booking(
         "timestamp": datetime.utcnow().isoformat(),
     }
 
+    coupon_obj = None
+    coupon_discount = Decimal("0.00")
+    if payload.coupon_code:
+        from app.services.coupon_service import validate_coupon
+        is_valid, c_msg, c_disc, coupon_obj = validate_coupon(
+            db=db,
+            code=payload.coupon_code,
+            customer_id=current_customer.id,
+            subtotal=Decimal(str(total_price)),
+            category=srv_category,
+            service_id=srv_id,
+        )
+        if not is_valid:
+            raise HTTPException(status_code=400, detail=c_msg)
+        coupon_discount = c_disc
+        total_price = max(0.0, float(Decimal(str(total_price)) - coupon_discount))
+        initial_event["coupon_applied"] = coupon_obj.code
+        initial_event["coupon_discount"] = float(coupon_discount)
+
     new_booking = Booking(
         id=uuid.uuid4(),
         booking_reference=ref_code,
@@ -1454,6 +1475,8 @@ def create_customer_booking(
         notes=payload.notes,
         timeline=[initial_event],
         emergency_flag="EMERGENCY" if is_emergency else None,
+        coupon_code=coupon_obj.code if coupon_obj else None,
+        coupon_discount=coupon_discount,
         created_at=datetime.utcnow(),
     )
     if matched_slot:
@@ -1465,6 +1488,17 @@ def create_customer_booking(
 
     db.add(new_booking)
     db.add(current_customer)
+    if coupon_obj:
+        from app.services.coupon_service import redeem_coupon
+        redeem_coupon(
+            db=db,
+            coupon_id=coupon_obj.id,
+            customer_id=current_customer.id,
+            subtotal=Decimal(str(base_price + addons_sum)),
+            booking_id=new_booking.id,
+            category=srv_category,
+            service_id=srv_id,
+        )
     db.commit()
     db.refresh(new_booking)
 
@@ -1573,6 +1607,8 @@ def create_customer_booking(
         payment_method=new_booking.payment_method or "COD",
         payment_status=new_booking.payment_status or "Pending",
         notes=new_booking.notes,
+        coupon_code=new_booking.coupon_code,
+        coupon_discount=float(new_booking.coupon_discount or 0.0),
         otp_code=new_booking.start_otp,
         start_otp=new_booking.start_otp,
         completion_otp=new_booking.completion_otp,
@@ -1631,8 +1667,8 @@ def get_booking_by_id(
         provider_name=record.provider.full_name if record.provider else None,
         provider=provider_info,
         service_id=str(record.service_id),
-        service_name=record.service_name,
-        category=record.category,
+        service_name=record.get_service_name() if hasattr(record, "get_service_name") else (record.service_name or "Home Service"),
+        category=record.get_category() if hasattr(record, "get_category") else (record.category or "General"),
         status=str(record.status.value if hasattr(record.status, "value") else record.status),
         scheduled_date=record.scheduled_date,
         scheduled_time=record.scheduled_time.strftime("%H:%M:%S") if hasattr(record.scheduled_time, "strftime") else str(record.scheduled_time),
@@ -1799,7 +1835,7 @@ def raise_warranty_claim(
 
     return {
         "success": True,
-        "message": f"Warranty claim raised successfully. A minimal platform fee of ₹{nominal_fee:.0f} applies for processing and re-dispatch, with 100% free rework labor.",
+        "message": f"Warranty claim raised successfully. Our quality team will inspect and provide 100% free rework labor under your 7-day warranty.",
         "claim_status": warranty.claim_status,
         "nominal_fee": nominal_fee,
         "claim_submitted_at": warranty.claim_submitted_at.isoformat() if hasattr(warranty.claim_submitted_at, "isoformat") else str(warranty.claim_submitted_at),
@@ -2063,8 +2099,8 @@ def cancel_booking(
         provider_id=str(record.provider_id) if record.provider_id else None,
         provider_name=record.provider.full_name if record.provider else None,
         service_id=str(record.service_id),
-        service_name=record.service_name,
-        category=record.category,
+        service_name=record.get_service_name() if hasattr(record, "get_service_name") else (record.service_name or "Home Service"),
+        category=record.get_category() if hasattr(record, "get_category") else (record.category or "General"),
         status=str(record.status.value if hasattr(record.status, "value") else record.status),
         scheduled_date=record.scheduled_date,
         scheduled_time=sched_time_str,
@@ -2760,8 +2796,8 @@ def reschedule_booking(
         provider_id=str(record.provider_id) if record.provider_id else None,
         provider_name=record.provider.full_name if record.provider else None,
         service_id=str(record.service_id),
-        service_name=record.service_name,
-        category=record.category,
+        service_name=record.get_service_name() if hasattr(record, "get_service_name") else (record.service_name or "Home Service"),
+        category=record.get_category() if hasattr(record, "get_category") else (record.category or "General"),
         status=str(record.status.value if hasattr(record.status, "value") else record.status),
         scheduled_date=record.scheduled_date,
         scheduled_time=sched_time_str,

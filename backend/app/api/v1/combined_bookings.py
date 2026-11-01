@@ -137,7 +137,24 @@ def create_combined_booking(
 
     discount_rate = compute_bundle_discount_rate(len(services_to_book))
     discount_applied = Decimal(str(round(float(subtotal) * discount_rate, 2)))
-    final_price = subtotal - discount_applied
+    net_after_bundle = subtotal - discount_applied
+
+    coupon_obj = None
+    coupon_discount = Decimal("0.00")
+    if payload.coupon_code:
+        from app.services.coupon_service import validate_coupon
+        is_valid, c_msg, c_disc, coupon_obj = validate_coupon(
+            db=db,
+            code=payload.coupon_code,
+            customer_id=current_customer.id,
+            subtotal=net_after_bundle,
+            service_ids=[s.id for s in services_to_book],
+        )
+        if not is_valid:
+            raise HTTPException(status_code=400, detail=c_msg)
+        coupon_discount = c_disc
+
+    final_price = max(Decimal("0.00"), net_after_bundle - coupon_discount)
 
     combined_booking = CombinedBooking(
         id=uuid.uuid4(),
@@ -145,6 +162,8 @@ def create_combined_booking(
         status="Requested",
         total_price=subtotal,
         discount_applied=discount_applied,
+        coupon_code=coupon_obj.code if coupon_obj else None,
+        coupon_discount=coupon_discount,
         final_price=final_price,
         scheduled_time=parsed_sched_time,
         address=payload.address_line1.strip(),
@@ -155,6 +174,16 @@ def create_combined_booking(
     )
 
     db.add(combined_booking)
+    if coupon_obj:
+        from app.services.coupon_service import redeem_coupon
+        redeem_coupon(
+            db=db,
+            coupon_id=coupon_obj.id,
+            customer_id=current_customer.id,
+            subtotal=net_after_bundle,
+            combined_booking_id=combined_booking.id,
+            service_ids=[s.id for s in services_to_book],
+        )
 
     # Create line items and actionable service bookings for pipeline & customer tracking
     from app.models.customer import Booking
@@ -257,6 +286,8 @@ def create_combined_booking(
         address=combined_booking.address,
         customer_notes=combined_booking.customer_notes,
         payment_status=combined_booking.payment_status,
+        coupon_code=combined_booking.coupon_code,
+        coupon_discount=float(combined_booking.coupon_discount or 0.0),
         items=items_out,
         created_at=combined_booking.created_at,
     )
@@ -304,6 +335,8 @@ def list_combined_bookings(
                 address=b.address,
                 customer_notes=b.customer_notes,
                 payment_status=b.payment_status,
+                coupon_code=b.coupon_code,
+                coupon_discount=float(b.coupon_discount or 0.0),
                 items=items_list,
                 created_at=b.created_at,
             )
@@ -357,6 +390,8 @@ def get_combined_booking_detail(
         address=record.address,
         customer_notes=record.customer_notes,
         payment_status=record.payment_status,
+        coupon_code=record.coupon_code,
+        coupon_discount=float(record.coupon_discount or 0.0),
         items=items_list,
         created_at=record.created_at,
     )

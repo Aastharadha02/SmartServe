@@ -19,10 +19,14 @@ import {
   Banknote, 
   CheckCircle2, 
   ShieldCheck, 
-  UserCheck 
+  UserCheck,
+  Tag,
+  KeyRound
 } from 'lucide-react-native';
 import { bookingsApi } from '../api/bookings';
+import { couponsApi, CouponValidateResult } from '../api/coupons';
 import { formatRupee, formatCategoryDisplayName } from '../utils/formatters';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const TIME_SLOTS = [
   '09:00 AM - 11:00 AM',
@@ -55,6 +59,7 @@ function getNextDates(): Array<{ label: string; dateStr: string }> {
 }
 
 export const BookingModalScreen = ({ route, navigation }: any) => {
+  const { t } = useLanguage();
   const { service, selectedProvider, selectedAddons, finalPrice } = route.params;
 
   const nextDates = getNextDates();
@@ -67,12 +72,56 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
   const [paymentMethod, setPaymentMethod] = useState<'COD' | 'Online'>('COD');
   const [notes, setNotes] = useState('');
 
+  // Coupon state
+  const [couponCodeInput, setCouponCodeInput] = useState('');
+  const [isValidatingCoupon, setIsValidatingCoupon] = useState(false);
+  const [appliedCoupon, setAppliedCoupon] = useState<CouponValidateResult | null>(null);
+  const [couponError, setCouponError] = useState<string | null>(null);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
   const [createdBooking, setCreatedBooking] = useState<any>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const price = finalPrice || service.base_price;
+  const basePrice = finalPrice || service.base_price;
+  const discountAmount = appliedCoupon?.is_valid ? Number(appliedCoupon.discount_amount) : 0;
+  const payableTotal = Math.max(0, basePrice - discountAmount);
+
+  const handleApplyCoupon = async () => {
+    if (!couponCodeInput.trim()) {
+      setCouponError('Please enter a coupon code.');
+      return;
+    }
+    setCouponError(null);
+    setIsValidatingCoupon(true);
+    try {
+      const res = await couponsApi.validateCoupon({
+        code: couponCodeInput.trim().toUpperCase(),
+        subtotal: basePrice,
+        service_id: service.id,
+        category: service.category,
+      });
+
+      if (res.is_valid) {
+        setAppliedCoupon(res);
+        setCouponError(null);
+      } else {
+        setAppliedCoupon(null);
+        setCouponError(res.message || 'Coupon code is invalid or expired.');
+      }
+    } catch (err: any) {
+      setAppliedCoupon(null);
+      setCouponError(err.response?.data?.detail || 'Failed to validate coupon.');
+    } finally {
+      setIsValidatingCoupon(false);
+    }
+  };
+
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    setCouponCodeInput('');
+    setCouponError(null);
+  };
 
   const handleConfirmBooking = async () => {
     if (!addressLine1.trim() || addressLine1.trim().length < 5) {
@@ -109,21 +158,43 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
   };
 
   if (bookingSuccess && createdBooking) {
+    const startOtp = createdBooking.start_otp || createdBooking.otp_code;
+
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.successContainer}>
           <View style={styles.successIconBadge}>
             <CheckCircle2 size={48} color="#059669" />
           </View>
-          <Text style={styles.successTitle}>Booking Confirmed!</Text>
+          <Text style={styles.successTitle}>{t('booking_success_msg')}</Text>
           <Text style={styles.successSubtitle}>
-            Your service request has been sent to available SmartServe technicians.
+            Your service request has been confirmed and assigned to SmartServe technicians.
           </Text>
 
+          {/* Reference & Start OTP */}
           <View style={styles.successRefBox}>
             <Text style={styles.successRefLabel}>BOOKING REFERENCE</Text>
             <Text style={styles.successRefValue}>{createdBooking.booking_reference}</Text>
-            <Text style={styles.successStatus}>Status: REQUESTED</Text>
+
+            {startOtp && (
+              <View style={styles.otpBanner}>
+                <KeyRound size={20} color="#1E40AF" />
+                <View style={{ marginLeft: 8 }}>
+                  <Text style={styles.otpLabel}>{t('otp_start_label')}</Text>
+                  <Text style={styles.otpValue}>{startOtp}</Text>
+                  <Text style={styles.otpSub}>{t('otp_start_instruction')}</Text>
+                </View>
+              </View>
+            )}
+          </View>
+
+          {/* Warranty Notice */}
+          <View style={styles.warrantyCard}>
+            <ShieldCheck size={20} color="#059669" />
+            <View style={{ marginLeft: 10, flex: 1 }}>
+              <Text style={styles.warrantyCardTitle}>{t('warranty_title')}</Text>
+              <Text style={styles.warrantyCardText}>{t('warranty_desc')}</Text>
+            </View>
           </View>
 
           <View style={styles.successDetailCard}>
@@ -134,10 +205,10 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
               Date & Time: <Text style={{ fontWeight: '700', color: '#0F172A' }}>{selectedDate} at {selectedSlot.split(' - ')[0]}</Text>
             </Text>
             <Text style={styles.successDetailRow}>
-              Total Amount: <Text style={{ fontWeight: '700', color: '#0F172A' }}>{formatRupee(price)}</Text>
+              Total Amount: <Text style={{ fontWeight: '700', color: '#0F172A' }}>{formatRupee(payableTotal)}</Text>
             </Text>
             <Text style={styles.successDetailRow}>
-              Payment: <Text style={{ fontWeight: '700', color: '#0F172A' }}>{paymentMethod === 'COD' ? 'Cash on Delivery' : 'Online UPI'}</Text>
+              Payment: <Text style={{ fontWeight: '700', color: '#0F172A' }}>{paymentMethod === 'COD' ? 'Cash on Delivery (Pay after service)' : 'Online UPI'}</Text>
             </Text>
           </View>
 
@@ -148,7 +219,7 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
             }}
             activeOpacity={0.85}
           >
-            <Text style={styles.trackBookingBtnText}>Track Technician Dispatch Live</Text>
+            <Text style={styles.trackBookingBtnText}>Track Service Live & View OTP</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -172,7 +243,7 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
         <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backBtn} activeOpacity={0.8}>
           <ArrowLeft size={18} color="#0F172A" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Schedule Booking</Text>
+        <Text style={styles.headerTitle}>{t('booking_checkout_title')}</Text>
         <View style={{ width: 36 }} />
       </View>
 
@@ -181,7 +252,7 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
         <View style={styles.serviceSummaryCard}>
           <Text style={styles.summaryCategory}>{formatCategoryDisplayName(service.category)}</Text>
           <Text style={styles.summaryName}>{service.name}</Text>
-          <Text style={styles.summaryPrice}>{formatRupee(price)}</Text>
+          <Text style={styles.summaryPrice}>{formatRupee(basePrice)}</Text>
         </View>
 
         {selectedProvider ? (
@@ -202,8 +273,8 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
         {/* 1. Date Selection */}
         <View style={styles.formSection}>
           <View style={styles.sectionLabelRow}>
-            <Calendar size={15} color="#2563EB" />
-            <Text style={styles.sectionLabel}>Select Appointment Date</Text>
+            <Calendar size={15} color="#1E40AF" />
+            <Text style={styles.sectionLabel}>{t('booking_date')}</Text>
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginHorizontal: -20, paddingHorizontal: 20 }}>
             {nextDates.map((item) => {
@@ -230,8 +301,8 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
         {/* 2. Time Slot Selection */}
         <View style={styles.formSection}>
           <View style={styles.sectionLabelRow}>
-            <Clock size={15} color="#2563EB" />
-            <Text style={styles.sectionLabel}>Select Time Window</Text>
+            <Clock size={15} color="#1E40AF" />
+            <Text style={styles.sectionLabel}>{t('booking_time')}</Text>
           </View>
           <View style={styles.slotsGrid}>
             {TIME_SLOTS.map((slot) => {
@@ -255,8 +326,8 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
         {/* 3. Service Address */}
         <View style={styles.formSection}>
           <View style={styles.sectionLabelRow}>
-            <MapPin size={15} color="#2563EB" />
-            <Text style={styles.sectionLabel}>Service Delivery Address</Text>
+            <MapPin size={15} color="#1E40AF" />
+            <Text style={styles.sectionLabel}>{t('booking_address')}</Text>
           </View>
           <TextInput
             style={styles.textInput}
@@ -284,11 +355,60 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
           </View>
         </View>
 
-        {/* 4. Payment Method */}
+        {/* 4. Coupon Code Input */}
         <View style={styles.formSection}>
           <View style={styles.sectionLabelRow}>
-            <CreditCard size={15} color="#2563EB" />
-            <Text style={styles.sectionLabel}>Payment Option</Text>
+            <Tag size={15} color="#1E40AF" />
+            <Text style={styles.sectionLabel}>{t('booking_apply_coupon')}</Text>
+          </View>
+          {appliedCoupon ? (
+            <View style={styles.appliedCouponCard}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.appliedCouponCode}>{appliedCoupon.code}</Text>
+                <Text style={styles.appliedCouponDiscount}>
+                  Saved {formatRupee(appliedCoupon.discount_amount)} on this order
+                </Text>
+              </View>
+              <TouchableOpacity onPress={handleRemoveCoupon} style={styles.removeCouponBtn}>
+                <Text style={styles.removeCouponText}>Remove</Text>
+              </TouchableOpacity>
+            </View>
+          ) : (
+            <View>
+              <View style={styles.couponInputRow}>
+                <TextInput
+                  style={[styles.textInput, { flex: 1, textTransform: 'uppercase' }]}
+                  placeholder={t('booking_coupon_placeholder')}
+                  placeholderTextColor="#94A3B8"
+                  value={couponCodeInput}
+                  onChangeText={(val) => {
+                    setCouponCodeInput(val);
+                    setCouponError(null);
+                  }}
+                  autoCapitalize="characters"
+                />
+                <TouchableOpacity
+                  style={[styles.applyCouponBtn, isValidatingCoupon && styles.applyCouponBtnDisabled]}
+                  onPress={handleApplyCoupon}
+                  disabled={isValidatingCoupon}
+                >
+                  {isValidatingCoupon ? (
+                    <ActivityIndicator color="#FFFFFF" size="small" />
+                  ) : (
+                    <Text style={styles.applyCouponBtnText}>Apply</Text>
+                  )}
+                </TouchableOpacity>
+              </View>
+              {couponError && <Text style={styles.couponErrorText}>{couponError}</Text>}
+            </View>
+          )}
+        </View>
+
+        {/* 5. Payment Method */}
+        <View style={styles.formSection}>
+          <View style={styles.sectionLabelRow}>
+            <CreditCard size={15} color="#1E40AF" />
+            <Text style={styles.sectionLabel}>{t('booking_payment_method')}</Text>
           </View>
           <View style={styles.paymentMethodRow}>
             <TouchableOpacity
@@ -296,8 +416,8 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
               onPress={() => setPaymentMethod('COD')}
               activeOpacity={0.8}
             >
-              <Banknote size={20} color={paymentMethod === 'COD' ? '#2563EB' : '#64748B'} />
-              <View>
+              <Banknote size={20} color={paymentMethod === 'COD' ? '#1E40AF' : '#64748B'} />
+              <View style={{ marginLeft: 8, flex: 1 }}>
                 <Text style={[styles.paymentTitle, paymentMethod === 'COD' && styles.paymentTitleSelected]}>
                   Cash on Delivery
                 </Text>
@@ -310,8 +430,8 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
               onPress={() => setPaymentMethod('Online')}
               activeOpacity={0.8}
             >
-              <CreditCard size={20} color={paymentMethod === 'Online' ? '#2563EB' : '#64748B'} />
-              <View>
+              <CreditCard size={20} color={paymentMethod === 'Online' ? '#1E40AF' : '#64748B'} />
+              <View style={{ marginLeft: 8, flex: 1 }}>
                 <Text style={[styles.paymentTitle, paymentMethod === 'Online' && styles.paymentTitleSelected]}>
                   Online / UPI
                 </Text>
@@ -321,7 +441,7 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
           </View>
         </View>
 
-        {/* 5. Special Notes */}
+        {/* 6. Special Notes */}
         <View style={styles.formSection}>
           <Text style={styles.sectionLabel}>Special Instructions (Optional)</Text>
           <TextInput
@@ -335,12 +455,35 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
           />
         </View>
 
-        {/* Security & Guarantee Note */}
+        {/* Standardized 7-Day Warranty Guarantee Note */}
         <View style={styles.guaranteeNote}>
-          <ShieldCheck size={16} color="#059669" />
-          <Text style={styles.guaranteeText}>
-            SmartServe Assurance: Free cancellation before technician dispatch • Verified partner
-          </Text>
+          <ShieldCheck size={18} color="#059669" />
+          <View style={{ marginLeft: 8, flex: 1 }}>
+            <Text style={styles.guaranteeBold}>{t('warranty_title')} (₹0 Fee)</Text>
+            <Text style={styles.guaranteeText}>{t('warranty_desc')}</Text>
+          </View>
+        </View>
+
+        {/* Price Breakdown */}
+        <View style={styles.priceBreakdownCard}>
+          <View style={styles.breakdownRow}>
+            <Text style={styles.breakdownLabel}>Service Base Price</Text>
+            <Text style={styles.breakdownValue}>{formatRupee(basePrice)}</Text>
+          </View>
+          {appliedCoupon && (
+            <View style={styles.breakdownRow}>
+              <Text style={[styles.breakdownLabel, { color: '#059669' }]}>
+                Coupon Discount ({appliedCoupon.code})
+              </Text>
+              <Text style={[styles.breakdownValue, { color: '#059669' }]}>
+                - {formatRupee(discountAmount)}
+              </Text>
+            </View>
+          )}
+          <View style={[styles.breakdownRow, styles.breakdownTotalRow]}>
+            <Text style={styles.breakdownTotalLabel}>{t('booking_total')}</Text>
+            <Text style={styles.breakdownTotalValue}>{formatRupee(payableTotal)}</Text>
+          </View>
         </View>
 
         {/* Submit Button */}
@@ -353,7 +496,9 @@ export const BookingModalScreen = ({ route, navigation }: any) => {
           {isSubmitting ? (
             <ActivityIndicator color="#FFFFFF" size="small" />
           ) : (
-            <Text style={styles.confirmBtnText}>Confirm Booking ({formatRupee(price)})</Text>
+            <Text style={styles.confirmBtnText}>
+              {t('booking_confirm_button')} • {formatRupee(payableTotal)}
+            </Text>
           )}
         </TouchableOpacity>
       </ScrollView>
@@ -381,125 +526,173 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  headerTitle: { fontSize: 16, fontWeight: '800', color: '#0F172A' },
+  headerTitle: { fontSize: 16, fontWeight: '700', color: '#0F172A' },
   scrollContent: { padding: 20, paddingBottom: 40 },
   serviceSummaryCard: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 16,
+    borderRadius: 12,
     padding: 16,
     borderWidth: 1,
     borderColor: '#E2E8F0',
-    marginBottom: 14,
+    marginBottom: 16,
   },
-  summaryCategory: { fontSize: 11, fontWeight: '700', color: '#2563EB', textTransform: 'uppercase', marginBottom: 2 },
-  summaryName: { fontSize: 16, fontWeight: '800', color: '#0F172A', marginBottom: 6 },
-  summaryPrice: { fontSize: 20, fontWeight: '800', color: '#0F172A' },
+  summaryCategory: { fontSize: 11, fontWeight: '700', color: '#1E40AF', textTransform: 'uppercase' },
+  summaryName: { fontSize: 18, fontWeight: '800', color: '#0F172A', marginTop: 2 },
+  summaryPrice: { fontSize: 16, fontWeight: '700', color: '#0F172A', marginTop: 6 },
   chosenProviderCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
     backgroundColor: '#ECFDF5',
     padding: 12,
-    borderRadius: 12,
+    borderRadius: 8,
     borderWidth: 1,
     borderColor: '#A7F3D0',
     marginBottom: 16,
   },
-  chosenProviderText: { fontSize: 13, color: '#065F46' },
+  chosenProviderText: { fontSize: 13, color: '#065F46', marginLeft: 8 },
   errorBox: {
-    backgroundColor: '#FEF2F2',
-    borderWidth: 1,
-    borderColor: '#FCA5A5',
-    borderRadius: 12,
+    backgroundColor: '#FEE2E2',
     padding: 12,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#F87171',
     marginBottom: 16,
   },
-  errorText: { color: '#DC2626', fontSize: 13, fontWeight: '600' },
+  errorText: { color: '#991B1B', fontSize: 13, fontWeight: '500' },
   formSection: { marginBottom: 20 },
   sectionLabelRow: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 10 },
-  sectionLabel: { fontSize: 14, fontWeight: '700', color: '#0F172A' },
+  sectionLabel: { fontSize: 13, fontWeight: '700', color: '#1E293B' },
   dateChip: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 12,
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    marginRight: 10,
-    borderWidth: 1,
-    borderColor: '#CBD5E1',
-    alignItems: 'center',
-  },
-  dateChipSelected: { backgroundColor: '#2563EB', borderColor: '#2563EB' },
-  dateChipLabel: { fontSize: 12, fontWeight: '700', color: '#334155' },
-  dateChipLabelSelected: { color: '#FFFFFF' },
-  dateChipDate: { fontSize: 10, color: '#64748B', marginTop: 2 },
-  dateChipDateSelected: { color: '#BFDBFE' },
-  slotsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  slotCard: {
-    width: '48%',
     backgroundColor: '#FFFFFF',
     borderRadius: 10,
     paddingVertical: 10,
-    paddingHorizontal: 8,
+    paddingHorizontal: 14,
+    marginRight: 8,
     borderWidth: 1,
-    borderColor: '#CBD5E1',
+    borderColor: '#E2E8F0',
     alignItems: 'center',
   },
-  slotCardSelected: { backgroundColor: '#EFF6FF', borderColor: '#2563EB' },
-  slotText: { fontSize: 11, fontWeight: '600', color: '#334155' },
-  slotTextSelected: { color: '#1D4ED8', fontWeight: '700' },
+  dateChipSelected: {
+    backgroundColor: '#1E40AF',
+    borderColor: '#1E40AF',
+  },
+  dateChipLabel: { fontSize: 12, fontWeight: '600', color: '#64748B' },
+  dateChipLabelSelected: { color: '#FFFFFF' },
+  dateChipDate: { fontSize: 11, color: '#94A3B8', marginTop: 2 },
+  dateChipDateSelected: { color: '#DBEAFE' },
+  slotsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  slotCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+  },
+  slotCardSelected: {
+    backgroundColor: '#EFF6FF',
+    borderColor: '#1E40AF',
+  },
+  slotText: { fontSize: 12, fontWeight: '500', color: '#475569' },
+  slotTextSelected: { color: '#1E40AF', fontWeight: '700' },
   textInput: {
     backgroundColor: '#FFFFFF',
+    borderRadius: 8,
     borderWidth: 1,
     borderColor: '#CBD5E1',
-    borderRadius: 12,
-    paddingHorizontal: 14,
+    paddingHorizontal: 12,
     paddingVertical: 10,
-    fontSize: 14,
+    fontSize: 13,
     color: '#0F172A',
     marginBottom: 8,
   },
   rowInputs: { flexDirection: 'row', gap: 8 },
-  textArea: { height: 75, textAlignVertical: 'top' },
-  paymentMethodRow: { gap: 10 },
+  textArea: { height: 70, textAlignVertical: 'top' },
+  couponInputRow: { flexDirection: 'row', gap: 8 },
+  applyCouponBtn: {
+    backgroundColor: '#1E40AF',
+    borderRadius: 8,
+    paddingHorizontal: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 42,
+  },
+  applyCouponBtnDisabled: { opacity: 0.6 },
+  applyCouponBtnText: { color: '#FFFFFF', fontWeight: '700', fontSize: 13 },
+  appliedCouponCard: {
+    backgroundColor: '#ECFDF5',
+    borderWidth: 1,
+    borderColor: '#A7F3D0',
+    padding: 12,
+    borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  appliedCouponCode: { fontSize: 14, fontWeight: '800', color: '#065F46' },
+  appliedCouponDiscount: { fontSize: 12, color: '#047857', marginTop: 2 },
+  removeCouponBtn: { padding: 4 },
+  removeCouponText: { fontSize: 12, fontWeight: '700', color: '#DC2626' },
+  couponErrorText: { fontSize: 12, color: '#DC2626', marginTop: 4 },
+  paymentMethodRow: { gap: 8 },
   paymentCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
     backgroundColor: '#FFFFFF',
-    borderRadius: 14,
-    padding: 14,
+    borderRadius: 10,
+    padding: 12,
     borderWidth: 1,
-    borderColor: '#CBD5E1',
+    borderColor: '#E2E8F0',
   },
-  paymentCardSelected: { borderColor: '#2563EB', backgroundColor: '#EFF6FF' },
-  paymentTitle: { fontSize: 14, fontWeight: '700', color: '#0F172A' },
-  paymentTitleSelected: { color: '#1D4ED8' },
+  paymentCardSelected: {
+    borderColor: '#1E40AF',
+    backgroundColor: '#EFF6FF',
+  },
+  paymentTitle: { fontSize: 13, fontWeight: '700', color: '#334155' },
+  paymentTitleSelected: { color: '#1E40AF' },
   paymentSub: { fontSize: 11, color: '#64748B', marginTop: 1 },
   guaranteeNote: {
     flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    backgroundColor: '#F0FDF4',
+    alignItems: 'flex-start',
+    backgroundColor: '#ECFDF5',
     padding: 12,
-    borderRadius: 12,
+    borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#BBF7D0',
+    borderColor: '#A7F3D0',
+    marginBottom: 16,
+  },
+  guaranteeBold: { fontSize: 12, fontWeight: '700', color: '#065F46' },
+  guaranteeText: { fontSize: 11, color: '#047857', marginTop: 2, lineHeight: 15 },
+  priceBreakdownCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
     marginBottom: 20,
   },
-  guaranteeText: { fontSize: 11, color: '#166534', flex: 1, lineHeight: 16 },
-  confirmBtn: {
-    backgroundColor: '#2563EB',
-    borderRadius: 14,
-    paddingVertical: 15,
-    alignItems: 'center',
-    shadowColor: '#2563EB',
-    shadowOpacity: 0.25,
-    shadowRadius: 8,
-    elevation: 3,
+  breakdownRow: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 6 },
+  breakdownLabel: { fontSize: 12, color: '#64748B' },
+  breakdownValue: { fontSize: 12, fontWeight: '600', color: '#0F172A' },
+  breakdownTotalRow: {
+    borderTopWidth: 1,
+    borderTopColor: '#F1F5F9',
+    paddingTop: 8,
+    marginTop: 4,
+    marginBottom: 0,
   },
-  confirmBtnDisabled: { opacity: 0.7 },
-  confirmBtnText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700' },
-  successContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 },
+  breakdownTotalLabel: { fontSize: 14, fontWeight: '800', color: '#0F172A' },
+  breakdownTotalValue: { fontSize: 16, fontWeight: '800', color: '#1E40AF' },
+  confirmBtn: {
+    backgroundColor: '#1E40AF',
+    borderRadius: 10,
+    paddingVertical: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  confirmBtnDisabled: { opacity: 0.6 },
+  confirmBtnText: { color: '#FFFFFF', fontSize: 15, fontWeight: '700' },
+  // Success View Styles
+  successContainer: { flex: 1, padding: 24, alignItems: 'center', justifyContent: 'center' },
   successIconBadge: {
     width: 80,
     height: 80,
@@ -508,50 +701,78 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 16,
-    borderWidth: 1,
-    borderColor: '#A7F3D0',
   },
-  successTitle: { fontSize: 24, fontWeight: '800', color: '#0F172A', marginBottom: 6 },
-  successSubtitle: { fontSize: 14, color: '#64748B', textAlign: 'center', marginBottom: 24, lineHeight: 20 },
+  successTitle: { fontSize: 22, fontWeight: '800', color: '#0F172A', textAlign: 'center' },
+  successSubtitle: {
+    fontSize: 13,
+    color: '#64748B',
+    textAlign: 'center',
+    marginTop: 6,
+    lineHeight: 18,
+    marginBottom: 20,
+  },
   successRefBox: {
-    backgroundColor: '#EFF6FF',
-    borderRadius: 16,
-    padding: 16,
     width: '100%',
-    alignItems: 'center',
-    borderWidth: 1,
-    borderColor: '#BFDBFE',
-    marginBottom: 16,
-  },
-  successRefLabel: { fontSize: 10, fontWeight: '800', color: '#1D4ED8', letterSpacing: 0.5 },
-  successRefValue: { fontSize: 22, fontWeight: '800', color: '#0F172A', marginVertical: 4 },
-  successStatus: { fontSize: 12, fontWeight: '700', color: '#D97706' },
-  successDetailCard: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 14,
+    borderRadius: 12,
     padding: 16,
-    width: '100%',
     borderWidth: 1,
     borderColor: '#E2E8F0',
-    marginBottom: 24,
-    gap: 8,
-  },
-  successDetailRow: { fontSize: 13, color: '#475569' },
-  trackBookingBtn: {
-    backgroundColor: '#2563EB',
-    width: '100%',
-    paddingVertical: 14,
-    borderRadius: 14,
     alignItems: 'center',
     marginBottom: 12,
   },
-  trackBookingBtnText: { color: '#FFFFFF', fontSize: 15, fontWeight: '700' },
-  myBookingsBtn: {
-    backgroundColor: '#F1F5F9',
+  successRefLabel: { fontSize: 10, fontWeight: '700', color: '#94A3B8', letterSpacing: 0.5 },
+  successRefValue: { fontSize: 18, fontWeight: '900', color: '#1E40AF', marginVertical: 4 },
+  otpBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#EFF6FF',
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
+    borderRadius: 8,
+    padding: 10,
+    marginTop: 10,
     width: '100%',
+  },
+  otpLabel: { fontSize: 11, fontWeight: '700', color: '#1E40AF' },
+  otpValue: { fontSize: 20, fontWeight: '900', color: '#1E40AF', letterSpacing: 4, marginVertical: 2 },
+  otpSub: { fontSize: 10, color: '#3B82F6' },
+  warrantyCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#ECFDF5',
+    borderRadius: 10,
+    padding: 12,
+    borderWidth: 1,
+    borderColor: '#A7F3D0',
+    width: '100%',
+    marginBottom: 12,
+  },
+  warrantyCardTitle: { fontSize: 12, fontWeight: '700', color: '#065F46' },
+  warrantyCardText: { fontSize: 11, color: '#047857', marginTop: 1 },
+  successDetailCard: {
+    width: '100%',
+    backgroundColor: '#F8FAFC',
+    borderRadius: 10,
+    padding: 12,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    marginBottom: 20,
+  },
+  successDetailRow: { fontSize: 12, color: '#64748B', marginBottom: 4 },
+  trackBookingBtn: {
+    backgroundColor: '#1E40AF',
+    borderRadius: 10,
     paddingVertical: 14,
-    borderRadius: 14,
+    width: '100%',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  trackBookingBtnText: { color: '#FFFFFF', fontSize: 14, fontWeight: '700' },
+  myBookingsBtn: {
+    paddingVertical: 12,
+    width: '100%',
     alignItems: 'center',
   },
-  myBookingsBtnText: { color: '#334155', fontSize: 14, fontWeight: '700' },
+  myBookingsBtnText: { color: '#64748B', fontSize: 13, fontWeight: '600' },
 });

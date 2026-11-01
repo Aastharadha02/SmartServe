@@ -50,6 +50,10 @@ def upgrade() -> None:
         op.add_column("bookings", sa.Column("before_photos", sa.JSON(), nullable=True))
     if not column_exists(conn, "bookings", "after_photos"):
         op.add_column("bookings", sa.Column("after_photos", sa.JSON(), nullable=True))
+    if not column_exists(conn, "bookings", "service_name"):
+        op.add_column("bookings", sa.Column("service_name", sa.String(255), nullable=True))
+    if not column_exists(conn, "bookings", "category"):
+        op.add_column("bookings", sa.Column("category", sa.String(100), nullable=True))
 
     # 2. Create booking_warranties table
     if not table_exists(conn, "booking_warranties"):
@@ -120,3 +124,4 @@ def downgrade() -> None:
         op.drop_column("bookings", "before_photos")
     if column_exists(conn, "bookings", "customer_notes"):
         op.drop_column("bookings", "customer_notes")
+

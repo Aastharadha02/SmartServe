@@ -33,6 +33,7 @@ import {
 import { useAuth } from '../auth/useAuth';
 import { useToast } from '../hooks/useToast';
 import { formatCurrencyINR } from '../utils/formatters';
+import { apiClient } from '../api/client';
 import { getLocalizedServiceName, getLocalizedCategory } from '../utils/localizedNames';
 
 export const CustomerCombinedBooking: React.FC = () => {
@@ -60,6 +61,42 @@ export const CustomerCombinedBooking: React.FC = () => {
   const [notesTab, setNotesTab] = useState<'type' | 'clipboard' | 'file'>('type');
   const [customerNotes, setCustomerNotes] = useState('');
   const [submitting, setSubmitting] = useState(false);
+
+  // Coupon State
+  const [couponCodeInput, setCouponCodeInput] = useState<string>('');
+  const [appliedCoupon, setAppliedCoupon] = useState<{ code: string; discount: number } | null>(null);
+  const [validatingCoupon, setValidatingCoupon] = useState<boolean>(false);
+
+  const handleApplyCoupon = async () => {
+    if (!couponCodeInput.trim()) return;
+    setValidatingCoupon(true);
+    try {
+      const netSubtotal = (estimate?.subtotal ?? 0) - (estimate?.discount_applied ?? 0);
+      const res = await apiClient.post('/coupons/validate', {
+        code: couponCodeInput.trim(),
+        subtotal: netSubtotal,
+        service_ids: bundleItems.map((i) => i.id),
+      });
+      if (res.data?.is_valid) {
+        setAppliedCoupon({
+          code: res.data.code,
+          discount: Number(res.data.discount_amount),
+        });
+        showToast(res.data.message || 'Coupon applied successfully!', 'success');
+      } else {
+        showToast(res.data?.message || 'Invalid coupon code', 'error');
+      }
+    } catch (err: any) {
+      showToast(err.response?.data?.detail || 'Failed to validate coupon', 'error');
+    } finally {
+      setValidatingCoupon(false);
+    }
+  };
+
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    setCouponCodeInput('');
+  };
 
   // Load bundle items from storage
   useEffect(() => {
@@ -156,6 +193,7 @@ export const CustomerCombinedBooking: React.FC = () => {
       pincode: pincode.trim(),
       customer_notes: customerNotes.trim() ? customerNotes.trim() : null,
       payment_method: 'COD',
+      coupon_code: appliedCoupon?.code || undefined,
     };
 
     try {
@@ -512,6 +550,47 @@ export const CustomerCombinedBooking: React.FC = () => {
                 ))}
               </div>
 
+              {/* Promo Coupon Box */}
+              <div className="pt-2">
+                <div className="flex gap-2">
+                  <div className="relative flex-1">
+                    <Tag className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-[#1F2A1E]/40" />
+                    <input
+                      type="text"
+                      value={couponCodeInput}
+                      onChange={(e) => setCouponCodeInput(e.target.value.toUpperCase())}
+                      placeholder={t('bundle.coupon_placeholder', { defaultValue: 'Enter coupon (e.g. WELCOME50)' })}
+                      disabled={validatingCoupon || !!appliedCoupon}
+                      className="w-full bg-white border border-[#E5DEC9] rounded-xl pl-8 pr-3 py-2 text-xs font-mono uppercase text-[#1F2A1E] focus:outline-none focus:border-[#2F5233]"
+                    />
+                  </div>
+                  {appliedCoupon ? (
+                    <button
+                      type="button"
+                      onClick={handleRemoveCoupon}
+                      className="px-3 py-2 bg-rose-50 border border-rose-200 text-rose-700 rounded-xl text-xs font-bold hover:bg-rose-100 cursor-pointer"
+                    >
+                      {t('common.remove', { defaultValue: 'Remove' })}
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={handleApplyCoupon}
+                      disabled={validatingCoupon || !couponCodeInput.trim()}
+                      className="px-3 py-2 bg-[#2F5233] hover:bg-[#3D6B42] text-white rounded-xl text-xs font-bold transition-all disabled:opacity-50 cursor-pointer"
+                    >
+                      {validatingCoupon ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : t('common.apply', { defaultValue: 'Apply' })}
+                    </button>
+                  )}
+                </div>
+                {appliedCoupon && (
+                  <p className="text-[11px] text-emerald-700 font-medium mt-1 flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3" />
+                    {t('bundle.coupon_active', { code: appliedCoupon.code, defaultValue: `Coupon '${appliedCoupon.code}' applied!` })}
+                  </p>
+                )}
+              </div>
+
               {/* Calculation Summary */}
               <div className="pt-3 border-t border-[#E5DEC9] space-y-2 text-xs">
                 <div className="flex items-center justify-between">
@@ -538,12 +617,27 @@ export const CustomerCombinedBooking: React.FC = () => {
                   </div>
                 )}
 
+                {appliedCoupon && appliedCoupon.discount > 0 && (
+                  <div className="flex items-center justify-between text-emerald-800 font-bold bg-emerald-50 px-2.5 py-1.5 rounded-xl border border-emerald-200">
+                    <div className="flex items-center gap-1.5">
+                      <Tag className="w-3.5 h-3.5" />
+                      <span>{t('bundle.coupon_discount', { defaultValue: 'Coupon Discount' })} ({appliedCoupon.code})</span>
+                    </div>
+                    <span className="font-mono">
+                      -{formatCurrencyINR(appliedCoupon.discount)}
+                    </span>
+                  </div>
+                )}
+
                 <div className="flex items-center justify-between pt-3 border-t border-[#E5DEC9] text-base font-extrabold text-[#1F2A1E]">
                   <span>{t('bundle.final_total', { defaultValue: 'Estimated Total' })}</span>
                   <span className="font-mono text-[#2F5233] text-xl">
                     {formatCurrencyINR(
-                      estimate?.final_price ??
-                        bundleItems.reduce((acc, curr) => acc + curr.base_price, 0)
+                      Math.max(
+                        0,
+                        (estimate?.final_price ?? bundleItems.reduce((acc, curr) => acc + curr.base_price, 0)) -
+                          (appliedCoupon?.discount ?? 0)
+                      )
                     )}
                   </span>
                 </div>
