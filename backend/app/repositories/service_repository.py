@@ -121,7 +121,9 @@ def create_service(
     db.refresh(service)
     try:
         from app.core.cache import get_cache
-        get_cache().invalidate_prefix("catalog:")
+        cache = get_cache()
+        cache.invalidate_prefix("catalog:")
+        cache.invalidate_prefix("customer:catalog:")
     except Exception:
         pass
     return service
@@ -162,7 +164,9 @@ def update_service(
     db.refresh(service)
     try:
         from app.core.cache import get_cache
-        get_cache().invalidate_prefix("catalog:")
+        cache = get_cache()
+        cache.invalidate_prefix("catalog:")
+        cache.invalidate_prefix("customer:catalog:")
     except Exception:
         pass
     return service

@@ -75,7 +75,7 @@ export const CustomerHome: React.FC = () => {
       try {
         const [catData, srvData] = await Promise.all([
           getCatalogCategories().catch(() => []),
-          getCatalogServices().catch(() => [])
+          getCatalogServices({ limit: 6 }).catch(() => [])
         ]);
 
         setCategories(catData.slice(0, 8));

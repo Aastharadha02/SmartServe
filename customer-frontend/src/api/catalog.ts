@@ -130,6 +130,8 @@ export const getCatalogServices = async (params?: {
   subcategory?: string;
   q?: string;
   emergency_only?: boolean;
+  skip?: number;
+  limit?: number;
 }): Promise<ServiceItem[]> => {
   const res = await apiClient.get<ServiceItem[]>('/customer/catalog/services', { params });
   return res.data;

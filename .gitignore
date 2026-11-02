@@ -70,7 +70,8 @@ scratch/
 # backend/catalog_baseline_*.json
 # backend/backup_*.json
 *.sql
-!backend/backups/*.sql
+# !backend/backups/*.sql
+backend/backups/*.sql
 *.xlsx
 !backend/backups/*.xlsx
 !backend/backup/**

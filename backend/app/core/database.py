@@ -27,12 +27,19 @@ if m:
 
 def get_engine():
     timeout = int(os.getenv("DB_CONNECT_TIMEOUT", "15" if os.getenv("ENVIRONMENT") == "production" else "5"))
+    pool_size = int(os.getenv("DB_POOL_SIZE", "5"))
+    max_overflow = int(os.getenv("DB_MAX_OVERFLOW", "3"))
+    pool_timeout = int(os.getenv("DB_POOL_TIMEOUT", "10"))
+    pool_recycle = int(os.getenv("DB_POOL_RECYCLE", "180"))
     try:
         if "postgresql" in database_url:
             engine_test = create_engine(
                 database_url,
+                pool_size=pool_size,
+                max_overflow=max_overflow,
+                pool_timeout=pool_timeout,
                 pool_pre_ping=True,
-                pool_recycle=300,
+                pool_recycle=pool_recycle,
                 connect_args={"connect_timeout": timeout},
             )
             with engine_test.connect():

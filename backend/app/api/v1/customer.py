@@ -11,6 +11,7 @@ from fastapi import APIRouter, Depends, HTTPException, status, Query, UploadFile
 from sqlalchemy import func, update
 from sqlalchemy.orm import Session
 from app.core.config import settings
+from app.core.cache import get_cache
 from app.core.dependencies import get_db, get_current_customer
 from app.core.security import hash_password, verify_password, create_access_token, decode_access_token
 from app.models.user import User, UserSession
@@ -881,34 +882,51 @@ def format_category_display_name(raw: str) -> str:
 # 11. GET /customer/catalog/categories
 @router.get("/catalog/categories", response_model=List[CategoryItem])
 def get_catalog_categories(db: Session = Depends(get_db)):
+    cache = get_cache()
+    cached_categories = cache.get("customer:catalog:categories")
+    if cached_categories is not None:
+        return cached_categories
+
     from app.models.service import Service
-    db_services = db.query(Service).filter(Service.is_active == True).all()
+    from sqlalchemy import func
+
+    # Ultra-fast SQL aggregation using covering index (103 summary rows instead of 747 heavy full rows)
+    rows = (
+        db.query(
+            Service.category,
+            Service.subcategory,
+            func.count(Service.id).label("cnt")
+        )
+        .filter(Service.is_active == True)
+        .group_by(Service.category, Service.subcategory)
+        .all()
+    )
     
     cat_map: Dict[str, Dict[str, Any]] = {}
-    for s in db_services:
-        cat = s.category or "General"
-        sub = s.subcategory or "General"
-        if cat not in cat_map:
-            slug = cat.lower().replace(" & ", "-").replace(" ", "-")
-            cat_map[cat] = {
+    for cat, sub, count in rows:
+        cat_name = cat or "General"
+        sub_name = sub or "General"
+        if cat_name not in cat_map:
+            slug = cat_name.lower().replace(" & ", "-").replace(" ", "-")
+            cat_map[cat_name] = {
                 "id": f"cat-{slug}",
-                "name": cat,
+                "name": cat_name,
                 "slug": slug,
-                "display_name": format_category_display_name(cat),
-                "order": get_category_order(cat),
+                "display_name": format_category_display_name(cat_name),
+                "order": get_category_order(cat_name),
                 "subcategories": {},
                 "service_count": 0,
                 "active_count": 0
             }
         
-        cat_map[cat]["service_count"] += 1
-        cat_map[cat]["active_count"] += 1
+        cat_map[cat_name]["service_count"] += count
+        cat_map[cat_name]["active_count"] += count
         
-        sub_dict = cat_map[cat]["subcategories"]
-        if sub not in sub_dict:
-            sub_dict[sub] = {"name": sub, "service_count": 0, "active_count": 0}
-        sub_dict[sub]["service_count"] += 1
-        sub_dict[sub]["active_count"] += 1
+        sub_dict = cat_map[cat_name]["subcategories"]
+        if sub_name not in sub_dict:
+            sub_dict[sub_name] = {"name": sub_name, "service_count": 0, "active_count": 0}
+        sub_dict[sub_name]["service_count"] += count
+        sub_dict[sub_name]["active_count"] += count
 
     result = []
     for cat_data in cat_map.values():
@@ -933,6 +951,7 @@ def get_catalog_categories(db: Session = Depends(get_db)):
         ))
 
     result.sort(key=lambda c: (c.order, c.display_name or c.name))
+    cache.set("customer:catalog:categories", result, ttl_seconds=600)
     return result
 
 
@@ -1174,8 +1193,16 @@ def get_catalog_services(
     subcategory: Optional[str] = None,
     emergency_only: Optional[bool] = False,
     q: Optional[str] = None,
+    skip: int = Query(0, ge=0),
+    limit: Optional[int] = Query(None, ge=1, le=500),
     db: Session = Depends(get_db),
 ):
+    cache = get_cache()
+    cache_key = f"customer:catalog:services:{category}:{subcategory}:{emergency_only}:{q}:{skip}:{limit}"
+    cached_res = cache.get(cache_key)
+    if cached_res is not None:
+        return cached_res
+
     from app.models.service import Service
     query = db.query(Service).filter(Service.is_active == True)
     if category:
@@ -1206,13 +1233,26 @@ def get_catalog_services(
     if q:
         query = query.filter((Service.name.ilike(f"%{q}%")) | (Service.category.ilike(f"%{q}%")) | (Service.subcategory.ilike(f"%{q}%")))
 
+    if skip > 0:
+        query = query.offset(skip)
+    if limit is not None:
+        query = query.limit(limit)
+
     db_services = query.all()
-    return [parse_service_details(s) for s in db_services]
+    res = [parse_service_details(s) for s in db_services]
+    cache.set(cache_key, res, ttl_seconds=300)
+    return res
 
 
 # 13. GET /customer/catalog/services/{id}
 @router.get("/catalog/services/{service_id}", response_model=ServiceItem)
 def get_catalog_service_by_id(service_id: str, db: Session = Depends(get_db)):
+    cache = get_cache()
+    cache_key = f"customer:catalog:service:{service_id}"
+    cached_svc = cache.get(cache_key)
+    if cached_svc is not None:
+        return cached_svc
+
     from app.models.service import Service
     try:
         s_uuid = uuid.UUID(service_id)
@@ -1223,8 +1263,9 @@ def get_catalog_service_by_id(service_id: str, db: Session = Depends(get_db)):
     if not s:
         raise HTTPException(status_code=404, detail="Service not found in catalog")
 
-    print(f"[DEBUG GET SERVICE] service_id={service_id}, db={db.bind.url}, found={s.name}, price={s.base_price}")
-    return parse_service_details(s)
+    res = parse_service_details(s)
+    cache.set(cache_key, res, ttl_seconds=300)
+    return res
 
 
 # 13b. GET /customer/catalog/services/{service_id}/eligible-providers

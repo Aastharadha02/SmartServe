@@ -158,9 +158,16 @@ export const CustomerCatalog: React.FC = () => {
   // 2. Exact Services Load based on active Category / Subcategory / Query
   useEffect(() => {
     const fetchTargetServices = async () => {
+      // Fast path: When on Level 1 (root catalog with no category, subcategory, search, or viewAll),
+      // skip heavy service fetching since only the category grid is displayed!
+      if (!selectedCategory && !selectedSubcategory && !searchQuery.trim() && !viewAllServices) {
+        setServicesLoading(false);
+        return;
+      }
+
       setServicesLoading(true);
       try {
-        const params: { category?: string; subcategory?: string; q?: string } = {};
+        const params: { category?: string; subcategory?: string; q?: string; limit?: number } = {};
         if (selectedCategory) {
           params.category = currentCategoryObj ? currentCategoryObj.name : selectedCategory;
         }
@@ -169,6 +176,9 @@ export const CustomerCatalog: React.FC = () => {
         }
         if (searchQuery.trim()) {
           params.q = searchQuery.trim();
+        }
+        if (viewAllServices && !selectedCategory && !searchQuery.trim()) {
+          params.limit = 100;
         }
         const srvRes = await getCatalogServices(params);
         setAllServices(srvRes);
@@ -180,7 +190,7 @@ export const CustomerCatalog: React.FC = () => {
     };
 
     fetchTargetServices();
-  }, [selectedCategory, selectedSubcategory, searchQuery, currentCategoryObj]);
+  }, [selectedCategory, selectedSubcategory, searchQuery, viewAllServices, currentCategoryObj]);
 
   // Filtered & Sorted Services
   const displayedServices = useMemo(() => {
